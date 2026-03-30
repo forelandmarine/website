@@ -114,6 +114,10 @@ export default function ContactPage() {
                       label: "Instagram",
                       content: <a href="https://instagram.com/forelandmarine" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">@forelandmarine</a>,
                     },
+                    {
+                      label: "LinkedIn",
+                      content: <a href="https://www.linkedin.com/company/forelandmarine" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">Foreland Marine</a>,
+                    },
                   ].map((item) => (
                     <div key={item.label} className="border-l-2 border-accent/40 pl-4">
                       <p className="text-xs text-muted uppercase tracking-widest mb-1">{item.label}</p>
