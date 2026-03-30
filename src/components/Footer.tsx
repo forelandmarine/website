@@ -94,14 +94,14 @@ export default function Footer() {
 
         {/* Memberships */}
         <div className="mt-10 pt-8 border-t border-white/8 flex flex-wrap items-center gap-6">
-          <span className="text-xs font-light text-muted/50 uppercase tracking-widest">Proud member of</span>
-          <a href="https://www.britishmarine.co.uk" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-90 transition-opacity px-3 py-2">
+          <span className="text-xs font-light text-muted uppercase tracking-widest">Proud member of</span>
+          <a href="https://www.britishmarine.co.uk" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
             <Image src="/logos/british-marine-white.svg" alt="Proud Member of British Marine" width={100} height={40} className="h-10 w-auto" />
           </a>
-          <a href="https://www.superyachtuk.com" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-90 transition-opacity px-3 py-2">
+          <a href="https://www.superyachtuk.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
             <Image src="/logos/superyacht-uk-white.png" alt="Superyacht UK" width={100} height={40} className="h-10 w-auto" />
           </a>
-          <a href="https://www.sybass.org" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-90 transition-opacity px-3 py-2">
+          <a href="https://www.sybass.org" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
             <Image src="/logos/sybass.png" alt="Superyacht Builders Association" width={120} height={40} className="h-10 w-auto" />
           </a>
         </div>
