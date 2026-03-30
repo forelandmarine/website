@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg0: #040D1A;
+  --bg1: #081630;
+  --bg2: #0C1E42;
+  --accent: #5386B6;
+  --green: #22C55E;
+  --text: #FFFFFF;
+  --muted: #7BA8C8;
+  --label: #5386B6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg1);
+  color: var(--text);
+  font-family: var(--font-nunito), Aptos, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,173 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+
+export const metadata: Metadata = {
+  title: "Technical Consultancy",
+  description:
+    "Expert technical consultancy across yacht racing performance, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
+};
+
+const disciplines = [
+  {
+    id: "racing",
+    label: "Yacht Racing Performance",
+    heading: "Built to win",
+    intro:
+      "Our racing consultants combine competitive sailing experience with engineering rigour to deliver measurable performance gains. Whether preparing for an offshore race, a grand prix circuit event, or a round-the-world campaign, we cover every detail.",
+    image: { src: "/images/maxi-racing-ran.jpg", alt: "Maxi yacht Ran racing under full sail" },
+    items: [
+      { title: "Performance Optimisation & CFD", body: "Vessel assessment covering sail trim, weight distribution, polar analysis, and speed targets. CFD-informed hydrodynamic analysis of hull, keel, and appendage design to identify drag sources and model improvements." },
+      { title: "Rigging & Deck Hardware", body: "Rig tuning, load calculations, rod and wire rigging solutions, block and winch specification, running and standing rigging design for racing yachts." },
+      { title: "Race Analysis & Data", body: "Post-race data review, competitor benchmarking, tactical debrief support, onboard instrumentation, sensor integration, and performance trend reporting across a season or campaign." },
+      { title: "Race Logistics", body: "Campaign planning, freight and shipping coordination, entry management, on-site logistics, spare parts strategy, and crew travel." },
+    ],
+    imageRight: true,
+  },
+  {
+    id: "hydraulic",
+    label: "Hydraulic Design & PLC Control Systems",
+    heading: "Precision control under load",
+    intro:
+      "We design, specify, and commission hydraulic systems and PLC control platforms for sailing and motor yachts. From deck machinery and sail handling to integrated control logic, we deliver systems built for reliability and performance.",
+    image: { src: "/images/hydraulic-powerpack.png", alt: "Hydraulic power pack with valves and pressure gauges" },
+    items: [
+      { title: "Hydraulic Systems Design", body: "Hydraulic steering, sail handling, stabiliser systems, and deck machinery. Schematic design through to commissioning." },
+      { title: "PLC Control Systems", body: "Programmable logic controller design, panel building, sensor integration, and control system commissioning for onboard hydraulic and mechanical systems." },
+    ],
+    imageRight: false,
+  },
+  {
+    id: "nav-comms",
+    label: "Navigation / Communication Systems",
+    heading: "Connected and informed, wherever you are.",
+    intro:
+      "We specify, install, and commission navigation and communication systems for racing, cruising, and charter yachts. From coastal electronics to full offshore comms packages, we make sure the crew have the tools they need.",
+    image: { src: "/images/nav-station-offshore.jpg", alt: "Navigator at the nav station aboard an offshore racing yacht" },
+    items: [
+      { title: "Navigation Systems", body: "ECDIS, chart plotter, AIS, radar, and sonar integration. System selection, wiring design, and crew training." },
+      { title: "Communication Systems", body: "Satcom, SSB, VHF, and intercom systems. Offshore comms planning for racing and blue-water cruising." },
+      { title: "Systems Integration", body: "NMEA 2000 / SeaTalk networks, B&G, Garmin, Furuno, Raymarine integration, and full system commissioning." },
+    ],
+    imageRight: true,
+  },
+  {
+    id: "naval",
+    label: "Naval Architecture",
+    heading: "Design. Optimise. Build.",
+    intro:
+      "Our naval architecture services span the full design lifecycle, from concept drawings for new vessels to structural upgrades and performance optimisation of existing hulls. We work alongside established design offices or operate independently for owners seeking a single point of accountability.",
+    image: { src: "/images/naval-3d-design.jpg", alt: "3D CAD renders of a schooner superyacht design" },
+    vignette: true,
+    items: [
+      { title: "New Drawings", body: "Lines plans, general arrangement, structural drawings, stability documentation, and class submission packages for new build yachts." },
+      { title: "Upgrades & Modifications", body: "Structural modifications, appendage redesign, keel changes, deck layout modifications, and post-refit drawing updates." },
+      { title: "Performance Optimisation", body: "Hydrostatic and hydrodynamic analysis, resistance prediction, appendage optimisation, and stability assessment for existing vessels." },
+    ],
+    imageRight: false,
+  },
+  {
+    id: "mechanical",
+    label: "Mechanical Installation",
+    heading: "The engineering beneath the waterline",
+    intro:
+      "From main engine installations to complex propulsion systems, our mechanical team manages specification, procurement oversight, installation supervision, and commissioning of all mechanical systems aboard motor and sailing yachts.",
+    image: { src: "/images/yacht-engine-room.jpg", alt: "Twin engine installation aboard a Mangusta superyacht" },
+    items: [
+      { title: "Engines & Generators", body: "Main propulsion engine installation, generator sets, and exhaust system design for both new build and refit projects." },
+      { title: "Watermakers", body: "Reverse osmosis system selection, installation, plumbing, and commissioning for offshore and coastal use." },
+      { title: "Stabilisers", body: "Gyroscopic and fin stabiliser system specification, installation, and sea trial commissioning." },
+      { title: "Propulsion Systems", body: "Shaft lines, CPP and FPP propellers, sail drives, pod drives, bow and stern thrusters, and gearbox selection." },
+    ],
+    imageRight: true,
+  },
+  {
+    id: "av-it",
+    label: "AV/IT & Automation",
+    heading: "Intelligent integration",
+    intro:
+      "The modern superyacht is as much a technology platform as a vessel. We specify and oversee the integration of audio-visual, IT networking, and vessel automation systems to deliver seamless, reliable onboard experiences for owners and guests.",
+    image: { src: "/images/patch-panel-blue-1.jpg", alt: "Blue ethernet cables plugged into a patch panel" },
+    items: [
+      { title: "Audio Visual", body: "Cinema rooms, multizone audio, outdoor entertainment, display systems, and sky lounge AV integration." },
+      { title: "IT, Networking & Connectivity", body: "Structured cabling, managed switching, Wi-Fi planning, VLAN segmentation, firewalls, remote monitoring, Starlink, VSAT, 4G/5G bonding, and crew/guest network separation." },
+      { title: "Automation", body: "Crestron, Lutron, Savant, and custom PLC-based systems for lighting, HVAC, blinds, access control, and bilge monitoring." },
+    ],
+    imageRight: false,
+  },
+];
+
+export default function TechnicalConsultancyPage() {
+  return (
+    <>
+      {/* HERO */}
+      <section className="relative py-36 overflow-hidden bg-bg0">
+        <div className="absolute inset-0">
+          <Image src="/images/j-class-racing.jpg" alt="" fill className="object-cover opacity-40" priority />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <SectionLabel>Technical Consultancy</SectionLabel>
+            <h1 className="text-5xl sm:text-6xl font-light text-white mb-6 leading-tight">
+              Engineering excellence,<br />on every ocean.
+            </h1>
+            <p className="text-lg text-muted leading-relaxed max-w-2xl">
+              From race-winning performance engineering to naval architecture and full vessel systems integration, our technical team brings deep expertise across every discipline of modern yacht design and operation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* DISCIPLINES */}
+      {disciplines.map((d, i) => (
+        <div key={d.id} id={d.id}>
+          {i > 0 && <HorizonLine />}
+          <section className="bg-bg1">
+            <div className={`grid grid-cols-1 lg:grid-cols-2`}>
+              {/* Image */}
+              <div className={`relative h-72 lg:h-auto min-h-[460px] ${d.imageRight ? "order-first lg:order-last" : ""} ${d.vignette ? "bg-bg0" : ""}`}>
+                <Image src={d.image.src} alt={d.image.alt} fill className={`object-cover ${d.vignette ? "opacity-80" : ""}`} />
+                <div className="absolute inset-0 bg-bg0/20" />
+                {d.vignette && <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 30%, var(--bg0) 100%)" }} />}
+              </div>
+
+              {/* Content */}
+              <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center">
+                <SectionLabel>{d.label}</SectionLabel>
+                <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">{d.heading}</h2>
+                <p className="text-muted leading-relaxed mb-8">{d.intro}</p>
+                <div className="space-y-4">
+                  {d.items.map((item) => (
+                    <div key={item.title} className="border-l-2 border-accent/40 pl-4">
+                      <p className="text-sm font-semibold text-white mb-1">{item.title}</p>
+                      <p className="text-sm text-muted leading-relaxed">{item.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      ))}
+
+      <HorizonLine />
+
+      {/* CTA */}
+      <section className="relative py-24 bg-bg0 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/images/j-class-finish.jpg" alt="" fill className="object-cover opacity-15" />
+          <div className="absolute inset-0 bg-bg0/85" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+          <SectionLabel>Work With Us</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">Start a conversation.</h2>
+          <p className="text-muted leading-relaxed text-base mb-8 max-w-xl mx-auto">
+            Whether you need a single specialist or a full project team, we&apos;ll put the right expertise alongside you.
+          </p>
+          <ButtonPrimary href="/contact">Get in touch</ButtonPrimary>
+        </div>
+      </section>
+    </>
+  );
+}

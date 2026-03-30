@@ -1,0 +1,148 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
+
+export const metadata: Metadata = {
+  title: "New Build",
+  description:
+    "Owner's representation and build management for new yacht projects. Accredited by SYBAss. Foreland Marine.",
+};
+
+const process = [
+  { step: "01", title: "Concept & Specification", timeframe: "3 to 12 months", description: "Collaborative development of the project brief with the owner and design team. Reviewing initial concepts, establishing technical parameters, and defining the scope that will govern the entire build." },
+  { step: "02", title: "Yard Selection & Contract", timeframe: "1 to 3 months", description: "Systematic evaluation of shipyards against capability, track record, capacity, and commercial terms. Supporting contract negotiation to ensure the owner's position is properly protected." },
+  { step: "03", title: "Build Oversight", timeframe: "12 to 48 months", description: "Continuous on-site presence throughout the construction period. Attendance at production meetings, milestone inspections, financial tracking, and structured reporting to the owner." },
+  { step: "04", title: "Sea Trials & Delivery", timeframe: "1 to 3 months", description: "Coordination of sea trials, commissioning of all onboard systems, management of handover documentation, and formal acceptance on behalf of the owner." },
+  { step: "05", title: "Warranty Period", timeframe: "12 to 24 months", description: "Continued involvement post-delivery to monitor defect rectification, manage claims against the shipyard, and ensure all contractual obligations are fulfilled." },
+];
+
+export default function NewBuildPage() {
+  return (
+    <>
+      {/* HERO */}
+      <section className="relative py-36 overflow-hidden bg-bg0">
+        <div className="absolute inset-0">
+          <Image src="/images/new-build-hero.jpg" alt="" fill className="object-cover opacity-35" priority />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <SectionLabel>New Build</SectionLabel>
+            <h1 className="text-5xl sm:text-6xl font-light text-white mb-6 leading-tight">
+              Your interests, every<br />step of the way
+            </h1>
+            <p className="text-lg text-muted leading-relaxed max-w-2xl">
+              Accredited by the Superyacht Builders Association (SYBAss), we provide independent owner&apos;s representation and build management for new yacht projects worldwide. A new build is among the most significant undertakings in yacht ownership, and we ensure the process is managed with the same care and precision as the vessel itself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR ROLE */}
+      <section className="py-24 bg-bg1">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <SectionLabel>Our Role</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
+              Independent representation at every stage
+            </h2>
+          </div>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="border-l-2 border-accent/40 pl-6">
+              <p className="text-muted leading-relaxed">
+                A new build represents a considerable investment, and shipyards naturally operate in their own commercial interest. Our role is to provide continuous on-site oversight, ensuring the owner&apos;s requirements are upheld from contract execution through to delivery.
+              </p>
+            </div>
+            <div className="border-l-2 border-accent/40 pl-6">
+              <p className="text-muted leading-relaxed">
+                The team deployed to each project comprises captains holding Master 3000GT certification, chief engineers, and project managers with extensive build management experience. Their judgement is grounded in years of practical shipyard work, not theory.
+              </p>
+            </div>
+            <div className="border-l-2 border-accent/40 pl-6">
+              <p className="text-muted leading-relaxed">
+                Foreland is entirely independent. We receive no commissions from shipyards or suppliers. Every recommendation we make is based solely on the owner&apos;s best interest.
+              </p>
+            </div>
+          </div>
+          <div className="mt-10">
+            <ButtonPrimary href="/contact">Discuss your project</ButtonPrimary>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* PROCESS */}
+      <section className="py-24 bg-bg1">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+          <SectionLabel>How It Works</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-6">The stages of a new build</h2>
+          <p className="text-muted leading-relaxed mb-14">
+            Each project follows its own course, but the underlying framework remains consistent. We apply structured oversight at every phase, allowing the owner to focus on the decisions that shape the vessel.
+          </p>
+        </div>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="space-y-0">
+            {process.map((p, i) => (
+              <div key={p.step} className="flex gap-6 items-stretch">
+                <div className="flex flex-col items-center">
+                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-accent/40 text-accent text-sm font-semibold">
+                    {p.step}
+                  </div>
+                  {i < process.length - 1 && <div className="w-px flex-1 bg-accent/20 my-2" />}
+                </div>
+                <div className="pb-10">
+                  <h3 className="text-base font-semibold text-white mb-1">{p.title}</h3>
+                  <p className="text-xs text-accent uppercase tracking-widest mb-2">{p.timeframe}</p>
+                  <p className="text-sm text-muted leading-relaxed max-w-lg">{p.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* SERVICES */}
+      <section className="py-24 bg-bg1">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <SectionLabel>What We Cover</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl font-light text-white">Scope of our involvement</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <ServiceCard title="On-Site Representation" description="Daily presence at the shipyard throughout the build period, attending production meetings, conducting inspections, and providing structured progress reports." />
+            <ServiceCard title="Budget & Cost Control" description="Monitoring expenditure against budget, verifying milestone payment claims, reviewing change orders, and identifying cost risks at the earliest opportunity." />
+            <ServiceCard title="Project Coordination" description="Managing communication between the owner, shipyard, design offices, subcontractors, and classification society to maintain alignment on scope, schedule, and quality." />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ServiceCard title="Technical Review" description="Independent inspection of hull construction, structural work, systems installation, and outfitting quality, supported by our naval architects, engineers, and coatings specialists." />
+            <ServiceCard title="Crew & Commissioning" description="Crew recruitment and employment administration during the build phase, followed by coordination of sea trials, systems commissioning, and formal handover." />
+            <ServiceCard title="Warranty Management" description="Post-delivery oversight including defect tracking, claims management, and continued liaison with the shipyard throughout the warranty period." />
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* CTA */}
+      <section className="relative py-24 bg-bg0 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/images/j-class-finish.jpg" alt="" fill className="object-cover opacity-15" />
+          <div className="absolute inset-0 bg-bg0/85" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+          <SectionLabel>Start Your Project</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">Engage at any stage</h2>
+          <p className="text-muted leading-relaxed text-base mb-8 max-w-xl mx-auto">
+            Whether the project is at concept stage or construction is already underway, our team can integrate at any point and contribute from the outset.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ButtonPrimary href="/contact">Get in touch</ButtonPrimary>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
