@@ -5,10 +5,10 @@ import Image from "next/image";
 import { useState, useRef, useCallback } from "react";
 
 const navLinks = [
-  { label: "Yacht Management", href: "/yacht-management" },
   { label: "New Build", href: "/new-build" },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy" },
+  { label: "Yacht Management", href: "/yacht-management" },
 ];
 
 const toolLinks = [
