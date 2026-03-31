@@ -25,7 +25,7 @@ export default function YachtManagementPage() {
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
-          <Image src="/images/superyacht-marina.jpg" alt="" fill className="object-cover opacity-40" priority />
+          <Image src="/images/sailing-yacht-deck.jpg" alt="" fill className="object-cover opacity-40" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

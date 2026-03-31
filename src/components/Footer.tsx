@@ -115,7 +115,13 @@ export default function Footer() {
             <Image src="/logos/superyacht-uk-white.png" alt="Superyacht UK" width={100} height={40} className="h-10 w-auto" />
           </a>
           <a href="https://www.sybass.org" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
-            <Image src="/logos/sybass.png" alt="Superyacht Builders Association" width={120} height={40} className="h-10 w-auto" />
+            <Image src="/logos/sybass-white.png" alt="Superyacht Builders Association" width={120} height={40} className="h-10 w-auto" />
+          </a>
+          <a href="https://www.yachtownersregister.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
+            <Image src="/logos/yacht-owners-register-white.png" alt="Yacht Owner's Representative Register" width={170} height={68} className="h-12 w-auto" />
+          </a>
+          <a href="https://www.superyachtalliance.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
+            <Image src="/logos/superyacht-alliance-white.png" alt="Superyacht Alliance" width={192} height={71} className="h-12 w-auto" />
           </a>
         </div>
 

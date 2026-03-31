@@ -22,18 +22,24 @@ export default function NewBuildPage() {
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
-          <Image src="/images/new-build-hero.jpg" alt="" fill className="object-cover opacity-35" priority />
+          <Image src="/images/shipyard-launch.jpg" alt="" fill className="object-cover object-[90%_center] opacity-35" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <SectionLabel>New Build</SectionLabel>
-            <h1 className="text-5xl sm:text-6xl font-light text-white mb-6 leading-tight">
-              Your interests, every<br />step of the way
-            </h1>
-            <p className="text-lg text-muted leading-relaxed max-w-2xl">
-              Accredited by the Superyacht Builders Association (SYBAss), we provide independent owner&apos;s representation and build management for new yacht projects worldwide. A new build is among the most significant undertakings in yacht ownership, and we ensure the process is managed with the same care and precision as the vessel itself.
-            </p>
+          <div className="flex items-start justify-between gap-8">
+            <div className="max-w-3xl">
+              <SectionLabel>New Build</SectionLabel>
+              <h1 className="text-5xl sm:text-6xl font-light text-white mb-6 leading-tight">
+                Your interests, every<br />step of the way
+              </h1>
+              <p className="text-lg text-muted leading-relaxed max-w-2xl">
+                Accredited by the Superyacht Builders Association (SYBAss), we provide independent owner&apos;s representation and build management for new yacht projects worldwide. A new build is among the most significant undertakings in yacht ownership, and we ensure the process is managed with the same care and precision as the vessel itself.
+              </p>
+            </div>
+            <div className="hidden lg:flex flex-col items-center gap-6 flex-shrink-0 mt-[50px] relative z-20">
+              <Image src="/logos/sybass-white.png" alt="SYBAss accredited" width={240} height={73} />
+              <Image src="/logos/yacht-owners-register-white.png" alt="Yacht Owner's Representative Register" width={240} height={96} />
+            </div>
           </div>
         </div>
       </section>
@@ -66,6 +72,59 @@ export default function NewBuildPage() {
           </div>
           <div className="mt-10">
             <ButtonPrimary href="/contact">Discuss your project</ButtonPrimary>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* ACCREDITATION & CODE OF CONDUCT */}
+      <section className="py-24 bg-bg0">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <SectionLabel>Accreditation</SectionLabel>
+              <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">
+                Qualified Owner&apos;s Representatives
+              </h2>
+              <p className="text-muted leading-relaxed mb-5">
+                Our team holds the Yacht Owner&apos;s Representative qualification, formally recognised by SYBAss member shipyards as the standard for owner&apos;s representation during new build projects. This accreditation ensures that our representatives have the technical competence and professional standing expected by the world&apos;s leading yards.
+              </p>
+              <p className="text-muted leading-relaxed mb-5">
+                The role of the Owner&apos;s Representative is to act as an independent advocate for the owner throughout the build process - monitoring progress, verifying quality, reviewing costs, and ensuring the shipyard delivers to the agreed specification. It is a position of trust, sitting between the owner and the yard, and requires both deep technical knowledge and commercial judgement.
+              </p>
+              <p className="text-muted leading-relaxed">
+                Foreland Marine Consultancy is also a member of British Marine and Superyacht UK, reinforcing our commitment to the highest standards in the industry and championing British businesses.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-light text-white mb-5">Code of Conduct</h3>
+              <p className="text-muted leading-relaxed text-sm mb-6">
+                As registered Owner&apos;s Representatives, we adhere to the Yacht Owner&apos;s Representative Register Code of Conduct. Its core principles:
+              </p>
+              <div className="space-y-4">
+                <div className="border-l-2 border-accent/40 pl-5">
+                  <h4 className="text-sm font-semibold text-white mb-1">Integrity &amp; Objectivity</h4>
+                  <p className="text-sm text-muted leading-relaxed">Act with honesty, fairness and objectivity. Present objective facts, avoid speculation, and seek balanced agreements.</p>
+                </div>
+                <div className="border-l-2 border-accent/40 pl-5">
+                  <h4 className="text-sm font-semibold text-white mb-1">Competence &amp; Expertise</h4>
+                  <p className="text-sm text-muted leading-relaxed">Full disclosure of qualifications and experience. Recognise the limits of expertise and seek additional support when required.</p>
+                </div>
+                <div className="border-l-2 border-accent/40 pl-5">
+                  <h4 className="text-sm font-semibold text-white mb-1">Owner&apos;s Interest</h4>
+                  <p className="text-sm text-muted leading-relaxed">Protect the best interests of the owner while dealing fairly with all parties. Respect the industry ideal of completing and delivering yachts.</p>
+                </div>
+                <div className="border-l-2 border-accent/40 pl-5">
+                  <h4 className="text-sm font-semibold text-white mb-1">No Conflicts of Interest</h4>
+                  <p className="text-sm text-muted leading-relaxed">Disclose known or potential conflicts. No commissions from multiple sources without full disclosure. No bribes or facilitation payments.</p>
+                </div>
+                <div className="border-l-2 border-accent/40 pl-5">
+                  <h4 className="text-sm font-semibold text-white mb-1">Respectful Collaboration</h4>
+                  <p className="text-sm text-muted leading-relaxed">Optimise collaboration between all parties and resolve disputes professionally. Treat everyone with respect and courtesy.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
