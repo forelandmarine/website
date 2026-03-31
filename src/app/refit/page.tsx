@@ -5,7 +5,7 @@ import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/compone
 export const metadata: Metadata = {
   title: "Refit Project Management",
   description:
-    "Refit project management for motor and sailing yachts over 24m. 25 large yacht projects across 7 countries, including J Class restorations.",
+    "Refit project management for motor and sailing yachts over 24m. 25 large yacht projects across 7 countries, from high-profile racing programmes to in-depth motor yacht rebuilds.",
 };
 
 const services = [
@@ -47,10 +47,10 @@ export default function RefitPage() {
               <SectionLabel>Track Record</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">Classic to Carbon</h2>
               <p className="text-muted leading-relaxed mb-5">
-                Twenty-five large yacht refit projects delivered across seven countries. Three J Class yachts. Eight sailing yachts exceeding 40 metres. Multiple carbon racing yachts prepared for the grand prix circuit. Motor yachts in excess of 60 metres. Historic restorations of vessels dating from the 1920s alongside modern performance programmes on recently launched craft.
+                Twenty-five large yacht refit projects delivered across seven countries. High-profile classic and modern racing yachts prepared for the grand prix circuit. Multiple sailing yachts exceeding 40 metres. Motor yachts in excess of 60 metres undergoing comprehensive rebuilds. Historic restorations of vessels dating from the 1920s alongside performance programmes on recently launched craft.
               </p>
               <p className="text-muted leading-relaxed">
-                This breadth of experience means our team has encountered the specific challenges associated with each vessel type, from managing complex coatings schemes on pre-war hulls to commissioning carbon rigs on contemporary racing yachts.
+                This breadth of experience means our team has encountered the specific challenges associated with each vessel type, from managing complex coatings schemes on pre-war hulls to commissioning carbon rigs on contemporary racing yachts, and overseeing in-depth mechanical and interior refits on large motor yachts.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-8">
@@ -63,8 +63,8 @@ export default function RefitPage() {
                 <p className="text-sm text-muted">Countries</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl sm:text-4xl font-light text-white mb-1">3</p>
-                <p className="text-sm text-muted">J Class yachts</p>
+                <p className="text-3xl sm:text-4xl font-light text-white mb-1">30-60m+</p>
+                <p className="text-sm text-muted">Projects delivered</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl sm:text-4xl font-light text-white mb-1">100+</p>
@@ -113,7 +113,7 @@ export default function RefitPage() {
             </p>
           </div>
           <div className="relative h-72 lg:h-auto min-h-[460px]">
-            <Image src="/images/j-class-ranger.jpg" alt="J Class yacht Ranger under sail" fill className="object-cover" />
+            <Image src="/images/welder-hull.jpg" alt="Welder working on a yacht hull in dry dock" fill className="object-cover" />
             <div className="absolute inset-0 bg-bg0/10" />
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function RefitPage() {
       {/* CTA */}
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/j-class-cup.jpg" alt="" fill className="object-cover opacity-15" />
+          <Image src="/images/shipyard-2.jpg" alt="" fill className="object-cover opacity-15" />
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">

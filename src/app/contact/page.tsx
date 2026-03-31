@@ -4,11 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
 
-const offices = [
-  "London (HQ)", "Antibes", "Palma de Mallorca", "Fort Lauderdale",
-  "Antigua", "Netherlands", "Germany", "Italy",
-];
-
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -127,17 +122,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Offices */}
-              <div>
-                <h3 className="text-xs text-muted uppercase tracking-widest mb-4">Our Offices</h3>
-                <div className="grid grid-cols-2 gap-2">
-                  {offices.map((office) => (
-                    <div key={office} className="bg-bg2 border border-white/8 px-3 py-2">
-                      <span className="text-sm text-muted">{office}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>

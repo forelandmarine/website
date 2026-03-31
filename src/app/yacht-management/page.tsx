@@ -25,7 +25,7 @@ export default function YachtManagementPage() {
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
-          <Image src="/images/yacht-management.jpg" alt="" fill className="object-cover opacity-40" priority />
+          <Image src="/images/superyacht-marina.jpg" alt="" fill className="object-cover opacity-40" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -66,9 +66,35 @@ export default function YachtManagementPage() {
       {/* LIGHTSHIP ISM FEATURE */}
       <section className="bg-bg1 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative h-72 lg:h-auto min-h-[460px]">
-            <Image src="/images/nav-helm-modern.jpg" alt="Modern yacht navigation instruments" fill className="object-cover" />
-            <div className="absolute inset-0 bg-bg0/20" />
+          <div className="flex items-center justify-center gap-6 p-8 lg:p-12">
+            {/* iPad frame */}
+            <div className="relative w-[70%] max-w-[480px]">
+              <div className="rounded-[20px] border-[8px] border-[#2a2a2e] bg-[#1a1a1e] p-1 shadow-2xl shadow-black/40">
+                <div className="overflow-hidden rounded-[12px]">
+                  <Image
+                    src="/images/lightship-dashboard.png"
+                    alt="Lightship ISM dashboard on tablet"
+                    width={1400}
+                    height={900}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* iPhone frame */}
+            <div className="relative w-[22%] max-w-[140px]">
+              <div className="rounded-[18px] border-[5px] border-[#2a2a2e] bg-[#1a1a1e] p-0.5 shadow-2xl shadow-black/40">
+                <div className="overflow-hidden rounded-[13px]">
+                  <Image
+                    src="/images/lightship-mobile.png"
+                    alt="Lightship ISM safety drills on mobile"
+                    width={590}
+                    height={1280}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center">
             <SectionLabel>Lightship ISM</SectionLabel>

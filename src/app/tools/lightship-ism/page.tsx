@@ -1,66 +1,51 @@
 import type { Metadata } from "next";
-import { DotGrid, Glow, HorizonLine, SectionLabel } from "@/components/ui";
+import Image from "next/image";
+import { DotGrid, Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Lightship ISM: Fleet Management",
   description:
-    "Lightship streamlines your workflow, leaving you more time for the important stuff. ISM compliance, incident reporting, and AIS sea service records in one clear interface.",
+    "Lightship streamlines your workflow, leaving you more time for the important stuff. ISM compliance, incident reporting, project management, logbooks, and AIS sea service records in one clear interface.",
 };
 
-const features = [
-  {
-    title: "ISM Compliance",
-    description:
-      "International Safety Management System for yachts under 500 GT, and mini-ISM voluntarily compliant reporting.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5386B6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        <path d="M9 12l2 2 4-4" />
-      </svg>
-    ),
-  },
-  {
-    title: "Incidents, Drills and Permits",
-    description:
-      "Ops Checklists, Databases, Hours of Rest, Passage Planning. At your fingertips. Reports generated in a couple of taps.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5386B6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-        <polyline points="10 9 9 9 8 9" />
-      </svg>
-    ),
-  },
-  {
-    title: "AIS Sea Service Records",
-    description:
-      "Each crew member marked as embarked is given a sea day as soon as the vessel has been underway for more than 4 hours, reported by AIS.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5386B6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <circle cx="12" cy="12" r="3" />
-        <line x1="12" y1="2" x2="12" y2="5" />
-        <line x1="12" y1="19" x2="12" y2="22" />
-        <line x1="2" y1="12" x2="5" y2="12" />
-        <line x1="19" y1="12" x2="22" y2="12" />
-      </svg>
-    ),
-  },
-  {
-    title: "Desktop and Mobile",
-    description:
-      "All the right people notified. Crew keeping cool. Full access on any device.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5386B6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-        <line x1="8" y1="21" x2="16" y2="21" />
-        <line x1="12" y1="17" x2="12" y2="21" />
-      </svg>
-    ),
-  },
-];
+function ScreenFrame({ src, alt, width = 1400, height = 900 }: { src: string; alt: string; width?: number; height?: number }) {
+  return (
+    <div className="rounded-[16px] border-[6px] border-[#2a2a2e] bg-[#1a1a1e] p-1 shadow-2xl shadow-black/40">
+      <div className="overflow-hidden rounded-[10px]">
+        <Image src={src} alt={alt} width={width} height={height} className="w-full h-auto" />
+      </div>
+    </div>
+  );
+}
+
+function FeatureSection({
+  label,
+  title,
+  description,
+  children,
+  reverse = false,
+  bg = "bg-bg1",
+}: {
+  label: string;
+  title: string;
+  description: string;
+  children: React.ReactNode;
+  reverse?: boolean;
+  bg?: string;
+}) {
+  return (
+    <section className={`py-20 ${bg} overflow-hidden`}>
+      <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${reverse ? "lg:[direction:rtl]" : ""}`}>
+        <div className={reverse ? "lg:[direction:ltr]" : ""}>
+          <SectionLabel>{label}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">{title}</h2>
+          <p className="text-muted leading-relaxed">{description}</p>
+        </div>
+        <div className={reverse ? "lg:[direction:ltr]" : ""}>{children}</div>
+      </div>
+    </section>
+  );
+}
 
 export default function LightshipISMPage() {
   return (
@@ -85,21 +70,147 @@ export default function LightshipISMPage() {
         </div>
       </section>
 
-      {/* FEATURES */}
-      <section className="relative py-24 bg-bg1">
+      {/* FLEET DASHBOARD */}
+      <FeatureSection
+        label="Fleet Overview"
+        title="Every vessel, one dashboard"
+        description="Real-time visibility across your entire fleet. Safety incidents, audit schedules, crew status, equipment condition, and compliance — all surfaced in a single view. No more chasing spreadsheets or waiting for email updates."
+      >
+        <ScreenFrame src="/images/lightship-dashboard.png" alt="Lightship fleet overview dashboard" />
+      </FeatureSection>
+
+      <HorizonLine />
+
+      {/* SAFETY CHECKLISTS */}
+      <FeatureSection
+        label="Safety Checklists"
+        title="Create, assign, and track inspections"
+        description="Build checklists from templates or from scratch. Assign them across your fleet with due dates and frequency. Track progress in real time, flag deficiencies, and raise corrective actions — all from one screen."
+        reverse
+        bg="bg-bg0"
+      >
+        <ScreenFrame src="/images/lightship-checklists.png" alt="Safety checklists with progress tracking" />
+      </FeatureSection>
+
+      <HorizonLine />
+
+      {/* INCIDENTS & DRILLS */}
+      <FeatureSection
+        label="Incidents &amp; Drills"
+        title="Report, investigate, improve"
+        description="Structured incident reports with root cause analysis, corrective actions, and witness statements. Safety drill records capture scenarios, participants, equipment used, lessons learned, and areas for improvement. Everything auditable and exportable."
+      >
+        <div className="grid grid-cols-2 gap-4">
+          <ScreenFrame src="/images/lightship-incident.png" alt="Safety incident report with root cause analysis" width={800} height={1000} />
+          <ScreenFrame src="/images/lightship-drill.png" alt="Man overboard drill record" width={800} height={1000} />
+        </div>
+      </FeatureSection>
+
+      <HorizonLine />
+
+      {/* RISK ASSESSMENTS */}
+      <FeatureSection
+        label="Risk Assessments"
+        title="Identify, assess, mitigate"
+        description="Operational risk assessments for every activity onboard — engine room operations, deck work, navigation, and more. Identify hazards, assign likelihood and consequence, define controls, and set review dates. All linked to your vessels and crew."
+        reverse
+        bg="bg-bg0"
+      >
+        <ScreenFrame src="/images/lightship-risk-assessments.png" alt="Risk assessments list with status indicators" />
+      </FeatureSection>
+
+      <HorizonLine />
+
+      {/* EMERGENCY PROCEDURES */}
+      <FeatureSection
+        label="Procedures"
+        title="Emergency response at everyone&apos;s fingertips"
+        description="Documented emergency procedures accessible to all crew. Step-by-step response protocols, safety precautions, and approval workflows. From man overboard to fire response — versioned, approved, and always available."
+      >
+        <ScreenFrame src="/images/lightship-procedures.png" alt="Man overboard emergency response procedure" width={800} height={1000} />
+      </FeatureSection>
+
+      <HorizonLine />
+
+      {/* PROJECT MANAGEMENT */}
+      <FeatureSection
+        label="Project Management"
+        title="Refit and build projects, on track"
+        description="Gantt-chart project planning built for marine projects. Break work into phases and tasks, assign dates, track dependencies, and monitor progress. Whether it&apos;s a mid-life refit or a new build commissioning, keep every stakeholder aligned."
+        reverse
+        bg="bg-bg0"
+      >
+        <ScreenFrame src="/images/lightship-project-management.png" alt="Project management Gantt chart for yacht refit" />
+      </FeatureSection>
+
+      <HorizonLine />
+
+      {/* SHIP'S LOGBOOK */}
+      <FeatureSection
+        label="Ship&apos;s Logbook"
+        title="Official logs, digitally compliant"
+        description="Malta and Red Ensign Group compliant ship&apos;s logbook. Record watch changes, port arrivals and departures, noon positions, and all statutory entries. Every entry timestamped with position, weather, and sea state. Export to PDF at any time."
+      >
+        <ScreenFrame src="/images/lightship-logbook.png" alt="Official ship's logbook with log entries" />
+      </FeatureSection>
+
+      <HorizonLine />
+
+      {/* MARPOL RECORDS */}
+      <FeatureSection
+        label="MARPOL Compliance"
+        title="Oil and garbage record books"
+        description="MARPOL Annex I and Annex V compliant record keeping. Log fuel receipts, bilge water discharges, oil transfers, and waste disposal with proper operation codes. All entries signed, auditable, and ready for port state inspection."
+        reverse
+        bg="bg-bg0"
+      >
+        <div className="grid grid-cols-2 gap-4">
+          <ScreenFrame src="/images/lightship-oil-record.png" alt="Oil record book with MARPOL entries" width={800} height={1000} />
+          <ScreenFrame src="/images/lightship-garbage-record.png" alt="Garbage record book with waste categories" width={800} height={1000} />
+        </div>
+      </FeatureSection>
+
+      <HorizonLine />
+
+      {/* DEVICE MOCKUPS */}
+      <section className="relative py-24 bg-bg1 overflow-hidden">
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <SectionLabel>Platform Features</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl font-light text-white">Everything in one place.</h2>
+          <div className="text-center mb-12">
+            <SectionLabel>Desktop &amp; Mobile</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Works on every device</h2>
+            <p className="text-muted text-lg max-w-xl mx-auto">
+              Full access on desktop, tablet, or phone. Crew can file reports dockside or mid-ocean — wherever they are, the platform is with them.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {features.map((f) => (
-              <div key={f.title} className="bg-bg2 border border-white/8 rounded p-7 hover:border-accent/30 transition-colors">
-                <div className="mb-5">{f.icon}</div>
-                <h3 className="text-lg font-light text-white mb-3">{f.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{f.description}</p>
+          <div className="flex items-center justify-center gap-6">
+            {/* iPad frame */}
+            <div className="relative w-[70%] max-w-[480px]">
+              <div className="rounded-[20px] border-[8px] border-[#2a2a2e] bg-[#1a1a1e] p-1 shadow-2xl shadow-black/40">
+                <div className="overflow-hidden rounded-[12px]">
+                  <Image
+                    src="/images/lightship-dashboard.png"
+                    alt="Lightship ISM dashboard on tablet"
+                    width={1400}
+                    height={900}
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
-            ))}
+            </div>
+            {/* iPhone frame */}
+            <div className="relative w-[22%] max-w-[140px]">
+              <div className="rounded-[18px] border-[5px] border-[#2a2a2e] bg-[#1a1a1e] p-0.5 shadow-2xl shadow-black/40">
+                <div className="overflow-hidden rounded-[13px]">
+                  <Image
+                    src="/images/lightship-mobile.png"
+                    alt="Lightship ISM safety drills on mobile"
+                    width={590}
+                    height={1280}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
