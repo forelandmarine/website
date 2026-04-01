@@ -109,7 +109,7 @@ export default function SeaTimeTrackerPage() {
                       {i < arr.length - 1 && <div className="w-px flex-1 bg-accent/20 mt-2" />}
                     </div>
                     <div className="pb-6">
-                      <p className="text-white text-sm font-semibold mb-1">{step.title}</p>
+                      <h3 className="text-white text-sm font-semibold mb-1">{step.title}</h3>
                       <p className="text-muted text-sm leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
@@ -195,7 +195,7 @@ export default function SeaTimeTrackerPage() {
                   { value: "Notes", sub: "Per voyage" },
                 ].map((item) => (
                   <div key={item.value} className="bg-bg2 border border-white/8 p-4 text-center">
-                    <p className="text-sm font-semibold text-white">{item.value}</p>
+                    <h3 className="text-sm font-semibold text-white">{item.value}</h3>
                     <p className="text-xs text-muted mt-0.5">{item.sub}</p>
                   </div>
                 ))}

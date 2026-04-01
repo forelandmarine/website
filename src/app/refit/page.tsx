@@ -20,6 +20,24 @@ const services = [
 export default function RefitPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Yacht Refit Project Management",
+            provider: {
+              "@type": "Organization",
+              name: "Foreland Marine Consultancy Ltd",
+            },
+            areaServed: "Worldwide",
+            description:
+              "Refit project management for motor and sailing yachts over 24m. 25 large yacht projects across 7 countries, from high-profile racing programmes to in-depth motor yacht rebuilds.",
+          }),
+        }}
+      />
+
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">

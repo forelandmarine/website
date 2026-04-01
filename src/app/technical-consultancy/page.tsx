@@ -100,6 +100,24 @@ const disciplines = [
 export default function TechnicalConsultancyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Marine Technical Consultancy",
+            provider: {
+              "@type": "Organization",
+              name: "Foreland Marine Consultancy Ltd",
+            },
+            areaServed: "Worldwide",
+            description:
+              "Expert technical consultancy across yacht racing performance, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
+          }),
+        }}
+      />
+
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
@@ -140,7 +158,7 @@ export default function TechnicalConsultancyPage() {
                 <div className="space-y-4">
                   {d.items.map((item) => (
                     <div key={item.title} className="border-l-2 border-accent/40 pl-4">
-                      <p className="text-sm font-semibold text-white mb-1">{item.title}</p>
+                      <h3 className="text-sm font-semibold text-white mb-1">{item.title}</h3>
                       <p className="text-sm text-muted leading-relaxed">{item.body}</p>
                     </div>
                   ))}

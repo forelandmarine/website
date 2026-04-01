@@ -22,6 +22,24 @@ const servicesBottom = [
 export default function YachtManagementPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Yacht Management",
+            provider: {
+              "@type": "Organization",
+              name: "Foreland Marine Consultancy Ltd",
+            },
+            areaServed: "Worldwide",
+            description:
+              "Independent, owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, class and flag state requirements.",
+          }),
+        }}
+      />
+
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">

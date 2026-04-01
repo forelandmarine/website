@@ -19,6 +19,24 @@ const process = [
 export default function NewBuildPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "New Build Owner's Representation",
+            provider: {
+              "@type": "Organization",
+              name: "Foreland Marine Consultancy Ltd",
+            },
+            areaServed: "Worldwide",
+            description:
+              "Owner's representation and build management for new yacht projects. Accredited by SYBAss. Foreland Marine.",
+          }),
+        }}
+      />
+
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
