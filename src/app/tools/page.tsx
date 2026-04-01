@@ -6,7 +6,7 @@ import { SectionLabel } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Tools",
   description:
-    "Foreland Marine digital tools: SeaTime Tracker and Lightship ISM for professional yacht management.",
+    "Foreland Marine digital tools: SeaTime Tracker, Lightship ISM and PMS Database services for professional yacht management.",
 };
 
 export default function ToolsPage() {
@@ -27,7 +27,7 @@ export default function ToolsPage() {
               Purpose-built digital products designed for yacht crews, owners, and managers. Saving time and ensuring compliance.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <Link href="/tools/seatime-tracker" className="group block">
               <div className="bg-bg2/80 border border-white/10 overflow-hidden h-full hover:border-accent/40 transition-colors">
                 <div className="p-8">
@@ -52,6 +52,23 @@ export default function ToolsPage() {
                   <h2 className="text-2xl font-light text-white mb-3 group-hover:text-accent transition-colors">Lightship ISM</h2>
                   <p className="text-muted leading-relaxed mb-6">
                     Yacht administration, but a bit clever. Streamline your workflow with ISM compliance, incident reporting, and AIS sea service records in one clear interface.
+                  </p>
+                  <div className="flex items-center gap-1.5 text-sm text-accent font-medium">
+                    Learn more
+                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
+                      <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/tools/pms-database" className="group block">
+              <div className="bg-bg2/80 border border-white/10 overflow-hidden h-full hover:border-accent/40 transition-colors">
+                <div className="p-8">
+                  <p className="text-xs text-muted font-semibold uppercase tracking-widest mb-4">Maintenance</p>
+                  <h2 className="text-2xl font-light text-white mb-3 group-hover:text-accent transition-colors">PMS Database</h2>
+                  <p className="text-muted leading-relaxed mb-6">
+                    Expert PMS database setup, licensing, and on-site population. Authorised DeepBlue agents, with experience across IDEA, SeaHub, Aquator and more.
                   </p>
                   <div className="flex items-center gap-1.5 text-sm text-accent font-medium">
                     Learn more

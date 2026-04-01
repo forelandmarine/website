@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useRef, useCallback } from "react";
 
 const navLinks = [
+  { label: "About", href: "/about" },
   { label: "New Build", href: "/new-build" },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy" },
@@ -14,6 +15,7 @@ const navLinks = [
 const toolLinks = [
   { label: "Lightship ISM", href: "/tools/lightship-ism" },
   { label: "SeaTime Tracker", href: "/tools/seatime-tracker" },
+  { label: "PMS Database", href: "/tools/pms-database" },
 ];
 
 export default function Nav() {

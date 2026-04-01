@@ -11,6 +11,264 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "carbon-composite-construction-what-owners-need-to-know",
+    title: "Carbon Composite Construction: What Owners Need to Know",
+    description:
+      "Carbon composite is the material of choice for performance sailing yachts, but the construction process demands rigorous engineering and oversight. We cover prepreg vs infusion, quality control, cost-weight tradeoffs, and why independent technical representation matters during a composite build.",
+    date: "2026-03-28",
+    category: "New Build",
+    readTime: "9 min read",
+    keywords: [
+      "carbon composite yacht",
+      "carbon fibre sailing yacht",
+      "composite yacht construction",
+      "carbon yacht new build",
+      "performance sailing yacht construction",
+      "prepreg carbon yacht",
+    ],
+    content: `<p>Carbon composite has become the defining material of modern performance sailing yacht construction. From 30-foot grand prix racers to 100-foot-plus superyacht tenders and high-performance cruiser-racers, carbon fibre delivers a combination of strength, stiffness, and low weight that no other material can match. But building in carbon composite is not simply a matter of substituting one material for another. It demands specialist engineering, meticulous process control, and a level of quality assurance that goes far beyond conventional GRP or aluminium construction.</p>
+
+<p>For owners commissioning a carbon fibre sailing yacht, understanding the fundamentals of composite yacht construction is essential &mdash; not because you need to become an engineer, but because informed owners make better decisions, ask sharper questions, and are far less likely to accept compromises that affect the longevity and safety of their vessel.</p>
+
+<h2>Why Carbon Composite?</h2>
+
+<p>The advantage of carbon fibre is straightforward: it offers the highest specific stiffness and specific strength of any practical boatbuilding material. In plain terms, a carbon structure can be significantly lighter than an equivalent aluminium or steel structure while being stiffer and stronger. For a performance sailing yacht, this translates directly into lower displacement, higher righting moment for a given keel weight, and a hull that flexes less under load &mdash; all of which mean more speed, better handling, and greater safety margins in heavy weather.</p>
+
+<p>Carbon composite also offers the designer far more freedom to tailor structural properties. By varying fibre orientation, layup sequence, and core materials, the engineering team can place strength and stiffness precisely where they are needed and remove unnecessary material everywhere else. This level of optimisation is simply not possible with isotropic materials like metals.</p>
+
+<h2>Construction Methods: Prepreg, Infusion, and Wet Layup</h2>
+
+<p>Not all carbon composite construction is equal. The method used to combine carbon fibres with resin has a profound effect on the finished laminate's quality, consistency, and structural performance.</p>
+
+<h3>Prepreg Carbon</h3>
+
+<p>Prepreg is the gold standard for performance sailing yacht construction. The carbon fabric is pre-impregnated with a precisely controlled amount of epoxy resin at the factory, then stored refrigerated until use. During the build, prepreg plies are laid into the mould by hand, vacuum-bagged, and cured in an oven or autoclave at elevated temperature. The result is a laminate with excellent fibre-to-resin ratio, minimal voids, and highly consistent mechanical properties. The major yards building grand prix racing yachts and high-performance cruisers almost universally use prepreg for primary structure.</p>
+
+<p>The trade-off is cost and infrastructure. Prepreg requires climate-controlled storage, a skilled laminating team, and large ovens or autoclaves capable of reaching the specified cure temperature &mdash; typically 80 to 120 degrees Celsius. For large structures, this represents a significant capital investment.</p>
+
+<h3>Resin Infusion</h3>
+
+<p>Vacuum resin infusion is a widely used alternative that offers good laminate quality at lower infrastructure cost. Dry carbon fabric is laid into the mould, sealed under a vacuum bag, and liquid resin is drawn through the laminate under vacuum pressure. When executed well, infusion produces laminates with good fibre volume fractions and low void content. It is commonly used for hulls, decks, and structural components on cruising yachts and mid-range performance boats.</p>
+
+<p>The principal risk with infusion is process variability. Resin flow must be carefully controlled to ensure complete wet-out without resin-rich or resin-starved areas. A poorly executed infusion can produce dry spots, voids, or excessive resin content &mdash; all of which degrade structural performance. The skill and experience of the laminating team is critical.</p>
+
+<h3>Wet Layup</h3>
+
+<p>Wet layup &mdash; where resin is applied by hand to dry fabric &mdash; is the oldest and least controlled method. While it can produce serviceable laminates for non-structural components, it is generally unsuitable for primary structure on a performance sailing yacht. Fibre volume fractions are lower, void content is higher, and consistency between panels is harder to guarantee. Any yard proposing wet layup for structural carbon components on a performance yacht should be questioned closely.</p>
+
+<h2>Structural Engineering Decisions</h2>
+
+<p>The performance of a carbon composite yacht is determined as much by the structural engineering as by the raw material. Key decisions include fibre orientation (the angles at which carbon plies are stacked to resist anticipated loads), core material selection (honeycomb, foam, or no core), laminate schedule (the specific sequence and weight of plies at each location), and joint design (how panels are bonded together and how hardware is attached).</p>
+
+<p>These decisions must be driven by rigorous structural analysis &mdash; typically finite element analysis (FEA) validated against empirical load data and classification society rules. Owners should expect their design team to provide a detailed structural report and laminate schedule, and they should ensure that the yard follows this schedule precisely during construction. Deviations from the specified laminate &mdash; whether through material substitution, ply omissions, or altered layup sequences &mdash; can have serious consequences for structural integrity.</p>
+
+<h2>Quality Control During the Build</h2>
+
+<p>Quality assurance is where composite yacht construction either succeeds or fails. The finished laminate is largely invisible once the yacht is completed, which means defects introduced during construction can remain hidden for years &mdash; until a structural failure occurs under load.</p>
+
+<p>Effective quality control during a composite build includes several critical elements:</p>
+
+<ul>
+<li><strong>Incoming material inspection:</strong> verifying that carbon fabrics, resins, and core materials meet specification, are within their shelf life, and have been stored correctly.</li>
+<li><strong>Laminate schedule compliance:</strong> confirming that each ply is laid at the correct orientation, in the correct sequence, with the correct overlap dimensions.</li>
+<li><strong>Cure cycle monitoring:</strong> recording oven or autoclave temperature profiles to verify that the laminate has been cured within the resin manufacturer's specified parameters. Under-curing or over-curing can both degrade mechanical properties.</li>
+<li><strong>Non-destructive testing (NDT):</strong> using ultrasonic inspection, tap testing, or thermography to detect voids, delaminations, or disbonds in the cured laminate. NDT should be performed at key milestones &mdash; after hull cure, after bulkhead bonding, and after keel and rig attachment point installation.</li>
+<li><strong>Witness points:</strong> defined stages in the build where an independent inspector signs off before work proceeds. These are particularly important for structural bonds that will be inaccessible once the next phase of construction begins.</li>
+</ul>
+
+<h2>The Cost-Weight-Performance Tradeoff</h2>
+
+<p>Carbon composite construction costs significantly more than GRP or aluminium, and owners rightly want to understand what they are getting for the premium. The honest answer is that carbon delivers measurable performance gains, but the magnitude depends on how the weight saving is exploited.</p>
+
+<p>A lighter hull allows the designer to either reduce overall displacement (making the yacht faster in light air and more responsive in all conditions) or redistribute weight into the keel bulb (increasing righting moment and stability without increasing total displacement). In practice, most performance designs do both. The result is a yacht that accelerates faster, points higher, and carries sail longer than a heavier equivalent.</p>
+
+<p>For racing yachts, carbon composite construction is effectively mandatory at the competitive end of the spectrum. For high-performance cruising yachts, it is a decision that balances performance ambition against budget. A well-engineered carbon cruiser-racer will typically cost 30 to 50 percent more than a comparable GRP yacht, but will deliver a fundamentally different sailing experience and hold its value better over time.</p>
+
+<h2>Why Independent Oversight Matters</h2>
+
+<p>The technical complexity of composite yacht construction makes independent oversight particularly valuable. Unlike steel or aluminium construction, where welds can be visually inspected and material thickness can be easily measured, composite laminates require specialist knowledge and testing equipment to evaluate. An owner without independent representation is heavily reliant on the yard's own quality systems &mdash; and while many yards maintain excellent standards, the absence of external scrutiny creates an obvious risk.</p>
+
+<p>Foreland Marine provides technical oversight for composite yacht builds, bringing structural engineering expertise, process knowledge, and NDT capability to the owner's side of the table. We review laminate schedules against the structural analysis, attend witness points during layup and cure, commission independent NDT inspections, and verify that the finished structure meets the design intent. Our involvement does not replace the yard's own quality systems &mdash; it complements them, providing the owner with an independent assurance that their investment is being built to the highest standard.</p>
+
+<blockquote>Carbon composite construction rewards rigour and punishes shortcuts. The difference between a well-built carbon yacht and a poorly built one is invisible from the outside &mdash; but it determines everything about the vessel's safety, performance, and longevity.</blockquote>
+
+<p>If you are considering a carbon fibre sailing yacht or are already in the early stages of a composite new build project, contact us to discuss how independent technical oversight can protect your investment from layup to launch.</p>`,
+  },
+  {
+    slug: "refit-for-performance-upgrading-a-racing-programme",
+    title: "Refit for Performance: Upgrading an Ageing Racing Programme",
+    description:
+      "When a racing yacht's results start to plateau, a well-planned performance refit can transform competitiveness. We cover appendage upgrades, rig and sail programmes, systems weight reduction, and managing a refit to a competition deadline.",
+    date: "2026-03-22",
+    category: "Refit",
+    readTime: "7 min read",
+    keywords: [
+      "racing yacht refit",
+      "performance yacht upgrade",
+      "sailing yacht refit",
+      "racing programme refit",
+      "yacht performance optimisation",
+      "keel and appendage refit",
+    ],
+    content: `<p>Every racing yacht has a competitive shelf life. Designs evolve, rating rules shift, and the fleet moves forward. A yacht that was at the front of the fleet five years ago may now find itself struggling to stay in contention &mdash; not because the boat is poorly sailed, but because the competition has invested in newer designs, better appendages, lighter systems, and more efficient rigs. The question facing many owners is whether to commission a new build or invest in a targeted performance refit that extends the competitive life of their existing yacht.</p>
+
+<p>In many cases, a well-planned racing yacht refit delivers a better return on investment than starting from scratch. A new build takes two to three years and carries the risk and cost of an untested platform. A performance yacht upgrade on a proven hull can be completed in months, targets specific areas of weakness, and preserves the sailing characteristics that the owner and crew already know and trust.</p>
+
+<h2>When to Refit vs Replace</h2>
+
+<p>The decision to refit or replace depends on several factors. If the hull form itself is fundamentally uncompetitive under the current rating rule, no amount of modification will close the gap. But if the hull remains sound and the design is within the competitive window, targeted upgrades to appendages, rig, sails, deck hardware, and systems can deliver transformative gains.</p>
+
+<p>A good starting point is a performance audit. This involves analysing race data, velocity prediction programme (VPP) outputs, and rating certificates to identify where the yacht is losing time relative to the competition. Is it pointing ability? Straight-line speed in light air? Heavy weather performance? Manoeuvre execution? Each deficit points to a different area of the yacht that could benefit from upgrade.</p>
+
+<h2>Typical Performance Upgrade Scope</h2>
+
+<h3>Appendages: Keel and Rudder</h3>
+
+<p>Appendage upgrades are often the single most effective modification in a sailing yacht refit. Modern computational fluid dynamics (CFD) tools allow designers to develop keel fins, bulbs, and rudder profiles that are significantly more efficient than those designed even five or ten years ago. A new keel fin with an optimised section and reduced wetted surface area can improve pointing ability and reduce drag across the entire wind range. Similarly, a new rudder with better balance and lower drag improves both helm feel and straight-line speed.</p>
+
+<p>Keel and appendage refit work must be coordinated carefully with the structural engineering of the hull. New appendages may impose different load paths, and the keel floor structure, keel bolts, and backup structure must be assessed and potentially reinforced. This is not a job for guesswork &mdash; it requires proper structural analysis and, in most cases, classification society approval.</p>
+
+<h3>Rig and Sails</h3>
+
+<p>A new rig &mdash; or significant modifications to the existing rig &mdash; can deliver substantial performance gains. Carbon spars have become lighter and stiffer with each generation of manufacturing technology, and a new mast may allow a revised sail plan with a larger or more efficient roach, a higher aspect ratio, or improved bend characteristics for sail shape control. Standing rigging upgrades &mdash; from rod to PBO or carbon &mdash; reduce weight aloft and windage while increasing strength margins.</p>
+
+<p>The sail programme should be developed in parallel with any rig modifications to ensure the new sails are optimised for the updated spar and rigging geometry. Working with the sailmaker early in the refit process ensures that the wardrobe is ready when the yacht relaunches, rather than arriving months later.</p>
+
+<h3>Systems Weight Reduction</h3>
+
+<p>Weight is the enemy of performance, and older racing yachts often accumulate unnecessary weight over the years &mdash; redundant wiring runs, oversized batteries, obsolete electronics, heavy domestic equipment, and general accretion of items that are no longer needed. A systematic weight audit can identify hundreds of kilograms of removable weight without compromising safety or functionality.</p>
+
+<p>More aggressive weight reduction involves replacing heavy components with lighter alternatives: lithium batteries for lead-acid, carbon deck hardware for stainless steel, lightweight galley and head equipment, and modern lightweight electronics. Every kilogram removed from above the waterline improves stability and performance.</p>
+
+<h3>Deck Hardware and Ergonomics</h3>
+
+<p>Deck layout directly affects manoeuvre speed and crew efficiency. Upgrading winches, clutches, turning blocks, and running rigging can shave critical seconds off tacks and gybes. Reconfiguring the cockpit layout to reduce crew movement and improve line handling ergonomics is often one of the most cost-effective performance upgrades available.</p>
+
+<h3>Instrumentation and Electronics</h3>
+
+<p>Modern sailing instrumentation provides data quality and processing capability that was unavailable even a few years ago. Upgrading processors, displays, and sensor arrays gives the afterguard better information for tactical and strategic decisions. Integration with weather routing software and performance analysis tools extends the benefit beyond individual races to programme-wide performance development.</p>
+
+<h2>Managing a Refit to a Competition Deadline</h2>
+
+<p>Racing refits are almost always driven by a specific event or season start date. The yacht must be in the water, tested, and race-ready by a non-negotiable deadline. This makes programme management critical.</p>
+
+<p>The refit timeline must work backwards from the launch target, allowing adequate time for commissioning, sea trials, crew training on any new systems, and a shakedown period before the first competitive event. Delays in any single work stream &mdash; appendage manufacture, rig delivery, sail production, yard labour &mdash; can cascade through the programme and jeopardise the entire season.</p>
+
+<p>Effective racing programme refit management requires a single point of coordination who understands both the technical work and the competitive calendar. This person holds suppliers accountable to delivery dates, manages the yard programme, resolves conflicts between trades, and keeps the owner informed of progress and risks. At Foreland Marine, this is a core part of our <a href="/refit">refit management service</a>.</p>
+
+<h2>Budget Considerations</h2>
+
+<p>Performance refits can range from modest upgrades costing tens of thousands to comprehensive programmes running into seven figures for grand prix yachts. The key is to focus investment where the performance data shows the greatest potential gain. A disciplined approach &mdash; informed by VPP analysis and race data review &mdash; prevents spending money on modifications that look impressive but deliver marginal benefit on the racecourse.</p>
+
+<p>Owners should also factor in the cost implications of rating rule changes. Any modification that affects the yacht's rating under IRC, ORC, or other handicap systems must be assessed for its net benefit &mdash; the raw performance gain minus any rating penalty. This requires close coordination with the design team and the relevant rating authority throughout the refit planning process.</p>
+
+<h2>Coordinating with the Design Team and Rating Authorities</h2>
+
+<p>A performance refit is a collaborative effort between the owner, the refit manager, the design team, and &mdash; where applicable &mdash; the class or rating authority. The design team provides the engineering and hydrodynamic expertise to specify the modifications. The rating authority (IRC, ORC, or class association) confirms how the changes will affect the yacht's rating or class compliance. The refit manager coordinates the physical work and ensures that the design intent is faithfully executed in the yard.</p>
+
+<p>Failure to engage the rating authority early in the process is a common and expensive mistake. Modifications that are assumed to be rating-neutral sometimes trigger unexpected penalties, and discovering this after the work is completed leaves the owner with limited options.</p>
+
+<blockquote>A racing refit is not about spending the most money &mdash; it is about spending it in the right places, at the right time, with the right people coordinating the programme.</blockquote>
+
+<p>If your racing programme is ready for a performance upgrade, talk to us about how a structured refit approach can extend your yacht's competitive life and deliver measurable gains on the racecourse. Our team combines technical refit expertise with a genuine understanding of the competitive sailing environment.</p>`,
+  },
+  {
+    slug: "owner-representation-during-yard-selection",
+    title:
+      "Owner's Representation During Yard Selection: Getting It Right from Day One",
+    description:
+      "Yard selection is the single most consequential decision in a new build project. We explain what criteria matter, how an owner's representative evaluates yards independently, red flags to watch for, and how the wrong choice can derail a project before it begins.",
+    date: "2026-03-18",
+    category: "New Build",
+    readTime: "8 min read",
+    keywords: [
+      "yacht yard selection",
+      "shipyard selection superyacht",
+      "owner's representative yard",
+      "new build yard selection",
+      "choosing a shipyard",
+      "yacht new build planning",
+    ],
+    content: `<p>Of all the decisions involved in commissioning a new build yacht, yard selection is the one that has the greatest impact on the outcome of the project. The right shipyard brings the capability, workforce, facilities, and management culture to deliver a yacht that meets the owner's expectations on quality, schedule, and budget. The wrong yard can result in years of delays, cost overruns measured in millions, quality deficiencies that compromise the vessel's safety and longevity, and a deeply frustrating experience for everyone involved.</p>
+
+<p>Despite the stakes, yard selection is often approached with less rigour than it deserves. Owners may be drawn to a yard by reputation, by a broker's recommendation, by geographic convenience, or by an attractively low price. None of these factors, taken in isolation, is a reliable indicator of whether a particular yard is the right fit for a specific project. This is where independent owner's representation adds critical value &mdash; bringing objectivity, technical knowledge, and industry experience to a decision that will shape every aspect of the build.</p>
+
+<h2>Why Yard Selection Matters So Much</h2>
+
+<p>A new build yacht project typically spans two to five years, depending on size and complexity. During that time, the owner is locked into a relationship with the selected yard. Changing yards mid-project is technically possible but practically catastrophic &mdash; it means moving a partially built hull, re-engaging subcontractors, renegotiating contracts, and accepting delays that can stretch into years. The financial and emotional cost of getting it wrong is enormous.</p>
+
+<p>The yard's capabilities also set a ceiling on what the finished yacht can be. A yard that lacks experience with a particular construction material, propulsion system, or level of interior finish will struggle to deliver quality in those areas, regardless of what the contract says. Understanding a yard's genuine capabilities &mdash; as opposed to their marketing claims &mdash; is fundamental to making the right choice.</p>
+
+<h2>What Criteria Actually Matter</h2>
+
+<h3>Yard Capability and Track Record</h3>
+
+<p>The starting point is whether the yard has demonstrated capability to build the type of yacht you are commissioning. This means looking at their recent delivery history: What have they built in the last five to ten years? Are those projects similar in size, construction material, and complexity to yours? Have those yachts been delivered on time and within budget? What do their previous clients say about the experience?</p>
+
+<p>A yard that has built a series of 40-metre steel motor yachts may not be equipped to deliver a 50-metre aluminium sailing yacht, even if they claim otherwise. Construction material expertise, systems integration capability, and experience with the relevant classification society standards are not easily transferable between project types.</p>
+
+<h3>Order Book and Workforce</h3>
+
+<p>A yard's current order book directly affects the resources available for your project. A yard with too many concurrent projects will spread its skilled workforce too thin, leading to slower progress, higher subcontractor dependency, and reduced management attention. Conversely, a yard with an empty order book may be pricing aggressively to win work, which raises questions about financial stability and workforce retention.</p>
+
+<p>The quality and stability of the workforce is at least as important as the facilities. Skilled shipbuilders &mdash; particularly welders, laminators, pipefitters, and electricians &mdash; take years to develop. A yard that relies heavily on temporary or agency labour for core trades may struggle to maintain consistent quality throughout a multi-year project.</p>
+
+<h3>Facilities and Infrastructure</h3>
+
+<p>Physical infrastructure matters. Does the yard have covered build halls of sufficient size? Are the halls climate-controlled (essential for composite construction and painting)? Is there adequate cranage for hull turning, stepping rigs, and launching? Are the electrical, compressed air, and ventilation systems adequate for the trades involved? Does the yard have proper waste handling and environmental compliance?</p>
+
+<p>These are not trivial considerations. A yard that lacks adequate covered space will be at the mercy of weather, which introduces schedule risk. A yard without proper environmental controls during painting will produce a finish that deteriorates prematurely.</p>
+
+<h3>Geographic Considerations</h3>
+
+<p>Geography affects the build in practical ways. Labour costs vary significantly between regions, as do material supply chains, subcontractor availability, and regulatory environments. A yard in northern Europe may offer a highly skilled workforce and rigorous quality culture but at a higher daily labour rate. A yard in a lower-cost region may offer attractive pricing but require more intensive oversight to maintain quality standards. Neither is inherently better &mdash; the right choice depends on the specific project and the owner's priorities.</p>
+
+<p>Geographic location also affects the owner's ability to visit the yard during construction. Regular site visits are important for maintaining engagement with the project and building a relationship with the yard team. A yard that is difficult or expensive to reach may result in less frequent visits and, consequently, less owner involvement in key decisions.</p>
+
+<h3>Commercial Terms</h3>
+
+<p>The commercial terms offered by a yard reveal a great deal about their business practices and financial health. Key elements to evaluate include pricing structure (fixed price, cost-plus, or guaranteed maximum price), payment milestone schedules and their alignment with actual build progress, warranty provisions, penalty clauses for late delivery, change order procedures, and the refund guarantee arrangements that protect the owner's stage payments in the event of yard insolvency.</p>
+
+<p>An owner's representative with new build yard selection experience can benchmark a yard's commercial terms against industry norms and identify provisions that are unusually favourable to the yard or that create unnecessary risk for the owner.</p>
+
+<h2>How an Owner's Rep Evaluates Yards</h2>
+
+<p>An independent owner's representative approaches yard selection systematically. The process typically begins with a long list of candidate yards identified based on the project brief &mdash; vessel type, size, construction material, intended use, and budget range. This long list is filtered through a preliminary assessment that considers track record, capability, capacity, and geographic suitability, producing a short list of three to five yards for detailed evaluation.</p>
+
+<p>The detailed evaluation involves extended yard visits &mdash; not the polished tour that yards offer to prospective clients, but a thorough inspection of build halls, workshops, quality control processes, and vessels currently under construction. The owner's rep talks to project managers, foremen, and tradespeople on the shop floor. They review the yard's quality management system documentation, inspect ongoing work for build quality indicators, and assess the yard's project management tools and reporting capabilities.</p>
+
+<p>References are checked systematically. The owner's rep contacts previous clients, their project managers, and the classification society surveyors who oversaw recent builds. These conversations often reveal information that the yard's own references do not &mdash; particularly around schedule performance, change order management, and the yard's responsiveness to quality concerns.</p>
+
+<h2>Red Flags to Watch For</h2>
+
+<p>Experience reveals patterns that should raise concerns during the shipyard selection superyacht evaluation process:</p>
+
+<ul>
+<li><strong>Pricing that is significantly below competitors.</strong> If one yard's quote is 20 to 30 percent below the others, the likely explanations are that they have underestimated the scope, intend to recover margin through change orders, or are pricing below cost to fill an empty order book. None of these scenarios ends well for the owner.</li>
+<li><strong>Reluctance to provide client references.</strong> Any yard confident in their track record will readily provide contact details for previous clients. Reluctance to do so is a clear warning sign.</li>
+<li><strong>High turnover in project management.</strong> If the yard's project management team has changed frequently in recent years, it suggests internal instability that will affect the continuity and quality of your project management.</li>
+<li><strong>Resistance to independent oversight.</strong> A professional yard welcomes the involvement of an owner's representative because it reduces misunderstandings and builds trust. A yard that resists or discourages independent oversight may have something to hide.</li>
+<li><strong>Vague or incomplete specifications.</strong> The yard's build specification should be detailed and unambiguous. Vague descriptions, undefined allowances, or references to "yard standard" without defining what that standard is create fertile ground for disputes later in the project.</li>
+<li><strong>Financial opacity.</strong> If the yard is unable or unwilling to provide evidence of financial stability, insurance coverage, and refund guarantee arrangements, the owner's stage payments may be at risk.</li>
+</ul>
+
+<h2>The Yard Visit and Due Diligence Process</h2>
+
+<p>A proper yard visit for due diligence purposes takes a full day at minimum, and ideally two days for larger or more complex projects. The agenda should include a tour of all production facilities, meetings with senior management and the proposed project team, review of a vessel currently under construction at a similar stage to where your project would begin, inspection of quality control documentation and processes, discussion of the proposed build schedule and resource allocation, and review of commercial terms and contract structure.</p>
+
+<p>The owner's representative documents the visit with photographs, notes, and a structured assessment against pre-defined evaluation criteria. This assessment is shared with the owner in a format that allows objective comparison between candidate yards.</p>
+
+<h2>How the Wrong Choice Derails a Project</h2>
+
+<p>The consequences of poor yard selection typically manifest gradually. Early signs include missed milestones, quality issues that require rework, communication breakdowns between the yard and the owner's team, and change orders that seem to appear with increasing frequency. As the project progresses, these issues compound. The owner loses confidence, the relationship with the yard becomes adversarial, and the focus shifts from building an exceptional yacht to managing a troubled project.</p>
+
+<p>In the worst cases, owners are forced to terminate the contract and move the build to another yard &mdash; a process that adds years to the schedule and can double the cost. These outcomes are almost always traceable to shortcomings in the original yard selection process: insufficient due diligence, reliance on a broker's recommendation without independent verification, or selection based primarily on price rather than capability.</p>
+
+<blockquote>The yard you choose will be your partner for the next three to five years. That decision deserves the same rigour and independent scrutiny that you would apply to any major investment &mdash; because that is exactly what it is.</blockquote>
+
+<p>If you are in the early stages of planning a new build and want to ensure that yard selection is handled with the thoroughness it demands, <a href="/new-build">learn more about our new build services</a> or get in touch to discuss how independent owner's representation can protect your project from day one.</p>`,
+  },
+  {
     slug: "the-role-of-an-owners-representative",
     title: "The Role of an Owner's Representative in a New Build Project",
     description:
