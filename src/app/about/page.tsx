@@ -48,7 +48,7 @@ export default function AboutPage() {
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
           <Image
-            src="/images/sailing-dramatic.jpg"
+            src="/images/about-hero.jpg"
             alt=""
             fill
             className="object-cover opacity-40"
@@ -333,7 +333,7 @@ export default function AboutPage() {
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/sailing-dramatic.jpg"
+            src="/images/about-hero.jpg"
             alt=""
             fill
             className="object-cover opacity-15"
