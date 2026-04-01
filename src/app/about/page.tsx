@@ -154,6 +154,116 @@ export default function AboutPage() {
 
       <HorizonLine />
 
+      {/* MEET THE TEAM */}
+      <section className="relative py-24 bg-bg1 overflow-hidden">
+        <Glow className="top-20 right-0 opacity-15" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-14">
+            <SectionLabel>Meet the Team</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
+              Engineers first, consultants second
+            </h2>
+            <p className="text-muted leading-relaxed">
+              Foreland Marine was founded by two yacht engineers who have spent
+              over a decade each working on some of the most demanding vessels
+              afloat — from J Class campaigns to high-performance carbon racers
+              and large motor yachts. With more than 200,000 nautical miles
+              between them, our advice comes from lived experience, not
+              textbooks.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
+            {/* Jack Macnally */}
+            <div className="bg-bg0 border border-white/8 p-8 sm:p-10">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent font-semibold text-lg">
+                  JM
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">Jack Macnally</h3>
+                  <p className="text-sm text-accent">Co-Founder</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                Jack has spent over ten years as a yacht engineer on J Class
+                yachts, fast carbon composite racers and large motor yachts,
+                accumulating more than 100,000 nautical miles. Originally from
+                Chichester and sailing from a young age, he brings deep
+                mechanical and systems engineering experience to every project.
+              </p>
+              <p className="text-sm text-muted leading-relaxed mb-5">
+                His career has been defined by working at the sharp end of the
+                sport — maintaining and optimising complex racing yachts under
+                the pressures of competitive campaigns, where technical
+                decisions are made quickly and must be right first time. That
+                rigour carries directly into his approach to new build
+                oversight, refit management and technical consultancy.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/jmacnally/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-accent hover:text-white transition-colors"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+
+            {/* Daniel Marks */}
+            <div className="bg-bg0 border border-white/8 p-8 sm:p-10">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent font-semibold text-lg">
+                  DM
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">Daniel Marks</h3>
+                  <p className="text-sm text-accent">Co-Founder</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                Dan has over a decade of hands-on engineering experience across
+                the J Class fleet, high-performance carbon racing yachts and
+                large motor yachts, with more than 100,000 nautical miles
+                under his belt. From Exeter and sailing since childhood, his
+                engineering career has been shaped by the demands of keeping
+                complex vessels performing at the highest level.
+              </p>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                His background spans mechanical, hydraulic and electrical
+                systems across some of the most technically advanced sailing
+                yachts in the world. Dan combines that depth of technical
+                knowledge with a rare attention to detail in project delivery
+                — whether managing a refit schedule, specifying systems for a
+                new build, or advising on operational compliance.
+              </p>
+              <p className="text-sm text-muted leading-relaxed mb-5">
+                A WSET Level 3 qualified sommelier, Dan also brings an
+                understanding of the hospitality side of yacht ownership that
+                complements his engineering expertise.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/daniel-marks-0a0a4b6b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-accent hover:text-white transition-colors"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <HorizonLine />
+
       {/* ACCREDITATIONS */}
       <section className="py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

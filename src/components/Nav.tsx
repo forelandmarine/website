@@ -5,11 +5,15 @@ import Image from "next/image";
 import { useState, useRef, useCallback } from "react";
 
 const navLinks = [
-  { label: "About", href: "/about" },
   { label: "New Build", href: "/new-build" },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy" },
   { label: "Yacht Management", href: "/yacht-management" },
+];
+
+const aboutLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "Insights", href: "/insights" },
 ];
 
 const toolLinks = [
@@ -21,7 +25,9 @@ const toolLinks = [
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const aboutCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const openTools = useCallback(() => {
     if (closeTimeout.current) { clearTimeout(closeTimeout.current); closeTimeout.current = null; }
@@ -30,6 +36,15 @@ export default function Nav() {
 
   const closeTools = useCallback(() => {
     closeTimeout.current = setTimeout(() => setToolsOpen(false), 200);
+  }, []);
+
+  const openAbout = useCallback(() => {
+    if (aboutCloseTimeout.current) { clearTimeout(aboutCloseTimeout.current); aboutCloseTimeout.current = null; }
+    setAboutOpen(true);
+  }, []);
+
+  const closeAbout = useCallback(() => {
+    aboutCloseTimeout.current = setTimeout(() => setAboutOpen(false), 200);
   }, []);
 
   return (
@@ -88,12 +103,35 @@ export default function Nav() {
               )}
             </div>
 
-            <Link
-              href="/insights"
-              className="px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5"
+            {/* About dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={openAbout}
+              onMouseLeave={closeAbout}
             >
-              Insights
-            </Link>
+              <button className="flex items-center gap-1 px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5">
+                About
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform ${aboutOpen ? "rotate-180" : ""}`}>
+                  <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              {aboutOpen && (
+                <div className="absolute top-full left-0 pt-2 w-48">
+                <div className="border border-white/10 bg-bg1 shadow-xl shadow-black/40 py-1">
+                  {aboutLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block px-4 py-2.5 text-sm font-light text-muted hover:text-white hover:bg-white/5 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+                </div>
+              )}
+            </div>
+
             <Link
               href="/contact"
               className="px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5"
@@ -169,13 +207,17 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/insights"
-              onClick={() => setMobileOpen(false)}
-              className="block px-3 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
-            >
-              Insights
-            </Link>
+            <div className="px-3 py-2 text-xs text-muted/50 tracking-widest">About</div>
+            {aboutLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="block px-6 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
