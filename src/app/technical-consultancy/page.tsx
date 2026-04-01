@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Technical Consultancy",
@@ -152,6 +152,8 @@ export default function TechnicalConsultancyPage() {
 
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
+        <Glow className="-top-40 -right-40 opacity-30" />
+        <Glow className="bottom-0 -left-60 opacity-15" color="rgba(30,100,180,0.15)" size={500} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <SectionLabel>Technical Consultancy</SectionLabel>
