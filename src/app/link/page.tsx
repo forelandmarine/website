@@ -67,9 +67,20 @@ const links = [
 
 export default function LinkPage() {
   return (
-    <div className="min-h-screen bg-bg0 flex flex-col items-center px-4 py-12 sm:py-16 [&~footer]:hidden">
+    <div className="relative min-h-screen flex flex-col items-center px-4 py-12 sm:py-16">
       {/* Hide nav and footer */}
       <style dangerouslySetInnerHTML={{ __html: `header, footer { display: none !important; }` }} />
+      {/* Background image */}
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src="/images/link-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-bg0/75" />
+      </div>
       {/* Logo */}
       <div className="mb-6">
         <Image
