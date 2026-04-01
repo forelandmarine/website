@@ -46,16 +46,6 @@ export default function AboutPage() {
     <>
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/about-hero.jpg"
-            alt=""
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/60 via-bg0/30 to-bg0" />
-        </div>
         <Glow className="-top-40 -right-40 opacity-30" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -104,12 +94,16 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="relative h-72 lg:h-auto min-h-[460px] flex items-center justify-center bg-bg0">
-            <img
-              src="/images/approach-graphic-4.svg"
-              alt="Network diagram representing owner-aligned consultancy"
-              className="w-full h-full object-contain p-12"
-            />
+          <div className="relative h-72 lg:h-auto min-h-[460px] bg-bg0 flex items-center justify-center p-8 lg:p-16">
+            <div className="relative w-full max-w-sm overflow-hidden rounded border border-white/10 shadow-2xl shadow-black/40">
+              <Image
+                src="/images/jack-macnally.jpg"
+                alt="Jack Macnally working on yacht systems during a refit"
+                width={600}
+                height={800}
+                className="object-cover object-top w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
