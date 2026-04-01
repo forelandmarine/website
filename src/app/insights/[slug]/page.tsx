@@ -121,13 +121,33 @@ export default async function PostPage({ params }: Props) {
             {post.description}
           </p>
 
-          {/* Placeholder */}
-          <div className="border border-white/8 rounded bg-bg0/40 p-8 sm:p-12 text-center">
-            <p className="text-muted text-sm mb-2">Full article coming soon.</p>
-            <p className="text-muted/50 text-xs">
-              This article is currently being prepared by the Foreland Marine
-              team. Check back shortly.
+          {/* Article content */}
+          <div
+            className="prose prose-invert prose-lg max-w-none
+              [&>p]:text-muted [&>p]:leading-relaxed [&>p]:mb-6
+              [&>h2]:text-white [&>h2]:text-2xl [&>h2]:font-light [&>h2]:mt-12 [&>h2]:mb-4
+              [&>h3]:text-white [&>h3]:text-xl [&>h3]:font-light [&>h3]:mt-8 [&>h3]:mb-3
+              [&>ul]:text-muted [&>ul]:mb-6 [&>ul]:list-disc [&>ul]:pl-6 [&>ul>li]:mb-2
+              [&_a]:text-accent [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-white
+              [&>blockquote]:border-l-2 [&>blockquote]:border-accent [&>blockquote]:pl-6 [&>blockquote]:italic [&>blockquote]:text-muted/80"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
+
+          {/* CTA */}
+          <div className="border border-white/10 rounded-lg p-8 sm:p-10 mt-16 text-center">
+            <h2 className="text-xl font-light text-white mb-3">
+              Need expert advice?
+            </h2>
+            <p className="text-muted text-sm leading-relaxed mb-6 max-w-lg mx-auto">
+              Whether you have a specific question or want to discuss how we can
+              support your vessel, our team is here to help.
             </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-bg0 text-sm font-medium rounded hover:bg-accent/90 transition-colors"
+            >
+              Get in Touch
+            </Link>
           </div>
         </div>
       </section>
