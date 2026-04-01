@@ -58,7 +58,7 @@ const steps = [
     number: "04",
     title: "On-Site Population",
     description:
-      "Our team comes aboard to inspect and catalogue every system, compartment and piece of equipment. Manufacturer data, serial numbers, service intervals \u2014 all captured first-hand.",
+      "Our team comes aboard to inspect and catalogue every system, compartment and piece of equipment. Manufacturer data, serial numbers, service intervals, all captured first-hand.",
   },
   {
     number: "05",
@@ -113,7 +113,7 @@ export default function PMSDatabasePage() {
             "@type": "Service",
             name: "PMS Database Services",
             description:
-              "Expert planned maintenance system database setup, licensing, and on-site population for yachts 24\u201360m.",
+              "Expert planned maintenance system database setup, licensing, and on-site population for yachts 24-60m.",
             provider: {
               "@type": "Organization",
               name: "Foreland Marine Consultancy",

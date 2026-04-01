@@ -74,7 +74,7 @@ export default function LightshipISMPage() {
       <FeatureSection
         label="Fleet Overview"
         title="Every vessel, one dashboard"
-        description="Real-time visibility across your entire fleet. Safety incidents, audit schedules, crew status, equipment condition, and compliance — all surfaced in a single view. No more chasing spreadsheets or waiting for email updates."
+        description="Real-time visibility across your entire fleet. Safety incidents, audit schedules, crew status, equipment condition, and compliance, all surfaced in a single view. No more chasing spreadsheets or waiting for email updates."
       >
         <ScreenFrame src="/images/lightship-dashboard.png" alt="Lightship fleet overview dashboard" />
       </FeatureSection>
@@ -85,7 +85,7 @@ export default function LightshipISMPage() {
       <FeatureSection
         label="Safety Checklists"
         title="Create, assign, and track inspections"
-        description="Build checklists from templates or from scratch. Assign them across your fleet with due dates and frequency. Track progress in real time, flag deficiencies, and raise corrective actions — all from one screen."
+        description="Build checklists from templates or from scratch. Assign them across your fleet with due dates and frequency. Track progress in real time, flag deficiencies, and raise corrective actions, all from one screen."
         reverse
         bg="bg-bg0"
       >
@@ -112,7 +112,7 @@ export default function LightshipISMPage() {
       <FeatureSection
         label="Risk Assessments"
         title="Identify, assess, mitigate"
-        description="Operational risk assessments for every activity onboard — engine room operations, deck work, navigation, and more. Identify hazards, assign likelihood and consequence, define controls, and set review dates. All linked to your vessels and crew."
+        description="Operational risk assessments for every activity onboard: engine room operations, deck work, navigation, and more. Identify hazards, assign likelihood and consequence, define controls, and set review dates. All linked to your vessels and crew."
         reverse
         bg="bg-bg0"
       >
@@ -125,7 +125,7 @@ export default function LightshipISMPage() {
       <FeatureSection
         label="Procedures"
         title="Emergency response at everyone&apos;s fingertips"
-        description="Documented emergency procedures accessible to all crew. Step-by-step response protocols, safety precautions, and approval workflows. From man overboard to fire response — versioned, approved, and always available."
+        description="Documented emergency procedures accessible to all crew. Step-by-step response protocols, safety precautions, and approval workflows. From man overboard to fire response, versioned, approved, and always available."
       >
         <ScreenFrame src="/images/lightship-procedures.png" alt="Man overboard emergency response procedure" width={800} height={1000} />
       </FeatureSection>
@@ -179,7 +179,7 @@ export default function LightshipISMPage() {
             <SectionLabel>Desktop &amp; Mobile</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Works on every device</h2>
             <p className="text-muted text-lg max-w-xl mx-auto">
-              Full access on desktop, tablet, or phone. Crew can file reports dockside or mid-ocean — wherever they are, the platform is with them.
+              Full access on desktop, tablet, or phone. Crew can file reports dockside or mid-ocean, wherever they are, the platform is with them.
             </p>
           </div>
           <div className="flex items-center justify-center gap-6">

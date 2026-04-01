@@ -53,7 +53,7 @@ export default function RefitPage() {
                   name: "What is the typical scope of refit project management?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Our involvement covers the full lifecycle of a refit — from initial survey and scope definition through yard selection, budget planning, daily on-site oversight, quality control, and contractor coordination, through to sea trials and formal handover.",
+                    text: "Our involvement covers the full lifecycle of a refit, from initial survey and scope definition through yard selection, budget planning, daily on-site oversight, quality control, and contractor coordination, through to sea trials and formal handover.",
                   },
                 },
                 {
@@ -200,7 +200,7 @@ export default function RefitPage() {
                 <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
               </summary>
               <div className="px-6 pb-5 text-muted leading-relaxed">
-                Our involvement covers the full lifecycle of a refit — from initial survey and scope definition through yard selection, budget planning, daily on-site oversight, quality control, and contractor coordination, through to sea trials and formal handover.
+                Our involvement covers the full lifecycle of a refit, from initial survey and scope definition through yard selection, budget planning, daily on-site oversight, quality control, and contractor coordination, through to sea trials and formal handover.
               </div>
             </details>
             <details className="group border border-white/10 bg-bg1">

@@ -47,7 +47,7 @@ export default function YachtManagementPage() {
                   name: "What is independent yacht management?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Independent yacht management means serving the owner's interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers — every recommendation is made solely in the owner's interest.",
+                    text: "Independent yacht management means serving the owner's interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation is made solely in the owner's interest.",
                   },
                 },
                 {
@@ -63,7 +63,7 @@ export default function YachtManagementPage() {
                   name: "Do you handle crew recruitment and management?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. We provide full crew management services including recruitment support, contract administration, payroll coordination, training and certification tracking, leave planning, and ongoing HR advisory — all managed per MLC and flag state requirements.",
+                    text: "Yes. We provide full crew management services including recruitment support, contract administration, payroll coordination, training and certification tracking, leave planning, and ongoing HR advisory, all managed per MLC and flag state requirements.",
                   },
                 },
                 {
@@ -221,7 +221,7 @@ export default function YachtManagementPage() {
                 <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
               </summary>
               <div className="px-6 pb-5 text-muted leading-relaxed">
-                Independent yacht management means serving the owner&apos;s interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers — every recommendation is made solely in the owner&apos;s interest.
+                Independent yacht management means serving the owner&apos;s interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation is made solely in the owner&apos;s interest.
               </div>
             </details>
             <details className="group border border-white/10 bg-bg1">
@@ -239,7 +239,7 @@ export default function YachtManagementPage() {
                 <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
               </summary>
               <div className="px-6 pb-5 text-muted leading-relaxed">
-                Yes. We provide full crew management services including recruitment support, contract administration, payroll coordination, training and certification tracking, leave planning, and ongoing HR advisory — all managed per MLC and flag state requirements.
+                Yes. We provide full crew management services including recruitment support, contract administration, payroll coordination, training and certification tracking, leave planning, and ongoing HR advisory, all managed per MLC and flag state requirements.
               </div>
             </details>
             <details className="group border border-white/10 bg-bg1">

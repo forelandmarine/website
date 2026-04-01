@@ -51,7 +51,7 @@ export default function SeaTimeTrackerPage() {
                 Built for seafarers who need MCA-compliant records, automatically tracked via AIS. No manual entry, no paperwork.
               </p>
               <p className="text-base text-muted/60 leading-relaxed mb-10 max-w-xl">
-                SeaTime Tracker uses live AIS data to record every passage automatically — even when your phone is off.
+                SeaTime Tracker uses live AIS data to record every passage automatically, even when your phone is off.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <ButtonPrimary href="https://apps.apple.com" className="gap-2">
@@ -77,7 +77,7 @@ export default function SeaTimeTrackerPage() {
               </div>
             </div>
             <div className="lg:col-span-2 flex justify-center">
-              <PhoneMockup src="/images/seatime/IMG_0594.PNG" alt="SeaTime Tracker — Active vessel tracking with AIS" />
+              <PhoneMockup src="/images/seatime/IMG_0594.PNG" alt="SeaTime Tracker - Active vessel tracking with AIS" />
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function SeaTimeTrackerPage() {
               </p>
               <div className="space-y-6">
                 {[
-                  { num: "01", title: "Position checked every 2 hours via AIS", desc: "Server checks vessel position every 2 hours via AIS data — even when your phone is off." },
+                  { num: "01", title: "Position checked every 2 hours via AIS", desc: "Server checks vessel position every 2 hours via AIS data, even when your phone is off." },
                   { num: "02", title: "Movement detected, entry created", desc: "Compares current position with 2 hours ago. If you've moved, a pending sea time entry is created." },
                   { num: "03", title: "You review and confirm in one tap", desc: "Open the app, review the entry, and confirm or reject with a single tap." },
                 ].map((step, i, arr) => (
@@ -117,7 +117,7 @@ export default function SeaTimeTrackerPage() {
               </div>
             </div>
             <div className="lg:col-span-2 flex justify-center">
-              <PhoneMockup src="/images/seatime/IMG_0601.PNG" alt="SeaTime Tracker — Scheduled AIS tasks" />
+              <PhoneMockup src="/images/seatime/IMG_0601.PNG" alt="SeaTime Tracker - Scheduled AIS tasks" />
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ export default function SeaTimeTrackerPage() {
                 Switch between list and calendar views. Your complete sea service history, always at hand and ready to export. Each entry includes vessel name, dates, duration, and route.
               </p>
               <p className="text-muted leading-relaxed mb-8">
-                Add entries manually or let AIS do the work. Entries are tagged by service type — seagoing, watchkeeping, standby, or yard — so your MCA records are always accurate.
+                Add entries manually or let AIS do the work. Entries are tagged by service type (seagoing, watchkeeping, standby, or yard) so your MCA records are always accurate.
               </p>
               <div className="grid grid-cols-3 gap-4">
                 {[
@@ -203,8 +203,8 @@ export default function SeaTimeTrackerPage() {
             </div>
           </div>
           <div className="flex items-center justify-center py-16 lg:py-0 gap-4 px-8">
-            <PhoneMockup src="/images/seatime/IMG_0595.PNG" alt="SeaTime Tracker — Logbook list view" />
-            <PhoneMockup src="/images/seatime/IMG_0596.PNG" alt="SeaTime Tracker — Logbook calendar view" className="hidden sm:block mt-12" />
+            <PhoneMockup src="/images/seatime/IMG_0595.PNG" alt="SeaTime Tracker - Logbook list view" />
+            <PhoneMockup src="/images/seatime/IMG_0596.PNG" alt="SeaTime Tracker - Logbook calendar view" className="hidden sm:block mt-12" />
           </div>
         </div>
       </section>
@@ -215,7 +215,7 @@ export default function SeaTimeTrackerPage() {
       <section className="bg-bg1 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex items-center justify-center py-16 lg:py-0 px-8 lg:order-1">
-            <PhoneMockup src="/images/seatime/IMG_1660.PNG" alt="SeaTime Tracker — PDF and CSV reports" />
+            <PhoneMockup src="/images/seatime/IMG_1660.PNG" alt="SeaTime Tracker - PDF and CSV reports" />
           </div>
           <div className="flex items-center px-8 py-20 lg:px-16 lg:py-24 lg:order-2">
             <div className="max-w-lg">
@@ -227,7 +227,7 @@ export default function SeaTimeTrackerPage() {
                 Export MCA-compliant sea service testimonials as PDF or CSV in a single tap, ready for your RYA or MCA application. No manual tallying, no formatting required.
               </p>
               <p className="text-muted leading-relaxed mb-8">
-                Reports break down your sea time by vessel and by service type — actual sea service, watchkeeping, standby, and yard — exactly as the MCA requires.
+                Reports break down your sea time by vessel and by service type: actual sea service, watchkeeping, standby, and yard. Exactly as the MCA requires.
               </p>
               <div className="bg-bg2 border border-white/8 p-5">
                 <p className="text-xs text-muted/50 uppercase tracking-widest mb-4">Sea time by service type</p>
@@ -265,7 +265,7 @@ export default function SeaTimeTrackerPage() {
                 Daily reminders keep your logbook accurate and MCA-ready. When AIS detects that your vessel has moved, a pending entry is created with the date, duration, start and end positions, and a description of the passage.
               </p>
               <p className="text-muted leading-relaxed mb-8 max-w-lg">
-                Review the entry and approve or decline with a single tap. Notifications are sent at 18:00 local time — only when there are pending entries to review.
+                Review the entry and approve or decline with a single tap. Notifications are sent at 18:00 local time, only when there are pending entries to review.
               </p>
               <div className="flex gap-4">
                 <div className="bg-green/10 border border-green/20 px-5 py-3 flex items-center gap-2">
@@ -279,7 +279,7 @@ export default function SeaTimeTrackerPage() {
               </div>
             </div>
             <div className="lg:col-span-2 flex justify-center">
-              <PhoneMockup src="/images/seatime/IMG_0598.PNG" alt="SeaTime Tracker — Review and confirm entries" />
+              <PhoneMockup src="/images/seatime/IMG_0598.PNG" alt="SeaTime Tracker - Review and confirm entries" />
             </div>
           </div>
         </div>

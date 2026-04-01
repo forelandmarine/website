@@ -52,7 +52,7 @@ export default function NewBuildPage() {
                   name: "When should I appoint an Owner's Representative?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "As early as possible — ideally before signing a Letter of Intent or selecting a shipyard. Early involvement allows the representative to contribute to yard evaluation, contract negotiation, and specification development, ensuring the owner's position is properly protected from the outset.",
+                    text: "As early as possible, ideally before signing a Letter of Intent or selecting a shipyard. Early involvement allows the representative to contribute to yard evaluation, contract negotiation, and specification development, ensuring the owner's position is properly protected from the outset.",
                   },
                 },
                 {
@@ -264,7 +264,7 @@ export default function NewBuildPage() {
                 <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
               </summary>
               <div className="px-6 pb-5 text-muted leading-relaxed">
-                As early as possible — ideally before signing a Letter of Intent or selecting a shipyard. Early involvement allows the representative to contribute to yard evaluation, contract negotiation, and specification development, ensuring the owner&apos;s position is properly protected from the outset.
+                As early as possible, ideally before signing a Letter of Intent or selecting a shipyard. Early involvement allows the representative to contribute to yard evaluation, contract negotiation, and specification development, ensuring the owner&apos;s position is properly protected from the outset.
               </div>
             </details>
             <details className="group border border-white/10 bg-bg1">

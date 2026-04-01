@@ -120,7 +120,7 @@ export default function HomePage() {
 
       <HorizonLine />
 
-      {/* ABOUT — image left, text right */}
+      {/* ABOUT - image left, text right */}
       <section className="py-0 bg-bg1 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative h-72 lg:h-auto min-h-[460px]">

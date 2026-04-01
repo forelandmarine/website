@@ -5,7 +5,7 @@ import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui"
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Foreland Marine Consultancy — independent yacht consultancy built on blue water experience. SYBAss accredited, specialising in performance sailing yachts from 24 to 60 metres.",
+    "Foreland Marine Consultancy. Independent yacht consultancy built on blue water experience. SYBAss accredited, specialising in performance sailing yachts from 24 to 60 metres.",
 };
 
 const expertise = [
@@ -65,7 +65,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-lg text-muted leading-relaxed max-w-2xl">
               Foreland Marine was founded by professionals who have spent
-              careers at sea and in shipyards — not behind desks. That
+              careers at sea and in shipyards, not behind desks. That
               hands-on background in sailing, engineering and project
               delivery shapes everything we do: practical advice, honest
               assessment, and consultancy grounded in real-world experience.
@@ -74,7 +74,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* PHILOSOPHY / APPROACH — 2 column */}
+      {/* PHILOSOPHY / APPROACH - 2 column */}
       <section className="py-0 bg-bg1 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex items-center px-8 py-20 lg:px-16 lg:py-24">
@@ -90,7 +90,7 @@ export default function AboutPage() {
                 make is guided by a single interest: the owner&apos;s.
               </p>
               <p className="text-muted leading-relaxed mb-5">
-                That independence is not a marketing position — it is a
+                That independence is not a marketing position. It is a
                 structural commitment. It means owners can rely on objective
                 technical assessments, unbiased yard evaluations, and
                 transparent cost reporting without questioning whose
@@ -166,7 +166,7 @@ export default function AboutPage() {
             <p className="text-muted leading-relaxed">
               Foreland Marine was founded by two yacht engineers who have spent
               over a decade each working on some of the most demanding vessels
-              afloat — from J Class campaigns to high-performance carbon racers
+              afloat, from J Class campaigns to high-performance carbon racers
               and large motor yachts. With more than 200,000 nautical miles
               between them, our advice comes from lived experience, not
               textbooks.
@@ -194,7 +194,7 @@ export default function AboutPage() {
               </p>
               <p className="text-sm text-muted leading-relaxed mb-5">
                 His career has been defined by working at the sharp end of the
-                sport — maintaining and optimising complex racing yachts under
+                sport, maintaining and optimising complex racing yachts under
                 the pressures of competitive campaigns, where technical
                 decisions are made quickly and must be right first time. That
                 rigour carries directly into his approach to new build
@@ -237,7 +237,7 @@ export default function AboutPage() {
                 systems across some of the most technically advanced sailing
                 yachts in the world. Dan combines that depth of technical
                 knowledge with a rare attention to detail in project delivery
-                — whether managing a refit schedule, specifying systems for a
+                whether managing a refit schedule, specifying systems for a
                 new build, or advising on operational compliance.
               </p>
               <p className="text-sm text-muted leading-relaxed mb-5">
@@ -284,7 +284,7 @@ export default function AboutPage() {
               <div className="mb-6 flex items-center justify-center h-20">
                 <Image
                   src="/logos/sybass-white.png"
-                  alt="SYBAss — Superyacht Builders Association"
+                  alt="SYBAss - Superyacht Builders Association"
                   width={200}
                   height={61}
                 />
