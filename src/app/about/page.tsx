@@ -104,14 +104,12 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="relative h-72 lg:h-auto min-h-[460px]">
-            <Image
-              src="/images/sailing-yacht-deck.jpg"
-              alt="On deck of a sailing yacht at sea"
-              fill
-              className="object-cover"
+          <div className="relative h-72 lg:h-auto min-h-[460px] flex items-center justify-center bg-bg0">
+            <img
+              src="/images/approach-graphic-4.svg"
+              alt="Network diagram representing owner-aligned consultancy"
+              className="w-full h-full object-contain p-12"
             />
-            <div className="absolute inset-0 bg-bg0/10" />
           </div>
         </div>
       </section>

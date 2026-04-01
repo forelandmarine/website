@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <!-- Network/constellation - connections, independence, alignment -->
+  <rect width="800" height="800" fill="#040D1A"/>
+
+  <!-- Connection lines -->
+  <g stroke="#5386B6" stroke-width="0.5" opacity="0.15">
+    <line x1="400" y1="400" x2="200" y2="250"/>
+    <line x1="400" y1="400" x2="600" y2="280"/>
+    <line x1="400" y1="400" x2="550" y2="550"/>
+    <line x1="400" y1="400" x2="250" y2="580"/>
+    <line x1="400" y1="400" x2="150" y2="420"/>
+    <line x1="400" y1="400" x2="650" y2="400"/>
+    <line x1="400" y1="400" x2="350" y2="180"/>
+    <line x1="400" y1="400" x2="500" y2="650"/>
+
+    <!-- Secondary connections -->
+    <line x1="200" y1="250" x2="350" y2="180"/>
+    <line x1="600" y1="280" x2="650" y2="400"/>
+    <line x1="550" y1="550" x2="500" y2="650"/>
+    <line x1="250" y1="580" x2="150" y2="420"/>
+    <line x1="200" y1="250" x2="150" y2="420"/>
+    <line x1="600" y1="280" x2="550" y2="550"/>
+  </g>
+
+  <!-- Outer nodes -->
+  <g fill="none" stroke="#5386B6" stroke-width="0.8">
+    <circle cx="200" cy="250" r="6" opacity="0.25"/>
+    <circle cx="600" cy="280" r="6" opacity="0.25"/>
+    <circle cx="550" cy="550" r="6" opacity="0.25"/>
+    <circle cx="250" cy="580" r="6" opacity="0.25"/>
+    <circle cx="150" cy="420" r="6" opacity="0.25"/>
+    <circle cx="650" cy="400" r="6" opacity="0.25"/>
+    <circle cx="350" cy="180" r="5" opacity="0.2"/>
+    <circle cx="500" cy="650" r="5" opacity="0.2"/>
+  </g>
+
+  <!-- Node fills -->
+  <g fill="#5386B6">
+    <circle cx="200" cy="250" r="2" opacity="0.4"/>
+    <circle cx="600" cy="280" r="2" opacity="0.4"/>
+    <circle cx="550" cy="550" r="2" opacity="0.4"/>
+    <circle cx="250" cy="580" r="2" opacity="0.4"/>
+    <circle cx="150" cy="420" r="2" opacity="0.4"/>
+    <circle cx="650" cy="400" r="2" opacity="0.4"/>
+    <circle cx="350" cy="180" r="1.5" opacity="0.3"/>
+    <circle cx="500" cy="650" r="1.5" opacity="0.3"/>
+  </g>
+
+  <!-- Center node - the owner, with everything aligned around them -->
+  <circle cx="400" cy="400" r="20" fill="none" stroke="#5386B6" stroke-width="1" opacity="0.35"/>
+  <circle cx="400" cy="400" r="12" fill="none" stroke="#5386B6" stroke-width="0.8" opacity="0.45"/>
+  <circle cx="400" cy="400" r="5" fill="#5386B6" opacity="0.6"/>
+
+  <!-- Glow around center -->
+  <radialGradient id="glow4">
+    <stop offset="0%" stop-color="#5386B6" stop-opacity="0.15"/>
+    <stop offset="50%" stop-color="#5386B6" stop-opacity="0.05"/>
+    <stop offset="100%" stop-color="#5386B6" stop-opacity="0"/>
+  </radialGradient>
+  <circle cx="400" cy="400" r="200" fill="url(#glow4)"/>
+
+  <!-- Scattered small dots - stars -->
+  <g fill="#5386B6" opacity="0.1">
+    <circle cx="120" cy="150" r="1"/>
+    <circle cx="680" cy="170" r="1"/>
+    <circle cx="720" cy="600" r="1"/>
+    <circle cx="100" cy="650" r="1"/>
+    <circle cx="300" cy="700" r="1"/>
+    <circle cx="500" cy="120" r="1"/>
+    <circle cx="750" cy="300" r="1"/>
+    <circle cx="80" cy="300" r="1"/>
+  </g>
+</svg>
