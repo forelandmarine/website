@@ -22,18 +22,58 @@ export default function NewBuildPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            serviceType: "New Build Owner's Representation",
-            provider: {
-              "@type": "Organization",
-              name: "Foreland Marine Consultancy Ltd",
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              serviceType: "New Build Owner's Representation",
+              provider: {
+                "@type": "Organization",
+                name: "Foreland Marine Consultancy Ltd",
+              },
+              areaServed: "Worldwide",
+              description:
+                "Owner's representation and build management for new yacht projects. Accredited by SYBAss. Foreland Marine.",
             },
-            areaServed: "Worldwide",
-            description:
-              "Owner's representation and build management for new yacht projects. Accredited by SYBAss. Foreland Marine.",
-          }),
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What does an Owner's Representative do during a new build?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "An Owner's Representative provides independent oversight of the entire new build process. This includes budget control and cost tracking, quality assurance inspections, schedule monitoring, and representing the owner's interests at the shipyard during production meetings, milestone reviews, and contractual discussions.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "When should I appoint an Owner's Representative?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "As early as possible — ideally before signing a Letter of Intent or selecting a shipyard. Early involvement allows the representative to contribute to yard evaluation, contract negotiation, and specification development, ensuring the owner's position is properly protected from the outset.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What qualifications should an Owner's Representative have?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Look for accreditation by SYBAss (Superyacht Builders Association), registration on the Yacht Owner's Representative Register, and a relevant background in engineering, naval architecture, or yacht operations. Foreland's team holds all of these credentials alongside extensive practical shipyard experience.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How long does a typical new build project take?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Timelines vary by size and complexity, but a new build yacht over 30 metres typically takes 18 to 36 months from contract signing to delivery. Larger or more complex projects can extend beyond this, particularly where custom engineering or bespoke interior design is involved.",
+                  },
+                },
+              ],
+            },
+          ]),
         }}
       />
 
@@ -197,6 +237,54 @@ export default function NewBuildPage() {
             <ServiceCard title="Technical Review" description="Independent inspection of hull construction, structural work, systems installation, and outfitting quality, supported by our naval architects, engineers, and coatings specialists." />
             <ServiceCard title="Crew & Commissioning" description="Crew recruitment and employment administration during the build phase, followed by coordination of sea trials, systems commissioning, and formal handover." />
             <ServiceCard title="Warranty Management" description="Post-delivery oversight including defect tracking, claims management, and continued liaison with the shipyard throughout the warranty period." />
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* FAQ */}
+      <section className="py-24 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <SectionLabel>FAQ</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What does an Owner&apos;s Representative do during a new build?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                An Owner&apos;s Representative provides independent oversight of the entire new build process. This includes budget control and cost tracking, quality assurance inspections, schedule monitoring, and representing the owner&apos;s interests at the shipyard during production meetings, milestone reviews, and contractual discussions.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                When should I appoint an Owner&apos;s Representative?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                As early as possible — ideally before signing a Letter of Intent or selecting a shipyard. Early involvement allows the representative to contribute to yard evaluation, contract negotiation, and specification development, ensuring the owner&apos;s position is properly protected from the outset.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What qualifications should an Owner&apos;s Representative have?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                Look for accreditation by SYBAss (Superyacht Builders Association), registration on the Yacht Owner&apos;s Representative Register, and a relevant background in engineering, naval architecture, or yacht operations. Foreland&apos;s team holds all of these credentials alongside extensive practical shipyard experience.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                How long does a typical new build project take?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                Timelines vary by size and complexity, but a new build yacht over 30 metres typically takes 18 to 36 months from contract signing to delivery. Larger or more complex projects can extend beyond this, particularly where custom engineering or bespoke interior design is involved.
+              </div>
+            </details>
           </div>
         </div>
       </section>

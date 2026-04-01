@@ -103,18 +103,50 @@ export default function TechnicalConsultancyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            serviceType: "Marine Technical Consultancy",
-            provider: {
-              "@type": "Organization",
-              name: "Foreland Marine Consultancy Ltd",
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              serviceType: "Marine Technical Consultancy",
+              provider: {
+                "@type": "Organization",
+                name: "Foreland Marine Consultancy Ltd",
+              },
+              areaServed: "Worldwide",
+              description:
+                "Expert technical consultancy across yacht racing performance, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
             },
-            areaServed: "Worldwide",
-            description:
-              "Expert technical consultancy across yacht racing performance, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
-          }),
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What types of technical consultancy do you offer?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We offer specialist consultancy across yacht racing performance, hydraulic and PLC control systems, navigation and communication systems, naval architecture, mechanical installation, and AV/IT automation. Each discipline is led by experienced engineers and technical specialists.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you provide consultancy for both sailing and motor yachts?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. Our team has extensive experience with both sailing and motor yachts, from high-performance racing programmes and grand prix campaigns to explorer vessels and large motor yacht systems integration.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can you assist with regulatory compliance and surveys?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. We support owners and captains with MCA compliance, flag state requirements, classification society surveys, and statutory inspections. Our team can coordinate the full survey and certification process on your behalf.",
+                  },
+                },
+              ],
+            },
+          ]),
         }}
       />
 
@@ -168,6 +200,45 @@ export default function TechnicalConsultancyPage() {
           </section>
         </div>
       ))}
+
+      <HorizonLine />
+
+      {/* FAQ */}
+      <section className="py-24 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <SectionLabel>FAQ</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What types of technical consultancy do you offer?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                We offer specialist consultancy across yacht racing performance, hydraulic and PLC control systems, navigation and communication systems, naval architecture, mechanical installation, and AV/IT automation. Each discipline is led by experienced engineers and technical specialists.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                Do you provide consultancy for both sailing and motor yachts?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                Yes. Our team has extensive experience with both sailing and motor yachts, from high-performance racing programmes and grand prix campaigns to explorer vessels and large motor yacht systems integration.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                Can you assist with regulatory compliance and surveys?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                Yes. We support owners and captains with MCA compliance, flag state requirements, classification society surveys, and statutory inspections. Our team can coordinate the full survey and certification process on your behalf.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
 
       <HorizonLine />
 

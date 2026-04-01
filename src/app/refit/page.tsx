@@ -23,18 +23,58 @@ export default function RefitPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            serviceType: "Yacht Refit Project Management",
-            provider: {
-              "@type": "Organization",
-              name: "Foreland Marine Consultancy Ltd",
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              serviceType: "Yacht Refit Project Management",
+              provider: {
+                "@type": "Organization",
+                name: "Foreland Marine Consultancy Ltd",
+              },
+              areaServed: "Worldwide",
+              description:
+                "Refit project management for motor and sailing yachts over 24m. 25 large yacht projects across 7 countries, from high-profile racing programmes to in-depth motor yacht rebuilds.",
             },
-            areaServed: "Worldwide",
-            description:
-              "Refit project management for motor and sailing yachts over 24m. 25 large yacht projects across 7 countries, from high-profile racing programmes to in-depth motor yacht rebuilds.",
-          }),
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "How do you select the right refit yard?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yard selection is based on the vessel type, scope of work, geographic preference, yard capabilities, and track record. We assess multiple yards against these criteria, manage the tendering process, and recommend the option that best serves the owner's interests.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What is the typical scope of refit project management?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Our involvement covers the full lifecycle of a refit — from initial survey and scope definition through yard selection, budget planning, daily on-site oversight, quality control, and contractor coordination, through to sea trials and formal handover.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How do you manage refit budgets and timelines?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We provide detailed cost tracking from the outset, with regular reporting to the owner, structured change order management, milestone-based payments, and proactive identification of schedule risks. Full financial transparency is maintained throughout.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can you manage a refit at any shipyard worldwide?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. We have delivered 25 large yacht refit projects across 7 countries and have established relationships with yards in the Mediterranean, Northern Europe, the UK, and beyond. Our team can deploy to any yard worldwide.",
+                  },
+                },
+              ],
+            },
+          ]),
         }}
       />
 
@@ -133,6 +173,54 @@ export default function RefitPage() {
           <div className="relative h-72 lg:h-auto min-h-[460px]">
             <Image src="/images/welder-hull.jpg" alt="Welder working on a yacht hull in dry dock" fill className="object-cover" />
             <div className="absolute inset-0 bg-bg0/10" />
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* FAQ */}
+      <section className="py-24 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <SectionLabel>FAQ</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                How do you select the right refit yard?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                Yard selection is based on the vessel type, scope of work, geographic preference, yard capabilities, and track record. We assess multiple yards against these criteria, manage the tendering process, and recommend the option that best serves the owner&apos;s interests.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What is the typical scope of refit project management?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                Our involvement covers the full lifecycle of a refit — from initial survey and scope definition through yard selection, budget planning, daily on-site oversight, quality control, and contractor coordination, through to sea trials and formal handover.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                How do you manage refit budgets and timelines?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                We provide detailed cost tracking from the outset, with regular reporting to the owner, structured change order management, milestone-based payments, and proactive identification of schedule risks. Full financial transparency is maintained throughout.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                Can you manage a refit at any shipyard worldwide?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                Yes. We have delivered 25 large yacht refit projects across 7 countries and have established relationships with yards in the Mediterranean, Northern Europe, the UK, and beyond. Our team can deploy to any yard worldwide.
+              </div>
+            </details>
           </div>
         </div>
       </section>

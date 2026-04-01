@@ -25,18 +25,58 @@ export default function YachtManagementPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            serviceType: "Yacht Management",
-            provider: {
-              "@type": "Organization",
-              name: "Foreland Marine Consultancy Ltd",
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              serviceType: "Yacht Management",
+              provider: {
+                "@type": "Organization",
+                name: "Foreland Marine Consultancy Ltd",
+              },
+              areaServed: "Worldwide",
+              description:
+                "Independent, owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, class and flag state requirements.",
             },
-            areaServed: "Worldwide",
-            description:
-              "Independent, owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, class and flag state requirements.",
-          }),
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What is independent yacht management?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Independent yacht management means serving the owner's interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers — every recommendation is made solely in the owner's interest.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What does ISM compliance involve for yachts?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "ISM (International Safety Management) compliance involves developing and maintaining a Safety Management System, crew training and certification, incident reporting procedures, regular internal audits, emergency drills, and a framework of continuous improvement. For vessels over 500 GT, ISM Code compliance is mandatory.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you handle crew recruitment and management?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. We provide full crew management services including recruitment support, contract administration, payroll coordination, training and certification tracking, leave planning, and ongoing HR advisory — all managed per MLC and flag state requirements.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What size yachts do you manage?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We manage motor and sailing yachts over 24 metres, from private cruising vessels to large commercial yachts. Our experience spans vessels from 24 metres to over 60 metres across a range of vessel types and operational profiles.",
+                  },
+                },
+              ],
+            },
+          ]),
         }}
       />
 
@@ -164,6 +204,54 @@ export default function YachtManagementPage() {
             </p>
             <cite className="text-muted text-sm font-medium not-italic">Captain, 30m SY</cite>
           </blockquote>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* FAQ */}
+      <section className="py-24 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <SectionLabel>FAQ</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What is independent yacht management?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                Independent yacht management means serving the owner&apos;s interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers — every recommendation is made solely in the owner&apos;s interest.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What does ISM compliance involve for yachts?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                ISM (International Safety Management) compliance involves developing and maintaining a Safety Management System, crew training and certification, incident reporting procedures, regular internal audits, emergency drills, and a framework of continuous improvement. For vessels over 500 GT, ISM Code compliance is mandatory.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                Do you handle crew recruitment and management?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                Yes. We provide full crew management services including recruitment support, contract administration, payroll coordination, training and certification tracking, leave planning, and ongoing HR advisory — all managed per MLC and flag state requirements.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What size yachts do you manage?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">
+                We manage motor and sailing yachts over 24 metres, from private cruising vessels to large commercial yachts. Our experience spans vessels from 24 metres to over 60 metres across a range of vessel types and operational profiles.
+              </div>
+            </details>
+          </div>
         </div>
       </section>
 

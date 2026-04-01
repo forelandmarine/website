@@ -87,6 +87,12 @@ export default function Nav() {
             </div>
 
             <Link
+              href="/insights"
+              className="px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5"
+            >
+              Insights
+            </Link>
+            <Link
               href="/contact"
               className="px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5"
             >
@@ -161,6 +167,13 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/insights"
+              onClick={() => setMobileOpen(false)}
+              className="block px-3 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+            >
+              Insights
+            </Link>
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
