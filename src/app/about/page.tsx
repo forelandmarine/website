@@ -6,38 +6,43 @@ import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui"
 
 const team = [
   {
-    name: "Jack Macnally",
+    name: "Jack MacNally",
     role: "Co-Founder",
     initials: "JM",
-    bio: "10+ years as a yacht engineer on J Class yachts, fast carbon composite racers and large motor yachts. Over 100,000 nautical miles. Originally from Chichester, sailing from a young age.",
+    photo: "/images/team-jack.jpg",
+    bio: <>A lifelong sailor with over 100,000 nautical miles in his logbook, Jack is a highly experienced racing yacht systems engineer and yachtsman. He has served as Chief Engineer on J&nbsp;-&nbsp;Class <i>Lionheart</i> and Chief Build Engineer on the landmark restoration of <i>Shamrock V</i>, as well a plethora of racing programs and large motor yacht projects. His career spans multiple successful racing campaigns with deep expertise in the hydraulic, mechanical and electrical systems that give high-performance yachts their competitive edge. He also campaigns his own yacht, the 1936 Teal class <i>Antoinette</i> in the Solent. A serial entrepreneur and keen motorcycle rider, he brings the same precision and drive to business as he does to engineering.</>,
     linkedin: "https://www.linkedin.com/in/jmacnally/",
   },
   {
     name: "Daniel Marks",
     role: "Co-Founder",
     initials: "DM",
-    bio: "10+ years engineering across the J Class fleet, high-performance carbon racing yachts and large motor yachts. Over 100,000 nautical miles. WSET Level 3 qualified sommelier.",
+    photo: "/images/team-dan.jpg",
+    bio: <>Seven years as Senior Chief Engineer on J&nbsp;-&nbsp;Class <i>Lionheart</i>, leading multiple refits across Northern European shipyards and managing all aspects of the engineering department. Dan holds an FdSc in Yacht Science and Marine Sciences, and lectures at Falmouth Marine School where he helped develop the HND/FdSc Professional Superyacht Engineer programme with the University of Plymouth. A qualified Captain and experienced Build Engineer, he has delivered yachts across the Atlantic and beyond. WSET Level 3 qualified sommelier.</>,
     linkedin: "https://www.linkedin.com/in/daniel-marks-0a0a4b6b/",
   },
   {
-    name: "Team Member",
-    role: "Project Manager",
-    initials: "PM",
-    bio: "Placeholder bio. Experienced project manager with a background in yacht refit and new build programmes across European shipyards.",
+    name: "Henry Ebdell",
+    role: "Commercial Director",
+    initials: "HE",
+    photo: "/images/team-henry.jpg",
+    bio: <>Henry brings a sharp commercial perspective shaped by careers in both yachting and London property. Having spent a decade sailing America&apos;s Cup Yachts and Classic Superyachts, he keeps his skills fresh racing aboard classic yacht <i>Puritan</i> and maxi yacht <i>Maximus</i>. Ashore, he had a hugely successful career in London property sales and managed a &pound;58m portfolio at Grange London, following senior roles at Berkeley Group. With industry-wide connections and an entrepreneurial streak, Henry is now also at the helm of Sterling Ward Property Concierge and Sojourn Collective. He combines a natural instinct for client relationships with a genuine understanding of life on board.</>,
+    linkedin: "https://www.linkedin.com/in/henry-ebdell-b383a81b3/",
+  },
+  {
+    name: "Nadir Balena",
+    role: "Chief Naval Architect & Project Manager",
+    initials: "NB",
+    photo: "/images/team-nadir.jpg",
+    bio: <>Nadir holds a BEng (Hons) in Yacht and Powercraft Design from Solent University and brings deep experience across both the design office and the dock. His racing credentials include programmes on J&nbsp;-&nbsp;Class <i>Lionheart</i>, <i>Maserati Mod70</i>, <i>FlyingNikka</i> and The Ocean Race, while his project management work spans new build sailing yachts up to 56m. A competitive windsurfer and lifelong waterman, he combines naval architecture expertise with a hands-on understanding of what makes high-performance yachts work.</>,
     linkedin: "#",
   },
   {
-    name: "Team Member",
-    role: "Technical Consultant",
-    initials: "TC",
-    bio: "Placeholder bio. Specialist in mechanical and electrical systems engineering for sailing and motor yachts.",
-    linkedin: "#",
-  },
-  {
-    name: "Team Member",
-    role: "Operations",
-    initials: "OP",
-    bio: "Placeholder bio. Manages operational logistics, compliance documentation and fleet coordination.",
+    name: "Sam Forbes",
+    role: "Senior Consultant",
+    initials: "SF",
+    photo: "/images/team-sam.jpg",
+    bio: <>A Master 3000GT with 12 years of industry experience, Sam has captained Swan 100 <i>Onyx</i> for five years and is currently managing a 33m Southern Wind new build. His racing credentials include campaigns on J&nbsp;-&nbsp;Class <i>Endeavour</i> and <i>Lionheart</i>, and maxi yacht <i>Maximus</i>, with multiple successful race programmes to his name. A keen rugby player ashore, he brings calm authority and operational depth to every project.</>,
     linkedin: "#",
   },
 ];
@@ -160,10 +165,16 @@ export default function AboutPage() {
           <div className="flex flex-col gap-14">
             {team.map((member) => (
               <div key={member.name + member.role} className="flex gap-6 items-start">
-                {/* Circular headshot placeholder */}
-                <div className="w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full bg-accent/15 border-2 border-accent/25 flex items-center justify-center text-accent font-semibold text-xl sm:text-2xl md:text-3xl shrink-0">
-                  {member.initials}
-                </div>
+                {/* Circular headshot */}
+                {member.photo ? (
+                  <div className="w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-white/10 shrink-0">
+                    <Image src={member.photo} alt={member.name} width={192} height={192} className="w-full h-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full bg-accent/15 border-2 border-accent/25 flex items-center justify-center text-accent font-semibold text-xl sm:text-2xl md:text-3xl shrink-0">
+                    {member.initials}
+                  </div>
+                )}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-3 mb-1">
                     <h3 className="text-base font-semibold text-white">{member.name}</h3>
