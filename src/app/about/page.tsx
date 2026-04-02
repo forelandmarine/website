@@ -149,7 +149,7 @@ export default function AboutPage() {
           <div className="max-w-3xl mb-14">
             <SectionLabel>Meet the Team</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
-              Experience you can count on
+              Leading by example
             </h2>
             <p className="text-muted leading-relaxed">
               Our team brings hands-on experience across new build projects,
