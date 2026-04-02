@@ -42,7 +42,7 @@ const team = [
     role: "Senior Consultant",
     initials: "SF",
     photo: "/images/team-sam.jpg",
-    bio: <>A Master 3000GT with 12 years of industry experience, Sam has captained Swan 100 <i>Onyx</i> for five years and is currently managing a 33m Southern Wind new build. His racing credentials include campaigns on J&nbsp;-&nbsp;Class <i>Endeavour</i> and <i>Lionheart</i>, and maxi yacht <i>Maximus</i>, with multiple successful race programmes to his name. A keen rugby player ashore, he brings calm authority and operational depth to every project.</>,
+    bio: <>A Senior Consultant with experience spanning since 2015, including over five years in command as Captain. His background covers private and charter operations, with strong expertise in commercial compliance and flag state management. Sam brings extensive experience from the superyacht racing circuit, offering a deep understanding of performance optimisation, sail systems and high-level deck operations. He also has hands-on technical expertise in refit management, specialising in deck-focused projects including gear installation, servicing and system upgrades. Sam provides practical, results-driven consultancy across operations, refits and performance programmes, with a focus on efficiency, safety, compliance and delivering a seamless owner and charter experience.</>,
     linkedin: "#",
   },
 ];
