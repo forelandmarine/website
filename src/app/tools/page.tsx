@@ -27,7 +27,7 @@ export default function ToolsPage() {
               Purpose-built digital products designed for yacht crews, owners, and managers. Saving time and ensuring compliance.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <Link href="/tools/seatime-tracker" className="group block">
               <div className="bg-bg2/80 border border-white/10 overflow-hidden h-full hover:border-accent/40 transition-colors">
                 <div className="p-8">
@@ -69,6 +69,26 @@ export default function ToolsPage() {
                   <h2 className="text-2xl font-light text-white mb-3 group-hover:text-accent transition-colors">PMS Database</h2>
                   <p className="text-muted leading-relaxed mb-6">
                     Expert PMS database setup, licensing, and on-site population. Authorised DeepBlue agents, with experience across IDEA, SeaHub, Aquator and more.
+                  </p>
+                  <div className="flex items-center gap-1.5 text-sm text-accent font-medium">
+                    Learn more
+                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
+                      <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/tools/debrief" className="group block">
+              <div className="bg-bg2/80 border border-white/10 overflow-hidden h-full hover:border-accent/40 transition-colors">
+                <div className="p-8">
+                  <div className="flex items-center gap-2 mb-4">
+                    <p className="text-xs text-accent font-semibold uppercase tracking-widest">Race Intelligence</p>
+                    <span className="text-[9px] font-semibold uppercase tracking-widest text-bg0 bg-accent/80 px-1.5 py-0.5 rounded">Alpha</span>
+                  </div>
+                  <h2 className="text-2xl font-light text-white mb-3 group-hover:text-accent transition-colors">Debrief</h2>
+                  <p className="text-muted leading-relaxed mb-6">
+                    AI-powered race analysis. Telemetry, video, weather, crew positioning and comms unified on a single timeline for post-race performance review and crew debriefs.
                   </p>
                   <div className="flex items-center gap-1.5 text-sm text-accent font-medium">
                     Learn more

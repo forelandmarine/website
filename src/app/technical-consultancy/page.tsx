@@ -16,6 +16,7 @@ const disciplines = [
     intro:
       "Our racing consultants combine competitive sailing experience with engineering rigour to deliver measurable performance gains. Whether preparing for an offshore race, a grand prix circuit event, or a round-the-world campaign, we cover every detail.",
     image: { src: "/images/maxi-racing-ran.jpg", alt: "Maxi yacht Ran racing under full sail" },
+    darkTint: true,
     items: [
       { title: "Performance Optimisation & CFD", body: "Vessel assessment covering sail trim, weight distribution, polar analysis, and speed targets. CFD-informed hydrodynamic analysis of hull, keel, and appendage design to identify drag sources and model improvements." },
       { title: "Rigging & Deck Hardware", body: "Rig tuning, load calculations, rod and wire rigging solutions, block and winch specification, running and standing rigging design for racing yachts." },
@@ -152,8 +153,9 @@ export default function TechnicalConsultancyPage() {
 
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
-        <Glow className="-top-40 -right-40 opacity-30" />
-        <Glow className="bottom-0 -left-60 opacity-15" color="rgba(30,100,180,0.15)" size={500} />
+        <Glow className="-top-20 -right-20 opacity-50" size={700} />
+        <Glow className="bottom-0 -left-40 opacity-25" color="rgba(30,100,180,0.2)" size={600} />
+        <Glow className="top-1/2 left-1/3 -translate-y-1/2 opacity-15" color="rgba(83,134,182,0.12)" size={400} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <SectionLabel>Technical Consultancy</SectionLabel>
@@ -176,7 +178,7 @@ export default function TechnicalConsultancyPage() {
               {/* Image */}
               <div className={`relative h-72 lg:h-auto min-h-[460px] ${d.imageRight ? "order-first lg:order-last" : ""} ${d.vignette ? "bg-bg0" : ""}`}>
                 <Image src={d.image.src} alt={d.image.alt} fill className={`object-cover ${d.vignette ? "opacity-80" : ""}`} />
-                <div className="absolute inset-0 bg-bg0/20" />
+                <div className={`absolute inset-0 ${d.darkTint ? "bg-bg0/40" : "bg-bg0/20"}`} />
                 {d.vignette && <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 30%, var(--bg0) 100%)" }} />}
               </div>
 

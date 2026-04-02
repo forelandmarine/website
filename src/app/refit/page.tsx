@@ -98,7 +98,7 @@ export default function RefitPage() {
       </section>
 
       {/* TRACK RECORD */}
-      <section className="bg-bg2 py-20">
+      <section className="bg-bg1 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -136,7 +136,7 @@ export default function RefitPage() {
       <HorizonLine />
 
       {/* SERVICES */}
-      <section className="py-24 bg-bg1">
+      <section className="py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <SectionLabel>What We Do</SectionLabel>

@@ -17,9 +17,10 @@ const aboutLinks = [
 ];
 
 const toolLinks = [
-  { label: "Lightship ISM", href: "/tools/lightship-ism" },
-  { label: "SeaTime Tracker", href: "/tools/seatime-tracker" },
-  { label: "PMS Database", href: "/tools/pms-database" },
+  { label: "Lightship", href: "/tools/lightship-ism" },
+  { label: "SeaTime Tracker App", href: "/tools/seatime-tracker" },
+  { label: "Planned Maintenance", href: "/tools/pms-database" },
+  { label: "Race Intelligence", href: "/tools/debrief" },
 ];
 
 export default function Nav() {

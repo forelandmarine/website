@@ -121,14 +121,15 @@ export default function HomePage() {
       <HorizonLine />
 
       {/* ABOUT - image left, text right */}
-      <section className="py-0 bg-bg1 overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative h-72 lg:h-auto min-h-[460px]">
-            <Image src="/images/balthasar-racing.jpg" alt="Maxi yacht Balthasar racing under sail" fill className="object-cover" />
-            <div className="absolute inset-0 bg-bg0/10" />
-          </div>
-          <div className="flex items-center px-8 py-20 lg:px-16 lg:py-24">
-            <div className="max-w-lg">
+      <section className="py-0 bg-bg0 overflow-hidden">
+        <div className="mx-auto max-w-[1600px] px-0 sm:px-0 lg:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-10 items-center">
+            <div className="relative h-80 lg:h-[720px] rounded-none lg:rounded overflow-hidden">
+              <Image src="/images/balthasar-racing.jpg" alt="Maxi yacht Balthasar racing under sail" fill className="object-cover" />
+              <div className="absolute inset-0 bg-bg0/40" />
+            </div>
+            <div className="px-8 py-20 lg:px-0 lg:py-24">
+              <div className="max-w-lg">
               <SectionLabel>About Us</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">
                 Your guiding light through the storm.
@@ -144,6 +145,7 @@ export default function HomePage() {
               </p>
               <ButtonPrimary href="/contact">Get in touch</ButtonPrimary>
             </div>
+            </div>
           </div>
         </div>
       </section>
@@ -153,7 +155,7 @@ export default function HomePage() {
       {/* CONTACT CTA */}
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/hero-superyacht.jpg" alt="" fill className="object-cover opacity-25" />
+          <Image src="/images/racing-marina.jpg" alt="" fill className="object-cover opacity-25" />
           <div className="absolute inset-0 bg-bg0/75" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

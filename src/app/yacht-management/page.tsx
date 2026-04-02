@@ -122,7 +122,7 @@ export default function YachtManagementPage() {
       <HorizonLine />
 
       {/* LIGHTSHIP ISM FEATURE */}
-      <section className="bg-bg1 overflow-hidden">
+      <section className="bg-bg0 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex items-center justify-center gap-6 p-8 lg:p-12">
             {/* iPad frame */}
@@ -163,7 +163,7 @@ export default function YachtManagementPage() {
             <p className="text-muted leading-relaxed mb-8">
               No more spreadsheets, no more chasing paperwork. One dashboard, every vessel, always up to date.
             </p>
-            <ButtonPrimary href="/tools/lightship-ism">Learn more</ButtonPrimary>
+            <div className="self-start"><ButtonPrimary href="/tools/lightship-ism">Learn more</ButtonPrimary></div>
           </div>
         </div>
       </section>
@@ -190,7 +190,7 @@ export default function YachtManagementPage() {
       {/* TESTIMONIAL */}
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/ocean-wave.jpg" alt="" fill className="object-cover opacity-20" />
+          <Image src="/images/sailing-fleet-horizon.jpg" alt="" fill className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-bg0/80" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
@@ -204,54 +204,6 @@ export default function YachtManagementPage() {
             </p>
             <cite className="text-muted text-sm font-medium not-italic">Captain, 30m SY</cite>
           </blockquote>
-        </div>
-      </section>
-
-      <HorizonLine />
-
-      {/* FAQ */}
-      <section className="py-24 bg-bg0">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <SectionLabel>FAQ</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
-                What is independent yacht management?
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-5 text-muted leading-relaxed">
-                Independent yacht management means serving the owner&apos;s interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation is made solely in the owner&apos;s interest.
-              </div>
-            </details>
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
-                What does ISM compliance involve for yachts?
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-5 text-muted leading-relaxed">
-                ISM (International Safety Management) compliance involves developing and maintaining a Safety Management System, crew training and certification, incident reporting procedures, regular internal audits, emergency drills, and a framework of continuous improvement. For vessels over 500 GT, ISM Code compliance is mandatory.
-              </div>
-            </details>
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
-                Do you handle crew recruitment and management?
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-5 text-muted leading-relaxed">
-                Yes. We provide full crew management services including recruitment support, contract administration, payroll coordination, training and certification tracking, leave planning, and ongoing HR advisory, all managed per MLC and flag state requirements.
-              </div>
-            </details>
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
-                What size yachts do you manage?
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-5 text-muted leading-relaxed">
-                We manage motor and sailing yachts over 24 metres, from private cruising vessels to large commercial yachts. Our experience spans vessels from 24 metres to over 60 metres across a range of vessel types and operational profiles.
-              </div>
-            </details>
-          </div>
         </div>
       </section>
 
