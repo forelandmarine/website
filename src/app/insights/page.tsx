@@ -46,7 +46,7 @@ export default function InsightsPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <SectionLabel>Insights</SectionLabel>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
               Industry knowledge,<br />openly shared
             </h1>
             <p className="text-lg text-muted leading-relaxed max-w-2xl">
@@ -119,7 +119,7 @@ export default function InsightsPage() {
       <HorizonLine />
 
       {/* CTA SECTION */}
-      <section className="relative py-24 bg-bg0 overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="rgba(30,155,255,0.1)" size={600} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <SectionLabel>Get in touch</SectionLabel>

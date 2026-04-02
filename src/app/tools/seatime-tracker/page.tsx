@@ -38,13 +38,13 @@ export default function SeaTimeTrackerPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative py-36 overflow-hidden bg-bg0">
+      <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
         <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={800} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
               <SectionLabel>Automatic AIS Tracking</SectionLabel>
-              <h1 className="text-5xl sm:text-6xl font-light text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
                 Your sea time,<br />on autopilot.
               </h1>
               <p className="text-lg text-muted leading-relaxed mb-4 max-w-xl">
@@ -84,7 +84,7 @@ export default function SeaTimeTrackerPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" className="py-24 bg-bg1">
+      <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
@@ -126,7 +126,7 @@ export default function SeaTimeTrackerPage() {
       <HorizonLine />
 
       {/* COMPARISON */}
-      <section className="py-24 bg-bg1">
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <SectionLabel>Why SeaTime Tracker</SectionLabel>
@@ -253,7 +253,7 @@ export default function SeaTimeTrackerPage() {
       <HorizonLine />
 
       {/* REVIEW */}
-      <section className="py-24 bg-bg1">
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
@@ -288,7 +288,7 @@ export default function SeaTimeTrackerPage() {
       <HorizonLine />
 
       {/* PRICING */}
-      <section className="relative py-24 bg-bg0 overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="rgba(30,155,255,0.12)" size={600} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

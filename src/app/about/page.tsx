@@ -83,7 +83,7 @@ export default function AboutPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative py-36 overflow-hidden bg-bg0">
+      <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
           <Image
             src="/images/about-hero.jpg"
@@ -98,7 +98,7 @@ export default function AboutPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <SectionLabel>About</SectionLabel>
-            <h1 className="text-5xl sm:text-6xl font-light text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
               Built on blue water<br />experience
             </h1>
             <p className="text-lg text-muted leading-relaxed max-w-2xl mb-5">
@@ -120,7 +120,7 @@ export default function AboutPage() {
       <HorizonLine />
 
       {/* MEET THE TEAM */}
-      <section className="relative py-24 bg-bg1 overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-bg1 overflow-hidden">
         <Glow className="top-20 right-0 opacity-15" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14">
@@ -143,7 +143,7 @@ export default function AboutPage() {
             {team.map((member) => (
               <div key={member.name + member.role} className="flex gap-6 items-start">
                 {/* Circular headshot placeholder */}
-                <div className="w-48 h-48 rounded-full bg-accent/15 border-2 border-accent/25 flex items-center justify-center text-accent font-semibold text-3xl shrink-0">
+                <div className="w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full bg-accent/15 border-2 border-accent/25 flex items-center justify-center text-accent font-semibold text-xl sm:text-2xl md:text-3xl shrink-0">
                   {member.initials}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -175,7 +175,7 @@ export default function AboutPage() {
       <HorizonLine />
 
       {/* EXPERTISE */}
-      <section className="relative py-24 bg-bg0 overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <Glow className="-bottom-60 -left-60 opacity-20" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14">
@@ -211,7 +211,7 @@ export default function AboutPage() {
       <HorizonLine />
 
       {/* ACCREDITATIONS */}
-      <section className="py-24 bg-bg1">
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <SectionLabel>Accreditations</SectionLabel>
@@ -276,7 +276,7 @@ export default function AboutPage() {
       <HorizonLine />
 
       {/* CTA */}
-      <section className="relative py-24 bg-bg0 overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/about-hero.jpg"

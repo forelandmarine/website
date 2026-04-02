@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { HorizonLine, SectionLabel, ButtonPrimary, ButtonOutline, ServiceCard } from "@/components/ui";
+import ScrollHint from "@/components/ScrollHint";
 
 function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -66,33 +67,55 @@ function ContactForm() {
 }
 
 export default function HomePage() {
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        if (rect.bottom > 0) {
+          setScrollY(window.scrollY);
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-bg0">
-        <div className="absolute inset-0">
-          <Image src="/images/j-class-racing.jpg" alt="" fill sizes="100vw" className="object-cover opacity-45" priority />
+      <section ref={heroRef} className="relative min-h-[90vh] flex items-center overflow-hidden bg-bg0">
+        <div
+          className="absolute inset-0 will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >
+          <Image src="/images/j-class-racing.jpg" alt="" fill sizes="100vw" className="object-cover opacity-45 scale-110" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/60 via-bg0/30 to-bg0" />
         </div>
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div
+          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 -mt-[12vh] will-change-transform"
+          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+        >
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-5">Global Yacht Consultancy</p>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mb-6 leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-light text-white mb-6 leading-[1.1]">
               Smooth sailing.<br />Every time.
             </h1>
             <p className="text-lg text-muted leading-relaxed mb-10">
               Foreland Marine provides Project Management, Representation and Consultancy services to some of the world&apos;s most famous yachts.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="hidden sm:flex flex-col sm:flex-row gap-4">
               <ButtonPrimary href="#services">Our Services</ButtonPrimary>
               <ButtonOutline href="/contact">Get in touch</ButtonOutline>
             </div>
           </div>
         </div>
+        <ScrollHint />
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-24 bg-bg1">
+      <section id="services" className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <SectionLabel>Our Services</SectionLabel>
@@ -124,7 +147,7 @@ export default function HomePage() {
       <section className="py-0 bg-bg0 overflow-hidden">
         <div className="mx-auto max-w-[1600px] px-0 sm:px-0 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-10 items-center">
-            <div className="relative h-80 lg:h-[720px] rounded-none lg:rounded overflow-hidden">
+            <div className="relative h-64 sm:h-80 md:h-[500px] lg:h-[720px] rounded-none lg:rounded overflow-hidden">
               <Image src="/images/balthasar-racing.jpg" alt="Maxi yacht Balthasar racing under sail" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               <div className="absolute inset-0 bg-bg0/40" />
             </div>
@@ -153,7 +176,7 @@ export default function HomePage() {
       <HorizonLine />
 
       {/* CONTACT CTA */}
-      <section className="relative py-24 bg-bg0 overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/racing-marina.jpg" alt="" fill sizes="100vw" className="object-cover opacity-25" />
           <div className="absolute inset-0 bg-bg0/75" />
@@ -167,7 +190,7 @@ export default function HomePage() {
                 A large project, maintenance period or big race coming up? We&apos;d love to hear from you.
               </p>
             </div>
-            <div className="bg-bg2/80 border border-white/5 rounded p-8">
+            <div className="bg-bg2/80 border border-white/5 rounded p-4 sm:p-6 lg:p-8">
               <ContactForm />
             </div>
           </div>

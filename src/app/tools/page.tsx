@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ToolsPage() {
   return (
     <>
-      <section className="relative py-36 overflow-hidden bg-bg0">
+      <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
           <Image src="/images/yacht-management.jpg" alt="" fill sizes="100vw" className="object-cover opacity-25" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/80 via-bg0/50 to-bg0" />
@@ -20,7 +20,7 @@ export default function ToolsPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <SectionLabel>Digital Products</SectionLabel>
-            <h1 className="text-4xl sm:text-5xl font-light text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
               Tools built for the marine industry.
             </h1>
             <p className="text-lg text-muted leading-relaxed">

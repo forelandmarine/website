@@ -76,7 +76,7 @@ export default async function PostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="py-24 bg-bg1 min-h-screen">
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1 min-h-screen">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           {/* Back link */}
           <Link

@@ -25,7 +25,7 @@ export default function ContactPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative py-36 overflow-hidden bg-bg0">
+      <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
           <Image src="/images/monaco-harbour-sunset.jpg" alt="" fill sizes="100vw" className="object-cover object-[center_75%] opacity-30" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
@@ -33,7 +33,7 @@ export default function ContactPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <SectionLabel>Contact Us</SectionLabel>
-            <h1 className="text-5xl sm:text-6xl font-light text-white mb-5 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-5 leading-tight">
               Get in Touch
             </h1>
             <p className="text-lg text-muted leading-relaxed">
@@ -46,11 +46,11 @@ export default function ContactPage() {
       <HorizonLine />
 
       {/* FORM + DETAILS */}
-      <section className="py-24 bg-bg1">
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Form */}
-            <div className="bg-bg2 border border-white/10 p-8">
+            <div className="bg-bg2 border border-white/10 p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl font-light text-white mb-6">Send us a message</h2>
               {status === "success" ? (
                 <div className="bg-green/10 border border-green/30 rounded p-8 text-center">

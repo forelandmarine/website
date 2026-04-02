@@ -152,14 +152,14 @@ export default function TechnicalConsultancyPage() {
       />
 
       {/* HERO */}
-      <section className="relative py-36 overflow-hidden bg-bg0">
+      <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
         <Glow className="-top-20 -right-20 opacity-50" size={700} />
         <Glow className="bottom-0 -left-40 opacity-25" color="rgba(30,100,180,0.2)" size={600} />
         <Glow className="top-1/2 left-1/3 -translate-y-1/2 opacity-15" color="rgba(83,134,182,0.12)" size={400} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <SectionLabel>Technical Consultancy</SectionLabel>
-            <h1 className="text-5xl sm:text-6xl font-light text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
               Engineering excellence,<br />on every ocean.
             </h1>
             <p className="text-lg text-muted leading-relaxed max-w-2xl">
@@ -176,7 +176,7 @@ export default function TechnicalConsultancyPage() {
           <section className="bg-bg1">
             <div className={`grid grid-cols-1 lg:grid-cols-2`}>
               {/* Image */}
-              <div className={`relative h-72 lg:h-auto min-h-[460px] ${d.imageRight ? "order-first lg:order-last" : ""} ${d.vignette ? "bg-bg0" : ""}`}>
+              <div className={`relative h-64 sm:h-72 lg:h-auto lg:min-h-[460px] ${d.imageRight ? "order-first lg:order-last" : ""} ${d.vignette ? "bg-bg0" : ""}`}>
                 <Image src={d.image.src} alt={d.image.alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className={`object-cover ${d.vignette ? "opacity-80" : ""}`} />
                 <div className={`absolute inset-0 ${d.darkTint ? "bg-bg0/40" : "bg-bg0/20"}`} />
                 {d.vignette && <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 30%, var(--bg0) 100%)" }} />}
@@ -243,7 +243,7 @@ export default function TechnicalConsultancyPage() {
       <HorizonLine />
 
       {/* CTA */}
-      <section className="relative py-24 bg-bg0 overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/j-class-finish.jpg" alt="" fill sizes="100vw" className="object-cover opacity-15" />
           <div className="absolute inset-0 bg-bg0/85" />

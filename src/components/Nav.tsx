@@ -60,6 +60,7 @@ export default function Nav() {
               width={240}
               height={42}
               priority
+              className="w-[204px] sm:w-[240px] h-auto"
             />
           </Link>
 
@@ -166,7 +167,7 @@ export default function Nav() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 text-muted hover:text-white transition-colors"
+            className="lg:hidden p-3 text-muted hover:text-white transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
