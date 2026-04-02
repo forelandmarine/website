@@ -1,11 +1,7 @@
-import type { Metadata } from "next";
-import { DotGrid, Glow, HorizonLine, SectionLabel } from "@/components/ui";
+"use client";
 
-export const metadata: Metadata = {
-  title: "PMS Database Services",
-  description:
-    "Expert planned maintenance system database setup, licensing, and on-site population. Authorised DeepBlue agents. We also work with IDEA, SeaHub, Aquator and other leading PMS platforms.",
-};
+import { useState, useEffect, useRef } from "react";
+import { DotGrid, Glow, HorizonLine, SectionLabel } from "@/components/ui";
 
 const platforms = [
   {
@@ -102,6 +98,22 @@ const reasons = [
 ];
 
 export default function PMSDatabasePage() {
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        if (rect.bottom > 0) {
+          setScrollY(window.scrollY);
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       {/* JSON-LD */}
@@ -126,10 +138,18 @@ export default function PMSDatabasePage() {
       />
 
       {/* HERO */}
-      <section className="relative py-28 overflow-hidden bg-bg1">
-        <DotGrid />
-        <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={700} />
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section ref={heroRef} className="relative py-28 overflow-hidden bg-bg1">
+        <div
+          className="absolute inset-0 will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >
+          <DotGrid />
+          <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={700} />
+        </div>
+        <div
+          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
+          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+        >
           <div className="max-w-3xl">
             <SectionLabel>Tools</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">

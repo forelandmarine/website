@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Glow, HorizonLine, SectionLabel, ButtonPrimary, ButtonOutline } from "@/components/ui";
-
-export const metadata: Metadata = {
-  title: "SeaTime Tracker: AIS-Powered Sea Time Logbook",
-  description:
-    "SeaTime Tracker automatically detects and logs your sea time via AIS. No manual entry, no paperwork, fully MCA-compliant.",
-};
 
 function PhoneMockup({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
@@ -35,12 +31,36 @@ const comparison = [
 ];
 
 export default function SeaTimeTrackerPage() {
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        if (rect.bottom > 0) {
+          setScrollY(window.scrollY);
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       {/* HERO */}
-      <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
-        <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={800} />
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
+        <div
+          className="absolute inset-0 will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >
+          <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={800} />
+        </div>
+        <div
+          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
+          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+        >
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
               <SectionLabel>Automatic AIS Tracking</SectionLabel>

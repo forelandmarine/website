@@ -1,20 +1,11 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
 import { posts } from "./posts";
 import PostGrid from "./PostGrid";
-
-export const metadata: Metadata = {
-  title: "Insights",
-  description:
-    "Expert insights on yacht management, new build oversight, refit project management, ISM compliance and marine industry best practices from Foreland Marine.",
-  openGraph: {
-    title: "Insights | Foreland Marine",
-    description:
-      "Expert insights on yacht management, new build oversight, refit project management, ISM compliance and marine industry best practices.",
-  },
-};
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-GB", {
@@ -25,25 +16,47 @@ function formatDate(dateStr: string) {
 }
 
 export default function InsightsPage() {
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        if (rect.bottom > 0) {
+          setScrollY(window.scrollY);
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const featuredPost = posts[0];
   const remainingPosts = posts.slice(1);
 
   return (
     <>
       {/* HERO */}
-      <section className="relative py-28 overflow-hidden bg-bg1">
-        <div className="absolute inset-0">
+      <section ref={heroRef} className="relative py-28 overflow-hidden bg-bg1">
+        <div
+          className="absolute inset-0 will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >
           <Image
             src="/images/ocean-aerial.jpg"
             alt=""
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-30 scale-110"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/60 via-bg1/40 to-bg1" />
         </div>
         <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.15)" size={700} />
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div
+          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
+          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+        >
           <div className="max-w-3xl">
             <SectionLabel>Insights</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
