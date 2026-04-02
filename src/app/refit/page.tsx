@@ -81,7 +81,7 @@ export default function RefitPage() {
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
-          <Image src="/images/refit-yard.jpg" alt="" fill className="object-cover opacity-35" priority />
+          <Image src="/images/refit-yard.jpg" alt="" fill sizes="100vw" className="object-cover opacity-35" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -171,7 +171,7 @@ export default function RefitPage() {
             </p>
           </div>
           <div className="relative h-72 lg:h-auto min-h-[460px]">
-            <Image src="/images/welder-hull.jpg" alt="Welder working on a yacht hull in dry dock" fill className="object-cover" />
+            <Image src="/images/welder-hull.jpg" alt="Welder working on a yacht hull in dry dock" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
             <div className="absolute inset-0 bg-bg0/10" />
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function RefitPage() {
       <section className="bg-bg0 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative h-72 lg:h-auto min-h-[460px]">
-            <Image src="/images/classic-restoration.jpg" alt="Craftsmen restoring traditional timber planking on a classic yacht" fill className="object-cover" />
+            <Image src="/images/classic-restoration.jpg" alt="Craftsmen restoring traditional timber planking on a classic yacht" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
             <div className="absolute inset-0 bg-bg0/20" />
           </div>
           <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center">
@@ -277,7 +277,7 @@ export default function RefitPage() {
       {/* CTA */}
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/shipyard-2.jpg" alt="" fill className="object-cover opacity-15" />
+          <Image src="/images/shipyard-2.jpg" alt="" fill sizes="100vw" className="object-cover opacity-15" />
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">

@@ -14,7 +14,7 @@ export default function ToolsPage() {
     <>
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
-          <Image src="/images/yacht-management.jpg" alt="" fill className="object-cover opacity-25" priority />
+          <Image src="/images/yacht-management.jpg" alt="" fill sizes="100vw" className="object-cover opacity-25" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/80 via-bg0/50 to-bg0" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

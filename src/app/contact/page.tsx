@@ -27,7 +27,7 @@ export default function ContactPage() {
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
-          <Image src="/images/monaco-harbour-sunset.jpg" alt="" fill className="object-cover object-[center_75%] opacity-30" priority />
+          <Image src="/images/monaco-harbour-sunset.jpg" alt="" fill sizes="100vw" className="object-cover object-[center_75%] opacity-30" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

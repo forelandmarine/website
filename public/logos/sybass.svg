@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
+  <!-- Main hull sweep -->
+  <path d="M0 52 C40 52, 80 48, 140 36 C200 24, 280 12, 360 8 L400 6 L398 10 C340 14, 260 26, 200 38 C140 50, 80 56, 0 56Z" fill="white" opacity="0.9"/>
+  <!-- Lower accent line -->
+  <path d="M60 58 C100 56, 160 48, 220 40 C280 32, 340 24, 390 18 L388 22 C340 28, 280 36, 220 44 C160 52, 100 58, 60 60Z" fill="white" opacity="0.5"/>
+</svg>

@@ -80,7 +80,7 @@ export default function NewBuildPage() {
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
-          <Image src="/images/shipyard-launch.jpg" alt="" fill className="object-cover object-[90%_center] opacity-35" priority />
+          <Image src="/images/shipyard-launch.jpg" alt="" fill sizes="100vw" className="object-cover object-[90%_center] opacity-35" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -294,7 +294,7 @@ export default function NewBuildPage() {
       {/* CTA */}
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/j-class-finish.jpg" alt="" fill className="object-cover opacity-15" />
+          <Image src="/images/j-class-finish.jpg" alt="" fill sizes="100vw" className="object-cover opacity-15" />
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">

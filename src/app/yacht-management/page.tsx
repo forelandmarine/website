@@ -83,7 +83,7 @@ export default function YachtManagementPage() {
       {/* HERO */}
       <section className="relative py-36 overflow-hidden bg-bg0">
         <div className="absolute inset-0">
-          <Image src="/images/sailing-yacht-deck.jpg" alt="" fill className="object-cover opacity-40" priority />
+          <Image src="/images/sailing-yacht-deck.jpg" alt="" fill sizes="100vw" className="object-cover opacity-40" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -190,7 +190,7 @@ export default function YachtManagementPage() {
       {/* TESTIMONIAL */}
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/sailing-fleet-horizon.jpg" alt="" fill className="object-cover opacity-20" />
+          <Image src="/images/sailing-fleet-horizon.jpg" alt="" fill sizes="100vw" className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-bg0/80" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
@@ -212,7 +212,7 @@ export default function YachtManagementPage() {
       {/* CTA */}
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/yacht-management.jpg" alt="" fill className="object-cover opacity-15" />
+          <Image src="/images/yacht-management.jpg" alt="" fill sizes="100vw" className="object-cover opacity-15" />
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">

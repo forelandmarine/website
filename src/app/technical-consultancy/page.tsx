@@ -177,7 +177,7 @@ export default function TechnicalConsultancyPage() {
             <div className={`grid grid-cols-1 lg:grid-cols-2`}>
               {/* Image */}
               <div className={`relative h-72 lg:h-auto min-h-[460px] ${d.imageRight ? "order-first lg:order-last" : ""} ${d.vignette ? "bg-bg0" : ""}`}>
-                <Image src={d.image.src} alt={d.image.alt} fill className={`object-cover ${d.vignette ? "opacity-80" : ""}`} />
+                <Image src={d.image.src} alt={d.image.alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className={`object-cover ${d.vignette ? "opacity-80" : ""}`} />
                 <div className={`absolute inset-0 ${d.darkTint ? "bg-bg0/40" : "bg-bg0/20"}`} />
                 {d.vignette && <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 30%, var(--bg0) 100%)" }} />}
               </div>
@@ -245,7 +245,7 @@ export default function TechnicalConsultancyPage() {
       {/* CTA */}
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/j-class-finish.jpg" alt="" fill className="object-cover opacity-15" />
+          <Image src="/images/j-class-finish.jpg" alt="" fill sizes="100vw" className="object-cover opacity-15" />
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">

@@ -71,7 +71,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-bg0">
         <div className="absolute inset-0">
-          <Image src="/images/j-class-racing.jpg" alt="" fill className="object-cover opacity-45" priority />
+          <Image src="/images/j-class-racing.jpg" alt="" fill sizes="100vw" className="object-cover opacity-45" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/60 via-bg0/30 to-bg0" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
@@ -125,7 +125,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1600px] px-0 sm:px-0 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-10 items-center">
             <div className="relative h-80 lg:h-[720px] rounded-none lg:rounded overflow-hidden">
-              <Image src="/images/balthasar-racing.jpg" alt="Maxi yacht Balthasar racing under sail" fill className="object-cover" />
+              <Image src="/images/balthasar-racing.jpg" alt="Maxi yacht Balthasar racing under sail" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               <div className="absolute inset-0 bg-bg0/40" />
             </div>
             <div className="px-8 py-20 lg:px-0 lg:py-24">
@@ -155,7 +155,7 @@ export default function HomePage() {
       {/* CONTACT CTA */}
       <section className="relative py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/racing-marina.jpg" alt="" fill className="object-cover opacity-25" />
+          <Image src="/images/racing-marina.jpg" alt="" fill sizes="100vw" className="object-cover opacity-25" />
           <div className="absolute inset-0 bg-bg0/75" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
