@@ -26,7 +26,7 @@ const team = [
     role: "Commercial Director",
     initials: "HE",
     photo: "/images/team-henry.jpg",
-    bio: <>Henry brings a sharp commercial perspective shaped by careers in both yachting and London property. Having spent a decade sailing America&apos;s Cup Yachts and Classic Superyachts, he keeps his skills fresh racing aboard classic yacht <i>Puritan</i> and maxi yacht <i>Maximus</i>. Ashore, he had a hugely successful career in London property sales and managed a &pound;58m portfolio at Grange London, following senior roles at Berkeley Group. With industry-wide connections and an entrepreneurial streak, Henry is now also at the helm of Sterling Ward Property Concierge and Sojourn Collective. He combines a natural instinct for client relationships with a genuine understanding of life on board.</>,
+    bio: <>A commercially driven perspective shaped by over a decade at the intersection of elite yachting and high-value London property. His maritime career spans America&apos;s Cup programmes, maxi yachts and classic superyachts, working closely with technical systems, refit projects and contractor teams. Ashore, he held senior roles at Berkeley Group and Grange London, advising private clients on high-value residential transactions and delivering over &pound;30m in property sales. He also founded Sterling Ward, through which he continues to advise on high-value residential assets, and is co-founder of Sojourn Collective, a boutique wellness retreat concept. Henry combines commercial acumen with firsthand operational insight, bringing a pragmatic and discreet approach to every engagement.</>,
     linkedin: "https://www.linkedin.com/in/henry-ebdell-b383a81b3/",
   },
   {
