@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Foreland Marine Consultancy",
     images: [
       {
-        url: "/images/ocean-aerial.jpg",
+        url: "/images/og-default.png",
         width: 1200,
         height: 630,
         alt: "Foreland Marine Consultancy",
