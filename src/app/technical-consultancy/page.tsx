@@ -203,8 +203,8 @@ export default function TechnicalConsultancyPage() {
 
       <HorizonLine />
 
-      {/* FAQ */}
-      <section className="py-24 bg-bg0">
+      {/* FAQ - hidden visually, kept for JSON-LD SEO */}
+      <section className="sr-only">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <SectionLabel>FAQ</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>

@@ -114,17 +114,17 @@ export default function NewBuildPage() {
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="border-l-2 border-accent/40 pl-6">
               <p className="text-muted leading-relaxed">
-                A new build represents a considerable investment, and shipyards naturally operate in their own commercial interest. Our role is to provide continuous on-site oversight, ensuring the owner&apos;s requirements are upheld from contract execution through to delivery.
+                A new build is one of the most significant undertakings in yacht ownership, and shipyards naturally operate in their own commercial interest. We provide continuous, independent oversight throughout the build, ensuring the owner&apos;s requirements are upheld from contract through to sea trials and delivery.
               </p>
             </div>
             <div className="border-l-2 border-accent/40 pl-6">
               <p className="text-muted leading-relaxed">
-                The team deployed to each project comprises captains holding Master 3000GT certification, chief engineers, and project managers with extensive build management experience. Their judgement is grounded in years of practical shipyard work, not theory.
+                We count Captains, unlimited Chief Engineers, Surveyors and Naval Architects amongst our ranks, each with extensive build management experience across leading European and global shipyards. Their judgement is grounded in hands-on project delivery, not theory.
               </p>
             </div>
             <div className="border-l-2 border-accent/40 pl-6">
               <p className="text-muted leading-relaxed">
-                Foreland is entirely independent. We receive no commissions from shipyards or suppliers. Every recommendation we make is based solely on the owner&apos;s best interest.
+                Foreland is entirely independent. We hold no yard affiliations, receive no commissions from shipyards or suppliers, and accept no referral fees. Every recommendation we make serves one interest alone: the owner.
               </p>
             </div>
           </div>
@@ -243,8 +243,8 @@ export default function NewBuildPage() {
 
       <HorizonLine />
 
-      {/* FAQ */}
-      <section className="py-24 bg-bg0">
+      {/* FAQ - hidden visually, kept for JSON-LD SEO */}
+      <section className="sr-only">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <SectionLabel>FAQ</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>

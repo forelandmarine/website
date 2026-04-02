@@ -179,8 +179,35 @@ export default function RefitPage() {
 
       <HorizonLine />
 
-      {/* FAQ */}
-      <section className="py-24 bg-bg0">
+      {/* HERITAGE RESTORATION */}
+      <section className="bg-bg0 overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="relative h-72 lg:h-auto min-h-[460px]">
+            <Image src="/images/classic-restoration.jpg" alt="Craftsmen restoring traditional timber planking on a classic yacht" fill className="object-cover" />
+            <div className="absolute inset-0 bg-bg0/20" />
+          </div>
+          <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center">
+            <SectionLabel>Classic Yachts</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
+              Preserving heritage, faithfully
+            </h2>
+            <p className="text-muted leading-relaxed mb-5">
+              Some projects demand more than technical competence. The restoration of a classic yacht carries a responsibility to honour the original design intent, the craftsmanship of a previous era, and the vessel&apos;s place in maritime history. We approach these projects with the respect they deserve.
+            </p>
+            <p className="text-muted leading-relaxed mb-5">
+              Whether working with traditional timber construction, period-correct hardware, or sympathetic upgrades to mechanical and electrical systems, our team understands the balance between preservation and practical seaworthiness. The goal is always a vessel that sails as beautifully as she looks, faithful to her heritage but ready for the sea.
+            </p>
+            <p className="text-muted leading-relaxed">
+              We work closely with specialist yards, skilled shipwrights and conservation-minded designers to ensure that every decision, from material selection to structural approach, is made with the vessel&apos;s legacy in mind.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* FAQ - hidden visually, kept for JSON-LD SEO */}
+      <section className="sr-only">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <SectionLabel>FAQ</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>
@@ -222,6 +249,26 @@ export default function RefitPage() {
               </div>
             </details>
           </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* CLASSIC RACING IMAGE */}
+      <section className="py-20 bg-bg1">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded overflow-hidden shadow-2xl shadow-black/40">
+            <Image
+              src="/images/classic-racing.jpg"
+              alt="Classic yacht racing under full sail"
+              width={1800}
+              height={1200}
+              className="w-full h-auto"
+            />
+          </div>
+          <p className="text-center text-sm text-muted mt-6">
+            Built to last. Built to race. Ready for whatever comes next.
+          </p>
         </div>
       </section>
 
