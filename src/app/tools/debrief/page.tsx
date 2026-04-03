@@ -122,7 +122,7 @@ export default function DebriefPage() {
       {/* DASHBOARD SCREENSHOT */}
       <section className="py-20 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-[16px] border-[6px] border-[#2a2a2e] bg-[#1a1a1e] p-1 shadow-2xl shadow-black/40 overflow-hidden">
+          <div className="rounded-[16px] border-[6px] border-[#2a2a2e] bg-[#1a1a1e] p-1 shadow-2xl shadow-black/40 overflow-hidden" data-animate="scale-in">
             <div className="overflow-hidden rounded-[10px]">
               <Image
                 src="/images/debrief-dashboard.png"
@@ -164,7 +164,7 @@ export default function DebriefPage() {
       {/* DATA INPUTS */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14">
+          <div className="max-w-3xl mb-14" data-animate="fade-up">
             <SectionLabel>Data Sources</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Every sensor, every signal, one timeline
@@ -173,9 +173,9 @@ export default function DebriefPage() {
               Debrief ingests data from every system on board and ashore, synchronising it to a single race clock. Nothing is siloed, nothing is missed.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-animate-stagger>
             {dataInputs.map((group) => (
-              <div key={group.title} className="bg-bg0 border border-white/8 p-8">
+              <div key={group.title} className="bg-bg0 border border-white/8 p-8" data-animate="fade-up">
                 <h3 className="text-base font-semibold text-white mb-4">{group.title}</h3>
                 <ul className="space-y-2.5">
                   {group.items.map((item) => (
@@ -198,7 +198,7 @@ export default function DebriefPage() {
         <Glow className="-bottom-40 -left-40 opacity-20" color="rgba(30,100,180,0.15)" size={500} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
+            <div data-animate="slide-right">
               <SectionLabel>AI Analysis</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
                 LLM-powered race review
@@ -233,7 +233,7 @@ export default function DebriefPage() {
                 </div>
               </div>
             </div>
-            <div className="bg-bg1 border border-white/8 p-8 rounded">
+            <div className="bg-bg1 border border-white/8 p-8 rounded" data-animate="slide-left">
               <h3 className="text-sm font-semibold text-accent uppercase tracking-widest mb-6">Sample Analysis Output</h3>
               <div className="space-y-4 font-mono text-xs">
                 <div className="text-muted/70">

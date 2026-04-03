@@ -29,11 +29,58 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Scroll-triggered animations */
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(32px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-left {
+  from { opacity: 0; transform: translateX(48px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-right {
+  from { opacity: 0; transform: translateX(-48px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Base state for scroll-animated elements */
+[data-animate] {
+  opacity: 0;
+}
+
+/* Triggered states */
+[data-animate="fade-up"].is-visible { animation: fade-up 0.7s ease-out forwards; }
+[data-animate="fade-in"].is-visible { animation: fade-in 0.7s ease-out forwards; }
+[data-animate="slide-left"].is-visible { animation: slide-left 0.7s ease-out forwards; }
+[data-animate="slide-right"].is-visible { animation: slide-right 0.7s ease-out forwards; }
+[data-animate="scale-in"].is-visible { animation: scale-in 0.7s ease-out forwards; }
+
+/* Stagger delays for children */
+[data-animate-stagger] > [data-animate]:nth-child(1) { animation-delay: 0ms; }
+[data-animate-stagger] > [data-animate]:nth-child(2) { animation-delay: 100ms; }
+[data-animate-stagger] > [data-animate]:nth-child(3) { animation-delay: 200ms; }
+[data-animate-stagger] > [data-animate]:nth-child(4) { animation-delay: 300ms; }
+[data-animate-stagger] > [data-animate]:nth-child(5) { animation-delay: 400ms; }
+[data-animate-stagger] > [data-animate]:nth-child(6) { animation-delay: 500ms; }
+
+/* Legacy class for insights page */
 .animate-fade-up-visible {
   animation: fade-up 0.6s ease-out forwards;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] { opacity: 1; animation: none !important; }
 }

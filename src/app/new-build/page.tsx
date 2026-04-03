@@ -123,24 +123,24 @@ export default function NewBuildPage() {
       {/* OUR ROLE */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl" data-animate="fade-up">
             <SectionLabel>Our Role</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Independent representation at every stage
             </h2>
           </div>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border-l-2 border-accent/40 pl-6">
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
+            <div className="border-l-2 border-accent/40 pl-6" data-animate="fade-up">
               <p className="text-muted leading-relaxed">
                 A new build is one of the most significant undertakings in yacht ownership, and shipyards naturally operate in their own commercial interest. We provide continuous, independent oversight throughout the build, ensuring the owner&apos;s requirements are upheld from contract through to sea trials and delivery.
               </p>
             </div>
-            <div className="border-l-2 border-accent/40 pl-6">
+            <div className="border-l-2 border-accent/40 pl-6" data-animate="fade-up">
               <p className="text-muted leading-relaxed">
                 We count Captains, unlimited Chief Engineers, Surveyors and Naval Architects amongst our ranks, each with extensive build management experience across leading European and global shipyards. Their judgement is grounded in hands-on project delivery, not theory.
               </p>
             </div>
-            <div className="border-l-2 border-accent/40 pl-6">
+            <div className="border-l-2 border-accent/40 pl-6" data-animate="fade-up">
               <p className="text-muted leading-relaxed">
                 Foreland is entirely independent. We hold no yard affiliations, receive no commissions from shipyards or suppliers, and accept no referral fees. Every recommendation we make serves one interest alone: the owner.
               </p>
@@ -158,7 +158,7 @@ export default function NewBuildPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
+            <div data-animate="slide-right">
               <SectionLabel>Accreditation</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">
                 Qualified Owner&apos;s Representatives
@@ -173,7 +173,7 @@ export default function NewBuildPage() {
                 Foreland Marine Consultancy is also a member of British Marine and Superyacht UK, reinforcing our commitment to the highest standards in the industry and championing British businesses.
               </p>
             </div>
-            <div>
+            <div data-animate="slide-left">
               <h3 className="text-lg font-light text-white mb-5">Code of Conduct</h3>
               <p className="text-muted leading-relaxed text-sm mb-6">
                 As registered Owner&apos;s Representatives, we adhere to the Yacht Owner&apos;s Representative Register Code of Conduct. Its core principles:
@@ -217,9 +217,9 @@ export default function NewBuildPage() {
           </p>
         </div>
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-0">
+          <div className="space-y-0" data-animate-stagger>
             {process.map((p, i) => (
-              <div key={p.step} className="flex gap-6 items-stretch">
+              <div key={p.step} className="flex gap-6 items-stretch" data-animate="fade-up">
                 <div className="flex flex-col items-center">
                   <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-accent/40 text-accent text-sm font-semibold">
                     {p.step}
@@ -242,19 +242,19 @@ export default function NewBuildPage() {
       {/* SERVICES */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-12" data-animate="fade-up">
             <SectionLabel>What We Cover</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">Scope of our involvement</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <ServiceCard title="On-Site Representation" description="Daily presence at the shipyard throughout the build period, attending production meetings, conducting inspections, and providing structured progress reports." />
-            <ServiceCard title="Budget & Cost Control" description="Monitoring expenditure against budget, verifying milestone payment claims, reviewing change orders, and identifying cost risks at the earliest opportunity." />
-            <ServiceCard title="Project Coordination" description="Managing communication between the owner, shipyard, design offices, subcontractors, and classification society to maintain alignment on scope, schedule, and quality." />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8" data-animate-stagger>
+            <ServiceCard data-animate="fade-up" title="On-Site Representation" description="Daily presence at the shipyard throughout the build period, attending production meetings, conducting inspections, and providing structured progress reports." />
+            <ServiceCard data-animate="fade-up" title="Budget & Cost Control" description="Monitoring expenditure against budget, verifying milestone payment claims, reviewing change orders, and identifying cost risks at the earliest opportunity." />
+            <ServiceCard data-animate="fade-up" title="Project Coordination" description="Managing communication between the owner, shipyard, design offices, subcontractors, and classification society to maintain alignment on scope, schedule, and quality." />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ServiceCard title="Technical Review" description="Independent inspection of hull construction, structural work, systems installation, and outfitting quality, supported by our naval architects, engineers, and coatings specialists." />
-            <ServiceCard title="Crew & Commissioning" description="Crew recruitment and employment administration during the build phase, followed by coordination of sea trials, systems commissioning, and formal handover." />
-            <ServiceCard title="Warranty Management" description="Post-delivery oversight including defect tracking, claims management, and continued liaison with the shipyard throughout the warranty period." />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
+            <ServiceCard data-animate="fade-up" title="Technical Review" description="Independent inspection of hull construction, structural work, systems installation, and outfitting quality, supported by our naval architects, engineers, and coatings specialists." />
+            <ServiceCard data-animate="fade-up" title="Crew & Commissioning" description="Crew recruitment and employment administration during the build phase, followed by coordination of sea trials, systems commissioning, and formal handover." />
+            <ServiceCard data-animate="fade-up" title="Warranty Management" description="Post-delivery oversight including defect tracking, claims management, and continued liaison with the shipyard throughout the warranty period." />
           </div>
         </div>
       </section>

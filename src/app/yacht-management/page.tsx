@@ -120,18 +120,18 @@ export default function YachtManagementPage() {
       {/* SERVICES - TOP ROW */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-12" data-animate="fade-up">
             <SectionLabel>What We Offer</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">Comprehensive management services</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8" data-animate-stagger>
             {servicesTop.map((s) => (
-              <ServiceCard key={s.title} title={s.title} description={s.description} />
+              <ServiceCard key={s.title} title={s.title} description={s.description} data-animate="fade-up" />
             ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" data-animate-stagger>
             {servicesBottom.map((s) => (
-              <ServiceCard key={s.title} title={s.title} description={s.description} />
+              <ServiceCard key={s.title} title={s.title} description={s.description} data-animate="fade-up" />
             ))}
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function YachtManagementPage() {
       {/* LIGHTSHIP ISM FEATURE */}
       <section className="bg-bg0 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex items-center justify-center gap-6 p-8 lg:p-12">
+          <div className="flex items-center justify-center gap-6 p-8 lg:p-12" data-animate="slide-right">
             {/* iPad frame */}
             <div className="relative w-[70%] max-w-[480px]">
               <div className="rounded-[20px] border-[8px] border-[#2a2a2e] bg-[#1a1a1e] p-1 shadow-2xl shadow-black/40">
@@ -172,7 +172,7 @@ export default function YachtManagementPage() {
               </div>
             </div>
           </div>
-          <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center">
+          <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center" data-animate="slide-left">
             <SectionLabel>Lightship ISM</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">Fleet compliance at a glance</h2>
             <p className="text-muted leading-relaxed mb-5">
@@ -190,7 +190,7 @@ export default function YachtManagementPage() {
 
       {/* APPROACH */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
           <SectionLabel>Our Approach</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">Independent advice, no conflicts</h2>
           <p className="text-muted leading-relaxed mb-5">
@@ -211,7 +211,7 @@ export default function YachtManagementPage() {
           <Image src="/images/sailing-fleet-horizon.jpg" alt="" fill sizes="100vw" className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-bg0/80" />
         </div>
-        <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
           <SectionLabel>Client Testimonial</SectionLabel>
           <blockquote className="mt-6">
             <svg className="mx-auto mb-6 text-accent/50 w-10 h-10" fill="currentColor" viewBox="0 0 32 32">

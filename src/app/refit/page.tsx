@@ -119,7 +119,7 @@ export default function RefitPage() {
       <section className="bg-bg1 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div data-animate="fade-up">
               <SectionLabel>Track Record</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">Classic to Carbon</h2>
               <p className="text-muted leading-relaxed mb-5">
@@ -129,20 +129,20 @@ export default function RefitPage() {
                 This breadth of experience means our team has encountered the specific challenges associated with each vessel type, from managing complex coatings schemes on pre-war hulls to commissioning carbon rigs on contemporary racing yachts, and overseeing in-depth mechanical and interior refits on large motor yachts.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div className="text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8" data-animate-stagger>
+              <div className="text-center" data-animate="fade-up">
                 <p className="text-3xl sm:text-4xl font-light text-white mb-1">25</p>
                 <p className="text-sm text-muted">Large yacht projects</p>
               </div>
-              <div className="text-center">
+              <div className="text-center" data-animate="fade-up">
                 <p className="text-3xl sm:text-4xl font-light text-white mb-1">7</p>
                 <p className="text-sm text-muted">Countries</p>
               </div>
-              <div className="text-center">
+              <div className="text-center" data-animate="fade-up">
                 <p className="text-3xl sm:text-4xl font-light text-white mb-1">30-60m+</p>
                 <p className="text-sm text-muted">Projects delivered</p>
               </div>
-              <div className="text-center">
+              <div className="text-center" data-animate="fade-up">
                 <p className="text-3xl sm:text-4xl font-light text-white mb-1">100+</p>
                 <p className="text-sm text-muted">Years of vessel heritage</p>
               </div>
@@ -156,13 +156,13 @@ export default function RefitPage() {
       {/* SERVICES */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-12" data-animate="fade-up">
             <SectionLabel>What We Do</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">The full scope of a refit</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate-stagger>
             {services.map((s) => (
-              <ServiceCard key={s.title} title={s.title} description={s.description} />
+              <ServiceCard key={s.title} title={s.title} description={s.description} data-animate="fade-up" />
             ))}
           </div>
         </div>
@@ -173,7 +173,7 @@ export default function RefitPage() {
       {/* APPROACH */}
       <section className="bg-bg1 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center">
+          <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center" data-animate="slide-right">
             <SectionLabel>How We Work</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Independent oversight, aligned with the owner
@@ -188,7 +188,7 @@ export default function RefitPage() {
               Foreland receives no commissions from yards, suppliers, or subcontractors. The owner receives impartial advice and transparent reporting throughout the project.
             </p>
           </div>
-          <div className="relative h-64 sm:h-72 lg:h-auto lg:min-h-[460px]">
+          <div className="relative h-64 sm:h-72 lg:h-auto lg:min-h-[460px]" data-animate="slide-left">
             <Image src="/images/welder-hull.jpg" alt="Welder working on a yacht hull in dry dock" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
             <div className="absolute inset-0 bg-bg0/10" />
           </div>
@@ -200,11 +200,11 @@ export default function RefitPage() {
       {/* HERITAGE RESTORATION */}
       <section className="bg-bg0 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative h-64 sm:h-72 lg:h-auto lg:min-h-[460px]">
+          <div className="relative h-64 sm:h-72 lg:h-auto lg:min-h-[460px]" data-animate="slide-right">
             <Image src="/images/classic-restoration.jpg" alt="Craftsmen restoring traditional timber planking on a classic yacht" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
             <div className="absolute inset-0 bg-bg0/20" />
           </div>
-          <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center">
+          <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center" data-animate="slide-left">
             <SectionLabel>Classic Yachts</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Preserving heritage, faithfully
@@ -275,7 +275,7 @@ export default function RefitPage() {
       {/* CLASSIC RACING IMAGE */}
       <section className="py-20 bg-bg1">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded overflow-hidden shadow-2xl shadow-black/40">
+          <div className="relative rounded overflow-hidden shadow-2xl shadow-black/40" data-animate="scale-in">
             <Image
               src="/images/classic-racing.jpg"
               alt="Classic yacht racing under full sail"

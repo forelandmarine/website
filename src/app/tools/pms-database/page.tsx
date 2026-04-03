@@ -214,10 +214,11 @@ export default function PMSDatabasePage() {
               Every vessel is different. We recommend the right platform based on your size, programme, management structure and budget, then build the database to the same standard regardless of which system you choose.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5" data-animate-stagger>
             {platforms.map((platform) => (
               <div
                 key={platform.name}
+                data-animate="fade-up"
                 className={`relative p-7 border ${
                   platform.primary
                     ? "border-accent/40 bg-accent/5"
@@ -256,10 +257,11 @@ export default function PMSDatabasePage() {
               A structured approach that delivers a fully populated, crew-ready PMS database.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-0">
+          <div className="grid grid-cols-1 gap-0" data-animate-stagger>
             {steps.map((step, i) => (
               <div
                 key={step.number}
+                data-animate="fade-up"
                 className={`grid grid-cols-1 md:grid-cols-[80px_1fr] gap-4 md:gap-8 py-8 ${
                   i < steps.length - 1 ? "border-b border-white/8" : ""
                 }`}
@@ -289,9 +291,9 @@ export default function PMSDatabasePage() {
               A well-structured maintenance database is not just admin. It directly impacts compliance, operational costs, crew workload and vessel value.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-animate-stagger>
             {reasons.map((reason) => (
-              <div key={reason.title} className="p-6 border border-white/8 bg-bg2/40">
+              <div key={reason.title} className="p-6 border border-white/8 bg-bg2/40" data-animate="fade-up">
                 <h3 className="text-sm font-semibold text-white mb-2">{reason.title}</h3>
                 <p className="text-sm text-muted leading-relaxed">{reason.description}</p>
               </div>

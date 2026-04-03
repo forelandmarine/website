@@ -117,22 +117,25 @@ export default function HomePage() {
       {/* SERVICES */}
       <section id="services" className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-14" data-animate="fade-up">
             <SectionLabel>Our Services</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">Expert marine consultancy, from<br />stem to stern.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
             <ServiceCard
+              data-animate="fade-up"
               title="Refit Project Management"
               description="We manage every aspect of your yacht refit from beginning to end, from planning and design to project management and crew services. Our team ensures timely delivery, quality workmanship, and effective budgeting for motor and sail yachts over 24m+."
               href="/refit"
             />
             <ServiceCard
+              data-animate="fade-up"
               title="Race Winning Technical Consultancy"
               description="Our industry leading Consultants provide top-tier technical guidance for your sailing yacht. We work with you to ensure optimal performance and reliability on the race course, helping you achieve winning results, every time."
               href="/technical-consultancy"
             />
             <ServiceCard
+              data-animate="fade-up"
               title="New Build Owner's Representation"
               description="Accredited by the Superyacht Builders Association (SYBAss), Foreland Marine provides expert leadership, management and representation on behalf of yacht owners for new build projects."
               href="/new-build"
@@ -147,11 +150,11 @@ export default function HomePage() {
       <section className="py-0 bg-bg0 overflow-hidden">
         <div className="mx-auto max-w-[1600px] px-0 sm:px-0 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-10 items-center">
-            <div className="relative h-64 sm:h-80 md:h-[500px] lg:h-[720px] rounded-none lg:rounded overflow-hidden">
+            <div className="relative h-64 sm:h-80 md:h-[500px] lg:h-[720px] rounded-none lg:rounded overflow-hidden" data-animate="slide-right">
               <Image src="/images/balthasar-racing.jpg" alt="Maxi yacht Balthasar racing under sail" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               <div className="absolute inset-0 bg-bg0/40" />
             </div>
-            <div className="px-8 py-20 lg:px-0 lg:py-24">
+            <div className="px-8 py-20 lg:px-0 lg:py-24" data-animate="slide-left">
               <div className="max-w-lg">
               <SectionLabel>About Us</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">
@@ -183,7 +186,7 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-12" data-animate="fade-up">
               <SectionLabel>Reach Out Today</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Got a project coming up?</h2>
               <p className="text-muted leading-relaxed">

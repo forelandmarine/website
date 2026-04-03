@@ -196,14 +196,14 @@ export default function TechnicalConsultancyPage() {
           <section className="bg-bg1">
             <div className={`grid grid-cols-1 lg:grid-cols-2`}>
               {/* Image */}
-              <div className={`relative h-64 sm:h-72 lg:h-auto lg:min-h-[460px] ${d.imageRight ? "order-first lg:order-last" : ""} ${d.vignette ? "bg-bg0" : ""}`}>
+              <div className={`relative h-64 sm:h-72 lg:h-auto lg:min-h-[460px] ${d.imageRight ? "order-first lg:order-last" : ""} ${d.vignette ? "bg-bg0" : ""}`} data-animate={d.imageRight ? "slide-left" : "slide-right"}>
                 <Image src={d.image.src} alt={d.image.alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className={`object-cover ${d.vignette ? "opacity-80" : ""}`} />
                 <div className={`absolute inset-0 ${d.darkTint ? "bg-bg0/40" : "bg-bg0/20"}`} />
                 {d.vignette && <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 30%, var(--bg0) 100%)" }} />}
               </div>
 
               {/* Content */}
-              <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center">
+              <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center" data-animate={d.imageRight ? "slide-right" : "slide-left"}>
                 <SectionLabel>{d.label}</SectionLabel>
                 <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">{d.heading}</h2>
                 <p className="text-muted leading-relaxed mb-8">{d.intro}</p>

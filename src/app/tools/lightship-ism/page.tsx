@@ -32,12 +32,12 @@ function FeatureSection({
   return (
     <section className={`py-20 ${bg} overflow-hidden`}>
       <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${reverse ? "lg:[direction:rtl]" : ""}`}>
-        <div className={reverse ? "lg:[direction:ltr]" : ""}>
+        <div className={reverse ? "lg:[direction:ltr]" : ""} data-animate={reverse ? "slide-left" : "slide-right"}>
           <SectionLabel>{label}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">{title}</h2>
           <p className="text-muted leading-relaxed">{description}</p>
         </div>
-        <div className={reverse ? "lg:[direction:ltr]" : ""}>{children}</div>
+        <div className={reverse ? "lg:[direction:ltr]" : ""} data-animate={reverse ? "slide-right" : "slide-left"}>{children}</div>
       </div>
     </section>
   );
@@ -195,14 +195,14 @@ export default function LightshipISMPage() {
       {/* DEVICE MOCKUPS */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg1 overflow-hidden">
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-animate="fade-up">
             <SectionLabel>Desktop &amp; Mobile</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Works on every device</h2>
             <p className="text-muted text-lg max-w-xl mx-auto">
               Full access on desktop, tablet, or phone. Crew can file reports dockside or mid-ocean, wherever they are, the platform is with them.
             </p>
           </div>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6" data-animate="scale-in">
             {/* iPad frame */}
             <div className="relative w-[70%] max-w-[480px]">
               <div className="rounded-[20px] border-[8px] border-[#2a2a2e] bg-[#1a1a1e] p-1 shadow-2xl shadow-black/40">

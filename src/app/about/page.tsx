@@ -146,7 +146,7 @@ export default function AboutPage() {
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg1 overflow-hidden">
         <Glow className="top-20 right-0 opacity-15" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14">
+          <div className="max-w-3xl mb-14" data-animate="fade-up">
             <SectionLabel>Meet the Team</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Leading by example
@@ -162,9 +162,9 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-14">
+          <div className="flex flex-col gap-14" data-animate-stagger>
             {team.map((member) => (
-              <div key={member.name + member.role} className="flex gap-6 items-start">
+              <div key={member.name + member.role} className="flex gap-6 items-start" data-animate="fade-up">
                 {/* Circular headshot */}
                 {member.photo ? (
                   <div className="w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-white/10 shrink-0">
@@ -207,7 +207,7 @@ export default function AboutPage() {
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <Glow className="-bottom-60 -left-60 opacity-20" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14">
+          <div className="max-w-3xl mb-14" data-animate="fade-up">
             <SectionLabel>Expertise</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Specialist knowledge across the yacht lifecycle
@@ -219,11 +219,12 @@ export default function AboutPage() {
               generalist consultancies cannot match.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate-stagger>
             {expertise.map((item) => (
               <div
                 key={item.title}
                 className="border-l-2 border-accent/40 pl-6"
+                data-animate="fade-up"
               >
                 <h3 className="text-base font-semibold text-white mb-2">
                   {item.title}
@@ -242,7 +243,7 @@ export default function AboutPage() {
       {/* ACCREDITATIONS */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-14" data-animate="fade-up">
             <SectionLabel>Accreditations</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">
               Recognised industry credentials
@@ -253,9 +254,9 @@ export default function AboutPage() {
               the world&apos;s leading shipyards and industry bodies.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto" data-animate-stagger>
             {/* SYBAss */}
-            <div className="bg-bg2 border border-white/8 p-8 flex flex-col items-center text-center">
+            <div className="bg-bg2 border border-white/8 p-8 flex flex-col items-center text-center" data-animate="scale-in">
               <div className="mb-6 flex items-center justify-center h-20">
                 <Image
                   src="/logos/sybass-white.png"
@@ -277,7 +278,7 @@ export default function AboutPage() {
               </p>
             </div>
             {/* YORR */}
-            <div className="bg-bg2 border border-white/8 p-8 flex flex-col items-center text-center">
+            <div className="bg-bg2 border border-white/8 p-8 flex flex-col items-center text-center" data-animate="scale-in">
               <div className="mb-6 flex items-center justify-center h-20">
                 <Image
                   src="/logos/yacht-owners-register-white.png"
@@ -315,7 +316,7 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
-        <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
           <SectionLabel>Get in Touch</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">
             Start a conversation

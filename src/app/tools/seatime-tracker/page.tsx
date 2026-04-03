@@ -107,7 +107,7 @@ export default function SeaTimeTrackerPage() {
       <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3" data-animate="slide-right">
               <SectionLabel>Always On</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-4 leading-tight">
                 Detected. Before you dock.
@@ -136,7 +136,7 @@ export default function SeaTimeTrackerPage() {
                 ))}
               </div>
             </div>
-            <div className="lg:col-span-2 flex justify-center">
+            <div className="lg:col-span-2 flex justify-center" data-animate="slide-left">
               <PhoneMockup src="/images/seatime/IMG_0601.PNG" alt="SeaTime Tracker - Scheduled AIS tasks" />
             </div>
           </div>
@@ -148,14 +148,15 @@ export default function SeaTimeTrackerPage() {
       {/* COMPARISON */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-12" data-animate="fade-up">
             <SectionLabel>Why SeaTime Tracker</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">Manual entry is the old way.</h2>
           </div>
-          <div className="max-w-3xl space-y-3">
+          <div className="max-w-3xl space-y-3" data-animate-stagger>
             {comparison.map((item) => (
               <div
                 key={item.label}
+                data-animate="fade-up"
                 className={`flex items-center gap-4 p-5 border ${
                   item.good
                     ? "bg-accent/5 border-accent/30"
@@ -196,7 +197,7 @@ export default function SeaTimeTrackerPage() {
       {/* LOGBOOK */}
       <section className="bg-bg1 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex items-center px-8 py-20 lg:px-16 lg:py-24">
+          <div className="flex items-center px-8 py-20 lg:px-16 lg:py-24" data-animate="slide-right">
             <div className="max-w-lg">
               <SectionLabel>Digital Logbook</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
@@ -222,7 +223,7 @@ export default function SeaTimeTrackerPage() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center py-16 lg:py-0 gap-4 px-8">
+          <div className="flex items-center justify-center py-16 lg:py-0 gap-4 px-8" data-animate="slide-left">
             <PhoneMockup src="/images/seatime/IMG_0595.PNG" alt="SeaTime Tracker - Logbook list view" />
             <PhoneMockup src="/images/seatime/IMG_0596.PNG" alt="SeaTime Tracker - Logbook calendar view" className="hidden sm:block mt-12" />
           </div>
@@ -234,10 +235,10 @@ export default function SeaTimeTrackerPage() {
       {/* REPORTS */}
       <section className="bg-bg1 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex items-center justify-center py-16 lg:py-0 px-8 lg:order-1">
+          <div className="flex items-center justify-center py-16 lg:py-0 px-8 lg:order-1" data-animate="slide-right">
             <PhoneMockup src="/images/seatime/IMG_1660.PNG" alt="SeaTime Tracker - PDF and CSV reports" />
           </div>
-          <div className="flex items-center px-8 py-20 lg:px-16 lg:py-24 lg:order-2">
+          <div className="flex items-center px-8 py-20 lg:px-16 lg:py-24 lg:order-2" data-animate="slide-left">
             <div className="max-w-lg">
               <SectionLabel>MCA Compliant</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
@@ -276,7 +277,7 @@ export default function SeaTimeTrackerPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3" data-animate="slide-right">
               <SectionLabel>One-tap Review</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
                 Confirm. Or reject.
@@ -298,7 +299,7 @@ export default function SeaTimeTrackerPage() {
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-2 flex justify-center">
+            <div className="lg:col-span-2 flex justify-center" data-animate="slide-left">
               <PhoneMockup src="/images/seatime/IMG_0598.PNG" alt="SeaTime Tracker - Review and confirm entries" />
             </div>
           </div>
@@ -312,7 +313,7 @@ export default function SeaTimeTrackerPage() {
         <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="rgba(30,155,255,0.12)" size={600} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div data-animate="slide-right">
               <SectionLabel>Simple Pricing</SectionLabel>
               <h2 className="text-4xl sm:text-5xl font-light text-white mb-2 leading-tight">
                 £4.99<span className="text-2xl font-medium text-muted">/month</span>
@@ -327,7 +328,7 @@ export default function SeaTimeTrackerPage() {
                 Download on the App Store
               </ButtonPrimary>
             </div>
-            <div className="bg-bg2 border border-white/8 p-8">
+            <div className="bg-bg2 border border-white/8 p-8" data-animate="slide-left">
               <p className="text-xs text-muted/50 uppercase tracking-widest mb-6">Everything included</p>
               <div className="space-y-4">
                 {features.map((feature) => (

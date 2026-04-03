@@ -50,7 +50,7 @@ export function ButtonOutline({
   return <button type="button" onClick={onClick} className={cls}>{children}</button>;
 }
 
-export function ServiceCard({ title, description, href }: { title: string; description: string; href?: string }) {
+export function ServiceCard({ title, description, href, ...rest }: { title: string; description: string; href?: string } & React.HTMLAttributes<HTMLDivElement>) {
   const inner = (
     <div className="relative bg-bg2 border border-white/8 overflow-hidden h-full flex flex-col group hover:border-accent/30 transition-colors">
       {/* Left accent bar */}
@@ -71,6 +71,7 @@ export function ServiceCard({ title, description, href }: { title: string; descr
       </div>
     </div>
   );
-  if (href) return <Link href={href} className="h-full block">{inner}</Link>;
-  return <div className="h-full">{inner}</div>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if (href) return <Link href={href} className="h-full block" {...(rest as any)}>{inner}</Link>;
+  return <div className="h-full" {...rest}>{inner}</div>;
 }
