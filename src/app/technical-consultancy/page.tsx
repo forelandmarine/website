@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui";
-import ParallaxHero from "@/components/ParallaxHero";
-
-export const metadata: Metadata = {
-  title: "Technical Consultancy",
-  description:
-    "Expert technical consultancy across yacht racing performance, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
-};
 
 const disciplines = [
   {
@@ -100,6 +95,22 @@ const disciplines = [
 ];
 
 export default function TechnicalConsultancyPage() {
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        if (rect.bottom > 0) {
+          setScrollY(window.scrollY);
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       <script
@@ -153,29 +164,30 @@ export default function TechnicalConsultancyPage() {
       />
 
       {/* HERO */}
-      <ParallaxHero
-        className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0"
-        bg={
-          <>
-            <Glow className="-top-10 -right-10 opacity-80" color="rgba(8,22,48,0.9)" size={900} />
-            <Glow className="bottom-0 -left-20 opacity-50" color="rgba(30,100,180,0.25)" size={800} />
-            <Glow className="top-1/2 left-1/3 -translate-y-1/2 opacity-40" color="rgba(83,134,182,0.18)" size={600} />
-          </>
-        }
-        content={
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <SectionLabel>Technical Consultancy</SectionLabel>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-                Engineering excellence,<br />on every ocean.
-              </h1>
-              <p className="text-lg text-muted leading-relaxed max-w-2xl">
-                From race-winning performance engineering to naval architecture and full vessel systems integration, our technical team brings deep expertise across every discipline of modern yacht design and operation.
-              </p>
-            </div>
+      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
+        <div
+          className="absolute inset-0 will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >
+          <Glow className="-top-10 -right-10 opacity-80" color="rgba(8,22,48,0.9)" size={900} />
+          <Glow className="bottom-0 -left-20 opacity-50" color="rgba(30,100,180,0.25)" size={800} />
+          <Glow className="top-1/2 left-1/3 -translate-y-1/2 opacity-40" color="rgba(83,134,182,0.18)" size={600} />
+        </div>
+        <div
+          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
+          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+        >
+          <div className="max-w-3xl">
+            <SectionLabel>Technical Consultancy</SectionLabel>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
+              Engineering excellence,<br />on every ocean.
+            </h1>
+            <p className="text-lg text-muted leading-relaxed max-w-2xl">
+              From race-winning performance engineering to naval architecture and full vessel systems integration, our technical team brings deep expertise across every discipline of modern yacht design and operation.
+            </p>
           </div>
-        }
-      />
+        </div>
+      </section>
 
       {/* DISCIPLINES */}
       {disciplines.map((d, i) => (

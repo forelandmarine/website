@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui";
-import ParallaxHero from "@/components/ParallaxHero";
-
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Foreland Marine Consultancy. Independent yacht consultancy built on blue water experience. SYBAss accredited, specialising in performance sailing yachts from 24 to 60 metres.",
-};
 
 const team = [
   {
@@ -86,47 +81,64 @@ const expertise = [
 ];
 
 export default function AboutPage() {
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        if (rect.bottom > 0) {
+          setScrollY(window.scrollY);
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       {/* HERO */}
-      <ParallaxHero
-        className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0"
-        bg={
-          <>
-            <Image
-              src="/images/about-hero.jpg"
-              alt=""
-              fill
-              className="object-cover opacity-55 saturate-[1.15] scale-110"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-bg0/30 via-bg0/10 to-bg0" />
-          </>
-        }
-        content={
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <Glow className="-top-40 -right-40 opacity-30" />
-            <div className="max-w-3xl">
-              <SectionLabel>About</SectionLabel>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-                Built on blue water<br />experience
-              </h1>
-              <p className="text-lg text-muted leading-relaxed max-w-2xl mb-5">
-                Foreland Marine was founded by professionals who have spent
-                careers at sea and in shipyards, not behind desks. That
-                hands-on background in sailing, engineering and project
-                delivery shapes everything we do: practical advice, honest
-                assessment, and consultancy grounded in real-world experience.
-              </p>
-              <p className="text-lg text-muted leading-relaxed max-w-2xl">
-                We work exclusively on behalf of yacht owners. No yard
-                affiliations, no broker commissions, no referral fees.
-                Based in London, with consultants across all major yachting hubs worldwide.
-              </p>
-            </div>
+      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
+        <div
+          className="absolute inset-0 will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >
+          <Image
+            src="/images/about-hero.jpg"
+            alt=""
+            fill
+            className="object-cover opacity-55 saturate-[1.15] scale-110"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg0/30 via-bg0/10 to-bg0" />
+        </div>
+        <Glow className="-top-40 -right-40 opacity-30" />
+        <div
+          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
+          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+        >
+          <div className="max-w-3xl">
+            <SectionLabel>About</SectionLabel>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
+              Built on blue water<br />experience
+            </h1>
+            <p className="text-lg text-muted leading-relaxed max-w-2xl mb-5">
+              Foreland Marine was founded by professionals who have spent
+              careers at sea and in shipyards, not behind desks. That
+              hands-on background in sailing, engineering and project
+              delivery shapes everything we do: practical advice, honest
+              assessment, and consultancy grounded in real-world experience.
+            </p>
+            <p className="text-lg text-muted leading-relaxed max-w-2xl">
+              We work exclusively on behalf of yacht owners. No yard
+              affiliations, no broker commissions, no referral fees.
+              Based in London, with consultants across all major yachting hubs worldwide.
+            </p>
           </div>
-        }
-      />
+        </div>
+      </section>
 
       <HorizonLine />
 

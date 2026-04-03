@@ -1,14 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
-import ParallaxHero from "@/components/ParallaxHero";
-
-export const metadata: Metadata = {
-  title: "Debrief: Race Intelligence Dashboard",
-  description:
-    "AI-powered race analysis and crew debrief platform. Combines telemetry, video, weather, AIS tracking, crew positioning and comms into a unified timeline for post-race performance review.",
-  robots: { index: true, follow: true },
-};
 
 const debriefMetaDescription =
   "AI-powered race analysis and crew debrief platform. Combines telemetry, video, weather, AIS tracking, crew positioning and comms into a unified timeline for post-race performance review.";
@@ -54,6 +48,22 @@ const dataInputs = [
 ];
 
 export default function DebriefPage() {
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        if (rect.bottom > 0) {
+          setScrollY(window.scrollY);
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       <script
@@ -80,31 +90,32 @@ export default function DebriefPage() {
       />
 
       {/* HERO */}
-      <ParallaxHero
-        className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0"
-        bg={
-          <>
-            <Glow className="-top-20 -right-20 opacity-40" size={700} />
-            <Glow className="bottom-0 -left-40 opacity-20" color="rgba(30,100,180,0.2)" size={600} />
-          </>
-        }
-        content={
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <div className="flex items-center gap-3 mb-5">
-                <SectionLabel>Tools</SectionLabel>
-                <span className="text-[10px] font-semibold uppercase tracking-widest text-bg0 bg-accent/80 px-2 py-0.5 rounded">Alpha</span>
-              </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-                Race intelligence,<br />frame by frame.
-              </h1>
-              <p className="text-lg text-muted leading-relaxed max-w-2xl">
-                Debrief is an AI-powered race analysis platform that unifies every data source on board into a single, synchronised timeline. Telemetry, video, weather, crew positioning, comms and competitor tracking, all analysed together to find the competitive edge that raw data alone cannot reveal.
-              </p>
+      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
+        <div
+          className="absolute inset-0 will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >
+          <Glow className="-top-20 -right-20 opacity-40" size={700} />
+          <Glow className="bottom-0 -left-40 opacity-20" color="rgba(30,100,180,0.2)" size={600} />
+        </div>
+        <div
+          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
+          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+        >
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-5">
+              <SectionLabel>Tools</SectionLabel>
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-bg0 bg-accent/80 px-2 py-0.5 rounded">Alpha</span>
             </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
+              Race intelligence,<br />frame by frame.
+            </h1>
+            <p className="text-lg text-muted leading-relaxed max-w-2xl">
+              Debrief is an AI-powered race analysis platform that unifies every data source on board into a single, synchronised timeline. Telemetry, video, weather, crew positioning, comms and competitor tracking, all analysed together to find the competitive edge that raw data alone cannot reveal.
+            </p>
           </div>
-        }
-      />
+        </div>
+      </section>
 
       <HorizonLine />
 
