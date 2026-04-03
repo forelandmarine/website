@@ -47,10 +47,10 @@ export default function InsightsPage() {
             src="/images/ocean-aerial.jpg"
             alt=""
             fill
-            className="object-cover opacity-30 scale-110"
+            className="object-cover opacity-40 sm:opacity-30 saturate-[1.15] sm:saturate-100 scale-110"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/60 via-bg1/40 to-bg1" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg0/40 via-bg1/25 to-bg1 sm:from-bg0/60 sm:via-bg1/40 sm:to-bg1" />
         </div>
         <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.15)" size={700} />
         <div
