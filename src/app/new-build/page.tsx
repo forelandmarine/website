@@ -95,8 +95,8 @@ export default function NewBuildPage() {
           className="absolute inset-0 will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         >
-          <Image src="/images/shipyard-launch.jpg" alt="" fill sizes="100vw" className="object-cover object-[90%_center] opacity-45 saturate-[1.15] scale-110" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/50 via-bg0/25 to-bg0" />
+          <Image src="/images/shipyard-launch.jpg" alt="" fill sizes="100vw" className="object-cover object-[90%_center] opacity-55 saturate-[1.15] scale-110" priority />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg0/35 via-bg0/15 to-bg0" />
         </div>
         <div
           className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
@@ -108,7 +108,7 @@ export default function NewBuildPage() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
                 Your interests, every<br />step of the way
               </h1>
-              <p className="text-lg text-muted leading-relaxed max-w-2xl">
+              <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
                 Accredited by the Superyacht Builders Association (SYBAss), we provide independent owner&apos;s representation and build management for new yacht projects worldwide. A new build is among the most significant undertakings in yacht ownership, and we ensure the process is managed with the same care and precision as the vessel itself.
               </p>
             </div>

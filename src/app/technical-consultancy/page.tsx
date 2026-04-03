@@ -169,9 +169,9 @@ export default function TechnicalConsultancyPage() {
           className="absolute inset-0 will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         >
-          <Glow className="-top-20 -right-20 opacity-50" size={700} />
-          <Glow className="bottom-0 -left-40 opacity-25" color="rgba(30,100,180,0.2)" size={600} />
-          <Glow className="top-1/2 left-1/3 -translate-y-1/2 opacity-15" color="rgba(83,134,182,0.12)" size={400} />
+          <Glow className="-top-10 -right-10 opacity-80" color="rgba(8,22,48,0.9)" size={900} />
+          <Glow className="bottom-0 -left-20 opacity-50" color="rgba(30,100,180,0.25)" size={800} />
+          <Glow className="top-1/2 left-1/3 -translate-y-1/2 opacity-40" color="rgba(83,134,182,0.18)" size={600} />
         </div>
         <div
           className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"

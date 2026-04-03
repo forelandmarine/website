@@ -138,7 +138,7 @@ export default function PMSDatabasePage() {
       />
 
       {/* HERO */}
-      <section ref={heroRef} className="relative py-28 overflow-hidden bg-bg1">
+      <section ref={heroRef} className="relative py-28 overflow-hidden bg-bg0">
         <div
           className="absolute inset-0 will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
@@ -166,7 +166,7 @@ export default function PMSDatabasePage() {
       </section>
 
       {/* WHAT WE DO */}
-      <section className="py-20 bg-bg0">
+      <section className="py-20 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <SectionLabel>What We Do</SectionLabel>
@@ -203,7 +203,7 @@ export default function PMSDatabasePage() {
       <HorizonLine />
 
       {/* PLATFORMS */}
-      <section className="py-20 bg-bg1">
+      <section className="py-20 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <SectionLabel>Platforms</SectionLabel>
@@ -245,7 +245,7 @@ export default function PMSDatabasePage() {
       <HorizonLine />
 
       {/* OUR PROCESS */}
-      <section className="py-20 bg-bg0">
+      <section className="py-20 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14">
             <SectionLabel>Our Process</SectionLabel>
@@ -278,7 +278,7 @@ export default function PMSDatabasePage() {
       <HorizonLine />
 
       {/* WHY IT MATTERS */}
-      <section className="py-20 bg-bg1">
+      <section className="py-20 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <SectionLabel>Why It Matters</SectionLabel>

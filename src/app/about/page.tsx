@@ -109,10 +109,10 @@ export default function AboutPage() {
             src="/images/about-hero.jpg"
             alt=""
             fill
-            className="object-cover opacity-45 saturate-[1.15] scale-110"
+            className="object-cover opacity-55 saturate-[1.15] scale-110"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/40 via-bg0/15 to-bg0" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg0/30 via-bg0/10 to-bg0" />
         </div>
         <Glow className="-top-40 -right-40 opacity-30" />
         <div
