@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ScrollAnimator() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -16,12 +19,18 @@ export default function ScrollAnimator() {
       { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
     );
 
-    document.querySelectorAll("[data-animate]").forEach((el) => {
-      observer.observe(el);
-    });
+    // Small delay to ensure new page content is rendered
+    const timeout = setTimeout(() => {
+      document.querySelectorAll("[data-animate]:not(.is-visible)").forEach((el) => {
+        observer.observe(el);
+      });
+    }, 50);
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      clearTimeout(timeout);
+      observer.disconnect();
+    };
+  }, [pathname]);
 
   return null;
 }
