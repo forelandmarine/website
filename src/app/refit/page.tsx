@@ -1,8 +1,13 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
+import ParallaxHero from "@/components/ParallaxHero";
+
+export const metadata: Metadata = {
+  title: "Refit Project Management",
+  description:
+    "Refit project management for motor and sailing yachts over 24m. 25 large yacht projects across 7 countries, from high-profile racing programmes to in-depth motor yacht rebuilds.",
+};
 
 const services = [
   { title: "Planning & Specification", description: "Scope definition, design review, work specification, and budget development prior to the yard period. Thorough planning at this stage is fundamental to a well-executed refit." },
@@ -14,22 +19,6 @@ const services = [
 ];
 
 export default function RefitPage() {
-  const [scrollY, setScrollY] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <>
       <script
@@ -91,29 +80,28 @@ export default function RefitPage() {
       />
 
       {/* HERO */}
-      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
-          <Image src="/images/refit-yard.jpg" alt="" fill sizes="100vw" className="object-cover opacity-55 saturate-[1.15] scale-110" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/35 via-bg0/15 to-bg0" />
-        </div>
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
-          <div className="max-w-3xl">
-            <SectionLabel>Refit Project Management</SectionLabel>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-              Managed with rigour,<br />delivered with care
-            </h1>
-            <p className="text-lg text-muted leading-relaxed max-w-2xl">
-              We provide full refit project management for motor and sailing yachts over 24 metres, from initial assessment through to sea trials and handover. From a light refresh to a complete rebuild, our first priority is to deliver on time and on budget.
-            </p>
+      <ParallaxHero
+        className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0"
+        bg={
+          <>
+            <Image src="/images/refit-yard.jpg" alt="" fill sizes="100vw" className="object-cover opacity-55 saturate-[1.15] scale-110" priority />
+            <div className="absolute inset-0 bg-gradient-to-b from-bg0/35 via-bg0/15 to-bg0" />
+          </>
+        }
+        content={
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <SectionLabel>Refit Project Management</SectionLabel>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
+                Managed with rigour,<br />delivered with care
+              </h1>
+              <p className="text-lg text-muted leading-relaxed max-w-2xl">
+                We provide full refit project management for motor and sailing yachts over 24 metres, from initial assessment through to sea trials and handover. From a light refresh to a complete rebuild, our first priority is to deliver on time and on budget.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        }
+      />
 
       {/* TRACK RECORD */}
       <section className="bg-bg1 py-20">

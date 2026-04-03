@@ -1,7 +1,12 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
+import type { Metadata } from "next";
 import { DotGrid, Glow, HorizonLine, SectionLabel } from "@/components/ui";
+import ParallaxHero from "@/components/ParallaxHero";
+
+export const metadata: Metadata = {
+  title: "PMS Database Services",
+  description:
+    "Expert planned maintenance system database setup, licensing, and on-site population. Authorised DeepBlue agents. We also work with IDEA, SeaHub, Aquator and other leading PMS platforms.",
+};
 
 const platforms = [
   {
@@ -98,22 +103,6 @@ const reasons = [
 ];
 
 export default function PMSDatabasePage() {
-  const [scrollY, setScrollY] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <>
       {/* JSON-LD */}
@@ -138,32 +127,33 @@ export default function PMSDatabasePage() {
       />
 
       {/* HERO */}
-      <section ref={heroRef} className="relative py-28 overflow-hidden bg-bg0">
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
-          <DotGrid />
-          <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={700} />
-        </div>
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
-          <div className="max-w-3xl">
-            <SectionLabel>Tools</SectionLabel>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
-              Planned Maintenance Systems, set up right.
-            </h1>
-            <p className="text-lg text-muted leading-relaxed max-w-2xl">
-              Expert PMS database setup, licensing, and on-site population. We structure your maintenance systems properly from day one, so your crew can focus on the work that matters.
-            </p>
+      <ParallaxHero
+        className="relative py-28 overflow-hidden bg-bg0"
+        bg={
+          <>
+            <DotGrid />
+            <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={700} />
+          </>
+        }
+        content={
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <SectionLabel>Tools</SectionLabel>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
+                Planned Maintenance Systems, set up right.
+              </h1>
+              <p className="text-lg text-muted leading-relaxed max-w-2xl">
+                Expert PMS database setup, licensing, and on-site population. We structure your maintenance systems properly from day one, so your crew can focus on the work that matters.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0">
-          <HorizonLine />
-        </div>
-      </section>
+        }
+        extra={
+          <div className="absolute bottom-0 left-0 right-0">
+            <HorizonLine />
+          </div>
+        }
+      />
 
       {/* WHAT WE DO */}
       <section className="py-20 bg-bg1">

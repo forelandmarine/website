@@ -1,8 +1,13 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Glow, HorizonLine, SectionLabel, ButtonPrimary, ButtonOutline } from "@/components/ui";
+import ParallaxHero from "@/components/ParallaxHero";
+
+export const metadata: Metadata = {
+  title: "SeaTime Tracker: AIS-Powered Sea Time Logbook",
+  description:
+    "SeaTime Tracker automatically detects and logs your sea time via AIS. No manual entry, no paperwork, fully MCA-compliant.",
+};
 
 function PhoneMockup({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
@@ -31,77 +36,58 @@ const comparison = [
 ];
 
 export default function SeaTimeTrackerPage() {
-  const [scrollY, setScrollY] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <>
       {/* HERO */}
-      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
+      <ParallaxHero
+        className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0"
+        bg={
           <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={800} />
-        </div>
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-3">
-              <SectionLabel>Automatic AIS Tracking</SectionLabel>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-                Your sea time,<br />on autopilot.
-              </h1>
-              <p className="text-lg text-muted leading-relaxed mb-4 max-w-xl">
-                Built for seafarers who need MCA-compliant records, automatically tracked via AIS. No manual entry, no paperwork.
-              </p>
-              <p className="text-base text-muted/60 leading-relaxed mb-10 max-w-xl">
-                SeaTime Tracker uses live AIS data to record every passage automatically, even when your phone is off.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <ButtonPrimary href="https://apps.apple.com" className="gap-2">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                  </svg>
-                  Download on the App Store
-                </ButtonPrimary>
-                <ButtonOutline href="#how-it-works">Learn more</ButtonOutline>
+        }
+        content={
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+              <div className="lg:col-span-3">
+                <SectionLabel>Automatic AIS Tracking</SectionLabel>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
+                  Your sea time,<br />on autopilot.
+                </h1>
+                <p className="text-lg text-muted leading-relaxed mb-4 max-w-xl">
+                  Built for seafarers who need MCA-compliant records, automatically tracked via AIS. No manual entry, no paperwork.
+                </p>
+                <p className="text-base text-muted/60 leading-relaxed mb-10 max-w-xl">
+                  SeaTime Tracker uses live AIS data to record every passage automatically, even when your phone is off.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <ButtonPrimary href="https://apps.apple.com" className="gap-2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                    </svg>
+                    Download on the App Store
+                  </ButtonPrimary>
+                  <ButtonOutline href="#how-it-works">Learn more</ButtonOutline>
+                </div>
+                <div className="flex items-center gap-4">
+                  <a href="https://instagram.com/seatimetracker" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                  </a>
+                  <span className="text-muted/30">|</span>
+                  <a href="https://instagram.com/seatimetracker" target="_blank" rel="noopener noreferrer" className="text-sm text-muted hover:text-white transition-colors">
+                    @seatimetracker
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center gap-4">
-                <a href="https://instagram.com/seatimetracker" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors" aria-label="Instagram">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-                  </svg>
-                </a>
-                <span className="text-muted/30">|</span>
-                <a href="https://instagram.com/seatimetracker" target="_blank" rel="noopener noreferrer" className="text-sm text-muted hover:text-white transition-colors">
-                  @seatimetracker
-                </a>
+              <div className="lg:col-span-2 flex justify-center">
+                <PhoneMockup src="/images/seatime/IMG_0594.PNG" alt="SeaTime Tracker - Active vessel tracking with AIS" />
               </div>
-            </div>
-            <div className="lg:col-span-2 flex justify-center">
-              <PhoneMockup src="/images/seatime/IMG_0594.PNG" alt="SeaTime Tracker - Active vessel tracking with AIS" />
             </div>
           </div>
-        </div>
-      </section>
+        }
+      />
 
       {/* HOW IT WORKS */}
       <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-bg1">

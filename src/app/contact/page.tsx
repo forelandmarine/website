@@ -1,27 +1,13 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+import ParallaxHero from "@/components/ParallaxHero";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [scrollY, setScrollY] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -40,29 +26,28 @@ export default function ContactPage() {
   return (
     <>
       {/* HERO */}
-      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
-          <Image src="/images/monaco-harbour-sunset.jpg" alt="" fill sizes="100vw" className="object-cover object-[center_75%] opacity-50 saturate-[1.15] scale-110" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/35 via-bg0/15 to-bg0" />
-        </div>
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
-          <div className="max-w-2xl">
-            <SectionLabel>Contact Us</SectionLabel>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-5 leading-tight">
-              Get in Touch
-            </h1>
-            <p className="text-lg text-muted leading-relaxed">
-              Got a large project, maintenance period or big race coming up? We&apos;d love to hear from you.
-            </p>
+      <ParallaxHero
+        className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0"
+        bg={
+          <>
+            <Image src="/images/monaco-harbour-sunset.jpg" alt="" fill sizes="100vw" className="object-cover object-[center_75%] opacity-50 saturate-[1.15] scale-110" priority />
+            <div className="absolute inset-0 bg-gradient-to-b from-bg0/35 via-bg0/15 to-bg0" />
+          </>
+        }
+        content={
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl">
+              <SectionLabel>Contact Us</SectionLabel>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-5 leading-tight">
+                Get in Touch
+              </h1>
+              <p className="text-lg text-muted leading-relaxed">
+                Got a large project, maintenance period or big race coming up? We&apos;d love to hear from you.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        }
+      />
 
       <HorizonLine />
 

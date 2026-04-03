@@ -1,8 +1,13 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { DotGrid, Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+import ParallaxHero from "@/components/ParallaxHero";
+
+export const metadata: Metadata = {
+  title: "Lightship ISM: Fleet Management",
+  description:
+    "Lightship streamlines your workflow, leaving you more time for the important stuff. ISM compliance, incident reporting, project management, logbooks, and AIS sea service records in one clear interface.",
+};
 
 function ScreenFrame({ src, alt, width = 1400, height = 900 }: { src: string; alt: string; width?: number; height?: number }) {
   return (
@@ -44,51 +49,36 @@ function FeatureSection({
 }
 
 export default function LightshipISMPage() {
-  const [scrollY, setScrollY] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <>
       {/* HERO */}
-      <section ref={heroRef} className="relative py-28 overflow-hidden bg-bg1">
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
-          <DotGrid />
-          <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={700} />
-        </div>
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
-          <div className="max-w-3xl">
-            <SectionLabel>Fleet Management</SectionLabel>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
-              Yacht Administration, but a bit clever.
-            </h1>
-            <p className="text-lg text-muted leading-relaxed max-w-2xl">
-              Lightship streamlines your workflow, leaving you more time for the important stuff. Everything you need in one clear interface, with just enough automation to make it easy without getting in the way.
-            </p>
+      <ParallaxHero
+        className="relative py-28 overflow-hidden bg-bg1"
+        bg={
+          <>
+            <DotGrid />
+            <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={700} />
+          </>
+        }
+        content={
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <SectionLabel>Fleet Management</SectionLabel>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
+                Yacht Administration, but a bit clever.
+              </h1>
+              <p className="text-lg text-muted leading-relaxed max-w-2xl">
+                Lightship streamlines your workflow, leaving you more time for the important stuff. Everything you need in one clear interface, with just enough automation to make it easy without getting in the way.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0">
-          <HorizonLine />
-        </div>
-      </section>
+        }
+        extra={
+          <div className="absolute bottom-0 left-0 right-0">
+            <HorizonLine />
+          </div>
+        }
+      />
 
       {/* FLEET DASHBOARD */}
       <FeatureSection
