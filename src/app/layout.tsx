@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import ScrollAnimator from "@/components/ScrollAnimator";
 
 const nunitoSans = Nunito_Sans({
@@ -77,6 +78,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
         <ScrollAnimator />
       </body>
     </html>
