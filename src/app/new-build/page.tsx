@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
 
 const process = [
@@ -83,6 +84,14 @@ export default function NewBuildPage() {
                     text: "Timelines vary by size and complexity, but a new build yacht over 30 metres typically takes 18 to 36 months from contract signing to delivery. Larger or more complex projects can extend beyond this, particularly where custom engineering or bespoke interior design is involved.",
                   },
                 },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "New Build", item: "https://forelandmarine.com/new-build" },
               ],
             },
           ]),
@@ -308,6 +317,20 @@ export default function NewBuildPage() {
       </section>
 
       <HorizonLine />
+
+      {/* RELATED SERVICES & FURTHER READING */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <p className="text-sm text-muted">
+          Related: <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link> · <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link> · <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link>
+        </p>
+      </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
+        <p className="text-xs text-muted/60 uppercase tracking-widest mb-3">Further Reading</p>
+        <div className="flex flex-col gap-2">
+          <Link href="/insights/the-role-of-an-owners-representative" className="text-sm text-accent hover:text-white transition-colors">The Role of an Owner&apos;s Representative in a New Build Project</Link>
+          <Link href="/insights/owner-representation-during-yard-selection" className="text-sm text-accent hover:text-white transition-colors">Owner&apos;s Representation During Yard Selection: Getting It Right from Day One</Link>
+        </div>
+      </div>
 
       {/* CTA */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">

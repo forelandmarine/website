@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
 
 const servicesTop = [
@@ -86,6 +87,14 @@ export default function YachtManagementPage() {
                     text: "We manage motor and sailing yachts over 24 metres, from private cruising vessels to large commercial yachts. Our experience spans vessels from 24 metres to over 60 metres across a range of vessel types and operational profiles.",
                   },
                 },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "Yacht Management", item: "https://forelandmarine.com/yacht-management" },
               ],
             },
           ]),
@@ -226,6 +235,20 @@ export default function YachtManagementPage() {
       </section>
 
       <HorizonLine />
+
+      {/* RELATED SERVICES & FURTHER READING */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <p className="text-sm text-muted">
+          Related: <Link href="/new-build" className="text-accent hover:text-white transition-colors">New Build</Link> · <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link> · <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link>
+        </p>
+      </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
+        <p className="text-xs text-muted/60 uppercase tracking-widest mb-3">Further Reading</p>
+        <div className="flex flex-col gap-2">
+          <Link href="/insights/choosing-yacht-management-company" className="text-sm text-accent hover:text-white transition-colors">How to Choose an Independent Yacht Management Company</Link>
+          <Link href="/insights/ism-compliance-guide-for-yacht-owners" className="text-sm text-accent hover:text-white transition-colors">A Practical Guide to ISM Compliance for Yacht Owners</Link>
+        </div>
+      </div>
 
       {/* CTA */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">

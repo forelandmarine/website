@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui";
 
 const disciplines = [
@@ -159,6 +160,14 @@ export default function TechnicalConsultancyPage() {
                 },
               ],
             },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "Technical Consultancy", item: "https://forelandmarine.com/technical-consultancy" },
+              ],
+            },
           ]),
         }}
       />
@@ -261,6 +270,19 @@ export default function TechnicalConsultancyPage() {
       </section>
 
       <HorizonLine />
+
+      {/* RELATED SERVICES & FURTHER READING */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <p className="text-sm text-muted">
+          Related: <Link href="/new-build" className="text-accent hover:text-white transition-colors">New Build</Link> · <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link>
+        </p>
+      </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
+        <p className="text-xs text-muted/60 uppercase tracking-widest mb-3">Further Reading</p>
+        <div className="flex flex-col gap-2">
+          <Link href="/insights/carbon-composite-construction-what-owners-need-to-know" className="text-sm text-accent hover:text-white transition-colors">Carbon Composite Construction: What Owners Need to Know</Link>
+        </div>
+      </div>
 
       {/* CTA */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">

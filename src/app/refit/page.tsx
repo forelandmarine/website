@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
 
 const services = [
@@ -84,6 +85,14 @@ export default function RefitPage() {
                     text: "Yes. We have delivered 25 large yacht refit projects across 7 countries and have established relationships with yards in the Mediterranean, Northern Europe, the UK, and beyond. Our team can deploy to any yard worldwide.",
                   },
                 },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "Refit", item: "https://forelandmarine.com/refit" },
               ],
             },
           ]),
@@ -291,6 +300,20 @@ export default function RefitPage() {
       </section>
 
       <HorizonLine />
+
+      {/* RELATED SERVICES & FURTHER READING */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <p className="text-sm text-muted">
+          Related: <Link href="/new-build" className="text-accent hover:text-white transition-colors">New Build</Link> · <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link> · <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link>
+        </p>
+      </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
+        <p className="text-xs text-muted/60 uppercase tracking-widest mb-3">Further Reading</p>
+        <div className="flex flex-col gap-2">
+          <Link href="/insights/refit-project-management-what-to-expect" className="text-sm text-accent hover:text-white transition-colors">Refit Project Management: What to Expect from Planning to Sea Trials</Link>
+          <Link href="/insights/refit-for-performance-upgrading-a-racing-programme" className="text-sm text-accent hover:text-white transition-colors">Refit for Performance: Upgrading an Ageing Racing Programme</Link>
+        </div>
+      </div>
 
       {/* CTA */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">

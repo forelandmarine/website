@@ -16,12 +16,15 @@ const nunitoSans = Nunito_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Foreland Marine Consultancy Ltd",
+    default: "Yacht Management, New Build & Refit Consultancy | Foreland Marine",
     template: "%s | Foreland Marine",
   },
   description:
     "Foreland Marine provides Project Management, Representation and Consultancy services to some of the world's most famous yachts.",
   metadataBase: new URL("https://forelandmarine.com"),
+  alternates: {
+    canonical: "https://forelandmarine.com",
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",

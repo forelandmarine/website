@@ -92,7 +92,7 @@ export const posts: Post[] = [
 
 <blockquote>Carbon composite construction rewards rigour and punishes shortcuts. The difference between a well-built carbon yacht and a poorly built one is invisible from the outside &mdash; but it determines everything about the vessel's safety, performance, and longevity.</blockquote>
 
-<p>If you are considering a carbon fibre sailing yacht or are already in the early stages of a composite new build project, contact us to discuss how independent technical oversight can protect your investment from layup to launch.</p>`,
+<p>If you are considering a carbon fibre sailing yacht or are already in the early stages of a composite <a href="/new-build">new build project</a>, contact us to discuss how independent technical oversight can protect your investment from layup to launch.</p>`,
   },
   {
     slug: "refit-for-performance-upgrading-a-racing-programme",
@@ -338,7 +338,7 @@ export const posts: Post[] = [
 
 <blockquote>A new build project is a partnership between owner, yard, and designer. The owner's representative ensures that partnership remains balanced and that quality is never compromised by commercial pressure.</blockquote>
 
-<p>If you are considering a new build project or are already in the early stages, speak to us about how independent representation can protect your investment from the outset. Our experience spans contract negotiation, yard selection, design review, build oversight, budget control, quality assurance, commissioning, and handover &mdash; the full lifecycle of superyacht construction.</p>`,
+<p>If you are considering a new build project or are already in the early stages, speak to us about how independent representation can protect your investment from the outset. Learn more about our <a href="/new-build">new build services</a>, which span contract negotiation, yard selection, design review, build oversight, budget control, quality assurance, commissioning, and handover.</p>`,
   },
   {
     slug: "ism-compliance-guide-for-yacht-owners",
@@ -704,7 +704,7 @@ export const posts: Post[] = [
 <li><strong>Stay current with MGNs and amendments.</strong> Subscribe to MCA publications and review new Marine Guidance Notes as they are issued. Your management company or flag state advisor should alert you to relevant changes.</li>
 <li><strong>Conduct regular internal audits.</strong> Do not wait for external surveys to identify deficiencies. Regular self-inspection against LY3 requirements will identify issues when they are easy and inexpensive to resolve.</li>
 <li><strong>Invest in crew training.</strong> Well-trained crew are the first line of defence in any emergency. Ensure drills are conducted regularly, debriefed properly, and documented thoroughly.</li>
-<li><strong>Engage professional support.</strong> The regulatory landscape for commercial yachts is complex and evolving. Working with an experienced management company or technical consultancy ensures you have access to current expertise and can navigate compliance requirements efficiently.</li>
+<li><strong>Engage professional support.</strong> The regulatory landscape for commercial yachts is complex and evolving. Working with an experienced <a href="/yacht-management">yacht management company</a> or technical consultancy ensures you have access to current expertise and can navigate compliance requirements efficiently.</li>
 </ul>
 
 <blockquote>Compliance with the Large Yacht Code is not simply about passing surveys. It is about ensuring that your vessel, your crew, and your guests are protected by the highest standards of safety and operational practice.</blockquote>

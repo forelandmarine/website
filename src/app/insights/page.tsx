@@ -37,6 +37,20 @@ export default function InsightsPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
+              { "@type": "ListItem", position: 2, name: "Insights", item: "https://forelandmarine.com/insights" },
+            ],
+          }),
+        }}
+      />
+
       {/* HERO */}
       <section ref={heroRef} className="relative py-28 overflow-hidden bg-bg1">
         <div
