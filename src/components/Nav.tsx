@@ -5,11 +5,10 @@ import Image from "next/image";
 import { useState, useRef, useCallback } from "react";
 
 const navLinks = [
-  { label: "Owner's Representation", href: "/owners-representation" },
   { label: "New Build", href: "/new-build" },
   { label: "Refit", href: "/refit" },
-  { label: "Technical Consultancy", href: "/technical-consultancy" },
-  { label: "Yacht Management", href: "/yacht-management" },
+  { label: "Consultancy", href: "/technical-consultancy" },
+  { label: "Management", href: "/yacht-management" },
 ];
 
 const aboutLinks = [
@@ -66,7 +65,7 @@ export default function Nav() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-0.5 whitespace-nowrap">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

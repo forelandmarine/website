@@ -4,6 +4,13 @@ export const metadata: Metadata = {
   title: "New Build Owner's Representation & Project Management",
   description:
     "Owner's representation and build management for new yacht projects. Accredited by SYBAss. Foreland Marine.",
+  keywords: [
+    "yacht owner's representative",
+    "new build owner's representation",
+    "SYBAss accredited",
+    "independent owner's representative",
+    "new build project management",
+  ],
   alternates: {
     canonical: "https://forelandmarine.com/new-build",
   },

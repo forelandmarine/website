@@ -11,6 +11,91 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "what-is-a-yacht-owners-representative",
+    title: "What is a Yacht Owner's Representative and Why Independence Matters",
+    description:
+      "A comprehensive guide to the role of a yacht owner's representative, why independence from shipyards and brokers is essential, when to appoint one, and what accreditations to look for. Covers SYBAss and YORR qualifications.",
+    date: "2026-04-06",
+    category: "New Build",
+    readTime: "10 min read",
+    keywords: [
+      "yacht owner's representative",
+      "owner's representation",
+      "independent owner's representative",
+      "yacht new build representation",
+      "SYBAss accredited",
+      "YORR registered",
+      "yacht owner representative",
+    ],
+    content: `<p>A yacht new build or major refit is one of the most complex and expensive projects an owner will ever undertake. The shipyard building the vessel is a commercial enterprise with its own priorities, margins, and interests. Without professional representation, the owner faces a significant knowledge gap in contract negotiation, specification detail, cost control, and quality enforcement. This is where a yacht owner's representative comes in.</p>
+
+<p>This article explains what an owner's representative does, why independence is the single most important quality to look for, when to appoint one, and which professional accreditations provide genuine assurance of competence and conduct.</p>
+
+<h2>What Does a Yacht Owner's Representative Do?</h2>
+
+<p>A yacht owner's representative is an independent professional who acts on behalf of the owner throughout a <a href="/new-build">new build</a> or major refit project. Their primary function is to protect the owner's interests in dealings with the shipyard, designers, subcontractors, and classification societies. This is not a passive advisory role. The owner's representative is actively involved in decision-making, quality control, financial oversight, and contractual enforcement from the earliest stages of the project through to delivery and beyond.</p>
+
+<p>The need for an owner's representative arises from a fundamental imbalance. Shipyards are experienced commercial enterprises that build yachts for a living. Most yacht owners, by contrast, will undertake a new build or significant refit only once or twice in their lifetime. The knowledge gap between the two parties is substantial, and without professional representation, the owner is at a significant disadvantage. A yacht owner representative bridges that gap, bringing the technical expertise and project management discipline needed to hold the yard accountable.</p>
+
+<p>In practical terms, the owner's representative reviews and negotiates the build contract, evaluates candidate shipyards, monitors construction progress through regular site inspections, tracks expenditure against budget, attends production meetings, coordinates with the design team, and manages the commissioning and sea trial process. They maintain structured reporting to keep the owner informed without requiring the owner to be present at the yard on a daily basis. Where disputes or delays arise, the representative acts as the owner's advocate, pursuing resolution through established contractual mechanisms.</p>
+
+<p>The scope extends well beyond the build period itself. Pre-project, the representative contributes to concept development, helps define the technical specification, and supports yard selection. Post-delivery, they oversee warranty claims, defect rectification, and the transition to operational management. Throughout, their objective is consistent: to deliver a vessel that meets the agreed specification, on time and within budget, while protecting the owner from unnecessary risk and cost.</p>
+
+<h2>Why Independence Matters</h2>
+
+<p>Not all owner's representatives operate independently. Some are affiliated with shipyards, brokers, or management companies that receive commissions, referral fees, or other financial incentives from the parties they are supposed to be overseeing. This creates an inherent conflict of interest. When the person representing the owner has a financial relationship with the yard or a supplier, their advice cannot be considered impartial, regardless of their intentions.</p>
+
+<p>An independent yacht owner's representative has no such entanglements. Their income comes solely from the owner they serve, and their recommendations are based entirely on what is best for the project. This independence is particularly important during yard selection, where the choice of shipyard has a decisive impact on cost, quality, and timeline. It is equally important during the build itself, when difficult conversations about defects, delays, or cost overruns require the representative to challenge the yard without fear of damaging a commercial relationship.</p>
+
+<p>When evaluating an owner's representative, owners should ask direct questions: Does the representative receive any commissions from shipyards or suppliers? Do they have any financial relationship with brokers or management companies? Are all fees and financial arrangements disclosed in full? A genuinely independent representative will answer these questions without hesitation.</p>
+
+<p>At Foreland Marine, we hold no yard affiliations, receive no commissions from shipyards or suppliers, and accept no referral fees from any third party. Every recommendation we make is driven by one consideration alone: the owner's best interest. This is reflected in our adherence to the Yacht Owner's Representative Register Code of Conduct, which requires full disclosure of any potential conflicts of interest. You can <a href="/about">learn more about our team and credentials</a>.</p>
+
+<h2>When to Appoint an Owner's Representative</h2>
+
+<p>The most effective time to engage an owner's representative is as early as possible, ideally before signing a Letter of Intent or selecting a shipyard. Early involvement allows the representative to contribute to yard evaluation, contract negotiation, and specification development, ensuring the owner's position is properly protected from the outset.</p>
+
+<p>That said, it is never too late. If construction is already underway and the owner feels they lack adequate oversight, an experienced representative can integrate at any stage. They will review existing contracts and documentation, assess the current state of the build, and establish a structured monitoring and reporting framework going forward.</p>
+
+<p>The same principle applies to refit projects. Whether the work is still in the planning phase or the vessel is already in the yard, an independent owner's representative provides the technical scrutiny and project discipline that protects the owner's investment and holds all parties accountable to the agreed scope. Our <a href="/new-build">new build services</a> cover the full lifecycle from concept through delivery.</p>
+
+<h2>Core Services Provided by an Owner's Representative</h2>
+
+<p>While every engagement is tailored to the specific project, the core areas of involvement are consistent across most new build and refit projects:</p>
+
+<ul>
+<li><strong>Contract review and negotiation:</strong> Detailed review of shipyard contracts, specifications, and payment schedules to ensure the owner's position is properly protected. Identification of ambiguous clauses, missing provisions, and terms that disproportionately favour the yard.</li>
+<li><strong>Yard selection and evaluation:</strong> Systematic assessment of shipyards based on capability, track record, capacity, financial stability, and suitability for the project.</li>
+<li><strong>Design and specification review:</strong> Independent review of general arrangement, technical specifications, and equipment selections to ensure the design intent aligns with the owner's brief.</li>
+<li><strong>Build oversight and quality control:</strong> Regular on-site inspections throughout the build or refit period, monitoring construction quality against the agreed specification and classification standards.</li>
+<li><strong>Budget and schedule management:</strong> Continuous tracking of expenditure against budget, verification of milestone payment claims, change order review, and schedule monitoring.</li>
+<li><strong>Commissioning and sea trials:</strong> Coordination and oversight of systems commissioning, attendance at sea trials, and management of the formal acceptance process.</li>
+<li><strong>Warranty management:</strong> Post-delivery oversight including defect tracking, warranty claims management, and continued liaison with the shipyard throughout the guarantee period.</li>
+</ul>
+
+<h2>What to Look for in Accreditations</h2>
+
+<p>Professional accreditation provides assurance that an owner's representative meets established standards of competence, conduct, and independence. Two credentials are particularly relevant in the superyacht industry.</p>
+
+<h3>SYBAss Accreditation</h3>
+
+<p>The Superyacht Builders Association (SYBAss) sets the professional standard for owner's representation in the superyacht industry. SYBAss accreditation is recognised by member shipyards worldwide as confirmation that a representative has the technical knowledge, professional conduct, and operational experience required to oversee <a href="/new-build">new build projects</a> effectively. Foreland Marine is a SYBAss accredited company.</p>
+
+<h3>Yacht Owner's Representative Register (YORR)</h3>
+
+<p>The YORR maintains a register of qualified owner's representatives who have demonstrated the requisite competence, experience, and commitment to professional standards. Registration requires adherence to a formal Code of Conduct covering integrity, transparency, conflict of interest disclosure, and respectful collaboration with all project parties. Our team members hold the YORR qualification.</p>
+
+<p>When selecting an owner's representative, these accreditations serve as a baseline for professional credibility. They do not replace the need to ask searching questions about independence and commercial relationships, but they do confirm that the representative has been vetted against an industry standard.</p>
+
+<h2>Choosing the Right Representative for Your Project</h2>
+
+<p>The right owner's representative brings a combination of technical competence, project management discipline, and genuine independence. They should have direct experience with the type of vessel you are building, a track record of holding yards accountable, and no commercial relationships that could compromise their advice.</p>
+
+<p>At Foreland Marine, our <a href="/about">team</a> includes unlimited Chief Engineers, Captains, and Naval Architects who bring hands-on technical experience to every project. We are SYBAss accredited and YORR registered, and our sole interest is delivering a successful outcome for the owner.</p>
+
+<p>If you are planning a new build or refit and want to understand how independent owner's representation can protect your investment, <a href="/new-build">explore our new build services</a> or get in touch to discuss your project.</p>`,
+  },
+  {
     slug: "why-independent-yacht-management-matters",
     title: "Why Independent Yacht Management Matters",
     description:
