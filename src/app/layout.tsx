@@ -54,25 +54,55 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Foreland Marine Consultancy Ltd",
-              url: "https://forelandmarine.com",
-              logo: "https://forelandmarine.com/logos/foreland-marine-white.svg",
-              email: "info@forelandmarine.com",
-              sameAs: [
-                "https://instagram.com/forelandmarine",
-                "https://www.linkedin.com/company/foreland-marine-consultancy",
-              ],
-              description:
-                "Foreland Marine provides Project Management, Representation and Consultancy services to some of the world's most famous yachts.",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Antibes",
-                addressCountry: "FR",
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Foreland Marine",
+                alternateName: "Foreland Marine Consultancy Ltd",
+                url: "https://forelandmarine.com",
               },
-            }),
+              {
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService",
+                name: "Foreland Marine Consultancy Ltd",
+                url: "https://forelandmarine.com",
+                logo: "https://forelandmarine.com/logos/foreland-marine-white.svg",
+                image: "https://forelandmarine.com/images/og-default.png",
+                email: "info@forelandmarine.com",
+                description:
+                  "Independent yacht consultancy providing project management, owner's representation, technical consultancy and yacht management for sailing and motor yachts worldwide.",
+                sameAs: [
+                  "https://instagram.com/forelandmarine",
+                  "https://www.linkedin.com/company/foreland-marine-consultancy",
+                ],
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "7 Bell Yard",
+                  addressLocality: "London",
+                  postalCode: "WC2A 2JR",
+                  addressCountry: "GB",
+                },
+                areaServed: "Worldwide",
+                serviceType: [
+                  "Yacht Management",
+                  "New Build Owner's Representation",
+                  "Yacht Refit Project Management",
+                  "Marine Technical Consultancy",
+                  "ISM Compliance",
+                  "Performance Sailing Yacht Engineering",
+                ],
+                knowsAbout: [
+                  "Superyacht Management",
+                  "J Class Yachts",
+                  "Yacht Refit",
+                  "New Build Supervision",
+                  "ISM Code Compliance",
+                  "Performance Sailing",
+                  "Naval Architecture",
+                ],
+              },
+            ]),
           }}
         />
       </head>

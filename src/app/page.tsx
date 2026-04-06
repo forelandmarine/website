@@ -178,6 +178,118 @@ export default function HomePage() {
 
       <HorizonLine />
 
+      {/* FAQ - for Google rich results */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What services does Foreland Marine offer?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Foreland Marine provides new build owner's representation, yacht refit project management, technical consultancy, independent yacht management, ISM compliance, and performance sailing yacht engineering. We operate worldwide from our base in London.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What is an owner's representative in a yacht new build?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "An owner's representative acts independently on behalf of the yacht owner throughout the new build process. They provide oversight of the shipyard, manage budgets, review technical specifications, monitor build quality and ensure the owner's interests are protected from contract through to delivery.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Are you independent from shipyards and brokers?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. Foreland Marine is entirely independent. We hold no yard affiliations, receive no broker commissions and accept no referral fees from suppliers. Every recommendation we make serves one interest alone: the owner.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What size yachts do you work with?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We specialise in sailing and motor yachts from 24 to 60 metres, with particular depth in performance sailing yachts. Our team has extensive experience with J Class yachts, maxi racers, fast carbon composite yachts and large motor yachts.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What qualifications does the Foreland Marine team hold?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Our team includes Captains, unlimited Chief Engineers, Naval Architects, Fleet Managers and Surveyors. Foreland Marine is SYBAss accredited and registered on the Yacht Owner's Representative Register (YORR).",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div data-animate="fade-up">
+            <SectionLabel>FAQ</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">
+              Common questions
+            </h2>
+          </div>
+          <div className="space-y-3">
+            <details className="group border border-white/10 bg-bg0" data-animate="fade-up">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What services does Foreland Marine offer?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed text-sm">
+                We provide new build owner&apos;s representation, yacht refit project management, technical consultancy, independent yacht management, ISM compliance, and performance sailing yacht engineering. We operate worldwide from our base in London.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg0" data-animate="fade-up">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What is an owner&apos;s representative in a yacht new build?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed text-sm">
+                An owner&apos;s representative acts independently on behalf of the yacht owner throughout the new build process. They provide oversight of the shipyard, manage budgets, review technical specifications, monitor build quality and ensure the owner&apos;s interests are protected from contract through to delivery.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg0" data-animate="fade-up">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                Are you independent from shipyards and brokers?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed text-sm">
+                Yes. Foreland Marine is entirely independent. We hold no yard affiliations, receive no broker commissions and accept no referral fees from suppliers. Every recommendation we make serves one interest alone: the owner.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg0" data-animate="fade-up">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What size yachts do you work with?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed text-sm">
+                We specialise in sailing and motor yachts from 24 to 60 metres, with particular depth in performance sailing yachts. Our team has extensive experience with J Class yachts, maxi racers, fast carbon composite yachts and large motor yachts.
+              </div>
+            </details>
+            <details className="group border border-white/10 bg-bg0" data-animate="fade-up">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What qualifications does the Foreland Marine team hold?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed text-sm">
+                Our team includes Captains, unlimited Chief Engineers, Naval Architects, Fleet Managers and Surveyors. Foreland Marine is SYBAss accredited and registered on the Yacht Owner&apos;s Representative Register (YORR).
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
       {/* CONTACT CTA */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
