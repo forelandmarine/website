@@ -6,14 +6,14 @@ import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
 
 const servicesTop = [
-  { title: "ISM, Safety & Compliance", description: "Full ISM Code implementation for 500 GT+ vessels, including Safety Management System development, internal audits, corrective action tracking, and incident management. For vessels below 500 GT, voluntary safety management systems aligned with ISM principles." },
-  { title: "Crew Management", description: "Recruitment support, contract administration, payroll coordination, leave planning, and ongoing HR advisory. All employment managed per MLC, flag state requirements, and owner preferences." },
-  { title: "Financial Management", description: "Annual operating budgets built with the owner, tracked against actuals, and reported monthly with clear variance commentary. Supplier engagement managed with commercial rigour and full transparency." },
+  { title: "ISM, Safety & Compliance", description: "Full ISM Code implementation for 500 GT+ vessels, including Safety Management System development, internal audits, corrective action tracking, and incident management. For vessels below 500 GT, we develop voluntary safety management systems aligned with ISM principles, giving owners the same rigorous safety framework regardless of vessel size. Our proprietary Lightship ISM platform provides real-time compliance visibility across the fleet." },
+  { title: "Crew Management", description: "Recruitment support, contract administration, payroll coordination, leave planning, and ongoing HR advisory. All employment managed per MLC, flag state requirements, and owner preferences. We handle crew certification tracking, training schedules, performance reviews, and succession planning to ensure continuity and high standards across every department on board." },
+  { title: "Financial Management", description: "Annual operating budgets built collaboratively with the owner, tracked against actuals, and reported monthly with clear variance commentary. Supplier engagement is managed with commercial rigour and full transparency. Every invoice is reviewed, every cost is justified, and owners receive detailed breakdowns with no mark-ups or hidden handling fees on third-party expenditure." },
 ];
 
 const servicesBottom = [
-  { title: "Class & Flag State", description: "Management of all class and flag state requirements. Survey schedules, statutory inspections, certification renewals, and flag state correspondence coordinated centrally to minimise disruption to the vessel programme." },
-  { title: "Insurance", description: "Coordination with specialist marine insurance brokers to ensure appropriate hull, machinery, P&I, and crew cover is in place. Policy review, renewal management, and claims support." },
+  { title: "Class & Flag State", description: "Management of all class and flag state requirements. Survey schedules, statutory inspections, certification renewals, and flag state correspondence coordinated centrally to minimise disruption to the vessel programme. We maintain close working relationships with all major classification societies and flag state administrations, ensuring that documentation is prepared thoroughly and submissions are handled efficiently." },
+  { title: "Insurance", description: "Coordination with specialist marine insurance brokers to ensure appropriate hull, machinery, P&I, and crew cover is in place. Policy review, renewal management, and claims support handled proactively. We ensure that cover reflects the vessel's actual operational profile and risk exposure, and we advocate on the owner's behalf throughout the claims process." },
 ];
 
 export default function YachtManagementPage() {
@@ -148,6 +148,59 @@ export default function YachtManagementPage() {
 
       <HorizonLine />
 
+      {/* WHAT SETS US APART */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12" data-animate="fade-up">
+            <SectionLabel>Why Foreland</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl font-light text-white">What sets us apart</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
+            {/* Truly Independent */}
+            <div className="relative bg-bg2 border border-white/8 overflow-hidden" data-animate="fade-up">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent opacity-70" />
+              <div className="p-8 pl-9">
+                <h3 className="text-base font-semibold text-white mb-3">Truly Independent</h3>
+                <p className="text-sm text-muted leading-relaxed mb-4">
+                  We do not sell yachts, broker charter, or earn commissions from suppliers. There is no adjacent business that profits when you spend more, change yacht, or enter the charter market.
+                </p>
+                <p className="text-sm text-muted leading-relaxed">
+                  Every recommendation we make serves one interest: the owner&apos;s. Our management fee is our only revenue from the relationship, which means our advice is never shaped by competing commercial incentives.
+                </p>
+              </div>
+            </div>
+            {/* Technical Depth */}
+            <div className="relative bg-bg2 border border-white/8 overflow-hidden" data-animate="fade-up">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent opacity-70" />
+              <div className="p-8 pl-9">
+                <h3 className="text-base font-semibold text-white mb-3">Technical Depth</h3>
+                <p className="text-sm text-muted leading-relaxed mb-4">
+                  Our team includes unlimited Chief Engineers, Captains, and Naval Architects who understand vessels from the inside out. We do not outsource technical judgment to third-party consultants.
+                </p>
+                <p className="text-sm text-muted leading-relaxed">
+                  Whether it is evaluating a refit scope, reviewing a maintenance plan, or assessing a class survey finding, our people have the qualifications and sea time to make informed decisions at the technical level.
+                </p>
+              </div>
+            </div>
+            {/* Transparent Reporting */}
+            <div className="relative bg-bg2 border border-white/8 overflow-hidden" data-animate="fade-up">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent opacity-70" />
+              <div className="p-8 pl-9">
+                <h3 className="text-base font-semibold text-white mb-3">Transparent Reporting</h3>
+                <p className="text-sm text-muted leading-relaxed mb-4">
+                  Owners receive clear, detailed financial and operational reporting with no hidden fees or mark-ups. Monthly reports include itemised expenditure, budget variance commentary, and full audit trails.
+                </p>
+                <p className="text-sm text-muted leading-relaxed">
+                  We believe owners should know exactly where every pound is going and why. Transparency is not a feature we offer; it is the foundation of how we work.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
       {/* LIGHTSHIP ISM FEATURE */}
       <section className="bg-bg0 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -245,6 +298,7 @@ export default function YachtManagementPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
         <p className="text-xs text-muted/60 uppercase tracking-widest mb-3">Further Reading</p>
         <div className="flex flex-col gap-2">
+          <Link href="/insights/why-independent-yacht-management-matters" className="text-sm text-accent hover:text-white transition-colors">Why Independent Yacht Management Matters</Link>
           <Link href="/insights/choosing-yacht-management-company" className="text-sm text-accent hover:text-white transition-colors">How to Choose an Independent Yacht Management Company</Link>
           <Link href="/insights/ism-compliance-guide-for-yacht-owners" className="text-sm text-accent hover:text-white transition-colors">A Practical Guide to ISM Compliance for Yacht Owners</Link>
         </div>
