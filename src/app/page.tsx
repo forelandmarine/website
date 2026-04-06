@@ -178,8 +178,8 @@ export default function HomePage() {
 
       <HorizonLine />
 
-      {/* FAQ - for Google rich results */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
+      {/* FAQ - hidden visually, kept for JSON-LD SEO */}
+      <section className="sr-only">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
