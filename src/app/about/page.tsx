@@ -34,7 +34,7 @@ const team = [
     role: "Chief Naval Architect & Project Manager",
     initials: "NB",
     photo: "/images/team-nadir.jpg",
-    bio: <>Nadir holds a BEng (Hons) in Yacht and Powercraft Design from Solent University and brings deep experience across both the design office and the dock. His racing credentials include programmes on J&nbsp;-&nbsp;Class <i>Lionheart</i>, <i>Maserati Mod70</i>, <i>FlyingNikka</i> and The Ocean Race, while his project management work spans new build sailing yachts up to 56m. A competitive windsurfer and lifelong waterman, he combines naval architecture expertise with a hands-on understanding of what makes high-performance yachts work.</>,
+    bio: <>Nadir holds a BEng (Hons) in Yacht and Powercraft Design from Solent University and brings deep experience across both the design office and the dock. His racing credentials include programmes on J&nbsp;-&nbsp;Class <i>Lionheart</i>, <i>Maserati Mod70</i>, <i>FlyingNikka</i>, <i>Falcon</i> and The Ocean Race, while his project management work spans new build sailing yachts up to 56m. A competitive windsurfer and lifelong waterman, he combines naval architecture expertise with a hands-on understanding of what makes high-performance yachts work.</>,
     linkedin: "https://www.linkedin.com/in/nadir-balena-276143112/",
   },
   {
