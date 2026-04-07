@@ -45,6 +45,14 @@ const team = [
     bio: <>A Senior Consultant with experience spanning since 2015, including over five years in command as Captain. His background covers private and charter operations, with strong expertise in commercial compliance and flag state management. Sam brings extensive experience from the superyacht racing circuit, offering a deep understanding of performance optimisation, sail systems and high-level deck operations. He also has hands-on technical expertise in refit management, specialising in deck-focused projects including gear installation, servicing and system upgrades. Sam provides practical, results-driven consultancy across operations, refits and performance programmes, with a focus on efficiency, safety, compliance and delivering a seamless owner and charter experience.</>,
     linkedin: "#",
   },
+  {
+    name: "Steve Carver",
+    role: "Meteorologist & Weather Routing",
+    initials: "SC",
+    photo: "/images/team-steve.jpg",
+    bio: <>A meteorologist and data performance engineer, Steve is the founder of <a href="https://orcamet.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">OrcaMet</a> and works with <a href="https://mlctechnologies.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">MLC Technologies</a> as a data performance engineer. He provides weather routing and performance analysis services to TP52 and Cape 31 racing fleets as well as vessels on offshore passages. Steve holds a BSc in Marine Science from the University of East Anglia and an FdSc in Operational Yacht Science from UKSA, combining academic rigour with practical experience at sea.</>,
+    linkedin: "https://www.linkedin.com/in/steve-carver-3779ba2b7/",
+  },
 ];
 
 const expertise = [
