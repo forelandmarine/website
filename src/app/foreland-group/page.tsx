@@ -7,10 +7,13 @@ import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui"
 type View = "code-entry" | "investor-portal";
 
 const documents = [
-  { id: "pitch-deck", title: "VC Pitch Deck", description: "High-level overview of the Foreland Shipyard Group opportunity for venture and institutional investors." },
-  { id: "seed-deck", title: "Seed Deck", description: "Detailed seed-stage presentation covering market opportunity, team and initial milestones." },
-  { id: "financial-model", title: "Financial Model", description: "Revised financial projections including revenue forecasts, cost structures and return scenarios." },
-  { id: "investment-proposal", title: "Investment Proposal", description: "Full investment proposal document with terms, structure and strategic rationale." },
+  { id: "pitch-deck", title: "Pitch Deck", description: "High-level overview of the Foreland Shipyard Group opportunity for venture and institutional investors.", ext: "pdf" },
+  { id: "seed-deck", title: "Seed Deck", description: "Detailed seed-stage presentation covering market opportunity, team and initial milestones.", ext: "pdf" },
+  { id: "key-points", title: "Key Points", description: "Summary of the key investment highlights and strategic rationale.", ext: "pdf" },
+  { id: "investment-proposal", title: "Investment Proposal", description: "Full investment proposal document with terms, structure and strategic rationale.", ext: "pdf" },
+  { id: "financial-model", title: "Financial Model", description: "Financial projections including revenue forecasts, cost structures and return scenarios.", ext: "xlsx" },
+  { id: "use-of-proceeds", title: "Use of Proceeds", description: "Breakdown of how investment capital will be allocated across the project.", ext: "xlsx" },
+  { id: "subscription-agreement", title: "Subscription Agreement (Draft)", description: "Draft subscription agreement for prospective investors.", ext: "pdf" },
 ];
 
 export default function ForelandGroupPage() {

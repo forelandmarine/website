@@ -2,7 +2,15 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import crypto from "crypto";
 
-const VALID_DOCS = ["pitch-deck", "seed-deck", "financial-model", "investment-proposal"];
+const VALID_DOCS: Record<string, string> = {
+  "pitch-deck": "pitch-deck.pdf",
+  "seed-deck": "seed-deck.pdf",
+  "key-points": "key-points.pdf",
+  "investment-proposal": "investment-proposal.pdf",
+  "financial-model": "financial-model.xlsx",
+  "use-of-proceeds": "use-of-proceeds.xlsx",
+  "subscription-agreement": "subscription-agreement.pdf",
+};
 
 function verifyToken(token: string): string | null {
   try {
@@ -27,7 +35,7 @@ export async function GET(req: NextRequest) {
   const doc = searchParams.get("doc");
   const token = searchParams.get("token");
 
-  if (!doc || !VALID_DOCS.includes(doc)) {
+  if (!doc || !VALID_DOCS[doc]) {
     return NextResponse.json({ error: "Invalid document." }, { status: 400 });
   }
 
@@ -52,7 +60,7 @@ export async function GET(req: NextRequest) {
 
   const { data: signedUrl } = await supabase.storage
     .from("foreland-group-docs")
-    .createSignedUrl(`${doc}.pdf`, 60);
+    .createSignedUrl(VALID_DOCS[doc], 60);
 
   if (!signedUrl?.signedUrl) {
     return NextResponse.json({ error: "Document not available." }, { status: 404 });
