@@ -2,15 +2,15 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui";
+import { HorizonLine, SectionLabel, Glow, ButtonPrimary } from "@/components/ui";
 
 type View = "code-entry" | "investor-portal";
 
 const documents = [
-  { id: "pitch-deck", title: "Pitch Deck", description: "High-level overview of the Foreland Shipyard Group opportunity for venture and institutional investors.", ext: "pdf" },
   { id: "seed-deck", title: "Seed Deck", description: "Detailed seed-stage presentation covering market opportunity, team and initial milestones.", ext: "pdf" },
   { id: "key-points", title: "Key Points", description: "Summary of the key investment highlights and strategic rationale.", ext: "pdf" },
   { id: "investment-proposal", title: "Investment Proposal", description: "Full investment proposal document with terms, structure and strategic rationale.", ext: "pdf" },
+  { id: "pitch-deck", title: "Pitch Deck", description: "High-level overview of the Foreland Shipyard Group opportunity for venture and institutional investors.", ext: "pdf" },
   { id: "financial-model", title: "Financial Model", description: "Financial projections including revenue forecasts, cost structures and return scenarios.", ext: "xlsx" },
   { id: "use-of-proceeds", title: "Use of Proceeds", description: "Breakdown of how investment capital will be allocated across the project.", ext: "xlsx" },
   { id: "subscription-agreement", title: "Subscription Agreement (Draft)", description: "Draft subscription agreement for prospective investors.", ext: "pdf" },
@@ -29,8 +29,6 @@ export default function ForelandGroupPage() {
   const [investorName, setInvestorName] = useState("");
   const inputRefs = [useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null)];
 
-  // Download state
-  const [downloading, setDownloading] = useState<string | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -90,26 +88,8 @@ export default function ForelandGroupPage() {
     }
   }
 
-  async function handleDownload(docId: string) {
-    setDownloading(docId);
-    try {
-      const res = await fetch(`/api/foreland-group/download?doc=${docId}&token=${token}`);
-      const data = await res.json();
-      if (!res.ok) {
-        if (res.status === 401) {
-          setView("code-entry");
-          setCode(["", "", "", ""]);
-          setCodeError("Session expired. Please re-enter your code.");
-          return;
-        }
-        return;
-      }
-      window.open(data.url, "_blank");
-    } catch {
-      // silent fail
-    } finally {
-      setDownloading(null);
-    }
+  function getDocUrl(docId: string) {
+    return `/api/foreland-group/download?doc=${docId}&token=${token}`;
   }
 
   return (
@@ -226,28 +206,43 @@ export default function ForelandGroupPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {documents.map((doc) => (
-                  <div key={doc.id} className="bg-bg2 border border-white/10 p-6">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="w-10 h-10 rounded bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0 mt-0.5">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-accent">
-                          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                          <polyline points="14,2 14,8 20,8" />
-                        </svg>
+                  <a
+                    key={doc.id}
+                    href={getDocUrl(doc.id)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-bg2 border border-white/10 hover:border-accent/30 p-6 transition-all duration-300 block"
+                  >
+                    <div className="flex items-start gap-4">
+                      {/* File type icon */}
+                      <div className="relative shrink-0">
+                        <div className={`w-14 h-16 rounded flex flex-col items-center justify-center border ${
+                          doc.ext === "pdf"
+                            ? "bg-red-500/10 border-red-500/25"
+                            : "bg-green-500/10 border-green-500/25"
+                        }`}>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={doc.ext === "pdf" ? "text-red-400" : "text-green-400"}>
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            <polyline points="14,2 14,8 20,8" />
+                            {doc.ext === "xlsx" && <path d="M8 13l3 3 3-3M8 17l3-3 3 3" strokeWidth="1.5" />}
+                          </svg>
+                          <span className={`text-[9px] font-bold uppercase mt-0.5 ${
+                            doc.ext === "pdf" ? "text-red-400" : "text-green-400"
+                          }`}>{doc.ext}</span>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="text-white font-semibold mb-1">{doc.title}</h3>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-white font-semibold mb-1 group-hover:text-accent transition-colors">{doc.title}</h3>
                         <p className="text-sm text-muted leading-relaxed">{doc.description}</p>
+                        <div className="mt-3 flex items-center gap-1.5 text-xs text-accent font-medium">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-accent">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                          </svg>
+                          Open document
+                        </div>
                       </div>
                     </div>
-                    <div className="flex gap-3">
-                      <ButtonPrimary
-                        onClick={() => handleDownload(doc.id)}
-                        className={`text-sm flex-1 ${downloading === doc.id ? "opacity-50 pointer-events-none" : ""}`}
-                      >
-                        {downloading === doc.id ? "Loading..." : "View Document"}
-                      </ButtonPrimary>
-                    </div>
-                  </div>
+                  </a>
                 ))}
               </div>
 

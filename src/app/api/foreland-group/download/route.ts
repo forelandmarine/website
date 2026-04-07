@@ -66,5 +66,5 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Document not available." }, { status: 404 });
   }
 
-  return NextResponse.json({ url: signedUrl.signedUrl });
+  return NextResponse.redirect(signedUrl.signedUrl);
 }
