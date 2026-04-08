@@ -199,7 +199,7 @@ export default function ForelandGroupPage() {
               <div className="text-center mb-12">
                 <SectionLabel>Document Portal</SectionLabel>
                 <h2 className="text-2xl sm:text-3xl font-light text-white mb-4">
-                  Welcome, {investorName}
+                  {investorName === "Guest" ? "Welcome Aboard" : `Welcome, ${investorName}`}
                 </h2>
                 <p className="text-muted">Access the Foreland Shipyard Group investment materials below.</p>
               </div>
