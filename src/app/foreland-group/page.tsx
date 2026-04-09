@@ -190,6 +190,20 @@ export default function ForelandGroupPage() {
               >
                 {codeLoading ? "Verifying..." : "Access Documents"}
               </ButtonPrimary>
+
+              <div className="mt-8 pt-6 border-t border-white/10">
+                <p className="text-xs text-muted mb-3">Don&apos;t have a code?</p>
+                <a
+                  href="mailto:info@forelandmarine.com?subject=Foreland%20Group%20Access%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Foreland%20Shipyard%20Group%20investor%20materials.%0A%0AName%3A%20%0ACompany%2FRole%3A%20%0A%0AThank%20you."
+                  className="inline-flex items-center gap-2 text-sm text-accent hover:text-white transition-colors"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  Email for access
+                </a>
+              </div>
             </div>
           )}
 
