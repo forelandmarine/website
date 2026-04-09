@@ -21,6 +21,7 @@ const toolLinks = [
   { label: "SeaTime Tracker App", href: "/tools/seatime-tracker" },
   { label: "Planned Maintenance", href: "/tools/pms-database" },
   { label: "Race Intelligence", href: "/tools/debrief" },
+  { label: "Weather Routing", href: "/tools/weather-routing" },
 ];
 
 export default function Nav() {
