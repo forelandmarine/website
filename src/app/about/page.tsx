@@ -262,8 +262,87 @@ export default function AboutPage() {
 
       <HorizonLine />
 
+      {/* REFERENCE LIST */}
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-bg1 overflow-hidden">
+        <Glow className="top-20 right-0 opacity-15" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-14" data-animate="fade-up">
+            <SectionLabel>Reference List</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
+              Selected experience
+            </h2>
+            <p className="text-muted leading-relaxed">
+              A selection of the yachts and shipyards our team has worked with
+              across new build, refit, racing campaigns and technical
+              consultancy projects.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Yachts */}
+            <div data-animate="fade-up">
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-accent mb-6">Yachts</h3>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                {[
+                  "Anomaly",
+                  "Antoinette",
+                  "Falcon",
+                  "FlyingNikka",
+                  "Halekai",
+                  "Heureka",
+                  "Inukshuk",
+                  "Jeddah 1 (VOR60)",
+                  "Jeddah 2 (VOR60)",
+                  "Kraken 50-012",
+                  "Lionheart",
+                  "Maserati Mod70",
+                  "Onyx II",
+                  "Sedna",
+                  "Shamrock V",
+                  "Sojana",
+                  "Sonny",
+                  "Tootega",
+                  "Velsheda",
+                  "Vijonara",
+                  "Wildberry",
+                ].map((yacht) => (
+                  <div key={yacht} className="flex items-center gap-2 text-sm text-muted">
+                    <span className="w-1 h-1 rounded-full bg-accent/60" />
+                    <span><i>{yacht}</i></span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Shipyards */}
+            <div data-animate="fade-up">
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-accent mb-6">Shipyards</h3>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                {[
+                  "Pendennis Falmouth",
+                  "Pendennis Vilanova",
+                  "Royal Huisman",
+                  "Newport Shipyard",
+                  "Lyman Morse",
+                  "Rockport Marine",
+                  "Hinckley Yachts",
+                  "Markos",
+                ].map((yard) => (
+                  <div key={yard} className="flex items-center gap-2 text-sm text-muted">
+                    <span className="w-1 h-1 rounded-full bg-accent/60" />
+                    <span>{yard}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
       {/* ACCREDITATIONS */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14" data-animate="fade-up">
             <SectionLabel>Accreditations</SectionLabel>
