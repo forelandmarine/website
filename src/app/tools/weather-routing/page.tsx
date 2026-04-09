@@ -171,7 +171,7 @@ export default function WeatherRoutingPage() {
             alt=""
             fill
             sizes="100vw"
-            className="object-cover opacity-55 saturate-[1.1] scale-110"
+            className="object-cover object-[center_70%] opacity-55 saturate-[1.1] scale-110"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/40 via-bg0/30 to-bg0" />
@@ -182,8 +182,8 @@ export default function WeatherRoutingPage() {
           style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
         >
           <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-5">
-              <SectionLabel>Tools & Services</SectionLabel>
+            <div className="flex flex-wrap items-center gap-3 mb-5">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent">Tools & Services</span>
               <span className="text-[10px] font-semibold uppercase tracking-widest text-accent border border-accent/40 px-2 py-0.5 rounded">In Partnership with OrcaMet</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
