@@ -55,6 +55,49 @@ const team = [
   },
 ];
 
+const projects = [
+  {
+    title: "J Class Racing Campaign",
+    type: "Racing Programme",
+    scope: "Full technical preparation, systems commissioning and shore team management across two competitive seasons in the Mediterranean and Caribbean. Covered hydraulic and mechanical systems overhaul, rig inspection coordination, and logistics for a racing calendar spanning six regattas.",
+    specs: "40m performance sailing yacht",
+    duration: "24 months",
+    location: "Mediterranean, Caribbean",
+  },
+  {
+    title: "Classic Yacht Restoration",
+    type: "Refit & Restoration",
+    scope: "Comprehensive structural and systems restoration of a heritage sailing yacht, working closely with the design office and classification society to balance period authenticity with modern safety and compliance requirements. Included complete rewiring, new mechanical systems, hull remediation, and rigging renewal.",
+    specs: "28m classic sailing yacht",
+    duration: "18 months",
+    location: "Northern Europe",
+  },
+  {
+    title: "Performance Sailing Yacht New Build",
+    type: "New Build Oversight",
+    scope: "Owner's representation from contract negotiation through to sea trials and delivery. Scope covered specification review, build supervision, subcontractor coordination, systems commissioning, and warranty management. Worked alongside the naval architect and design team throughout the build programme.",
+    specs: "36m performance sailing yacht",
+    duration: "30 months",
+    location: "Northern Europe",
+  },
+  {
+    title: "Maxi Yacht Offshore Racing Refit",
+    type: "Refit & Racing",
+    scope: "Targeted refit programme to prepare a maxi yacht for an offshore racing season. Work included keel and rudder inspection, rig servicing, safety equipment upgrades to World Sailing Offshore Special Regulations, electronics integration, and weight audit. Delivered on schedule ahead of the season opener.",
+    specs: "24m maxi racing yacht",
+    duration: "6 months",
+    location: "Mediterranean",
+  },
+  {
+    title: "Superyacht Systems Integration & Sea Trials",
+    type: "Technical Consultancy",
+    scope: "Independent oversight of the integration and commissioning of all onboard systems following a major refit, including propulsion, electrical generation, navigation, communications, and crew safety systems. Managed the full sea trial programme and coordinated class and flag state sign-off.",
+    specs: "52m sailing superyacht",
+    duration: "12 months",
+    location: "Mediterranean",
+  },
+];
+
 const expertise = [
   {
     title: "Performance Sailing Yachts",
@@ -335,6 +378,60 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* SELECTED PROJECTS */}
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
+        <Glow className="-bottom-40 -left-40 opacity-20" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-14" data-animate="fade-up">
+            <SectionLabel>Selected Projects</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
+              Anonymised case studies
+            </h2>
+            <p className="text-muted leading-relaxed">
+              A cross-section of projects our team has delivered across racing
+              campaigns, new builds, refits and technical consultancy. Details
+              are anonymised to respect client confidentiality.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-animate-stagger>
+            {projects.map((project) => (
+              <div
+                key={project.title}
+                className="bg-bg2 border border-white/8 p-6 flex flex-col"
+                data-animate="fade-up"
+              >
+                <p className="text-xs text-accent uppercase tracking-widest mb-3">
+                  {project.type}
+                </p>
+                <h3 className="text-base font-semibold text-white mb-3">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-muted leading-relaxed mb-5 flex-1">
+                  {project.scope}
+                </p>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 pt-4 border-t border-white/8">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-muted/60 mb-0.5">Vessel</p>
+                    <p className="text-xs text-muted">{project.specs}</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-muted/60 mb-0.5">Duration</p>
+                    <p className="text-xs text-muted">{project.duration}</p>
+                  </div>
+                  <div className="col-span-2 mt-1">
+                    <p className="text-[10px] uppercase tracking-widest text-muted/60 mb-0.5">Location</p>
+                    <p className="text-xs text-muted">{project.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

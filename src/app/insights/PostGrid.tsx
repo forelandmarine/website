@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import type { Post } from "./posts";
 
-const CATEGORIES = ["All", "New Build", "Compliance", "Refit", "Yacht Management"];
+const CATEGORIES = ["All", "New Build", "Compliance", "Refit", "Yacht Management", "Technical"];
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-GB", {
