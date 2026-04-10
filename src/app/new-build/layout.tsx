@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     "independent owner's representative",
     "new build project management",
   ],
+  openGraph: {
+    title: "New Build Owner's Representation & Project Management",
+    description:
+      "Independent owner's representation for new yacht builds. SYBAss accredited project management from concept through sea trials and delivery.",
+  },
   alternates: {
     canonical: "https://forelandmarine.com/new-build",
   },

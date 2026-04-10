@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Marine Digital Tools & Software",
+  title: "Digital Tools for Yacht Crews & Managers | Foreland Marine",
   description:
-    "Foreland Marine digital tools: SeaTime Tracker, Lightship ISM and PMS Database services for professional yacht management.",
+    "Purpose-built digital products for yacht crews, owners, and managers. SeaTime Tracker, Lightship ISM, Debrief, PMS Database services, and weather routing.",
   alternates: {
     canonical: "https://forelandmarine.com/tools",
+  },
+  openGraph: {
+    title: "Digital Tools for Yacht Crews & Managers | Foreland Marine",
+    description:
+      "Purpose-built digital products for yacht crews, owners, and managers. SeaTime Tracker, Lightship ISM, Debrief, PMS Database services, and weather routing.",
   },
 };
 

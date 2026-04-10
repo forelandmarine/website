@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Lightship ISM: Fleet Management",
+  title: "Lightship ISM - Yacht Administration & Compliance Platform",
   description:
-    "Lightship streamlines your workflow, leaving you more time for the important stuff. ISM compliance, incident reporting, project management, logbooks, and AIS sea service records in one clear interface.",
+    "Lightship streamlines yacht administration with ISM compliance, incident reporting, project management, logbooks, and AIS sea service records in one clear interface.",
+  alternates: {
+    canonical: "https://forelandmarine.com/tools/lightship-ism",
+  },
+  openGraph: {
+    title: "Lightship ISM - Yacht Administration & Compliance Platform",
+    description:
+      "Lightship streamlines yacht administration with ISM compliance, incident reporting, project management, logbooks, and AIS sea service records in one clear interface.",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

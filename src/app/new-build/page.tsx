@@ -104,7 +104,7 @@ export default function NewBuildPage() {
           className="absolute inset-0 will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         >
-          <Image src="/images/shipyard-launch.jpg" alt="" fill sizes="100vw" className="object-cover object-[90%_center] opacity-55 saturate-[1.15] scale-110" priority />
+          <Image src="/images/shipyard-launch.jpg" alt="Yacht hull under construction in shipyard" fill sizes="100vw" className="object-cover object-[90%_center] opacity-55 saturate-[1.15] scale-110" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/35 via-bg0/15 to-bg0" />
         </div>
         <div

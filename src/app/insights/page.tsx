@@ -59,7 +59,7 @@ export default function InsightsPage() {
         >
           <Image
             src="/images/ocean-aerial.jpg"
-            alt=""
+            alt="Aerial view of ocean"
             fill
             className="object-cover opacity-50 saturate-[1.15] scale-110"
             priority

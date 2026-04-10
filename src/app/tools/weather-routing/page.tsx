@@ -168,7 +168,7 @@ export default function WeatherRoutingPage() {
         >
           <Image
             src="/images/weather-routing-hero.jpg"
-            alt=""
+            alt="Maxi yacht fleet departing Malta for offshore race"
             fill
             sizes="100vw"
             className="object-cover object-[center_70%] opacity-55 saturate-[1.1] scale-110"

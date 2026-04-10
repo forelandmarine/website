@@ -129,7 +129,7 @@ export default function AboutPage() {
         >
           <Image
             src="/images/about-hero.jpg"
-            alt=""
+            alt="Performance sailing yacht under sail"
             fill
             className="object-cover opacity-55 saturate-[1.15] scale-110"
             priority

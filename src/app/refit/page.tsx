@@ -105,7 +105,7 @@ export default function RefitPage() {
           className="absolute inset-0 will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         >
-          <Image src="/images/refit-yard.jpg" alt="" fill sizes="100vw" className="object-cover opacity-55 saturate-[1.15] scale-110" priority />
+          <Image src="/images/refit-yard.jpg" alt="Sailing yacht in refit yard" fill sizes="100vw" className="object-cover opacity-55 saturate-[1.15] scale-110" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/35 via-bg0/15 to-bg0" />
         </div>
         <div

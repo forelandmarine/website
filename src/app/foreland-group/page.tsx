@@ -116,7 +116,7 @@ export default function ForelandGroupPage() {
         >
           <Image
             src="/images/foreland-group-hero.jpg"
-            alt=""
+            alt="Aerial render of Tipner West shipyard facility"
             fill
             className="object-cover opacity-55 saturate-[1.15] scale-110"
             priority

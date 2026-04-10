@@ -4,6 +4,11 @@ export const metadata: Metadata = {
   title: "Yacht Technical Consultancy & Performance Engineering",
   description:
     "Expert technical consultancy across yacht racing performance, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
+  openGraph: {
+    title: "Yacht Technical Consultancy & Performance Engineering",
+    description:
+      "Specialist technical consultancy covering yacht racing performance, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
+  },
   alternates: {
     canonical: "https://forelandmarine.com/technical-consultancy",
   },

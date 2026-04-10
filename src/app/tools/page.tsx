@@ -43,7 +43,7 @@ export default function ToolsPage() {
           className="absolute inset-0 will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         >
-          <Image src="/images/yacht-management.jpg" alt="" fill sizes="100vw" className="object-cover opacity-45 saturate-[1.15] scale-110" priority />
+          <Image src="/images/yacht-management.jpg" alt="Sailing yacht under way at sea" fill sizes="100vw" className="object-cover opacity-45 saturate-[1.15] scale-110" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/45 via-bg0/25 to-bg0" />
         </div>
         <div

@@ -91,7 +91,7 @@ export default function HomePage() {
           className="absolute inset-0 will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         >
-          <Image src="/images/j-class-racing.jpg" alt="" fill sizes="100vw" className="object-cover opacity-65 scale-110 saturate-[1.15]" priority />
+          <Image src="/images/j-class-racing.jpg" alt="J Class yachts racing under full sail" fill sizes="100vw" className="object-cover opacity-65 scale-110 saturate-[1.15]" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-bg0/30 via-bg0/15 to-bg0" />
         </div>
         <div
@@ -293,7 +293,7 @@ export default function HomePage() {
       {/* CONTACT CTA */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/racing-marina.jpg" alt="" fill sizes="100vw" className="object-cover opacity-25" />
+          <Image src="/images/racing-marina.jpg" alt="Racing yachts moored in marina at sunset" fill sizes="100vw" className="object-cover opacity-25" />
           <div className="absolute inset-0 bg-bg0/75" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
