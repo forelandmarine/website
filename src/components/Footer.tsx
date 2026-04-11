@@ -11,6 +11,10 @@ const services = [
 const tools = [
   { label: "Lightship ISM", href: "/tools/lightship-ism" },
   { label: "SeaTime Tracker", href: "/tools/seatime-tracker" },
+  { label: "Planned Maintenance", href: "/tools/pms-database" },
+  { label: "Race Intelligence", href: "/tools/debrief" },
+  { label: "Weather Routing", href: "/tools/weather-routing" },
+  { label: "Running Cost Calculator", href: "/tools/running-cost-calculator" },
 ];
 
 export default function Footer() {
