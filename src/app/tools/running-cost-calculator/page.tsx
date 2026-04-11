@@ -163,16 +163,16 @@ function ToggleGroup<T extends string>({
   onChange: (v: T) => void;
 }) {
   return (
-    <div className="flex flex-wrap gap-px bg-white/5 rounded overflow-hidden">
+    <div className="flex flex-wrap gap-2">
       {options.map((o) => (
         <button
           key={o.value}
           type="button"
           onClick={() => onChange(o.value)}
-          className={`px-4 py-2 text-sm transition-colors duration-150 ${
+          className={`px-4 py-2 text-sm rounded transition-colors duration-150 ${
             value === o.value
-              ? "bg-white/[0.12] text-white font-medium"
-              : "bg-transparent text-muted/70 hover:text-white hover:bg-white/[0.06]"
+              ? "bg-white/[0.14] text-white border border-white/20"
+              : "text-muted border border-white/[0.06] hover:text-white hover:border-white/15"
           }`}
         >
           {o.label}
@@ -195,17 +195,17 @@ function CostRow({
 }) {
   const pct = (amount / total) * 100;
   return (
-    <div className="group">
+    <div>
       <div className="flex justify-between items-baseline mb-1.5">
-        <span className="text-sm text-muted/80">{label}</span>
+        <span className="text-sm text-muted">{label}</span>
         <div className="flex items-baseline gap-3">
-          <span className="text-xs text-muted/40 tabular-nums">{pct.toFixed(0)}%</span>
-          <span className="text-sm text-white/90 font-light tabular-nums">{fmt(amount, currency)}</span>
+          <span className="text-xs text-muted/60 tabular-nums">{pct.toFixed(0)}%</span>
+          <span className="text-sm text-white font-light tabular-nums">{fmt(amount, currency)}</span>
         </div>
       </div>
-      <div className="w-full h-1 bg-white/[0.04] overflow-hidden">
+      <div className="w-full h-1.5 bg-white/[0.06] rounded-full overflow-hidden">
         <div
-          className="h-full bg-white/20 transition-all duration-500 ease-out"
+          className="h-full rounded-full bg-white/30 transition-all duration-500 ease-out"
           style={{ width: `${pct}%` }}
         />
       </div>
@@ -314,7 +314,7 @@ export default function RunningCostCalculatorPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* INPUTS */}
-            <div className="space-y-8">
+            <div className="bg-bg2/60 border border-white/[0.08] rounded-lg p-6 sm:p-8 space-y-8">
               <div>
                 <SectionLabel>Your Yacht</SectionLabel>
                 <h2 className="text-2xl sm:text-3xl font-light text-white">
@@ -325,7 +325,7 @@ export default function RunningCostCalculatorPage() {
               {/* Length slider */}
               <div className="space-y-3">
                 <div className="flex justify-between items-baseline">
-                  <label className="text-sm text-muted/70 font-light">Yacht Length</label>
+                  <label className="text-sm text-muted">Yacht Length</label>
                   <span className="text-lg text-white font-light tabular-nums">
                     {length}m
                   </span>
@@ -339,14 +339,14 @@ export default function RunningCostCalculatorPage() {
                   onChange={handleSlider}
                   className="w-full cursor-pointer"
                   style={{
-                    background: `linear-gradient(to right, rgba(255,255,255,0.35) ${((length - 24) / 36) * 100}%, rgba(255,255,255,0.08) ${((length - 24) / 36) * 100}%)`,
-                    height: "2px",
-                    borderRadius: "1px",
+                    background: `linear-gradient(to right, rgba(255,255,255,0.4) ${((length - 24) / 36) * 100}%, rgba(255,255,255,0.1) ${((length - 24) / 36) * 100}%)`,
+                    height: "4px",
+                    borderRadius: "2px",
                     WebkitAppearance: "none",
                     accentColor: "#ffffff",
                   }}
                 />
-                <div className="flex justify-between text-xs text-muted/30">
+                <div className="flex justify-between text-xs text-muted/50">
                   <span>24m</span>
                   <span>60m</span>
                 </div>
@@ -354,7 +354,7 @@ export default function RunningCostCalculatorPage() {
 
               {/* Yacht type */}
               <div className="space-y-2.5">
-                <label className="text-sm text-muted/70 font-light block">Yacht Type</label>
+                <label className="text-sm text-muted block">Yacht Type</label>
                 <ToggleGroup
                   options={[
                     { value: "sailing" as YachtType, label: "Sailing" },
@@ -367,7 +367,7 @@ export default function RunningCostCalculatorPage() {
 
               {/* Use type */}
               <div className="space-y-2.5">
-                <label className="text-sm text-muted/70 font-light block">Use</label>
+                <label className="text-sm text-muted block">Use</label>
                 <ToggleGroup
                   options={[
                     { value: "private" as UseType, label: "Private" },
@@ -377,7 +377,7 @@ export default function RunningCostCalculatorPage() {
                   onChange={setUseType}
                 />
                 {useType === "charter" && (
-                  <p className="text-xs text-muted/50 leading-relaxed pt-1">
+                  <p className="text-xs text-muted/70 leading-relaxed pt-1">
                     Charter yachts require commercial insurance, larger crews, LY3/PYC compliance, and dedicated charter management.
                   </p>
                 )}
@@ -385,7 +385,7 @@ export default function RunningCostCalculatorPage() {
 
               {/* Currency */}
               <div className="space-y-2.5">
-                <label className="text-sm text-muted/70 font-light block">Currency</label>
+                <label className="text-sm text-muted block">Currency</label>
                 <ToggleGroup
                   options={[
                     { value: "EUR" as Currency, label: "EUR" },
@@ -399,7 +399,7 @@ export default function RunningCostCalculatorPage() {
 
               {/* Cruising area */}
               <div className="space-y-2.5">
-                <label className="text-sm text-muted/70 font-light block">Primary Operating Area</label>
+                <label className="text-sm text-muted block">Primary Operating Area</label>
                 <ToggleGroup
                   options={[
                     { value: "west_med" as CruisingArea, label: "West Med" },
@@ -419,7 +419,7 @@ export default function RunningCostCalculatorPage() {
 
               {/* Usage intensity */}
               <div className="space-y-2.5">
-                <label className="text-sm text-muted/70 font-light block">Usage Intensity</label>
+                <label className="text-sm text-muted block">Usage Intensity</label>
                 <ToggleGroup
                   options={[
                     { value: "light" as UsageIntensity, label: "Light (<6 wks)" },
@@ -435,20 +435,20 @@ export default function RunningCostCalculatorPage() {
             {/* RESULTS */}
             <div className="space-y-6 lg:sticky lg:top-24 lg:self-start">
               {/* Total card */}
-              <div className="relative border border-white/[0.08] rounded p-6 sm:p-8 overflow-hidden">
+              <div className="relative bg-bg2/60 border border-white/[0.08] rounded-lg p-6 sm:p-8 overflow-hidden">
                 <Glow
                   className="-top-32 -right-32"
-                  color="rgba(255,255,255,0.03)"
+                  color="rgba(255,255,255,0.04)"
                   size={350}
                 />
                 <div className="relative z-10">
-                  <p className="text-xs text-muted/40 uppercase tracking-widest mb-3">
+                  <p className="text-xs text-muted/70 uppercase tracking-widest mb-3">
                     Estimated Annual Cost
                   </p>
                   <p className="text-4xl sm:text-5xl font-light text-white tabular-nums tracking-tight">
                     {fmt(costs.total, currency)}
                   </p>
-                  <p className="text-sm text-muted/50 mt-2">
+                  <p className="text-sm text-muted mt-2">
                     {length}m {yachtType === "motor" ? "motor yacht" : "sailing yacht"},{" "}
                     {useType === "charter" ? "charter" : "private"},{" "}
                     {areaLabels[area]},{" "}
@@ -458,8 +458,8 @@ export default function RunningCostCalculatorPage() {
               </div>
 
               {/* Breakdown */}
-              <div className="border border-white/[0.08] rounded p-6 sm:p-8 space-y-4">
-                <p className="text-xs text-muted/40 uppercase tracking-widest mb-2">
+              <div className="bg-bg2/60 border border-white/[0.08] rounded-lg p-6 sm:p-8 space-y-4">
+                <p className="text-xs text-muted/70 uppercase tracking-widest mb-2">
                   Cost Breakdown
                 </p>
                 {breakdown.map((item) => (
@@ -471,14 +471,14 @@ export default function RunningCostCalculatorPage() {
                     currency={currency}
                   />
                 ))}
-                <div className="pt-3 border-t border-white/[0.06] flex justify-between items-baseline">
-                  <span className="text-sm text-white/70">Total</span>
+                <div className="pt-3 border-t border-white/10 flex justify-between items-baseline">
+                  <span className="text-sm text-white">Total</span>
                   <span className="text-base text-white font-light tabular-nums">{fmt(costs.total, currency)}</span>
                 </div>
               </div>
 
               {/* Disclaimer + CTA */}
-              <div className="border border-white/[0.08] rounded p-6 sm:p-8">
+              <div className="bg-bg2/60 border border-white/[0.08] rounded-lg p-6 sm:p-8">
                 <p className="text-sm text-muted/60 leading-relaxed mb-5">
                   These are indicative estimates. Every yacht is different. Get in touch for a
                   detailed budget tailored to your vessel.
@@ -626,19 +626,19 @@ export default function RunningCostCalculatorPage() {
                     href={source.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
+                    className="text-sm text-white hover:text-accent transition-colors"
                   >
                     {source.title}
-                    <span className="text-muted/30 ml-1.5 text-xs align-middle">&nearr;</span>
+                    <span className="text-muted/50 ml-1.5 text-xs">&nearr;</span>
                   </a>
                 ) : (
-                  <p className="text-sm text-white/80">{source.title}</p>
+                  <p className="text-sm text-white">{source.title}</p>
                 )}
-                <p className="text-sm text-muted/50 leading-relaxed">{source.detail}</p>
+                <p className="text-sm text-muted/70 leading-relaxed">{source.detail}</p>
               </li>
             ))}
           </ul>
-          <p className="text-xs text-muted/40 mt-8 leading-relaxed">
+          <p className="text-xs text-muted/60 mt-8 leading-relaxed">
             Regional multipliers and charter adjustments are derived from a combination of these
             sources and internal benchmarks. Verify against current market conditions before making
             financial decisions.
