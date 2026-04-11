@@ -22,6 +22,7 @@ const toolLinks = [
   { label: "Planned Maintenance", href: "/tools/pms-database" },
   { label: "Race Intelligence", href: "/tools/debrief" },
   { label: "Weather Routing", href: "/tools/weather-routing" },
+  { label: "Running Cost Calculator", href: "/tools/running-cost-calculator" },
 ];
 
 export default function Nav() {
