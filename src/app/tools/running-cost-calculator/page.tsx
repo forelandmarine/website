@@ -22,6 +22,7 @@ type CruisingArea =
   | "south_pacific"
   | "global";
 type UseType = "private" | "charter";
+type SeasonType = "single" | "dual";
 type UsageIntensity = "light" | "moderate" | "heavy";
 
 interface SubItem {
@@ -81,27 +82,30 @@ function calculateCosts(
   area: CruisingArea,
   usage: UsageIntensity,
   useType: UseType,
+  season: SeasonType,
 ): CostBreakdown {
   const t = (length - 24) / (60 - 24); // 0..1
   const isCharter = useType === "charter";
+  const isDual = season === "dual";
   const isSail = yachtType === "sailing";
-  const charterMult = (base: number, mult: number) => base * (isCharter ? mult : 1.0);
+  const charterAdj = (base: number, mult: number) => base * (isCharter ? mult : 1.0);
 
   // --- Crew ---
   const crewCount = isSail
     ? Math.round(lerp(4, 12, t))
     : Math.round(lerp(5, 14, t));
-  const salaries = (isSail ? lerp(220_000, 520_000, t) : lerp(260_000, 620_000, t));
+  const salaries = isSail ? lerp(220_000, 520_000, t) : lerp(260_000, 620_000, t);
   const socialCharges = salaries * 0.18;
   const crewInsurance = crewCount * lerp(1_800, 2_500, t);
-  const travel = crewCount * lerp(2_500, 4_000, t);
+  const travelBase = crewCount * lerp(2_500, 4_000, t);
+  const travel = isDual ? travelBase * 1.6 : travelBase; // more flights between seasons
   const training = crewCount * lerp(1_500, 3_000, t);
   const uniforms = crewCount * lerp(400, 800, t);
   const provisions = crewCount * lerp(5_000, 8_000, t);
   const usageMult = usage === "heavy" ? 1.15 : usage === "moderate" ? 1.05 : 1.0;
   const crewSub = [salaries, socialCharges, crewInsurance, travel, training, uniforms, provisions];
   const crewRaw = crewSub.reduce((a, b) => a + b, 0) * usageMult;
-  const crew = charterMult(crewRaw, 1.25);
+  const crew = charterAdj(crewRaw, 1.25);
 
   // --- Insurance ---
   const valueMotor = lerp(3_000_000, 35_000_000, t);
@@ -113,12 +117,12 @@ function calculateCosts(
   };
   const areaMult = areaInsuranceMult[area];
   const hullRate = isSail ? 0.008 : 0.01;
-  const hull = value * hullRate * areaMult;
-  const pandi = value * (isSail ? 0.003 : 0.004) * areaMult;
+  const hull = value * hullRate * areaMult * (isDual ? 1.15 : 1.0); // wider cruising range
+  const pandi = value * (isSail ? 0.003 : 0.004) * areaMult * (isDual ? 1.1 : 1.0);
   const crewMedical = crewCount * lerp(1_200, 2_000, t);
   const warRisk = area === "arabian_gulf" || area === "global" ? value * 0.001 : 0;
   const insuranceRaw = hull + pandi + crewMedical + warRisk;
-  const insurance = charterMult(insuranceRaw, 1.4);
+  const insurance = charterAdj(insuranceRaw, 1.4);
 
   // --- Maintenance ---
   const engineService = isSail ? lerp(25_000, 80_000, t) : lerp(50_000, 200_000, t);
@@ -130,7 +134,7 @@ function calculateCosts(
   const interiorUpkeep = lerp(10_000, 45_000, t);
   const classReserve = lerp(20_000, 80_000, t);
   const maintRaw = engineService + hullAntifoul + rig + sailInventory + deckHardware + electronics + interiorUpkeep + classReserve;
-  const maintenance = charterMult(maintRaw, 1.2);
+  const maintenance = charterAdj(maintRaw, 1.2);
 
   // --- Berths ---
   const berthMultiplier: Record<CruisingArea, number> = {
@@ -139,25 +143,28 @@ function calculateCosts(
     south_pacific: 0.55, global: 0.85,
   };
   const homeBerth = lerp(60_000, 280_000, t) * berthMultiplier[area];
-  const transitBerths = lerp(15_000, 60_000, t) * berthMultiplier[area];
+  const secondBerth = isDual ? lerp(30_000, 150_000, t) * 0.7 : 0; // winter season berth
+  const transitBerths = lerp(15_000, 60_000, t) * berthMultiplier[area] * (isDual ? 1.4 : 1.0);
   const launchHaulout = lerp(5_000, 20_000, t);
-  const berths = homeBerth + transitBerths + launchHaulout;
+  const berths = homeBerth + secondBerth + transitBerths + launchHaulout;
 
   // --- Fuel & consumables ---
   const fuelOnly = isSail ? lerp(15_000, 60_000, t) : lerp(50_000, 280_000, t);
-  const lubricants = fuelOnly * 0.06;
+  const deliveryFuel = isDual
+    ? (isSail ? lerp(8_000, 25_000, t) : lerp(20_000, 80_000, t))
+    : 0; // transatlantic or long-distance passage fuel
+  const lubricants = (fuelOnly + deliveryFuel) * 0.06;
   const waterTreatment = lerp(2_000, 8_000, t);
   const stores = lerp(8_000, 30_000, t);
   const fuelUsageMult = usage === "heavy" ? 1.5 : usage === "moderate" ? 1.0 : 0.7;
-  const fuelRaw = (fuelOnly + lubricants + waterTreatment + stores) * fuelUsageMult;
-  const fuel = charterMult(fuelRaw, 1.3);
+  const fuelRaw = (fuelOnly + deliveryFuel + lubricants + waterTreatment + stores) * fuelUsageMult;
+  const fuel = charterAdj(fuelRaw, 1.3);
 
   // --- Management ---
   const baseFee = lerp(3_000, 8_000, t) * 12;
   const accounting = lerp(6_000, 18_000, t);
   const charterAdmin = isCharter ? baseFee * 0.35 : 0;
-  const managementRaw = baseFee + accounting + charterAdmin;
-  const management = isCharter ? managementRaw : managementRaw;
+  const management = baseFee + accounting + charterAdmin;
 
   // --- Regulatory ---
   const flagState = lerp(3_000, 12_000, t);
@@ -166,6 +173,14 @@ function calculateCosts(
   const ismCompliance = isCharter ? lerp(4_000, 15_000, t) : lerp(2_000, 8_000, t);
   const yachtCode = isCharter ? lerp(3_000, 10_000, t) : 0;
   const regulatory = flagState + classSurvey + radioLicensing + ismCompliance + yachtCode;
+
+  // --- Delivery / shipping (dual season only) ---
+  // Yacht either sails herself (delivery crew + fuel, already in fuel) or ships on a transport vessel
+  const deliveryCrew = isDual ? lerp(8_000, 25_000, t) : 0; // delivery skipper + crew costs
+  const agentFees = isDual ? lerp(3_000, 10_000, t) : 0; // port agents at each end
+
+  // Add delivery costs to crew total
+  const crewWithDelivery = crew + deliveryCrew + agentFees;
 
   // --- Detail maps ---
   const charterScale = (items: SubItem[], mult: number): SubItem[] => {
@@ -186,7 +201,7 @@ function calculateCosts(
   };
 
   const detail: Record<string, SubItem[]> = {
-    crew: charterMult === undefined ? [] : charterScale(usageScale([
+    crew: charterScale(usageScale([
       { label: "Salaries", amount: salaries },
       { label: "Social charges & tax", amount: socialCharges },
       { label: "Crew insurance", amount: crewInsurance },
@@ -194,6 +209,10 @@ function calculateCosts(
       { label: "Training & certs", amount: training },
       { label: "Uniforms", amount: uniforms },
       { label: "Provisions", amount: provisions },
+      ...(isDual ? [
+        { label: "Delivery crew", amount: deliveryCrew },
+        { label: "Port agent fees", amount: agentFees },
+      ] : []),
     ], usageMult), 1.25),
     insurance: charterScale([
       { label: "Hull & machinery", amount: hull },
@@ -213,11 +232,13 @@ function calculateCosts(
     ], 1.2),
     berths: [
       { label: "Annual home berth", amount: homeBerth },
+      ...(isDual ? [{ label: "Second season berth", amount: secondBerth }] : []),
       { label: "Transit & visitor berths", amount: transitBerths },
       { label: "Launch & haulout", amount: launchHaulout },
     ],
     fuel: charterScale(usageScale([
       { label: "Fuel", amount: fuelOnly },
+      ...(isDual ? [{ label: "Delivery passage fuel", amount: deliveryFuel }] : []),
       { label: "Lubricants", amount: lubricants },
       { label: "Water treatment", amount: waterTreatment },
       { label: "General stores", amount: stores },
@@ -238,11 +259,11 @@ function calculateCosts(
   };
 
   // Subtotal and contingency
-  const subtotal = crew + insurance + maintenance + berths + fuel + management + regulatory;
+  const subtotal = crewWithDelivery + insurance + maintenance + berths + fuel + management + regulatory;
   const contingency = subtotal * 0.08;
   const total = subtotal + contingency;
 
-  return { crew, insurance, maintenance, berths, fuel, management, regulatory, contingency, total, detail };
+  return { crew: crewWithDelivery, insurance, maintenance, berths, fuel, management, regulatory, contingency, total, detail };
 }
 
 /* ------------------------------------------------------------------ */
@@ -359,6 +380,7 @@ export default function RunningCostCalculatorPage() {
   const [yachtType, setYachtType] = useState<YachtType>("motor");
   const [area, setArea] = useState<CruisingArea>("west_med");
   const [useType, setUseType] = useState<UseType>("private");
+  const [season, setSeason] = useState<SeasonType>("single");
   const [usage, setUsage] = useState<UsageIntensity>("moderate");
   const [currency, setCurrency] = useState<Currency>("EUR");
 
@@ -375,7 +397,7 @@ export default function RunningCostCalculatorPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const costs = calculateCosts(length, yachtType, area, usage, useType);
+  const costs = calculateCosts(length, yachtType, area, usage, useType, season);
 
   const breakdown = [
     { label: "Crew", amount: costs.crew, key: "crew" },
@@ -539,6 +561,24 @@ export default function RunningCostCalculatorPage() {
                 />
               </div>
 
+              {/* Season */}
+              <div className="space-y-2.5">
+                <label className="text-sm text-muted block">Season</label>
+                <ToggleGroup
+                  options={[
+                    { value: "single" as SeasonType, label: "Single Season" },
+                    { value: "dual" as SeasonType, label: "Dual Season" },
+                  ]}
+                  value={season}
+                  onChange={setSeason}
+                />
+                {season === "dual" && (
+                  <p className="text-xs text-muted/70 leading-relaxed pt-1">
+                    Dual season (e.g. Med summer, Caribbean winter) adds delivery passage costs, a second berth, additional crew travel, and wider-range insurance cover.
+                  </p>
+                )}
+              </div>
+
               {/* Usage intensity */}
               <div className="space-y-2.5">
                 <label className="text-sm text-muted block">Usage Intensity</label>
@@ -573,6 +613,7 @@ export default function RunningCostCalculatorPage() {
                   <p className="text-sm text-muted mt-2">
                     {length}m {yachtType === "motor" ? "motor yacht" : "sailing yacht"},{" "}
                     {useType === "charter" ? "charter" : "private"},{" "}
+                    {season === "dual" ? "dual season" : "single season"},{" "}
                     {areaLabels[area]},{" "}
                     {usage} use
                   </p>
