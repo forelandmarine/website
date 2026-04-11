@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 
 const navLinks = [
   { label: "New Build", href: "/new-build" },
@@ -49,6 +49,15 @@ export default function Nav() {
   const closeAbout = useCallback(() => {
     aboutCloseTimeout.current = setTimeout(() => setAboutOpen(false), 200);
   }, []);
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/8 bg-bg1/95 backdrop-blur-md">
@@ -188,8 +197,8 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-white/8 bg-bg1 pb-4">
-          <div className="mx-auto max-w-7xl px-4 pt-3 flex flex-col gap-1">
+        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 border-t border-white/8 bg-bg1 overflow-y-auto overscroll-contain">
+          <div className="mx-auto max-w-7xl px-4 pt-3 pb-8 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
