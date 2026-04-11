@@ -148,6 +148,23 @@ export default function ToolsPage() {
                 </div>
               </div>
             </Link>
+            <Link href="/tools/running-cost-calculator" className="group block">
+              <div className="bg-bg2/80 border border-white/10 overflow-hidden h-full hover:border-accent/40 transition-colors">
+                <div className="p-8">
+                  <p className="text-xs text-accent font-semibold uppercase tracking-widest mb-4">Ownership Planning</p>
+                  <h2 className="text-2xl font-light text-white mb-3 group-hover:text-accent transition-colors">Running Cost Calculator</h2>
+                  <p className="text-muted leading-relaxed mb-6">
+                    Estimate the annual operating costs of a superyacht. Enter yacht length, type, and cruising area for a detailed breakdown of crew, insurance, fuel, marina fees and more.
+                  </p>
+                  <div className="flex items-center gap-1.5 text-sm text-accent font-medium">
+                    Learn more
+                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
+                      <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
