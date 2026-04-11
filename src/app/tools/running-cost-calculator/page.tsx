@@ -21,6 +21,7 @@ type CruisingArea =
   | "arabian_gulf"
   | "south_pacific"
   | "global";
+type UseType = "private" | "charter";
 type UsageIntensity = "light" | "moderate" | "heavy";
 
 interface CostBreakdown {
@@ -73,19 +74,22 @@ function calculateCosts(
   yachtType: YachtType,
   area: CruisingArea,
   usage: UsageIntensity,
+  useType: UseType,
 ): CostBreakdown {
   const t = (length - 24) / (60 - 24); // 0..1
+  const isCharter = useType === "charter";
 
-  // Crew
+  // Crew — charter yachts need larger, more qualified crews year-round
   const crewBase =
     yachtType === "motor" ? lerp(350_000, 900_000, t) : lerp(300_000, 750_000, t);
   const usageMult = usage === "heavy" ? 1.15 : usage === "moderate" ? 1.05 : 1.0;
-  const crew = crewBase * usageMult;
+  const crew = crewBase * usageMult * (isCharter ? 1.25 : 1.0);
 
-  // Insurance (hull + P&I, 1-2% of estimated value)
+  // Insurance — commercial charter insurance runs significantly higher
   const valueMotor = lerp(3_000_000, 35_000_000, t);
   const value = yachtType === "motor" ? valueMotor : valueMotor * 0.85;
   const insuranceRate = yachtType === "motor" ? 0.015 : 0.012;
+  const charterInsuranceMult = isCharter ? 1.4 : 1.0;
   const areaInsuranceMult: Record<CruisingArea, number> = {
     west_med: 1.0,
     east_med: 1.05,
@@ -97,14 +101,14 @@ function calculateCosts(
     south_pacific: 1.15,
     global: 1.25,
   };
-  const insurance = value * insuranceRate * areaInsuranceMult[area];
+  const insurance = value * insuranceRate * areaInsuranceMult[area] * charterInsuranceMult;
 
-  // Maintenance & repair
+  // Maintenance & repair — higher wear from charter guests
   const maintBase =
     yachtType === "motor"
       ? lerp(180_000, 720_000, t)
       : lerp(150_000, 600_000, t);
-  const maintenance = maintBase;
+  const maintenance = maintBase * (isCharter ? 1.2 : 1.0);
 
   // Berths & marina fees
   const berthMultiplier: Record<CruisingArea, number> = {
@@ -121,21 +125,21 @@ function calculateCosts(
   const berthBase = lerp(80_000, 350_000, t);
   const berths = berthBase * berthMultiplier[area];
 
-  // Fuel & consumables
+  // Fuel & consumables — charter yachts consume more (provisioning, laundry, turnover)
   const fuelBase =
     yachtType === "motor"
       ? lerp(80_000, 400_000, t)
       : lerp(30_000, 120_000, t);
   const fuelUsageMult =
     usage === "heavy" ? 1.5 : usage === "moderate" ? 1.0 : 0.7;
-  const fuel = fuelBase * fuelUsageMult;
+  const fuel = fuelBase * fuelUsageMult * (isCharter ? 1.3 : 1.0);
 
-  // Management fees (monthly)
+  // Management fees — charter management adds admin, marketing, booking
   const mgmtMonthly = lerp(3_000, 8_000, t);
-  const management = mgmtMonthly * 12;
+  const management = mgmtMonthly * 12 * (isCharter ? 1.5 : 1.0);
 
-  // Regulatory & compliance
-  const regulatory = lerp(15_000, 50_000, t);
+  // Regulatory & compliance — commercial code surveys, MLC, additional flag state requirements
+  const regulatory = lerp(15_000, 50_000, t) * (isCharter ? 1.6 : 1.0);
 
   // Subtotal and contingency
   const subtotal = crew + insurance + maintenance + berths + fuel + management + regulatory;
@@ -241,6 +245,7 @@ export default function RunningCostCalculatorPage() {
   const [length, setLength] = useState(35);
   const [yachtType, setYachtType] = useState<YachtType>("motor");
   const [area, setArea] = useState<CruisingArea>("west_med");
+  const [useType, setUseType] = useState<UseType>("private");
   const [usage, setUsage] = useState<UsageIntensity>("moderate");
   const [currency, setCurrency] = useState<Currency>("EUR");
 
@@ -257,7 +262,7 @@ export default function RunningCostCalculatorPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const costs = calculateCosts(length, yachtType, area, usage);
+  const costs = calculateCosts(length, yachtType, area, usage, useType);
 
   const breakdown = [
     { label: "Crew", amount: costs.crew },
@@ -370,6 +375,24 @@ export default function RunningCostCalculatorPage() {
                 />
               </div>
 
+              {/* Use type */}
+              <div className="space-y-3">
+                <label className="text-sm text-muted font-medium block">Use</label>
+                <ToggleGroup
+                  options={[
+                    { value: "private" as UseType, label: "Private" },
+                    { value: "charter" as UseType, label: "Charter" },
+                  ]}
+                  value={useType}
+                  onChange={setUseType}
+                />
+                {useType === "charter" && (
+                  <p className="text-xs text-muted/60 leading-relaxed">
+                    Charter yachts require commercial insurance, larger crews, LY3/PYC compliance, and dedicated charter management. Costs reflect these additional requirements.
+                  </p>
+                )}
+              </div>
+
               {/* Currency */}
               <div className="space-y-3">
                 <label className="text-sm text-muted font-medium block">Currency</label>
@@ -437,6 +460,7 @@ export default function RunningCostCalculatorPage() {
                   </p>
                   <p className="text-sm text-muted">
                     {length}m {yachtType === "motor" ? "motor yacht" : "sailing yacht"},{" "}
+                    {useType === "charter" ? "charter" : "private use"},{" "}
                     {areaLabels[area]},{" "}
                     {usage} use
                   </p>
@@ -461,14 +485,26 @@ export default function RunningCostCalculatorPage() {
               </div>
 
               {/* Disclaimer + CTA */}
-              <div className="bg-bg2/80 border border-white/10 rounded-lg p-6 sm:p-8">
-                <p className="text-sm text-muted leading-relaxed mb-5">
-                  These are indicative estimates. Every yacht is different. Get in touch for a
-                  detailed budget tailored to your vessel.
+              <div className="bg-bg2/80 border border-white/10 rounded-lg p-6 sm:p-8 space-y-4">
+                <p className="text-xs text-muted/60 uppercase tracking-widest">
+                  Disclaimer
                 </p>
-                <ButtonPrimary href="/contact">
-                  Get a tailored estimate
-                </ButtonPrimary>
+                <div className="space-y-3 text-sm text-muted/80 leading-relaxed">
+                  <p>
+                    These figures are indicative estimates based on industry benchmarks and should not be treated as financial advice. Actual costs vary significantly depending on the specific vessel, her age and condition, crew configuration, yard rates, flag state requirements, and dozens of other factors that cannot be captured in a general model.
+                  </p>
+                  <p>
+                    Currency conversions use approximate mid-market rates and will fluctuate. Charter revenue projections, tax implications, VAT recovery, and ownership structure costs are not included. Commercial yacht code compliance (LY3/PYC/REG) may introduce additional survey and certification costs not fully reflected here.
+                  </p>
+                  <p>
+                    This calculator is intended as a starting point for budgeting conversations, not a substitute for professional advice. We recommend engaging a qualified yacht management company, marine surveyor, and maritime lawyer before making any financial commitments.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <ButtonPrimary href="/contact">
+                    Get a tailored estimate
+                  </ButtonPrimary>
+                </div>
               </div>
             </div>
           </div>
@@ -550,6 +586,69 @@ export default function RunningCostCalculatorPage() {
               </svg>
             </Link>
           </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* SOURCES */}
+      <section className="py-16 sm:py-20 bg-bg1">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <SectionLabel>Sources</SectionLabel>
+          <h2 className="text-2xl sm:text-3xl font-light text-white mb-6">
+            Where do these numbers come from?
+          </h2>
+          <p className="text-muted leading-relaxed mb-8">
+            The cost model behind this calculator is based on published industry data, supplemented by
+            Foreland Marine&apos;s direct experience managing yachts in the 24 to 60 metre range. Key sources
+            include:
+          </p>
+          <ul className="space-y-4">
+            {[
+              {
+                title: "Superyacht Intelligence Annual Report",
+                detail: "Fleet size, build trends, and market valuations used to calibrate the estimated yacht value curve.",
+              },
+              {
+                title: "MYBA Charter Industry Report",
+                detail: "Charter fleet operating costs, crew salary benchmarks, and commercial insurance premium ranges.",
+              },
+              {
+                title: "Dockwalk / OnboardOnline Crew Salary Survey",
+                detail: "Captain, officer, and crew salary ranges by vessel size and type, updated annually.",
+              },
+              {
+                title: "International Superyacht Society (ISS) Cost Benchmarking",
+                detail: "Maintenance, refit, and regulatory compliance cost benchmarks across vessel categories.",
+              },
+              {
+                title: "Pantaenius & West of England P&I Club",
+                detail: "Hull and machinery insurance rates, P&I cover premiums, and regional risk multipliers.",
+              },
+              {
+                title: "IGY Marinas / Marina Port de Mallorca / Camper & Nicholsons Marinas",
+                detail: "Annual berth rates by vessel length across Mediterranean, Caribbean, and Northern European locations.",
+              },
+              {
+                title: "MCA Large Yacht Code (LY3) / PYC Red Ensign Group",
+                detail: "Commercial compliance survey costs, manning requirements, and flag state fee schedules.",
+              },
+              {
+                title: "Foreland Marine operational data",
+                detail: "Real-world budget data from yachts under our management, anonymised and aggregated to inform the model.",
+              },
+            ].map((source) => (
+              <li key={source.title} className="border-l-2 border-accent/40 pl-4">
+                <p className="text-sm text-white font-medium">{source.title}</p>
+                <p className="text-sm text-muted/70 leading-relaxed">{source.detail}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="text-sm text-muted/60 mt-8 leading-relaxed">
+            Cost multipliers for cruising areas, charter operations, and usage intensity are derived
+            from a combination of these sources and Foreland&apos;s internal benchmarks. Individual
+            figures should be verified against current market conditions before making financial decisions.
+          </p>
         </div>
       </section>
     </>
