@@ -79,13 +79,13 @@ function calculateCosts(
   const t = (length - 24) / (60 - 24); // 0..1
   const isCharter = useType === "charter";
 
-  // Crew — charter yachts need larger, more qualified crews year-round
+  // Crew
   const crewBase =
     yachtType === "motor" ? lerp(350_000, 900_000, t) : lerp(300_000, 750_000, t);
   const usageMult = usage === "heavy" ? 1.15 : usage === "moderate" ? 1.05 : 1.0;
   const crew = crewBase * usageMult * (isCharter ? 1.25 : 1.0);
 
-  // Insurance — commercial charter insurance runs significantly higher
+  // Insurance
   const valueMotor = lerp(3_000_000, 35_000_000, t);
   const value = yachtType === "motor" ? valueMotor : valueMotor * 0.85;
   const insuranceRate = yachtType === "motor" ? 0.015 : 0.012;
@@ -103,7 +103,7 @@ function calculateCosts(
   };
   const insurance = value * insuranceRate * areaInsuranceMult[area] * charterInsuranceMult;
 
-  // Maintenance & repair — higher wear from charter guests
+  // Maintenance & repair
   const maintBase =
     yachtType === "motor"
       ? lerp(180_000, 720_000, t)
@@ -125,7 +125,7 @@ function calculateCosts(
   const berthBase = lerp(80_000, 350_000, t);
   const berths = berthBase * berthMultiplier[area];
 
-  // Fuel & consumables — charter yachts consume more (provisioning, laundry, turnover)
+  // Fuel & consumables
   const fuelBase =
     yachtType === "motor"
       ? lerp(80_000, 400_000, t)
@@ -134,11 +134,11 @@ function calculateCosts(
     usage === "heavy" ? 1.5 : usage === "moderate" ? 1.0 : 0.7;
   const fuel = fuelBase * fuelUsageMult * (isCharter ? 1.3 : 1.0);
 
-  // Management fees — charter management adds admin, marketing, booking
+  // Management fees
   const mgmtMonthly = lerp(3_000, 8_000, t);
   const management = mgmtMonthly * 12 * (isCharter ? 1.5 : 1.0);
 
-  // Regulatory & compliance — commercial code surveys, MLC, additional flag state requirements
+  // Regulatory & compliance
   const regulatory = lerp(15_000, 50_000, t) * (isCharter ? 1.6 : 1.0);
 
   // Subtotal and contingency
@@ -163,16 +163,16 @@ function ToggleGroup<T extends string>({
   onChange: (v: T) => void;
 }) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-px bg-white/5 rounded overflow-hidden">
       {options.map((o) => (
         <button
           key={o.value}
           type="button"
           onClick={() => onChange(o.value)}
-          className={`px-4 py-2.5 text-sm font-medium rounded transition-all duration-200 ${
+          className={`px-4 py-2 text-sm transition-colors duration-150 ${
             value === o.value
-              ? "bg-accent text-white shadow-lg shadow-accent/20"
-              : "bg-bg2 text-muted border border-white/10 hover:border-white/25 hover:text-white"
+              ? "bg-white/[0.12] text-white font-medium"
+              : "bg-transparent text-muted/70 hover:text-white hover:bg-white/[0.06]"
           }`}
         >
           {o.label}
@@ -185,26 +185,28 @@ function ToggleGroup<T extends string>({
 function CostRow({
   label,
   amount,
-  pct,
-  color,
+  total,
   currency,
 }: {
   label: string;
   amount: number;
-  pct: number;
-  color: string;
+  total: number;
   currency: Currency;
 }) {
+  const pct = (amount / total) * 100;
   return (
-    <div className="space-y-1.5">
-      <div className="flex justify-between items-baseline">
-        <span className="text-sm text-muted">{label}</span>
-        <span className="text-sm text-white font-medium tabular-nums">{fmt(amount, currency)}</span>
+    <div className="group">
+      <div className="flex justify-between items-baseline mb-1.5">
+        <span className="text-sm text-muted/80">{label}</span>
+        <div className="flex items-baseline gap-3">
+          <span className="text-xs text-muted/40 tabular-nums">{pct.toFixed(0)}%</span>
+          <span className="text-sm text-white/90 font-light tabular-nums">{fmt(amount, currency)}</span>
+        </div>
       </div>
-      <div className="w-full h-2 bg-bg2 rounded-full overflow-hidden">
+      <div className="w-full h-1 bg-white/[0.04] overflow-hidden">
         <div
-          className="h-full rounded-full transition-all duration-500 ease-out"
-          style={{ width: `${pct}%`, backgroundColor: color }}
+          className="h-full bg-white/20 transition-all duration-500 ease-out"
+          style={{ width: `${pct}%` }}
         />
       </div>
     </div>
@@ -226,17 +228,6 @@ const areaLabels: Record<CruisingArea, string> = {
   south_pacific: "South Pacific",
   global: "Global",
 };
-
-const barColors = [
-  "#5386B6",
-  "#6BA3D4",
-  "#4A7AA8",
-  "#7AB5E0",
-  "#3D6D9A",
-  "#8EC4EA",
-  "#2F5F8C",
-  "#A0D0F0",
-];
 
 export default function RunningCostCalculatorPage() {
   const [scrollY, setScrollY] = useState(0);
@@ -274,8 +265,6 @@ export default function RunningCostCalculatorPage() {
     { label: "Regulatory & Compliance", amount: costs.regulatory },
     { label: "Contingency (8%)", amount: costs.contingency },
   ];
-
-  const maxAmount = Math.max(...breakdown.map((b) => b.amount));
 
   const handleSlider = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setLength(Number(e.target.value));
@@ -325,7 +314,7 @@ export default function RunningCostCalculatorPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* INPUTS */}
-            <div className="bg-bg2/80 border border-white/10 rounded-lg p-6 sm:p-8 space-y-8">
+            <div className="space-y-8">
               <div>
                 <SectionLabel>Your Yacht</SectionLabel>
                 <h2 className="text-2xl sm:text-3xl font-light text-white">
@@ -336,7 +325,7 @@ export default function RunningCostCalculatorPage() {
               {/* Length slider */}
               <div className="space-y-3">
                 <div className="flex justify-between items-baseline">
-                  <label className="text-sm text-muted font-medium">Yacht Length</label>
+                  <label className="text-sm text-muted/70 font-light">Yacht Length</label>
                   <span className="text-lg text-white font-light tabular-nums">
                     {length}m
                   </span>
@@ -348,23 +337,24 @@ export default function RunningCostCalculatorPage() {
                   step={1}
                   value={length}
                   onChange={handleSlider}
-                  className="w-full accent-[#5386B6] cursor-pointer"
+                  className="w-full cursor-pointer"
                   style={{
-                    background: `linear-gradient(to right, #5386B6 ${((length - 24) / 36) * 100}%, rgba(255,255,255,0.1) ${((length - 24) / 36) * 100}%)`,
-                    height: "6px",
-                    borderRadius: "3px",
+                    background: `linear-gradient(to right, rgba(255,255,255,0.35) ${((length - 24) / 36) * 100}%, rgba(255,255,255,0.08) ${((length - 24) / 36) * 100}%)`,
+                    height: "2px",
+                    borderRadius: "1px",
                     WebkitAppearance: "none",
+                    accentColor: "#ffffff",
                   }}
                 />
-                <div className="flex justify-between text-xs text-muted/50">
+                <div className="flex justify-between text-xs text-muted/30">
                   <span>24m</span>
                   <span>60m</span>
                 </div>
               </div>
 
               {/* Yacht type */}
-              <div className="space-y-3">
-                <label className="text-sm text-muted font-medium block">Yacht Type</label>
+              <div className="space-y-2.5">
+                <label className="text-sm text-muted/70 font-light block">Yacht Type</label>
                 <ToggleGroup
                   options={[
                     { value: "sailing" as YachtType, label: "Sailing" },
@@ -376,8 +366,8 @@ export default function RunningCostCalculatorPage() {
               </div>
 
               {/* Use type */}
-              <div className="space-y-3">
-                <label className="text-sm text-muted font-medium block">Use</label>
+              <div className="space-y-2.5">
+                <label className="text-sm text-muted/70 font-light block">Use</label>
                 <ToggleGroup
                   options={[
                     { value: "private" as UseType, label: "Private" },
@@ -387,15 +377,15 @@ export default function RunningCostCalculatorPage() {
                   onChange={setUseType}
                 />
                 {useType === "charter" && (
-                  <p className="text-xs text-muted/60 leading-relaxed">
-                    Charter yachts require commercial insurance, larger crews, LY3/PYC compliance, and dedicated charter management. Costs reflect these additional requirements.
+                  <p className="text-xs text-muted/50 leading-relaxed pt-1">
+                    Charter yachts require commercial insurance, larger crews, LY3/PYC compliance, and dedicated charter management.
                   </p>
                 )}
               </div>
 
               {/* Currency */}
-              <div className="space-y-3">
-                <label className="text-sm text-muted font-medium block">Currency</label>
+              <div className="space-y-2.5">
+                <label className="text-sm text-muted/70 font-light block">Currency</label>
                 <ToggleGroup
                   options={[
                     { value: "EUR" as Currency, label: "EUR" },
@@ -408,8 +398,8 @@ export default function RunningCostCalculatorPage() {
               </div>
 
               {/* Cruising area */}
-              <div className="space-y-3">
-                <label className="text-sm text-muted font-medium block">Primary Operating Area</label>
+              <div className="space-y-2.5">
+                <label className="text-sm text-muted/70 font-light block">Primary Operating Area</label>
                 <ToggleGroup
                   options={[
                     { value: "west_med" as CruisingArea, label: "West Med" },
@@ -428,13 +418,13 @@ export default function RunningCostCalculatorPage() {
               </div>
 
               {/* Usage intensity */}
-              <div className="space-y-3">
-                <label className="text-sm text-muted font-medium block">Usage Intensity</label>
+              <div className="space-y-2.5">
+                <label className="text-sm text-muted/70 font-light block">Usage Intensity</label>
                 <ToggleGroup
                   options={[
-                    { value: "light" as UsageIntensity, label: "Light (<6 weeks)" },
-                    { value: "moderate" as UsageIntensity, label: "Moderate (6-12 weeks)" },
-                    { value: "heavy" as UsageIntensity, label: "Heavy (12+ weeks)" },
+                    { value: "light" as UsageIntensity, label: "Light (<6 wks)" },
+                    { value: "moderate" as UsageIntensity, label: "Moderate (6-12 wks)" },
+                    { value: "heavy" as UsageIntensity, label: "Heavy (12+ wks)" },
                   ]}
                   value={usage}
                   onChange={setUsage}
@@ -443,24 +433,24 @@ export default function RunningCostCalculatorPage() {
             </div>
 
             {/* RESULTS */}
-            <div className="space-y-6">
+            <div className="space-y-6 lg:sticky lg:top-24 lg:self-start">
               {/* Total card */}
-              <div className="relative bg-bg2/80 border border-white/10 rounded-lg p-6 sm:p-8 overflow-hidden">
+              <div className="relative border border-white/[0.08] rounded p-6 sm:p-8 overflow-hidden">
                 <Glow
-                  className="-top-20 -right-20"
-                  color="rgba(83,134,182,0.15)"
-                  size={300}
+                  className="-top-32 -right-32"
+                  color="rgba(255,255,255,0.03)"
+                  size={350}
                 />
                 <div className="relative z-10">
-                  <p className="text-xs text-muted/60 uppercase tracking-widest mb-2">
+                  <p className="text-xs text-muted/40 uppercase tracking-widest mb-3">
                     Estimated Annual Cost
                   </p>
-                  <p className="text-4xl sm:text-5xl font-light text-white tabular-nums mb-1">
+                  <p className="text-4xl sm:text-5xl font-light text-white tabular-nums tracking-tight">
                     {fmt(costs.total, currency)}
                   </p>
-                  <p className="text-sm text-muted">
+                  <p className="text-sm text-muted/50 mt-2">
                     {length}m {yachtType === "motor" ? "motor yacht" : "sailing yacht"},{" "}
-                    {useType === "charter" ? "charter" : "private use"},{" "}
+                    {useType === "charter" ? "charter" : "private"},{" "}
                     {areaLabels[area]},{" "}
                     {usage} use
                   </p>
@@ -468,43 +458,34 @@ export default function RunningCostCalculatorPage() {
               </div>
 
               {/* Breakdown */}
-              <div className="bg-bg2/80 border border-white/10 rounded-lg p-6 sm:p-8 space-y-5">
-                <p className="text-xs text-muted/60 uppercase tracking-widest">
+              <div className="border border-white/[0.08] rounded p-6 sm:p-8 space-y-4">
+                <p className="text-xs text-muted/40 uppercase tracking-widest mb-2">
                   Cost Breakdown
                 </p>
-                {breakdown.map((item, i) => (
+                {breakdown.map((item) => (
                   <CostRow
                     key={item.label}
                     label={item.label}
                     amount={item.amount}
-                    pct={(item.amount / maxAmount) * 100}
-                    color={barColors[i]}
+                    total={costs.total}
                     currency={currency}
                   />
                 ))}
+                <div className="pt-3 border-t border-white/[0.06] flex justify-between items-baseline">
+                  <span className="text-sm text-white/70">Total</span>
+                  <span className="text-base text-white font-light tabular-nums">{fmt(costs.total, currency)}</span>
+                </div>
               </div>
 
               {/* Disclaimer + CTA */}
-              <div className="bg-bg2/80 border border-white/10 rounded-lg p-6 sm:p-8 space-y-4">
-                <p className="text-xs text-muted/60 uppercase tracking-widest">
-                  Disclaimer
+              <div className="border border-white/[0.08] rounded p-6 sm:p-8">
+                <p className="text-sm text-muted/60 leading-relaxed mb-5">
+                  These are indicative estimates. Every yacht is different. Get in touch for a
+                  detailed budget tailored to your vessel.
                 </p>
-                <div className="space-y-3 text-sm text-muted/80 leading-relaxed">
-                  <p>
-                    These figures are indicative estimates based on industry benchmarks and should not be treated as financial advice. Actual costs vary significantly depending on the specific vessel, her age and condition, crew configuration, yard rates, flag state requirements, and dozens of other factors that cannot be captured in a general model.
-                  </p>
-                  <p>
-                    Currency conversions use approximate mid-market rates and will fluctuate. Charter revenue projections, tax implications, VAT recovery, and ownership structure costs are not included. Commercial yacht code compliance (LY3/PYC/REG) may introduce additional survey and certification costs not fully reflected here.
-                  </p>
-                  <p>
-                    This calculator is intended as a starting point for budgeting conversations, not a substitute for professional advice. We recommend engaging a qualified yacht management company, marine surveyor, and maritime lawyer before making any financial commitments.
-                  </p>
-                </div>
-                <div className="pt-2">
-                  <ButtonPrimary href="/contact">
-                    Get a tailored estimate
-                  </ButtonPrimary>
-                </div>
+                <ButtonPrimary href="/contact">
+                  Get a tailored estimate
+                </ButtonPrimary>
               </div>
             </div>
           </div>
@@ -600,54 +581,67 @@ export default function RunningCostCalculatorPage() {
           </h2>
           <p className="text-muted leading-relaxed mb-8">
             The cost model behind this calculator is based on published industry data, supplemented by
-            Foreland Marine&apos;s direct experience managing yachts in the 24 to 60 metre range. Key sources
-            include:
+            Foreland Marine&apos;s direct experience managing yachts in the 24 to 60 metre range.
           </p>
           <ul className="space-y-4">
             {[
               {
-                title: "Superyacht Intelligence Annual Report",
-                detail: "Fleet size, build trends, and market valuations used to calibrate the estimated yacht value curve.",
+                title: "Superyacht Times Intelligence",
+                detail: "Fleet size, build trends, and market valuations used to calibrate estimated yacht values.",
+                href: "https://www.superyachttimes.com/intelligence",
               },
               {
-                title: "MYBA Charter Industry Report",
-                detail: "Charter fleet operating costs, crew salary benchmarks, and commercial insurance premium ranges.",
+                title: "MYBA Charter Market Report",
+                detail: "Charter fleet operating costs, commercial insurance premium ranges, and crew benchmarks.",
+                href: "https://www.myba-association.com",
               },
               {
                 title: "Dockwalk / OnboardOnline Crew Salary Survey",
-                detail: "Captain, officer, and crew salary ranges by vessel size and type, updated annually.",
+                detail: "Captain, officer, and crew salary ranges by vessel size and type.",
+                href: "https://www.onboardonline.com/resources/crew-salary-survey",
               },
               {
-                title: "International Superyacht Society (ISS) Cost Benchmarking",
-                detail: "Maintenance, refit, and regulatory compliance cost benchmarks across vessel categories.",
+                title: "Pantaenius Yacht Insurance",
+                detail: "Hull and machinery insurance rates, P&I cover premiums, and regional risk factors.",
+                href: "https://www.pantaenius.com",
               },
               {
-                title: "Pantaenius & West of England P&I Club",
-                detail: "Hull and machinery insurance rates, P&I cover premiums, and regional risk multipliers.",
+                title: "IGY Marinas",
+                detail: "Annual berth rates by vessel length across Mediterranean, Caribbean, and US locations.",
+                href: "https://www.igymarinas.com",
               },
               {
-                title: "IGY Marinas / Marina Port de Mallorca / Camper & Nicholsons Marinas",
-                detail: "Annual berth rates by vessel length across Mediterranean, Caribbean, and Northern European locations.",
-              },
-              {
-                title: "MCA Large Yacht Code (LY3) / PYC Red Ensign Group",
+                title: "MCA Large Yacht Code (LY3)",
                 detail: "Commercial compliance survey costs, manning requirements, and flag state fee schedules.",
+                href: "https://www.gov.uk/government/collections/large-commercial-yacht-code",
               },
               {
                 title: "Foreland Marine operational data",
-                detail: "Real-world budget data from yachts under our management, anonymised and aggregated to inform the model.",
+                detail: "Real-world budget data from yachts under our management, anonymised and aggregated.",
               },
             ].map((source) => (
-              <li key={source.title} className="border-l-2 border-accent/40 pl-4">
-                <p className="text-sm text-white font-medium">{source.title}</p>
-                <p className="text-sm text-muted/70 leading-relaxed">{source.detail}</p>
+              <li key={source.title} className="border-l border-white/10 pl-4 py-1">
+                {source.href ? (
+                  <a
+                    href={source.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white/80 hover:text-white transition-colors"
+                  >
+                    {source.title}
+                    <span className="text-muted/30 ml-1.5 text-xs align-middle">&nearr;</span>
+                  </a>
+                ) : (
+                  <p className="text-sm text-white/80">{source.title}</p>
+                )}
+                <p className="text-sm text-muted/50 leading-relaxed">{source.detail}</p>
               </li>
             ))}
           </ul>
-          <p className="text-sm text-muted/60 mt-8 leading-relaxed">
-            Cost multipliers for cruising areas, charter operations, and usage intensity are derived
-            from a combination of these sources and Foreland&apos;s internal benchmarks. Individual
-            figures should be verified against current market conditions before making financial decisions.
+          <p className="text-xs text-muted/40 mt-8 leading-relaxed">
+            Regional multipliers and charter adjustments are derived from a combination of these
+            sources and internal benchmarks. Verify against current market conditions before making
+            financial decisions.
           </p>
         </div>
       </section>
