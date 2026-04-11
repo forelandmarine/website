@@ -11,6 +11,176 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "how-to-buy-your-first-superyacht",
+    title:
+      "How to Buy Your First Superyacht: A Practical Guide for New Owners",
+    description:
+      "Everything first-time buyers need to know about purchasing a superyacht, from setting a realistic budget and choosing between new build and pre-owned, to selecting the right team and avoiding common mistakes.",
+    date: "2026-04-11",
+    category: "New Build",
+    readTime: "14 min read",
+    keywords: [
+      "how to buy a superyacht",
+      "first superyacht",
+      "buying a yacht",
+      "superyacht guide",
+      "yacht purchase",
+      "first time yacht buyer",
+      "superyacht costs",
+      "yacht broker",
+      "owners representative yacht",
+    ],
+    content: `<p>You have had a liquidity event. Maybe you sold a company, maybe a fund paid out, maybe you simply reached the point where owning a yacht is no longer an abstract idea but a real possibility. Perhaps you chartered a yacht last summer in the Med or the Caribbean, and somewhere between the second anchorage and the third sunset you thought: I could do this differently if it were mine. That thought is where most first-time buyers begin.</p>
+
+<p>This guide walks through the entire process of buying your first superyacht, honestly and practically. It covers the parts that any good broker will explain, but also the parts that many won't: the real running costs, the mistakes that cost people hundreds of thousands of euros, and the decisions that seem minor at the time but shape your entire ownership experience. If you read one thing before you start looking at yachts, make it this.</p>
+
+<blockquote>The best time to hire an independent consultant is before you start looking at yachts, not after you've found one you love and need someone to tell you what's wrong with it.</blockquote>
+
+<h2>Start With Why, Not What</h2>
+
+<p>The single most important step in buying a yacht has nothing to do with yachts. It has to do with you. Before you look at a single listing, before you call a broker, before you even decide on a budget, you need to answer one question clearly: why do you want a yacht, and how will you actually use it?</p>
+
+<p>This is not a philosophical exercise. Your answer directly determines the size of yacht you need, the type (sailing or motor), the crew complement, the build quality that matters, and ultimately the budget. A 35-metre sailing yacht for family cruising in the Mediterranean is a fundamentally different proposition from a 50-metre motor yacht for client entertainment and global exploration. A yacht optimised for racing has almost nothing in common with one designed for quiet weeks in remote anchorages.</p>
+
+<p>Think carefully about the following questions:</p>
+
+<ul>
+<li><strong>Who will be on board?</strong> Just your family? Friends? Business clients? The guest profile shapes the number of cabins, the level of service, and the crew you need.</li>
+<li><strong>Where will you cruise?</strong> Mediterranean summers only? Caribbean winters? Transatlantic crossings? High latitudes? Your cruising grounds determine the vessel's construction, range, and regulatory requirements.</li>
+<li><strong>How often will you use it?</strong> Six weeks a year? Four months? Year-round? Usage frequency affects crew arrangements, maintenance schedules, and whether charter income is worth considering.</li>
+<li><strong>What matters to you on board?</strong> Sailing performance? Interior design? Dive equipment and water toys? A cinema room? Knowing your priorities early prevents expensive changes later.</li>
+</ul>
+
+<p>Do not start by browsing listings on YachtWorld or attending boat shows. Start by defining your use case. Write it down. Share it with your partner or family. Then use that document as the foundation for every decision that follows. The owners who enjoy their yachts most are the ones who bought the right yacht for their life, not the most impressive yacht they could afford.</p>
+
+<h2>Setting a Realistic Budget</h2>
+
+<p>Here is the part that catches most first-time buyers off guard: the purchase price of a yacht is just the beginning. In many ways, it is the smaller financial commitment. The ongoing costs of owning and operating a superyacht are substantial, and underestimating them is the single most common mistake new owners make.</p>
+
+<p>The industry rule of thumb is that you should budget 8 to 12 percent of the yacht's purchase price annually for running costs. We have written about this in detail in our article on <a href="/insights/understanding-yacht-management-costs-10-percent-rule">yacht management costs and the 10% rule</a>, and we strongly recommend reading that before you set your budget. You can also use our <a href="/tools/running-cost-calculator">running cost calculator</a> to get a preliminary estimate based on your yacht's size and type.</p>
+
+<p>To put real numbers on it: a well-maintained 35-metre sailing yacht might cost EUR 6 to 10 million to purchase and EUR 500,000 to 800,000 per year to operate. A 45-metre motor yacht could run EUR 15 to 25 million for the purchase and EUR 1.2 to 2 million per year in running costs. These figures include crew salaries, insurance, fuel, maintenance, berths, management fees, and provisions, but they do not include major refits or unexpected repairs.</p>
+
+<p>Beyond the purchase price and running costs, there are several additional expenses that first-time buyers frequently overlook:</p>
+
+<ul>
+<li><strong>VAT and import duties:</strong> Depending on the jurisdiction where you take delivery and where you intend to cruise, VAT and import duties can add 5 to 20 percent to the purchase price. European waters generally require VAT-paid status. Getting this wrong is expensive and complicated to fix after the fact.</li>
+<li><strong>Flag state registration:</strong> The cost and regulatory burden of registering a yacht varies significantly by flag state. Some flags are straightforward and inexpensive. Others involve annual tonnage taxes, crew certification requirements, and mandatory surveys that add meaningful cost.</li>
+<li><strong>First-year refit reserve:</strong> Most pre-owned yachts need some work in the first year of new ownership, even those that present well during the sales process. Budget a reserve of 5 to 15 percent of the purchase price for initial works, depending on the vessel's age and condition.</li>
+<li><strong>Survey and legal costs:</strong> The pre-purchase survey, legal fees for the purchase agreement, and flag state advisory costs typically add EUR 50,000 to 150,000 for a yacht in this size range.</li>
+</ul>
+
+<p>The practical takeaway: if your comfortable annual spend on a yacht is EUR 1 million per year, you should probably be looking at yachts in the EUR 8 to 12 million purchase price range, not EUR 20 million. It is far better to buy a yacht you can run comfortably than to stretch for a larger vessel and then cut corners on maintenance, crew, or safety.</p>
+
+<h2>New Build vs Pre-Owned</h2>
+
+<p>This is one of the first major decisions you will face, and each path has distinct advantages and trade-offs.</p>
+
+<h3>Buying Pre-Owned</h3>
+
+<p>The pre-owned market offers the advantage of speed. You can find a yacht, survey her, complete the purchase, and be cruising within a few months. You can see and touch what you are buying, rather than relying on renders and specifications. And pre-owned yachts generally cost less upfront than a comparable new build.</p>
+
+<p>The risks are real, though. A pre-owned yacht is a complex piece of engineering that has been used, maintained (well or poorly), and potentially modified by previous owners. A thorough survey by an independent, qualified surveyor is absolutely essential. Do not skip it, do not cut corners on it, and do not use a surveyor recommended by the seller. The survey should cover the hull, machinery, electrical systems, rigging (for sailing yachts), safety equipment, and compliance status. Budget EUR 20,000 to 50,000 for a comprehensive survey of a yacht in the 30 to 50 metre range.</p>
+
+<p>Even with a clean survey, expect to spend money in the first year. Systems that are functional but aging will need attention. The yacht's interior and deck may not match your taste. Electronics and communication systems may be outdated. Go in with your eyes open and your budget prepared.</p>
+
+<h3>Building New</h3>
+
+<p>A new build gives you exactly the yacht you want, designed and built to your specification. You get modern systems, current naval architecture, a builder's warranty, and the satisfaction of creating something from scratch. For owners with specific requirements, whether that is a particular sailing performance profile, an unusual interior layout, or cutting-edge environmental systems, a new build may be the only way to get what you want.</p>
+
+<p>The trade-offs are time and complexity. A new build in the 35 to 55 metre range typically takes two to four years from contract to delivery. The process involves hundreds of decisions, from hull form and general arrangement through to the finish on the cabin door handles. Managing this process effectively requires either significant personal time and expertise or, more practically, a professional <a href="/new-build">owner's representative</a> who acts as your advocate throughout the build. An owner's rep ensures the yard delivers what was promised, manages change orders, monitors build quality, and protects your interests during what is inevitably a complex and expensive project.</p>
+
+<h3>The Refit Path</h3>
+
+<p>There is a third option that sits between pre-owned and new build: buying a pre-owned vessel and undertaking a significant <a href="/refit">refit</a>. This can be an excellent route for owners who find a hull and layout they like but want to modernise the systems, update the interior, or modify the deck arrangement. A well-planned refit can deliver a vessel that feels almost new, at a lower total cost than a ground-up new build, and in a shorter timeframe. The key is realistic budgeting and experienced project management. Refits are notorious for cost and schedule overruns when poorly managed.</p>
+
+<h2>Choosing Your Team</h2>
+
+<p>Buying a superyacht is not a solo activity. You need a team of professionals around you, and the quality of that team will have a direct impact on your experience and your wallet. Here is who you need and what they do.</p>
+
+<h3>Broker</h3>
+
+<p>A buyer's broker helps you define your requirements, searches the market, arranges viewings, handles negotiations, and manages the purchase process. A good broker is invaluable. However, it is worth understanding the incentive structure: brokers are paid a commission based on the sale price, typically 5 to 10 percent. This means they are financially incentivised to close a deal, and to close it at a higher price. That does not mean they will act against your interests, but it does mean you should have independent advice alongside your broker's guidance.</p>
+
+<h3>Independent Consultant or Owner's Representative</h3>
+
+<p>An independent yacht consultant, sometimes called an <a href="/insights/what-is-a-yacht-owners-representative">owner's representative</a>, works solely for you. They have no commission on the sale, no relationship with the yard or seller that could create a conflict, and no incentive other than getting you the best outcome. For first-time buyers, this role is particularly valuable because you do not yet have the experience or the network to know what good looks like. An owner's rep can advise on the right yacht for your needs, review the survey findings, negotiate the purchase agreement, manage the refit or new build, and help you set up the ownership and management structure.</p>
+
+<h3>Surveyor</h3>
+
+<p>Your surveyor is your independent technical expert. They inspect the yacht before purchase and give you a clear-eyed assessment of her condition. Always use your own surveyor, never the seller's. And use a surveyor with specific experience in the type and size of yacht you are buying.</p>
+
+<h3>Lawyer</h3>
+
+<p>Maritime law is specialised. You need a lawyer with experience in yacht purchase agreements, ownership structures, and flag state registration. Do not use your corporate lawyer or family solicitor for this. The purchase agreement for a superyacht is a complex document that governs deposit protection, survey contingencies, delivery conditions, warranty provisions, and dispute resolution. Get it right.</p>
+
+<h3>Management Company</h3>
+
+<p>A <a href="/yacht-management">yacht management company</a> handles the day-to-day operation of the yacht after purchase: crew employment, financial administration, maintenance oversight, insurance, compliance, and flag state liaison. You should have a management company identified and engaged before the yacht is delivered, not after. The transition from seller's operation to your ownership is a critical period, and having professional management in place from day one avoids gaps in insurance, crew contracts, and compliance.</p>
+
+<h2>The Purchase Process Step by Step</h2>
+
+<p>Once you have your team in place and your budget defined, the purchase process follows a well-established sequence. Here is what to expect.</p>
+
+<ul>
+<li><strong>Define your requirements:</strong> Working with your broker and independent consultant, produce a clear specification covering size, type, age, budget, cruising area, guest capacity, and any non-negotiable features.</li>
+<li><strong>Market search and shortlisting:</strong> Your broker searches the market (including off-market opportunities) and produces a shortlist of candidates that match your brief.</li>
+<li><strong>Viewings:</strong> Visit the shortlisted yachts in person. Bring your consultant and, for a serious candidate, your surveyor for an initial assessment.</li>
+<li><strong>Survey and sea trial:</strong> For the yacht you want to pursue, commission a full survey and sea trial. This typically takes three to five days and should cover every system on board.</li>
+<li><strong>Offer and negotiation:</strong> Based on the survey findings, make an offer. The survey will almost certainly reveal issues that justify a price reduction or require the seller to complete repairs before closing.</li>
+<li><strong>Purchase agreement:</strong> Your lawyer drafts or reviews the purchase agreement. Key clauses include the deposit amount and escrow arrangements, survey contingencies, delivery conditions, and warranties.</li>
+<li><strong>Closing and delivery:</strong> Funds are transferred through escrow, the yacht is formally delivered, and title passes to you (or your ownership company).</li>
+<li><strong>Flag state registration:</strong> The yacht is registered under your chosen flag. This should be arranged in advance so that registration is effective from the date of delivery.</li>
+<li><strong>Insurance:</strong> Hull and machinery insurance, P&I cover, and crew insurance must be in place before you take delivery.</li>
+<li><strong>Crew recruitment:</strong> If you are changing crew (common with a change of ownership), recruitment should begin well before delivery. Finding a good captain alone can take two to three months.</li>
+<li><strong>Management setup:</strong> Your management company takes over operational responsibility, establishes financial accounts, and begins the ongoing administration of the vessel.</li>
+</ul>
+
+<p>The entire process, from first serious conversation to cruising on your own yacht, typically takes three to six months for a pre-owned purchase. For a new build, add two to four years for the construction period.</p>
+
+<h2>Common Mistakes First-Time Buyers Make</h2>
+
+<p>Having worked with numerous first-time buyers, we see the same mistakes repeatedly. Here are the ones that cost the most money and cause the most frustration.</p>
+
+<h3>Buying Too Big</h3>
+
+<p>A bigger yacht is not always a better yacht. Every additional metre of length adds crew, adds running costs, limits your marina options, and increases the complexity of every operation from anchoring to maintenance. A 50-metre yacht is not 25 percent more expensive to run than a 40-metre yacht. It is often 50 to 80 percent more expensive, because crew numbers increase, insurance premiums jump, berth costs rise steeply, and maintenance becomes more complex. Buy the smallest yacht that genuinely meets your needs. You can always move up later.</p>
+
+<h3>Skipping or Compromising the Survey</h3>
+
+<p>Never skip the survey. Never use the seller's surveyor. Never let time pressure or enthusiasm for a particular yacht convince you to cut the survey short. The survey is your single best protection against buying someone else's problems. A thorough survey that uncovers a major issue could save you millions.</p>
+
+<h3>Not Budgeting for the First Refit</h3>
+
+<p>Almost every pre-owned yacht needs work in the first year of new ownership. Even yachts that survey well will have items that the new owner wants to address: updating electronics, refreshing soft furnishings, servicing systems that are functional but aging, or making modifications to suit the new owner's preferences. Budget for this from the start.</p>
+
+<h3>Choosing a Flag State Without Professional Advice</h3>
+
+<p>The choice of flag state affects your tax position, regulatory obligations, crew certification requirements, and the yacht's ability to operate commercially if you decide to charter. This decision should be made with specialist advice, considering your personal tax residency, the yacht's intended cruising area, and your operational plans. Getting it wrong can be expensive to fix.</p>
+
+<h3>Not Having Management in Place Before Delivery</h3>
+
+<p>The period immediately after purchase is one of the highest-risk moments in yacht ownership. Insurance needs to be transferred, crew contracts need to be novated or replaced, safety management systems need to be updated, and the yacht needs to be provisioned and maintained. Having no management company in place creates gaps that can result in uninsured periods, compliance failures, or operational chaos.</p>
+
+<h3>Underestimating Crew Recruitment</h3>
+
+<p>Good crew are in high demand, and finding the right captain, chief engineer, and chief stewardess for your yacht takes time. Starting the recruitment process after you have already taken delivery means weeks or months of operating with temporary or suboptimal crew. Begin the process as soon as the purchase is looking likely.</p>
+
+<h2>A Note on Privacy and Ownership Structures</h2>
+
+<p>Most superyachts are owned through a corporate structure rather than in the owner's personal name. There are several reasons for this: limited liability (separating the yacht's liabilities from the owner's personal assets), tax efficiency, privacy, and operational flexibility. The typical structure involves a single-purpose company, often registered in a jurisdiction with favourable maritime law, that owns the yacht and employs the crew.</p>
+
+<p>The regulatory landscape around beneficial ownership disclosure has tightened significantly in recent years. Many flag states and jurisdictions now require disclosure of the ultimate beneficial owner, and international anti-money-laundering regulations apply to yacht purchases. The days of genuinely anonymous ownership through shell companies are largely over, though well-structured corporate arrangements still provide meaningful privacy from public view.</p>
+
+<p>This is an area that requires specialist legal and tax advice, tailored to your personal circumstances, residency, and the yacht's intended operations. Do not rely on generic advice from the internet or from a broker. Engage a maritime lawyer and a tax adviser with specific yacht experience, and do so early in the process. The ownership structure should be in place before the purchase is completed, not bolted on afterwards.</p>
+
+<h2>Getting Started the Right Way</h2>
+
+<p>Buying your first superyacht should be exciting. It is a significant milestone, and for most people it represents the fulfilment of a long-held ambition. It should not be overwhelming, stressful, or defined by expensive surprises. The key is getting the right advice early, before you have committed to a vessel, before you have signed a purchase agreement, and ideally before you have even started looking at the market in earnest.</p>
+
+<p>The owners who have the best experience are those who invest time upfront in defining what they want, assembling a strong team, and setting a realistic budget. Everything else follows from those three foundations. If you are considering your first yacht purchase and want independent, honest advice from a consultancy with no brokerage commissions and no agenda other than your best interests, <a href="/contact">get in touch with Foreland Marine</a>. We are happy to have a preliminary conversation with no obligation.</p>`,
+  },
+  {
     slug: "understanding-yacht-management-costs-10-percent-rule",
     title: "Understanding Yacht Management Costs: The 10% Rule and What It Really Means",
     description:
