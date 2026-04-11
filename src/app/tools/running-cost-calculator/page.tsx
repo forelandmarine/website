@@ -10,7 +10,17 @@ import { Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui"
 /* ------------------------------------------------------------------ */
 
 type YachtType = "sailing" | "motor";
-type CruisingArea = "mediterranean" | "caribbean" | "northern_europe" | "global";
+type Currency = "EUR" | "USD" | "GBP";
+type CruisingArea =
+  | "west_med"
+  | "east_med"
+  | "caribbean"
+  | "us_east_coast"
+  | "southeast_asia"
+  | "northern_europe"
+  | "arabian_gulf"
+  | "south_pacific"
+  | "global";
 type UsageIntensity = "light" | "moderate" | "heavy";
 
 interface CostBreakdown {
@@ -33,12 +43,25 @@ function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t;
 }
 
-function fmt(n: number): string {
-  return new Intl.NumberFormat("en-GB", {
+const currencyRates: Record<Currency, number> = {
+  EUR: 1,
+  USD: 1.09,
+  GBP: 0.86,
+};
+
+const currencyLocales: Record<Currency, string> = {
+  EUR: "en-GB",
+  USD: "en-US",
+  GBP: "en-GB",
+};
+
+function fmt(n: number, currency: Currency = "EUR"): string {
+  const converted = n * currencyRates[currency];
+  return new Intl.NumberFormat(currencyLocales[currency], {
     style: "currency",
-    currency: "EUR",
+    currency,
     maximumFractionDigits: 0,
-  }).format(n);
+  }).format(converted);
 }
 
 /* ------------------------------------------------------------------ */
@@ -63,9 +86,18 @@ function calculateCosts(
   const valueMotor = lerp(3_000_000, 35_000_000, t);
   const value = yachtType === "motor" ? valueMotor : valueMotor * 0.85;
   const insuranceRate = yachtType === "motor" ? 0.015 : 0.012;
-  const areaInsuranceMult =
-    area === "global" ? 1.25 : area === "caribbean" ? 1.1 : 1.0;
-  const insurance = value * insuranceRate * areaInsuranceMult;
+  const areaInsuranceMult: Record<CruisingArea, number> = {
+    west_med: 1.0,
+    east_med: 1.05,
+    caribbean: 1.15,
+    us_east_coast: 1.1,
+    southeast_asia: 1.1,
+    northern_europe: 0.95,
+    arabian_gulf: 1.05,
+    south_pacific: 1.15,
+    global: 1.25,
+  };
+  const insurance = value * insuranceRate * areaInsuranceMult[area];
 
   // Maintenance & repair
   const maintBase =
@@ -76,9 +108,14 @@ function calculateCosts(
 
   // Berths & marina fees
   const berthMultiplier: Record<CruisingArea, number> = {
-    mediterranean: 1.0,
+    west_med: 1.0,
+    east_med: 0.8,
     caribbean: 0.7,
+    us_east_coast: 0.9,
+    southeast_asia: 0.5,
     northern_europe: 0.6,
+    arabian_gulf: 0.75,
+    south_pacific: 0.55,
     global: 0.85,
   };
   const berthBase = lerp(80_000, 350_000, t);
@@ -146,17 +183,19 @@ function CostRow({
   amount,
   pct,
   color,
+  currency,
 }: {
   label: string;
   amount: number;
   pct: number;
   color: string;
+  currency: Currency;
 }) {
   return (
     <div className="space-y-1.5">
       <div className="flex justify-between items-baseline">
         <span className="text-sm text-muted">{label}</span>
-        <span className="text-sm text-white font-medium tabular-nums">{fmt(amount)}</span>
+        <span className="text-sm text-white font-medium tabular-nums">{fmt(amount, currency)}</span>
       </div>
       <div className="w-full h-2 bg-bg2 rounded-full overflow-hidden">
         <div
@@ -171,6 +210,18 @@ function CostRow({
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
+
+const areaLabels: Record<CruisingArea, string> = {
+  west_med: "Western Mediterranean",
+  east_med: "Eastern Mediterranean",
+  caribbean: "Caribbean",
+  us_east_coast: "US East Coast",
+  southeast_asia: "Southeast Asia",
+  northern_europe: "Northern Europe",
+  arabian_gulf: "Arabian Gulf",
+  south_pacific: "South Pacific",
+  global: "Global",
+};
 
 const barColors = [
   "#5386B6",
@@ -189,8 +240,9 @@ export default function RunningCostCalculatorPage() {
 
   const [length, setLength] = useState(35);
   const [yachtType, setYachtType] = useState<YachtType>("motor");
-  const [area, setArea] = useState<CruisingArea>("mediterranean");
+  const [area, setArea] = useState<CruisingArea>("west_med");
   const [usage, setUsage] = useState<UsageIntensity>("moderate");
+  const [currency, setCurrency] = useState<Currency>("EUR");
 
   useEffect(() => {
     const onScroll = () => {
@@ -318,14 +370,33 @@ export default function RunningCostCalculatorPage() {
                 />
               </div>
 
-              {/* Cruising area */}
+              {/* Currency */}
               <div className="space-y-3">
-                <label className="text-sm text-muted font-medium block">Cruising Area</label>
+                <label className="text-sm text-muted font-medium block">Currency</label>
                 <ToggleGroup
                   options={[
-                    { value: "mediterranean" as CruisingArea, label: "Mediterranean" },
+                    { value: "EUR" as Currency, label: "EUR" },
+                    { value: "USD" as Currency, label: "USD" },
+                    { value: "GBP" as Currency, label: "GBP" },
+                  ]}
+                  value={currency}
+                  onChange={setCurrency}
+                />
+              </div>
+
+              {/* Cruising area */}
+              <div className="space-y-3">
+                <label className="text-sm text-muted font-medium block">Primary Operating Area</label>
+                <ToggleGroup
+                  options={[
+                    { value: "west_med" as CruisingArea, label: "West Med" },
+                    { value: "east_med" as CruisingArea, label: "East Med" },
                     { value: "caribbean" as CruisingArea, label: "Caribbean" },
+                    { value: "us_east_coast" as CruisingArea, label: "US East Coast" },
+                    { value: "southeast_asia" as CruisingArea, label: "SE Asia" },
                     { value: "northern_europe" as CruisingArea, label: "Northern Europe" },
+                    { value: "arabian_gulf" as CruisingArea, label: "Arabian Gulf" },
+                    { value: "south_pacific" as CruisingArea, label: "South Pacific" },
                     { value: "global" as CruisingArea, label: "Global" },
                   ]}
                   value={area}
@@ -362,11 +433,11 @@ export default function RunningCostCalculatorPage() {
                     Estimated Annual Cost
                   </p>
                   <p className="text-4xl sm:text-5xl font-light text-white tabular-nums mb-1">
-                    {fmt(costs.total)}
+                    {fmt(costs.total, currency)}
                   </p>
                   <p className="text-sm text-muted">
                     {length}m {yachtType === "motor" ? "motor yacht" : "sailing yacht"},{" "}
-                    {area.replace("_", " ")},{" "}
+                    {areaLabels[area]},{" "}
                     {usage} use
                   </p>
                 </div>
@@ -384,6 +455,7 @@ export default function RunningCostCalculatorPage() {
                     amount={item.amount}
                     pct={(item.amount / maxAmount) * 100}
                     color={barColors[i]}
+                    currency={currency}
                   />
                 ))}
               </div>
