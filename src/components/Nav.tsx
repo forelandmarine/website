@@ -60,6 +60,7 @@ export default function Nav() {
   }, [mobileOpen]);
 
   return (
+    <>
     <header className="sticky top-0 z-50 w-full border-b border-white/8 bg-bg1/95 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
@@ -195,64 +196,66 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 border-t border-white/8 bg-bg1 overflow-y-auto overscroll-contain">
-          <div className="mx-auto max-w-7xl px-4 pt-3 pb-8 flex flex-col gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="block px-3 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="px-3 py-2 text-xs text-muted/50 tracking-widest">Tools</div>
-            {toolLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="block px-6 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="px-3 py-2 text-xs text-muted/50 tracking-widest">About</div>
-            {aboutLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="block px-6 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+    </header>
+
+    {/* Mobile menu — rendered outside header to avoid backdrop-blur containing block */}
+    {mobileOpen && (
+      <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 z-50 border-t border-white/8 bg-bg1 overflow-y-auto overscroll-contain">
+        <div className="mx-auto max-w-7xl px-4 pt-3 pb-8 flex flex-col gap-1">
+          {navLinks.map((link) => (
             <Link
-              href="/contact"
+              key={link.href}
+              href={link.href}
               onClick={() => setMobileOpen(false)}
               className="block px-3 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
             >
-              Contact
+              {link.label}
             </Link>
-            <div className="mt-3 pt-3 border-t border-white/8 flex items-center gap-3 px-3">
-              <a href="https://instagram.com/forelandmarine" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-                </svg>
-              </a>
-              <a href="mailto:info@forelandmarine.com" className="text-sm font-light text-muted hover:text-white transition-colors">
-                info@forelandmarine.com
-              </a>
-            </div>
+          ))}
+          <div className="px-3 py-2 text-xs text-muted/50 tracking-widest">Tools</div>
+          {toolLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="block px-6 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="px-3 py-2 text-xs text-muted/50 tracking-widest">About</div>
+          {aboutLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="block px-6 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            onClick={() => setMobileOpen(false)}
+            className="block px-3 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+          >
+            Contact
+          </Link>
+          <div className="mt-3 pt-3 border-t border-white/8 flex items-center gap-3 px-3">
+            <a href="https://instagram.com/forelandmarine" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a href="mailto:info@forelandmarine.com" className="text-sm font-light text-muted hover:text-white transition-colors">
+              info@forelandmarine.com
+            </a>
           </div>
         </div>
-      )}
-    </header>
+      </div>
+    )}
+    </>
   );
 }
