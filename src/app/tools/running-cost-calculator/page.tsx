@@ -279,8 +279,8 @@ export default function RunningCostCalculatorPage() {
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         >
           <Image
-            src="/images/yacht-management.jpg"
-            alt="Superyacht at anchor"
+            src="/images/calculator-hero.jpg"
+            alt="Superyacht berthed in a Mediterranean marina"
             fill
             sizes="100vw"
             className="object-cover opacity-45 saturate-[1.15] scale-110"
