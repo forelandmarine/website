@@ -24,6 +24,11 @@ type CruisingArea =
 type UseType = "private" | "charter";
 type UsageIntensity = "light" | "moderate" | "heavy";
 
+interface SubItem {
+  label: string;
+  amount: number;
+}
+
 interface CostBreakdown {
   crew: number;
   insurance: number;
@@ -34,6 +39,7 @@ interface CostBreakdown {
   regulatory: number;
   contingency: number;
   total: number;
+  detail: Record<string, SubItem[]>;
 }
 
 /* ------------------------------------------------------------------ */
@@ -78,75 +84,165 @@ function calculateCosts(
 ): CostBreakdown {
   const t = (length - 24) / (60 - 24); // 0..1
   const isCharter = useType === "charter";
+  const isSail = yachtType === "sailing";
+  const charterMult = (base: number, mult: number) => base * (isCharter ? mult : 1.0);
 
-  // Crew
-  const crewBase =
-    yachtType === "motor" ? lerp(350_000, 900_000, t) : lerp(300_000, 750_000, t);
+  // --- Crew ---
+  const crewCount = isSail
+    ? Math.round(lerp(4, 12, t))
+    : Math.round(lerp(5, 14, t));
+  const salaries = (isSail ? lerp(220_000, 520_000, t) : lerp(260_000, 620_000, t));
+  const socialCharges = salaries * 0.18;
+  const crewInsurance = crewCount * lerp(1_800, 2_500, t);
+  const travel = crewCount * lerp(2_500, 4_000, t);
+  const training = crewCount * lerp(1_500, 3_000, t);
+  const uniforms = crewCount * lerp(400, 800, t);
+  const provisions = crewCount * lerp(5_000, 8_000, t);
   const usageMult = usage === "heavy" ? 1.15 : usage === "moderate" ? 1.05 : 1.0;
-  const crew = crewBase * usageMult * (isCharter ? 1.25 : 1.0);
+  const crewSub = [salaries, socialCharges, crewInsurance, travel, training, uniforms, provisions];
+  const crewRaw = crewSub.reduce((a, b) => a + b, 0) * usageMult;
+  const crew = charterMult(crewRaw, 1.25);
 
-  // Insurance
+  // --- Insurance ---
   const valueMotor = lerp(3_000_000, 35_000_000, t);
-  const value = yachtType === "motor" ? valueMotor : valueMotor * 0.85;
-  const insuranceRate = yachtType === "motor" ? 0.015 : 0.012;
-  const charterInsuranceMult = isCharter ? 1.4 : 1.0;
+  const value = isSail ? valueMotor * 0.85 : valueMotor;
   const areaInsuranceMult: Record<CruisingArea, number> = {
-    west_med: 1.0,
-    east_med: 1.05,
-    caribbean: 1.15,
-    us_east_coast: 1.1,
-    southeast_asia: 1.1,
-    northern_europe: 0.95,
-    arabian_gulf: 1.05,
-    south_pacific: 1.15,
-    global: 1.25,
+    west_med: 1.0, east_med: 1.05, caribbean: 1.15, us_east_coast: 1.1,
+    southeast_asia: 1.1, northern_europe: 0.95, arabian_gulf: 1.05,
+    south_pacific: 1.15, global: 1.25,
   };
-  const insurance = value * insuranceRate * areaInsuranceMult[area] * charterInsuranceMult;
+  const areaMult = areaInsuranceMult[area];
+  const hullRate = isSail ? 0.008 : 0.01;
+  const hull = value * hullRate * areaMult;
+  const pandi = value * (isSail ? 0.003 : 0.004) * areaMult;
+  const crewMedical = crewCount * lerp(1_200, 2_000, t);
+  const warRisk = area === "arabian_gulf" || area === "global" ? value * 0.001 : 0;
+  const insuranceRaw = hull + pandi + crewMedical + warRisk;
+  const insurance = charterMult(insuranceRaw, 1.4);
 
-  // Maintenance & repair
-  const maintBase =
-    yachtType === "motor"
-      ? lerp(180_000, 720_000, t)
-      : lerp(150_000, 600_000, t);
-  const maintenance = maintBase * (isCharter ? 1.2 : 1.0);
+  // --- Maintenance ---
+  const engineService = isSail ? lerp(25_000, 80_000, t) : lerp(50_000, 200_000, t);
+  const hullAntifoul = lerp(20_000, 90_000, t);
+  const rig = isSail ? lerp(30_000, 120_000, t) : 0;
+  const sailInventory = isSail ? lerp(15_000, 80_000, t) : 0;
+  const deckHardware = lerp(10_000, 50_000, t);
+  const electronics = lerp(8_000, 35_000, t);
+  const interiorUpkeep = lerp(10_000, 45_000, t);
+  const classReserve = lerp(20_000, 80_000, t);
+  const maintRaw = engineService + hullAntifoul + rig + sailInventory + deckHardware + electronics + interiorUpkeep + classReserve;
+  const maintenance = charterMult(maintRaw, 1.2);
 
-  // Berths & marina fees
+  // --- Berths ---
   const berthMultiplier: Record<CruisingArea, number> = {
-    west_med: 1.0,
-    east_med: 0.8,
-    caribbean: 0.7,
-    us_east_coast: 0.9,
-    southeast_asia: 0.5,
-    northern_europe: 0.6,
-    arabian_gulf: 0.75,
-    south_pacific: 0.55,
-    global: 0.85,
+    west_med: 1.0, east_med: 0.8, caribbean: 0.7, us_east_coast: 0.9,
+    southeast_asia: 0.5, northern_europe: 0.6, arabian_gulf: 0.75,
+    south_pacific: 0.55, global: 0.85,
   };
-  const berthBase = lerp(80_000, 350_000, t);
-  const berths = berthBase * berthMultiplier[area];
+  const homeBerth = lerp(60_000, 280_000, t) * berthMultiplier[area];
+  const transitBerths = lerp(15_000, 60_000, t) * berthMultiplier[area];
+  const launchHaulout = lerp(5_000, 20_000, t);
+  const berths = homeBerth + transitBerths + launchHaulout;
 
-  // Fuel & consumables
-  const fuelBase =
-    yachtType === "motor"
-      ? lerp(80_000, 400_000, t)
-      : lerp(30_000, 120_000, t);
-  const fuelUsageMult =
-    usage === "heavy" ? 1.5 : usage === "moderate" ? 1.0 : 0.7;
-  const fuel = fuelBase * fuelUsageMult * (isCharter ? 1.3 : 1.0);
+  // --- Fuel & consumables ---
+  const fuelOnly = isSail ? lerp(15_000, 60_000, t) : lerp(50_000, 280_000, t);
+  const lubricants = fuelOnly * 0.06;
+  const waterTreatment = lerp(2_000, 8_000, t);
+  const stores = lerp(8_000, 30_000, t);
+  const fuelUsageMult = usage === "heavy" ? 1.5 : usage === "moderate" ? 1.0 : 0.7;
+  const fuelRaw = (fuelOnly + lubricants + waterTreatment + stores) * fuelUsageMult;
+  const fuel = charterMult(fuelRaw, 1.3);
 
-  // Management fees
-  const mgmtMonthly = lerp(3_000, 8_000, t);
-  const management = mgmtMonthly * 12 * (isCharter ? 1.5 : 1.0);
+  // --- Management ---
+  const baseFee = lerp(3_000, 8_000, t) * 12;
+  const accounting = lerp(6_000, 18_000, t);
+  const charterAdmin = isCharter ? baseFee * 0.35 : 0;
+  const managementRaw = baseFee + accounting + charterAdmin;
+  const management = isCharter ? managementRaw : managementRaw;
 
-  // Regulatory & compliance
-  const regulatory = lerp(15_000, 50_000, t) * (isCharter ? 1.6 : 1.0);
+  // --- Regulatory ---
+  const flagState = lerp(3_000, 12_000, t);
+  const classSurvey = lerp(5_000, 18_000, t);
+  const radioLicensing = lerp(500, 2_000, t);
+  const ismCompliance = isCharter ? lerp(4_000, 15_000, t) : lerp(2_000, 8_000, t);
+  const yachtCode = isCharter ? lerp(3_000, 10_000, t) : 0;
+  const regulatory = flagState + classSurvey + radioLicensing + ismCompliance + yachtCode;
+
+  // --- Detail maps ---
+  const charterScale = (items: SubItem[], mult: number): SubItem[] => {
+    if (!isCharter) return items;
+    const raw = items.reduce((a, b) => a + b.amount, 0);
+    const scaled = raw * mult;
+    const diff = scaled - raw;
+    return [...items, { label: "Charter uplift", amount: diff }];
+  };
+
+  const usageScale = (items: SubItem[], mult: number): SubItem[] => {
+    if (mult === 1.0) return items;
+    const raw = items.reduce((a, b) => a + b.amount, 0);
+    const scaled = raw * mult;
+    const diff = scaled - raw;
+    const usageLabel = usage === "heavy" ? "Heavy use adjustment" : "Moderate use adjustment";
+    return [...items, { label: usageLabel, amount: diff }];
+  };
+
+  const detail: Record<string, SubItem[]> = {
+    crew: charterMult === undefined ? [] : charterScale(usageScale([
+      { label: "Salaries", amount: salaries },
+      { label: "Social charges & tax", amount: socialCharges },
+      { label: "Crew insurance", amount: crewInsurance },
+      { label: "Travel & repatriation", amount: travel },
+      { label: "Training & certs", amount: training },
+      { label: "Uniforms", amount: uniforms },
+      { label: "Provisions", amount: provisions },
+    ], usageMult), 1.25),
+    insurance: charterScale([
+      { label: "Hull & machinery", amount: hull },
+      { label: "P&I cover", amount: pandi },
+      { label: "Crew medical", amount: crewMedical },
+      ...(warRisk > 0 ? [{ label: "War risk", amount: warRisk }] : []),
+    ], 1.4),
+    maintenance: charterScale([
+      { label: "Engine & generator service", amount: engineService },
+      { label: "Hull, antifoul & paint", amount: hullAntifoul },
+      ...(isSail ? [{ label: "Rig inspection & maintenance", amount: rig }] : []),
+      ...(isSail ? [{ label: "Sail inventory", amount: sailInventory }] : []),
+      { label: "Deck hardware", amount: deckHardware },
+      { label: "Electronics & nav", amount: electronics },
+      { label: "Interior upkeep", amount: interiorUpkeep },
+      { label: "Class survey reserve", amount: classReserve },
+    ], 1.2),
+    berths: [
+      { label: "Annual home berth", amount: homeBerth },
+      { label: "Transit & visitor berths", amount: transitBerths },
+      { label: "Launch & haulout", amount: launchHaulout },
+    ],
+    fuel: charterScale(usageScale([
+      { label: "Fuel", amount: fuelOnly },
+      { label: "Lubricants", amount: lubricants },
+      { label: "Water treatment", amount: waterTreatment },
+      { label: "General stores", amount: stores },
+    ], fuelUsageMult), 1.3),
+    management: [
+      { label: "Management fee", amount: baseFee },
+      { label: "Accounting & payroll", amount: accounting },
+      ...(isCharter ? [{ label: "Charter administration", amount: charterAdmin }] : []),
+    ],
+    regulatory: [
+      { label: "Flag state fees", amount: flagState },
+      { label: "Class society surveys", amount: classSurvey },
+      { label: "Radio licensing", amount: radioLicensing },
+      { label: "ISM / SMS compliance", amount: ismCompliance },
+      ...(isCharter ? [{ label: "Yacht code (LY3/PYC)", amount: yachtCode }] : []),
+    ],
+    contingency: [],
+  };
 
   // Subtotal and contingency
   const subtotal = crew + insurance + maintenance + berths + fuel + management + regulatory;
   const contingency = subtotal * 0.08;
   const total = subtotal + contingency;
 
-  return { crew, insurance, maintenance, berths, fuel, management, regulatory, contingency, total };
+  return { crew, insurance, maintenance, berths, fuel, management, regulatory, contingency, total, detail };
 }
 
 /* ------------------------------------------------------------------ */
@@ -187,17 +283,33 @@ function CostRow({
   amount,
   total,
   currency,
+  detail,
 }: {
   label: string;
   amount: number;
   total: number;
   currency: Currency;
+  detail?: SubItem[];
 }) {
+  const [open, setOpen] = useState(false);
   const pct = (amount / total) * 100;
+  const hasDetail = detail && detail.length > 0;
+
   return (
-    <div>
+    <div
+      className={hasDetail ? "cursor-pointer" : ""}
+      onMouseEnter={() => hasDetail && setOpen(true)}
+      onMouseLeave={() => hasDetail && setOpen(false)}
+    >
       <div className="flex justify-between items-baseline mb-1.5">
-        <span className="text-sm text-muted">{label}</span>
+        <span className={`text-sm ${open ? "text-white" : "text-muted"} transition-colors`}>
+          {label}
+          {hasDetail && (
+            <span className={`ml-1.5 text-xs ${open ? "text-muted" : "text-muted/30"} transition-colors`}>
+              {open ? "−" : "+"}
+            </span>
+          )}
+        </span>
         <div className="flex items-baseline gap-3">
           <span className="text-xs text-muted/60 tabular-nums">{pct.toFixed(0)}%</span>
           <span className="text-sm text-white font-light tabular-nums">{fmt(amount, currency)}</span>
@@ -209,6 +321,16 @@ function CostRow({
           style={{ width: `${pct}%` }}
         />
       </div>
+      {open && hasDetail && (
+        <div className="mt-2 mb-1 ml-1 pl-3 border-l border-white/10 space-y-1.5">
+          {detail.map((sub) => (
+            <div key={sub.label} className="flex justify-between items-baseline">
+              <span className="text-xs text-muted/70">{sub.label}</span>
+              <span className="text-xs text-white/70 tabular-nums">{fmt(sub.amount, currency)}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -256,14 +378,14 @@ export default function RunningCostCalculatorPage() {
   const costs = calculateCosts(length, yachtType, area, usage, useType);
 
   const breakdown = [
-    { label: "Crew", amount: costs.crew },
-    { label: "Insurance", amount: costs.insurance },
-    { label: "Maintenance & Repair", amount: costs.maintenance },
-    { label: "Berths & Marina Fees", amount: costs.berths },
-    { label: "Fuel & Consumables", amount: costs.fuel },
-    { label: "Management Fees", amount: costs.management },
-    { label: "Regulatory & Compliance", amount: costs.regulatory },
-    { label: "Contingency (8%)", amount: costs.contingency },
+    { label: "Crew", amount: costs.crew, key: "crew" },
+    { label: "Insurance", amount: costs.insurance, key: "insurance" },
+    { label: "Maintenance & Repair", amount: costs.maintenance, key: "maintenance" },
+    { label: "Berths & Marina Fees", amount: costs.berths, key: "berths" },
+    { label: "Fuel & Consumables", amount: costs.fuel, key: "fuel" },
+    { label: "Management Fees", amount: costs.management, key: "management" },
+    { label: "Regulatory & Compliance", amount: costs.regulatory, key: "regulatory" },
+    { label: "Contingency (8%)", amount: costs.contingency, key: "contingency" },
   ];
 
   const handleSlider = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -469,6 +591,7 @@ export default function RunningCostCalculatorPage() {
                     amount={item.amount}
                     total={costs.total}
                     currency={currency}
+                    detail={costs.detail[item.key]}
                   />
                 ))}
                 <div className="pt-3 border-t border-white/10 flex justify-between items-baseline">
