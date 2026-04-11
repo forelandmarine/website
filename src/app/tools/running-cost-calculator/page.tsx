@@ -793,7 +793,7 @@ export default function RunningCostCalculatorPage() {
                     className="text-sm text-white hover:text-accent transition-colors"
                   >
                     {source.title}
-                    <span className="text-muted/50 ml-1.5 text-xs">&nearr;</span>
+                    <span className="text-muted/50 ml-1.5 text-xs">{"\u2197"}</span>
                   </a>
                 ) : (
                   <p className="text-sm text-white">{source.title}</p>
