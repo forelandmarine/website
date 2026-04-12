@@ -117,7 +117,7 @@ export default function YachtManagementPage() {
           <div className="max-w-3xl">
             <SectionLabel>Yacht Management</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-              On the owner&apos;s side,<br />by the captain&apos;s side
+              Independent yacht management,<br />on the owner&apos;s side
             </h1>
             <p className="text-lg text-muted leading-relaxed max-w-2xl">
               Independent, owner-focused yacht management covering safety, compliance, crew, finances, and operations. We protect asset value, ensure regulatory confidence, and let owners enjoy their yachts.
@@ -270,7 +270,7 @@ export default function YachtManagementPage() {
       {/* TESTIMONIAL */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/sailing-fleet-horizon.jpg" alt="" fill sizes="100vw" className="object-cover opacity-20" />
+          <Image src="/images/sailing-fleet-horizon.jpg" alt="Sailing fleet on the horizon at sunset" fill sizes="100vw" className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-bg0/80" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
@@ -307,7 +307,7 @@ export default function YachtManagementPage() {
       {/* CTA */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/yacht-management.jpg" alt="" fill sizes="100vw" className="object-cover opacity-15" />
+          <Image src="/images/yacht-management.jpg" alt="Superyacht under management at sea" fill sizes="100vw" className="object-cover opacity-15" />
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">

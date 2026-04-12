@@ -115,7 +115,7 @@ export default function NewBuildPage() {
             <div className="max-w-3xl">
               <SectionLabel>New Build</SectionLabel>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-                Your interests, every<br />step of the way
+                Your owner&apos;s representative,<br />every step of the way
               </h1>
               <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
                 Accredited by the Superyacht Builders Association (SYBAss), we provide independent owner&apos;s representation and build management for new yacht projects worldwide. A new build is among the most significant undertakings in yacht ownership, and we ensure the process is managed with the same care and precision as the vessel itself.

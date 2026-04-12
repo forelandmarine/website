@@ -112,20 +112,20 @@ export default function Footer() {
         {/* Memberships */}
         <div className="mt-10 pt-8 border-t border-white/8 flex flex-wrap items-center gap-6">
           <span className="text-xs font-light text-muted uppercase tracking-widest">Proud member of</span>
-          <a href="https://www.britishmarine.co.uk" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
-            <Image src="/logos/british-marine-white.svg" alt="Proud Member of British Marine" width={100} height={40} className="h-10 w-auto" />
+          <a href="https://www.britishmarine.co.uk" target="_blank" rel="noopener noreferrer" title="British Marine - trade association for the UK marine industry" className="hover:opacity-80 transition-opacity px-3 py-2">
+            <Image src="/logos/british-marine-white.svg" alt="Foreland Marine is a proud member of British Marine" width={100} height={40} className="h-10 w-auto" />
           </a>
-          <a href="https://www.superyachtuk.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
-            <Image src="/logos/superyacht-uk-white.png" alt="Superyacht UK" width={100} height={40} className="h-10 w-auto" />
+          <a href="https://www.superyachtuk.com" target="_blank" rel="noopener noreferrer" title="Superyacht UK - representing the British superyacht industry" className="hover:opacity-80 transition-opacity px-3 py-2">
+            <Image src="/logos/superyacht-uk-white.png" alt="Foreland Marine is a member of Superyacht UK" width={100} height={40} className="h-10 w-auto" />
           </a>
-          <a href="https://www.sybass.org" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
-            <Image src="/logos/sybass-white.png" alt="Superyacht Builders Association" width={120} height={40} className="h-10 w-auto" />
+          <a href="https://www.sybass.org" target="_blank" rel="noopener noreferrer" title="SYBAss - Superyacht Builders Association, accrediting owner's representatives" className="hover:opacity-80 transition-opacity px-3 py-2">
+            <Image src="/logos/sybass-white.png" alt="SYBAss accredited owner's representative" width={120} height={40} className="h-10 w-auto" />
           </a>
-          <a href="https://www.yachtownersregister.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
-            <Image src="/logos/yacht-owners-register-white.png" alt="Yacht Owner's Representative Register" width={170} height={68} className="h-12 w-auto" />
+          <a href="https://www.yachtownersregister.com" target="_blank" rel="noopener noreferrer" title="YORR - Yacht Owner's Representative Register" className="hover:opacity-80 transition-opacity px-3 py-2">
+            <Image src="/logos/yacht-owners-register-white.png" alt="Registered on the Yacht Owner's Representative Register (YORR)" width={170} height={68} className="h-12 w-auto" />
           </a>
-          <a href="https://www.superyachtalliance.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity px-3 py-2">
-            <Image src="/logos/superyacht-alliance-white.png" alt="Superyacht Alliance" width={192} height={71} className="h-12 w-auto" />
+          <a href="https://www.superyachtalliance.com" target="_blank" rel="noopener noreferrer" title="Superyacht Alliance - global network of superyacht industry professionals" className="hover:opacity-80 transition-opacity px-3 py-2">
+            <Image src="/logos/superyacht-alliance-white.png" alt="Foreland Marine is a member of the Superyacht Alliance" width={192} height={71} className="h-12 w-auto" />
           </a>
         </div>
 

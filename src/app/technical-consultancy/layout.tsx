@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Yacht Technical Consultancy & Performance Engineering",
+  keywords: ["yacht technical consultancy", "marine engineering", "yacht systems", "naval architecture", "yacht racing performance", "hydraulic systems yacht", "marine AV IT"],
   description:
     "Expert technical consultancy across yacht racing performance, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
   openGraph: {

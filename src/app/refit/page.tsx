@@ -115,7 +115,7 @@ export default function RefitPage() {
           <div className="max-w-3xl">
             <SectionLabel>Refit Project Management</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-              Managed with rigour,<br />delivered with care
+              Superyacht refit,<br />managed with rigour
             </h1>
             <p className="text-lg text-muted leading-relaxed max-w-2xl">
               We provide full refit project management for motor and sailing yachts over 24 metres, from initial assessment through to sea trials and handover. From a light refresh to a complete rebuild, our first priority is to deliver on time and on budget.
@@ -318,7 +318,7 @@ export default function RefitPage() {
       {/* CTA */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/shipyard-2.jpg" alt="" fill sizes="100vw" className="object-cover opacity-15" />
+          <Image src="/images/shipyard-2.jpg" alt="Shipyard with yachts in dry dock" fill sizes="100vw" className="object-cover opacity-15" />
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
