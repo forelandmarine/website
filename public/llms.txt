@@ -1,0 +1,135 @@
+# Foreland Marine Consultancy
+
+> Independent superyacht consultancy providing yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60+ metres worldwide.
+
+## Company Overview
+
+Foreland Marine Consultancy Ltd is an independent yacht consultancy based in London (7 Bell Yard, London WC2A 2JR, United Kingdom), with consultants across all major yachting hubs worldwide. The company was founded by Jack MacNally and Daniel Marks, both former senior engineers on J Class yachts. Foreland Marine works exclusively on behalf of yacht owners. The company holds no yard affiliations, earns no broker commissions, and accepts no referral fees from suppliers. The management fee is the company's only revenue from each client relationship. Foreland Marine serves sailing and motor yachts from 24 to over 60 metres, with particular depth in performance sailing yachts and J Class yachts.
+
+## Services
+
+### Yacht Management
+Independent, owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, and class/flag state administration. Services include full ISM Code implementation for vessels over 500 GT (and voluntary safety management systems for vessels below 500 GT), crew recruitment and HR administration per MLC requirements, annual operating budgets with monthly reporting, insurance coordination, and management of class society and flag state requirements. The company's proprietary Lightship ISM platform provides real-time compliance visibility across managed fleets. Foreland Marine does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation serves the owner's interest alone.
+
+URL: https://forelandmarine.com/yacht-management
+
+### New Build Owner's Representation
+Accredited owner's representation and build management for new yacht projects. Foreland Marine is accredited by SYBAss (Superyacht Builders Association) and registered on the YORR (Yacht Owner's Representative Register). The new build process covers five stages: concept and specification development (3-12 months), yard selection and contract negotiation (1-3 months), build oversight with continuous on-site presence (12-48 months), sea trials and delivery coordination (1-3 months), and warranty period management (12-24 months). Scope includes on-site representation, budget and cost control, project coordination, technical review, crew and commissioning management, and post-delivery warranty oversight.
+
+URL: https://forelandmarine.com/new-build
+
+### Refit Project Management
+Full refit project management for motor and sailing yachts over 24 metres. The team has delivered 25 large yacht refit projects across 7 countries, covering high-profile classic and modern racing yachts, sailing yachts exceeding 40 metres, motor yachts in excess of 60 metres, and historic restorations of vessels dating from the 1920s. Services include planning and specification, yard selection and tendering, on-site project management, budget and cost control, quality and compliance oversight, and sea trials and handover coordination.
+
+URL: https://forelandmarine.com/refit
+
+### Technical Consultancy
+Specialist technical consultancy across six disciplines:
+
+- Yacht Racing Performance: performance optimisation, CFD analysis, rigging and deck hardware, race analysis and data, race logistics and campaign planning.
+- Hydraulic Design and PLC Control Systems: hydraulic steering, sail handling, stabiliser systems, deck machinery, PLC design, panel building, sensor integration, and control system commissioning.
+- Navigation and Communication Systems: ECDIS, chart plotter, AIS, radar, sonar, satcom, SSB, VHF, NMEA 2000 / SeaTalk networks, and full system commissioning.
+- Naval Architecture: lines plans, general arrangement, structural drawings, stability documentation, class submission packages, structural modifications, appendage redesign, and hydrostatic/hydrodynamic analysis.
+- Mechanical Installation: main propulsion engines, generators, watermakers, stabilisers, shaft lines, propellers, bow/stern thrusters, and gearbox selection.
+- AV/IT and Automation: cinema rooms, multizone audio, structured cabling, Wi-Fi planning, VLAN segmentation, Starlink/VSAT/4G/5G connectivity, Crestron/Lutron/Savant automation, and lighting/HVAC control.
+
+URL: https://forelandmarine.com/technical-consultancy
+
+## Credentials and Accreditations
+
+- SYBAss (Superyacht Builders Association) accredited owner's representative
+- YORR (Yacht Owner's Representative Register) registered
+- British Marine member
+- Superyacht UK member
+- Superyacht Alliance member
+
+## Digital Tools and Products
+
+- Lightship ISM: proprietary ISM and fleet reporting platform providing real-time compliance visibility, audit trails, non-conformity tracking, corrective actions, incident logs, and certification schedules. URL: https://forelandmarine.com/tools/lightship-ism
+- SeaTime Tracker: AIS-powered sea time logging that automatically detects and records sea time. No manual entry required. MCA-compliant. URL: https://forelandmarine.com/tools/seatime-tracker
+- Running Cost Calculator: estimates annual operating costs of a superyacht based on yacht length, type, and cruising area, with detailed breakdown of crew, insurance, fuel, marina fees and more. URL: https://forelandmarine.com/tools/running-cost-calculator
+- PMS Database: planned maintenance system database setup, licensing, and on-site population. Authorised DeepBlue agents with experience across IDEA, SeaHub, Aquator and other platforms. URL: https://forelandmarine.com/tools/pms-database
+- Debrief: AI-powered race analysis tool (alpha). Telemetry, video, weather, crew positioning and comms unified on a single timeline for post-race performance review. URL: https://forelandmarine.com/tools/debrief
+- Weather Routing: marine meteorology and weather routing for races, ocean crossings and superyacht deliveries, in partnership with OrcaMet. URL: https://forelandmarine.com/tools/weather-routing
+
+## Expertise Areas
+
+- J Class yachts (team has served as Chief Engineer and Chief Build Engineer on J Class vessels including Lionheart and Shamrock V)
+- Performance sailing yachts, 24 to 60+ metres
+- Motor yachts up to 60+ metres
+- ISM Code compliance and safety management systems
+- Classic yacht restoration (vessels dating from the 1920s)
+- Superyacht racing campaigns and grand prix circuits
+- Offshore racing programmes
+- New build supervision at leading European and global shipyards
+- Heritage yacht preservation
+
+## Team
+
+- Jack MacNally, Co-Founder: over 100,000 nautical miles logged. Former Chief Engineer on J Class Lionheart and Chief Build Engineer on the restoration of Shamrock V. Specialist in hydraulic, mechanical and electrical systems for high-performance yachts. Campaigns his own yacht, the 1936 Teal class Antoinette.
+- Daniel Marks, Co-Founder: seven years as Senior Chief Engineer on J Class Lionheart, leading multiple refits across Northern European shipyards. Holds FdSc in Yacht Science and Marine Sciences. Lectures at Falmouth Marine School, where he helped develop the HND/FdSc Professional Superyacht Engineer programme with the University of Plymouth. Qualified Captain and experienced Build Engineer.
+- Henry Ebdell, Commercial Director: over a decade at the intersection of elite yachting and high-value London property. Maritime career spans America's Cup programmes, maxi yachts and classic superyachts. Previously held senior roles at Berkeley Group and Grange London.
+- Nadir Balena, Chief Naval Architect and Project Manager: BEng (Hons) in Yacht and Powercraft Design from Solent University. Racing credentials include J Class Lionheart, Maserati Mod70, FlyingNikka, Falcon and The Ocean Race. Project management across new build sailing yachts up to 56m.
+- Sam Forbes, Senior Consultant: experience since 2015, including over five years in command as Captain. Background in private and charter operations, commercial compliance and flag state management. Expertise in superyacht racing circuit, performance optimisation, sail systems and refit management.
+- Steve Carver, Meteorologist and Weather Routing: founder of OrcaMet, data performance engineer with MLC Technologies. Provides weather routing and performance analysis for TP52 and Cape 31 racing fleets and offshore passages. BSc Marine Science (UEA), FdSc Operational Yacht Science (UKSA).
+
+## Reference List
+
+Yachts the team has worked with include: Anomaly, Antoinette, Falcon, FlyingNikka, Halekai, Heureka, Inukshuk, Jeddah 1 (VOR60), Jeddah 2 (VOR60), Kraken 50-012, Lionheart, Maserati Mod70, Onyx II, Sedna, Shamrock V, Sojana, Sonny, Tootega, Velsheda, Vijonara, Wildberry.
+
+Shipyards: Pendennis Falmouth, Pendennis Vilanova, Royal Huisman, Newport Shipyard, Lyman Morse, Rockport Marine, Hinckley Yachts, Markos.
+
+## Contact
+
+- Email: info@forelandmarine.com
+- Address: 7 Bell Yard, London, WC2A 2JR, United Kingdom
+- Website: https://forelandmarine.com
+- LinkedIn: https://www.linkedin.com/company/foreland-marine-consultancy
+- Instagram: https://instagram.com/forelandmarine
+
+## Frequently Asked Questions
+
+Q: What is Foreland Marine?
+A: Foreland Marine Consultancy Ltd is an independent superyacht consultancy based in London. The company provides yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to over 60 metres. Foreland Marine works exclusively on behalf of yacht owners with no yard affiliations, broker commissions, or supplier referral fees.
+
+Q: What size yachts does Foreland Marine work with?
+A: Foreland Marine works with sailing and motor yachts from 24 metres to over 60 metres. The company has particular depth in performance sailing yachts and J Class yachts.
+
+Q: What does an owner's representative do during a new build?
+A: An owner's representative provides independent oversight of the entire new build process, including budget control, cost tracking, quality assurance inspections, schedule monitoring, and representing the owner's interests at the shipyard during production meetings, milestone reviews, and contractual discussions. Foreland Marine is accredited by SYBAss and registered on the YORR.
+
+Q: When should I appoint an owner's representative for a new build?
+A: As early as possible, ideally before signing a Letter of Intent or selecting a shipyard. Early involvement allows the representative to contribute to yard evaluation, contract negotiation, and specification development.
+
+Q: What is ISM compliance and does my yacht need it?
+A: ISM (International Safety Management) Code compliance involves developing and maintaining a Safety Management System, crew training and certification, incident reporting, regular audits, and emergency drills. For vessels over 500 GT, ISM compliance is mandatory. Foreland Marine also develops voluntary safety management systems aligned with ISM principles for vessels below 500 GT.
+
+Q: How much does it cost to run a superyacht per year?
+A: The industry rule of thumb is 8 to 12 percent of the yacht's purchase price annually for running costs, covering crew salaries, insurance, fuel, maintenance, berths, management fees, and provisions. A 35-metre sailing yacht may cost EUR 500,000 to 800,000 per year. A 45-metre motor yacht may cost EUR 1.2 to 2 million per year. Foreland Marine offers a Running Cost Calculator at forelandmarine.com/tools/running-cost-calculator.
+
+Q: How do I choose a shipyard for a yacht refit?
+A: Yard selection should be based on vessel type, scope of work, geographic preference, yard capabilities, and track record. Foreland Marine assesses multiple yards against these criteria, manages the tendering process, and recommends the option that serves the owner's interests. The company has delivered 25 large yacht refit projects across 7 countries.
+
+Q: What is the difference between independent yacht management and full-service management companies?
+A: Independent yacht management companies like Foreland Marine work exclusively on behalf of the owner. They do not sell yachts, broker charter, or earn commissions from suppliers. Full-service companies often bundle brokerage, charter, and management, which can create conflicts of interest where recommendations may be influenced by the company's commercial interests beyond the management fee.
+
+Q: Does Foreland Marine manage motor yachts or only sailing yachts?
+A: Foreland Marine manages both sailing and motor yachts. While the team has particular depth in performance sailing yachts and J Class vessels, their refit and management experience spans motor yachts in excess of 60 metres undergoing comprehensive rebuilds.
+
+Q: What qualifications should I look for in an owner's representative?
+A: Look for accreditation by SYBAss (Superyacht Builders Association), registration on the Yacht Owner's Representative Register (YORR), and a background in engineering, naval architecture, or yacht operations. Foreland Marine's team holds all of these credentials alongside extensive practical shipyard experience.
+
+Q: What is the Lightship ISM platform?
+A: Lightship ISM is Foreland Marine's proprietary fleet compliance and reporting platform. It consolidates audit trails, non-conformities, corrective actions, incident logs, and certification schedules into one dashboard, providing owners and managers with real-time visibility of compliance status across the fleet.
+
+Q: How long does a yacht refit typically take?
+A: Timelines vary by scope. A targeted pre-season programme might take 3 to 6 months. A comprehensive refit or restoration can take 12 to 24 months. Foreland Marine has delivered projects ranging from 6-month racing preparations to 18-month classic yacht restorations.
+
+Q: Does Foreland Marine have experience with J Class yachts?
+A: Yes. The co-founders served as Chief Engineer and Senior Chief Engineer on J Class Lionheart, and the team was involved in the landmark restoration of Shamrock V. The Chief Naval Architect also has racing credentials on J Class Lionheart. This gives Foreland Marine deep expertise in the specific technical and operational requirements of J Class yachts.
+
+Q: Can Foreland Marine help with regulatory compliance and surveys?
+A: Yes. The team supports owners and captains with MCA compliance, flag state requirements, classification society surveys, and statutory inspections. This includes coordinating the full survey and certification process.
+
+Q: Where is Foreland Marine based?
+A: Foreland Marine is headquartered in London at 7 Bell Yard, WC2A 2JR, with consultants across all major yachting hubs worldwide. The team deploys to shipyards and projects globally.
