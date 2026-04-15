@@ -508,7 +508,7 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/about-hero.jpg"
-            alt=""
+            alt="Performance sailing yacht under sail at sea"
             fill
             className="object-cover opacity-15"
           />

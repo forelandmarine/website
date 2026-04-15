@@ -287,7 +287,7 @@ export default function TechnicalConsultancyPage() {
       {/* CTA */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/j-class-finish.jpg" alt="" fill sizes="100vw" className="object-cover opacity-15" />
+          <Image src="/images/j-class-finish.jpg" alt="J Class yacht crossing the finish line under full sail" fill sizes="100vw" className="object-cover opacity-15" />
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
