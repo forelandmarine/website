@@ -117,7 +117,7 @@ export default function YachtManagementPage() {
           <div className="max-w-3xl">
             <SectionLabel>Yacht Management</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-              Independent yacht management,<br />on the owner&apos;s side
+              On the owner&apos;s side,<br />by the captain&apos;s side
             </h1>
             <p className="text-lg text-muted leading-relaxed max-w-2xl">
               Independent, owner-focused yacht management covering safety, compliance, crew, finances, and operations. We protect asset value, ensure regulatory confidence, and let owners enjoy their yachts.
