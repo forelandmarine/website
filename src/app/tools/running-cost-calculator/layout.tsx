@@ -1,16 +1,29 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Superyacht Running Cost Calculator | Foreland Marine",
+  title: "How Much Does It Cost to Run a Superyacht? | Running Cost Calculator",
   description:
-    "Estimate the annual running costs of a superyacht. Enter yacht length, type, and cruising area to get a detailed breakdown of crew, insurance, maintenance, fuel, marina fees and more.",
+    "Annual running costs for a 30-50m superyacht typically range from EUR 500,000 to EUR 1.5 million. Use our interactive calculator to get a full breakdown by crew, insurance, maintenance, berths, fuel, management, and compliance. Updated April 2026.",
+  keywords: [
+    "superyacht running costs",
+    "how much does it cost to run a superyacht",
+    "yacht running costs",
+    "superyacht annual costs",
+    "yacht operating costs",
+    "superyacht cost calculator",
+    "yacht cost calculator",
+    "10% rule yacht",
+    "yacht crew costs",
+    "yacht maintenance costs",
+    "superyacht ownership costs",
+  ],
   alternates: {
     canonical: "https://forelandmarine.com/tools/running-cost-calculator",
   },
   openGraph: {
-    title: "Superyacht Running Cost Calculator | Foreland Marine",
+    title: "How Much Does It Cost to Run a Superyacht? | Running Cost Calculator",
     description:
-      "Estimate the annual running costs of a superyacht. Enter yacht length, type, and cruising area to get a detailed breakdown of crew, insurance, maintenance, fuel, marina fees and more.",
+      "Annual running costs for a 30-50m superyacht typically range from EUR 500,000 to EUR 1.5 million. Use our interactive calculator to get a full breakdown by crew, insurance, maintenance, berths, fuel, management, and compliance.",
   },
 };
 

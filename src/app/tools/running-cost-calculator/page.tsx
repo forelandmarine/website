@@ -414,8 +414,78 @@ export default function RunningCostCalculatorPage() {
     setLength(Number(e.target.value));
   }, []);
 
+  const faqData = [
+    {
+      question: "How much does it cost to run a superyacht per year?",
+      answer: "Annual running costs for a superyacht typically range from EUR 400,000 for a 24-metre sailing yacht with light use, to over EUR 2 million for a 60-metre motor yacht operating year-round. The main cost categories are crew (30-40% of the total), insurance, maintenance, marina berths, fuel, management fees, and regulatory compliance. As a rough guide, expect to spend 8-12% of the yacht's purchase price each year, though the actual figure depends heavily on vessel type, size, cruising area, and how intensively the yacht is used."
+    },
+    {
+      question: "What is the 10% rule for yachts?",
+      answer: "The 10% rule is a long-standing industry rule of thumb that says you should budget approximately 10% of the yacht's purchase price each year for running costs. For example, a yacht bought for EUR 15 million would cost around EUR 1.5 million per year to operate. While useful as a starting point, the 10% rule is a simplification. Actual costs are driven by the vessel's size, type, age, crew complement, cruising area, and operational profile, not by the purchase price. A yacht bought at a discount may cost far more than 10% to run, while a well-specified new build may cost less in early years."
+    },
+    {
+      question: "What are the biggest costs of owning a superyacht?",
+      answer: "Crew costs are almost always the largest single expense, typically 30-40% of the annual budget. For a 40-metre motor yacht, crew costs alone can reach EUR 500,000-900,000 per year. After crew, the next largest costs are maintenance and repair (including class surveys and periodic refits), insurance (hull, P&I, and crew medical), and marina berths. Fuel costs vary dramatically between sailing and motor yachts. Management fees, regulatory compliance, and a contingency reserve of 8-10% should also be budgeted."
+    },
+    {
+      question: "How much does a superyacht crew cost?",
+      answer: "Crew costs depend on yacht size and the number of crew required. A 30-metre yacht with 5-7 crew might spend EUR 300,000-450,000 per year on total crew costs. A 50-metre yacht with 12-16 crew could spend EUR 900,000-1,400,000. These figures include salaries, social charges, insurance, travel, training, uniforms, and provisions. Captain salaries alone range from EUR 84,000 on a 24-metre yacht to over EUR 180,000 on a 60-metre vessel."
+    },
+    {
+      question: "Is it cheaper to run a sailing yacht or a motor yacht?",
+      answer: "Sailing yachts are generally less expensive to run than motor yachts of equivalent size. The main saving is fuel: a 50-metre motor yacht burning 300 litres per hour at cruising speed will spend far more on fuel in a single season than a sailing yacht spends in a year. However, sailing yachts have costs that motor yachts do not, including rig maintenance, sail inventory, and specialist rigging inspections. Overall, a sailing yacht's annual running costs might be 15-25% lower than a comparable motor yacht."
+    },
+    {
+      question: "How much does superyacht insurance cost?",
+      answer: "Insurance costs depend on the yacht's value, type, age, cruising area, and claims history. Hull and machinery insurance typically costs 0.8-1.5% of the yacht's insured value per year. P&I (Protection and Indemnity) cover adds another 0.3-0.4%. For a yacht valued at EUR 10 million, total annual insurance premiums might be EUR 120,000-190,000. Charter yachts require commercial insurance, which can be 30-40% more expensive than private cover. Cruising in higher-risk areas (Caribbean during hurricane season, extended global cruising) attracts higher premiums."
+    },
+  ];
+
   return (
     <>
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+      {/* WebApplication Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            name: "Superyacht Running Cost Calculator",
+            url: "https://forelandmarine.com/tools/running-cost-calculator",
+            description: "Interactive calculator that estimates annual superyacht running costs by crew, insurance, maintenance, berths, fuel, management, and compliance.",
+            applicationCategory: "FinanceApplication",
+            operatingSystem: "Any",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "EUR",
+            },
+            author: {
+              "@type": "Organization",
+              name: "Foreland Marine Consultancy",
+              url: "https://forelandmarine.com",
+            },
+          }),
+        }}
+      />
       {/* HERO */}
       <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
         <div
@@ -699,38 +769,51 @@ export default function RunningCostCalculatorPage() {
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/insights/understanding-yacht-management-costs-10-percent-rule"
-              className="text-sm text-accent hover:text-white transition-colors flex items-center gap-1.5"
-            >
-              Read: Understanding the 10% rule
-              <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
-                <path
-                  d="M2.5 6h7M6.5 3l3 3-3 3"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Link>
-            <Link
-              href="/insights/choosing-yacht-management-company"
-              className="text-sm text-accent hover:text-white transition-colors flex items-center gap-1.5"
-            >
-              Read: Choosing a management company
-              <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
-                <path
-                  d="M2.5 6h7M6.5 3l3 3-3 3"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Link>
+          <div className="mt-10 flex flex-col gap-3">
+            {[
+              { href: "/insights/understanding-yacht-management-costs-10-percent-rule", label: "Read: Understanding the 10% rule" },
+              { href: "/insights/how-much-does-a-superyacht-refit-cost", label: "Read: How much does a superyacht refit cost?" },
+              { href: "/insights/superyacht-crew-salary-guide", label: "Read: Superyacht crew salary guide 2026" },
+              { href: "/insights/how-to-buy-your-first-superyacht", label: "Read: How to buy your first superyacht" },
+              { href: "/insights/choosing-yacht-management-company", label: "Read: Choosing a management company" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-accent hover:text-white transition-colors flex items-center gap-1.5"
+              >
+                {link.label}
+                <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
+                  <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+            ))}
           </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* FAQ SECTION - targets People Also Ask */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <SectionLabel>Frequently Asked Questions</SectionLabel>
+          <h2 className="text-2xl sm:text-3xl font-light text-white mb-10">
+            Common questions about superyacht running costs
+          </h2>
+
+          <div className="space-y-8">
+            {faqData.map((faq) => (
+              <div key={faq.question}>
+                <h3 className="text-base font-semibold text-white mb-3">{faq.question}</h3>
+                <p className="text-muted leading-relaxed text-sm">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-xs text-muted/40 mt-10">
+            Last updated: April 2026. Figures based on current market data and Foreland Marine operational experience.
+          </p>
         </div>
       </section>
 
