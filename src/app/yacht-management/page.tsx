@@ -7,7 +7,7 @@ import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/compone
 
 const servicesTop = [
   { title: "ISM, Safety & Compliance", description: "Full ISM Code implementation for 500 GT+ vessels, including Safety Management System development, internal audits, corrective action tracking, and incident management. For vessels below 500 GT, we develop voluntary safety management systems aligned with ISM principles, giving owners the same rigorous safety framework regardless of vessel size. Our proprietary Lightship ISM platform provides real-time compliance visibility across the fleet." },
-  { title: "Crew Management", description: "Recruitment support, contract administration, payroll coordination, leave planning, and ongoing HR advisory. All employment managed per MLC, flag state requirements, and owner preferences. We handle crew certification tracking, training schedules, performance reviews, and succession planning to ensure continuity and high standards across every department on board." },
+  { title: "Crew Management", description: "Recruitment support, contract administration, payroll coordination, leave planning, and ongoing HR advisory. All employment managed per MLC, flag state requirements, and owner preferences. We handle crew certification tracking, training schedules, performance reviews, and succession planning to ensure continuity and high standards across every department on board. For racing programmes, we coordinate shore team logistics, sail inventory management, and regatta scheduling alongside day-to-day crew operations." },
   { title: "Financial Management", description: "Annual operating budgets built collaboratively with the owner, tracked against actuals, and reported monthly with clear variance commentary. Supplier engagement is managed with commercial rigour and full transparency. Every invoice is reviewed, every cost is justified, and owners receive detailed breakdowns with no mark-ups or hidden handling fees on third-party expenditure." },
 ];
 
@@ -84,7 +84,7 @@ export default function YachtManagementPage() {
                   name: "What size yachts do you manage?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "We manage motor and sailing yachts over 24 metres, from private cruising vessels to large commercial yachts. Our experience spans vessels from 24 metres to over 60 metres across a range of vessel types and operational profiles.",
+                    text: "We manage sailing and motor yachts over 24 metres, from private cruising vessels to large commercial yachts. Our experience spans vessels from 24 metres to over 60 metres across a range of vessel types and operational profiles.",
                   },
                 },
               ],
@@ -120,7 +120,7 @@ export default function YachtManagementPage() {
               On the owner&apos;s side,<br />by the captain&apos;s side
             </h1>
             <p className="text-lg text-muted leading-relaxed max-w-2xl">
-              Independent, owner-focused yacht management covering safety, compliance, crew, finances, and operations. We protect asset value, ensure regulatory confidence, and let owners enjoy their yachts.
+              Independent, owner-focused yacht management covering safety, compliance, crew, finances, and operations. From rig maintenance programmes and racing calendar logistics to ISM compliance and financial reporting, we protect asset value, ensure regulatory confidence, and let owners enjoy their yachts.
             </p>
           </div>
         </div>
@@ -178,7 +178,7 @@ export default function YachtManagementPage() {
                   Our team includes unlimited Chief Engineers, Captains, and Naval Architects who understand vessels from the inside out. We do not outsource technical judgment to third-party consultants.
                 </p>
                 <p className="text-sm text-muted leading-relaxed">
-                  Whether it is evaluating a refit scope, reviewing a maintenance plan, or assessing a class survey finding, our people have the qualifications and sea time to make informed decisions at the technical level.
+                  Whether it is evaluating a refit scope, reviewing a maintenance plan, or assessing a class survey finding, our people have the qualifications and sea time to make informed decisions at the technical level. That includes hands-on experience with carbon rigs, hydraulic deck systems, and performance sailing programmes.
                 </p>
               </div>
             </div>

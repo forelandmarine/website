@@ -125,7 +125,7 @@ export default function HomePage() {
             <ServiceCard
               data-animate="fade-up"
               title="Refit Project Management"
-              description="We manage every aspect of your yacht refit from beginning to end, from planning and design to project management and crew services. Our team ensures timely delivery, quality workmanship, and effective budgeting for motor and sail yachts over 24m+."
+              description="We manage every aspect of your yacht refit from beginning to end, from planning and design to project management and crew services. Our team ensures timely delivery, quality workmanship, and effective budgeting for sailing and motor yachts over 24m+."
               href="/refit"
             />
             <ServiceCard

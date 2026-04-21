@@ -118,7 +118,7 @@ export default function NewBuildPage() {
                 Your owner&apos;s representative,<br />every step of the way
               </h1>
               <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
-                Accredited by the Superyacht Builders Association (SYBAss), we provide independent owner&apos;s representation and build management for new yacht projects worldwide. A new build is among the most significant undertakings in yacht ownership, and we ensure the process is managed with the same care and precision as the vessel itself.
+                Accredited by the Superyacht Builders Association (SYBAss), we provide independent owner&apos;s representation and build management for sailing and motor yacht new builds from 24 to 60 metres, with particular expertise in performance sailing yachts and carbon composite construction. A new build is among the most significant undertakings in yacht ownership, and we ensure the process is managed with the same care and precision as the vessel itself.
               </p>
             </div>
             <div className="hidden lg:flex flex-col items-center gap-6 flex-shrink-0 mt-[50px] relative z-20">
@@ -261,7 +261,7 @@ export default function NewBuildPage() {
             <ServiceCard data-animate="fade-up" title="Project Coordination" description="Managing communication between the owner, shipyard, design offices, subcontractors, and classification society to maintain alignment on scope, schedule, and quality." />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
-            <ServiceCard data-animate="fade-up" title="Technical Review" description="Independent inspection of hull construction, structural work, systems installation, and outfitting quality, supported by our naval architects, engineers, and coatings specialists." />
+            <ServiceCard data-animate="fade-up" title="Technical Review" description="Independent inspection of hull construction, structural work, systems installation, and outfitting quality, supported by our naval architects, engineers, and coatings specialists. For sailing yachts, this extends to rig specification, sail plan review, and deck hardware selection." />
             <ServiceCard data-animate="fade-up" title="Crew & Commissioning" description="Crew recruitment and employment administration during the build phase, followed by coordination of sea trials, systems commissioning, and formal handover." />
             <ServiceCard data-animate="fade-up" title="Warranty Management" description="Post-delivery oversight including defect tracking, claims management, and continued liaison with the shipyard throughout the warranty period." />
           </div>
