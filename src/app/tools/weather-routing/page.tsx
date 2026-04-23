@@ -362,12 +362,9 @@ export default function WeatherRoutingPage() {
               <p className="text-muted leading-relaxed mb-4">
                 Steve is a marine meteorologist and data performance engineer.
                 He is the founder of{" "}
-                <a href="https://orcamet.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">OrcaMet</a>{" "}
-                and works with{" "}
-                <a href="https://mlctechnologies.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">MLC Technologies</a>{" "}
-                as a data performance engineer. He provides weather routing and
-                performance analysis services to TP52 and Cape 31 racing fleets
-                as well as vessels on offshore passages.
+                <a href="https://orcamet.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">OrcaMet</a>,
+                providing weather routing and performance analysis services to
+                TP52 and Cape 31 racing fleets as well as vessels on offshore passages.
               </p>
               <p className="text-muted leading-relaxed">
                 Steve holds a BSc in Marine Science from the University of East

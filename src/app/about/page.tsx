@@ -50,7 +50,7 @@ const team = [
     role: "Meteorologist & Weather Routing",
     initials: "SC",
     photo: "/images/team-steve.jpg",
-    bio: <>A meteorologist and data performance engineer, Steve is the founder of <a href="https://orcamet.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">OrcaMet</a> and works with <a href="https://mlctechnologies.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">MLC Technologies</a> as a data performance engineer. He provides weather routing and performance analysis services to TP52 and Cape 31 racing fleets as well as vessels on offshore passages. Steve holds a BSc in Marine Science from the University of East Anglia and an FdSc in Operational Yacht Science from UKSA, combining academic rigour with practical experience at sea.</>,
+    bio: <>A meteorologist and data performance engineer, Steve is the founder of <a href="https://orcamet.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">OrcaMet</a>. He provides weather routing and performance analysis services to TP52 and Cape 31 racing fleets as well as vessels on offshore passages. Steve holds a BSc in Marine Science from the University of East Anglia and an FdSc in Operational Yacht Science from UKSA, combining academic rigour with practical experience at sea.</>,
     linkedin: "https://www.linkedin.com/in/steve-carver-3779ba2b7/",
   },
 ];

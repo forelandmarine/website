@@ -168,7 +168,7 @@ LinkedIn: https://www.linkedin.com/in/nadir-balena-276143112/
 Experience since 2015, including over five years in command as Captain. Background in private and charter operations with expertise in commercial compliance and flag state management. Extensive experience on the superyacht racing circuit, covering performance optimisation, sail systems, and high-level deck operations. Hands-on refit management expertise.
 
 ### Steve Carver - Meteorologist and Weather Routing
-Founder of OrcaMet. Data performance engineer with MLC Technologies. Provides weather routing and performance analysis for TP52 and Cape 31 racing fleets and vessels on offshore passages. BSc Marine Science from the University of East Anglia and FdSc in Operational Yacht Science from UKSA.
+Founder of OrcaMet. Provides weather routing and performance analysis for TP52 and Cape 31 racing fleets and vessels on offshore passages. BSc Marine Science from the University of East Anglia and FdSc in Operational Yacht Science from UKSA.
 LinkedIn: https://www.linkedin.com/in/steve-carver-3779ba2b7/
 
 ---
