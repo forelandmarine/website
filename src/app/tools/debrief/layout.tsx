@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://forelandmarine.com/tools/debrief",
   },
+  keywords: ["yacht race analysis", "sailing race debrief", "race intelligence platform", "yacht performance analysis", "regatta debrief", "race telemetry yacht"],
   openGraph: {
     title: "Debrief - AI Race Intelligence & Analysis Platform",
     description:

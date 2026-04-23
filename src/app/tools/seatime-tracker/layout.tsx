@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://forelandmarine.com/tools/seatime-tracker",
   },
+  keywords: ["sea time tracker", "AIS sea time", "yacht logbook app", "MCA sea time", "sea service record", "yacht crew logbook", "automatic sea time logging"],
   openGraph: {
     title: "AIS SeaTime Tracker - Automatic Sea Time Logging App",
     description:

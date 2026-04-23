@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://forelandmarine.com/tools/weather-routing",
   },
+  keywords: ["yacht weather routing", "marine weather routing", "ocean crossing weather", "yacht meteorology", "offshore racing weather", "passage planning weather"],
   openGraph: {
     title: "Marine Weather Routing & Forecasting | OrcaMet Partnership",
     description:

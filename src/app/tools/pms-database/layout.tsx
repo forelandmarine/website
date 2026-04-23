@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://forelandmarine.com/tools/pms-database",
   },
+  keywords: ["yacht PMS database", "planned maintenance system yacht", "DeepBlue PMS", "yacht maintenance software", "PMS setup yacht", "superyacht maintenance system"],
   openGraph: {
     title: "PMS Database Setup & Population Services",
     description:
