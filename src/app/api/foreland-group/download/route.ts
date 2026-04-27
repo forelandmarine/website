@@ -10,6 +10,7 @@ const VALID_DOCS: Record<string, string> = {
   "financial-model": "financial-model.xlsx",
   "use-of-proceeds": "use-of-proceeds.xlsx",
   "subscription-agreement": "subscription-agreement.pdf",
+  "technical-plan": "technical-plan.png",
 };
 
 function verifyToken(token: string): string | null {

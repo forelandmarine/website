@@ -14,6 +14,7 @@ const documents = [
   { id: "financial-model", title: "Financial Model", description: "Financial projections including revenue forecasts, cost structures and return scenarios.", ext: "xlsx" },
   { id: "use-of-proceeds", title: "Use of Proceeds", description: "Breakdown of how investment capital will be allocated across the project.", ext: "xlsx" },
   { id: "subscription-agreement", title: "Subscription Agreement (Draft)", description: "Draft subscription agreement for prospective investors.", ext: "pdf" },
+  { id: "technical-plan", title: "Tipner Technical Plan", description: "2D top-down site plan of the Tipner West superyacht refit facility, including pontoon spine, paint sheds, warehouses and yard boundaries.", ext: "png" },
 ];
 
 export default function ForelandGroupPage() {
@@ -218,6 +219,37 @@ export default function ForelandGroupPage() {
                 <p className="text-muted">Access the Foreland Shipyard Group investment materials below.</p>
               </div>
 
+              <a
+                href="https://tipner-viewer.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block mb-8 overflow-hidden border border-accent/30 hover:border-accent/60 bg-gradient-to-br from-accent/10 via-bg2 to-bg2 transition-all duration-300"
+              >
+                <div className="relative z-10 flex items-center gap-5 p-6 sm:p-7">
+                  <div className="shrink-0 w-14 h-14 rounded-full bg-accent/15 border border-accent/30 flex items-center justify-center group-hover:bg-accent/25 transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-accent">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                      <path d="M2 17l10 5 10-5" />
+                      <path d="M2 12l10 5 10-5" />
+                    </svg>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-[10px] uppercase tracking-[0.2em] text-accent font-semibold">Interactive</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-light text-white mb-1 group-hover:text-accent transition-colors">
+                      Tipner West 3D Render Viewer
+                    </h3>
+                    <p className="text-sm text-muted leading-relaxed">
+                      Explore the proposed facility in a fully navigable 3D environment.
+                    </p>
+                  </div>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0 text-accent group-hover:translate-x-1 transition-transform">
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </div>
+              </a>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {documents.map((doc) => (
                   <a
@@ -230,20 +262,25 @@ export default function ForelandGroupPage() {
                     <div className="flex items-start gap-4">
                       {/* File type icon */}
                       <div className="relative shrink-0">
-                        <div className={`w-14 h-16 rounded flex flex-col items-center justify-center border ${
-                          doc.ext === "pdf"
-                            ? "bg-red-500/10 border-red-500/25"
-                            : "bg-green-500/10 border-green-500/25"
-                        }`}>
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={doc.ext === "pdf" ? "text-red-400" : "text-green-400"}>
-                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                            <polyline points="14,2 14,8 20,8" />
-                            {doc.ext === "xlsx" && <path d="M8 13l3 3 3-3M8 17l3-3 3 3" strokeWidth="1.5" />}
-                          </svg>
-                          <span className={`text-[9px] font-bold uppercase mt-0.5 ${
-                            doc.ext === "pdf" ? "text-red-400" : "text-green-400"
-                          }`}>{doc.ext}</span>
-                        </div>
+                        {(() => {
+                          const palette = doc.ext === "pdf"
+                            ? { bg: "bg-red-500/10", border: "border-red-500/25", text: "text-red-400" }
+                            : doc.ext === "xlsx"
+                            ? { bg: "bg-green-500/10", border: "border-green-500/25", text: "text-green-400" }
+                            : { bg: "bg-blue-500/10", border: "border-blue-500/25", text: "text-blue-400" };
+                          return (
+                            <div className={`w-14 h-16 rounded flex flex-col items-center justify-center border ${palette.bg} ${palette.border}`}>
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={palette.text}>
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                <polyline points="14,2 14,8 20,8" />
+                                {doc.ext === "xlsx" && <path d="M8 13l3 3 3-3M8 17l3-3 3 3" strokeWidth="1.5" />}
+                                {doc.ext === "png" && <circle cx="10" cy="13" r="1.2" />}
+                                {doc.ext === "png" && <path d="M8 18l3-3 2 2 3-3 2 2" strokeWidth="1.5" />}
+                              </svg>
+                              <span className={`text-[9px] font-bold uppercase mt-0.5 ${palette.text}`}>{doc.ext}</span>
+                            </div>
+                          );
+                        })()}
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-white font-semibold mb-1 group-hover:text-accent transition-colors">{doc.title}</h3>
