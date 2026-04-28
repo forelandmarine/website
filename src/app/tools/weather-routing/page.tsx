@@ -222,12 +222,12 @@ export default function WeatherRoutingPage() {
               advantage is consistent and significant.
             </p>
             <p className="text-muted leading-relaxed">
-              Our service combines trained meteorology, offshore sailing
-              experience and proven routing tools. Steve Carver works directly
-              with skippers and navigators across IMOCA campaigns, the
-              Superseries and Maxi Regattas, alongside offshore passages and
-              ocean crossings, providing the kind of personal, responsive
-              service that automated routing platforms cannot match.
+              Our service combines academic meteorology, hands-on yacht
+              performance experience and proven routing tools. Steve Carver
+              works directly with captains and navigators on TP52 and Cape 31
+              fleets, alongside offshore campaigns and ocean crossings,
+              providing the kind of personal, responsive service that
+              automated routing platforms cannot match.
             </p>
           </div>
         </div>
