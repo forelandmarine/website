@@ -137,7 +137,7 @@ export default function ToolsPage() {
                   <p className="text-xs text-muted font-semibold uppercase tracking-widest mb-4">Weather Routing</p>
                   <h2 className="text-2xl font-light text-white mb-3 group-hover:text-accent transition-colors">Meteorology & Routing</h2>
                   <p className="text-muted leading-relaxed mb-6">
-                    Marine meteorology and weather routing for races, ocean crossings and superyacht deliveries. In partnership with OrcaMet, founded by Steve Carver.
+                    Marine meteorology and weather routing for races, ocean crossings and superyacht deliveries. Led by Steve Carver, our resident meteorologist.
                   </p>
                   <div className="flex items-center gap-1.5 text-sm text-accent font-medium">
                     Learn more

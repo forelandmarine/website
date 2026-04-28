@@ -52,8 +52,8 @@ const services = [
 ];
 
 const fleets = [
-  "TP52 grand prix fleet",
-  "Cape 31 one-design class",
+  "IMOCA offshore campaigns",
+  "Superseries grand prix fleet",
   "Maxi and supermaxi racing programmes",
   "IRC and ORC offshore campaigns",
   "Performance cruising yachts",
@@ -136,7 +136,7 @@ export default function WeatherRoutingPage() {
               },
               areaServed: "Worldwide",
               description:
-                "Professional marine weather routing and forecasting services for racing yachts, offshore crossings and superyacht passages, in partnership with OrcaMet.",
+                "Professional marine weather routing and forecasting services for racing yachts, offshore crossings and superyacht passages.",
             },
             {
               "@context": "https://schema.org",
@@ -184,13 +184,12 @@ export default function WeatherRoutingPage() {
           <div className="max-w-3xl">
             <div className="flex flex-wrap items-center gap-3 mb-5">
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent">Tools & Services</span>
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-accent border border-accent/40 px-2 py-0.5 rounded">In Partnership with OrcaMet</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
               Marine meteorology and<br />weather routing
             </h1>
             <p className="text-lg text-muted leading-relaxed max-w-2xl">
-              Professional weather forecasting and routing for racing campaigns, offshore passages and superyacht deliveries worldwide. Delivered in partnership with OrcaMet, founded by Steve Carver, our resident meteorologist and weather routing specialist.
+              Professional weather forecasting and routing for racing campaigns, offshore passages and superyacht deliveries worldwide. Led by Steve Carver, our resident meteorologist and weather routing specialist.
             </p>
           </div>
         </div>

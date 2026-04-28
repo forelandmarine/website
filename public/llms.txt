@@ -50,7 +50,7 @@ URL: https://forelandmarine.com/technical-consultancy
 - Running Cost Calculator: estimates annual operating costs of a superyacht based on yacht length, type, and cruising area, with detailed breakdown of crew, insurance, fuel, marina fees and more. URL: https://forelandmarine.com/tools/running-cost-calculator
 - PMS Database: planned maintenance system database setup, licensing, and on-site population. Authorised DeepBlue agents with experience across IDEA, SeaHub, Aquator and other platforms. URL: https://forelandmarine.com/tools/pms-database
 - Debrief: AI-powered race analysis tool (alpha). Telemetry, video, weather, crew positioning and comms unified on a single timeline for post-race performance review. URL: https://forelandmarine.com/tools/debrief
-- Weather Routing: marine meteorology and weather routing for races, ocean crossings and superyacht deliveries, in partnership with OrcaMet. URL: https://forelandmarine.com/tools/weather-routing
+- Weather Routing: marine meteorology and weather routing for races, ocean crossings and superyacht deliveries, led by resident meteorologist Steve Carver. URL: https://forelandmarine.com/tools/weather-routing
 
 ## Expertise Areas
 

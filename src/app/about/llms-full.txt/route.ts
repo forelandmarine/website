@@ -142,7 +142,7 @@ Status: alpha. AI-powered race analysis tool. Unifies telemetry, video, weather 
 
 ### Weather Routing
 URL: https://forelandmarine.com/tools/weather-routing
-Marine meteorology and weather routing for races, ocean crossings, and superyacht deliveries. Provided in partnership with OrcaMet, founded by Steve Carver. Covers route optimisation, weather forecasting, and performance analysis for racing and passage planning.
+Marine meteorology and weather routing for races, ocean crossings, and superyacht deliveries. Led by Steve Carver, resident meteorologist and weather routing specialist. Covers route optimisation, weather forecasting, and performance analysis for racing and passage planning.
 
 ---
 
