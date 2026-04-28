@@ -222,12 +222,12 @@ export default function WeatherRoutingPage() {
               advantage is consistent and significant.
             </p>
             <p className="text-muted leading-relaxed">
-              Our service combines academic meteorology, hands-on yacht
-              performance experience and proven routing tools. Steve Carver
-              works directly with captains and navigators on TP52 and Cape 31
-              fleets, alongside offshore campaigns and ocean crossings,
-              providing the kind of personal, responsive service that
-              automated routing platforms cannot match.
+              Our service combines trained meteorology, offshore sailing
+              experience and proven routing tools. Steve Carver works directly
+              with skippers and navigators across IMOCA campaigns, the
+              Superseries and Maxi Regattas, alongside offshore passages and
+              ocean crossings, providing the kind of personal, responsive
+              service that automated routing platforms cannot match.
             </p>
           </div>
         </div>
@@ -357,19 +357,19 @@ export default function WeatherRoutingPage() {
             <div className="lg:col-span-2" data-animate="fade-up">
               <SectionLabel>Meet Steve Carver</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
-                Meteorologist, sailor, founder of OrcaMet
+                Offshore sailor and trained meteorologist
               </h2>
               <p className="text-muted leading-relaxed mb-4">
-                Steve is a marine meteorologist and data performance engineer.
-                He is the founder of{" "}
-                <a href="https://orcamet.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">OrcaMet</a>,
-                providing weather routing and performance analysis services to
-                TP52 and Cape 31 racing fleets as well as vessels on offshore passages.
+                Steve has worked with multiple IMOCAs in the past (Ari Huusela
+                Ocean Racing, Rosalba (ex Artemis), and short term work on a
+                few others). He works with cruising and racing yachts in
+                circuits such as the Superseries and Maxi Regattas.
               </p>
               <p className="text-muted leading-relaxed">
-                Steve holds a BSc in Marine Science from the University of East
-                Anglia and an FdSc in Operational Yacht Science from UKSA,
-                combining academic rigour with practical experience at sea.
+                He does a lot of historical weather routing and climatology
+                studies to aid skippers and navigators as well as forecasting
+                and routing, bringing in educational aspects to build knowledge
+                of practical yachting meteorology.
               </p>
             </div>
           </div>
