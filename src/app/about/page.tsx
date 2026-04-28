@@ -50,7 +50,7 @@ const team = [
     role: "Meteorologist & Weather Routing",
     initials: "SC",
     photo: "/images/team-steve.jpg",
-    bio: <>A meteorologist and data performance engineer, Steve is the founder of <a href="https://orcamet.co.uk" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors underline">OrcaMet</a>. He provides weather routing and performance analysis services to TP52 and Cape 31 racing fleets as well as vessels on offshore passages. Steve holds a BSc in Marine Science from the University of East Anglia and an FdSc in Operational Yacht Science from UKSA, combining academic rigour with practical experience at sea.</>,
+    bio: <>Steve has worked with multiple IMOCAs in the past (Ari Huusela Ocean Racing, Rosalba (ex Artemis), and short term work on a few others). He is both an experienced offshore sailor as well as a trained meteorologist, working with cruising and racing yachts in circuits such as the Superseries and Maxi Regattas. He does a lot of historical weather routing and climatology studies to aid skippers and navigators as well as forecasting and routing, bringing in educational aspects to build knowledge of practical yachting meteorology.</>,
     linkedin: "https://www.linkedin.com/in/steve-carver-3779ba2b7/",
   },
 ];
