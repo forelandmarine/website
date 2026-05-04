@@ -38,10 +38,28 @@ function formatDate(dateStr: string) {
   });
 }
 
+const SERVICE_LINKS: Record<string, { href: string; label: string }> = {
+  "New Build": { href: "/new-build", label: "New Build Owner's Representation" },
+  "Refit": { href: "/refit", label: "Refit Project Management" },
+  "Yacht Management": { href: "/yacht-management", label: "Yacht Management" },
+  "Technical": { href: "/technical-consultancy", label: "Technical Consultancy" },
+  "Compliance": { href: "/yacht-management", label: "Yacht Management" },
+};
+
 export default async function PostPage({ params }: Props) {
   const { slug } = await params;
   const post = posts.find((p) => p.slug === slug);
   if (!post) notFound();
+
+  const relatedPosts = posts
+    .filter((p) => p.slug !== post.slug && p.category === post.category)
+    .slice(0, 3);
+  const fallbackRelated =
+    relatedPosts.length < 3
+      ? posts.filter((p) => p.slug !== post.slug && p.category !== post.category).slice(0, 3 - relatedPosts.length)
+      : [];
+  const allRelated = [...relatedPosts, ...fallbackRelated];
+  const serviceLink = SERVICE_LINKS[post.category];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -49,13 +67,21 @@ export default async function PostPage({ params }: Props) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: "en-GB",
+    keywords: post.keywords?.join(", "),
+    articleSection: post.category,
     author: {
-      "@type": "Organization",
-      name: "Foreland Marine Consultancy Ltd",
-      url: "https://forelandmarine.com",
+      "@type": "Person",
+      "@id": "https://forelandmarine.com/#jack-macnally",
+      name: "Jack MacNally",
+      jobTitle: "Director, Foreland Marine",
+      url: "https://forelandmarine.com/about",
+      sameAs: ["https://www.linkedin.com/in/jmacnally/"],
     },
     publisher: {
       "@type": "Organization",
+      "@id": "https://forelandmarine.com/#organization",
       name: "Foreland Marine Consultancy Ltd",
       url: "https://forelandmarine.com",
       logo: {
@@ -117,9 +143,22 @@ export default async function PostPage({ params }: Props) {
           </h1>
 
           {/* Description */}
-          <p className="text-lg text-muted leading-relaxed mb-12">
+          <p className="text-lg text-muted leading-relaxed mb-8">
             {post.description}
           </p>
+
+          {/* Author byline */}
+          <div className="flex items-center gap-3 mb-12 pb-8 border-b border-white/8">
+            <div className="w-10 h-10 rounded-full bg-accent/15 border border-accent/30 flex items-center justify-center text-accent text-sm font-semibold">
+              JM
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-white">
+                By <Link href="/about" className="hover:text-accent transition-colors">Jack MacNally</Link>
+              </span>
+              <span className="text-xs text-muted/60">Director, Foreland Marine</span>
+            </div>
+          </div>
 
           {/* Article content */}
           <div
@@ -132,6 +171,42 @@ export default async function PostPage({ params }: Props) {
               [&>blockquote]:border-l-2 [&>blockquote]:border-accent [&>blockquote]:pl-6 [&>blockquote]:italic [&>blockquote]:text-muted/80"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          {/* Related service */}
+          {serviceLink && (
+            <div className="mt-16 pt-8 border-t border-white/8">
+              <p className="text-xs text-muted/60 uppercase tracking-widest mb-3">Related service</p>
+              <Link
+                href={serviceLink.href}
+                className="text-base text-accent hover:text-white transition-colors"
+              >
+                {serviceLink.label} &rarr;
+              </Link>
+            </div>
+          )}
+
+          {/* Related articles */}
+          {allRelated.length > 0 && (
+            <div className="mt-12">
+              <p className="text-xs text-muted/60 uppercase tracking-widest mb-4">Continue reading</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {allRelated.map((rp) => (
+                  <Link
+                    key={rp.slug}
+                    href={`/insights/${rp.slug}`}
+                    className="group block border border-white/8 rounded bg-bg0/40 hover:bg-bg0/70 hover:border-accent/30 transition-all duration-300 p-5"
+                  >
+                    <span className="text-[10px] font-semibold uppercase tracking-widest text-accent mb-2 block">
+                      {rp.category}
+                    </span>
+                    <h3 className="text-sm font-light text-white group-hover:text-accent transition-colors leading-snug">
+                      {rp.title}
+                    </h3>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* CTA */}
           <div className="border border-white/10 rounded-lg p-8 sm:p-10 mt-16 text-center">

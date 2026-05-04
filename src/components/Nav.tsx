@@ -9,11 +9,11 @@ const navLinks = [
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy" },
   { label: "Yacht Management", href: "/yacht-management" },
+  { label: "Insights", href: "/insights" },
 ];
 
 const aboutLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Insights", href: "/insights" },
 ];
 
 const toolLinks = [

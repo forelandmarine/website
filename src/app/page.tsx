@@ -2,8 +2,30 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, ButtonOutline, ServiceCard } from "@/components/ui";
 import ScrollHint from "@/components/ScrollHint";
+
+const featuredInsights = [
+  {
+    slug: "how-to-buy-your-first-superyacht",
+    category: "New Build",
+    title: "How to Buy Your First Superyacht",
+    description: "A practical guide for first-time owners covering budgeting, new build vs pre-owned, team selection and the mistakes that cost the most.",
+  },
+  {
+    slug: "j-class-yacht-management",
+    category: "Yacht Management",
+    title: "J Class Yacht Management",
+    description: "What managing a J Class involves: rig, sails, race logistics and the operational rhythms unique to these vessels.",
+  },
+  {
+    slug: "what-is-a-yacht-owners-representative",
+    category: "New Build",
+    title: "What is a Yacht Owner's Representative?",
+    description: "The role of an independent owner's representative during a new build, and why early appointment matters.",
+  },
+];
 
 function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -103,7 +125,7 @@ export default function HomePage() {
               Smooth sailing.<br />Every time.
             </h1>
             <p className="text-lg text-muted leading-relaxed mb-10">
-              Foreland Marine provides Project Management, Representation and Consultancy services to some of the world&apos;s most famous yachts.
+              Independent superyacht consultancy. Project management, owner&apos;s representation and yacht management for sailing and motor yachts from 24 to 60 metres, worldwide.
             </p>
             <div className="hidden sm:flex flex-col sm:flex-row gap-4">
               <ButtonPrimary href="#services">Our Services</ButtonPrimary>
@@ -119,7 +141,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14" data-animate="fade-up">
             <SectionLabel>Our Services</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl font-light text-white">Expert marine consultancy, from<br />stem to stern.</h2>
+            <h2 className="text-3xl sm:text-4xl font-light text-white">Independent superyacht refit, new build<br />and yacht management consultancy.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
             <ServiceCard
@@ -284,6 +306,41 @@ export default function HomePage() {
                 Our team includes Captains, unlimited Chief Engineers, Naval Architects, Fleet Managers and Surveyors. Foreland Marine is SYBAss accredited and registered on the Yacht Owner&apos;s Representative Register (YORR).
               </div>
             </details>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* INSIGHTS TEASER */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4" data-animate="fade-up">
+            <div>
+              <SectionLabel>Insights</SectionLabel>
+              <h2 className="text-3xl sm:text-4xl font-light text-white">Industry knowledge,<br />openly shared.</h2>
+            </div>
+            <Link href="/insights" className="text-sm text-accent hover:text-white transition-colors self-start sm:self-end">
+              All articles &rarr;
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-animate-stagger>
+            {featuredInsights.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/insights/${post.slug}`}
+                className="group block border border-white/8 rounded bg-bg0/40 hover:bg-bg0/70 hover:border-accent/30 transition-all duration-300 p-6 sm:p-8"
+                data-animate="fade-up"
+              >
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-accent mb-4 block">
+                  {post.category}
+                </span>
+                <h3 className="text-lg font-light text-white group-hover:text-accent transition-colors mb-3 leading-snug">
+                  {post.title}
+                </h3>
+                <p className="text-sm text-muted leading-relaxed">{post.description}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
