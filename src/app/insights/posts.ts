@@ -11,6 +11,87 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "owners-representative-vs-project-manager-vs-broker",
+    title: "Owner's Representative vs Project Manager vs Broker: What's the Difference?",
+    description:
+      "The three roles get conflated in superyacht buying. They are not the same. A short, plain explanation of what each does, who pays them, and why the difference matters when you are spending serious money.",
+    date: "2026-05-06",
+    category: "New Build",
+    readTime: "8 min read",
+    keywords: [
+      "owner's representative vs project manager",
+      "owner's representative vs broker",
+      "yacht broker vs owner's representative",
+      "yacht project manager",
+      "what does an owner's representative do",
+      "yacht buying roles",
+      "superyacht buying process",
+    ],
+    content: `<p>Three roles get routinely conflated in superyacht buying: the broker, the project manager, and the yacht <a href="/owners-representation">owner's representative</a>. The titles get used interchangeably in pitch decks and websites. Owners arrive at the table with no clear sense of which is which, who works for whom, or who is paid by what. The confusion is not accidental. It tends to suit the firms that benefit from being able to wear all three hats at once.</p>
+
+<p>This article does the simple, useful work of separating the three. What each role does, who pays for it, what their incentive is, and why the difference matters when an owner is committing real money to a build, a refit, or a brokerage transaction.</p>
+
+<h2>The Broker</h2>
+
+<p>A broker finds the yacht or the yard. On a brokerage purchase, they introduce the buyer to a seller and run the transaction through to closing. On a new build, a broker may introduce an owner to one or more shipyards. They are paid by commission, typically five to ten percent of the deal, and that commission is paid by the seller side, the yard, or in some cases split between both.</p>
+
+<p>A broker's incentive is to close. That can align with the buyer's interest. A broker who closes deals that do not work out has a short career. The reputational pressure on the established brokerage houses is real, and there are individual brokers in the industry whose advice has saved their clients meaningful sums. But the structure of the role is one of intermediation. The broker stands between buyer and seller, and the commission only triggers if a deal happens.</p>
+
+<p>The structural problem is that a buyer asking a broker "should I do this deal?" is asking someone whose income depends on the answer being "yes". That is not a moral failing of brokers. It is an inevitable feature of how the role is paid. A buyer needs someone in the room whose income does not depend on the deal closing. That someone is not the broker.</p>
+
+<h2>The Project Manager</h2>
+
+<p>A project manager runs the build or the refit on the ground. They live at the yard for some or all of the build period, attend production meetings, manage the day-to-day flow of decisions, and chase the schedule. The role is real and necessary. No new build above 30 metres delivers without one.</p>
+
+<p>The wrinkle is who employs the project manager. On most projects, the project manager is paid by the yard or the contractor. Their incentive is to deliver against the contract that exists. They are very rarely empowered to challenge whether the contract is the right one, whether the specification is being honoured in spirit as well as letter, or whether change orders are being priced fairly. That is not what they are there to do.</p>
+
+<p>A yard-employed project manager is the right person to run the build. They are not the right person to represent the owner's interests against the build. The two functions are different, and conflating them puts the owner on the back foot at exactly the moments when an independent voice is most needed: contract review, change orders, milestone payment claims, snag list resolution, and warranty claims after delivery.</p>
+
+<h2>The Owner's Representative</h2>
+
+<p>A yacht owner's representative sits on the buyer's side of the table from the start. They review the deal before it is signed, supervise the build against that deal, manage acceptance at delivery, and handle the warranty period. They are paid by the owner, on a fixed scope agreed at the start of the engagement, with no commission element and no relationship with the yard or any supplier on the project.</p>
+
+<p>The role exists because the broker and the project manager, however good, are not paid by the buyer alone. The owner's representative is. That single fact is what makes the difference. There is no adjacent business that benefits when the owner spends more, when the contract is weaker, when defects are quietly accepted at delivery, or when warranty claims are dropped. The representative makes more money by saving the owner more money. That is the alignment the owner is paying for.</p>
+
+<p>It is worth being precise about what independence means here. A genuinely independent yacht owner's representative receives no commission from the yard, no referral fee from the broker, no kickback from any supplier, and no management contract that activates the moment the yacht is delivered. The fee is fixed, owner-paid, and unchanged whether the build comes in on or over budget. The Yacht Owner's Representative Register Code of Conduct exists to enforce exactly this. <a href="/owners-representation">Learn more about how owner's representation works in practice</a>.</p>
+
+<h2>Side by Side</h2>
+
+<p>It helps to see the three roles compared on the variables that actually matter to the owner.</p>
+
+<ul>
+<li><strong>Who they work for:</strong> Broker works for whoever pays the commission, which is rarely only the buyer. Project manager works for the yard or contractor that employs them. Owner's representative works for the owner alone.</li>
+<li><strong>How they're paid:</strong> Broker by percentage commission on the deal. Project manager by salary or day rate from the yard. Owner's representative by fixed fee from the owner, not linked to build cost.</li>
+<li><strong>Their incentive:</strong> Broker incentive is to close. Project manager incentive is to deliver against the existing contract. Owner's representative incentive is to deliver the vessel to specification, on time, within budget, with the warranty claims paid.</li>
+<li><strong>What they review:</strong> Broker reviews the market and the offering. Project manager reviews the build schedule and the contract scope. Owner's representative reviews everything, including the broker's introduction and the yard's contract, before any of it is signed.</li>
+<li><strong>Where they sit during difficult conversations:</strong> Broker sits between buyer and seller, looking for the close. Project manager sits inside the yard, looking to deliver against the contract. Owner's representative sits next to the owner, asking whether the contract being delivered is the right one.</li>
+</ul>
+
+<h2>Edge Cases</h2>
+
+<p>Two edge cases are worth flagging because they are the most common ways the distinction gets blurred.</p>
+
+<p>First, brokerage houses with technical departments. Several of the larger brokerages run technical teams that they describe as project management or new build advisory. The honest description is that these teams exist as a relationship-retention mechanism: the brokerage stays in the room during the build so they remain the first call on the next transaction. That is a legitimate business model. It is not, however, equivalent to independent owner's representation, even when the team is technically excellent. The brokerage's commercial interest is to keep the client. The independent owner's representative's commercial interest is to deliver the project. These are not always in conflict, but they are not the same thing.</p>
+
+<p>Second, naval architects acting as owner's representatives. Some respected naval architecture practices offer to oversee the build of yachts they have designed. The case for is real: the designer knows the design intent better than anyone. The case against is also real: the designer has a continuing commercial relationship with the yard, often across multiple projects, and that relationship can quietly soften the willingness to challenge yard decisions. Where this arrangement works, it is because the designer has structurally separated the design and the representation functions and disclosed every commercial relationship in writing. That is rarer than the marketing suggests.</p>
+
+<h2>Why This Matters in Practice</h2>
+
+<p>The cost of getting these roles confused shows up two and three years into the project. The contract was signed without independent review. The payment schedule was tied to calendar dates rather than verifiable progress milestones. The change orders accumulated without scrutiny. The snag list at delivery ran to three figures, was accepted under time pressure, and the warranty period closed before half of it was resolved. None of this requires bad faith from anyone involved. It requires only that the owner did not have a person at the table whose entire job was to advocate for the owner's position.</p>
+
+<p>An owner's representative is the cheapest insurance against that outcome. Full new build representation typically runs at one to three percent of the contract value, scoped at the start and not linked to the final cost. Refit representation is usually a fixed monthly fee. Both numbers are recovered many times over by the contract terms, change order discipline, and warranty management that the role delivers. The case is not difficult to make on the spreadsheet. The case is difficult to make only when the owner is being told, by people who would prefer to hold all three roles at once, that the distinctions in this article do not really matter.</p>
+
+<p>They do.</p>
+
+<blockquote>You can buy a yacht with only a broker. People do. The cost of doing so usually shows up two years later, in disputes the contract did not anticipate.</blockquote>
+
+<h2>Where Foreland Fits</h2>
+
+<p>Foreland Marine is structurally one of the three roles, not all three. We are independent owner's representatives. We do not broker yacht sales, we do not earn commission from yards, suppliers, or designers, and we do not run management contracts that depend on a particular yacht being delivered. The fee for our representation is paid by the owner, scoped at the start of the engagement, and unchanged whether the build comes in on or over budget. The team is SYBAss accredited and YORR registered.</p>
+
+<p>If you are at the early stage of a new build or refit and want a confidential first conversation about how the role would fit your project, <a href="/owners-representation">see our owner's representation service</a> or <a href="/contact">get in touch</a>. There is no fee for the initial conversation and no obligation.</p>`,
+  },
+  {
     slug: "how-to-buy-your-first-superyacht",
     title:
       "How to Buy Your First Superyacht: A Practical Guide for New Owners",
