@@ -25,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
 {
+      url: `${baseUrl}/owners-representation`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/new-build`,
       lastModified: new Date(),
       changeFrequency: "monthly",
