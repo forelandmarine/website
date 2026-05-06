@@ -3,6 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      {
+        source: '/new-build',
+        destination: '/owners-representation',
+        permanent: true,
+      },
       // Old /blog/ to /insights/ redirects (301)
       {
         source: '/blog/navigating-london-s-top-yachting-shipyards--a-local-s-guide',

@@ -39,7 +39,7 @@ function formatDate(dateStr: string) {
 }
 
 const SERVICE_LINKS: Record<string, { href: string; label: string }> = {
-  "New Build": { href: "/new-build", label: "New Build Owner's Representation" },
+  "New Build": { href: "/owners-representation", label: "New Build Owner's Representation" },
   "Refit": { href: "/refit", label: "Refit Project Management" },
   "Yacht Management": { href: "/yacht-management", label: "Yacht Management" },
   "Technical": { href: "/technical-consultancy", label: "Technical Consultancy" },

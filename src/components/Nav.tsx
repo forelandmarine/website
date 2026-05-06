@@ -5,8 +5,7 @@ import Image from "next/image";
 import { useState, useRef, useCallback, useEffect } from "react";
 
 const navLinks = [
-  { label: "Owner's Representation", href: "/owners-representation" },
-  { label: "New Build", href: "/new-build" },
+  { label: "New Build", href: "/owners-representation" },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy" },
   { label: "Yacht Management", href: "/yacht-management" },

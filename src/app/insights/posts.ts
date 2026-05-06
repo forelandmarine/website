@@ -88,7 +88,7 @@ export const posts: Post[] = [
 
 <p>A new build gives you exactly the yacht you want, designed and built to your specification. You get modern systems, current naval architecture, a builder's warranty, and the satisfaction of creating something from scratch. For owners with specific requirements, whether that is a particular sailing performance profile, an unusual interior layout, or cutting-edge environmental systems, a new build may be the only way to get what you want.</p>
 
-<p>The trade-offs are time and complexity. A new build in the 35 to 55 metre range typically takes two to four years from contract to delivery. The process involves hundreds of decisions, from hull form and general arrangement through to the finish on the cabin door handles. Managing this process effectively requires either significant personal time and expertise or, more practically, a professional <a href="/new-build">owner's representative</a> who acts as your advocate throughout the build. An owner's rep ensures the yard delivers what was promised, manages change orders, monitors build quality, and protects your interests during what is inevitably a complex and expensive project.</p>
+<p>The trade-offs are time and complexity. A new build in the 35 to 55 metre range typically takes two to four years from contract to delivery. The process involves hundreds of decisions, from hull form and general arrangement through to the finish on the cabin door handles. Managing this process effectively requires either significant personal time and expertise or, more practically, a professional <a href="/owners-representation">owner's representative</a> who acts as your advocate throughout the build. An owner's rep ensures the yard delivers what was promised, manages change orders, monitors build quality, and protects your interests during what is inevitably a complex and expensive project.</p>
 
 <h3>The Refit Path</h3>
 
@@ -424,7 +424,7 @@ export const posts: Post[] = [
 
 <p>For a comprehensive refit of a 40-metre performance sailing yacht, including rig work, appendage modifications, systems upgrades, interior refurbishment, and paint, budget EUR 3 million to EUR 8 million depending on scope and specification. This is a significant investment, but a well-executed refit can extend the yacht's competitive and operational life by 10 to 15 years.</p>
 
-<p>If you are planning a refit for a performance sailing yacht, whether a J Class, a maxi, or a high-performance cruiser-racer, <a href="/refit">Foreland Marine</a> offers independent project management and <a href="/technical-consultancy">technical consultancy</a> services. We work on behalf of the owner, not the yard, ensuring that the project is delivered on specification, on budget, and on schedule. We also advise on <a href="/new-build">new build</a> programmes for owners commissioning a new performance sailing yacht. <a href="/contact">Get in touch</a> to discuss your project.</p>`,
+<p>If you are planning a refit for a performance sailing yacht, whether a J Class, a maxi, or a high-performance cruiser-racer, <a href="/refit">Foreland Marine</a> offers independent project management and <a href="/technical-consultancy">technical consultancy</a> services. We work on behalf of the owner, not the yard, ensuring that the project is delivered on specification, on budget, and on schedule. We also advise on <a href="/owners-representation">new build</a> programmes for owners commissioning a new performance sailing yacht. <a href="/contact">Get in touch</a> to discuss your project.</p>`,
   },
   {
     slug: "sailing-vs-motor-yacht-management-differences",
@@ -1779,7 +1779,7 @@ export const posts: Post[] = [
 
 <h2>What Does a Yacht Owner's Representative Do?</h2>
 
-<p>A yacht owner's representative is an independent professional who acts on behalf of the owner throughout a <a href="/new-build">new build</a> or major refit. The primary function is to protect the owner's position in dealings with the shipyard, designers, subcontractors, and classification societies. This is not a passive advisory role. The owner's representative is actively involved in decision-making, quality control, financial oversight, and contractual enforcement from before contract signature through to the end of the warranty period.</p>
+<p>A yacht owner's representative is an independent professional who acts on behalf of the owner throughout a <a href="/owners-representation">new build</a> or major refit. The primary function is to protect the owner's position in dealings with the shipyard, designers, subcontractors, and classification societies. This is not a passive advisory role. The owner's representative is actively involved in decision-making, quality control, financial oversight, and contractual enforcement from before contract signature through to the end of the warranty period.</p>
 
 <p>The need for the role arises from a basic asymmetry. Shipyards are experienced commercial enterprises that build yachts every day. Most yacht owners, by contrast, undertake a new build or significant refit once or twice in a lifetime. The knowledge gap is substantial. A yacht owners representative bridges that gap with the technical expertise and project management discipline needed to hold the yard accountable to the deal that was signed.</p>
 
@@ -1853,7 +1853,7 @@ export const posts: Post[] = [
 
 <h3>SYBAss Accreditation</h3>
 
-<p>The Superyacht Builders Association (SYBAss) sets the professional standard for owner's representation in the superyacht industry. SYBAss accreditation is recognised by member shipyards worldwide as confirmation that a representative has the technical knowledge, professional conduct, and operational experience required to oversee <a href="/new-build">new build projects</a> effectively. Foreland Marine is a SYBAss accredited company.</p>
+<p>The Superyacht Builders Association (SYBAss) sets the professional standard for owner's representation in the superyacht industry. SYBAss accreditation is recognised by member shipyards worldwide as confirmation that a representative has the technical knowledge, professional conduct, and operational experience required to oversee <a href="/owners-representation">new build projects</a> effectively. Foreland Marine is a SYBAss accredited company.</p>
 
 <h3>Yacht Owner's Representative Register (YORR)</h3>
 
@@ -1881,7 +1881,7 @@ export const posts: Post[] = [
 
 <blockquote>The cheapest insurance an owner can buy at the start of a new build or major refit is a structurally independent set of eyes that gets paid the same regardless of what the owner decides. That is the entire purpose of yacht owner's representation. Anything else is a service in name only.</blockquote>
 
-<p>If you are at any stage of a new build or refit and want a second opinion on the structure of the deal, the strength of the contract, or the choice of yard, <a href="/owners-representation">explore our owner's representation service</a>, <a href="/new-build">our new build services</a>, or <a href="/contact">get in touch</a> to arrange a confidential first conversation. There is no fee for the initial conversation and no obligation.</p>`,
+<p>If you are at any stage of a new build or refit and want a second opinion on the structure of the deal, the strength of the contract, or the choice of yard, <a href="/owners-representation">explore our owner's representation service</a>, <a href="/owners-representation">our new build services</a>, or <a href="/contact">get in touch</a> to arrange a confidential first conversation. There is no fee for the initial conversation and no obligation.</p>`,
   },
   {
     slug: "why-independent-yacht-management-matters",
@@ -2045,7 +2045,7 @@ export const posts: Post[] = [
 
 <blockquote>Carbon composite construction rewards rigour and punishes shortcuts. The difference between a well-built carbon yacht and a poorly built one is invisible from the outside &mdash; but it determines everything about the vessel's safety, performance, and longevity.</blockquote>
 
-<p>If you are considering a carbon fibre sailing yacht or are already in the early stages of a composite <a href="/new-build">new build project</a>, contact us to discuss how independent technical oversight can protect your investment from layup to launch.</p>`,
+<p>If you are considering a carbon fibre sailing yacht or are already in the early stages of a composite <a href="/owners-representation">new build project</a>, contact us to discuss how independent technical oversight can protect your investment from layup to launch.</p>`,
   },
   {
     slug: "refit-for-performance-upgrading-a-racing-programme",
@@ -2219,7 +2219,7 @@ export const posts: Post[] = [
 
 <blockquote>The yard you choose will be your partner for the next three to five years. That decision deserves the same rigour and independent scrutiny that you would apply to any major investment &mdash; because that is exactly what it is.</blockquote>
 
-<p>If you are in the early stages of planning a new build and want to ensure that yard selection is handled with the thoroughness it demands, <a href="/new-build">learn more about our new build services</a> or get in touch to discuss how independent owner's representation can protect your project from day one.</p>`,
+<p>If you are in the early stages of planning a new build and want to ensure that yard selection is handled with the thoroughness it demands, <a href="/owners-representation">learn more about our new build services</a> or get in touch to discuss how independent owner's representation can protect your project from day one.</p>`,
   },
   {
     slug: "the-role-of-an-owners-representative",
@@ -2291,7 +2291,7 @@ export const posts: Post[] = [
 
 <blockquote>A new build project is a partnership between owner, yard, and designer. The owner's representative ensures that partnership remains balanced and that quality is never compromised by commercial pressure.</blockquote>
 
-<p>If you are considering a new build project or are already in the early stages, speak to us about how independent representation can protect your investment from the outset. Learn more about our <a href="/new-build">new build services</a>, which span contract negotiation, yard selection, design review, build oversight, budget control, quality assurance, commissioning, and handover.</p>`,
+<p>If you are considering a new build project or are already in the early stages, speak to us about how independent representation can protect your investment from the outset. Learn more about our <a href="/owners-representation">new build services</a>, which span contract negotiation, yard selection, design review, build oversight, budget control, quality assurance, commissioning, and handover.</p>`,
   },
   {
     slug: "ism-compliance-guide-for-yacht-owners",

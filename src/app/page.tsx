@@ -160,7 +160,7 @@ export default function HomePage() {
               data-animate="fade-up"
               title="New Build Owner's Representation"
               description="Accredited by the Superyacht Builders Association (SYBAss), Foreland Marine provides expert leadership, management and representation on behalf of yacht owners for new build projects."
-              href="/new-build"
+              href="/owners-representation"
             />
           </div>
         </div>

@@ -2,9 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const services = [
-  { label: "Owner's Representation", href: "/owners-representation" },
   { label: "Yacht Management", href: "/yacht-management" },
-  { label: "New Build", href: "/new-build" },
+  { label: "New Build", href: "/owners-representation" },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy" },
 ];

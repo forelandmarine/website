@@ -292,7 +292,7 @@ export default function YachtManagementPage() {
       {/* RELATED SERVICES & FURTHER READING */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <p className="text-sm text-muted">
-          Related: <Link href="/new-build" className="text-accent hover:text-white transition-colors">New Build</Link> · <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link> · <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link>
+          Related: <Link href="/owners-representation" className="text-accent hover:text-white transition-colors">New Build</Link> · <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link> · <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link>
         </p>
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">

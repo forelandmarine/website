@@ -46,7 +46,7 @@ Key differentiators:
 - Transparent reporting: itemised expenditure, budget variance commentary, full audit trails, no hidden fees
 
 ### New Build Owner's Representation
-URL: https://forelandmarine.com/new-build
+URL: https://forelandmarine.com/owners-representation
 
 Accredited owner's representation and build management for new yacht projects worldwide. SYBAss accredited and YORR registered.
 
@@ -361,7 +361,7 @@ A: Email info@forelandmarine.com or visit forelandmarine.com/contact.
 
 - Home: https://forelandmarine.com
 - Yacht Management: https://forelandmarine.com/yacht-management
-- New Build: https://forelandmarine.com/new-build
+- Owner's Representation: https://forelandmarine.com/owners-representation
 - Refit: https://forelandmarine.com/refit
 - Technical Consultancy: https://forelandmarine.com/technical-consultancy
 - About: https://forelandmarine.com/about
