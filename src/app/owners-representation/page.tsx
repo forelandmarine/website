@@ -377,6 +377,35 @@ export default function NewBuildPage() {
 
       <HorizonLine />
 
+      {/* ACCREDITATION VERIFY */}
+      <section className="py-12 sm:py-14 bg-bg0">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="border border-white/8 bg-bg1 p-8 sm:p-10 flex flex-col md:flex-row items-center gap-8">
+            <div className="flex items-center gap-8 flex-shrink-0">
+              <Image src="/logos/sybass-white.png" alt="SYBAss accredited" width={140} height={42} />
+              <Image src="/logos/yacht-owners-register-white.png" alt="Yacht Owner's Representative Register" width={140} height={56} />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-lg font-light text-white mb-2">Accredited and on the public register</h2>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                Foreland Marine is accredited by the Superyacht Builders Association (SYBAss) and listed on the Yacht Owner&apos;s Representative Register, maintained by the Superyacht Alliance. Owners are welcome to verify our standing directly.
+              </p>
+              <a
+                href="https://superyachtalliance.org/register/register-table/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-accent hover:text-white transition-colors"
+              >
+                Visit the Yacht Owner&apos;s Representative Register
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
       {/* RELATED SERVICES & FURTHER READING */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <p className="text-sm text-muted">
