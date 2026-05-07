@@ -477,20 +477,34 @@ export default function AboutPage() {
             </div>
             {/* YORR */}
             <div className="bg-bg2 border border-white/8 p-8 flex flex-col items-center text-center" data-animate="scale-in">
-              <div className="mb-6 flex items-center justify-center h-20">
+              <a
+                href="https://superyachtalliance.org/register/register-table/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Foreland Marine on the Yacht Owner's Representative Register"
+                className="mb-6 flex items-center justify-center h-20 transition-opacity hover:opacity-80"
+              >
                 <Image
                   src="/logos/yacht-owners-register-white.png"
                   alt="Yacht Owner's Representative Register"
                   width={200}
                   height={80}
                 />
-              </div>
+              </a>
               <h3 className="text-base font-semibold text-white mb-3">
                 YORR Registered
               </h3>
               <p className="text-sm text-muted leading-relaxed">
-                The Yacht Owner&apos;s Representative Register is an
-                independent record of qualified professionals who meet
+                The{" "}
+                <a
+                  href="https://superyachtalliance.org/register/register-table/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-white transition-colors"
+                >
+                  Yacht Owner&apos;s Representative Register
+                </a>{" "}
+                is an independent record of qualified professionals who meet
                 defined standards of competence and adhere to a strict code
                 of conduct. Registration provides owners with confidence
                 that their representative operates with integrity,

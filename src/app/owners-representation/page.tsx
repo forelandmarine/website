@@ -55,6 +55,32 @@ export default function NewBuildPage() {
               provider: {
                 "@type": "Organization",
                 name: "Foreland Marine Consultancy Ltd",
+                memberOf: [
+                  {
+                    "@type": "Organization",
+                    name: "Yacht Owner's Representative Register",
+                    alternateName: "YORR",
+                    url: "https://superyachtalliance.org/register/register-table/",
+                    sameAs: "https://superyachtalliance.org/register/register-table/",
+                  },
+                  {
+                    "@type": "Organization",
+                    name: "Superyacht Builders Association",
+                    alternateName: "SYBAss",
+                    url: "https://www.sybass.org",
+                  },
+                ],
+                hasCredential: {
+                  "@type": "EducationalOccupationalCredential",
+                  name: "Yacht Owner's Representative",
+                  credentialCategory: "Professional Registration",
+                  recognizedBy: {
+                    "@type": "Organization",
+                    name: "Yacht Owner's Representative Register",
+                    url: "https://superyachtalliance.org/register/register-table/",
+                  },
+                  url: "https://superyachtalliance.org/register/register-table/",
+                },
               },
               areaServed: "Worldwide",
               description:
@@ -135,7 +161,15 @@ export default function NewBuildPage() {
             </div>
             <div className="hidden lg:flex flex-col items-center gap-6 flex-shrink-0 mt-[50px] relative z-20">
               <Image src="/logos/sybass-white.png" alt="SYBAss accredited" width={240} height={73} />
-              <Image src="/logos/yacht-owners-register-white.png" alt="Yacht Owner's Representative Register" width={240} height={96} />
+              <a
+                href="https://superyachtalliance.org/register/register-table/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Foreland Marine on the Yacht Owner's Representative Register"
+                className="transition-opacity hover:opacity-80"
+              >
+                <Image src="/logos/yacht-owners-register-white.png" alt="Yacht Owner's Representative Register" width={240} height={96} />
+              </a>
             </div>
           </div>
         </div>
@@ -197,7 +231,16 @@ export default function NewBuildPage() {
             <div data-animate="slide-left">
               <h3 className="text-lg font-light text-white mb-5">Code of Conduct</h3>
               <p className="text-muted leading-relaxed text-sm mb-6">
-                As registered Owner&apos;s Representatives, we adhere to the Yacht Owner&apos;s Representative Register Code of Conduct. Its core principles:
+                As registered Owner&apos;s Representatives, we adhere to the{" "}
+                <a
+                  href="https://superyachtalliance.org/register/register-table/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-white transition-colors"
+                >
+                  Yacht Owner&apos;s Representative Register
+                </a>{" "}
+                Code of Conduct. Its core principles:
               </p>
               <div className="space-y-4">
                 <div className="border-l-2 border-accent/40 pl-5">
