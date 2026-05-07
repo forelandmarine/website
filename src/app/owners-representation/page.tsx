@@ -38,15 +38,27 @@ export default function NewBuildPage() {
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "Service",
-              serviceType: "New Build Owner's Representation",
+              "@type": "ProfessionalService",
+              "@id": "https://forelandmarine.com/owners-representation#service",
+              name: "Yacht Owner's Representation",
+              alternateName: [
+                "Yacht Owners Representation",
+                "Superyacht Representation",
+                "Superyacht Owner's Representation",
+                "Yacht New Build",
+                "Yacht New Build Project Management",
+                "New Build Owner's Representation",
+                "Independent Owner's Representative",
+                "Yacht Owner's Representative",
+              ],
+              serviceType: "Yacht Owner's Representation",
               provider: {
                 "@type": "Organization",
                 name: "Foreland Marine Consultancy Ltd",
               },
               areaServed: "Worldwide",
               description:
-                "Owner's representation and build management for new yacht projects. Accredited by SYBAss. Foreland Marine.",
+                "Independent yacht owner's representation and superyacht representation for yacht new build and refit, 24 to 60 metres. SYBAss accredited, YORR registered. No yard commissions, no broker referral fees, no supplier kickbacks. Fee paid by the owner only.",
             },
             {
               "@context": "https://schema.org",

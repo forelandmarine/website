@@ -1,20 +1,39 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "New Build Owner's Representation & Project Management",
+  title: "Yacht Owner's Representation | Yacht New Build & Refit",
   description:
-    "Owner's representation and build management for new yacht projects. Accredited by SYBAss. Foreland Marine.",
+    "Independent yacht owner's representation and superyacht representation for yacht new build and refit, 24 to 60 metres. SYBAss accredited, YORR registered. No yard commissions, no broker referral fees, no supplier kickbacks. Foreland Marine.",
   keywords: [
+    "yacht owner's representation",
+    "yacht owners representation",
     "yacht owner's representative",
+    "superyacht representation",
+    "superyacht owner's representation",
+    "yacht new build",
+    "yacht new build project management",
     "new build owner's representation",
-    "SYBAss accredited",
-    "independent owner's representative",
     "new build project management",
+    "independent owner's representative",
+    "independent yacht new build",
+    "performance sailing yacht new build",
+    "J Class new build",
+    "carbon composite yacht new build",
+    "SYBAss accredited",
+    "YORR registered",
   ],
   openGraph: {
-    title: "New Build Owner's Representation & Project Management",
+    title: "Yacht Owner's Representation | Yacht New Build & Refit",
     description:
-      "Independent owner's representation for new yacht builds. SYBAss accredited project management from concept through sea trials and delivery.",
+      "Independent yacht owner's representation and superyacht representation for yacht new build and refit, 24 to 60 metres. SYBAss accredited, YORR registered.",
+    type: "website",
+    url: "https://forelandmarine.com/owners-representation",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yacht Owner's Representation | Yacht New Build",
+    description:
+      "Independent yacht owner's representation and superyacht representation. SYBAss accredited, YORR registered, no commissions.",
   },
   alternates: {
     canonical: "https://forelandmarine.com/owners-representation",

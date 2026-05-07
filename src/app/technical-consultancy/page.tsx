@@ -121,14 +121,23 @@ export default function TechnicalConsultancyPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              serviceType: "Marine Technical Consultancy",
+              "@id": "https://forelandmarine.com/technical-consultancy#service",
+              name: "Yacht Technical Consultancy",
+              alternateName: [
+                "Superyacht Technical Consultancy",
+                "Yacht Racing Performance Consultancy",
+                "Yacht Race Management",
+                "Yacht Logistics",
+                "Marine Technical Consultancy",
+              ],
+              serviceType: "Yacht Technical Consultancy",
               provider: {
                 "@type": "Organization",
                 name: "Foreland Marine Consultancy Ltd",
               },
               areaServed: "Worldwide",
               description:
-                "Expert technical consultancy across yacht racing performance, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
+                "Specialist yacht technical consultancy across yacht racing, race management, yacht logistics, hydraulic and PLC control systems, navigation and communication systems, naval architecture, mechanical installation, and AV/IT automation.",
             },
             {
               "@context": "https://schema.org",

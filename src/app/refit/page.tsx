@@ -40,14 +40,23 @@ export default function RefitPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              serviceType: "Yacht Refit Project Management",
+              "@id": "https://forelandmarine.com/refit#service",
+              name: "Yacht Refit Management",
+              alternateName: [
+                "Yacht Refit Project Management",
+                "Superyacht Refit Management",
+                "Independent Yacht Refit Management",
+                "Sailing Yacht Refit Management",
+                "Motor Yacht Refit Management",
+              ],
+              serviceType: "Yacht Refit Management",
               provider: {
                 "@type": "Organization",
                 name: "Foreland Marine Consultancy Ltd",
               },
               areaServed: "Worldwide",
               description:
-                "Refit project management for motor and sailing yachts over 24m. 25 large yacht projects across 7 countries, from high-profile racing programmes to in-depth motor yacht rebuilds.",
+                "Independent yacht refit management for motor and sailing yachts over 24 metres. 25 large yacht refit projects across 7 countries, from high-profile racing programmes to in-depth motor yacht rebuilds. SYBAss accredited.",
             },
             {
               "@context": "https://schema.org",

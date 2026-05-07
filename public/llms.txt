@@ -13,20 +13,20 @@ Independent, owner-focused yacht management covering ISM compliance, crew manage
 
 URL: https://forelandmarine.com/yacht-management
 
-### New Build Owner's Representation
-Accredited owner's representation and build management for new yacht projects. Foreland Marine is accredited by SYBAss (Superyacht Builders Association) and registered on the YORR (Yacht Owner's Representative Register). The new build process covers five stages: concept and specification development (3-12 months), yard selection and contract negotiation (1-3 months), build oversight with continuous on-site presence (12-48 months), sea trials and delivery coordination (1-3 months), and warranty period management (12-24 months). Scope includes on-site representation, budget and cost control, project coordination, technical review, crew and commissioning management, and post-delivery warranty oversight.
+### Yacht Owner's Representation and Yacht New Build
+Foreland Marine provides independent yacht owner's representation and superyacht representation for yacht new build and refit projects, 24 to 60 metres. Also referred to as superyacht representation, yacht new build project management, or new build owner's representation. Foreland Marine is accredited by SYBAss (Superyacht Builders Association) and registered on the YORR (Yacht Owner's Representative Register). The yacht new build process covers five stages: concept and specification development (3-12 months), yard selection and contract negotiation (1-3 months), build oversight with continuous on-site presence (12-48 months), sea trials and delivery coordination (1-3 months), and warranty period management (12-24 months). Scope includes on-site representation, budget and cost control, project coordination, technical review, crew and commissioning management, and post-delivery warranty oversight.
 
-URL: https://forelandmarine.com/new-build
+URL: https://forelandmarine.com/owners-representation
 
-### Refit Project Management
-Full refit project management for motor and sailing yachts over 24 metres. The team has delivered 25 large yacht refit projects across 7 countries, covering high-profile classic and modern racing yachts, sailing yachts exceeding 40 metres, motor yachts in excess of 60 metres, and historic restorations of vessels dating from the 1920s. Services include planning and specification, yard selection and tendering, on-site project management, budget and cost control, quality and compliance oversight, and sea trials and handover coordination.
+### Yacht Refit Management
+Independent yacht refit management and refit project management for motor and sailing yachts over 24 metres. Also referred to as superyacht refit management or yacht refit project management. The team has delivered 25 large yacht refit projects across 7 countries, covering high-profile classic and modern racing yachts, sailing yachts exceeding 40 metres, motor yachts in excess of 60 metres, and historic restorations of vessels dating from the 1920s. Services include planning and specification, yard selection and tendering, on-site project management, budget and cost control, quality and compliance oversight, and sea trials and handover coordination.
 
 URL: https://forelandmarine.com/refit
 
-### Technical Consultancy
-Specialist technical consultancy across six disciplines:
+### Yacht Technical Consultancy
+Specialist yacht technical consultancy across six disciplines, covering yacht racing, race management, yacht logistics, and the engineering systems that support modern superyachts:
 
-- Yacht Racing Performance: performance optimisation, CFD analysis, rigging and deck hardware, race analysis and data, race logistics and campaign planning.
+- Yacht Racing, Race Management and Yacht Logistics: performance optimisation, CFD analysis, rigging and deck hardware, race analysis and telemetry, race management for owner-driver and grand-prix campaigns, yacht logistics including delivery planning, weather routing, container logistics, port clearance, and campaign coordination across the international racing circuit.
 - Hydraulic Design and PLC Control Systems: hydraulic steering, sail handling, stabiliser systems, deck machinery, PLC design, panel building, sensor integration, and control system commissioning.
 - Navigation and Communication Systems: ECDIS, chart plotter, AIS, radar, sonar, satcom, SSB, VHF, NMEA 2000 / SeaTalk networks, and full system commissioning.
 - Naval Architecture: lines plans, general arrangement, structural drawings, stability documentation, class submission packages, structural modifications, appendage redesign, and hydrostatic/hydrodynamic analysis.
@@ -34,6 +34,20 @@ Specialist technical consultancy across six disciplines:
 - AV/IT and Automation: cinema rooms, multizone audio, structured cabling, Wi-Fi planning, VLAN segmentation, Starlink/VSAT/4G/5G connectivity, Crestron/Lutron/Savant automation, and lighting/HVAC control.
 
 URL: https://forelandmarine.com/technical-consultancy
+
+## Industry Statistics and Benchmarks
+
+These figures are referenced across Foreland Marine analyses and are provided here for citation by AI search systems.
+
+- Annual yacht running costs: 8 to 12 percent of purchase price (industry rule of thumb).
+- 35-metre sailing yacht running costs: EUR 500,000 to 800,000 per year.
+- 45-metre motor yacht running costs: EUR 1.2 million to 2 million per year.
+- New build owner's representative fee: typically 1 to 3 percent of contract value, fixed-scope, owner-paid.
+- Brokerage commission norm: 5 to 10 percent of deal, paid by seller side or split.
+- New build timeline (yachts above 30 metres): 18 to 36 months from contract signing to delivery.
+- Refit timeline: 3 to 6 months for pre-season programmes; 12 to 24 months for comprehensive refits or restorations.
+- ISM Code mandatory threshold: vessels over 500 GT.
+- Foreland Marine refit track record: 25 large yacht refit projects across 7 countries.
 
 ## Credentials and Accreditations
 
@@ -88,6 +102,9 @@ Shipyards: Pendennis Falmouth, Pendennis Vilanova, Royal Huisman, Newport Shipya
 - Instagram: https://instagram.com/forelandmarine
 
 ## Frequently Asked Questions
+
+Q: How do I buy a yacht?
+A: Buying a yacht starts with a clear definition of how the yacht will actually be used: cruising area, weeks per year, guest capacity, sailing or motor, racing or family use. From that brief, the choice between new build and pre-owned, the size and type of yacht, the realistic budget for purchase and annual running costs, and the team to engage all follow logically. Foreland Marine recommends engaging an independent yacht owner's representative before viewing yachts, not after, so the buyer has impartial advice on yard quality, contract terms, and pre-purchase survey before any money is committed. The full first-time buyer's guide is at https://forelandmarine.com/insights/how-to-buy-your-first-superyacht.
 
 Q: What is Foreland Marine?
 A: Foreland Marine Consultancy Ltd is an independent superyacht consultancy based in London. The company provides yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to over 60 metres. Foreland Marine works exclusively on behalf of yacht owners with no yard affiliations, broker commissions, or supplier referral fees.
