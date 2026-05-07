@@ -156,7 +156,7 @@ export default function NewBuildPage() {
                 Your owner&apos;s representative,<br />every step of the way
               </h1>
               <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
-                Accredited by the Superyacht Builders Association (SYBAss), we provide independent owner&apos;s representation and build management for sailing and motor yacht new builds from 24 to 60 metres, with particular expertise in performance sailing yachts and carbon composite construction. A new build is among the most significant undertakings in yacht ownership, and we ensure the process is managed with the same care and precision as the vessel itself.
+                Independent owner&apos;s representation and build management for sailing and motor yacht new builds from 24 to 60 metres. Our consultancy bench draws on unlimited Chief Engineers, Master Mariner captains, naval architects, surveyors, members from commercial shipping, and America&apos;s Cup and SailGP sailors, with particular depth in performance sailing yachts and carbon composite construction.
               </p>
             </div>
             <div className="hidden lg:flex flex-col items-center gap-6 flex-shrink-0 mt-[50px] relative z-20">
@@ -209,29 +209,26 @@ export default function NewBuildPage() {
 
       <HorizonLine />
 
-      {/* ACCREDITATION & CODE OF CONDUCT */}
+      {/* THE TEAM */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div data-animate="slide-right">
-              <SectionLabel>Accreditation</SectionLabel>
+              <SectionLabel>The Team</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">
-                Qualified Owner&apos;s Representatives
+                Depth of experience across every discipline
               </h2>
               <p className="text-muted leading-relaxed mb-5">
-                Our team holds the Yacht Owner&apos;s Representative qualification, formally recognised by SYBAss member shipyards as the standard for owner&apos;s representation during new build projects. This accreditation ensures that our representatives have the technical competence and professional standing expected by the world&apos;s leading yards.
+                Foreland&apos;s consultancy team is drawn from the most senior practitioners in the industry. Chief Engineers hold unlimited tickets, the highest engineering qualification at sea. Captains operate to Master Mariner level, having commanded yachts and commercial vessels in every ocean.
               </p>
               <p className="text-muted leading-relaxed mb-5">
-                The role of the Owner&apos;s Representative is to act as an independent advocate for the owner throughout the build process - monitoring progress, verifying quality, reviewing costs, and ensuring the shipyard delivers to the agreed specification. It is a position of trust, sitting between the owner and the yard, and requires both deep technical knowledge and commercial judgement.
+                The technical bench is built around naval architects, surveyors, and coatings specialists with decades of yard-side experience. Colleagues from commercial shipping bring the contractual rigour and schedule discipline of regulated tonnage, and our sailing strength includes America&apos;s Cup and SailGP campaigners with first-hand knowledge of rig design, sail plans, and on-water performance.
               </p>
-              <p className="text-muted leading-relaxed">
-                Foreland Marine Consultancy is also a member of British Marine and Superyacht UK, reinforcing our commitment to the highest standards in the industry and championing British businesses.
+              <p className="text-muted leading-relaxed mb-5">
+                This breadth means every project is covered by people who have done the work themselves. When a question arises on the yard floor, on a sea trial, or during a contractual review, the answer comes from someone who has seen the issue before.
               </p>
-            </div>
-            <div data-animate="slide-left">
-              <h3 className="text-lg font-light text-white mb-5">Code of Conduct</h3>
-              <p className="text-muted leading-relaxed text-sm mb-6">
-                As registered Owner&apos;s Representatives, we adhere to the{" "}
+              <p className="text-muted/80 leading-relaxed text-sm">
+                The team is SYBAss accredited and registered on the{" "}
                 <a
                   href="https://superyachtalliance.org/register/register-table/"
                   target="_blank"
@@ -239,29 +236,36 @@ export default function NewBuildPage() {
                   className="text-accent hover:text-white transition-colors"
                 >
                   Yacht Owner&apos;s Representative Register
-                </a>{" "}
-                Code of Conduct. Its core principles:
+                </a>
+                , with membership of British Marine and Superyacht UK.
               </p>
+            </div>
+            <div data-animate="slide-left">
+              <h3 className="text-lg font-light text-white mb-5">Disciplines on the consultancy bench</h3>
               <div className="space-y-4">
                 <div className="border-l-2 border-accent/40 pl-5">
-                  <h4 className="text-sm font-semibold text-white mb-1">Integrity &amp; Objectivity</h4>
-                  <p className="text-sm text-muted leading-relaxed">Act with honesty, fairness and objectivity. Present objective facts, avoid speculation, and seek balanced agreements.</p>
+                  <h4 className="text-sm font-semibold text-white mb-1">Engineering</h4>
+                  <p className="text-sm text-muted leading-relaxed">Unlimited Chief Engineers with hands-on experience of new build, conversion, and refit projects across yachts and commercial tonnage.</p>
                 </div>
                 <div className="border-l-2 border-accent/40 pl-5">
-                  <h4 className="text-sm font-semibold text-white mb-1">Competence &amp; Expertise</h4>
-                  <p className="text-sm text-muted leading-relaxed">Full disclosure of qualifications and experience. Recognise the limits of expertise and seek additional support when required.</p>
+                  <h4 className="text-sm font-semibold text-white mb-1">Command</h4>
+                  <p className="text-sm text-muted leading-relaxed">Senior Captains to Master Mariner level, bringing operational understanding of the vessels we are helping owners build.</p>
                 </div>
                 <div className="border-l-2 border-accent/40 pl-5">
-                  <h4 className="text-sm font-semibold text-white mb-1">Owner&apos;s Interest</h4>
-                  <p className="text-sm text-muted leading-relaxed">Protect the best interests of the owner while dealing fairly with all parties. Respect the industry ideal of completing and delivering yachts.</p>
+                  <h4 className="text-sm font-semibold text-white mb-1">Naval Architecture &amp; Survey</h4>
+                  <p className="text-sm text-muted leading-relaxed">Independent inspection of structure, systems and outfitting, supported by chartered surveyors, naval architects and coatings specialists.</p>
                 </div>
                 <div className="border-l-2 border-accent/40 pl-5">
-                  <h4 className="text-sm font-semibold text-white mb-1">No Conflicts of Interest</h4>
-                  <p className="text-sm text-muted leading-relaxed">Disclose known or potential conflicts. No commissions from multiple sources without full disclosure. No bribes or facilitation payments.</p>
+                  <h4 className="text-sm font-semibold text-white mb-1">Commercial Shipping</h4>
+                  <p className="text-sm text-muted leading-relaxed">Members from commercial backgrounds applying the contractual discipline and schedule rigour of regulated shipping to private projects.</p>
                 </div>
                 <div className="border-l-2 border-accent/40 pl-5">
-                  <h4 className="text-sm font-semibold text-white mb-1">Respectful Collaboration</h4>
-                  <p className="text-sm text-muted leading-relaxed">Optimise collaboration between all parties and resolve disputes professionally. Treat everyone with respect and courtesy.</p>
+                  <h4 className="text-sm font-semibold text-white mb-1">Performance Sailing</h4>
+                  <p className="text-sm text-muted leading-relaxed">America&apos;s Cup and SailGP sailors contributing to rig specification, sail plan review, and on-water performance evaluation.</p>
+                </div>
+                <div className="border-l-2 border-accent/40 pl-5">
+                  <h4 className="text-sm font-semibold text-white mb-1">Yard Operations</h4>
+                  <p className="text-sm text-muted leading-relaxed">Project managers with delivery experience across leading European and global shipyards, including J Class and carbon composite programmes.</p>
                 </div>
               </div>
             </div>
