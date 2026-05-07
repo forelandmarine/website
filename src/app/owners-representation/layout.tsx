@@ -1,35 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Yacht New Build Project Management | Foreland Marine",
+  title: "New Build Owner's Representation & Project Management",
   description:
-    "Independent project management for yacht new builds, 24 to 60 metres. SYBAss accredited, YORR registered. No yard commissions, no broker referral fees. Sailing and motor yachts, performance sailing and J Class specialists.",
+    "Owner's representation and build management for new yacht projects. Accredited by SYBAss. Foreland Marine.",
   keywords: [
-    "yacht new build project management",
-    "yacht new build management",
-    "superyacht new build project management",
-    "new build project management",
-    "yacht new build",
-    "superyacht new build",
-    "performance sailing yacht new build",
-    "J Class new build",
-    "carbon composite yacht new build",
-    "independent yacht new build",
+    "yacht owner's representative",
+    "new build owner's representation",
     "SYBAss accredited",
-    "YORR registered",
+    "independent owner's representative",
+    "new build project management",
   ],
   openGraph: {
-    title: "Yacht New Build Project Management | Foreland Marine",
+    title: "New Build Owner's Representation & Project Management",
     description:
-      "Independent project management for yacht new builds, 24 to 60 metres. SYBAss accredited, YORR registered. No yard commissions, no broker referral fees.",
-    type: "website",
-    url: "https://forelandmarine.com/owners-representation",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Yacht New Build Project Management | Foreland Marine",
-    description:
-      "Independent project management for yacht new builds. SYBAss accredited, YORR registered, no commissions.",
+      "Independent owner's representation for new yacht builds. SYBAss accredited project management from concept through sea trials and delivery.",
   },
   alternates: {
     canonical: "https://forelandmarine.com/owners-representation",
