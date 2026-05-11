@@ -16,11 +16,11 @@ const nunitoSans = Nunito_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Yacht Management, New Build & Refit Consultancy | Foreland Marine",
+    default: "Independent Superyacht Refit & New Build Consultancy | Foreland Marine",
     template: "%s | Foreland Marine",
   },
   description:
-    "Foreland Marine provides Project Management, Representation and Consultancy services to some of the world's most famous yachts.",
+    "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. SYBAss-accredited, UK-based, acting for owners only.",
   metadataBase: new URL("https://forelandmarine.com"),
   alternates: {
     canonical: "https://forelandmarine.com",
@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Foreland Marine Consultancy",
+    title: "Independent Superyacht Refit & New Build Consultancy",
+    description:
+      "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. SYBAss-accredited, UK-based, acting for owners only.",
     images: [
       {
         url: "/images/og-default.png",
@@ -40,6 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "Independent Superyacht Refit & New Build Consultancy",
+    description:
+      "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. SYBAss-accredited, UK-based.",
   },
 };
 
