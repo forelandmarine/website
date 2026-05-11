@@ -1962,7 +1962,7 @@ export const posts: Post[] = [
 
 <blockquote>The cheapest insurance an owner can buy at the start of a new build or major refit is a structurally independent set of eyes that gets paid the same regardless of what the owner decides. That is the entire purpose of yacht owner's representation. Anything else is a service in name only.</blockquote>
 
-<p>If you are at any stage of a new build or refit and want a second opinion on the structure of the deal, the strength of the contract, or the choice of yard, <a href="/owners-representation">explore our owner's representation service</a>, <a href="/owners-representation">our new build services</a>, or <a href="/contact">get in touch</a> to arrange a confidential first conversation. There is no fee for the initial conversation and no obligation.</p>`,
+<p>If you are at any stage of a new build or refit and want a second opinion on the structure of the deal, the strength of the contract, or the choice of yard, <a href="/owners-representation">explore our owner's representation service</a>, read our guide to <a href="/insights/choosing-a-yacht-owners-representative">choosing a yacht owner's representative</a>, or <a href="/contact">get in touch</a> to arrange a confidential first conversation. There is no fee for the initial conversation and no obligation.</p>`,
   },
   {
     slug: "why-independent-yacht-management-matters",
@@ -2372,7 +2372,7 @@ export const posts: Post[] = [
 
 <blockquote>A new build project is a partnership between owner, yard, and designer. The owner's representative ensures that partnership remains balanced and that quality is never compromised by commercial pressure.</blockquote>
 
-<p>If you are considering a new build project or are already in the early stages, speak to us about how independent representation can protect your investment from the outset. Learn more about our <a href="/owners-representation">new build services</a>, which span contract negotiation, yard selection, design review, build oversight, budget control, quality assurance, commissioning, and handover.</p>`,
+<p>If you are considering a new build project or are already in the early stages, speak to us about how independent representation can protect your investment from the outset. Learn more about our <a href="/owners-representation">new build services</a>, which span contract negotiation, yard selection, design review, build oversight, budget control, quality assurance, commissioning, and handover. For a practical guide to the questions to ask before appointing a representative, see <a href="/insights/choosing-a-yacht-owners-representative">how to choose a yacht owner's representative</a>.</p>`,
   },
   {
     slug: "ism-compliance-guide-for-yacht-owners",

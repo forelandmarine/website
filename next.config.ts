@@ -74,6 +74,11 @@ const nextConfig: NextConfig = {
         destination: '/insights/understanding-yacht-management-costs-10-percent-rule',
         permanent: true,
       },
+      {
+        source: '/blog/the-essential-guide-to-superyacht-owner-s-representation--what-to-expect-and-how-to-choose-the-best-service',
+        destination: '/insights/choosing-a-yacht-owners-representative',
+        permanent: true,
+      },
       // Catch-all: any unmatched /blog/ URL goes to /insights
       {
         source: '/blog/:path*',
