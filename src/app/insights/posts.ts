@@ -3262,4 +3262,692 @@ export const posts: Post[] = [
 
 <p>If you have questions about MCA Large Yacht Code requirements, LY3 compliance for your vessel, or Red Ensign yacht registration and survey coordination, our team has extensive experience advising owners and captains across the full range of commercial yacht code obligations.</p>`,
   },
+  {
+    slug: "classic-sailing-yacht-refit",
+    title: "Classic Sailing Yacht Refit: What to Expect",
+    description:
+      "A complete guide to refitting a classic sailing superyacht. Specification, yard selection, the five phases, realistic budget ranges, and how to choose an independent project manager.",
+    date: "2026-05-11",
+    category: "Refit",
+    readTime: "11 min read",
+    keywords: [
+      "classic sailing yacht refit",
+      "modern classic yacht refit",
+      "sailing superyacht refit",
+      "classic yacht restoration",
+      "yacht refit project management",
+    ],
+    content: `<p>A classic sailing yacht refit is not a modern motor yacht refit done on a sailing hull. The materials are different, the trades are scarcer, the timelines are longer, and the consequences of a wrong decision are harder to reverse. This guide explains how a classic sailing refit actually runs, from the first survey to the first regatta back on the water.</p>
+
+<p>It is written for owners and captains of sailing yachts between 30 and 60 metres, particularly traditional and modern classic designs where authenticity and racing performance both matter.</p>
+
+<h2>What Makes a Classic Sailing Refit Different</h2>
+
+<p>Three things separate a classic sailing refit from a modern motor refit, and all three drive cost and time.</p>
+
+<p>The first is materials. Bronze deck hardware, lead and bronze keels, riveted aluminium hulls, traditional teak decks, varnished mahogany interiors, and natural fibre running rigging all require specialist trades. The number of yards that can do this work to a high standard is small. The waiting list for the best of them is two to three years.</p>
+
+<p>The second is the rig. A modern motor yacht has no rig. A classic sailing yacht has a mast that often costs as much as the rest of the work combined. Spar refits, standing rigging replacement, hydraulic ram service, mast track and car overhaul, and sail handling system upgrades all sit on the critical path. Get the rig wrong and the yacht does not sail.</p>
+
+<p>The third is racing performance. Most modern motor refits prioritise comfort and reliability. A classic sailing refit usually has a performance brief alongside the cosmetic and structural brief. Sail plan revisions, deck layout changes, weight reduction in the ends, and rule compliance for the relevant class all need a naval architect involved from day one.</p>
+
+<h2>The Five Phases of a Classic Sailing Yacht Refit</h2>
+
+<h3>Phase 1: Pre-Refit Survey and Condition Assessment</h3>
+
+<p>Six to twelve months before yard arrival. An independent surveyor goes through the yacht with the captain and the owner's representative. The output is a work list, a risk register, and a first-pass budget range. On a 40 metre classic, this phase costs between fifteen and forty thousand pounds and prevents half a million in surprises later.</p>
+
+<h3>Phase 2: Specification and Tender</h3>
+
+<p>Three to six months. The work list becomes a written specification. The specification is sent to three or four pre-qualified yards. The tender returns are compared on price, timeline, capacity, and quality of the response itself. A yard whose tender is sloppy will run a project that is sloppy.</p>
+
+<h3>Phase 3: Yard Selection and Contract</h3>
+
+<p>Six to twelve weeks. This is where most projects are won or lost. Contract terms cover scope, price model (fixed, target cost, or time and materials), variation procedure, milestone payments, retention, performance guarantees, and liquidated damages for late delivery. An owner who signs a yard's standard contract without negotiation has already lost money. See our <a href="/insights/yacht-new-build-contract-what-to-negotiate">guide to contract negotiation</a> for the clauses that matter.</p>
+
+<h3>Phase 4: The Build Phase</h3>
+
+<p>Six to eighteen months on the hard, depending on scope. The representative is on site weekly or more often. Weekly reports cover progress against schedule, variation log, cost-to-complete forecast, quality issues, and risks. The captain runs the operational handover preparation in parallel, particularly crew training on any new systems.</p>
+
+<h3>Phase 5: Sea Trials and Handover</h3>
+
+<p>Two to eight weeks on the water. Sail trials, system commissioning, snag list, owner walk-through, classification survey, flag state inspection, warranty terms confirmation. The final five percent of a classic refit takes fifteen percent of the total time and twenty-five percent of the patience.</p>
+
+<h2>Budget Ranges and Where Overruns Come From</h2>
+
+<p>A useful order of magnitude for a 40 metre classic sailing yacht in 2026. A cosmetic refit runs between eight hundred thousand and one and a half million pounds. A full structural refit including paint, deck, interior touch-up and rig service runs between two and a half and five million. A full restoration including hull plating, deck replacement, full interior rebuild, and new rig runs between six and fifteen million and takes eighteen to thirty months.</p>
+
+<p>Overruns come from four places, in order of frequency.</p>
+
+<p>First, scope creep. The owner sees the yacht stripped out and asks for one small thing forty times. Each small thing carries thirty to fifty percent yard mark-up.</p>
+
+<p>Second, latent damage. The surveyor catches some of it; the rest is found when paint comes off and deck planks come up. A good contract includes a contingency line of ten to twenty percent specifically for this.</p>
+
+<p>Third, supply chain on specialist materials. Bronze castings, traditional rigging fittings, and matched timber sets all have lead times measured in months. Order late and the yard sits idle while the meter runs.</p>
+
+<p>Fourth, late changes from the naval architect or designer. Every change after work starts costs three to ten times what the same change would have cost on the drawing board.</p>
+
+<h2>Choosing Between Northern European, UK and Mediterranean Yards</h2>
+
+<p>Northern Europe (Netherlands, Germany, Denmark) is the home of the highest-quality classic and modern classic refit work. Royal Huisman, Vitters, Holterman, and Pendennis (UK, included for tradition) sit at the top of the market. Costs are high, quality is the highest in the industry, lead times are long.</p>
+
+<p>The UK has a deep traditional yard base, particularly along the South Coast. Pendennis in Falmouth is the headline name. Smaller yards in the Solent handle classic work to a good standard at slightly lower cost. See our <a href="/insights/solent-superyacht-refit-yards-compared">comparison of Solent yards</a> for the detail. UK yards have benefited from a softer pound and from the UK customs regime, though VAT and customs handling for non-EU yachts now requires more planning than before Brexit.</p>
+
+<p>The Mediterranean (Italy, Spain, France) is faster and cheaper for cosmetic work and most mid-spec refits. Specialist classic work is harder to source. The closer the project comes to authenticity-critical restoration, the further north the yard should usually be.</p>
+
+<p>A short answer most owners are not given. For a true classic, pay for Northern Europe or Falmouth. For a modern classic where cosmetic finish matters more than authenticity, the Mediterranean is competitive.</p>
+
+<h2>When to Bring in an Independent Project Manager</h2>
+
+<p>Before the survey. Not after. The single most leveraged decision in a classic sailing refit is who reads the survey and writes the specification. That person sets the cost, the timeline, and the quality of every decision that follows.</p>
+
+<p>An <a href="/insights/choosing-a-yacht-owners-representative">independent project manager</a> works for the owner only. They have no commercial line to the yard, the broker, or the management company. They earn their fee twice over by negotiating the contract well, and they earn it five times over by catching variations before they are signed.</p>
+
+<p>For projects under one million pounds, a day rate engagement during the specification and contract phase is usually enough. For projects over two million, a fixed-fee engagement for the full project is normal practice.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How long does a classic sailing yacht refit take?</h3>
+
+<p>A cosmetic refit on a 40 metre classic runs eight to fourteen weeks. A structural refit runs six to twelve months. A full restoration runs eighteen to thirty months.</p>
+
+<h3>What is the difference between a refit and a restoration?</h3>
+
+<p>A refit upgrades and renews. A restoration returns the yacht to original specification, often using period-correct materials and techniques. Restoration costs two to four times as much per metre.</p>
+
+<h3>Can I refit a classic sailing yacht in the Mediterranean?</h3>
+
+<p>Yes for cosmetic and mid-spec work. Northern Europe and the UK are the right answer for authenticity-critical structural work, spar work, and traditional joinery.</p>
+
+<h3>How much should I budget for contingency?</h3>
+
+<p>Ten to twenty percent of the contract value, ring-fenced and only released against a documented latent finding. Less than ten percent is unrealistic on any classic.</p>
+
+<h3>Do I need a naval architect for a refit?</h3>
+
+<p>For any work that changes weight, sail plan, deck layout, or rig dimensions, yes. For pure cosmetic and system work, no.</p>
+
+<p>If you are planning a classic sailing yacht refit and want an independent view on yard selection, specification, or contract terms, our team works on projects of this kind across Northern Europe and the UK.</p>`,
+  },
+  {
+    slug: "choosing-a-yacht-owners-representative",
+    title: "How to Choose a Yacht Owner's Representative",
+    description:
+      "A SYBAss-accredited guide to choosing an independent yacht owner's representative for a superyacht new build or refit. What the role does, what to ask, what to pay.",
+    date: "2026-05-11",
+    category: "New Build",
+    readTime: "10 min read",
+    keywords: [
+      "yacht owner's representative",
+      "superyacht owner's representative",
+      "new build owner's rep",
+      "yacht owner representation",
+      "SYBAss accredited",
+    ],
+    content: `<p>A yacht owner's representative is the one person on a superyacht project whose only job is to protect the owner's interests. They sit between the owner and every other party: the shipyard, the naval architect, the interior designer, the broker, the surveyor, the management company, the captain. They do not work for any of them. They work for the owner alone.</p>
+
+<p>This guide explains what the role actually covers, when to appoint, what credentials matter, how fees work, and the five questions to ask before signing. It is written for first-time owners and family offices commissioning a new build or a major refit of a yacht between 24 and 60 metres.</p>
+
+<h2>What an Owner's Representative Actually Does</h2>
+
+<p>The role splits into three jobs, and a good representative does all three at once.</p>
+
+<p>The first is project coordination. Every superyacht build involves dozens of suppliers and hundreds of decisions a week. Information has to move quickly and accurately between the owner and the yard, and follow-up has to be relentless. Most cost overruns and delivery slips trace back to information that got stuck, not work that went wrong.</p>
+
+<p>The second is technical oversight. The representative reads the contract, the specification, and the drawings. They sit in design reviews, they walk the yard, they question changes, they catch errors before they become invoices. They understand stability calculations, classification rules, electrical loads, propulsion choices, and interior fit-out tolerances. A non-technical owner relying on the yard to flag its own problems is an owner about to lose money.</p>
+
+<p>The third is commercial protection. The representative negotiates the contract before the owner signs it, manages variations and change orders, audits invoices, and runs the final handover. On a typical 40 metre new build, the difference between a well-managed contract and a badly managed one is several million pounds and twelve months of the owner's time.</p>
+
+<h2>When in the Build Cycle to Appoint</h2>
+
+<p>Appoint at the specification stage, before any contract is signed. This is the single most important decision in the whole project.</p>
+
+<p>Owners who appoint after signing pay twice. They pay for a contract they did not have proper advice on, and they pay for the representative to spend the first six months unwinding terms that should never have been agreed.</p>
+
+<p>If a captain is already in place, the representative works alongside the captain, not above them. Captains are operators. Representatives are project managers and commercial agents. Both are needed. See our <a href="/insights/owner-representative-vs-yacht-manager">comparison of the two roles</a> for more detail.</p>
+
+<h2>SYBAss Accreditation, IAMI and YORP</h2>
+
+<p>The industry has been professionalising the role over the last decade. There are now three credentials worth understanding.</p>
+
+<p>The Superyacht Builders Association (SYBAss) accredits firms and individuals who meet a defined standard of competence in new build representation. SYBAss is the trade body of the major superyacht shipyards, so accreditation signals that a representative is taken seriously by the people on the other side of the table. We cover this in detail in our <a href="/insights/what-does-sybass-accreditation-mean-for-a-yacht-owner">SYBAss accreditation explainer</a>.</p>
+
+<p>IAMI, the International Association of Maritime Institutions, runs the formal qualifications underpinning the role. The four IAMI units cover role and responsibility, foundations of a new build project, management and compliance, and legal contracts and administration.</p>
+
+<p>YORP, the Yacht Owner Representative Programme, is a twelve week training course launched by SYBAss with IAMI and GUEST. It produces individuals listed on the Yacht Owner Representative Register, a public list maintained by the Superyacht Alliance. Lürssen hosted Unit 40 of the programme in Hamburg in April 2026, an indication of how seriously the major yards now take the role.</p>
+
+<p>A representative who has none of these is not necessarily bad. A representative who has all of them is verifiable.</p>
+
+<h2>Why Independence Matters</h2>
+
+<p>The single biggest question to ask any prospective representative is who else they work for.</p>
+
+<p>A representative employed by a yacht management company has a commercial interest in winning your management contract after delivery. A representative tied to a broker has a commercial interest in the brokerage's next sale. A representative recommended by the yard has a commercial interest in the yard's relationship continuing.</p>
+
+<p>None of these are necessarily disqualifying, but they are conflicts, and they should be disclosed before any engagement. A truly independent representative carries no other commercial line into the project.</p>
+
+<h2>Fee Structures</h2>
+
+<p>There are three common fee models, and each suits a different project shape.</p>
+
+<p>A fixed fee is a single agreed sum for the duration of the project, usually paid in stages tied to milestones. This works well on projects with a defined scope and a stable timeline. It transfers timeline risk to the representative, which is appropriate when the contract is well written.</p>
+
+<p>A day rate is paid monthly against time worked. This works well during the pre-contract phase, when scope is still being defined, and on refits where the work list is open ended. Day rates of one thousand two hundred to two thousand five hundred pounds are normal in 2026, depending on the seniority of the lead representative.</p>
+
+<p>A percentage of contract value is occasionally used on very large new builds. It is the least common model and the most criticised, because it can incentivise the representative to inflate scope. Most independent firms refuse this model on principle.</p>
+
+<p>Whichever model is used, the contract should include a clear termination clause, a clear scope, and a clear definition of what is in and out of the fee.</p>
+
+<h2>Five Questions to Ask Before Signing</h2>
+
+<ol>
+<li>Who else do you work for, now and in the past 24 months?</li>
+<li>Are you SYBAss accredited or on the Yacht Owner Representative Register?</li>
+<li>Which yards have you delivered new builds with, and which of those yards would speak to me directly?</li>
+<li>What is your fee model, and what is excluded from the fee?</li>
+<li>If the project goes badly, what does your termination clause look like?</li>
+</ol>
+
+<p>A representative who hesitates on any of these is not the right representative.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is the difference between a yacht owner's representative and a yacht manager?</h3>
+
+<p>An owner's representative manages a yacht project (new build or refit). A yacht manager runs a yacht in service after delivery. The two roles overlap occasionally but require different skills and should usually be separated.</p>
+
+<h3>Do I need a representative if I already have a captain?</h3>
+
+<p>Yes, on any new build or significant refit. A captain is an operator. A representative is a project manager with commercial authority. The roles are complementary.</p>
+
+<h3>How much does an owner's representative cost?</h3>
+
+<p>On a typical 40 metre new build, total representation fees over a three year project range from four hundred thousand to nine hundred thousand pounds depending on scope and fee model. On a major refit, fees range from one hundred and fifty thousand to five hundred thousand.</p>
+
+<h3>Is SYBAss accreditation required?</h3>
+
+<p>No. But it is the clearest external signal that a representative has been vetted by the trade body of the major shipyards.</p>
+
+<h3>Can the shipyard recommend a representative?</h3>
+
+<p>They can, and they often do. But a representative recommended by the yard is by definition not fully independent. Treat any yard recommendation as a starting point for your own search, not the end of it.</p>
+
+<p>Foreland Marine is an SYBAss-accredited <a href="/owners-representation">independent superyacht consultancy</a> acting for owners only. We do not own a yacht management company, hold a brokerage licence, or have a commercial relationship with any shipyard.</p>`,
+  },
+  {
+    slug: "yacht-new-build-contract-what-to-negotiate",
+    title: "Yacht New Build Contract: What to Negotiate",
+    description:
+      "The ten clauses in a superyacht new build contract that decide whether a project runs well or badly. What to negotiate before signing, by an SYBAss-accredited firm.",
+    date: "2026-05-11",
+    category: "New Build",
+    readTime: "12 min read",
+    keywords: [
+      "yacht new build contract",
+      "superyacht build contract negotiation",
+      "yacht construction contract",
+      "yacht contract clauses",
+      "new build yacht agreement",
+    ],
+    content: `<p>A superyacht new build contract runs to eighty to one hundred and fifty pages. Most of it is standard. Around ten clauses do the actual work of deciding whether the project runs well or badly. This piece covers those ten, in the order they matter.</p>
+
+<p>It is written for owners and family offices about to sign a contract on a new build between 24 and 60 metres. It is not legal advice. It is a project manager's view of the clauses that decide outcomes.</p>
+
+<h2>1. Specification and Design Freeze</h2>
+
+<p>The contract should reference a specification document by version and date, and that specification should be complete before signature. "Specification to be developed in good faith after signing" is the most expensive sentence an owner can ever agree to.</p>
+
+<p>A clean specification names every major system by manufacturer, every interior material by sample, every performance number by figure. If a number is not in the specification, it is a variation, and variations are where contracts bleed money.</p>
+
+<h2>2. Price Model</h2>
+
+<p>There are three: fixed price, target cost, and time and materials. Each suits a different project.</p>
+
+<p>Fixed price is right when the specification is genuinely complete and the yard is taking design responsibility. The owner pays a premium for risk transfer. Variations are limited and expensive.</p>
+
+<p>Target cost is right when the specification is eighty percent complete and both parties want a shared incentive to manage cost. Overruns and underruns split between owner and yard at agreed percentages. This is the most common model on serious new builds.</p>
+
+<p>Time and materials is right almost never. It suits exploratory restoration work, not new builds. Avoid it on any project where the scope can be defined in advance.</p>
+
+<h2>3. Payment Milestones and Retention</h2>
+
+<p>Milestone payments should track actual progress, not calendar dates. Thirty percent on signature is acceptable. Sixty percent on keel laying is not, because keel laying is a one-day event that costs the yard almost nothing. Milestones should be tied to verifiable physical progress: hull turn, deck close-up, engine installation, paint completion, sea trials.</p>
+
+<p>Retention of five to ten percent held until twelve months after delivery is standard. Less than five percent gives the yard no incentive to fix warranty issues. More than ten percent can stress the yard's cash flow on long projects.</p>
+
+<h2>4. Variation Procedure</h2>
+
+<p>Every change after signing is a variation. The contract must define how variations are priced, how quickly they must be quoted, what the owner's right to reject is, and what happens if the yard performs unagreed work.</p>
+
+<p>A good variation clause requires: written quote within ten working days, signed acceptance before work starts, no recovery for work done without signed acceptance. Bad variation clauses allow the yard to invoice for "necessary" work without prior approval. That phrase should be struck out.</p>
+
+<h2>5. Performance Guarantees</h2>
+
+<p>Sailing yachts: speed under defined sail and wind conditions, plus stability on rated conditions. Motor yachts: speed at maximum continuous rating, range at cruise speed, fuel consumption at cruise speed, noise levels in named cabins.</p>
+
+<p>Performance shortfalls should carry pre-agreed remedies, ranging from price reduction to rectification. "Best endeavours to meet performance" is not a guarantee. It is wallpaper.</p>
+
+<h2>6. Liquidated Damages for Late Delivery</h2>
+
+<p>Delay damages should be set at a level that reflects the owner's actual exposure: charter loss, alternative accommodation, financing costs. Common levels are twenty thousand to one hundred thousand pounds per week, capped at ten percent of contract value.</p>
+
+<p>A delay clause with no liquidated damages is a yard that does not need to deliver on time. A delay clause with damages at five thousand pounds per week on a forty million pound project is the same.</p>
+
+<h2>7. Termination Rights</h2>
+
+<p>The owner needs the right to terminate for: persistent material breach, insolvency of the yard, delay beyond a defined long stop date, change of control of the yard. Each trigger should specify what happens to work in progress, who owns the yacht in its current state, and how the price is settled.</p>
+
+<p>A contract with no clear termination ladder leaves the owner exposed to a yard that has stopped performing but cannot be removed.</p>
+
+<h2>8. Ownership of Work in Progress</h2>
+
+<p>Most jurisdictions assume the yard owns the yacht until handover. That is the wrong default for the owner. The contract should vest title in the owner progressively as payments are made, with clear documentation of what each payment buys.</p>
+
+<p>This matters most if the yard goes insolvent. An owner who has paid twenty million pounds and has no title to anything is an unsecured creditor. An owner with progressive title can recover work in progress.</p>
+
+<h2>9. Warranty Terms</h2>
+
+<p>Twelve months from delivery is standard. Twenty-four months is achievable on serious yards. The warranty should cover defects in materials, workmanship, and design where the yard took design responsibility. Exclusions for normal wear and tear are reasonable. Exclusions for items beyond the yard's reasonable control are not.</p>
+
+<p>A back-to-back warranty with subcontractors and equipment suppliers is essential. The owner should have a single point of contact, but the underlying chain of warranties must be sound.</p>
+
+<h2>10. Disputes and Governing Law</h2>
+
+<p>For a European new build, English law and London arbitration are standard. Maritime arbitration is well-developed in London and Hamburg. Avoid arbitration in the yard's home jurisdiction unless the yard is in one of these centres.</p>
+
+<p>Disputes are best avoided. A contract written by lawyers who understand yacht building will produce fewer disputes than a contract written by lawyers who do not. Pay for the right lawyers up front.</p>
+
+<h2>What to Do Before Signing</h2>
+
+<p>Three things, in this order.</p>
+
+<p>Engage an <a href="/insights/choosing-a-yacht-owners-representative">independent owner's representative</a>. Engage them before lawyers, because they will tell the lawyers what to look for.</p>
+
+<p>Get a specialist maritime law firm to mark up the contract. Not a generalist firm.</p>
+
+<p>Hold a contract review meeting with the yard, the lawyers, and the representative in the room together, and walk through every clause that has been changed. The yard's reaction to your changes tells you more about how the project will run than any reference call.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How long should a new build contract be?</h3>
+
+<p>Body of contract fifty to one hundred pages, with specification, drawings, and schedules attached. Total package often three hundred to five hundred pages.</p>
+
+<h3>Who drafts the contract?</h3>
+
+<p>Usually the yard provides a first draft. The owner's lawyers then mark it up. Assume eighty percent of the yard's draft favours the yard, and price your legal fees accordingly.</p>
+
+<h3>Can I use a standard contract form?</h3>
+
+<p>The Netherlands yacht builders association has a standard form. So do some UK and German yards. They are reasonable starting points, but every project needs negotiation.</p>
+
+<h3>What is the most commonly missed clause?</h3>
+
+<p>Variation procedure. Owners focus on price and delivery date and skim the variation clause, then discover during the build that they have signed an open chequebook.</p>
+
+<h3>How long does contract negotiation take?</h3>
+
+<p>Four to twelve weeks for a serious negotiation. Less than four weeks usually means one side has not read the contract properly.</p>
+
+<p>If you are about to sign a new build contract and want an independent review of the terms, our <a href="/owners-representation">owner's representation team</a> works exclusively on the owner's side of the table.</p>`,
+  },
+  {
+    slug: "what-does-sybass-accreditation-mean-for-a-yacht-owner",
+    title: "SYBAss Accreditation: What It Means for Owners",
+    description:
+      "SYBAss accreditation is the strongest external mark of competence in superyacht owner's representation. What it covers, who has it, and why it matters to owners.",
+    date: "2026-05-11",
+    category: "New Build",
+    readTime: "9 min read",
+    keywords: [
+      "SYBAss accreditation",
+      "SYBAss yacht owner representative",
+      "YORP",
+      "Yacht Owner Representative Register",
+      "IAMI yacht qualification",
+    ],
+    content: `<p>The Superyacht Builders Association (SYBAss) is the trade body of the world's largest superyacht builders. Its members include Lürssen, Feadship, Royal Huisman, Heesen, Oceanco, Benetti, Sanlorenzo, and the other major yards that deliver yachts above 40 metres. SYBAss accreditation of an owner's representative or consultancy firm is a vetting by the people on the other side of the table from the owner.</p>
+
+<p>This piece explains what SYBAss accreditation covers, what it does not cover, and why owners commissioning a new build or a major refit should care.</p>
+
+<h2>What SYBAss Is, in One Paragraph</h2>
+
+<p>SYBAss was founded in 2007 as the industry body of the largest superyacht builders. It represents around thirty yards, collectively responsible for the great majority of large superyacht deliveries each year. It sets industry standards on technical matters, on sustainability, on safety, and increasingly on professional qualifications for the people who work alongside its members on owners' behalves.</p>
+
+<h2>What SYBAss Accreditation of a Consultancy Covers</h2>
+
+<p>SYBAss does not run a single accreditation scheme. It runs a structured ecosystem of qualifications, registers, and partner programmes. The four that matter to owners are:</p>
+
+<p><strong>SYBAss member firm endorsement.</strong> A small number of consultancies are formally recognised by SYBAss as competent to act on the owner's side of new build projects with its member yards. This is not a paid membership. It is a professional standing.</p>
+
+<p><strong>The Yacht Owner Representative Programme (YORP).</strong> Launched by SYBAss with IAMI and GUEST. A twelve-week programme covering role and responsibility, foundations of a new build, management and compliance, and legal and contracts. Graduates can apply for the Yacht Owner Representative Register.</p>
+
+<p><strong>The Yacht Owner Representative Register.</strong> A public list of individuals who have completed YORP and been independently verified. Maintained by the Superyacht Alliance, sister body to SYBAss.</p>
+
+<p><strong>IAMI qualifications.</strong> The International Association of Maritime Institutions runs the academic qualifications underpinning YORP. IAMI certificates are awarded unit by unit and can be held independently of the register.</p>
+
+<p>A consultancy that lists "SYBAss-accredited" should be able to explain which of the above it holds, and at what level. A consultancy that lists "SYBAss-accredited" with no further detail should be questioned.</p>
+
+<h2>What SYBAss Accreditation Does Not Cover</h2>
+
+<p>It does not certify integrity. It certifies competence. An accredited representative who works for a yard, a broker, and an owner simultaneously is still accredited, but is no longer independent. Always ask about commercial relationships separately.</p>
+
+<p>It does not guarantee the firm has delivered a project on the scale of yours. Accreditation is necessary, not sufficient. Always ask for recent project references.</p>
+
+<p>It does not extend to all parts of a refit. SYBAss is primarily focused on new build, where its members operate. A SYBAss-accredited firm may or may not have the specialist refit experience for, say, a classic sailing yacht restoration. Ask about the specific yard relationships.</p>
+
+<h2>Why It Matters to an Owner</h2>
+
+<p>Three reasons, in order of weight.</p>
+
+<p>First, signal value at the yard. A SYBAss-accredited owner's representative arrives at a SYBAss member yard with credibility. The yard's commercial team treats them as a counterparty, not an obstacle. Negotiations are faster, decisions are cleaner, and the yard does not waste time trying to route around the representative to reach the owner directly.</p>
+
+<p>Second, baseline competence. The IAMI units are technically demanding. A representative who has passed them has demonstrated knowledge of contracts, classification, technical specification, and project finance. This does not guarantee competence on a specific project, but it raises the floor.</p>
+
+<p>Third, industry network. Accredited firms attend SYBAss events, meet member yards regularly, and have direct relationships with naval architects, classification societies, and flag state administrators. That network compresses the timeline on every part of a project.</p>
+
+<h2>Foreland Marine and SYBAss</h2>
+
+<p>Foreland Marine is an SYBAss-accredited consultancy. We act for owners only, on new build and refit projects between 24 and 60 metres. We do not own a yacht management company. We do not hold a brokerage licence. We do not have a commercial relationship with any shipyard. Our SYBAss accreditation is what allows us to work credibly alongside the major yards while keeping that independence intact. See our <a href="/owners-representation">owner's representation service</a> for how this works in practice.</p>
+
+<h2>Verifying Any Firm's Claim</h2>
+
+<p>If a firm claims SYBAss accreditation, ask three questions:</p>
+
+<ol>
+<li>Which specific SYBAss endorsement or register entry do you hold?</li>
+<li>Which individual at your firm holds the relevant IAMI qualification?</li>
+<li>Are you happy for me to confirm this directly with SYBAss?</li>
+</ol>
+
+<p>A real accreditation will produce confident, specific answers. A false claim will produce hesitation or deflection.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is SYBAss accreditation legally required?</h3>
+
+<p>No. There is no legal requirement for an owner's representative to hold any qualification. Accreditation is voluntary and reputational.</p>
+
+<h3>How many firms are SYBAss-accredited?</h3>
+
+<p>The number is small, in the low tens internationally. SYBAss does not publish a public list of all accredited firms, but it will confirm individual accreditation on request.</p>
+
+<h3>How long does YORP take to complete?</h3>
+
+<p>Twelve weeks, delivered online with masterclasses, self-study, and guest lectures from industry experts.</p>
+
+<h3>Can a single individual hold both YORP graduation and SYBAss firm accreditation?</h3>
+
+<p>Yes, and many lead representatives do.</p>
+
+<h3>Where can I find the Yacht Owner Representative Register?</h3>
+
+<p>It is maintained by the Superyacht Alliance. The register is searchable and public.</p>
+
+<p>If you are evaluating an owner's representative and want an independent view on credentials and structure, see our <a href="/insights/choosing-a-yacht-owners-representative">guide to choosing a representative</a>.</p>`,
+  },
+  {
+    slug: "owner-representative-vs-yacht-manager",
+    title: "Owner's Representative vs Yacht Manager: How They Differ",
+    description:
+      "The owner's representative and the yacht manager are different roles with different jobs. How to tell them apart, when you need each, and why you should not combine them.",
+    date: "2026-05-11",
+    category: "Yacht Management",
+    readTime: "10 min read",
+    keywords: [
+      "owner's representative vs yacht manager",
+      "yacht manager",
+      "yacht management vs project management",
+      "yacht ownership roles",
+      "superyacht management company",
+    ],
+    content: `<p>These two roles are routinely confused. They are not the same job, they require different skills, and combining them in one firm creates a conflict of interest that most owners only notice once it has cost them money.</p>
+
+<p>This piece sets out the differences in plain terms, when each role is needed, and how to avoid the most common structural mistake in superyacht ownership.</p>
+
+<h2>The Short Answer</h2>
+
+<p>An owner's representative manages a yacht project: a new build, a major refit, or a significant conversion. The role is finite. It starts before contracts are signed and ends at handover plus the warranty period. It is a project management role with commercial authority.</p>
+
+<p>A yacht manager runs a yacht in service. The role is open ended. It covers crew payroll, technical management, regulatory compliance, financial administration, insurance, ISM and ISPS compliance, flag state liaison, and operational support. It is an operational role with financial and administrative authority.</p>
+
+<p>The roles touch each other at the handover. Outside the handover, they have almost nothing in common.</p>
+
+<h2>What Each Role Actually Does</h2>
+
+<h3>Owner's Representative, Project Phase</h3>
+
+<ul>
+<li>Specification development</li>
+<li>Contract negotiation</li>
+<li>Yard selection</li>
+<li>Variation management</li>
+<li>Cost-to-complete forecasting</li>
+<li>Quality oversight</li>
+<li>Performance trials</li>
+<li>Handover and snag list</li>
+</ul>
+
+<h3>Yacht Manager, Operational Phase</h3>
+
+<ul>
+<li>Crew recruitment, payroll, and welfare</li>
+<li>Technical maintenance scheduling</li>
+<li>Compliance with flag state, classification, and port state requirements</li>
+<li>ISM safety management system</li>
+<li>ISPS security plan</li>
+<li>Insurance placement and claims</li>
+<li>Annual budgets and financial reporting</li>
+<li>Charter management, if applicable</li>
+<li>Refit planning during haulouts</li>
+</ul>
+
+<p>The skill sets overlap on technical knowledge. They diverge on everything else. A good representative is a contracts and project finance specialist. A good manager is an operations and compliance specialist.</p>
+
+<h2>When You Need Each</h2>
+
+<p>A new build owner needs a representative from the specification stage onwards. The manager comes in at the latest six months before delivery, to begin crew recruitment, set up the operational structure, and prepare for handover.</p>
+
+<p>A refit owner needs a representative for any project above five hundred thousand pounds or any project that changes the yacht's structure, systems, or class certification. Smaller refits can often be run by the captain with manager support.</p>
+
+<p>An owner buying a second-hand yacht needs a marine surveyor and a maritime lawyer for the transaction, and then a manager from the closing date. A representative is usually not needed for a clean second-hand purchase.</p>
+
+<p>An owner doing a substantial conversion or rebuild needs both, simultaneously. The representative runs the conversion. The manager runs the crew, the compliance, and the financial side.</p>
+
+<h2>Why Combining Them Is a Problem</h2>
+
+<p>A yacht management firm that also offers owner's representation has a structural conflict.</p>
+
+<p>The representative's job is to recommend the right approach for the owner, including decisions that may not lead to a management contract afterwards. The manager's job is to win and keep the management contract. When the same firm holds both roles, the representative has a commercial incentive to recommend approaches that lead to ongoing management work, even when those approaches are not the best for the owner.</p>
+
+<p>This conflict is most visible at three decision points.</p>
+
+<p>First, choice of flag. Some flags require local management. Some do not. A representative tied to a management firm is unlikely to recommend a flag that bypasses their own firm.</p>
+
+<p>Second, choice of yard. Some yards have preferred management firms they recommend to clients. A representative who is also a manager has an incentive to influence the yard's recommendation.</p>
+
+<p>Third, scope of the warranty period. A combined firm has an incentive to stretch the representative's engagement into the early operational period, double-billing the owner for what is effectively management work.</p>
+
+<p>None of this is necessarily fraudulent. It is structural. The simplest defence is to keep the roles in separate firms.</p>
+
+<h2>How to Structure Both Roles Correctly</h2>
+
+<p>Engage the representative first, at the specification or pre-contract stage. The representative is engaged for a fixed scope, usually new build delivery plus twelve months, on a fixed fee or day rate.</p>
+
+<p>Engage the manager second, six to nine months before delivery. The manager is engaged on an open-ended monthly retainer with a defined scope, with a termination notice of three to six months.</p>
+
+<p>The two should be different firms. They should have no commercial relationship with each other. They should communicate constantly during the handover period and rarely afterwards.</p>
+
+<p>For owners who genuinely want a single point of contact, the right structure is to engage the representative as the project lead and have them coordinate the manager during the handover. The representative withdraws at the end of the warranty period.</p>
+
+<h2>What to Ask Each Role Before Engagement</h2>
+
+<p>Ask the representative:</p>
+
+<ol>
+<li>Do you or your firm offer yacht management services?</li>
+<li>Do you have any commercial relationship with management firms?</li>
+<li>Will your engagement end at the warranty review, or do you propose to continue into operations?</li>
+</ol>
+
+<p>Ask the manager:</p>
+
+<ol>
+<li>Do you offer owner's representation services?</li>
+<li>Are you connected to any new build representation firms?</li>
+<li>What is your notice period and termination clause?</li>
+</ol>
+
+<p>Different answers will indicate which structure each firm is incentivised to recommend.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Can a captain do both jobs?</h3>
+
+<p>For small refits, yes. For new builds, no. Captains are operators, not project managers, and new build representation is a full-time job for two to three years.</p>
+
+<h3>Are owner's representation and yacht management ever the same firm?</h3>
+
+<p>Yes. Several large firms offer both. This is a structural conflict the owner needs to manage, not a disqualifying one, but the simplest defence is to separate them.</p>
+
+<h3>What does an owner's representative cost compared to a yacht manager?</h3>
+
+<p>A representative is usually a fixed fee for a finite project, ranging from one hundred and fifty thousand on a refit to nine hundred thousand on a multi-year new build. A manager is a monthly retainer, ranging from eight thousand to twenty-five thousand pounds per month depending on yacht size and scope.</p>
+
+<h3>Do I need a yacht manager if I have a captain?</h3>
+
+<p>Yes, usually. The captain operates the yacht. The manager handles the compliance, payroll, financial, and regulatory layer that sits above operations. On small yachts the captain can absorb some of this, but on yachts above 30 metres the workload usually requires both.</p>
+
+<h3>Should the representative recommend the manager?</h3>
+
+<p>The representative can shortlist managers, but the owner should run the final selection. A representative who insists on a specific manager should be questioned about why.</p>
+
+<p>Foreland Marine acts as an <a href="/owners-representation">independent owner's representative</a> on new builds and major refits. We do not provide ongoing yacht management, which is by design. For an independent view on how to structure the two roles on your project, see our <a href="/insights/choosing-a-yacht-owners-representative">guide to choosing a representative</a>.</p>`,
+  },
+  {
+    slug: "solent-superyacht-refit-yards-compared",
+    title: "Solent Superyacht Refit Yards: A 2026 Comparison",
+    description:
+      "An independent comparison of UK Solent and South Coast superyacht refit yards in 2026, with lift capacities, dock dimensions, specialist trades, and how to choose between them.",
+    date: "2026-05-11",
+    category: "Refit",
+    readTime: "12 min read",
+    keywords: [
+      "Solent superyacht refit",
+      "UK superyacht refit yard",
+      "Solent refit yards",
+      "where to refit a yacht in the UK",
+      "South Coast yacht refit",
+    ],
+    content: `<p>The UK has three serious refit clusters: Falmouth in Cornwall, the Solent on the south coast of Hampshire, and the East Coast around Lowestoft. The Solent cluster carries the highest density of refit yards, the deepest specialist trade base, and the easiest access to London. This piece compares the main yards in 2026.</p>
+
+<p>It is written for owners, captains, and family offices choosing a UK yard for a yacht between 24 and 60 metres. It is independent and informational. Foreland Marine has no commercial relationship with any yard listed here.</p>
+
+<h2>What the Solent Offers</h2>
+
+<p>The Solent is a sheltered stretch of water between the south coast of England and the Isle of Wight. It has been a centre of British yachting for two hundred years. Three things make it competitive for superyacht refit work.</p>
+
+<p>The first is trade depth. The Solent has more specialist marine trades per square mile than anywhere else in Northern Europe outside the Dutch superyacht corridor. Riggers, painters, joiners, electricians, hydraulic specialists, and naval architects are all within an hour of each other. A yard that needs a specialist trade not on its in-house roster can usually source one within 48 hours.</p>
+
+<p>The second is regulatory proximity. The MCA (Maritime and Coastguard Agency), the Red Ensign Group, and Lloyd's Register all have a presence within the region. Survey work, classification visits, and flag state inspections can be scheduled quickly.</p>
+
+<p>The third is access. London is ninety minutes by rail or car. Heathrow and Gatwick are within two hours. For owners who want to be on site without committing to a stay, the Solent is easier than Falmouth or Northern Europe.</p>
+
+<h2>Yard by Yard</h2>
+
+<p>The notes below cover publicly stated dimensions. Always verify with the yard directly before committing.</p>
+
+<h3>Pendennis, Falmouth</h3>
+
+<p>Included for completeness, not strictly Solent. Capacity: yachts up to 90 metres. Lift: 630 tonne hoist; dry dock for larger. Speciality: full structural refit, classic restorations, paint, modern classic sailing yacht work. Since 1988, over 350 vessels refitted. Choose for: top-tier classic and complex structural work.</p>
+
+<h3>Berthon, Lymington</h3>
+
+<p>Capacity: yachts up to 50 metres. Lift: 350 tonne hoist. Speciality: sail and motor refit, paint, joinery, mid-spec work to a high standard. Independent ownership, long-established. Choose for: well-managed mid-scale projects, particularly sail.</p>
+
+<h3>Endeavour Quay, Gosport</h3>
+
+<p>Capacity: yachts up to 65 metres. Lift: significant beam capacity. Speciality: paint, structural, mid to large motor yacht work. Direct deep-water access. Choose for: motor yachts requiring deep-water berthing.</p>
+
+<h3>Shepards Wharf and Cowes Yards</h3>
+
+<p>Multiple smaller yards clustered on the Isle of Wight. Capacity: variable, generally up to 40 metres. Speciality: sailing yacht refit, classic restoration, dinghy and small craft work spilling up into superyacht scale. Choose for: traditional and modern classic sailing yacht refits at slightly lower cost than Pendennis.</p>
+
+<h3>Trafalgar Wharf, Portsmouth</h3>
+
+<p>Capacity: yachts up to 50 metres. Speciality: motor yacht refit, paint, large-yacht services. Adjacent to commercial port infrastructure. Choose for: motor yacht refit with good logistic connections.</p>
+
+<h2>How to Compare Yards</h2>
+
+<p>Owners often compare on lift tonnage and stop there. That is the wrong comparison. A yard with a smaller lift can be the right choice if the trade depth, the project management, and the contract terms are stronger than a yard with a larger lift and weaker fundamentals.</p>
+
+<p>A useful comparison covers eight dimensions:</p>
+
+<ol>
+<li><strong>Physical capacity.</strong> Lift tonnage, dock dimensions, beam, draft, air draft if rigged.</li>
+<li><strong>Trade depth.</strong> In-house painters, joiners, electricians, riggers, fabricators. Out-sourcing is fine, but in-house gives schedule control.</li>
+<li><strong>Project management.</strong> Does the yard assign a single project manager, or does the project move between departmental managers?</li>
+<li><strong>Track record on yachts like yours.</strong> Ask for three recent refits of yachts of similar scale and complexity, and ask to call those owners.</li>
+<li><strong>Contract terms.</strong> Does the yard accept variation clauses, performance guarantees, retention, and liquidated damages, or does it insist on its own standard form?</li>
+<li><strong>Capacity at the time you need it.</strong> The best yards are booked twelve to twenty-four months ahead.</li>
+<li><strong>Cost structure.</strong> Day rates, mark-up on materials, mark-up on subcontracted work.</li>
+<li><strong>Cultural fit.</strong> Does the yard's project leadership communicate in a way the owner and captain can work with for eighteen months?</li>
+</ol>
+
+<h2>VAT, Customs and Inward Processing Relief</h2>
+
+<p>A point most owners are not given clearly. A non-EU yacht refitted in the UK can claim Inward Processing Relief on UK VAT, provided the yacht leaves UK waters within a defined period after refit completion. This is the UK equivalent of the Spanish IPR scheme that has historically pulled non-EU yachts to Palma.</p>
+
+<p>UK IPR requires proper customs handling, authorised consignor status, and careful timing of imports and exports. A yard that handles this routinely is preferable to a yard that has done it once or twice.</p>
+
+<p>The same logic applies to imported materials and equipment. A well-organised refit project handles VAT and customs as a single integrated workstream, not as an afterthought.</p>
+
+<h2>When the Solent Is the Wrong Choice</h2>
+
+<p>For top-tier classic sailing yacht restoration, Falmouth (Pendennis) and Northern Europe (Royal Huisman, Vitters, Holterman) are usually the better answer. See our <a href="/insights/classic-sailing-yacht-refit">guide to classic sailing yacht refits</a> for the detail.</p>
+
+<p>For cosmetic refit on a short timeline at a low budget, the Western Mediterranean is competitive.</p>
+
+<p>For a yacht based in the Med year-round, the cost of moving the yacht north and back may outweigh the cost saving on the refit. Always model the delivery cost both ways into the comparison.</p>
+
+<p>For a yacht above 70 metres, only Pendennis among UK yards has the physical capacity. Above 80 metres, the project is going to Germany or the Netherlands.</p>
+
+<h2>What Independent Representation Adds to a Solent Refit</h2>
+
+<p>Choosing the right yard is half the project. The other half is running the project once the contract is signed. An <a href="/insights/choosing-a-yacht-owners-representative">independent owner's representative</a> on a Solent refit:</p>
+
+<ul>
+<li>Sits on site weekly, sometimes daily on critical phases</li>
+<li>Reviews every variation before it is signed</li>
+<li>Runs the cost-to-complete forecast monthly</li>
+<li>Manages the relationship between yard, designer, and class</li>
+<li>Acts as the owner's eyes through the parts of the project the owner does not see</li>
+</ul>
+
+<p>On a three million pound refit, this level of representation costs between one hundred and fifty thousand and three hundred thousand pounds and routinely saves multiples of its fee on variations alone.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Which Solent yard is best for a sailing yacht refit?</h3>
+
+<p>Berthon (Lymington) and the smaller Cowes yards specialise in sail. For larger sailing yachts or complex classic work, Pendennis in Falmouth is usually the right answer.</p>
+
+<h3>What is the largest yacht the Solent can refit?</h3>
+
+<p>Endeavour Quay and Trafalgar Wharf handle yachts up to around 65 metres. Above that, Pendennis or Northern Europe.</p>
+
+<h3>Can a non-EU yacht avoid UK VAT on a Solent refit?</h3>
+
+<p>Yes, through Inward Processing Relief, provided the yacht leaves UK waters within the permitted period and the yard handles customs properly. Always confirm with a UK marine VAT specialist.</p>
+
+<h3>How far ahead should I book a Solent yard?</h3>
+
+<p>Twelve to eighteen months for a major refit, six to twelve months for cosmetic and mid-spec work. Best yards are routinely booked twenty-four months out.</p>
+
+<h3>How does the Solent compare to Palma or La Ciotat on cost?</h3>
+
+<p>Solent labour rates are broadly similar to La Ciotat. Palma is ten to twenty percent cheaper on labour, faster on cosmetic work, and slightly less deep on specialist sail trades. The comparison is rarely clear-cut. Run a full like-for-like quote.</p>
+
+<p>If you are planning a Solent or UK refit and want an independent view on yard selection, our <a href="/refit">refit project management team</a> works across all the yards listed above.</p>`,
+  },
 ];
