@@ -359,7 +359,7 @@ export const posts: Post[] = [
 
 <p>A J Class yacht needs a management team, or at minimum an independent consultant, with direct experience in high-performance sailing yacht operations. This means people who understand rig engineering, racing operations, sail inventory management, and the unique crewing requirements of these vessels. It means relationships with the specialist suppliers, yards, and sailmakers who serve this niche. And it means an understanding of the J Class community itself: the owners, the class association, and the racing calendar.</p>
 
-<p>At <a href="/yacht-management">Foreland Marine</a>, we have specific experience in the management and technical oversight of performance sailing yachts, including vessels in the J Class and maxi yacht categories. Our approach is hands-on, technically grounded, and tailored to the unique demands of each vessel and owner. We work closely with specialist <a href="/refit">refit yards</a> and rig suppliers to ensure that every aspect of the yacht's operation is managed by people who genuinely understand what they are working with.</p>
+<p>At Foreland Marine, we have specific experience in the <a href="/yacht-management">independent yacht management</a> and technical oversight of performance sailing yachts, including vessels in the J Class and maxi yacht categories. Our approach is hands-on, technically grounded, and tailored to the unique demands of each vessel and owner. We work closely with specialist <a href="/refit">refit yards</a> and rig suppliers to ensure that every aspect of the yacht's operation is managed by people who genuinely understand what they are working with.</p>
 
 <p>If you are an owner, captain, or manager of a J Class yacht and want to discuss how an independent consultancy can add value to your programme, <a href="/contact">contact us</a> for an initial conversation. We are always happy to talk about these extraordinary yachts.</p>`,
   },
@@ -505,7 +505,7 @@ export const posts: Post[] = [
 
 <p>For a comprehensive refit of a 40-metre performance sailing yacht, including rig work, appendage modifications, systems upgrades, interior refurbishment, and paint, budget EUR 3 million to EUR 8 million depending on scope and specification. This is a significant investment, but a well-executed refit can extend the yacht's competitive and operational life by 10 to 15 years.</p>
 
-<p>If you are planning a refit for a performance sailing yacht, whether a J Class, a maxi, or a high-performance cruiser-racer, <a href="/refit">Foreland Marine</a> offers independent project management and <a href="/technical-consultancy">technical consultancy</a> services. We work on behalf of the owner, not the yard, ensuring that the project is delivered on specification, on budget, and on schedule. We also advise on <a href="/owners-representation">new build</a> programmes for owners commissioning a new performance sailing yacht. <a href="/contact">Get in touch</a> to discuss your project.</p>`,
+<p>If you are planning a refit for a performance sailing yacht, whether a J Class, a maxi, or a high-performance cruiser-racer, Foreland Marine offers independent <a href="/refit">yacht refit project management</a> and <a href="/technical-consultancy">technical consultancy</a> services. We work on behalf of the owner, not the yard, ensuring that the project is delivered on specification, on budget, and on schedule. We also advise on <a href="/owners-representation">new build</a> programmes for owners commissioning a new performance sailing yacht. <a href="/contact">Get in touch</a> to discuss your project.</p>`,
   },
   {
     slug: "sailing-vs-motor-yacht-management-differences",
@@ -623,7 +623,7 @@ export const posts: Post[] = [
 
 <h2>Which Management Model Suits Which Type</h2>
 
-<p>The choice of <a href="/yacht-management">management model</a> should reflect the specific demands of the vessel type.</p>
+<p>The choice of <a href="/yacht-management">yacht management</a> model should reflect the specific demands of the vessel type.</p>
 
 <p>For motor yachts, the standard management company model works well. The systems and operations are well-understood by most management companies, the crew market is large and well-served, and the supply chain for parts, maintenance, and refit services is deep.</p>
 
@@ -795,7 +795,7 @@ export const posts: Post[] = [
 
 <p>Maintaining a complete and up-to-date rig maintenance log, including annual inspection reports, rigging replacement dates, and NDT test results, is essential for demonstrating to underwriters that the rig has been properly managed. This documentation should be part of the yacht's Safety Management System and readily available for survey or audit. You can explore our approach to rig maintenance planning as part of our broader <a href="/technical-consultancy">technical consultancy</a> services, and use our <a href="/tools/running-cost-calculator">running cost calculator</a> to budget for rig replacement as part of your annual operating costs.</p>
 
-<p>Proper rig management is not optional for a sailing yacht. It is a fundamental responsibility of ownership. If you are unsure about the condition of your rig, the remaining service life of your standing rigging, or the right time to plan a replacement, <a href="/refit">speak to a specialist</a>. The cost of getting it right is always less than the cost of getting it wrong.</p>`,
+<p>Proper rig management is not optional for a sailing yacht. It is a fundamental responsibility of ownership. If you are unsure about the condition of your rig, the remaining service life of your standing rigging, or the right time to plan a replacement, speak to our <a href="/refit">yacht refit management team</a>. The cost of getting it right is always less than the cost of getting it wrong.</p>`,
   },
   {
     slug: "preparing-sailing-yacht-for-racing-season",
@@ -1356,7 +1356,7 @@ export const posts: Post[] = [
 
 <p>An independent manager, one who earns a fee for their expertise and not a commission from the supplier, is free to recommend the best rigger, the best sailmaker, and the best yard for the specific job. This independence is valuable for any yacht, but it is essential for a sailing yacht where the consequences of a poor supplier choice are more immediate and more severe.</p>
 
-<p>At Foreland Marine, we provide independent <a href="/yacht-management">management</a> and <a href="/technical-consultancy">technical consultancy</a> for sailing superyachts. We are not tied to any yard, rigger, sailmaker, or equipment manufacturer. Our advice is driven solely by the interests of the owner and the yacht. If you own a sailing superyacht and are looking for a management partner who genuinely understands the demands of your vessel, or if you are considering a management change and want a second opinion on your current arrangements, <a href="/contact">we would welcome a conversation</a>. You may also find our article on <a href="/insights/j-class-yacht-management">J Class yacht management</a> useful as an example of the specialist approach that sailing yachts require.</p>`,
+<p>At Foreland Marine, we provide independent <a href="/yacht-management">yacht management</a> and <a href="/technical-consultancy">technical consultancy</a> for sailing superyachts. We are not tied to any yard, rigger, sailmaker, or equipment manufacturer. Our advice is driven solely by the interests of the owner and the yacht. If you own a sailing superyacht and are looking for a management partner who genuinely understands the demands of your vessel, or if you are considering a management change and want a second opinion on your current arrangements, <a href="/contact">we would welcome a conversation</a>. You may also find our article on <a href="/insights/j-class-yacht-management">J Class yacht management</a> useful as an example of the specialist approach that sailing yachts require.</p>`,
   },
   {
     slug: "understanding-yacht-management-costs-10-percent-rule",
@@ -1663,7 +1663,7 @@ export const posts: Post[] = [
 
 <h2>The Role of an Owner's Representative in Yard Selection</h2>
 
-<p>An experienced <a href="/refit">owner's representative</a> adds significant value during yard selection. They bring knowledge of the yard landscape that most owners and captains simply do not have, having worked with multiple yards across multiple projects. They can advise on which yards are best suited to the specific scope, which yards to avoid, and how to structure the tendering process to get the most useful responses.</p>
+<p>An experienced <a href="/owners-representation">owner's representative</a> adds significant value during yard selection. They bring knowledge of the yard landscape that most owners and captains simply do not have, having worked with multiple yards across multiple projects. They can advise on which yards are best suited to the specific scope, which yards to avoid, and how to structure the tendering process to get the most useful responses.</p>
 
 <p>The representative also provides objectivity. Captains may have personal preferences for yards they have used before, which is valuable experience, but it can also lead to a narrow shortlist. Brokers may recommend yards with which they have commercial relationships. An independent representative has no such biases and can evaluate each option purely on merit.</p>
 
@@ -2042,7 +2042,7 @@ export const posts: Post[] = [
 
 <blockquote>The best yacht management relationship is one where the owner never has to wonder whose side their manager is on. Independence is not a marketing claim. It is a business model, and it shapes every recommendation, every supplier negotiation, and every operational decision.</blockquote>
 
-<p>If you would like to understand how independent management could work for your yacht, <a href="/about">learn more about our team</a> or <a href="/yacht-management">explore our management services</a>.</p>`,
+<p>If you would like to understand how independent management could work for your yacht, <a href="/about">learn more about our team</a> or <a href="/yacht-management">explore our yacht management services</a>.</p>`,
   },
   {
     slug: "carbon-composite-construction-what-owners-need-to-know",

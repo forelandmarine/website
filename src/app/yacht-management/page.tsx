@@ -42,14 +42,23 @@ export default function YachtManagementPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
+              "@id": "https://forelandmarine.com/yacht-management#service",
+              name: "Yacht Management",
+              alternateName: [
+                "Superyacht Management",
+                "Independent Yacht Management",
+                "Yacht Management Services",
+                "Superyacht Management Services",
+              ],
               serviceType: "Yacht Management",
               provider: {
                 "@type": "Organization",
                 name: "Foreland Marine Consultancy Ltd",
+                "@id": "https://forelandmarine.com/#organization",
               },
               areaServed: "Worldwide",
               description:
-                "Independent, owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, class and flag state requirements.",
+                "Independent, owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, class and flag state requirements. No brokerage, no charter commissions, no supplier kickbacks.",
             },
             {
               "@context": "https://schema.org",
