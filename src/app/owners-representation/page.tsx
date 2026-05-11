@@ -192,7 +192,7 @@ export default function NewBuildPage() {
             </div>
             <div className="border-l-2 border-accent/40 pl-6" data-animate="fade-up">
               <p className="text-muted leading-relaxed">
-                We count Captains, unlimited Chief Engineers, Surveyors and Naval Architects amongst our ranks, each with extensive build management experience across leading European and global shipyards. Their judgement is grounded in hands-on project delivery, not theory.
+                We count Captains, unlimited Chief Engineers, Surveyors and Naval Architects amongst our ranks, each with extensive build management experience across the world&apos;s leading shipyards, including Royal Huisman, Pendennis Falmouth, Pendennis Vilanova, Newport Shipyard, Lyman Morse, Rockport Marine, Hinckley Yachts and Markos. Their judgement is grounded in hands-on project delivery, not theory.
               </p>
             </div>
             <div className="border-l-2 border-accent/40 pl-6" data-animate="fade-up">
@@ -265,7 +265,7 @@ export default function NewBuildPage() {
                 </div>
                 <div className="border-l-2 border-accent/40 pl-5">
                   <h4 className="text-sm font-semibold text-white mb-1">Yard Operations</h4>
-                  <p className="text-sm text-muted leading-relaxed">Project managers with delivery experience across leading European and global shipyards, including J Class and carbon composite programmes.</p>
+                  <p className="text-sm text-muted leading-relaxed">Project managers with delivery experience across leading European and US shipyards including Royal Huisman, Pendennis, Newport Shipyard, Lyman Morse, Rockport Marine and Hinckley Yachts, with particular depth in J Class and carbon composite programmes.</p>
                 </div>
               </div>
             </div>
@@ -317,7 +317,7 @@ export default function NewBuildPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8" data-animate-stagger>
             <ServiceCard data-animate="fade-up" title="On-Site Representation" description="Daily presence at the shipyard throughout the build period, attending production meetings, conducting inspections, and providing structured progress reports." />
             <ServiceCard data-animate="fade-up" title="Budget & Cost Control" description="Monitoring expenditure against budget, verifying milestone payment claims, reviewing change orders, and identifying cost risks at the earliest opportunity." />
-            <ServiceCard data-animate="fade-up" title="Project Coordination" description="Managing communication between the owner, shipyard, design offices, subcontractors, and classification society to maintain alignment on scope, schedule, and quality." />
+            <ServiceCard data-animate="fade-up" title="Project Coordination" description="Managing communication between the owner, shipyard, design offices, subcontractors, and classification societies (Lloyd's Register, RINA, DNV, Bureau Veritas, ABS) to maintain alignment on scope, schedule, and quality." />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
             <ServiceCard data-animate="fade-up" title="Technical Review" description="Independent inspection of hull construction, structural work, systems installation, and outfitting quality, supported by our naval architects, engineers, and coatings specialists. For sailing yachts, this extends to rig specification, sail plan review, and deck hardware selection." />
