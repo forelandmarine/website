@@ -182,7 +182,10 @@ export default function TechnicalSupportPage() {
       />
 
       {/* HERO */}
-      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
+      <section
+        ref={heroRef}
+        className="relative flex items-end overflow-hidden bg-bg0 min-h-[78vh] sm:min-h-[82vh] lg:min-h-[88vh] pb-16 sm:pb-20 lg:pb-28 pt-32 sm:pt-40 lg:pt-48"
+      >
         <div
           className="absolute inset-0 will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
@@ -192,20 +195,23 @@ export default function TechnicalSupportPage() {
             alt="Sailing yacht at anchor in a moonlit cove"
             fill
             sizes="100vw"
-            className="object-cover opacity-60 scale-110"
+            className="object-cover object-right scale-110"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
+          {/* Horizontal scrim: solid on the left where text sits, transparent on the right where the yacht is. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-bg0 via-bg0/85 sm:via-bg0/75 to-bg0/10" />
+          {/* Vertical bottom scrim to seat the text on a darker base. */}
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-bg0/90" />
         </div>
         <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
+          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full will-change-transform"
           style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
         >
-          <div className="max-w-3xl">
+          <div className="max-w-2xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
               The team behind<br />your engineering team.
             </h1>
-            <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl mb-8">
+            <p className="text-lg text-[#B5D2E4] leading-relaxed max-w-xl mb-8">
               An annual programme for sailing and motor yachts over 24 metres. A leading technical team on standby, ready to assist day or night. Your crew has the spares, tools and support they need to guarantee smooth sailing, no matter where you are in the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
