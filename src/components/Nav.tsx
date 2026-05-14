@@ -62,7 +62,7 @@ export default function Nav() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-0.5 whitespace-nowrap">
+          <nav className="hidden lg:flex items-center gap-0.5 whitespace-nowrap ml-8 xl:ml-14">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -118,7 +118,7 @@ export default function Nav() {
           </nav>
 
           {/* Right actions */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-4 ml-8 xl:ml-14">
             <a
               href="https://instagram.com/forelandmarine"
               target="_blank"

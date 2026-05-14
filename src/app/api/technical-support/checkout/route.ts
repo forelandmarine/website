@@ -17,9 +17,6 @@ type CheckoutBody = {
 
   billingName: string;
   billingEmail: string;
-  billingAddress?: string;
-  billingCountry?: string;
-  billingVatNumber?: string;
 
   captainName: string;
   captainEmail: string;
@@ -86,9 +83,6 @@ export async function POST(req: NextRequest) {
       yacht_home_port: body.yachtHomePort?.trim() || null,
       billing_name: body.billingName.trim(),
       billing_email: body.billingEmail.trim().toLowerCase(),
-      billing_address: body.billingAddress?.trim() || null,
-      billing_country: body.billingCountry?.trim() || null,
-      billing_vat_number: body.billingVatNumber?.trim() || null,
       captain_name: body.captainName.trim(),
       captain_email: body.captainEmail.trim().toLowerCase(),
       captain_phone: body.captainPhone?.trim() || null,

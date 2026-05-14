@@ -61,9 +61,6 @@ function SignUpInner() {
 
   const [billingName, setBillingName] = useState("");
   const [billingEmail, setBillingEmail] = useState("");
-  const [billingAddress, setBillingAddress] = useState("");
-  const [billingCountry, setBillingCountry] = useState("");
-  const [billingVatNumber, setBillingVatNumber] = useState("");
 
   const [captainName, setCaptainName] = useState("");
   const [captainEmail, setCaptainEmail] = useState("");
@@ -106,9 +103,6 @@ function SignUpInner() {
       yachtHomePort,
       billingName,
       billingEmail,
-      billingAddress,
-      billingCountry,
-      billingVatNumber,
       captainName,
       captainEmail,
       captainPhone,
@@ -283,10 +277,10 @@ function SignUpInner() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <FormField label="Billing entity name" required value={billingName} onChange={setBillingName} />
               <FormField label="Billing email" type="email" required value={billingEmail} onChange={setBillingEmail} />
-              <FormField label="Billing address" value={billingAddress} onChange={setBillingAddress} className="md:col-span-2" />
-              <FormField label="Country" value={billingCountry} onChange={setBillingCountry} />
-              <FormField label="VAT number (if any)" value={billingVatNumber} onChange={setBillingVatNumber} />
             </div>
+            <p className="mt-3 text-xs text-muted/70 leading-relaxed">
+              Billing address and VAT number are collected on the next step by Stripe, our payments provider.
+            </p>
           </fieldset>
 
           {/* CAPTAIN */}

@@ -96,6 +96,15 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     return;
   }
 
+  // Pull the structured billing address Stripe collected and store it as a
+  // formatted multi-line string for the welcome email and the internal record.
+  const addr = session.customer_details?.address ?? null;
+  const billingAddress = addr
+    ? [addr.line1, addr.line2, addr.city, addr.state, addr.postal_code, addr.country]
+        .filter((s) => s && s.trim().length > 0)
+        .join(", ")
+    : null;
+
   await supabase
     .from("technical_support_subscriptions")
     .update({
@@ -103,7 +112,9 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
         typeof session.customer === "string" ? session.customer : null,
       stripe_subscription_id:
         typeof session.subscription === "string" ? session.subscription : null,
-      subscription_status: "active",
+      status: "active",
+      activated_at: new Date().toISOString(),
+      billing_address: billingAddress,
     })
     .eq("id", rowId);
 
@@ -152,14 +163,20 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
 
 async function handleSubscriptionChange(sub: Stripe.Subscription) {
   const periodEnd = (sub as unknown as { current_period_end?: number }).current_period_end;
+  const status = sub.status === "active" || sub.status === "trialing"
+    ? "active"
+    : sub.status === "past_due"
+      ? "past_due"
+      : "canceled";
   await supabase
     .from("technical_support_subscriptions")
     .update({
-      subscription_status: sub.status,
+      status,
       cancel_at_period_end: sub.cancel_at_period_end,
       current_period_end: periodEnd
         ? new Date(periodEnd * 1000).toISOString()
         : null,
+      canceled_at: status === "canceled" ? new Date().toISOString() : null,
     })
     .eq("stripe_subscription_id", sub.id);
 }
