@@ -16,15 +16,34 @@ export default function SuccessPage() {
           You&rsquo;re signed up.
         </h1>
         <p className="text-muted leading-relaxed text-base mb-4 max-w-xl mx-auto">
-          A confirmation email has been sent to the billing and captain addresses. Stripe will email a receipt for the first month, and renewals will happen automatically each month from the same card.
+          A confirmation email has been sent to the billing and captain addresses. Stripe will email a receipt for the first payment, and renewals will happen automatically from the same card.
         </p>
         <p className="text-muted leading-relaxed text-base mb-10 max-w-xl mx-auto">
-          A senior engineer will be in touch within two working days to schedule the annual PMS check and exchange direct numbers. If anything is wrong before then, write to{" "}
+          A senior engineer will be in touch within two working days to schedule the annual PMS check and exchange direct numbers.
+        </p>
+
+        {/* Emergency line callout */}
+        <div className="mx-auto max-w-xl mb-10 border border-accent/30 bg-bg2 px-6 py-5 text-left">
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent mb-1.5">
+            Emergency line &middot; 24/7
+          </p>
+          <p className="text-2xl font-light text-white leading-tight">
+            <a href="tel:+447921528168" className="text-white hover:text-accent transition-colors">
+              +44 7921 528 168
+            </a>
+          </p>
+          <p className="text-sm text-muted mt-2 leading-relaxed">
+            If anything is wrong, call this number. The line is open day and night.
+          </p>
+        </div>
+
+        <p className="text-muted leading-relaxed text-base mb-10 max-w-xl mx-auto">
+          For non-urgent matters, write to{" "}
           <a href="mailto:info@forelandmarine.com" className="text-accent hover:text-white transition-colors">
             info@forelandmarine.com
-          </a>{" "}
-          at any hour.
+          </a>.
         </p>
+
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <ButtonPrimary href="/">Return to homepage</ButtonPrimary>
           <Link
