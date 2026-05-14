@@ -48,21 +48,21 @@ export default function Nav() {
     <>
     <header className="sticky top-0 z-50 w-full border-b border-white/8 bg-bg1/95 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
+        <div className="grid grid-cols-[1fr_auto_1fr] h-20 items-center">
+          {/* Logo (left column) */}
+          <Link href="/" className="flex items-center shrink-0 justify-self-start">
             <Image
               src="/logos/foreland-marine-white.svg"
               alt="Foreland Marine Consultancy"
               width={300}
               height={52}
               priority
-              className="w-[220px] sm:w-[260px] lg:w-[280px] h-auto"
+              className="w-[188px] sm:w-[220px] lg:w-[240px] h-auto"
             />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-0.5 whitespace-nowrap ml-8 xl:ml-14">
+          {/* Desktop nav (centre column — true geometric centre of the row) */}
+          <nav className="hidden lg:flex items-center gap-0.5 whitespace-nowrap">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -117,45 +117,48 @@ export default function Nav() {
             </Link>
           </nav>
 
-          {/* Right actions */}
-          <div className="hidden lg:flex items-center gap-4 ml-8 xl:ml-14">
-            <a
-              href="https://instagram.com/forelandmarine"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted hover:text-white transition-colors"
-              aria-label="Instagram"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg>
-            </a>
-            <a
-              href="mailto:info@forelandmarine.com"
-              className="border border-white/20 text-white text-sm font-light px-4 py-2 rounded hover:bg-white/10 transition-colors"
-            >
-              info@forelandmarine.com
-            </a>
-          </div>
+          {/* Right column: desktop actions OR mobile hamburger */}
+          <div className="justify-self-end flex items-center">
+            {/* Desktop right actions */}
+            <div className="hidden lg:flex items-center gap-4">
+              <a
+                href="https://instagram.com/forelandmarine"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
+              <a
+                href="mailto:info@forelandmarine.com"
+                className="border border-white/20 text-white text-sm font-light px-4 py-2 rounded hover:bg-white/10 transition-colors"
+              >
+                info@forelandmarine.com
+              </a>
+            </div>
 
-          {/* Mobile hamburger */}
-          <button
-            className="lg:hidden p-3 text-muted hover:text-white transition-colors"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? (
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <path d="M18 6L6 18M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <path d="M3 6h18M3 12h18M3 18h18" />
-              </svg>
-            )}
-          </button>
+            {/* Mobile hamburger */}
+            <button
+              className="lg:hidden p-3 text-muted hover:text-white transition-colors"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <path d="M3 6h18M3 12h18M3 18h18" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
