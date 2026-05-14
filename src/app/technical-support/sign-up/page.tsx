@@ -379,7 +379,7 @@ function FormField({
 }) {
   return (
     <label className={`block ${className}`}>
-      <span className="block text-xs font-semibold uppercase tracking-widest text-muted/80 mb-2">
+      <span className="block text-xs font-semibold uppercase tracking-widest text-white/90 mb-2">
         {label}
         {required && <span className="text-accent ml-1">*</span>}
       </span>
@@ -388,7 +388,7 @@ function FormField({
         required={required}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-bg1 border border-white/10 text-white px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors"
+        className="w-full bg-bg2 border border-white/20 text-white px-4 py-3 text-sm placeholder-white/35 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40 hover:border-white/30 transition-colors"
       />
     </label>
   );

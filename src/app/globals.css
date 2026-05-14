@@ -29,6 +29,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Stop Chrome / Safari autofill from forcing a light background + dark text
+   on form inputs. Overrides via inset box-shadow because the browser ignores
+   plain background-color on autofilled fields. */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #FFFFFF !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--bg1) inset !important;
+  caret-color: #FFFFFF;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Placeholder contrast on dark backgrounds. */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
 /* Scroll-triggered animations */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(32px); }
