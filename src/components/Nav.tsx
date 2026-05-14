@@ -62,7 +62,7 @@ export default function Nav() {
           </Link>
 
           {/* Desktop nav (centre column — true geometric centre of the row) */}
-          <nav className="hidden lg:flex items-center gap-0.5 whitespace-nowrap">
+          <nav className="hidden lg:flex items-center gap-0.5 whitespace-nowrap mx-[30px]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
