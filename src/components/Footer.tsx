@@ -6,6 +6,7 @@ const services = [
   { label: "New Build", href: "/owners-representation" },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy" },
+  { label: "Technical Support", href: "/technical-support" },
 ];
 
 const tools = [
