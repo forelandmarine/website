@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { stripe, getPriceId } from "@/lib/stripe";
 import { supabase } from "@/lib/supabase";
-import { isTier, isCurrency, TIER_NAMES } from "@/lib/technical-support";
+import { isTier, isCurrency, isCycle, TIER_NAMES } from "@/lib/technical-support";
 
 type CheckoutBody = {
   tier: string;
   currency: string;
+  billingCycle: string;
 
   yachtName: string;
   yachtImo?: string;
@@ -48,6 +49,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid currency." }, { status: 400 });
   }
 
+  if (!isCycle(body.billingCycle)) {
+    return NextResponse.json({ error: "Invalid billing cycle." }, { status: 400 });
+  }
+
   const requiredFields: Record<string, unknown> = {
     yachtName: body.yachtName,
     billingName: body.billingName,
@@ -72,6 +77,7 @@ export async function POST(req: NextRequest) {
     .insert({
       tier: body.tier,
       currency: body.currency,
+      billing_cycle: body.billingCycle,
       yacht_name: body.yachtName.trim(),
       yacht_imo: body.yachtImo?.trim() || null,
       yacht_mmsi: body.yachtMmsi?.trim() || null,
@@ -113,7 +119,7 @@ export async function POST(req: NextRequest) {
       customer_email: body.billingEmail.trim().toLowerCase(),
       line_items: [
         {
-          price: getPriceId(body.tier, body.currency),
+          price: getPriceId(body.tier, body.currency, body.billingCycle),
           quantity: 1,
         },
       ],
@@ -124,6 +130,7 @@ export async function POST(req: NextRequest) {
           subscription_row_id: subscriptionRowId,
           tier: body.tier,
           currency: body.currency,
+          billing_cycle: body.billingCycle,
           yacht_name: body.yachtName.trim(),
         },
       },
@@ -131,6 +138,7 @@ export async function POST(req: NextRequest) {
         subscription_row_id: subscriptionRowId,
         tier: body.tier,
         currency: body.currency,
+        billing_cycle: body.billingCycle,
         yacht_name: body.yachtName.trim(),
         tier_name: TIER_NAMES[body.tier],
       },

@@ -1,22 +1,30 @@
 import Stripe from "stripe";
+import type { TierSlug, Currency, BillingCycle } from "@/lib/technical-support";
 
-if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error("STRIPE_SECRET_KEY is not set");
+let _stripe: Stripe | null = null;
+
+export function getStripe(): Stripe {
+  if (_stripe) return _stripe;
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) throw new Error("STRIPE_SECRET_KEY is not set");
+  _stripe = new Stripe(key, {
+    apiVersion: "2026-04-22.dahlia",
+    typescript: true,
+  });
+  return _stripe;
 }
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: "2026-04-22.dahlia",
-  typescript: true,
+export const stripe = new Proxy({} as Stripe, {
+  get(_target, prop, receiver) {
+    return Reflect.get(getStripe(), prop, receiver);
+  },
 });
 
-export type TierSlug = "standby" | "direct" | "captive";
-export type Currency = "gbp" | "eur" | "usd";
+const priceEnvKey = (tier: TierSlug, currency: Currency, cycle: BillingCycle) =>
+  `STRIPE_PRICE_${tier.toUpperCase()}_${currency.toUpperCase()}_${cycle.toUpperCase()}`;
 
-const priceEnvKey = (tier: TierSlug, currency: Currency) =>
-  `STRIPE_PRICE_${tier.toUpperCase()}_${currency.toUpperCase()}`;
-
-export function getPriceId(tier: TierSlug, currency: Currency): string {
-  const key = priceEnvKey(tier, currency);
+export function getPriceId(tier: TierSlug, currency: Currency, cycle: BillingCycle): string {
+  const key = priceEnvKey(tier, currency, cycle);
   const value = process.env[key];
   if (!value) {
     throw new Error(`Missing Stripe price env var: ${key}`);

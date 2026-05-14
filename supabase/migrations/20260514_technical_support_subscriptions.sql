@@ -6,9 +6,11 @@
 create table if not exists public.technical_support_subscriptions (
   id uuid primary key default gen_random_uuid(),
 
-  -- Tier & currency
+  -- Tier, currency, and billing cycle
   tier text not null check (tier in ('standby', 'direct', 'captive')),
   currency text not null check (currency in ('gbp', 'eur', 'usd')),
+  billing_cycle text not null default 'monthly'
+    check (billing_cycle in ('monthly', 'annual')),
 
   -- Vessel
   yacht_name text not null,

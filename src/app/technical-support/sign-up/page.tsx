@@ -4,7 +4,19 @@ import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui";
-import { TIER_NAMES, TIER_PRICES, formatPrice, isTier, isCurrency, type TierSlug, type Currency } from "@/lib/technical-support";
+import {
+  TIER_NAMES,
+  TIER_PRICES_MONTHLY,
+  TIER_PRICES_ANNUAL,
+  formatPrice,
+  cycleSuffix,
+  isTier,
+  isCurrency,
+  isCycle,
+  type TierSlug,
+  type Currency,
+  type BillingCycle,
+} from "@/lib/technical-support";
 
 const TIER_ORDER: TierSlug[] = ["standby", "direct", "captive"];
 
@@ -29,12 +41,16 @@ const TIER_LINES: Record<TierSlug, string[]> = {
 function SignUpInner() {
   const params = useSearchParams();
   const initialTier = params.get("tier");
+  const initialCycle = params.get("cycle");
   const canceled = params.get("canceled") === "1";
 
   const [tier, setTier] = useState<TierSlug>(
     isTier(initialTier) ? initialTier : "direct"
   );
   const [currency, setCurrency] = useState<Currency>("gbp");
+  const [billingCycle, setBillingCycle] = useState<BillingCycle>(
+    isCycle(initialCycle) ? initialCycle : "monthly"
+  );
 
   const [yachtName, setYachtName] = useState("");
   const [yachtImo, setYachtImo] = useState("");
@@ -64,7 +80,14 @@ function SignUpInner() {
     if (isTier(initialTier)) setTier(initialTier);
   }, [initialTier]);
 
-  const priceDisplay = useMemo(() => formatPrice(tier, currency), [tier, currency]);
+  useEffect(() => {
+    if (isCycle(initialCycle)) setBillingCycle(initialCycle);
+  }, [initialCycle]);
+
+  const priceDisplay = useMemo(
+    () => `${formatPrice(tier, currency, billingCycle)} ${cycleSuffix(billingCycle)}`,
+    [tier, currency, billingCycle]
+  );
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -74,6 +97,7 @@ function SignUpInner() {
     const body = {
       tier,
       currency,
+      billingCycle,
       yachtName,
       yachtImo,
       yachtMmsi,
@@ -131,6 +155,37 @@ function SignUpInner() {
         )}
 
         <form onSubmit={handleSubmit} className="space-y-12">
+          {/* BILLING CYCLE */}
+          <fieldset>
+            <legend className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+              Billing cycle
+            </legend>
+            <div className="inline-flex border border-white/15">
+              {(["monthly", "annual"] as BillingCycle[]).map((c) => {
+                const active = billingCycle === c;
+                return (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => setBillingCycle(c)}
+                    className={`px-5 py-2.5 text-sm font-semibold capitalize transition-colors ${
+                      active
+                        ? "bg-accent text-white"
+                        : "text-muted hover:text-white hover:bg-white/5"
+                    }`}
+                  >
+                    {c}
+                    {c === "annual" && (
+                      <span className={`ml-2 text-[10px] uppercase tracking-widest ${active ? "text-white/80" : "text-accent"}`}>
+                        2 months free
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
+
           {/* TIER SELECTION */}
           <fieldset>
             <legend className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
@@ -154,9 +209,14 @@ function SignUpInner() {
                       {TIER_NAMES[t]}
                     </p>
                     <p className="text-2xl font-light text-white mb-1">
-                      {formatPrice(t, currency)}
-                      <span className="text-sm text-muted ml-2">/ month</span>
+                      {formatPrice(t, currency, billingCycle)}
+                      <span className="text-sm text-muted ml-2">/ {billingCycle === "annual" ? "year" : "month"}</span>
                     </p>
+                    {billingCycle === "annual" && (
+                      <p className="text-[11px] text-muted/70 mb-2">
+                        vs {formatPrice(t, currency, "monthly")} × 12 monthly
+                      </p>
+                    )}
                     <ul className="mt-3 space-y-1 text-xs text-muted leading-relaxed">
                       {TIER_LINES[t].map((line, i) => (
                         <li key={i}>· {line}</li>
@@ -173,9 +233,12 @@ function SignUpInner() {
             <legend className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
               Billing currency
             </legend>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {(["gbp", "eur", "usd"] as Currency[]).map((c) => {
                 const active = currency === c;
+                const amt = billingCycle === "annual"
+                  ? TIER_PRICES_ANNUAL[tier][c]
+                  : TIER_PRICES_MONTHLY[tier][c];
                 return (
                   <button
                     key={c}
@@ -187,7 +250,7 @@ function SignUpInner() {
                         : "border-white/15 text-muted hover:border-white/40 hover:text-white"
                     }`}
                   >
-                    {c.toUpperCase()} {TIER_PRICES[tier][c].toLocaleString()}
+                    {c.toUpperCase()} {amt.toLocaleString()}
                   </button>
                 );
               })}
@@ -259,10 +322,12 @@ function SignUpInner() {
                     Your subscription
                   </p>
                   <p className="text-lg text-white">
-                    {TIER_NAMES[tier]} · {priceDisplay} per month
+                    {TIER_NAMES[tier]} · {priceDisplay}
                   </p>
                   <p className="text-xs text-muted/70 mt-1">
-                    Annual term. Monthly billing. Thirty days&rsquo; notice to leave.
+                    {billingCycle === "annual"
+                      ? "Paid in full at sign-up. Renews annually. Thirty days' notice to leave after the first year."
+                      : "Monthly billing. Annual term. Thirty days' notice to leave."}
                   </p>
                 </div>
                 <p className="text-xs text-muted/60">
@@ -283,7 +348,7 @@ function SignUpInner() {
                 disabled={submitting}
                 className="inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-8 py-3.5 rounded hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {submitting ? "Redirecting to Stripe..." : `Continue to payment (${priceDisplay} per month)`}
+                {submitting ? "Redirecting to Stripe..." : `Continue to payment (${priceDisplay})`}
               </button>
               <Link
                 href="/technical-support"

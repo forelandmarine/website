@@ -5,10 +5,13 @@ import { supabase } from "@/lib/supabase";
 import {
   TIER_NAMES,
   formatPrice,
+  cycleSuffix,
   isTier,
   isCurrency,
+  isCycle,
   type TierSlug,
   type Currency,
+  type BillingCycle,
 } from "@/lib/technical-support";
 
 function normaliseTier(value: unknown): TierSlug | null {
@@ -17,6 +20,10 @@ function normaliseTier(value: unknown): TierSlug | null {
 
 function normaliseCurrency(value: unknown): Currency | null {
   return isCurrency(value) ? value : null;
+}
+
+function normaliseCycle(value: unknown): BillingCycle {
+  return isCycle(value) ? value : "monthly";
 }
 import { sendWelcomeEmail, sendInternalSignupNotification } from "@/lib/resend";
 
@@ -102,10 +109,11 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
 
   const tier: ReturnType<typeof normaliseTier> = normaliseTier(row.tier);
   const currency: ReturnType<typeof normaliseCurrency> = normaliseCurrency(row.currency);
+  const cycle: BillingCycle = normaliseCycle(row.billing_cycle);
   if (!tier || !currency) return;
 
   const tierName = TIER_NAMES[tier];
-  const priceDisplay = formatPrice(tier, currency);
+  const priceDisplay = `${formatPrice(tier, currency, cycle)} ${cycleSuffix(cycle)}`;
 
   // Welcome email to captain and billing contact.
   const recipients = Array.from(

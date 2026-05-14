@@ -4,22 +4,23 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
+import {
+  TIER_NAMES,
+  TIER_PRICES_MONTHLY,
+  TIER_PRICES_ANNUAL,
+  type TierSlug,
+  type BillingCycle,
+} from "@/lib/technical-support";
 
-type Tier = {
-  name: string;
-  slug: string;
-  priceGbp: string;
-  priceAlt: string;
+type TierMeta = {
+  slug: TierSlug;
   lines: string[];
   highlight?: boolean;
 };
 
-const tiers: Tier[] = [
+const tiers: TierMeta[] = [
   {
-    name: "Standby",
     slug: "standby",
-    priceGbp: "£250",
-    priceAlt: "€295 · $315",
     lines: [
       "Four on-call engineer hours per month.",
       "Worldwide parts sourcing and freight coordination.",
@@ -28,10 +29,7 @@ const tiers: Tier[] = [
     ],
   },
   {
-    name: "Direct",
     slug: "direct",
-    priceGbp: "£500",
-    priceAlt: "€585 · $630",
     highlight: true,
     lines: [
       "Twelve on-call engineer hours per month.",
@@ -42,10 +40,7 @@ const tiers: Tier[] = [
     ],
   },
   {
-    name: "Captive",
     slug: "captive",
-    priceGbp: "£1,000",
-    priceAlt: "€1,170 · $1,260",
     lines: [
       "Thirty on-call engineer hours per month.",
       "Five hand-carries in Europe per year.",
@@ -74,6 +69,7 @@ const pmsItems = [
 
 export default function TechnicalSupportPage() {
   const [scrollY, setScrollY] = useState(0);
+  const [cycle, setCycle] = useState<BillingCycle>("monthly");
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -116,12 +112,12 @@ export default function TechnicalSupportPage() {
                 "An annual technical support programme for sailing and motor yachts over 24 metres. Senior engineers on call day and night, hand-carried parts, annual planned maintenance system check, emergency repair kit onboard.",
               offers: tiers.map((t) => ({
                 "@type": "Offer",
-                name: `${t.name} programme`,
+                name: `${TIER_NAMES[t.slug]} programme`,
                 priceCurrency: "GBP",
-                price: t.priceGbp.replace(/[£,]/g, ""),
+                price: TIER_PRICES_MONTHLY[t.slug].gbp,
                 priceSpecification: {
                   "@type": "UnitPriceSpecification",
-                  price: t.priceGbp.replace(/[£,]/g, ""),
+                  price: TIER_PRICES_MONTHLY[t.slug].gbp,
                   priceCurrency: "GBP",
                   unitText: "MONTH",
                 },
@@ -234,50 +230,97 @@ export default function TechnicalSupportPage() {
               Three levels of cover
             </h2>
             <p className="text-muted leading-relaxed">
-              Choose the level of cover the yacht needs. Monthly billing in GBP, with EUR and USD at indicative cross-rates. Annual term, thirty days&apos; notice to leave.
+              Choose the level of cover the yacht needs. Monthly billing in GBP by default, with EUR and USD at indicative cross-rates. Annual term, thirty days&apos; notice to leave. Pay annually for the equivalent of two months free.
             </p>
           </div>
 
+          {/* Billing cycle toggle */}
+          <div className="flex justify-start mb-8">
+            <div className="inline-flex border border-white/15">
+              {(["monthly", "annual"] as BillingCycle[]).map((c) => {
+                const active = cycle === c;
+                return (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => setCycle(c)}
+                    className={`px-5 py-2.5 text-sm font-semibold capitalize transition-colors ${
+                      active
+                        ? "bg-accent text-white"
+                        : "text-muted hover:text-white hover:bg-white/5"
+                    }`}
+                  >
+                    {c}
+                    {c === "annual" && (
+                      <span className={`ml-2 text-[10px] uppercase tracking-widest ${active ? "text-white/80" : "text-accent"}`}>
+                        2 months free
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-animate-stagger>
-            {tiers.map((tier) => (
-              <div
-                key={tier.slug}
-                data-animate="fade-up"
-                className={`relative bg-bg2 border border-white/8 flex flex-col p-8 ${
-                  tier.highlight ? "ring-1 ring-accent/40" : ""
-                }`}
-              >
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent opacity-70" />
-                {tier.highlight && (
-                  <span className="absolute top-4 right-4 text-[10px] uppercase tracking-widest text-accent font-semibold">
-                    Most chosen
-                  </span>
-                )}
-                <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-                  {tier.name}
-                </p>
-                <div className="mb-1">
-                  <span className="text-4xl font-light text-white">{tier.priceGbp}</span>
-                  <span className="text-sm text-muted ml-2">per month</span>
-                </div>
-                <p className="text-sm text-muted/80 mb-5">{tier.priceAlt}</p>
-                <div className="h-px bg-white/10 mb-5" />
-                <ul className="space-y-2.5 mb-7 flex-1">
-                  {tier.lines.map((line, i) => (
-                    <li key={i} className="text-sm text-muted leading-relaxed flex gap-2">
-                      <span className="text-accent flex-shrink-0">·</span>
-                      <span>{line}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={`/technical-support/sign-up?tier=${tier.slug}`}
-                  className="inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-6 py-3 rounded hover:bg-accent/90 transition-colors"
+            {tiers.map((tier) => {
+              const monthly = TIER_PRICES_MONTHLY[tier.slug];
+              const annual = TIER_PRICES_ANNUAL[tier.slug];
+              const isAnnual = cycle === "annual";
+              return (
+                <div
+                  key={tier.slug}
+                  data-animate="fade-up"
+                  className={`relative bg-bg2 border border-white/8 flex flex-col p-8 ${
+                    tier.highlight ? "ring-1 ring-accent/40" : ""
+                  }`}
                 >
-                  Sign up to {tier.name}
-                </Link>
-              </div>
-            ))}
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent opacity-70" />
+                  {tier.highlight && (
+                    <span className="absolute top-4 right-4 text-[10px] uppercase tracking-widest text-accent font-semibold">
+                      Most chosen
+                    </span>
+                  )}
+                  <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+                    {TIER_NAMES[tier.slug]}
+                  </p>
+                  <div className="mb-1">
+                    <span className="text-4xl font-light text-white">
+                      £{(isAnnual ? annual.gbp : monthly.gbp).toLocaleString()}
+                    </span>
+                    <span className="text-sm text-muted ml-2">
+                      {isAnnual ? "per year" : "per month"}
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted/80 mb-1">
+                    {isAnnual
+                      ? `€${annual.eur.toLocaleString()} · $${annual.usd.toLocaleString()}`
+                      : `€${monthly.eur.toLocaleString()} · $${monthly.usd.toLocaleString()}`}
+                  </p>
+                  {isAnnual && (
+                    <p className="text-xs text-muted/60 mb-4">
+                      vs £{(monthly.gbp * 12).toLocaleString()} on monthly billing
+                    </p>
+                  )}
+                  {!isAnnual && <div className="mb-4" />}
+                  <div className="h-px bg-white/10 mb-5" />
+                  <ul className="space-y-2.5 mb-7 flex-1">
+                    {tier.lines.map((line, i) => (
+                      <li key={i} className="text-sm text-muted leading-relaxed flex gap-2">
+                        <span className="text-accent flex-shrink-0">·</span>
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={`/technical-support/sign-up?tier=${tier.slug}&cycle=${cycle}`}
+                    className="inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-6 py-3 rounded hover:bg-accent/90 transition-colors"
+                  >
+                    Sign up to {TIER_NAMES[tier.slug]}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
 
           <p className="text-xs text-muted/70 mt-6 leading-relaxed">
