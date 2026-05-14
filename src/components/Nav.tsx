@@ -50,14 +50,14 @@ export default function Nav() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/logos/foreland-marine-white.svg"
               alt="Foreland Marine Consultancy"
-              width={240}
-              height={42}
+              width={300}
+              height={52}
               priority
-              className="w-[204px] sm:w-[240px] h-auto"
+              className="w-[220px] sm:w-[260px] lg:w-[280px] h-auto"
             />
           </Link>
 
