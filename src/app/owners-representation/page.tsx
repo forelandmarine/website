@@ -39,7 +39,7 @@ export default function NewBuildPage() {
             {
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "@id": "https://forelandmarine.com/owners-representation#service",
+              "@id": "https://www.forelandmarine.com/owners-representation#service",
               name: "Yacht Owner's Representation",
               alternateName: [
                 "Yacht Owners Representation",
@@ -128,8 +128,8 @@ export default function NewBuildPage() {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
-                { "@type": "ListItem", position: 2, name: "New Build", item: "https://forelandmarine.com/owners-representation" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "New Build", item: "https://www.forelandmarine.com/owners-representation" },
               ],
             },
           ]),
@@ -341,7 +341,7 @@ export default function NewBuildPage() {
                 <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
               </summary>
               <div className="px-6 pb-5 text-muted leading-relaxed">
-                An Owner&apos;s Representative provides independent oversight of the entire new build process. This includes budget control and cost tracking, quality assurance inspections, schedule monitoring, and representing the owner&apos;s interests at the shipyard during production meetings, milestone reviews, and contractual discussions.
+                An Owner&apos;s Representative provides independent oversight of the entire new build process. This includes budget control and cost tracking, quality assurance inspections, schedule monitoring, and representing the owner&apos;s interests at the shipyard during production meetings, milestone reviews, and contractual discussions. For a fuller account, see <Link href="/insights/what-is-a-yacht-owners-representative" className="text-accent hover:text-white transition-colors underline underline-offset-2">what a yacht owner&apos;s representative does</Link>.
               </div>
             </details>
             <details className="group border border-white/10 bg-bg1">

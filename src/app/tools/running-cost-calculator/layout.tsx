@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "superyacht ownership costs",
   ],
   alternates: {
-    canonical: "https://forelandmarine.com/tools/running-cost-calculator",
+    canonical: "https://www.forelandmarine.com/tools/running-cost-calculator",
   },
   openGraph: {
     title: "How Much Does It Cost to Run a Superyacht? | Running Cost Calculator",

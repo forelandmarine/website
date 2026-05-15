@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Expert insights on yacht management, new build oversight, refit project management, ISM compliance and marine industry best practices from Foreland Marine.",
   alternates: {
-    canonical: "https://forelandmarine.com/insights",
+    canonical: "https://www.forelandmarine.com/insights",
   },
   openGraph: {
     title: "Insights | Foreland Marine",

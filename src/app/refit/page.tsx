@@ -40,7 +40,7 @@ export default function RefitPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              "@id": "https://forelandmarine.com/refit#service",
+              "@id": "https://www.forelandmarine.com/refit#service",
               name: "Yacht Refit Management",
               alternateName: [
                 "Yacht Refit Project Management",
@@ -100,8 +100,8 @@ export default function RefitPage() {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
-                { "@type": "ListItem", position: 2, name: "Refit", item: "https://forelandmarine.com/refit" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "Refit", item: "https://www.forelandmarine.com/refit" },
               ],
             },
           ]),
@@ -272,7 +272,7 @@ export default function RefitPage() {
                 <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
               </summary>
               <div className="px-6 pb-5 text-muted leading-relaxed">
-                We provide detailed cost tracking from the outset, with regular reporting to the owner, structured change order management, milestone-based payments, and proactive identification of schedule risks. Full financial transparency is maintained throughout.
+                We provide detailed cost tracking from the outset, with regular reporting to the owner, structured change order management, milestone-based payments, and proactive identification of schedule risks. Full financial transparency is maintained throughout. For typical cost ranges by yacht size and refit scope, see our guide on <Link href="/insights/how-much-does-a-superyacht-refit-cost" className="text-accent hover:text-white transition-colors underline underline-offset-2">how much a superyacht refit costs</Link>.
               </div>
             </details>
             <details className="group border border-white/10 bg-bg1">
@@ -320,6 +320,7 @@ export default function RefitPage() {
         <p className="text-xs text-muted/60 uppercase tracking-widest mb-3">Further Reading</p>
         <div className="flex flex-col gap-2">
           <Link href="/insights/refit-project-management-what-to-expect" className="text-sm text-accent hover:text-white transition-colors">Refit Project Management: What to Expect from Planning to Sea Trials</Link>
+          <Link href="/insights/how-much-does-a-superyacht-refit-cost" className="text-sm text-accent hover:text-white transition-colors">How Much Does a Superyacht Refit Cost?</Link>
           <Link href="/insights/refit-for-performance-upgrading-a-racing-programme" className="text-sm text-accent hover:text-white transition-colors">Refit for Performance: Upgrading an Ageing Racing Programme</Link>
         </div>
       </div>

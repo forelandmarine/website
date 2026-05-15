@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Yacht Technical Consultancy | Yacht Racing & Race Management",
+  title: "Sailing Yacht Technical Consultancy",
   keywords: [
+    "sailing yacht technical consultancy",
     "yacht technical consultancy",
     "superyacht technical consultancy",
     "yacht racing",
@@ -21,22 +22,22 @@ export const metadata: Metadata = {
     "yacht navigation systems",
   ],
   description:
-    "Specialist yacht technical consultancy across yacht racing performance, race management, yacht logistics, hydraulic and navigation systems, naval architecture, mechanical installation, and AV/IT automation.",
+    "Sailing yacht technical consultancy for performance and race engineering. Hydraulic systems, naval architecture, race management, AV and IT.",
   openGraph: {
-    title: "Yacht Technical Consultancy | Yacht Racing & Race Management",
+    title: "Sailing Yacht Technical Consultancy | Foreland Marine",
     description:
-      "Specialist yacht technical consultancy covering yacht racing, race management, yacht logistics, hydraulic and navigation systems, naval architecture, and AV/IT automation.",
+      "Sailing yacht technical consultancy for performance and race engineering. Hydraulic systems, naval architecture, race management, AV and IT.",
     type: "website",
-    url: "https://forelandmarine.com/technical-consultancy",
+    url: "https://www.forelandmarine.com/technical-consultancy",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yacht Technical Consultancy | Foreland Marine",
+    title: "Sailing Yacht Technical Consultancy | Foreland Marine",
     description:
-      "Yacht technical consultancy across racing performance, race management, yacht logistics, hydraulics, navigation, naval architecture, and AV/IT.",
+      "Sailing yacht technical consultancy for performance and race engineering. Hydraulics, naval architecture, race management.",
   },
   alternates: {
-    canonical: "https://forelandmarine.com/technical-consultancy",
+    canonical: "https://www.forelandmarine.com/technical-consultancy",
   },
 };
 

@@ -104,7 +104,7 @@ export async function POST(req: NextRequest) {
   const subscriptionRowId = insertData.id;
 
   const origin =
-    process.env.NEXT_PUBLIC_SITE_URL || req.headers.get("origin") || "https://forelandmarine.com";
+    process.env.NEXT_PUBLIC_SITE_URL || req.headers.get("origin") || "https://www.forelandmarine.com";
 
   let session;
   try {

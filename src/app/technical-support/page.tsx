@@ -94,7 +94,7 @@ export default function TechnicalSupportPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              "@id": "https://forelandmarine.com/technical-support#service",
+              "@id": "https://www.forelandmarine.com/technical-support#service",
               name: "Yacht Technical Support",
               alternateName: [
                 "Superyacht Technical Support",
@@ -173,8 +173,8 @@ export default function TechnicalSupportPage() {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
-                { "@type": "ListItem", position: 2, name: "Technical Support", item: "https://forelandmarine.com/technical-support" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "Technical Support", item: "https://www.forelandmarine.com/technical-support" },
               ],
             },
           ]),

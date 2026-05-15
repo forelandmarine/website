@@ -44,8 +44,8 @@ export default function InsightsPage() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
-              { "@type": "ListItem", position: 2, name: "Insights", item: "https://forelandmarine.com/insights" },
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.forelandmarine.com" },
+              { "@type": "ListItem", position: 2, name: "Insights", item: "https://www.forelandmarine.com/insights" },
             ],
           }),
         }}

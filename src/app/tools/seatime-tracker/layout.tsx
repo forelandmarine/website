@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Automatic AIS-based sea time logging for professional yacht crew. No manual entry, no paperwork, fully MCA compliant. Track and verify your sea service effortlessly.",
   alternates: {
-    canonical: "https://forelandmarine.com/tools/seatime-tracker",
+    canonical: "https://www.forelandmarine.com/tools/seatime-tracker",
   },
   keywords: ["sea time tracker", "AIS sea time", "yacht logbook app", "MCA sea time", "sea service record", "yacht crew logbook", "automatic sea time logging"],
   openGraph: {

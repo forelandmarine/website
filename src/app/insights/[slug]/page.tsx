@@ -73,25 +73,25 @@ export default async function PostPage({ params }: Props) {
     articleSection: post.category,
     author: {
       "@type": "Person",
-      "@id": "https://forelandmarine.com/#jack-macnally",
+      "@id": "https://www.forelandmarine.com/#jack-macnally",
       name: "Jack MacNally",
       jobTitle: "Director, Foreland Marine",
-      url: "https://forelandmarine.com/about",
+      url: "https://www.forelandmarine.com/about",
       sameAs: ["https://www.linkedin.com/in/jmacnally/"],
     },
     publisher: {
       "@type": "Organization",
-      "@id": "https://forelandmarine.com/#organization",
+      "@id": "https://www.forelandmarine.com/#organization",
       name: "Foreland Marine Consultancy Ltd",
-      url: "https://forelandmarine.com",
+      url: "https://www.forelandmarine.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://forelandmarine.com/logos/foreland-marine-white.svg",
+        url: "https://www.forelandmarine.com/logos/foreland-marine-white.svg",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://forelandmarine.com/insights/${post.slug}`,
+      "@id": `https://www.forelandmarine.com/insights/${post.slug}`,
     },
   };
 

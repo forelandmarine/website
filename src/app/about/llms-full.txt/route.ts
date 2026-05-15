@@ -5,7 +5,7 @@ export async function GET() {
 
 > Independent superyacht consultancy providing yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60+ metres worldwide.
 
-Website: https://forelandmarine.com
+Website: https://www.forelandmarine.com
 Email: info@forelandmarine.com
 Address: 7 Bell Yard, London, WC2A 2JR, United Kingdom
 LinkedIn: https://www.linkedin.com/company/foreland-marine-consultancy
@@ -24,7 +24,7 @@ The company is accredited by the Superyacht Builders Association (SYBAss) as an 
 ## Services - Full Descriptions
 
 ### Yacht Management
-URL: https://forelandmarine.com/yacht-management
+URL: https://www.forelandmarine.com/yacht-management
 
 Independent, owner-focused yacht management covering safety, compliance, crew, finances, and operations. Foreland Marine protects asset value, ensures regulatory confidence, and enables owners to enjoy their yachts without operational burden.
 
@@ -46,7 +46,7 @@ Key differentiators:
 - Transparent reporting: itemised expenditure, budget variance commentary, full audit trails, no hidden fees
 
 ### New Build Owner's Representation
-URL: https://forelandmarine.com/owners-representation
+URL: https://www.forelandmarine.com/owners-representation
 
 Accredited owner's representation and build management for new yacht projects worldwide. SYBAss accredited and YORR registered.
 
@@ -66,7 +66,7 @@ Scope of involvement:
 - Warranty management: post-delivery defect tracking, claims management, continued shipyard liaison
 
 ### Refit Project Management
-URL: https://forelandmarine.com/refit
+URL: https://www.forelandmarine.com/refit
 
 Full refit project management for motor and sailing yachts over 24 metres. Track record: 25 large yacht refit projects delivered across 7 countries, including high-profile classic and modern racing yachts, sailing yachts exceeding 40 metres, motor yachts in excess of 60 metres, and historic restorations of vessels dating from the 1920s.
 
@@ -81,7 +81,7 @@ Sub-services:
 Classic yacht restoration: the team has experience with traditional timber construction, period-correct hardware, and sympathetic upgrades to mechanical and electrical systems. The goal is a vessel faithful to her heritage but ready for the sea.
 
 ### Technical Consultancy
-URL: https://forelandmarine.com/technical-consultancy
+URL: https://www.forelandmarine.com/technical-consultancy
 
 Specialist technical consultancy across six disciplines:
 
@@ -121,27 +121,27 @@ Automation: Crestron, Lutron, Savant, and custom PLC-based systems for lighting,
 ## Digital Tools and Products - Full Descriptions
 
 ### Lightship ISM
-URL: https://forelandmarine.com/tools/lightship-ism
+URL: https://www.forelandmarine.com/tools/lightship-ism
 Foreland Marine's proprietary ISM and fleet reporting platform, built from the ground up by people who manage yachts. Gives owners and managers real-time visibility of compliance status across the fleet, consolidating audit trails, non-conformities, corrective actions, incident logs, and certification schedules in one place. Replaces spreadsheets and manual paperwork with a single dashboard covering every vessel.
 
 ### SeaTime Tracker
-URL: https://forelandmarine.com/tools/seatime-tracker
+URL: https://www.forelandmarine.com/tools/seatime-tracker
 AIS-powered sea time logging. Automatically detects and logs sea time via AIS data. No manual entry, no paperwork. Fully MCA-compliant.
 
 ### Running Cost Calculator
-URL: https://forelandmarine.com/tools/running-cost-calculator
+URL: https://www.forelandmarine.com/tools/running-cost-calculator
 Estimates the annual operating costs of a superyacht. Users enter yacht length, type, and cruising area to receive a detailed breakdown of crew salaries, insurance, fuel, marina fees, maintenance, and other operational costs.
 
 ### PMS Database
-URL: https://forelandmarine.com/tools/pms-database
+URL: https://www.forelandmarine.com/tools/pms-database
 Planned maintenance system database setup, licensing, and on-site population for yacht engineering departments. Foreland Marine is an authorised DeepBlue agent, with experience across IDEA, SeaHub, Aquator and other PMS platforms.
 
 ### Debrief
-URL: https://forelandmarine.com/tools/debrief
+URL: https://www.forelandmarine.com/tools/debrief
 Status: alpha. AI-powered race analysis tool. Unifies telemetry, video, weather data, crew positioning, and communications on a single timeline for post-race performance review and crew debriefs.
 
 ### Weather Routing
-URL: https://forelandmarine.com/tools/weather-routing
+URL: https://www.forelandmarine.com/tools/weather-routing
 Marine meteorology and weather routing for races, ocean crossings, and superyacht deliveries. Provided in partnership with OrcaMet, founded by Steve Carver. Covers route optimisation, weather forecasting, and performance analysis for racing and passage planning.
 
 ---
@@ -195,70 +195,70 @@ Pendennis Falmouth, Pendennis Vilanova, Royal Huisman, Newport Shipyard, Lyman M
 
 ## Blog / Insights Index
 
-All articles published at https://forelandmarine.com/insights/
+All articles published at https://www.forelandmarine.com/insights/
 
 - How to Buy Your First Superyacht: A Practical Guide for New Owners
-  URL: https://forelandmarine.com/insights/how-to-buy-your-first-superyacht
+  URL: https://www.forelandmarine.com/insights/how-to-buy-your-first-superyacht
 
 - J Class Yacht Management: What Makes It Different
-  URL: https://forelandmarine.com/insights/j-class-yacht-management
+  URL: https://www.forelandmarine.com/insights/j-class-yacht-management
 
 - Performance Sailing Yacht Refit: Rig, Keel, and Appendage Programmes
-  URL: https://forelandmarine.com/insights/performance-sailing-yacht-refit
+  URL: https://www.forelandmarine.com/insights/performance-sailing-yacht-refit
 
 - Sailing vs Motor Yacht Management: The Key Differences Owners Should Understand
-  URL: https://forelandmarine.com/insights/sailing-vs-motor-yacht-management-differences
+  URL: https://www.forelandmarine.com/insights/sailing-vs-motor-yacht-management-differences
 
 - Understanding Yacht Management Costs: The 10% Rule and What It Really Means
-  URL: https://forelandmarine.com/insights/understanding-yacht-management-costs-10-percent-rule
+  URL: https://www.forelandmarine.com/insights/understanding-yacht-management-costs-10-percent-rule
 
 - Weather Routing for Offshore Racing: What Navigators Need to Know
-  URL: https://forelandmarine.com/insights/weather-routing-offshore-racing
+  URL: https://www.forelandmarine.com/insights/weather-routing-offshore-racing
 
 - Choosing a Shipyard for Your Yacht Refit: A Practical Guide
-  URL: https://forelandmarine.com/insights/choosing-shipyard-yacht-refit
+  URL: https://www.forelandmarine.com/insights/choosing-shipyard-yacht-refit
 
 - A Guide to ISM Compliance for Yachts Under 500GT
-  URL: https://forelandmarine.com/insights/ism-compliance-yachts-under-500gt
+  URL: https://www.forelandmarine.com/insights/ism-compliance-yachts-under-500gt
 
 - What is a Yacht Owner's Representative and Why Independence Matters
-  URL: https://forelandmarine.com/insights/what-is-a-yacht-owners-representative
+  URL: https://www.forelandmarine.com/insights/what-is-a-yacht-owners-representative
 
 - Why Independent Yacht Management Matters
-  URL: https://forelandmarine.com/insights/why-independent-yacht-management-matters
+  URL: https://www.forelandmarine.com/insights/why-independent-yacht-management-matters
 
 - Carbon Composite Construction: What Owners Need to Know
-  URL: https://forelandmarine.com/insights/carbon-composite-construction-what-owners-need-to-know
+  URL: https://www.forelandmarine.com/insights/carbon-composite-construction-what-owners-need-to-know
 
 - Refit for Performance: Upgrading an Ageing Racing Programme
-  URL: https://forelandmarine.com/insights/refit-for-performance-upgrading-a-racing-programme
+  URL: https://www.forelandmarine.com/insights/refit-for-performance-upgrading-a-racing-programme
 
 - Owner's Representation During Yard Selection: Getting It Right from Day One
-  URL: https://forelandmarine.com/insights/owner-representation-during-yard-selection
+  URL: https://www.forelandmarine.com/insights/owner-representation-during-yard-selection
 
 - The Role of an Owner's Representative in a New Build Project
-  URL: https://forelandmarine.com/insights/the-role-of-an-owners-representative
+  URL: https://www.forelandmarine.com/insights/the-role-of-an-owners-representative
 
 - A Practical Guide to ISM Compliance for Yacht Owners
-  URL: https://forelandmarine.com/insights/ism-compliance-guide-for-yacht-owners
+  URL: https://www.forelandmarine.com/insights/ism-compliance-guide-for-yacht-owners
 
 - Refit Project Management: What to Expect from Planning to Sea Trials
-  URL: https://forelandmarine.com/insights/refit-project-management-what-to-expect
+  URL: https://www.forelandmarine.com/insights/refit-project-management-what-to-expect
 
 - Flag State Registration: How to Choose the Right Flag for Your Yacht
-  URL: https://forelandmarine.com/insights/flag-state-registration-guide-for-yacht-owners
+  URL: https://www.forelandmarine.com/insights/flag-state-registration-guide-for-yacht-owners
 
 - How Much Does a Superyacht Refit Cost? A Realistic Breakdown
-  URL: https://forelandmarine.com/insights/how-much-does-a-superyacht-refit-cost
+  URL: https://www.forelandmarine.com/insights/how-much-does-a-superyacht-refit-cost
 
 - Superyacht Crew Salaries 2026: What to Budget by Position and Yacht Size
-  URL: https://forelandmarine.com/insights/superyacht-crew-salary-guide
+  URL: https://www.forelandmarine.com/insights/superyacht-crew-salary-guide
 
 - How to Choose an Independent Yacht Management Company
-  URL: https://forelandmarine.com/insights/choosing-yacht-management-company
+  URL: https://www.forelandmarine.com/insights/choosing-yacht-management-company
 
 - Understanding MCA Large Yacht Code Requirements
-  URL: https://forelandmarine.com/insights/mca-large-yacht-code-requirements
+  URL: https://www.forelandmarine.com/insights/mca-large-yacht-code-requirements
 
 ---
 
@@ -359,16 +359,16 @@ A: Email info@forelandmarine.com or visit forelandmarine.com/contact.
 
 ## Site Map
 
-- Home: https://forelandmarine.com
-- Yacht Management: https://forelandmarine.com/yacht-management
-- Owner's Representation: https://forelandmarine.com/owners-representation
-- Refit: https://forelandmarine.com/refit
-- Technical Consultancy: https://forelandmarine.com/technical-consultancy
-- About: https://forelandmarine.com/about
-- Contact: https://forelandmarine.com/contact
-- Tools: https://forelandmarine.com/tools
-- Insights: https://forelandmarine.com/insights
-- Privacy Policy: https://forelandmarine.com/privacy-policy
+- Home: https://www.forelandmarine.com
+- Yacht Management: https://www.forelandmarine.com/yacht-management
+- Owner's Representation: https://www.forelandmarine.com/owners-representation
+- Refit: https://www.forelandmarine.com/refit
+- Technical Consultancy: https://www.forelandmarine.com/technical-consultancy
+- About: https://www.forelandmarine.com/about
+- Contact: https://www.forelandmarine.com/contact
+- Tools: https://www.forelandmarine.com/tools
+- Insights: https://www.forelandmarine.com/insights
+- Privacy Policy: https://www.forelandmarine.com/privacy-policy
 `;
 
   return new NextResponse(content, {

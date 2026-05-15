@@ -102,8 +102,8 @@ export default function ForelandGroupPage() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
-              { "@type": "ListItem", position: 2, name: "Foreland Group", item: "https://forelandmarine.com/foreland-group" },
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.forelandmarine.com" },
+              { "@type": "ListItem", position: 2, name: "Foreland Group", item: "https://www.forelandmarine.com/foreland-group" },
             ],
           }),
         }}

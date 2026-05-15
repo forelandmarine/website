@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Lightship streamlines yacht administration with ISM compliance, incident reporting, project management, logbooks, and AIS sea service records in one clear interface.",
   alternates: {
-    canonical: "https://forelandmarine.com/tools/lightship-ism",
+    canonical: "https://www.forelandmarine.com/tools/lightship-ism",
   },
   keywords: ["yacht ISM compliance", "ISM management system", "yacht safety management", "yacht fleet management", "ISM audit yacht", "yacht compliance platform", "Lightship ISM"],
   openGraph: {

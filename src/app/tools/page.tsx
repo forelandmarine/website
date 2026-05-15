@@ -31,8 +31,8 @@ export default function ToolsPage() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
-              { "@type": "ListItem", position: 2, name: "Tools", item: "https://forelandmarine.com/tools" },
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.forelandmarine.com" },
+              { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.forelandmarine.com/tools" },
             ],
           }),
         }}

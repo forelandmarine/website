@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Yacht Refit Management | Independent Refit Project Management",
+  title: "Superyacht Refit Project Management",
   keywords: [
+    "superyacht refit project management",
     "yacht refit management",
     "yacht refit",
-    "superyacht refit management",
     "superyacht refit",
     "yacht refit project management",
     "refit project management",
@@ -18,22 +18,22 @@ export const metadata: Metadata = {
     "independent yacht refit",
   ],
   description:
-    "Independent yacht refit management for sailing and motor yachts over 24m. 25 large yacht refit projects across 7 countries, from racing programmes to motor yacht rebuilds. SYBAss accredited, no yard commissions.",
+    "Independent superyacht refit project management for sailing and motor yachts 24 to 60 metres. Owner-side only, no yard commissions or broker fees.",
   openGraph: {
-    title: "Yacht Refit Management | Foreland Marine",
+    title: "Superyacht Refit Project Management | Foreland Marine",
     description:
-      "Independent yacht refit management and refit project management for sailing and motor yachts over 24m. 25 projects across 7 countries.",
+      "Independent superyacht refit project management for sailing and motor yachts 24 to 60 metres. Owner-side only, no yard commissions or broker fees.",
     type: "website",
-    url: "https://forelandmarine.com/refit",
+    url: "https://www.forelandmarine.com/refit",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yacht Refit Management | Foreland Marine",
+    title: "Superyacht Refit Project Management | Foreland Marine",
     description:
-      "Independent yacht refit management for sailing and motor yachts over 24m. SYBAss accredited.",
+      "Independent superyacht refit project management for sailing and motor yachts 24 to 60 metres. Owner-side only.",
   },
   alternates: {
-    canonical: "https://forelandmarine.com/refit",
+    canonical: "https://www.forelandmarine.com/refit",
   },
 };
 

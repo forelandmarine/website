@@ -10,7 +10,7 @@ export const metadata: Metadata = {
       "Get in touch with Foreland Marine Consultancy. Based in London with consultants across all major yachting hubs worldwide.",
   },
   alternates: {
-    canonical: "https://forelandmarine.com/contact",
+    canonical: "https://www.forelandmarine.com/contact",
   },
 };
 

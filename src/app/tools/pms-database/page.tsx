@@ -129,7 +129,7 @@ export default function PMSDatabasePage() {
             provider: {
               "@type": "Organization",
               name: "Foreland Marine Consultancy",
-              url: "https://forelandmarine.com",
+              url: "https://www.forelandmarine.com",
             },
             serviceType: "Planned Maintenance System Database Setup",
             areaServed: "Worldwide",

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Foreland Shipyard Group investment proposal and documentation portal.",
   robots: { index: false, follow: false },
   alternates: {
-    canonical: "https://forelandmarine.com/foreland-group",
+    canonical: "https://www.forelandmarine.com/foreland-group",
   },
 };
 

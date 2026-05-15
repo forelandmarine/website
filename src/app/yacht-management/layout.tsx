@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Independent Yacht Management | Superyacht Management Services",
+  title: "Independent Yacht Management",
   keywords: [
+    "independent yacht management",
     "yacht management",
     "superyacht management",
-    "independent yacht management",
     "yacht management company",
     "superyacht management services",
     "ISM compliance",
@@ -19,22 +19,22 @@ export const metadata: Metadata = {
     "owner-focused yacht management",
   ],
   description:
-    "Independent, owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, class and flag state requirements. No brokerage, no charter commissions, no supplier kickbacks.",
+    "Independent yacht management acting on the owner's side only. ISM compliance, crew, finances, class and flag for sailing and motor yachts 24 to 60 metres.",
   openGraph: {
-    title: "Independent Yacht Management | Superyacht Management Services",
+    title: "Independent Yacht Management | Foreland Marine",
     description:
-      "Independent, owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, class and flag state requirements.",
+      "Independent yacht management acting on the owner's side only. ISM compliance, crew, finances, class and flag. 24 to 60 metres.",
     type: "website",
-    url: "https://forelandmarine.com/yacht-management",
+    url: "https://www.forelandmarine.com/yacht-management",
   },
   twitter: {
     card: "summary_large_image",
     title: "Independent Yacht Management | Foreland Marine",
     description:
-      "Owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, class and flag state.",
+      "Owner-side only yacht management. ISM compliance, crew, finances, class and flag. No broker commissions, no charter fees.",
   },
   alternates: {
-    canonical: "https://forelandmarine.com/yacht-management",
+    canonical: "https://www.forelandmarine.com/yacht-management",
   },
 };
 

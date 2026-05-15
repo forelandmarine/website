@@ -42,7 +42,7 @@ export default function YachtManagementPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              "@id": "https://forelandmarine.com/yacht-management#service",
+              "@id": "https://www.forelandmarine.com/yacht-management#service",
               name: "Yacht Management",
               alternateName: [
                 "Superyacht Management",
@@ -54,7 +54,7 @@ export default function YachtManagementPage() {
               provider: {
                 "@type": "Organization",
                 name: "Foreland Marine Consultancy Ltd",
-                "@id": "https://forelandmarine.com/#organization",
+                "@id": "https://www.forelandmarine.com/#organization",
               },
               areaServed: "Worldwide",
               description:
@@ -102,8 +102,8 @@ export default function YachtManagementPage() {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
-                { "@type": "ListItem", position: 2, name: "Yacht Management", item: "https://forelandmarine.com/yacht-management" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "Yacht Management", item: "https://www.forelandmarine.com/yacht-management" },
               ],
             },
           ]),

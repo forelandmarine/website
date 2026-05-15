@@ -121,7 +121,7 @@ export default function TechnicalConsultancyPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              "@id": "https://forelandmarine.com/technical-consultancy#service",
+              "@id": "https://www.forelandmarine.com/technical-consultancy#service",
               name: "Yacht Technical Consultancy",
               alternateName: [
                 "Superyacht Technical Consultancy",
@@ -173,8 +173,8 @@ export default function TechnicalConsultancyPage() {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
-                { "@type": "ListItem", position: 2, name: "Technical Consultancy", item: "https://forelandmarine.com/technical-consultancy" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "Technical Consultancy", item: "https://www.forelandmarine.com/technical-consultancy" },
               ],
             },
           ]),

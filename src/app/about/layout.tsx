@@ -10,7 +10,7 @@ export const metadata: Metadata = {
       "Meet the team behind Foreland Marine. SYBAss accredited consultants with blue water experience, specialising in performance sailing yachts from 24 to 60 metres.",
   },
   alternates: {
-    canonical: "https://forelandmarine.com/about",
+    canonical: "https://www.forelandmarine.com/about",
   },
 };
 

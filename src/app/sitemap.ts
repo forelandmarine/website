@@ -2,13 +2,13 @@ import { MetadataRoute } from "next";
 import { posts } from "./insights/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://forelandmarine.com";
+  const baseUrl = "https://www.forelandmarine.com";
 
-  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+  const insightEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/insights/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
-    priority: 0.6,
+    priority: 0.7,
   }));
 
   return [
@@ -24,11 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
-{
+    {
       url: `${baseUrl}/owners-representation`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/refit`,
@@ -49,46 +49,52 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/technical-support`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/tools`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/tools/lightship-ism`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/tools/seatime-tracker`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/tools/pms-database`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/tools/debrief`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/tools/weather-routing`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/tools/running-cost-calculator`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
@@ -102,7 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
-    ...blogEntries,
+    ...insightEntries,
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),

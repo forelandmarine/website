@@ -151,9 +151,9 @@ export default function WeatherRoutingPage() {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://forelandmarine.com" },
-                { "@type": "ListItem", position: 2, name: "Tools", item: "https://forelandmarine.com/tools" },
-                { "@type": "ListItem", position: 3, name: "Weather Routing", item: "https://forelandmarine.com/tools/weather-routing" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.forelandmarine.com" },
+                { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.forelandmarine.com/tools" },
+                { "@type": "ListItem", position: 3, name: "Weather Routing", item: "https://www.forelandmarine.com/tools/weather-routing" },
               ],
             },
           ]),

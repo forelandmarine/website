@@ -11,7 +11,7 @@ const links = [
   {
     title: "Website",
     description: "forelandmarine.com",
-    href: "https://forelandmarine.com",
+    href: "https://www.forelandmarine.com",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
@@ -32,7 +32,7 @@ const links = [
   {
     title: "Superyacht Running Cost Calculator",
     description: "How much does your yacht cost?",
-    href: "https://forelandmarine.com/tools/running-cost-calculator",
+    href: "https://www.forelandmarine.com/tools/running-cost-calculator",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <line x1="12" y1="1" x2="12" y2="23" />

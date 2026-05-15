@@ -469,7 +469,7 @@ export default function RunningCostCalculatorPage() {
             "@context": "https://schema.org",
             "@type": "WebApplication",
             name: "Superyacht Running Cost Calculator",
-            url: "https://forelandmarine.com/tools/running-cost-calculator",
+            url: "https://www.forelandmarine.com/tools/running-cost-calculator",
             description: "Interactive calculator that estimates annual superyacht running costs by crew, insurance, maintenance, berths, fuel, management, and compliance.",
             applicationCategory: "FinanceApplication",
             operatingSystem: "Any",
@@ -481,7 +481,7 @@ export default function RunningCostCalculatorPage() {
             author: {
               "@type": "Organization",
               name: "Foreland Marine Consultancy",
-              url: "https://forelandmarine.com",
+              url: "https://www.forelandmarine.com",
             },
           }),
         }}

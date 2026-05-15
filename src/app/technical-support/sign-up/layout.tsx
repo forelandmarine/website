@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Sign up to the Foreland technical support programme. Three tiers from £250 per month, monthly billing, thirty days' notice to leave.",
   robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://forelandmarine.com/technical-support/sign-up",
+    canonical: "https://www.forelandmarine.com/technical-support/sign-up",
   },
 };
 

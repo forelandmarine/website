@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Yacht Owner's Representation | Yacht New Build & Refit",
+  title: "Yacht Owner's Representative",
   description:
-    "Independent yacht owner's representation and superyacht representation for yacht new build and refit, 24 to 60 metres. SYBAss accredited, YORR registered. No yard commissions, no broker referral fees, no supplier kickbacks. Foreland Marine.",
+    "SYBAss-accredited yacht owner's representation for new build and refit oversight. Independent of yards and brokers. Sailing and motor yachts 24 to 60 metres.",
   keywords: [
+    "yacht owner's representative",
     "yacht owner's representation",
     "yacht owners representation",
-    "yacht owner's representative",
     "superyacht representation",
     "superyacht owner's representation",
     "yacht new build",
@@ -23,20 +23,20 @@ export const metadata: Metadata = {
     "YORR registered",
   ],
   openGraph: {
-    title: "Yacht Owner's Representation | Yacht New Build & Refit",
+    title: "Yacht Owner's Representative | Foreland Marine",
     description:
-      "Independent yacht owner's representation and superyacht representation for yacht new build and refit, 24 to 60 metres. SYBAss accredited, YORR registered.",
+      "SYBAss-accredited yacht owner's representation for new build and refit oversight. Independent of yards and brokers. 24 to 60 metres.",
     type: "website",
-    url: "https://forelandmarine.com/owners-representation",
+    url: "https://www.forelandmarine.com/owners-representation",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yacht Owner's Representation | Yacht New Build",
+    title: "Yacht Owner's Representative | Foreland Marine",
     description:
-      "Independent yacht owner's representation and superyacht representation. SYBAss accredited, YORR registered, no commissions.",
+      "SYBAss-accredited yacht owner's representation for new build and refit. Independent of yards and brokers.",
   },
   alternates: {
-    canonical: "https://forelandmarine.com/owners-representation",
+    canonical: "https://www.forelandmarine.com/owners-representation",
   },
 };
 
