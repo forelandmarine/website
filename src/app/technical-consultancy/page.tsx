@@ -216,7 +216,7 @@ export default function TechnicalConsultancyPage() {
               {/* Image */}
               <div className={`relative h-64 sm:h-72 lg:h-auto lg:min-h-[460px] ${d.imageRight ? "order-first lg:order-last" : ""} ${d.vignette ? "bg-bg0" : ""}`} data-animate={d.imageRight ? "slide-left" : "slide-right"}>
                 <Image src={d.image.src} alt={d.image.alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className={`object-cover ${d.vignette ? "opacity-80" : ""}`} />
-                <div className={`absolute inset-0 ${d.darkTint ? "bg-bg0/40" : "bg-bg0/20"}`} />
+                <div className={`absolute inset-0 ${d.darkTint ? "bg-bg0/20" : "bg-bg0/10"}`} />
                 {d.vignette && <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 30%, var(--bg0) 100%)" }} />}
               </div>
 
