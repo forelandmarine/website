@@ -184,7 +184,7 @@ export default function TechnicalSupportPage() {
       {/* HERO */}
       <section
         ref={heroRef}
-        className="relative flex items-end overflow-hidden bg-bg0 min-h-[78vh] sm:min-h-[82vh] lg:min-h-[88vh] pb-16 sm:pb-20 lg:pb-28 pt-32 sm:pt-40 lg:pt-48"
+        className="relative flex items-end overflow-hidden bg-bg0 min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] pb-12 sm:pb-16 lg:pb-20 pt-24 sm:pt-32 lg:pt-40"
       >
         <div
           className="absolute inset-0 will-change-transform"
@@ -195,7 +195,7 @@ export default function TechnicalSupportPage() {
             alt="Sailing yacht at anchor in a moonlit cove"
             fill
             sizes="100vw"
-            className="object-cover object-right scale-110"
+            className="object-cover object-[100%_65%] scale-125"
             priority
           />
           {/* Horizontal scrim: solid on the left where text sits, transparent on the right where the yacht is. */}
