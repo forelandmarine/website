@@ -50,7 +50,7 @@ export default function Nav() {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20 lg:grid lg:grid-cols-[1fr_auto_1fr]">
           {/* Logo (left column) */}
-          <Link href="/" className="flex items-center shrink-0 justify-self-start">
+          <Link href="/" className="flex items-center shrink-0 lg:justify-self-center">
             <Image
               src="/logos/foreland-marine-white.svg"
               alt="Foreland Marine Consultancy"
@@ -118,7 +118,7 @@ export default function Nav() {
           </nav>
 
           {/* Right column: desktop actions OR mobile hamburger */}
-          <div className="justify-self-end flex items-center">
+          <div className="lg:justify-self-center flex items-center">
             {/* Desktop right actions */}
             <div className="hidden lg:flex items-center gap-4">
               <a
