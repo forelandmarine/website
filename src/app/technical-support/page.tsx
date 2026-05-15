@@ -199,9 +199,9 @@ export default function TechnicalSupportPage() {
             priority
           />
           {/* Horizontal scrim: solid on the left where text sits, transparent on the right where the yacht is. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-bg0 via-bg0/85 sm:via-bg0/75 to-bg0/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-bg0/75 via-bg0/65 sm:via-bg0/55 to-bg0/5" />
           {/* Vertical bottom scrim to seat the text on a darker base. */}
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-bg0/90" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-bg0/70" />
         </div>
         <div
           className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full will-change-transform"
