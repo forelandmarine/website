@@ -48,7 +48,7 @@ export default function Nav() {
     <>
     <header className="sticky top-0 z-50 w-full border-b border-white/8 bg-bg1/95 backdrop-blur-md">
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-[1fr_auto_1fr] h-20 items-center">
+        <div className="flex justify-between items-center h-20 lg:grid lg:grid-cols-[1fr_auto_1fr]">
           {/* Logo (left column) */}
           <Link href="/" className="flex items-center shrink-0 justify-self-start">
             <Image
@@ -57,7 +57,7 @@ export default function Nav() {
               width={300}
               height={52}
               priority
-              className="w-[420px] sm:w-[480px] lg:w-[509px] h-auto max-w-none"
+              className="w-[210px] sm:w-[240px] lg:w-[255px] h-auto max-w-none"
             />
           </Link>
 
