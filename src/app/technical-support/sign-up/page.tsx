@@ -49,7 +49,7 @@ function SignUpInner() {
   );
   const [currency, setCurrency] = useState<Currency>("gbp");
   const [billingCycle, setBillingCycle] = useState<BillingCycle>(
-    isCycle(initialCycle) ? initialCycle : "monthly"
+    isCycle(initialCycle) ? initialCycle : "annual"
   );
 
   const [yachtName, setYachtName] = useState("");

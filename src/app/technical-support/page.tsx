@@ -69,7 +69,7 @@ const pmsItems = [
 
 export default function TechnicalSupportPage() {
   const [scrollY, setScrollY] = useState(0);
-  const [cycle, setCycle] = useState<BillingCycle>("monthly");
+  const [cycle, setCycle] = useState<BillingCycle>("annual");
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -236,12 +236,12 @@ export default function TechnicalSupportPage() {
               Three levels of cover
             </h2>
             <p className="text-muted leading-relaxed">
-              Choose the level of cover the yacht needs. Monthly billing in GBP by default, with EUR and USD at indicative cross-rates. Annual term, thirty days&apos; notice to leave. Pay annually for the equivalent of two months free.
+              Choose the level of cover the yacht needs. Monthly billing in GBP by default, with EUR and USD at indicative cross-rates. Annual term, thirty days&apos; notice to leave.
             </p>
           </div>
 
           {/* Billing cycle toggle */}
-          <div className="flex justify-start mb-8">
+          <div className="mb-8">
             <div className="inline-flex border border-white/15">
               {(["monthly", "annual"] as BillingCycle[]).map((c) => {
                 const active = cycle === c;
@@ -250,22 +250,20 @@ export default function TechnicalSupportPage() {
                     key={c}
                     type="button"
                     onClick={() => setCycle(c)}
-                    className={`px-5 py-2.5 text-sm font-semibold capitalize transition-colors ${
+                    className={`px-6 py-2.5 text-sm font-semibold capitalize transition-colors ${
                       active
                         ? "bg-accent text-white"
                         : "text-muted hover:text-white hover:bg-white/5"
                     }`}
                   >
                     {c}
-                    {c === "annual" && (
-                      <span className={`ml-2 text-[10px] uppercase tracking-widest ${active ? "text-white/80" : "text-accent"}`}>
-                        2 months free
-                      </span>
-                    )}
                   </button>
                 );
               })}
             </div>
+            <p className="text-sm text-muted mt-3">
+              Annual billing: twelve months for the price of ten.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-animate-stagger>
@@ -304,8 +302,8 @@ export default function TechnicalSupportPage() {
                       : `€${monthly.eur.toLocaleString()} · $${monthly.usd.toLocaleString()}`}
                   </p>
                   {isAnnual && (
-                    <p className="text-xs text-muted/60 mb-4">
-                      vs £{(monthly.gbp * 12).toLocaleString()} on monthly billing
+                    <p className="text-sm text-muted mb-4">
+                      vs £{(monthly.gbp * 12).toLocaleString()} on monthly billing.
                     </p>
                   )}
                   {!isAnnual && <div className="mb-4" />}
