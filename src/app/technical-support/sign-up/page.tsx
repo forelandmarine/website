@@ -38,6 +38,8 @@ const TIER_LINES: Record<TierSlug, string[]> = {
   ],
 };
 
+type PaymentMethod = "card" | "invoice";
+
 function SignUpInner() {
   const params = useSearchParams();
   const initialTier = params.get("tier");
@@ -52,6 +54,8 @@ function SignUpInner() {
     isCycle(initialCycle) ? initialCycle : "annual"
   );
 
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("card");
+
   const [yachtName, setYachtName] = useState("");
   const [yachtImo, setYachtImo] = useState("");
   const [yachtMmsi, setYachtMmsi] = useState("");
@@ -61,6 +65,12 @@ function SignUpInner() {
 
   const [billingName, setBillingName] = useState("");
   const [billingEmail, setBillingEmail] = useState("");
+  const [billingAddressLine1, setBillingAddressLine1] = useState("");
+  const [billingAddressLine2, setBillingAddressLine2] = useState("");
+  const [billingCity, setBillingCity] = useState("");
+  const [billingPostcode, setBillingPostcode] = useState("");
+  const [billingCountry, setBillingCountry] = useState("");
+  const [billingVatNumber, setBillingVatNumber] = useState("");
 
   const [captainName, setCaptainName] = useState("");
   const [captainEmail, setCaptainEmail] = useState("");
@@ -69,6 +79,8 @@ function SignUpInner() {
   const [engineerName, setEngineerName] = useState("");
   const [engineerEmail, setEngineerEmail] = useState("");
   const [engineerPhone, setEngineerPhone] = useState("");
+
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -89,9 +101,15 @@ function SignUpInner() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
+
+    if (!termsAccepted) {
+      setError("Please accept the Terms & Conditions to continue.");
+      return;
+    }
+
     setSubmitting(true);
 
-    const body = {
+    const sharedBody = {
       tier,
       currency,
       billingCycle,
@@ -112,10 +130,33 @@ function SignUpInner() {
     };
 
     try {
+      if (paymentMethod === "invoice") {
+        const res = await fetch("/api/technical-support/request-invoice", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...sharedBody,
+            billingAddressLine1,
+            billingAddressLine2,
+            billingCity,
+            billingPostcode,
+            billingCountry,
+            billingVatNumber,
+            termsAccepted,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.error || "Something went wrong. Please try again.");
+        }
+        window.location.href = "/technical-support/invoice-requested";
+        return;
+      }
+
       const res = await fetch("/api/technical-support/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
+        body: JSON.stringify({ ...sharedBody, termsAccepted }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -128,6 +169,8 @@ function SignUpInner() {
       setSubmitting(false);
     }
   }
+
+  const isInvoice = paymentMethod === "invoice";
 
   return (
     <section className="bg-bg0 py-16 sm:py-20 lg:py-24">
@@ -254,6 +297,50 @@ function SignUpInner() {
             </p>
           </fieldset>
 
+          {/* PAYMENT METHOD */}
+          <fieldset className="border-t border-white/10 pt-10">
+            <legend className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+              Payment method
+            </legend>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {(
+                [
+                  {
+                    value: "card" as PaymentMethod,
+                    title: "Pay by card",
+                    desc: "Continue to Stripe&rsquo;s secure checkout. Subscription activates immediately and renews automatically.",
+                  },
+                  {
+                    value: "invoice" as PaymentMethod,
+                    title: "Request invoice",
+                    desc: "We email a VAT invoice payable on receipt by bank transfer. Cover begins as soon as funds clear.",
+                  },
+                ]
+              ).map((opt) => {
+                const active = paymentMethod === opt.value;
+                return (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    onClick={() => setPaymentMethod(opt.value)}
+                    aria-pressed={active}
+                    className={`text-left p-5 border transition-colors ${
+                      active
+                        ? "border-accent bg-bg2 ring-1 ring-accent/40"
+                        : "border-white/10 bg-bg1 hover:border-white/30"
+                    }`}
+                  >
+                    <p className="text-sm font-semibold text-white mb-1">{opt.title}</p>
+                    <p
+                      className="text-xs text-muted leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: opt.desc }}
+                    />
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
+
           {/* VESSEL */}
           <fieldset className="border-t border-white/10 pt-10">
             <legend className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
@@ -278,9 +365,21 @@ function SignUpInner() {
               <FormField label="Billing entity name" required value={billingName} onChange={setBillingName} />
               <FormField label="Billing email" type="email" required value={billingEmail} onChange={setBillingEmail} />
             </div>
-            <p className="mt-3 text-xs text-muted/70 leading-relaxed">
-              Billing address and VAT number are collected on the next step by Stripe, our payments provider.
-            </p>
+
+            {isInvoice ? (
+              <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+                <FormField label="Address line 1" required value={billingAddressLine1} onChange={setBillingAddressLine1} className="md:col-span-2" />
+                <FormField label="Address line 2" value={billingAddressLine2} onChange={setBillingAddressLine2} className="md:col-span-2" />
+                <FormField label="City / town" required value={billingCity} onChange={setBillingCity} />
+                <FormField label="Postcode / ZIP" required value={billingPostcode} onChange={setBillingPostcode} />
+                <FormField label="Country" required value={billingCountry} onChange={setBillingCountry} />
+                <FormField label="VAT number (if applicable)" value={billingVatNumber} onChange={setBillingVatNumber} />
+              </div>
+            ) : (
+              <p className="mt-3 text-xs text-muted/70 leading-relaxed">
+                Billing address and VAT number are collected on the next step by Stripe, our payments provider.
+              </p>
+            )}
           </fieldset>
 
           {/* CAPTAIN */}
@@ -325,10 +424,35 @@ function SignUpInner() {
                   </p>
                 </div>
                 <p className="text-xs text-muted/60">
-                  Card details are entered on the next page, on Stripe&rsquo;s secure checkout.
+                  {isInvoice
+                    ? "An invoice payable on receipt will be sent to the billing email."
+                    : "Card details are entered on the next page, on Stripe\u2019s secure checkout."}
                 </p>
               </div>
             </div>
+
+            {/* T&Cs */}
+            <label className="flex items-start gap-3 mb-6 cursor-pointer group">
+              <input
+                type="checkbox"
+                checked={termsAccepted}
+                onChange={(e) => setTermsAccepted(e.target.checked)}
+                required
+                className="mt-1 h-4 w-4 accent-accent flex-shrink-0"
+              />
+              <span className="text-xs text-muted leading-relaxed group-hover:text-white/80 transition-colors">
+                I have read and accept the{" "}
+                <Link
+                  href="/technical-support/terms"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-accent hover:text-white transition-colors underline underline-offset-2"
+                >
+                  Technical Support Terms &amp; Conditions
+                </Link>
+                {" "}on behalf of the billing entity named above.
+              </span>
+            </label>
 
             {error && (
               <p className="mb-4 text-sm text-red-300 bg-red-900/20 border border-red-500/30 px-4 py-3">
@@ -342,7 +466,13 @@ function SignUpInner() {
                 disabled={submitting}
                 className="inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-8 py-3.5 rounded hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {submitting ? "Redirecting to Stripe..." : `Continue to payment (${priceDisplay})`}
+                {submitting
+                  ? isInvoice
+                    ? "Sending request…"
+                    : "Redirecting to Stripe…"
+                  : isInvoice
+                    ? `Request invoice (${priceDisplay})`
+                    : `Continue to payment (${priceDisplay})`}
               </button>
               <Link
                 href="/technical-support"
@@ -353,7 +483,9 @@ function SignUpInner() {
             </div>
 
             <p className="text-xs text-muted/60 mt-6 leading-relaxed">
-              By continuing you agree to monthly billing on the chosen card and the standard Foreland Technical Support terms. You can cancel with thirty days&rsquo; notice at any time after the initial annual term.
+              {isInvoice
+                ? "By submitting you instruct us to raise an invoice payable on receipt. The subscription becomes active when the funds clear. You can cancel with thirty days\u2019 notice at any time after the initial annual term."
+                : "By continuing you agree to recurring billing on the chosen card under the selected cycle. You can cancel with thirty days\u2019 notice at any time after the initial annual term."}
             </p>
           </div>
         </form>

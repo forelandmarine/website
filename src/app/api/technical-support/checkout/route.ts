@@ -25,6 +25,8 @@ type CheckoutBody = {
   engineerName?: string;
   engineerEmail?: string;
   engineerPhone?: string;
+
+  termsAccepted?: boolean;
 };
 
 function requiredString(value: unknown): value is string {
@@ -89,6 +91,8 @@ export async function POST(req: NextRequest) {
       engineer_name: body.engineerName?.trim() || null,
       engineer_email: body.engineerEmail?.trim().toLowerCase() || null,
       engineer_phone: body.engineerPhone?.trim() || null,
+      payment_method: "card",
+      terms_accepted_at: new Date().toISOString(),
     })
     .select("id")
     .single();
