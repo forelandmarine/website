@@ -63,12 +63,6 @@ export default function NewBuildPage() {
                     url: "https://superyachtalliance.org/register/register-table/",
                     sameAs: "https://superyachtalliance.org/register/register-table/",
                   },
-                  {
-                    "@type": "Organization",
-                    name: "Superyacht Builders Association",
-                    alternateName: "SYBAss",
-                    url: "https://www.sybass.org",
-                  },
                 ],
                 hasCredential: {
                   "@type": "EducationalOccupationalCredential",

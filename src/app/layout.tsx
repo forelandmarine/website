@@ -103,9 +103,7 @@ export default function RootLayout({
                 memberOf: [
                   { "@type": "Organization", name: "British Marine", url: "https://britishmarine.co.uk" },
                   { "@type": "Organization", name: "Superyacht UK", url: "https://superyachtuk.com" },
-                  { "@type": "Organization", name: "SYBAss", url: "https://sybass.org" },
-                  { "@type": "Organization", name: "Yacht Owners Register (YORR)", url: "https://yachtownersregister.com" },
-                  { "@type": "Organization", name: "Superyacht Alliance", url: "https://superyachtalliance.com" },
+                  { "@type": "Organization", name: "Yacht Owner's Representative Register", alternateName: "YORR", url: "https://superyachtalliance.org/register/register-table/" },
                 ],
                 founder: { "@id": "https://www.forelandmarine.com/#jack-macnally" },
                 serviceType: [
