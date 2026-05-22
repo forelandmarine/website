@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Superyacht Refit Project Management",
+  title: "Yacht Refit Project Management | Independent, Owner-Side",
   keywords: [
+    "yacht refit project management",
     "superyacht refit project management",
     "yacht refit management",
     "yacht refit",
     "superyacht refit",
-    "yacht refit project management",
     "refit project management",
     "refit shipyard",
     "sailing yacht refit",
@@ -18,19 +18,19 @@ export const metadata: Metadata = {
     "independent yacht refit",
   ],
   description:
-    "Independent superyacht refit project management for sailing and motor yachts 24 to 60 metres. Owner-side only, no yard commissions or broker fees.",
+    "Yacht refit project management for sailing and motor yachts 24 to 60 metres. 25 projects across 7 countries, delivered on time and on budget. Owner-side only.",
   openGraph: {
-    title: "Superyacht Refit Project Management | Foreland Marine",
+    title: "Yacht Refit Project Management | Foreland Marine",
     description:
-      "Independent superyacht refit project management for sailing and motor yachts 24 to 60 metres. Owner-side only, no yard commissions or broker fees.",
+      "Yacht refit project management for sailing and motor yachts 24 to 60 metres. 25 projects across 7 countries. Owner-side only, no yard commissions.",
     type: "website",
     url: "https://www.forelandmarine.com/refit",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Superyacht Refit Project Management | Foreland Marine",
+    title: "Yacht Refit Project Management | Foreland Marine",
     description:
-      "Independent superyacht refit project management for sailing and motor yachts 24 to 60 metres. Owner-side only.",
+      "Independent yacht refit project management for sailing and motor yachts 24 to 60 metres. Owner-side only.",
   },
   alternates: {
     canonical: "https://www.forelandmarine.com/refit",

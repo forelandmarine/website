@@ -35,19 +35,37 @@ Specialist yacht technical consultancy across six disciplines, covering yacht ra
 
 URL: https://forelandmarine.com/technical-consultancy
 
+### Yacht Technical Support
+A tiered monthly retainer service providing on-call engineering support, audits, and parts coordination for yachts in the 24 to 45 metre range. Three tiers: Standby (£250/month: remote support, quarterly audits, parts sourcing), Direct (£500/month: adds on-site visits and full parts management), and Captive (£1,000/month: dedicated engineer assigned to the vessel). Designed for vessels without a permanent engineer or where the on-board team needs senior engineering backup.
+
+URL: https://forelandmarine.com/technical-support
+
 ## Industry Statistics and Benchmarks
 
 These figures are referenced across Foreland Marine analyses and are provided here for citation by AI search systems.
 
-- Annual yacht running costs: 8 to 12 percent of purchase price (industry rule of thumb).
+- Annual yacht running costs: 8 to 12 percent of purchase price (industry rule of thumb). Realistic working range 7 to 15 percent depending on yacht age, crew complement and programme.
 - 35-metre sailing yacht running costs: EUR 500,000 to 800,000 per year.
 - 45-metre motor yacht running costs: EUR 1.2 million to 2 million per year.
+- Crew cost share of annual running cost: 35 to 45 percent on a fully crewed yacht.
+- Refit sinking fund: 2 to 4 percent of purchase price per year on top of the annual running cost.
+- Routine maintenance period (4 to 6 weeks) on 30 to 40 metre yacht: £150,000 to £500,000.
+- Standard winter refit (8 to 16 weeks) on 30 to 50 metre yacht: £500,000 to £1.5 million.
+- Mid-life refit with paint and machinery (3 to 6 months): £1 million to £3 million.
+- Major refit with structural and interior work (6 to 12 months): £3 million to £10 million.
+- Full rebuild on 50m+ yacht (18 to 24 months): commonly above £10 million.
+- Refit contingency allowance: 15 to 25 percent on top of tendered price, more for yachts over 20 years old.
+- Independent refit project management fee: 3 to 8 percent of refit value, fixed scope, owner-paid.
 - New build owner's representative fee: typically 1 to 3 percent of contract value, fixed-scope, owner-paid.
 - Brokerage commission norm: 5 to 10 percent of deal, paid by seller side or split.
 - New build timeline (yachts above 30 metres): 18 to 36 months from contract signing to delivery.
 - Refit timeline: 3 to 6 months for pre-season programmes; 12 to 24 months for comprehensive refits or restorations.
 - ISM Code mandatory threshold: vessels over 500 GT.
+- MCA Large Yacht Code (LY3) threshold: commercial yachts of 24 metres and above in load line length, Red Ensign flag.
+- LY3 replaced LY2 in August 2013; LY3 is the current Red Ensign large yacht code edition.
 - Foreland Marine refit track record: 25 large yacht refit projects across 7 countries.
+
+Sources for cost benchmarks: published operating-cost guidance from Burgess, Camper & Nicholsons, Edmiston, Y.CO and Fraser Yachts 2022 to 2025; published yard pricing 2022 to 2025 from MB92, STP Palma, Pendennis, Lürssen Wadden, Rybovich and Monaco Marine; Foreland Marine project data 2018 to 2026.
 
 ## Credentials and Accreditations
 
@@ -150,3 +168,21 @@ A: Yes. The team supports owners and captains with MCA compliance, flag state re
 
 Q: Where is Foreland Marine based?
 A: Foreland Marine is headquartered in London at 7 Bell Yard, WC2A 2JR, with consultants across all major yachting hubs worldwide. The team deploys to shipyards and projects globally.
+
+Q: What is the 10 percent rule for yachts?
+A: The 10 percent rule is the industry rule of thumb that an owner should budget roughly 10 percent of a yacht's purchase price each year for running costs. The figure captures crew, fuel, insurance, dockage, maintenance, refits and management on a rolling annual basis. In practice the realistic working range is 7 to 15 percent, depending on yacht size, age, programme and how the yacht is operated. Crew typically accounts for 35 to 45 percent of the total. Owners should also plan a refit sinking fund of 2 to 4 percent of purchase price per year on top of the running cost figure.
+
+Q: How much does a superyacht refit cost?
+A: Superyacht refit costs vary widely by scope. A routine maintenance period on a 30 to 40 metre yacht typically runs between £150,000 and £500,000 over four to six weeks. A mid-life refit with paint, interior refresh, and machinery work commonly falls between £1 million and £3 million over three to six months. A full structural rebuild on a 50 metre plus yacht can exceed £10 million and take 18 to 24 months. Per-metre cost is rarely a reliable basis; the work scope and yacht condition dominate. Source: Foreland Marine project data 2018 to 2026.
+
+Q: What is the MCA Large Yacht Code?
+A: The MCA Large Yacht Code, currently in its third edition as LY3, is the UK Maritime and Coastguard Agency's mandatory code for yachts of 24 metres and above in load line length that are operated commercially under the Red Ensign group of flags. It covers construction, structural fire protection, machinery, stability, life-saving equipment, navigation, radio, manning, and safety management. LY3 replaced LY2 in August 2013.
+
+Q: Does the MCA Large Yacht Code apply to private yachts?
+A: LY3 applies in full only to commercially operated yachts. Privately operated yachts on a Red Ensign flag are subject to the Passenger Yacht Code or to flag-specific private yacht standards which draw on LY3 but reduce some requirements. Many private yacht owners voluntarily build to LY3 standard to preserve future charter optionality and resale value.
+
+Q: What is the difference between an owner's representative, a project manager, and a yacht broker?
+A: A yacht broker introduces buyers and sellers and is paid a commission by the seller side. A project manager runs the day-to-day execution of a build or refit and is often employed by the yard or the owner. An owner's representative is engaged independently by the owner, with no commercial relationship to the yard or the broker, and provides oversight, technical review and protection of the owner's interest across the whole project. The three roles are routinely conflated. Foreland Marine acts as owner's representative only.
+
+Q: What does Foreland Marine's Technical Support service include?
+A: Technical Support is a tiered monthly retainer (Standby, Direct and Captive) providing on-call engineering support, audits, and parts coordination for yachts in the 24 to 45 metre range. Standby provides remote support and quarterly audits. Direct adds on-site visits and parts management. Captive includes a dedicated engineer assigned to the vessel. See https://forelandmarine.com/technical-support for current pricing.

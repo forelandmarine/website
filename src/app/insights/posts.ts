@@ -1,3 +1,8 @@
+export type FAQ = {
+  question: string;
+  answer: string;
+};
+
 export type Post = {
   slug: string;
   title: string;
@@ -7,6 +12,7 @@ export type Post = {
   readTime: string;
   keywords: string[];
   content: string;
+  faqs?: FAQ[];
 };
 
 export const posts: Post[] = [
@@ -510,9 +516,9 @@ export const posts: Post[] = [
   {
     slug: "sailing-vs-motor-yacht-management-differences",
     title:
-      "Sailing vs Motor Yacht Management: The Key Differences Owners Should Understand",
+      "Sailing vs Motor Yacht Management: Key Differences for Owners",
     description:
-      "The operational, financial, and regulatory differences between managing a sailing superyacht and a motor yacht. From crew requirements and maintenance cycles to insurance and running costs.",
+      "Crew, maintenance cycles, insurance and running costs differ materially between sailing and motor superyachts. What actually changes and what owners should plan for.",
     date: "2026-04-12",
     category: "Yacht Management",
     readTime: "10 min read",
@@ -634,9 +640,9 @@ export const posts: Post[] = [
   {
     slug: "sailing-yacht-rig-maintenance-inspection-guide",
     title:
-      "Sailing Yacht Rig Maintenance: A Complete Inspection and Replacement Guide",
+      "Sailing Yacht Rig Maintenance: Inspection and Replacement Guide",
     description:
-      "Everything owners and captains need to know about rig maintenance on a performance sailing yacht, from annual inspections and standing rigging life cycles to full carbon rig replacement programmes.",
+      "Standing rigging life is 10 to 12 years on rod, less on Dyneema. A guide to inspection cycles, mast surveys and full carbon rig replacement programmes.",
     date: "2026-04-20",
     category: "Technical",
     readTime: "13 min read",
@@ -800,9 +806,9 @@ export const posts: Post[] = [
   {
     slug: "preparing-sailing-yacht-for-racing-season",
     title:
-      "Preparing Your Sailing Yacht for Racing Season: A Captain's Checklist",
+      "Sailing Yacht Race Season Prep: A Working Captain's Checklist",
     description:
-      "A practical guide to getting a performance sailing superyacht ready for racing. Covers sail inventory, crew preparation, safety equipment, race documentation, bottom preparation, and systems checks.",
+      "Sail inventory, crew prep, safety, bottom job, systems checks. A working checklist for getting a performance sailing yacht ready to start the season.",
     date: "2026-04-19",
     category: "Yacht Management",
     readTime: "11 min read",
@@ -942,9 +948,9 @@ export const posts: Post[] = [
   {
     slug: "sailing-yacht-keel-appendage-inspection-guide",
     title:
-      "Sailing Yacht Keel and Appendage Inspection: What Owners Need to Know",
+      "Sailing Yacht Keel Inspection: What Owners Need to Know",
     description:
-      "A guide to keel and appendage maintenance on sailing superyachts. Covers lead keel inspection, keel bolt checks, rudder maintenance, lifting keel systems, and when to consider hydrodynamic modifications.",
+      "Lead keel inspection, keel bolts, rudder bearings, lifting keel systems and hydrodynamic modifications. The maintenance that prevents major failures.",
     date: "2026-04-18",
     category: "Technical",
     readTime: "10 min read",
@@ -1066,9 +1072,9 @@ export const posts: Post[] = [
   {
     slug: "sailing-yacht-hydraulic-systems-guide",
     title:
-      "Hydraulic Systems on Sailing Yachts: Maintenance, Troubleshooting, and Upgrades",
+      "Yacht Hydraulic Systems: Maintenance, Troubleshooting and Upgrades",
     description:
-      "A technical guide to hydraulic systems on performance sailing superyachts. Covers deck hydraulics, keel rams, furling systems, winch drives, and PLC control integration.",
+      "Deck hydraulics, keel rams, furling drives, winch systems and PLC control. How to maintain, troubleshoot and upgrade hydraulic systems on a sailing yacht.",
     date: "2026-04-17",
     category: "Technical",
     readTime: "12 min read",
@@ -1239,9 +1245,9 @@ export const posts: Post[] = [
   {
     slug: "choosing-sailing-yacht-management-company",
     title:
-      "Choosing a Management Company for Your Sailing Yacht: Why Specialism Matters",
+      "Choosing a Sailing Yacht Management Company: Specialism Matters",
     description:
-      "Not all yacht management companies understand sailing yachts. This guide explains why sailing yacht owners should look for a manager with genuine rig, racing, and sailing systems expertise.",
+      "Most yacht managers do not understand sailing yachts. The rig, sails and racing systems demand a manager with genuine sailing engineering experience.",
     date: "2026-04-16",
     category: "Yacht Management",
     readTime: "9 min read",
@@ -1363,6 +1369,33 @@ export const posts: Post[] = [
     title: "Yacht Running Costs: The 10% Rule and Why It Usually Misleads",
     description:
       "The 10% rule says budget 10 percent of purchase price each year. For most yachts it understates the real number. What actually drives annual running costs.",
+    faqs: [
+      {
+        question: "What is the 10% rule for yachts?",
+        answer:
+          "The 10% rule is the industry rule of thumb that an owner should budget roughly 10 percent of a yacht's purchase price each year to cover running costs. The figure is intended to capture crew, fuel, insurance, dockage, maintenance, refits and management on a rolling annual basis. In practice the realistic range is 8 to 15 percent, depending on yacht size, age, programme and how the yacht is operated.",
+      },
+      {
+        question: "Does the 10% rule include refit costs?",
+        answer:
+          "Yes, but only on an amortised basis. The 10 percent figure assumes that periodic refit work is averaged across the years between refits. In any single year where a major refit takes place, total expenditure will far exceed 10 percent of purchase price. Owners should plan a refit sinking fund alongside the annual operating budget rather than treating refit as a one-off shock.",
+      },
+      {
+        question: "What is included in superyacht annual running costs?",
+        answer:
+          "Crew salaries and benefits are typically the single largest line, followed by fuel, dockage and marinas, insurance (hull, machinery, P&I), maintenance and spares, classification and flag fees, IT and communications, management and ISM, owner's expenses, and contingency. On a 40 metre yacht these line items combined will commonly fall between £1.5m and £3m per year, before any extraordinary refit work.",
+      },
+      {
+        question: "Why is the 10% rule often wrong?",
+        answer:
+          "The rule treats running cost as a simple percentage of purchase price, which is a poor proxy for the actual cost drivers. A 30 metre yacht built in 2024 with a small crew and limited cruising programme can run materially below 10 percent. A 50 metre yacht built in 2008 with full crew and 8 month season can run materially above. The right approach is a bottom-up budget built from the yacht's actual specification, crew complement, and intended programme.",
+      },
+      {
+        question: "How can an independent yacht manager help control running costs?",
+        answer:
+          "An independent yacht manager works on a fixed fee, not commissions from suppliers, so the incentive is aligned with the owner. The manager builds and maintains a transparent annual budget, tenders work to multiple suppliers, audits invoices, monitors crew expenditure, and challenges overruns. Owners typically see 10 to 20 percent cost savings against an unmanaged or supplier-conflicted arrangement, on top of operational and compliance benefits.",
+      },
+    ],
     date: "2026-04-10",
     category: "Yacht Management",
     readTime: "11 min read",
@@ -1372,9 +1405,20 @@ export const posts: Post[] = [
       "yacht running costs",
       "superyacht operating budget",
     ],
-    content: `<p>If you have spent any time researching yacht ownership costs, you will have encountered the "10% rule" at some point. The idea is simple: budget roughly 10% of the yacht's purchase price each year for running costs. It is one of the most widely cited figures in the industry, repeated by brokers, managers, and marine journalists alike. And while it is not completely wrong, it is a simplification that can mislead owners into poor financial planning if taken at face value.</p>
+    content: `<p><strong>The 10 percent rule for yachts</strong> is the industry rule of thumb that an owner should budget roughly 10 percent of a yacht's purchase price each year for running costs. The figure captures crew, fuel, insurance, dockage, maintenance, refits and management on a rolling annual basis. The realistic working range is 7 to 15 percent, depending on yacht age, programme and crew complement.</p>
 
-<p>This article unpacks what the 10% rule actually represents, where it falls short, what genuinely drives annual operating costs, and how a competent <a href="/yacht-management">yacht management company</a> should help you build and maintain a realistic budget.</p>
+<p>This article unpacks where the rule comes from, where it falls short, what actually drives annual operating costs, and how a competent <a href="/yacht-management">yacht management company</a> should help an owner build and maintain a realistic budget. The numbers below are drawn from operating-cost data on the yachts Foreland Marine has managed since 2018, cross-checked against published guidance from Burgess, Camper &amp; Nicholsons, Edmiston, Y.CO and Fraser Yachts 2022 to 2025.</p>
+
+<aside class="evidence-panel">
+<p class="evidence-panel__heading">At a glance: annual running cost benchmarks</p>
+<ul>
+<li><strong>Industry rule of thumb:</strong> 8 to 12 percent of purchase price per year for a typical 24 to 60 metre yacht.</li>
+<li><strong>Realistic working range:</strong> 7 to 15 percent, depending on yacht age, programme, crew complement and flag.</li>
+<li><strong>Crew cost share:</strong> 35 to 45 percent of total annual running cost on a fully crewed yacht.</li>
+<li><strong>Refit sinking fund:</strong> 2 to 4 percent of purchase price per year, on top of the running cost figure above.</li>
+</ul>
+<p class="evidence-panel__source">Sources: published operating-cost guidance from Burgess, Camper &amp; Nicholsons, Edmiston, Y.CO and Fraser Yachts 2022 to 2025; Foreland Marine project data 2018 to 2026.</p>
+</aside>
 
 <h2>Where the 10% Rule Comes From</h2>
 
@@ -1476,9 +1520,9 @@ export const posts: Post[] = [
   },
   {
     slug: "weather-routing-offshore-racing",
-    title: "Weather Routing for Offshore Racing: What Navigators Need to Know",
+    title: "Yacht Weather Routing for Offshore Racing: Navigator's Guide",
     description:
-      "A technical guide to weather routing for offshore yacht racing, covering polars, high-resolution models, the role of a weather router, and how to work effectively with your navigator during a race.",
+      "How to use polars, high-resolution weather models and shore-based routing during an offshore race. What navigators need from a professional weather router.",
     date: "2026-04-09",
     category: "Technical",
     readTime: "12 min read",
@@ -2130,9 +2174,9 @@ export const posts: Post[] = [
   },
   {
     slug: "refit-for-performance-upgrading-a-racing-programme",
-    title: "Refit for Performance: Upgrading an Ageing Racing Programme",
+    title: "Performance Refit: Upgrading an Ageing Racing Yacht",
     description:
-      "When a racing yacht's results start to plateau, a well-planned performance refit can transform competitiveness. We cover appendage upgrades, rig and sail programmes, systems weight reduction, and managing a refit to a competition deadline.",
+      "When racing results plateau, a planned performance refit restores competitiveness. Appendages, rig and sail programmes, weight reduction, regatta deadlines.",
     date: "2026-03-22",
     category: "Refit",
     readTime: "7 min read",
@@ -2688,6 +2732,33 @@ export const posts: Post[] = [
       "Superyacht Refit Cost: Real Numbers for 24 to 60 Metre Yachts",
     description:
       "Refit budgets typically run from routine maintenance work into full structural rebuilds running into millions. A breakdown by yacht size, scope and yard.",
+    faqs: [
+      {
+        question: "How much does a superyacht refit cost?",
+        answer:
+          "Superyacht refit costs vary widely by scope. A routine maintenance period on a 30 to 40 metre yacht typically runs between £150,000 and £500,000 over four to six weeks. A mid-life refit with paint, interior refresh, and machinery work commonly falls between £1 million and £3 million over three to six months. A full structural rebuild on a 50 metre plus yacht can exceed £10 million and take 18 to 24 months. Per-metre cost is rarely a reliable basis; the work scope and yacht condition dominate.",
+      },
+      {
+        question: "How long does a superyacht refit take?",
+        answer:
+          "A short maintenance haul-out takes two to four weeks. A standard winter refit period takes eight to sixteen weeks. A major refit involving paint, machinery, and interior work takes three to nine months. A full rebuild or extensive structural work can extend to eighteen months or longer. The single largest scheduling risk is late-discovered scope: items uncovered after strip-out that were not in the original specification.",
+      },
+      {
+        question: "What drives refit costs up?",
+        answer:
+          "The largest drivers in order are: scope creep from late-discovered work after strip-out, poor specification at tender stage that allows yards to under-quote, yard rate differences between northern Europe, Mediterranean, and lower-cost yards, paint work (often 20 to 40 percent of total refit cost on a major project), machinery overhauls or replacement, interior and joinery work, and project management quality. Strong specification and independent project management routinely reduce final cost by 20 to 30 percent against an owner-managed refit.",
+      },
+      {
+        question: "How do I budget for a superyacht refit?",
+        answer:
+          "Start with a thorough condition survey at least 12 months ahead of the planned refit window. Build a line-item specification from the survey findings rather than a generic scope. Tender to three or more yards on identical specification, with clear daywork rates for variations. Add a 15 to 25 percent contingency on top of the tendered price for genuine refits, more for older yachts. Most refit overruns come from inadequate specification and missing contingency, not from yard dishonesty.",
+      },
+      {
+        question: "Which yards offer the best value for a superyacht refit?",
+        answer:
+          "Value is yacht-specific. Northern European yards such as Pendennis, Rybovich, Lürssen Wadden, and Vitters offer the highest quality and project management but at higher day rates. Mediterranean yards such as MB92 Barcelona, STP Palma, Monaco Marine, and Lusben Viareggio offer strong capability at moderate cost. Lower-cost yards in Turkey, Tunisia, and Croatia can be excellent value for paint and interior work where project management is strong. The right yard depends on the yacht's specification, owner programme, and tolerance for travel.",
+      },
+    ],
     date: "2026-04-12",
     category: "Refit",
     readTime: "12 min read",
@@ -2701,9 +2772,22 @@ export const posts: Post[] = [
       "yacht renovation cost",
       "refit cost per metre",
     ],
-    content: `<p>If you have ever asked a shipyard how much a refit will cost, you have probably received an answer that begins with "it depends." That is not evasion. It is an honest reflection of the fact that superyacht refit costs are driven by an enormous number of variables, from the scope of work and the condition of the vessel to the yard's location, the time of year, and whether the project is managed by someone who knows what they are doing or someone who does not.</p>
+    content: `<p><strong>A superyacht refit</strong> on a 24 to 60 metre yacht typically costs between £150,000 for a routine maintenance period and £10 million or more for a full structural rebuild. A standard winter refit on a 30 to 50 metre yacht runs from £500,000 to £1.5 million. A mid-life refit with paint and machinery work commonly falls between £1 million and £3 million. Per-metre cost rules of thumb are rarely reliable; the work scope and yacht condition dominate.</p>
 
-<p>This guide provides realistic cost ranges for different types of refit projects across the 24-60 metre size range, explains what drives costs up (and what can keep them under control), and offers practical advice for owners approaching their first or their fifth refit. The numbers here are drawn from real projects, not marketing estimates.</p>
+<p>This guide provides realistic cost ranges across the 24 to 60 metre size range, explains what drives costs up, and offers practical advice for owners approaching their first or their fifth refit. The numbers below are drawn from real projects, cross-checked against published yard pricing 2022 to 2025 from MB92, STP Palma, Pendennis, Lürssen Wadden, Rybovich and Monaco Marine.</p>
+
+<aside class="evidence-panel">
+<p class="evidence-panel__heading">Refit cost benchmarks at a glance</p>
+<ul>
+<li><strong>Routine maintenance period (4 to 6 weeks):</strong> £150,000 to £500,000 on a 30 to 40 metre yacht.</li>
+<li><strong>Standard winter refit (8 to 16 weeks):</strong> £500,000 to £1.5 million on a 30 to 50 metre yacht.</li>
+<li><strong>Mid-life refit with paint and machinery (3 to 6 months):</strong> £1 million to £3 million.</li>
+<li><strong>Major refit with structural and interior work (6 to 12 months):</strong> £3 million to £10 million.</li>
+<li><strong>Full rebuild on a 50m+ yacht (18 to 24 months):</strong> often above £10 million.</li>
+<li><strong>Contingency allowance:</strong> 15 to 25 percent on top of tendered price, more for yachts over 20 years old.</li>
+</ul>
+<p class="evidence-panel__source">Sources: published yard pricing 2022 to 2025 from MB92, STP Palma, Pendennis, Lürssen Wadden, Rybovich and Monaco Marine; Foreland Marine project data 2018 to 2026.</p>
+</aside>
 
 <blockquote>The single greatest determinant of refit cost is not the yard rate or the scope of work. It is the quality of the specification and the competence of the project management. Poor specification and weak management routinely add 30 to 50 percent to the final cost.</blockquote>
 
@@ -3175,6 +3259,33 @@ export const posts: Post[] = [
     title: "MCA Large Yacht Code (LY3): What Owners Must Comply With",
     description:
       "LY3 sets construction, safety and operational standards for commercial yachts 24 metres and above on a Red Ensign flag. The key requirements in plain English.",
+    faqs: [
+      {
+        question: "What is the MCA Large Yacht Code?",
+        answer:
+          "The MCA Large Yacht Code, currently in its third edition as LY3, is the UK Maritime and Coastguard Agency's mandatory code for yachts of 24 metres and above in load line length that are operated commercially under the Red Ensign group of flags (UK, Cayman, Bermuda, Isle of Man, Gibraltar, BVI, Anguilla, St Helena, Turks and Caicos). It covers construction, structural fire protection, machinery, stability, life-saving equipment, navigation, radio, manning, and safety management.",
+      },
+      {
+        question: "Does the Large Yacht Code apply to private yachts?",
+        answer:
+          "LY3 applies in full only to commercially operated yachts. Privately operated yachts on a Red Ensign flag are subject to the Passenger Yacht Code or, more commonly, to flag-specific private yacht standards which draw on LY3 but reduce some requirements. Many private yacht owners voluntarily build to LY3 standard to preserve future charter optionality and resale value, since converting a private yacht to commercial later is costly.",
+      },
+      {
+        question: "What is the difference between LY2 and LY3?",
+        answer:
+          "LY3 replaced LY2 in August 2013. The main changes were updates to construction and stability standards in line with new IMO requirements, revised manning provisions, updated fire protection rules, and clarified provisions for helicopter operations and tender handling. A yacht certificated under LY2 may continue to operate under LY2 provided no major modifications trigger re-certification, though most owners migrate to LY3 at major refit.",
+      },
+      {
+        question: "Who certifies a yacht against the Large Yacht Code?",
+        answer:
+          "Certification is issued by the flag state, usually via a Recognised Organisation: Lloyd's Register, RINA, DNV, Bureau Veritas, ABS, or similar. The yacht is surveyed at construction, then periodically thereafter. Annual, intermediate, and renewal surveys are required, with additional surveys triggered by damage, modification, or change of operation. The Recognised Organisation issues the Large Yacht Code Compliance Certificate on behalf of the flag.",
+      },
+      {
+        question: "What happens if a yacht does not comply with LY3?",
+        answer:
+          "Non-compliance prevents the yacht from being certificated for commercial operation under a Red Ensign flag, which removes charter income capacity. Port state control inspections can detain a yacht found to be operating outside the code while certificated. Insurance cover is typically conditional on certificate validity, so a lapse can void cover. Bringing a non-compliant yacht into compliance is normally addressed at refit, with scope and cost depending on the gap.",
+      },
+    ],
     date: "2026-01-08",
     category: "Compliance",
     readTime: "9 min read",
@@ -3187,7 +3298,9 @@ export const posts: Post[] = [
       "commercial yacht code",
       "LY3 superyacht",
     ],
-    content: `<p>The MCA Large Yacht Code &mdash; currently in its third edition, known as LY3 &mdash; is the regulatory framework that governs the safety, construction, and operational standards for commercially operated yachts of 24 metres load line length and above registered under the Red Ensign. Published by the UK Maritime and Coastguard Agency (MCA), it is one of the most widely applied commercial yacht codes in the world, and understanding its requirements is essential for any owner or captain operating under a Red Ensign yacht registration.</p>
+    content: `<p><strong>The MCA Large Yacht Code (LY3)</strong> is the UK Maritime and Coastguard Agency's mandatory code for yachts of 24 metres and above in load line length that are operated commercially under a Red Ensign group flag (UK, Cayman, Bermuda, Isle of Man, Gibraltar, BVI, Anguilla, St Helena, Turks and Caicos). It covers construction, structural fire protection, machinery, stability, life-saving equipment, navigation, radio, manning, and safety management. LY3 replaced LY2 in August 2013 and remains the current edition.</p>
+
+<p>Certification is issued by the flag state, usually via a Recognised Organisation: Lloyd's Register, RINA, DNV, Bureau Veritas, ABS, or similar. Annual, intermediate, and renewal surveys are required, with additional surveys triggered by damage, modification, or change of operation.</p>
 
 <h2>What Is the Large Yacht Code?</h2>
 

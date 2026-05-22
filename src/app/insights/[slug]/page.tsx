@@ -95,12 +95,33 @@ export default async function PostPage({ params }: Props) {
     },
   };
 
+  const faqJsonLd = post.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1 min-h-screen">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -171,6 +192,23 @@ export default async function PostPage({ params }: Props) {
               [&>blockquote]:border-l-2 [&>blockquote]:border-accent [&>blockquote]:pl-6 [&>blockquote]:italic [&>blockquote]:text-muted/80"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          {/* FAQs */}
+          {post.faqs && post.faqs.length > 0 && (
+            <div className="mt-16 pt-10 border-t border-white/8">
+              <h2 className="text-2xl font-light text-white mb-8">Frequently asked questions</h2>
+              <div className="space-y-6">
+                {post.faqs.map((faq, idx) => (
+                  <div key={idx} className="border-b border-white/8 pb-6 last:border-b-0">
+                    <h3 className="text-lg font-light text-white mb-3 leading-snug">
+                      {faq.question}
+                    </h3>
+                    <p className="text-muted leading-relaxed">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Related service */}
           {serviceLink && (
