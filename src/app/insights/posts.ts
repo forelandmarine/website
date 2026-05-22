@@ -1360,9 +1360,9 @@ export const posts: Post[] = [
   },
   {
     slug: "understanding-yacht-management-costs-10-percent-rule",
-    title: "Understanding Yacht Management Costs: The 10% Rule and What It Really Means",
+    title: "Yacht Running Costs: The 10% Rule and Why It Usually Misleads",
     description:
-      "A practical breakdown of the 10% rule for yacht running costs, what actually drives the annual operating budget for a superyacht, and how a good management company should help you control spending.",
+      "The 10% rule says budget 10 percent of purchase price each year. For most yachts it understates the real number. What actually drives annual running costs.",
     date: "2026-04-10",
     category: "Yacht Management",
     readTime: "11 min read",
@@ -2685,9 +2685,9 @@ export const posts: Post[] = [
   {
     slug: "how-much-does-a-superyacht-refit-cost",
     title:
-      "How Much Does a Superyacht Refit Cost? A Realistic Breakdown",
+      "Superyacht Refit Cost: Real Numbers for 24 to 60 Metre Yachts",
     description:
-      "What yacht owners should actually budget for a refit, from routine maintenance periods to full structural rebuilds. Real cost ranges by project scope and yacht size, and how to avoid the budget overruns that plague most refit projects.",
+      "Refit budgets typically run from routine maintenance work into full structural rebuilds running into millions. A breakdown by yacht size, scope and yard.",
     date: "2026-04-12",
     category: "Refit",
     readTime: "12 min read",
@@ -2840,7 +2840,7 @@ export const posts: Post[] = [
 <li><strong>Lower final cost:</strong> The combination of better pricing, fewer changes, and tighter schedule control typically saves far more than the cost of the project management fee.</li>
 </ul>
 
-<p>If you are planning a refit and want to understand the likely costs for your specific vessel and scope of work, <a href="/refit">learn more about our refit management services</a>. You can also use our <a href="/tools/running-cost-calculator">running cost calculator</a> to understand how refit costs fit into the broader picture of annual ownership costs, or read our guide to <a href="/insights/choosing-shipyard-yacht-refit">choosing the right shipyard</a> for your project.</p>
+<p>If you are planning a refit and want to understand the likely costs for your specific vessel and scope of work, <a href="/refit">learn more about our refit management services</a>. For owners who want independent oversight through the whole project, our <a href="/owners-representation">owner's representation</a> service places a senior representative at the yard, accountable only to the owner. You can also use our <a href="/tools/running-cost-calculator">running cost calculator</a> to understand how refit costs fit into the broader picture of annual ownership costs, or read our guide to <a href="/insights/choosing-shipyard-yacht-refit">choosing the right shipyard</a> for your project.</p>
 
 <p>For a confidential discussion about your refit plans, <a href="/contact">get in touch</a>. We work solely for the owner and have no commercial relationships with yards, suppliers, or subcontractors.</p>`,
   },
@@ -3172,9 +3172,9 @@ export const posts: Post[] = [
   },
   {
     slug: "mca-large-yacht-code-requirements",
-    title: "Understanding MCA Large Yacht Code Requirements",
+    title: "MCA Large Yacht Code (LY3): What Owners Must Comply With",
     description:
-      "The MCA Large Yacht Code (LY3) sets the safety, construction and operational standards for commercially operated yachts of 24 metres and above registered under the Red Ensign. We outline the key requirements, recent amendments and what owners and captains need to know.",
+      "LY3 sets construction, safety and operational standards for commercial yachts 24 metres and above on a Red Ensign flag. The key requirements in plain English.",
     date: "2026-01-08",
     category: "Compliance",
     readTime: "9 min read",

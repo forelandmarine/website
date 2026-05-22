@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: '/owners-representation',
         permanent: true,
       },
+      {
+        source: '/lightship-ism',
+        destination: '/tools/lightship-ism',
+        permanent: true,
+      },
       // Old /blog/ to /insights/ redirects (301)
       {
         source: '/blog/navigating-london-s-top-yachting-shipyards--a-local-s-guide',
