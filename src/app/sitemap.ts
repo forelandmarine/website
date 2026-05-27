@@ -110,6 +110,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...insightEntries,
     {
+      url: `${baseUrl}/newsletters`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/newsletters/may-2026`,
+      lastModified: new Date("2026-05-27"),
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: "yearly",

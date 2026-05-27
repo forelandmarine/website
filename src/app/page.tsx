@@ -27,6 +27,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, ButtonOutline, ServiceCard } from "@/components/ui";
 import ScrollHint from "@/components/ScrollHint";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 const featuredInsights = [
   {
@@ -363,6 +364,26 @@ export default function HomePage() {
                 <p className="text-sm text-muted leading-relaxed">{post.description}</p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* NEWSLETTER SIGNUP */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10" data-animate="fade-up">
+              <SectionLabel>Newsletter</SectionLabel>
+              <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">The Foreland Quarter</h2>
+              <p className="text-muted leading-relaxed">
+                A short letter from London, four times a year. The work of the quarter, what we are seeing in the industry, and what comes next. <Link href="/newsletters" className="text-accent hover:text-white transition-colors">Browse past issues</Link>.
+              </p>
+            </div>
+            <div className="bg-bg2/80 border border-white/5 rounded p-4 sm:p-6 lg:p-8" data-animate="fade-up">
+              <NewsletterSignup />
+            </div>
           </div>
         </div>
       </section>

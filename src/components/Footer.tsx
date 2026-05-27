@@ -18,11 +18,18 @@ const tools = [
   { label: "Running Cost Calculator", href: "/tools/running-cost-calculator" },
 ];
 
+const company = [
+  { label: "About", href: "/about" },
+  { label: "Insights", href: "/insights" },
+  { label: "Newsletter", href: "/newsletters" },
+  { label: "Contact", href: "/contact" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-bg0 border-t border-white/8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-4">
@@ -80,6 +87,20 @@ export default function Footer() {
             <h3 className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">Tools</h3>
             <ul className="space-y-2.5">
               {tools.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-sm font-light text-muted hover:text-white transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">Company</h3>
+            <ul className="space-y-2.5">
+              {company.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-sm font-light text-muted hover:text-white transition-colors">
                     {item.label}
