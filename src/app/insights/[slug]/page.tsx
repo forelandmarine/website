@@ -20,12 +20,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.description,
     keywords: post.keywords,
+    alternates: {
+      canonical: `https://www.forelandmarine.com/insights/${post.slug}`,
+    },
     openGraph: {
       title: `${post.title} | Foreland Marine`,
       description: post.description,
       type: "article",
       publishedTime: post.date,
       authors: ["Foreland Marine Consultancy"],
+      url: `https://www.forelandmarine.com/insights/${post.slug}`,
     },
   };
 }
@@ -130,7 +134,7 @@ export default async function PostPage({ params }: Props) {
             href="/insights"
             className="inline-flex items-center gap-2 text-sm text-muted hover:text-white transition-colors mb-10"
           >
-            <svg
+            <svg aria-hidden="true"
               width="16"
               height="16"
               viewBox="0 0 16 16"

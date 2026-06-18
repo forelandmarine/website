@@ -48,7 +48,7 @@ function IssueRow({ issue }: { issue: Issue }) {
           <p className="text-sm text-muted leading-relaxed mb-5">{issue.summary}</p>
           <div className="flex items-center gap-2 text-sm text-accent font-medium group-hover:gap-3 transition-all">
             Read the issue
-            <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 12 12" fill="none">
               <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>

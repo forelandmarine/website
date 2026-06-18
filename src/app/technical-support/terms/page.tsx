@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Technical Support Terms & Conditions",
   description:
     "Terms and Conditions of Foreland Marine Consultancy Ltd's Technical Support programme.",
+  alternates: { canonical: "https://www.forelandmarine.com/technical-support/terms" },
 };
 
 export default function TechnicalSupportTermsPage() {

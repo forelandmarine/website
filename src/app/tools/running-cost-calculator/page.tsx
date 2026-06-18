@@ -783,7 +783,7 @@ export default function RunningCostCalculatorPage() {
                 className="text-sm text-accent hover:text-white transition-colors flex items-center gap-1.5"
               >
                 {link.label}
-                <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
+                <svg aria-hidden="true" width="14" height="14" viewBox="0 0 12 12" fill="none">
                   <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </Link>

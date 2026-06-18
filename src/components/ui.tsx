@@ -63,7 +63,7 @@ export function ServiceCard({ title, description, href, ...rest }: { title: stri
         {href && (
           <div className="mt-4 flex items-center gap-1.5 text-xs text-accent font-medium">
             Learn more
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none">
               <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>

@@ -22,7 +22,7 @@ export default function ScrollHint() {
       <span className="text-[11px] text-white uppercase tracking-widest font-light">
         Scroll down
       </span>
-      <svg
+      <svg aria-hidden="true"
         width="16"
         height="16"
         viewBox="0 0 16 16"

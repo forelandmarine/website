@@ -285,7 +285,7 @@ export default function YachtManagementPage() {
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
           <SectionLabel>Client Testimonial</SectionLabel>
           <blockquote className="mt-6">
-            <svg className="mx-auto mb-6 text-accent/50 w-10 h-10" fill="currentColor" viewBox="0 0 32 32">
+            <svg aria-hidden="true" className="mx-auto mb-6 text-accent/50 w-10 h-10" fill="currentColor" viewBox="0 0 32 32">
               <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H7c0-1.7 1.3-3 3-3V8zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-7c0-1.7 1.3-3 3-3V8z" />
             </svg>
             <p className="text-xl sm:text-2xl text-white leading-relaxed font-light italic mb-8">

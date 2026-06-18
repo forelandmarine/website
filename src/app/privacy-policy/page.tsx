@@ -4,6 +4,7 @@ import { HorizonLine } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy for Foreland Marine Consultancy Ltd.",
+  alternates: { canonical: "https://www.forelandmarine.com/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {

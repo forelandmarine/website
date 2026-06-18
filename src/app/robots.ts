@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/newsletters/",
+      disallow: ["/api/", "/link", "/technical-support/success", "/technical-support/invoice-requested"],
     },
     sitemap: "https://www.forelandmarine.com/sitemap.xml",
     host: "https://www.forelandmarine.com",
