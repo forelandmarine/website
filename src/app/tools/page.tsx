@@ -1,26 +1,9 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { SectionLabel } from "@/components/ui";
+import ParallaxHero from "@/components/ParallaxHero";
 
 export default function ToolsPage() {
-  const [scrollY, setScrollY] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <>
@@ -38,19 +21,13 @@ export default function ToolsPage() {
         }}
       />
 
-      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
-          <Image src="/images/yacht-management.jpg" alt="Sailing yacht under way at sea" fill sizes="100vw" className="object-cover opacity-45 saturate-[1.15] scale-110" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/45 via-bg0/25 to-bg0" />
-        </div>
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
-          <div className="text-center max-w-3xl mx-auto mb-16">
+      <ParallaxHero
+        imageSrc="/images/yacht-management.jpg"
+        imageAlt="Sailing yacht under way at sea"
+        imageClassName="object-cover opacity-45 saturate-[1.15] scale-110"
+        gradientClassName="bg-gradient-to-b from-bg0/45 via-bg0/25 to-bg0"
+      >
+<div className="text-center max-w-3xl mx-auto mb-16">
             <SectionLabel>Digital Products</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
               Tools built for the marine industry.
@@ -166,8 +143,7 @@ export default function ToolsPage() {
               </div>
             </Link>
           </div>
-        </div>
-      </section>
+      </ParallaxHero>
     </>
   );
 }

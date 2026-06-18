@@ -1,9 +1,7 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const process = [
   { step: "01", title: "Concept & Specification", timeframe: "3 to 12 months", description: "Collaborative development of the project brief with the owner and design team. Reviewing initial concepts, establishing technical parameters, and defining the scope that will govern the entire build." },
@@ -14,21 +12,6 @@ const process = [
 ];
 
 export default function NewBuildPage() {
-  const [scrollY, setScrollY] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <>
@@ -142,19 +125,13 @@ export default function NewBuildPage() {
       />
 
       {/* HERO */}
-      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
-          <Image src="/images/shipyard-launch.jpg" alt="Yacht hull under construction in shipyard" fill sizes="100vw" className="object-cover object-[90%_center] opacity-55 saturate-[1.15] scale-110" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0" />
-        </div>
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
-          <div className="flex items-start justify-between gap-8">
+      <ParallaxHero
+        imageSrc="/images/shipyard-launch.jpg"
+        imageAlt="Yacht hull under construction in shipyard"
+        imageClassName="object-cover object-[90%_center] opacity-55 saturate-[1.15] scale-110"
+        gradientClassName="bg-gradient-to-b from-bg0/70 via-bg0/40 to-bg0"
+      >
+<div className="flex items-start justify-between gap-8">
             <div className="max-w-3xl">
               <SectionLabel>New Build</SectionLabel>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
@@ -177,8 +154,7 @@ export default function NewBuildPage() {
               </a>
             </div>
           </div>
-        </div>
-      </section>
+      </ParallaxHero>
 
       {/* OUR ROLE */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">

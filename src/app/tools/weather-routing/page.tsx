@@ -1,8 +1,6 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const services = [
   {
@@ -104,21 +102,6 @@ const faqs = [
 ];
 
 export default function WeatherRoutingPage() {
-  const [scrollY, setScrollY] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <>
@@ -161,40 +144,26 @@ export default function WeatherRoutingPage() {
       />
 
       {/* HERO */}
-      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
-          <Image
-            src="/images/weather-routing-hero.jpg"
-            alt="Maxi yacht fleet departing Malta for offshore race"
-            fill
-            sizes="100vw"
-            className="object-cover object-[center_70%] opacity-55 saturate-[1.1] scale-110"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg0/40 via-bg0/30 to-bg0" />
-        </div>
-        <Glow className="-top-40 -right-40 opacity-30" />
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap items-center gap-3 mb-5">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent">Tools & Services</span>
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-accent border border-accent/40 px-2 py-0.5 rounded">In Partnership with OrcaMet</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-              Marine meteorology and<br />weather routing
-            </h1>
-            <p className="text-lg text-muted leading-relaxed max-w-2xl">
-              Professional weather forecasting and routing for racing campaigns, offshore passages and superyacht deliveries worldwide. Delivered in partnership with OrcaMet, founded by Steve Carver, our resident meteorologist and weather routing specialist.
-            </p>
+      <ParallaxHero
+        imageSrc="/images/weather-routing-hero.jpg"
+        imageAlt="Maxi yacht fleet departing Malta for offshore race"
+        imageClassName="object-cover object-[center_70%] opacity-55 saturate-[1.1] scale-110"
+        gradientClassName="bg-gradient-to-b from-bg0/40 via-bg0/30 to-bg0"
+        decorations={<Glow className="-top-40 -right-40 opacity-30" />}
+      >
+        <div className="max-w-3xl">
+          <div className="flex flex-wrap items-center gap-3 mb-5">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent">Tools & Services</span>
+            <span className="text-[10px] font-semibold uppercase tracking-widest text-accent border border-accent/40 px-2 py-0.5 rounded">In Partnership with OrcaMet</span>
           </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
+            Marine meteorology and<br />weather routing
+          </h1>
+          <p className="text-lg text-muted leading-relaxed max-w-2xl">
+            Professional weather forecasting and routing for racing campaigns, offshore passages and superyacht deliveries worldwide. Delivered in partnership with OrcaMet, founded by Steve Carver, our resident meteorologist and weather routing specialist.
+          </p>
         </div>
-      </section>
+      </ParallaxHero>
 
       <HorizonLine />
 

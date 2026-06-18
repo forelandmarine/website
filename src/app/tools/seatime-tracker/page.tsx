@@ -1,8 +1,6 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Glow, HorizonLine, SectionLabel, ButtonPrimary, ButtonOutline } from "@/components/ui";
+import ParallaxHero from "@/components/ParallaxHero";
 
 function PhoneMockup({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
@@ -31,36 +29,12 @@ const comparison = [
 ];
 
 export default function SeaTimeTrackerPage() {
-  const [scrollY, setScrollY] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <>
       {/* HERO */}
-      <section ref={heroRef} className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-bg0">
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
-          <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={800} />
-        </div>
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
+      <ParallaxHero
+        background={<Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.2)" size={800} />}
+      >
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
               <SectionLabel>Automatic AIS Tracking</SectionLabel>
@@ -100,8 +74,7 @@ export default function SeaTimeTrackerPage() {
               <PhoneMockup src="/images/seatime/IMG_0594.PNG" alt="SeaTime Tracker - Active vessel tracking with AIS" />
             </div>
           </div>
-        </div>
-      </section>
+      </ParallaxHero>
 
       {/* HOW IT WORKS */}
       <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-bg1">

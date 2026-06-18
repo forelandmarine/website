@@ -1,16 +1,13 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
 import {
   TIER_NAMES,
   TIER_PRICES_MONTHLY,
-  TIER_PRICES_ANNUAL,
   type TierSlug,
-  type BillingCycle,
 } from "@/lib/technical-support";
+import ParallaxHero from "@/components/ParallaxHero";
+import TechnicalSupportPricing from "@/components/TechnicalSupportPricing";
 
 type TierMeta = {
   slug: TierSlug;
@@ -68,23 +65,6 @@ const pmsItems = [
 ];
 
 export default function TechnicalSupportPage() {
-  const [scrollY, setScrollY] = useState(0);
-  const [cycle, setCycle] = useState<BillingCycle>("annual");
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <>
       <script
@@ -182,50 +162,40 @@ export default function TechnicalSupportPage() {
       />
 
       {/* HERO */}
-      <section
-        ref={heroRef}
-        className="relative flex items-end overflow-hidden bg-bg0 min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] pb-12 sm:pb-16 lg:pb-20 pt-24 sm:pt-32 lg:pt-40"
+      <ParallaxHero
+        imageSrc="/images/ts-hero-yacht-night.jpg"
+        imageAlt="Sailing yacht at anchor in a moonlit cove"
+        imageClassName="object-cover object-[100%_65%] scale-125"
+        gradientClassName=""
+        sectionClassName="relative flex items-end overflow-hidden bg-bg0 min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] pb-12 sm:pb-16 lg:pb-20 pt-24 sm:pt-32 lg:pt-40"
+        contentClassName="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full will-change-transform"
+        background={
+          <>
+            {/* Horizontal scrim: solid on the left where text sits, transparent on the right where the yacht is. */}
+            <div className="absolute inset-0 bg-gradient-to-r from-bg0/75 via-bg0/65 sm:via-bg0/55 to-bg0/5" />
+            {/* Vertical bottom scrim to seat the text on a darker base. */}
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-bg0/70" />
+          </>
+        }
       >
-        <div
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-        >
-          <Image
-            src="/images/ts-hero-yacht-night.jpg"
-            alt="Sailing yacht at anchor in a moonlit cove"
-            fill
-            sizes="100vw"
-            className="object-cover object-[100%_65%] scale-125"
-            priority
-          />
-          {/* Horizontal scrim: solid on the left where text sits, transparent on the right where the yacht is. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-bg0/75 via-bg0/65 sm:via-bg0/55 to-bg0/5" />
-          {/* Vertical bottom scrim to seat the text on a darker base. */}
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-bg0/70" />
-        </div>
-        <div
-          className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full will-change-transform"
-          style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
-        >
-          <div className="max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-              The team behind<br />your engineering team.
-            </h1>
-            <p className="text-lg text-[#B5D2E4] leading-relaxed max-w-xl mb-8">
-              An annual programme for sailing and motor yachts over 24 metres. A leading technical team on standby, ready to assist day or night. Your crew has the spares, tools and support they need to guarantee smooth sailing, no matter where you are in the world.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <ButtonPrimary href="#programmes">See programmes</ButtonPrimary>
-              <Link
-                href="/technical-support/sign-up"
-                className="inline-flex items-center justify-center border border-white/30 text-white font-semibold text-sm px-6 py-3 rounded hover:bg-white/10 transition-colors"
-              >
-                Sign up
-              </Link>
-            </div>
+        <div className="max-w-2xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
+            The team behind<br />your engineering team.
+          </h1>
+          <p className="text-lg text-[#B5D2E4] leading-relaxed max-w-xl mb-8">
+            An annual programme for sailing and motor yachts over 24 metres. A leading technical team on standby, ready to assist day or night. Your crew has the spares, tools and support they need to guarantee smooth sailing, no matter where you are in the world.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <ButtonPrimary href="#programmes">See programmes</ButtonPrimary>
+            <Link
+              href="/technical-support/sign-up"
+              className="inline-flex items-center justify-center border border-white/30 text-white font-semibold text-sm px-6 py-3 rounded hover:bg-white/10 transition-colors"
+            >
+              Sign up
+            </Link>
           </div>
         </div>
-      </section>
+      </ParallaxHero>
 
       {/* PROGRAMMES (pricing tiers) */}
       <section id="programmes" className="py-16 sm:py-20 lg:py-24 bg-bg1">
@@ -240,92 +210,7 @@ export default function TechnicalSupportPage() {
             </p>
           </div>
 
-          {/* Billing cycle toggle */}
-          <div className="mb-8">
-            <div className="inline-flex border border-white/15">
-              {(["monthly", "annual"] as BillingCycle[]).map((c) => {
-                const active = cycle === c;
-                return (
-                  <button
-                    key={c}
-                    type="button"
-                    onClick={() => setCycle(c)}
-                    className={`px-6 py-2.5 text-sm font-semibold capitalize transition-colors ${
-                      active
-                        ? "bg-accent text-white"
-                        : "text-muted hover:text-white hover:bg-white/5"
-                    }`}
-                  >
-                    {c}
-                  </button>
-                );
-              })}
-            </div>
-            <p className="text-sm text-muted mt-3">
-              Annual billing: twelve months for the price of ten.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-animate-stagger>
-            {tiers.map((tier) => {
-              const monthly = TIER_PRICES_MONTHLY[tier.slug];
-              const annual = TIER_PRICES_ANNUAL[tier.slug];
-              const isAnnual = cycle === "annual";
-              return (
-                <div
-                  key={tier.slug}
-                  data-animate="fade-up"
-                  className={`relative bg-bg2 border border-white/8 flex flex-col p-8 ${
-                    tier.highlight ? "ring-1 ring-accent/40" : ""
-                  }`}
-                >
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent opacity-70" />
-                  {tier.highlight && (
-                    <span className="absolute top-4 right-4 text-[10px] uppercase tracking-widest text-accent font-semibold">
-                      Most chosen
-                    </span>
-                  )}
-                  <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-                    {TIER_NAMES[tier.slug]}
-                  </p>
-                  <div className="mb-1">
-                    <span className="text-4xl font-light text-white">
-                      £{(isAnnual ? annual.gbp : monthly.gbp).toLocaleString()}
-                    </span>
-                    <span className="text-sm text-muted ml-2">
-                      {isAnnual ? "per year" : "per month"}
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted/80 mb-1">
-                    {isAnnual
-                      ? `€${annual.eur.toLocaleString()} · $${annual.usd.toLocaleString()}`
-                      : `€${monthly.eur.toLocaleString()} · $${monthly.usd.toLocaleString()}`}
-                  </p>
-                  {isAnnual && (
-                    <p className="text-sm text-muted mb-4">
-                      vs £{(monthly.gbp * 12).toLocaleString()} on monthly billing.
-                    </p>
-                  )}
-                  {!isAnnual && <div className="mb-4" />}
-                  <div className="h-px bg-white/10 mb-5" />
-                  <ul className="space-y-2.5 mb-7 flex-1">
-                    {tier.lines.map((line, i) => (
-                      <li key={i} className="text-sm text-muted leading-relaxed flex gap-2">
-                        <span className="text-accent flex-shrink-0">·</span>
-                        <span>{line}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={`/technical-support/sign-up?tier=${tier.slug}&cycle=${cycle}`}
-                    className="inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-6 py-3 rounded hover:bg-accent/90 transition-colors"
-                  >
-                    Sign up to {TIER_NAMES[tier.slug]}
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
+          <TechnicalSupportPricing tiers={tiers} />
 
           <p className="text-xs text-muted/70 mt-6 leading-relaxed">
             EUR and USD shown at indicative cross-rates. Billed in GBP unless agreed otherwise. Parts billed at supplier cost plus a fixed handling fee. Hand-carry flights reimbursed by the owner. Overage on engineer hours billed at £125 per hour.
