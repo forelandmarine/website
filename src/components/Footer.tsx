@@ -159,6 +159,19 @@ export default function Footer() {
             Privacy Policy
           </Link>
         </div>
+
+        <p className="mt-6 text-center text-xs font-light text-muted/60">
+          Designed and built by{" "}
+          <a
+            href="https://faro.is"
+            target="_blank"
+            rel="noopener"
+            className="underline underline-offset-2 decoration-muted/30 hover:text-muted hover:decoration-muted/70 transition-colors"
+          >
+            Faro Creative
+          </a>
+          , the founder-led design studio also run by Jack.
+        </p>
       </div>
     </footer>
   );
