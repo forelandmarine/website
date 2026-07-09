@@ -14,7 +14,7 @@ export default function SeatimePrivacyPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">AIS SeaTime Tracker</p>
           <h1 className="text-4xl font-light text-white mb-3">Privacy Policy</h1>
-          <p className="text-muted text-sm mb-8">Last updated: 9 April 2026</p>
+          <p className="text-muted text-sm mb-8">Last updated: 9 July 2026</p>
           <HorizonLine />
         </div>
       </section>
@@ -52,6 +52,8 @@ export default function SeatimePrivacyPage() {
                   "Vessel information: vessel name, MMSI number, IMO number, vessel type, length and other voluntarily provided vessel details.",
                   "Voyage and position data: AIS-derived position records, dates, times, ports of call and voyage history associated with the vessels you track.",
                   "Sea time records: logged sea time entries, watch records, and any annotations you choose to add.",
+                  "Profile photo: an optional photo you choose to add to your account, selected from your device camera or photo library.",
+                  "Purchase information: transaction identifiers and subscription status for the optional Pro subscription, processed by the app stores and RevenueCat.",
                   "Device and usage data: device type, operating system version, App version, crash logs, diagnostic data and aggregated usage statistics.",
                   "Communications: any correspondence you send to us, including support requests and feedback.",
                 ].map((item, i) => (
@@ -88,16 +90,59 @@ export default function SeatimePrivacyPage() {
               <h2 className="text-xl font-light text-white mb-4">4. Location Data</h2>
               <p className="text-muted leading-relaxed">
                 The App displays vessel position data sourced from public AIS
-                (Automatic Identification System) feeds. The App does not
-                collect or transmit your personal device location unless you
-                explicitly enable a feature that requires it. Vessel position
-                data relates to vessels and is derived from public AIS
-                broadcasts, not from your phone&apos;s GPS.
+                (Automatic Identification System) feeds. Vessel position data
+                relates to vessels and is derived from public AIS broadcasts,
+                not from your phone&apos;s GPS.
+              </p>
+              <p className="text-muted leading-relaxed mt-3">
+                With your permission, the App also accesses your device
+                location to record vessel positions and to calculate qualifying
+                sea time. Location is accessed only while you are using the App
+                (&ldquo;when in use&rdquo;); the App does not track your location in the
+                background.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">5. Legal Basis for Processing</h2>
+              <h2 className="text-xl font-light text-white mb-4">5. Profile Photos</h2>
+              <p className="text-muted leading-relaxed">
+                If you choose to add a profile photo to your SeaTime Tracker
+                account, the App will ask permission to access your device
+                camera and/or photo library. Any photo you select is uploaded
+                to your account and used solely to personalise your profile. We
+                do not access your camera or photos for any other purpose.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-light text-white mb-4">6. Subscriptions and Purchases</h2>
+              <p className="text-muted leading-relaxed">
+                SeaTime Tracker offers an optional paid &ldquo;Pro&rdquo; subscription.
+                Payments are processed by the relevant app store (Apple App
+                Store or Google Play) and by RevenueCat, Inc., which manages
+                subscription entitlements on our behalf. We do not collect or
+                store your full payment-card details. RevenueCat processes
+                purchase information such as transaction identifiers and
+                subscription status to enable and restore your purchases. See
+                RevenueCat&apos;s privacy policy:{" "}
+                <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors">revenuecat.com/privacy</a>.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-light text-white mb-4">7. Crash Reporting and Diagnostics</h2>
+              <p className="text-muted leading-relaxed">
+                To keep the App stable and fix problems, we use Sentry
+                (Functional Software, Inc.) to collect diagnostic and crash
+                data. This may include device information, App version, and
+                technical details about errors. It is used only to diagnose and
+                resolve technical issues. See Sentry&apos;s privacy policy:{" "}
+                <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors">sentry.io/privacy</a>.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-light text-white mb-4">8. Legal Basis for Processing</h2>
               <p className="text-muted leading-relaxed">
                 Where required by the UK GDPR or EU GDPR, we process your
                 personal data on the following legal bases: (a) performance of
@@ -108,12 +153,14 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">6. Sharing and Disclosure</h2>
+              <h2 className="text-xl font-light text-white mb-4">9. Sharing and Disclosure</h2>
               <p className="text-muted leading-relaxed mb-3">We do not sell your personal information. We may share information with the following categories of recipients:</p>
               <ul className="space-y-2 text-muted list-none pl-0">
                 {[
                   "Service providers: hosting, database, authentication, analytics and crash reporting providers acting under contract on our behalf.",
-                  "Apple: limited diagnostic and crash data may be shared via the Apple App Store and TestFlight in accordance with Apple's policies.",
+                  "App stores: limited diagnostic, crash and purchase data may be shared via the Apple App Store, TestFlight and Google Play in accordance with Apple's and Google's policies.",
+                  "RevenueCat, Inc.: purchase and subscription entitlement data, as described in section 6.",
+                  "Sentry (Functional Software, Inc.): crash and diagnostic data, as described in section 7.",
                   "Legal authorities: where disclosure is required to comply with a legal obligation, court order or government request.",
                   "Successors: in connection with any merger, acquisition or sale of assets, subject to standard confidentiality protections.",
                 ].map((item, i) => (
@@ -126,7 +173,7 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">7. Data Retention</h2>
+              <h2 className="text-xl font-light text-white mb-4">10. Data Retention</h2>
               <p className="text-muted leading-relaxed">
                 We retain your account and voyage data for as long as your
                 account remains active. If you delete your account, we will
@@ -137,7 +184,7 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">8. Data Security</h2>
+              <h2 className="text-xl font-light text-white mb-4">11. Data Security</h2>
               <p className="text-muted leading-relaxed">
                 We implement appropriate technical and organisational measures
                 to protect your information against unauthorised access,
@@ -149,7 +196,7 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">9. Your Rights</h2>
+              <h2 className="text-xl font-light text-white mb-4">12. Your Rights</h2>
               <p className="text-muted leading-relaxed mb-3">Depending on your location, you may have the following rights regarding your personal data:</p>
               <ul className="space-y-2 text-muted list-none pl-0">
                 {[
@@ -174,7 +221,7 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">10. Account Deletion</h2>
+              <h2 className="text-xl font-light text-white mb-4">13. Account Deletion</h2>
               <p className="text-muted leading-relaxed">
                 You may delete your account at any time from within the App
                 settings, or by emailing{" "}
@@ -186,7 +233,7 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">11. Children&apos;s Privacy</h2>
+              <h2 className="text-xl font-light text-white mb-4">14. Children&apos;s Privacy</h2>
               <p className="text-muted leading-relaxed">
                 The App is intended for use by professional mariners and is not
                 directed at children under 13. We do not knowingly collect
@@ -197,7 +244,7 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">12. International Transfers</h2>
+              <h2 className="text-xl font-light text-white mb-4">15. International Transfers</h2>
               <p className="text-muted leading-relaxed">
                 Your information may be processed and stored in countries
                 outside your country of residence, including the United Kingdom
@@ -208,7 +255,7 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">13. Third Party Services</h2>
+              <h2 className="text-xl font-light text-white mb-4">16. Third Party Services</h2>
               <p className="text-muted leading-relaxed">
                 The App may rely on third party services for hosting,
                 authentication, analytics and AIS data. These third parties
@@ -219,7 +266,7 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">14. Changes to This Policy</h2>
+              <h2 className="text-xl font-light text-white mb-4">17. Changes to This Policy</h2>
               <p className="text-muted leading-relaxed">
                 We may update this Privacy Policy from time to time. The
                 &ldquo;Last updated&rdquo; date at the top of this page indicates when the
@@ -229,7 +276,7 @@ export default function SeatimePrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">15. Contact Us</h2>
+              <h2 className="text-xl font-light text-white mb-4">18. Contact Us</h2>
               <p className="text-muted leading-relaxed">
                 If you have any questions about this Privacy Policy or our
                 handling of your data, please contact us at{" "}

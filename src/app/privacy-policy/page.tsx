@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <section className="relative py-20 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-light text-white mb-3">Privacy Policy</h1>
-          <p className="text-muted text-sm mb-8">Last updated: 1 January 2025</p>
+          <p className="text-muted text-sm mb-8">Last updated: 9 July 2026</p>
           <HorizonLine />
         </div>
       </section>
@@ -49,6 +49,38 @@ export default function PrivacyPolicyPage() {
                   </li>
                 ))}
               </ul>
+              <p className="text-muted leading-relaxed mt-6 mb-3">For users of the SeaTime Tracker mobile application, the following also applies:</p>
+              <p className="text-muted leading-relaxed mb-3">
+                <strong className="text-white">Location.</strong> With your permission, SeaTime
+                Tracker accesses your device location to record vessel positions and to calculate
+                qualifying sea time. Location is accessed only while you are using the app
+                (&ldquo;when in use&rdquo;); the app does not track your location in the background.
+              </p>
+              <p className="text-muted leading-relaxed mb-3">
+                <strong className="text-white">Profile photos.</strong> If you choose to add a
+                profile photo to your SeaTime Tracker account, the app will ask permission to
+                access your device camera and/or photo library. Any photo you select is uploaded
+                to your account and used solely to personalise your profile. We do not access
+                your camera or photos for any other purpose.
+              </p>
+              <p className="text-muted leading-relaxed mb-3">
+                <strong className="text-white">Subscriptions and purchases.</strong> SeaTime
+                Tracker offers an optional paid &ldquo;Pro&rdquo; subscription. Payments are processed by
+                the relevant app store (Apple App Store or Google Play) and by RevenueCat, Inc.,
+                which manages subscription entitlements on our behalf. We do not collect or store
+                your full payment-card details. RevenueCat processes purchase information such as
+                transaction identifiers and subscription status to enable and restore your
+                purchases. See RevenueCat&apos;s privacy policy:{" "}
+                <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">revenuecat.com/privacy</a>.
+              </p>
+              <p className="text-muted leading-relaxed">
+                <strong className="text-white">Crash reporting and diagnostics.</strong> To keep
+                the app stable and fix problems, we use Sentry (Functional Software, Inc.) to
+                collect diagnostic and crash data. This may include device information, app
+                version, and technical details about errors. It is used only to diagnose and
+                resolve technical issues. See Sentry&apos;s privacy policy:{" "}
+                <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">sentry.io/privacy</a>.
+              </p>
             </div>
 
             <div>
