@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
 import { syncConnection } from "./sync";
-import { autoReconcileAccount } from "./reconcile";
+import { autoReconcileAccount, aiCategoriseAccount } from "./reconcile";
 import { starlingEnabled, getStarlingAccounts, getStarlingBalance } from "@/lib/starling";
 import { paypalEnabled } from "@/lib/paypal";
 import { parseStatement } from "@/lib/statement-parse";
@@ -19,6 +19,16 @@ export async function runAutoReconcile(formData: FormData): Promise<void> {
   if (!profile || !canWrite(profile.role)) redirect("/admin");
   const accountId = String(formData.get("account_id"));
   await autoReconcileAccount(accountId).catch((e) => console.error("Auto-reconcile failed:", e));
+  revalidatePath(`/admin/banking/${accountId}`);
+  revalidatePath("/admin/banking");
+}
+
+// Categorise the remaining unreconciled money-out with Claude.
+export async function runAiCategorise(formData: FormData): Promise<void> {
+  const profile = await getCurrentProfile();
+  if (!profile || !canWrite(profile.role)) redirect("/admin");
+  const accountId = String(formData.get("account_id"));
+  await aiCategoriseAccount(accountId).catch((e) => console.error("AI categorise failed:", e));
   revalidatePath(`/admin/banking/${accountId}`);
   revalidatePath("/admin/banking");
 }

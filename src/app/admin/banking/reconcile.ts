@@ -1,6 +1,73 @@
 import { getSupabaseServer, getCurrentProfile } from "@/lib/supabase/server";
+import { categorise, type AiItem } from "@/lib/ai-categorise";
 
 export type AutoResult = { expenses: number; transfers: number; matched: number };
+
+// AI-categorises an account's unreconciled money-out transactions: creates a
+// categorised expense (or marks a transfer). Reversible + flagged like any auto
+// action. Money-in is left alone (handled by invoice matching / manual review).
+export async function aiCategoriseAccount(accountId: string): Promise<{ expenses: number; transfers: number; skipped: number }> {
+  const supabase = await getSupabaseServer();
+  const profile = await getCurrentProfile();
+
+  const { data: txns } = await supabase
+    .from("fm_bank_transactions")
+    .select("id, counterparty, description, amount, direction, currency, booking_date")
+    .eq("account_id", accountId)
+    .eq("reconciled", false)
+    .eq("direction", "out")
+    .order("booking_date", { ascending: false })
+    .limit(120); // bounded per run so it fits the function timeout; click again for more
+
+  const list = txns ?? [];
+  if (!list.length) return { expenses: 0, transfers: 0, skipped: 0 };
+
+  const items: AiItem[] = list.map((t, i) => ({
+    i,
+    text: `${t.counterparty ?? ""} ${t.description ?? ""}`.trim() || "Unknown",
+    amount: Number(t.amount),
+  }));
+
+  const labels = await categorise(items);
+
+  const result = { expenses: 0, transfers: 0, skipped: 0 };
+  for (let i = 0; i < list.length; i++) {
+    const label = labels.get(i);
+    const t = list[i];
+    if (!label || label === "skip") {
+      result.skipped++;
+      continue;
+    }
+    if (label === "transfer") {
+      await supabase.from("fm_bank_transactions").update({ reconciled: true, auto_reconciled: true }).eq("id", t.id);
+      result.transfers++;
+      continue;
+    }
+    const gross = Math.abs(Number(t.amount));
+    const { data: exp } = await supabase
+      .from("fm_expenses")
+      .insert({
+        supplier: t.counterparty,
+        category: label,
+        description: t.description,
+        currency: t.currency,
+        net: gross,
+        vat: 0,
+        gross,
+        status: "paid",
+        spent_on: t.booking_date || new Date().toISOString().slice(0, 10),
+        created_by: profile?.id ?? null,
+      })
+      .select("id")
+      .single();
+    await supabase
+      .from("fm_bank_transactions")
+      .update({ reconciled: true, auto_reconciled: true, matched_expense_id: exp?.id ?? null })
+      .eq("id", t.id);
+    result.expenses++;
+  }
+  return result;
+}
 
 // Applies bank rules + invoice auto-matching to an account's unreconciled
 // transactions. Rules: money-out matches create a categorised expense or mark a
