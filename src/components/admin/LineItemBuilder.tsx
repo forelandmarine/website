@@ -25,6 +25,7 @@ export type BuilderDefaults = {
   currency?: string | null;
   notes?: string | null;
   deposit_percent?: number | null;
+  vat_treatment?: string | null;
   valid_until?: string | null;
   issue_date?: string | null;
   due_date?: string | null;
@@ -57,6 +58,8 @@ export function LineItemBuilder({
   const [clientId, setClientId] = useState(defaults?.client_id ?? "");
   const [vesselId, setVesselId] = useState(defaults?.vessel_id ?? "");
   const [currency, setCurrency] = useState(defaults?.currency ?? "gbp");
+  const [vatTreatment, setVatTreatment] = useState(defaults?.vat_treatment ?? "standard");
+  const vatApplies = vatTreatment === "standard";
   const [rows, setRows] = useState<Row[]>(
     defaults?.items?.length
       ? defaults.items
@@ -74,10 +77,10 @@ export function LineItemBuilder({
     for (const r of rows) {
       const line = (Number(r.qty) || 0) * (Number(r.unit_price) || 0);
       subtotal += line;
-      vat += line * ((Number(r.vat_rate) || 0) / 100);
+      if (vatApplies) vat += line * ((Number(r.vat_rate) || 0) / 100);
     }
     return { subtotal, vat, total: subtotal + vat };
-  }, [rows]);
+  }, [rows, vatApplies]);
 
   function updateRow(i: number, patch: Partial<Row>) {
     setRows((rs) => rs.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
@@ -102,12 +105,13 @@ export function LineItemBuilder({
     client_id: clientId || null,
     vessel_id: vesselId || null,
     currency,
+    vat_treatment: vatTreatment,
     rows: rows.map((r) => ({
       description: r.description,
       qty: Number(r.qty) || 0,
       unit: r.unit,
       unit_price: Number(r.unit_price) || 0,
-      vat_rate: Number(r.vat_rate) || 0,
+      vat_rate: vatApplies ? Number(r.vat_rate) || 0 : 0,
       service_code: r.service_code ?? null,
     })),
   });
@@ -158,6 +162,15 @@ export function LineItemBuilder({
                 {c.toUpperCase()}
               </option>
             ))}
+          </select>
+        </label>
+        <label className="block">
+          <span className="fm-label">VAT treatment</span>
+          <select className="fm-fld" value={vatTreatment} onChange={(e) => setVatTreatment(e.target.value)}>
+            <option value="standard">Standard VAT</option>
+            <option value="zero">Zero-rated</option>
+            <option value="exempt">Exempt</option>
+            <option value="outside">Outside scope (offshore B2B)</option>
           </select>
         </label>
         {mode === "quote" ? (
@@ -264,13 +277,18 @@ export function LineItemBuilder({
             <span>{money(totals.subtotal, currency)}</span>
           </div>
           <div className="flex justify-between text-slate-500">
-            <span>VAT</span>
+            <span>VAT{!vatApplies ? " (not charged)" : ""}</span>
             <span>{money(totals.vat, currency)}</span>
           </div>
           <div className="flex justify-between border-t border-slate-200 pt-1 text-base font-semibold text-slate-900">
             <span>Total</span>
             <span>{money(totals.total, currency)}</span>
           </div>
+          {!vatApplies && (
+            <p className="pt-1 text-right text-xs text-slate-400">
+              VAT not charged (per-line VAT ignored under this treatment)
+            </p>
+          )}
         </div>
       </div>
 

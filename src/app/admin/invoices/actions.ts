@@ -33,6 +33,7 @@ export async function createInvoice(formData: FormData) {
       client_id: parsed.client_id,
       vessel_id: parsed.vessel_id,
       currency: parsed.currency,
+      vat_treatment: parsed.vat_treatment,
       notes: String(formData.get("notes") || "").trim() || null,
       issue_date: String(formData.get("issue_date") || "") || undefined,
       due_date: String(formData.get("due_date") || "") || null,
@@ -67,6 +68,7 @@ export async function updateInvoice(formData: FormData) {
       client_id: parsed.client_id,
       vessel_id: parsed.vessel_id,
       currency: parsed.currency,
+      vat_treatment: parsed.vat_treatment,
       notes: String(formData.get("notes") || "").trim() || null,
       issue_date: String(formData.get("issue_date") || "") || undefined,
       due_date: String(formData.get("due_date") || "") || null,
@@ -114,6 +116,7 @@ export async function invoiceFromQuote(formData: FormData) {
       vessel_id: q.vessel_id,
       quote_id: q.id,
       currency: q.currency,
+      vat_treatment: q.vat_treatment,
       status: "draft",
       created_by: profile.id,
     })

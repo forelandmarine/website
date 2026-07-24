@@ -2,8 +2,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { DocView } from "@/components/DocView";
-import { PayInvoice } from "@/components/PayInvoice";
-import { money } from "@/lib/admin/format";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -11,7 +9,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const stripeEnabled = Boolean(process.env.STRIPE_SECRET_KEY);
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.forelandmarine.com";
 
 export default async function PublicInvoice({
   params,
@@ -29,6 +27,10 @@ export default async function PublicInvoice({
   const inv = data.invoice;
   const amountPaid = (data.payments ?? []).reduce((s: number, p: { amount: number }) => s + Number(p.amount), 0);
   const balance = Number(inv.total) - amountPaid;
+  const payUrl =
+    balance > 0 && inv.status !== "void"
+      ? `${SITE_URL}/pay?ref=${encodeURIComponent(inv.number)}&amount=${balance.toFixed(2)}&currency=${inv.currency}`
+      : undefined;
 
   return (
     <div className="fm-admin fixed inset-0 z-[70] overflow-y-auto bg-slate-100 print:static print:overflow-visible print:bg-white">
@@ -56,18 +58,9 @@ export default async function PublicInvoice({
         amountPaid={amountPaid}
         notes={inv.notes}
         settings={data.settings ?? {}}
+        payUrl={payUrl}
+        vatTreatment={inv.vat_treatment}
       />
-      {balance > 0 && inv.status !== "void" && (
-        <div className="mx-auto max-w-3xl px-4 pb-10 print:hidden">
-          {stripeEnabled ? (
-            <PayInvoice token={token} label={`Pay ${money(balance, inv.currency)} by card`} />
-          ) : (
-            <p className="text-sm text-slate-500">
-              To settle this invoice by bank transfer, use the account details above or reply to your email.
-            </p>
-          )}
-        </div>
-      )}
     </div>
   );
 }

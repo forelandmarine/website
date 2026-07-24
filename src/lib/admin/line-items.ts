@@ -16,6 +16,7 @@ export type ParsedPayload = {
   client_id: string | null;
   vessel_id: string | null;
   currency: string;
+  vat_treatment: string;
   rows: ParsedRow[];
 };
 
@@ -46,6 +47,7 @@ export function parsePayload(raw: unknown): ParsedPayload {
     client_id: obj.client_id ? String(obj.client_id) : null,
     vessel_id: obj.vessel_id ? String(obj.vessel_id) : null,
     currency: String(obj.currency ?? "gbp"),
+    vat_treatment: String(obj.vat_treatment ?? "standard"),
     rows,
   };
 }

@@ -153,9 +153,15 @@ export default async function InvoiceDetail({ params }: { params: Promise<{ id: 
               <PendingButton variant="outline" className="!px-3 !py-1.5 text-xs">Set</PendingButton>
             </form>
             <div>
-              <p className="fm-label">Client payment link</p>
+              <p className="fm-label">Invoice link</p>
               <CopyField value={clientLink} />
             </div>
+            {balance > 0 && inv.status !== "void" && (
+              <div>
+                <p className="fm-label">Payment portal link (prefilled)</p>
+                <CopyField value={`${SITE_URL}/pay?ref=${encodeURIComponent(inv.number)}&amount=${balance.toFixed(2)}&currency=${inv.currency}`} />
+              </div>
+            )}
             <form action={deleteInvoice} className="border-t border-slate-100 pt-3">
               <input type="hidden" name="id" value={id} />
               <PendingButton variant="danger" pendingLabel="Deleting…" className="w-full">Delete invoice</PendingButton>

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { stripe } from "@/lib/stripe";
 import { isCurrency } from "@/lib/technical-support";
+import { getSupabaseAdmin } from "@/lib/supabase/admin";
 
 type PayBody = {
   amount: number; // major units, e.g. 1250.50
@@ -53,6 +54,30 @@ export async function POST(req: NextRequest) {
   const reference = body.reference?.trim() || null;
   const note = body.note?.trim() || null;
 
+  // If the reference is a live invoice number, route this through the invoice
+  // flow so the webhook records the payment against it and marks it paid.
+  let invoiceId: string | null = null;
+  if (reference) {
+    const admin = getSupabaseAdmin();
+    if (admin) {
+      const { data: inv } = await admin
+        .from("fm_invoices")
+        .select("id, status")
+        .eq("number", reference)
+        .maybeSingle();
+      if (inv && inv.status !== "void") invoiceId = inv.id;
+    }
+  }
+
+  const paymentType = invoiceId ? "fm_invoice" : "generic";
+  const sharedMeta: Record<string, string> = {
+    payment_type: paymentType,
+    payer_name: body.payerName.trim(),
+    reference: reference ?? "",
+    note: note ?? "",
+    ...(invoiceId ? { invoice_id: invoiceId } : {}),
+  };
+
   const productName = reference
     ? `Foreland Marine payment — ${reference}`
     : "Foreland Marine payment";
@@ -81,19 +106,11 @@ export async function POST(req: NextRequest) {
       ],
       payment_intent_data: {
         description: productName,
-        metadata: {
-          payment_type: "generic",
-          payer_name: body.payerName.trim(),
-          reference: reference ?? "",
-          note: note ?? "",
-        },
+        metadata: sharedMeta,
       },
       metadata: {
-        payment_type: "generic",
-        payer_name: body.payerName.trim(),
+        ...sharedMeta,
         payer_email: body.payerEmail.trim().toLowerCase(),
-        reference: reference ?? "",
-        note: note ?? "",
       },
       success_url: `${origin}/pay/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/pay?canceled=1`,

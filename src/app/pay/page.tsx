@@ -15,10 +15,13 @@ const CURRENCY_SYMBOL: Record<Currency, string> = {
 function PayInner() {
   const params = useSearchParams();
   const canceled = params.get("canceled") === "1";
+  const paramCurrency = (params.get("currency") || "").toLowerCase();
 
-  const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState<Currency>("gbp");
-  const [reference, setReference] = useState("");
+  const [amount, setAmount] = useState(params.get("amount") || "");
+  const [currency, setCurrency] = useState<Currency>(
+    ["gbp", "eur", "usd"].includes(paramCurrency) ? (paramCurrency as Currency) : "gbp",
+  );
+  const [reference, setReference] = useState(params.get("ref") || "");
   const [payerName, setPayerName] = useState("");
   const [payerEmail, setPayerEmail] = useState("");
   const [note, setNote] = useState("");

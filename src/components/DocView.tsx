@@ -32,6 +32,8 @@ export function DocView({
   amountPaid,
   notes,
   settings,
+  payUrl,
+  vatTreatment,
 }: {
   kind: "Proposal" | "Invoice";
   number: string;
@@ -47,6 +49,8 @@ export function DocView({
   subtotal: number;
   vatTotal: number;
   total: number;
+  payUrl?: string;
+  vatTreatment?: string | null;
   depositPercent?: number;
   amountPaid?: number;
   notes?: string | null;
@@ -54,6 +58,15 @@ export function DocView({
 }) {
   const deposit = depositPercent ? (total * depositPercent) / 100 : 0;
   const balance = total - (amountPaid ?? 0);
+
+  const vatNote =
+    vatTreatment === "zero"
+      ? "Zero-rated for VAT."
+      : vatTreatment === "exempt"
+        ? "Exempt from VAT."
+        : vatTreatment === "outside"
+          ? "Outside the scope of UK VAT — services supplied to a business customer belonging outside the UK. No UK VAT is chargeable."
+          : null;
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 print:p-0">
@@ -130,6 +143,26 @@ export function DocView({
               {kind === "Invoice" && <div className="flex justify-between border-t border-slate-200 pt-1 font-semibold text-slate-900"><span>Balance due</span><span>{money(balance, currency)}</span></div>}
             </div>
           </div>
+
+          {vatNote && (
+            <div className="mt-3 flex justify-end">
+              <p className="w-64 text-right text-xs text-slate-400">{vatNote}</p>
+            </div>
+          )}
+
+          {kind === "Invoice" && payUrl && balance > 0 && (
+            <div className="mt-8 border-t border-slate-200 pt-5">
+              <a
+                href={payUrl}
+                className="inline-block rounded-md bg-navy px-6 py-3 text-sm font-medium text-white no-underline hover:bg-navy-700 print:hidden"
+              >
+                Pay this invoice online — {money(balance, currency)}
+              </a>
+              <p className="hidden text-sm text-slate-600 print:block">
+                Pay online at <span className="font-medium">{payUrl}</span>
+              </p>
+            </div>
+          )}
 
           {notes && (
             <div className="mt-8 border-t border-slate-200 pt-4">

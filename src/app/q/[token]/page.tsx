@@ -34,6 +34,7 @@ export default async function PublicQuote({ params }: { params: Promise<{ token:
         depositPercent={Number(q.deposit_percent)}
         notes={q.notes}
         settings={data.settings ?? {}}
+        vatTreatment={q.vat_treatment}
       />
     </div>
   );
