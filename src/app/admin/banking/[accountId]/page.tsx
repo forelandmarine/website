@@ -2,8 +2,10 @@ import { notFound, redirect } from "next/navigation";
 import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
 import { PageHeader, Card, Badge, EmptyState, LinkButton, money, fmtDate } from "@/components/admin/ui";
 import { PendingButton } from "@/components/admin/PendingButton";
-import { syncAccount, matchInvoice, expenseFromTxn, dismissTxn, unreconcileTxn, runReconcile } from "../actions";
+import { syncAccount, matchInvoice, expenseFromTxn, recordIncome, dismissTxn, unreconcileTxn, runReconcile } from "../actions";
 import { aiEnabled } from "@/lib/ai-categorise";
+
+const INCOME_CATEGORIES = ["Consultancy", "Management fees", "App revenue", "Interest", "VAT refund", "Rebate", "Other income"];
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60; // AI categorise runs several Claude calls + writes
@@ -93,17 +95,29 @@ export default async function BankAccountPage({
                     </div>
                     <div className="mt-3 flex flex-wrap items-end gap-2 border-t border-slate-100 pt-3">
                       {isIn ? (
-                        <form action={matchInvoice} className="flex flex-wrap items-end gap-2">
-                          <input type="hidden" name="txn_id" value={t.id} />
-                          <label className="block">
-                            <span className="fm-label">Apply to invoice</span>
-                            <select name="invoice_id" required className="fm-fld !py-1.5 text-sm" defaultValue="">
-                              <option value="" disabled>Select invoice…</option>
-                              {invoiceOptions.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
-                            </select>
-                          </label>
-                          <PendingButton className="!px-3 !py-1.5 text-xs">Record payment</PendingButton>
-                        </form>
+                        <>
+                          <form action={matchInvoice} className="flex flex-wrap items-end gap-2">
+                            <input type="hidden" name="txn_id" value={t.id} />
+                            <label className="block">
+                              <span className="fm-label">Apply to invoice</span>
+                              <select name="invoice_id" required className="fm-fld !py-1.5 text-sm" defaultValue="">
+                                <option value="" disabled>Select invoice…</option>
+                                {invoiceOptions.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
+                              </select>
+                            </label>
+                            <PendingButton className="!px-3 !py-1.5 text-xs">Record payment</PendingButton>
+                          </form>
+                          <form action={recordIncome} className="flex flex-wrap items-end gap-2">
+                            <input type="hidden" name="txn_id" value={t.id} />
+                            <label className="block">
+                              <span className="fm-label">Or record as income</span>
+                              <select name="category" className="fm-fld !py-1.5 text-sm" defaultValue="Other income">
+                                {INCOME_CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
+                              </select>
+                            </label>
+                            <PendingButton variant="outline" className="!px-3 !py-1.5 text-xs">Income</PendingButton>
+                          </form>
+                        </>
                       ) : (
                         <form action={expenseFromTxn} className="flex flex-wrap items-end gap-2">
                           <input type="hidden" name="txn_id" value={t.id} />

@@ -120,6 +120,8 @@ export async function importStatement(formData: FormData): Promise<void> {
   if (!rows.length) redirect("/admin/banking/import?error=empty");
 
   const currency = String(formData.get("currency") || "GBP");
+  // Credit-card statements list charges as positive; flip so spending is money out.
+  const reverse = String(formData.get("statement_type")) === "card";
   let accountId = String(formData.get("account_id") || "");
 
   if (!accountId) {
@@ -139,15 +141,13 @@ export async function importStatement(formData: FormData): Promise<void> {
     const name = String(formData.get("account_name") || "").trim() || "Imported account";
     const { data: acct } = await supabase
       .from("fm_bank_accounts")
-      .insert({ connection_id: connId, external_account_id: `manual-${crypto.randomUUID()}`, name, currency })
+      .insert({ connection_id: connId, external_account_id: `manual-${crypto.randomUUID()}`, name, currency, kind: reverse ? "card" : "bank" })
       .select("id")
       .single();
     if (!acct) redirect("/admin/banking/import?error=parse");
     accountId = acct.id;
   }
 
-  // Credit-card statements list charges as positive; flip so spending is money out.
-  const reverse = String(formData.get("statement_type")) === "card";
   const txnRows = rows.map((r) => {
     const amount = reverse ? -r.amount : r.amount;
     return {
@@ -224,6 +224,43 @@ export async function matchInvoice(formData: FormData): Promise<void> {
   await supabase
     .from("fm_bank_transactions")
     .update({ reconciled: true, matched_invoice_id: inv.id, matched_payment_id: pay?.id ?? null })
+    .eq("id", txnId);
+
+  revalidatePath(`/admin/banking/${txn.account_id}`);
+}
+
+// Record an incoming transaction as non-invoiced income (app revenue, interest,
+// VAT refund, etc.) so it counts in the P&L without an invoice.
+export async function recordIncome(formData: FormData): Promise<void> {
+  const profile = await getCurrentProfile();
+  if (!profile || !canWrite(profile.role)) redirect("/admin");
+  const txnId = String(formData.get("txn_id"));
+  const category = String(formData.get("category") || "Other income").trim();
+  const supabase = await getSupabaseServer();
+
+  const { data: txn } = await supabase.from("fm_bank_transactions").select("*").eq("id", txnId).single();
+  if (!txn) redirect("/admin/banking");
+  const amt = Math.abs(Number(txn.amount));
+
+  const { data: inc } = await supabase
+    .from("fm_income")
+    .insert({
+      source: txn.counterparty,
+      category,
+      description: txn.description,
+      currency: txn.currency,
+      net: amt,
+      vat: 0,
+      gross: amt,
+      received_on: txn.booking_date || new Date().toISOString().slice(0, 10),
+      created_by: profile.id,
+    })
+    .select("id")
+    .single();
+
+  await supabase
+    .from("fm_bank_transactions")
+    .update({ reconciled: true, matched_income_id: inc?.id ?? null })
     .eq("id", txnId);
 
   revalidatePath(`/admin/banking/${txn.account_id}`);
@@ -316,14 +353,17 @@ export async function unreconcileTxn(formData: FormData): Promise<void> {
   // Read the current links so we can reverse them cleanly.
   const { data: txn } = await supabase
     .from("fm_bank_transactions")
-    .select("account_id, matched_expense_id, matched_payment_id, matched_invoice_id")
+    .select("account_id, matched_expense_id, matched_payment_id, matched_invoice_id, matched_income_id")
     .eq("id", txnId)
     .single();
   if (!txn) return;
 
-  // Delete the expense this reconciliation created.
+  // Delete the expense or income this reconciliation created.
   if (txn.matched_expense_id) {
     await supabase.from("fm_expenses").delete().eq("id", txn.matched_expense_id);
+  }
+  if (txn.matched_income_id) {
+    await supabase.from("fm_income").delete().eq("id", txn.matched_income_id);
   }
   // Delete the payment and roll the invoice back.
   if (txn.matched_payment_id) {
@@ -341,7 +381,7 @@ export async function unreconcileTxn(formData: FormData): Promise<void> {
 
   await supabase
     .from("fm_bank_transactions")
-    .update({ reconciled: false, auto_reconciled: false, matched_invoice_id: null, matched_expense_id: null, matched_payment_id: null })
+    .update({ reconciled: false, auto_reconciled: false, matched_invoice_id: null, matched_expense_id: null, matched_payment_id: null, matched_income_id: null })
     .eq("id", txnId);
 
   revalidatePath(`/admin/banking/${txn.account_id}`);

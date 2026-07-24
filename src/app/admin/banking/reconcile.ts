@@ -97,7 +97,8 @@ export async function autoReconcileAccount(accountId: string): Promise<AutoResul
   const supabase = await getSupabaseServer();
   const profile = await getCurrentProfile();
 
-  const [{ data: rules }, { data: txns }, { data: invoices }] = await Promise.all([
+  const [{ data: account }, { data: rules }, { data: txns }, { data: invoices }] = await Promise.all([
+    supabase.from("fm_bank_accounts").select("kind").eq("id", accountId).single(),
     supabase.from("fm_bank_rules").select("*").eq("enabled", true).order("priority"),
     supabase.from("fm_bank_transactions").select("*").eq("account_id", accountId).eq("reconciled", false),
     supabase
@@ -105,6 +106,8 @@ export async function autoReconcileAccount(accountId: string): Promise<AutoResul
       .select("id, client_id, total, amount_paid, currency")
       .in("status", ["sent", "part_paid", "overdue"]),
   ]);
+
+  const isCard = account?.kind === "card";
 
   const openInvoices = (invoices ?? []).map((i) => ({
     ...i,
@@ -150,6 +153,39 @@ export async function autoReconcileAccount(accountId: string): Promise<AutoResul
         await supabase.from("fm_bank_transactions").update({ reconciled: true, auto_reconciled: true }).eq("id", t.id);
         result.transfers++;
       }
+      continue;
+    }
+
+    // Card accounts: incoming money is a refund or reward credit (not income).
+    // Book it as a negative expense so it offsets the relevant category.
+    if (isCard && dir === "in") {
+      const isReward = /reward|cashback|points/.test(hay);
+      const refundRule = isReward
+        ? null
+        : (rules ?? []).find((r) => r.action === "expense" && hay.includes(String(r.match_text).toLowerCase()));
+      const category = isReward ? "Bank charges" : refundRule?.category ?? "Other";
+      const credit = -Math.abs(Number(t.amount));
+      const { data: exp } = await supabase
+        .from("fm_expenses")
+        .insert({
+          supplier: t.counterparty,
+          category,
+          description: `Refund/credit: ${t.description ?? ""}`.trim(),
+          currency: t.currency,
+          net: credit,
+          vat: 0,
+          gross: credit,
+          status: "paid",
+          spent_on: t.booking_date || new Date().toISOString().slice(0, 10),
+          created_by: profile?.id ?? null,
+        })
+        .select("id")
+        .single();
+      await supabase
+        .from("fm_bank_transactions")
+        .update({ reconciled: true, auto_reconciled: true, matched_expense_id: exp?.id ?? null })
+        .eq("id", t.id);
+      result.expenses++;
       continue;
     }
 

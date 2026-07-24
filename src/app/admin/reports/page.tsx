@@ -43,6 +43,16 @@ async function sumPayments(period: { from: string; to: string }) {
   return (data ?? []).reduce((a, p) => a + Number(p.amount), 0);
 }
 
+async function sumIncome(period: { from: string; to: string }) {
+  const supabase = await getSupabaseServer();
+  const { data } = await supabase
+    .from("fm_income")
+    .select("net, vat")
+    .gte("received_on", period.from)
+    .lte("received_on", period.to);
+  return (data ?? []).reduce((a, i) => ({ net: a.net + Number(i.net), vat: a.vat + Number(i.vat) }), { net: 0, vat: 0 });
+}
+
 export default async function ReportsPage({ searchParams }: { searchParams: Promise<{ fy?: string; vq?: string }> }) {
   const { fy, vq } = await searchParams;
   const today = new Date();
@@ -53,19 +63,22 @@ export default async function ReportsPage({ searchParams }: { searchParams: Prom
   const quarter = vatQuarter(fyEnd, q);
 
   const supabase = await getSupabaseServer();
-  const [income, expenses, received, vatSales, vatPurch, { count: tsActive }] = await Promise.all([
+  const [income, otherIncome, expenses, received, vatSales, vatPurch, vatOtherInc, { count: tsActive }] = await Promise.all([
     sumInvoices(year),
+    sumIncome(year),
     sumExpenses(year),
     sumPayments(year),
     sumInvoices(quarter),
     sumExpenses(quarter),
+    sumIncome(quarter),
     supabase.from("technical_support_subscriptions").select("*", { count: "exact", head: true }).eq("status", "active"),
   ]);
 
-  const profit = income.net - expenses.net;
+  const turnover = income.net + otherIncome.net;
+  const profit = turnover - expenses.net;
   const ct = corporationTax(profit);
 
-  const box1 = vatSales.vat;
+  const box1 = vatSales.vat + vatOtherInc.vat;
   const box4 = vatPurch.vat;
   const box5 = box1 - box4;
 
@@ -98,7 +111,7 @@ export default async function ReportsPage({ searchParams }: { searchParams: Prom
         <section>
           <h2 className="mb-3 text-lg font-semibold text-slate-900">Profit &amp; loss — {year.label}</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <StatCard label="Income (invoiced, ex-VAT)" value={money(income.net)} hint={`${money(income.gross)} incl VAT`} />
+            <StatCard label="Turnover (ex-VAT)" value={money(turnover)} hint={`${money(income.net)} invoiced + ${money(otherIncome.net)} other`} />
             <StatCard label="Expenses (ex-VAT)" value={money(expenses.net)} />
             <StatCard label="Net profit" value={money(profit)} />
             <StatCard label="Cash received" value={money(received)} hint="payments in period" />
@@ -106,7 +119,9 @@ export default async function ReportsPage({ searchParams }: { searchParams: Prom
           <Card className="mt-4 p-6">
             <table className="w-full max-w-md text-sm">
               <tbody>
-                <tr className="border-b border-slate-100"><td className="py-2 text-slate-600">Turnover (ex-VAT)</td><td className="py-2 text-right">{money(income.net)}</td></tr>
+                <tr className="border-b border-slate-100"><td className="py-2 text-slate-600">Invoiced income</td><td className="py-2 text-right">{money(income.net)}</td></tr>
+                <tr className="border-b border-slate-100"><td className="py-2 text-slate-600">Other income (app, interest, refunds)</td><td className="py-2 text-right">{money(otherIncome.net)}</td></tr>
+                <tr className="border-b border-slate-200"><td className="py-2 font-medium text-slate-700">Turnover (ex-VAT)</td><td className="py-2 text-right font-medium">{money(turnover)}</td></tr>
                 <tr className="border-b border-slate-100"><td className="py-2 text-slate-600">Less allowable expenses</td><td className="py-2 text-right">-{money(expenses.net)}</td></tr>
                 <tr className="border-b border-slate-200"><td className="py-2 font-semibold text-slate-800">Profit before tax</td><td className="py-2 text-right font-semibold">{money(profit)}</td></tr>
                 <tr className="border-b border-slate-100"><td className="py-2 text-slate-600">Corporation Tax ({ct.band})</td><td className="py-2 text-right">-{money(ct.tax)}</td></tr>
@@ -140,7 +155,7 @@ export default async function ReportsPage({ searchParams }: { searchParams: Prom
                 <VatRow box="3" label="Total VAT due (boxes 1 + 2)" value={money(box1)} bold />
                 <VatRow box="4" label="VAT reclaimed on purchases" value={money(box4)} />
                 <VatRow box="5" label="Net VAT to pay HMRC (or reclaim)" value={money(box5)} bold />
-                <VatRow box="6" label="Total value of sales ex-VAT" value={money(vatSales.net)} />
+                <VatRow box="6" label="Total value of sales ex-VAT" value={money(vatSales.net + vatOtherInc.net)} />
                 <VatRow box="7" label="Total value of purchases ex-VAT" value={money(vatPurch.net)} />
                 <VatRow box="8" label="Value of goods supplied (NI/EU)" value={money(0)} />
                 <VatRow box="9" label="Value of acquisitions (NI/EU)" value={money(0)} />

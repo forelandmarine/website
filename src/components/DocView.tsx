@@ -69,8 +69,9 @@ export function DocView({
           {/* Header */}
           <div className="flex items-start justify-between border-b border-slate-200 pb-6">
             <div>
-              <div className="text-lg font-semibold uppercase tracking-[0.18em] text-navy">Foreland Marine</div>
-              <p className="mt-1 text-xs text-slate-400">{settings.company_name}</p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logos/foreland-marine-color.png" alt="Foreland Marine Consultancy" className="h-12 w-auto" />
+              <p className="mt-2 text-xs text-slate-400">{settings.company_name}</p>
             </div>
             <div className="text-right">
               <div className="text-sm font-semibold uppercase tracking-wide text-slate-400">{kind}</div>
