@@ -170,7 +170,7 @@ export default function Footer() {
           >
             Faro Creative
           </a>
-          , the founder-led design studio also run by Jack.
+          , the founder-led design studio.
         </p>
       </div>
     </footer>

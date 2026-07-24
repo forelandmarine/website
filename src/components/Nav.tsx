@@ -83,7 +83,7 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5"
+                className="px-3 py-2 text-sm font-light text-[#C3D9E8] hover:text-white transition-colors rounded hover:bg-white/5"
               >
                 {link.label}
               </Link>
@@ -95,7 +95,7 @@ export default function Nav() {
               onMouseEnter={openTools}
               onMouseLeave={closeTools}
             >
-              <button className="flex items-center gap-1 px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5">
+              <button className="flex items-center gap-1 px-3 py-2 text-sm font-light text-[#C3D9E8] hover:text-white transition-colors rounded hover:bg-white/5">
                 Tools
                 <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform ${toolsOpen ? "rotate-180" : ""}`}>
                   <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -108,7 +108,7 @@ export default function Nav() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-2.5 text-sm font-light text-muted hover:text-white hover:bg-white/5 transition-colors"
+                      className="block px-4 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white hover:bg-white/5 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -120,7 +120,7 @@ export default function Nav() {
 
             <Link
               href="/about"
-              className="px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5"
+              className="px-3 py-2 text-sm font-light text-[#C3D9E8] hover:text-white transition-colors rounded hover:bg-white/5"
             >
               About
             </Link>
@@ -131,7 +131,7 @@ export default function Nav() {
               onMouseEnter={openContact}
               onMouseLeave={closeContact}
             >
-              <button className="flex items-center gap-1 px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5">
+              <button className="flex items-center gap-1 px-3 py-2 text-sm font-light text-[#C3D9E8] hover:text-white transition-colors rounded hover:bg-white/5">
                 Contact
                 <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform ${contactOpen ? "rotate-180" : ""}`}>
                   <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -144,7 +144,7 @@ export default function Nav() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-2.5 text-sm font-light text-muted hover:text-white hover:bg-white/5 transition-colors"
+                      className="block px-4 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white hover:bg-white/5 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -211,7 +211,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block px-3 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+              className="block px-3 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white rounded hover:bg-white/5 transition-colors"
             >
               {link.label}
             </Link>
@@ -222,7 +222,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block px-6 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+              className="block px-6 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white rounded hover:bg-white/5 transition-colors"
             >
               {link.label}
             </Link>
@@ -230,7 +230,7 @@ export default function Nav() {
           <Link
             href="/about"
             onClick={() => setMobileOpen(false)}
-            className="block px-3 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+            className="block px-3 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white rounded hover:bg-white/5 transition-colors"
           >
             About
           </Link>
@@ -240,7 +240,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block px-6 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+              className="block px-6 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white rounded hover:bg-white/5 transition-colors"
             >
               {link.label}
             </Link>
@@ -253,7 +253,7 @@ export default function Nav() {
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
               </svg>
             </a>
-            <a href="mailto:info@forelandmarine.com" className="text-sm font-light text-muted hover:text-white transition-colors">
+            <a href="mailto:info@forelandmarine.com" className="text-sm font-light text-[#C3D9E8] hover:text-white transition-colors">
               info@forelandmarine.com
             </a>
           </div>
