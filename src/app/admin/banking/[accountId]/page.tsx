@@ -26,19 +26,22 @@ export default async function BankAccountPage({
   const { data: account } = await supabase.from("fm_bank_accounts").select("*").eq("id", accountId).single();
   if (!account) notFound();
 
-  const [{ data: txns }, { data: openInvoices }] = await Promise.all([
-    supabase.from("fm_bank_transactions").select("*").eq("account_id", accountId).order("booking_date", { ascending: false }).limit(300),
+  // Actionable rows load in full; the reconciled history is capped to keep the
+  // page light. Money-in still to reconcile shows first (needs invoice match).
+  const [{ data: unreconciledRaw }, { data: reconciledRaw }, { data: openInvoices }] = await Promise.all([
+    supabase.from("fm_bank_transactions").select("*").eq("account_id", accountId).eq("reconciled", false).order("direction").order("booking_date", { ascending: false }).limit(250),
+    supabase.from("fm_bank_transactions").select("*").eq("account_id", accountId).eq("reconciled", true).order("booking_date", { ascending: false }).limit(60),
     supabase.from("fm_invoices").select("id, number, total, amount_paid, currency, fm_clients(name)").in("status", ["sent", "part_paid", "overdue"]).order("issue_date", { ascending: false }),
   ]);
+
+  const unreconciled = unreconciledRaw ?? [];
+  const reconciled = reconciledRaw ?? [];
 
   const invoiceOptions = (openInvoices ?? []).map((i) => {
     const client = Array.isArray(i.fm_clients) ? i.fm_clients[0] : i.fm_clients;
     const bal = Number(i.total) - Number(i.amount_paid);
     return { id: i.id, label: `${i.number} — ${client?.name || "—"} (${money(bal, i.currency)})` };
   });
-
-  const unreconciled = (txns ?? []).filter((t) => !t.reconciled);
-  const reconciled = (txns ?? []).filter((t) => t.reconciled);
 
   return (
     <>

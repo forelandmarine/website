@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { cache } from "react";
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from "./config";
 
 // Server client for RSCs and route handlers. Reads/writes the auth cookies.
@@ -34,7 +35,9 @@ export type OpsProfile = {
 };
 
 // Returns the signed-in Foreland staff profile (id, role, name) or null.
-export async function getCurrentProfile(): Promise<OpsProfile | null> {
+// Wrapped in React cache() so the layout and page in one render share a single
+// auth validation + profile query instead of repeating it.
+export const getCurrentProfile = cache(async function getCurrentProfile(): Promise<OpsProfile | null> {
   const supabase = await getSupabaseServer();
   const {
     data: { user },
@@ -47,4 +50,4 @@ export async function getCurrentProfile(): Promise<OpsProfile | null> {
     .single();
   if (!profile || !profile.active) return null;
   return { ...profile, email: user.email } as OpsProfile;
-}
+});

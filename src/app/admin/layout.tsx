@@ -5,6 +5,9 @@ import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { getCurrentProfile } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
+// Run admin functions next to Supabase (eu-west-1 / Ireland) so the several
+// sequential queries per page are local, not transatlantic.
+export const preferredRegion = "dub1";
 
 // The admin renders as a full-screen light overlay above the site's dark chrome,
 // so the public marketing layout (Nav/Footer) is left completely untouched.
