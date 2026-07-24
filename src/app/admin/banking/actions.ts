@@ -145,16 +145,21 @@ export async function importStatement(formData: FormData): Promise<void> {
     accountId = acct.id;
   }
 
-  const txnRows = rows.map((r) => ({
-    account_id: accountId,
-    external_transaction_id: r.externalId,
-    booking_date: r.date,
-    amount: r.amount,
-    currency,
-    direction: r.amount >= 0 ? "in" : "out",
-    counterparty: r.counterparty,
-    description: r.description,
-  }));
+  // Credit-card statements list charges as positive; flip so spending is money out.
+  const reverse = String(formData.get("statement_type")) === "card";
+  const txnRows = rows.map((r) => {
+    const amount = reverse ? -r.amount : r.amount;
+    return {
+      account_id: accountId,
+      external_transaction_id: r.externalId,
+      booking_date: r.date,
+      amount,
+      currency,
+      direction: amount >= 0 ? "in" : "out",
+      counterparty: r.counterparty,
+      description: r.description,
+    };
+  });
   // ignoreDuplicates so re-importing an overlapping statement doesn't double up.
   await supabase.from("fm_bank_transactions").upsert(txnRows, { onConflict: "account_id,external_transaction_id", ignoreDuplicates: true });
 

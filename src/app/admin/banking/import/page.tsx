@@ -46,10 +46,17 @@ export default async function ImportPage({ searchParams }: { searchParams: Promi
               </select>
             </label>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <label className="block">
                 <span className="fm-label">New account name</span>
-                <input name="account_name" className="fm-fld" placeholder="e.g. Starling current" />
+                <input name="account_name" className="fm-fld" placeholder="e.g. Capital on Tap" />
+              </label>
+              <label className="block">
+                <span className="fm-label">Statement type</span>
+                <select name="statement_type" className="fm-fld" defaultValue="bank">
+                  <option value="bank">Bank account</option>
+                  <option value="card">Credit card</option>
+                </select>
               </label>
               <label className="block">
                 <span className="fm-label">Currency</span>
@@ -60,6 +67,10 @@ export default async function ImportPage({ searchParams }: { searchParams: Promi
                 </select>
               </label>
             </div>
+            <p className="text-xs text-slate-400">
+              Choose <span className="font-medium">Credit card</span> for Capital on Tap and similar, where the file
+              lists spending as positive amounts, so it is recorded as money out.
+            </p>
 
             <PendingButton pendingLabel="Importing…">Import transactions</PendingButton>
           </form>
