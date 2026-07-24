@@ -203,6 +203,37 @@ export async function sendInvoiceRequestInternalEmail(args: InvoiceRequestIntern
   });
 }
 
+type GenericPaymentArgs = {
+  amountDisplay: string;
+  payerName: string;
+  payerEmail: string;
+  reference: string | null;
+  note: string | null;
+};
+
+export async function sendGenericPaymentNotification(args: GenericPaymentArgs) {
+  const subject = `Payment received: ${args.amountDisplay}${
+    args.reference ? ` (${args.reference})` : ""
+  }`;
+  const lines = [
+    `A payment has been made via the website payment page.`,
+    ``,
+    `Amount: ${args.amountDisplay}`,
+    `Reference: ${args.reference ?? "—"}`,
+    `Note: ${args.note ?? "—"}`,
+    `Paid by: ${args.payerName} <${args.payerEmail}>`,
+    ``,
+    `Stripe has emailed the payer a receipt. Full details are in the Stripe dashboard.`,
+  ];
+
+  return resend.emails.send({
+    from: FROM_EMAIL,
+    to: INTERNAL_NOTIFY_EMAIL,
+    subject,
+    text: lines.join("\n"),
+  });
+}
+
 type InvoiceRequestCustomerArgs = {
   to: string;
   yachtName: string;

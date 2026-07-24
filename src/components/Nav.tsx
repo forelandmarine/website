@@ -21,10 +21,17 @@ const toolLinks = [
   { label: "Running Cost Calculator", href: "/tools/running-cost-calculator" },
 ];
 
+const contactLinks = [
+  { label: "Get in touch", href: "/contact" },
+  { label: "Make a payment", href: "/pay" },
+];
+
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const contactCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const openTools = useCallback(() => {
     if (closeTimeout.current) { clearTimeout(closeTimeout.current); closeTimeout.current = null; }
@@ -33,6 +40,15 @@ export default function Nav() {
 
   const closeTools = useCallback(() => {
     closeTimeout.current = setTimeout(() => setToolsOpen(false), 200);
+  }, []);
+
+  const openContact = useCallback(() => {
+    if (contactCloseTimeout.current) { clearTimeout(contactCloseTimeout.current); contactCloseTimeout.current = null; }
+    setContactOpen(true);
+  }, []);
+
+  const closeContact = useCallback(() => {
+    contactCloseTimeout.current = setTimeout(() => setContactOpen(false), 200);
   }, []);
 
   useEffect(() => {
@@ -109,12 +125,34 @@ export default function Nav() {
               About
             </Link>
 
-            <Link
-              href="/contact"
-              className="px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5"
+            {/* Contact dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={openContact}
+              onMouseLeave={closeContact}
             >
-              Contact
-            </Link>
+              <button className="flex items-center gap-1 px-3 py-2 text-sm font-light text-muted hover:text-white transition-colors rounded hover:bg-white/5">
+                Contact
+                <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform ${contactOpen ? "rotate-180" : ""}`}>
+                  <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              {contactOpen && (
+                <div className="absolute top-full right-0 pt-2 w-48">
+                <div className="border border-white/10 bg-bg1 shadow-xl shadow-black/40 py-1">
+                  {contactLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block px-4 py-2.5 text-sm font-light text-muted hover:text-white hover:bg-white/5 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Right column: desktop actions OR mobile hamburger */}
@@ -196,13 +234,17 @@ export default function Nav() {
           >
             About
           </Link>
-          <Link
-            href="/contact"
-            onClick={() => setMobileOpen(false)}
-            className="block px-3 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
-          >
-            Contact
-          </Link>
+          <div className="px-3 py-2 text-xs text-muted/50 tracking-widest">Contact</div>
+          {contactLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="block px-6 py-2.5 text-sm font-light text-muted hover:text-white rounded hover:bg-white/5 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
           <div className="mt-3 pt-3 border-t border-white/8 flex items-center gap-3 px-3">
             <a href="https://instagram.com/forelandmarine" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors">
               <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">

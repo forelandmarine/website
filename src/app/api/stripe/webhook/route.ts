@@ -25,7 +25,11 @@ function normaliseCurrency(value: unknown): Currency | null {
 function normaliseCycle(value: unknown): BillingCycle {
   return isCycle(value) ? value : "monthly";
 }
-import { sendWelcomeEmail, sendInternalSignupNotification } from "@/lib/resend";
+import {
+  sendWelcomeEmail,
+  sendInternalSignupNotification,
+  sendGenericPaymentNotification,
+} from "@/lib/resend";
 
 export const runtime = "nodejs";
 
@@ -78,6 +82,13 @@ export async function POST(req: NextRequest) {
 }
 
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
+  // Generic one-off payments from the /pay page carry their own metadata and
+  // have no Supabase row to update — notify internally and return.
+  if (session.metadata?.payment_type === "generic") {
+    await handleGenericPayment(session);
+    return;
+  }
+
   const rowId = session.metadata?.subscription_row_id;
   if (!rowId) {
     console.warn("checkout.session.completed without subscription_row_id metadata");
@@ -158,6 +169,44 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     });
   } catch (err) {
     console.error("Failed to send internal notification:", err);
+  }
+}
+
+async function handleGenericPayment(session: Stripe.Checkout.Session) {
+  const amountMinor = session.amount_total ?? 0;
+  const currency = (session.currency ?? "gbp").toUpperCase();
+  let amountDisplay = `${currency} ${(amountMinor / 100).toFixed(2)}`;
+  try {
+    amountDisplay = new Intl.NumberFormat("en-GB", {
+      style: "currency",
+      currency,
+    }).format(amountMinor / 100);
+  } catch {
+    // Fall back to the plain string above for any unusual currency code.
+  }
+
+  const payerName =
+    session.metadata?.payer_name ||
+    session.customer_details?.name ||
+    "Unknown";
+  const payerEmail =
+    session.metadata?.payer_email ||
+    session.customer_details?.email ||
+    session.customer_email ||
+    "unknown";
+  const reference = session.metadata?.reference?.trim() || null;
+  const note = session.metadata?.note?.trim() || null;
+
+  try {
+    await sendGenericPaymentNotification({
+      amountDisplay,
+      payerName,
+      payerEmail,
+      reference,
+      note,
+    });
+  } catch (err) {
+    console.error("Failed to send generic payment notification:", err);
   }
 }
 
