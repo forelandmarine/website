@@ -64,18 +64,21 @@ ${lines}`;
     .map((r) => ({ i: r.i, category: allowed.has(r.category) ? r.category : "Other" }));
 }
 
-// Categorises items in batches; returns a map of item index -> label.
+// Categorises items in batches run concurrently; returns index -> label.
 export async function categorise(items: AiItem[]): Promise<Map<number, string>> {
   const out = new Map<number, string>();
   const BATCH = 40;
-  for (let b = 0; b < items.length; b += BATCH) {
-    const chunk = items.slice(b, b + BATCH);
-    try {
-      const results = await callClaude(chunk);
-      for (const r of results) out.set(r.i, r.category);
-    } catch (e) {
-      console.error("AI categorise batch failed:", e);
-    }
-  }
+  const chunks: AiItem[][] = [];
+  for (let b = 0; b < items.length; b += BATCH) chunks.push(items.slice(b, b + BATCH));
+
+  const results = await Promise.all(
+    chunks.map((chunk) =>
+      callClaude(chunk).catch((e) => {
+        console.error("AI categorise batch failed:", e);
+        return [] as AiResult[];
+      }),
+    ),
+  );
+  for (const batch of results) for (const r of batch) out.set(r.i, r.category);
   return out;
 }

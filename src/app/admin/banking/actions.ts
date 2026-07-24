@@ -19,7 +19,7 @@ export async function runReconcile(formData: FormData): Promise<void> {
   const profile = await getCurrentProfile();
   if (!profile || !canWrite(profile.role)) redirect("/admin");
   const accountId = String(formData.get("account_id"));
-  await reconcileAccount(accountId, 120).catch((e) => console.error("Reconcile failed:", e));
+  await reconcileAccount(accountId, 400).catch((e) => console.error("Reconcile failed:", e));
   revalidatePath(`/admin/banking/${accountId}`);
   revalidatePath("/admin/banking");
 }
