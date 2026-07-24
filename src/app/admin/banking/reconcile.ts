@@ -1,12 +1,30 @@
 import { getSupabaseServer, getCurrentProfile } from "@/lib/supabase/server";
-import { categorise, type AiItem } from "@/lib/ai-categorise";
+import { categorise, aiEnabled, type AiItem } from "@/lib/ai-categorise";
 
 export type AutoResult = { expenses: number; transfers: number; matched: number };
+
+// One reconcile pass: rules + invoice matching first, then (if a Claude key is
+// set) AI categorises whatever no rule caught. This is what the "Reconcile"
+// button and every sync run.
+export async function reconcileAccount(
+  accountId: string,
+  aiLimit = 120,
+): Promise<{ rules: AutoResult; ai: { expenses: number; transfers: number; skipped: number } }> {
+  const rules = await autoReconcileAccount(accountId);
+  let ai = { expenses: 0, transfers: 0, skipped: 0 };
+  if (aiEnabled()) {
+    ai = await aiCategoriseAccount(accountId, aiLimit).catch((e) => {
+      console.error("AI second pass failed:", e);
+      return { expenses: 0, transfers: 0, skipped: 0 };
+    });
+  }
+  return { rules, ai };
+}
 
 // AI-categorises an account's unreconciled money-out transactions: creates a
 // categorised expense (or marks a transfer). Reversible + flagged like any auto
 // action. Money-in is left alone (handled by invoice matching / manual review).
-export async function aiCategoriseAccount(accountId: string): Promise<{ expenses: number; transfers: number; skipped: number }> {
+export async function aiCategoriseAccount(accountId: string, limit = 120): Promise<{ expenses: number; transfers: number; skipped: number }> {
   const supabase = await getSupabaseServer();
   const profile = await getCurrentProfile();
 
@@ -17,7 +35,7 @@ export async function aiCategoriseAccount(accountId: string): Promise<{ expenses
     .eq("reconciled", false)
     .eq("direction", "out")
     .order("booking_date", { ascending: false })
-    .limit(120); // bounded per run so it fits the function timeout; click again for more
+    .limit(limit); // bounded per run so it fits the function timeout
 
   const list = txns ?? [];
   if (!list.length) return { expenses: 0, transfers: 0, skipped: 0 };

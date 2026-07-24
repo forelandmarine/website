@@ -9,6 +9,7 @@ import { paypalEnabled } from "@/lib/paypal";
 import { syncAccount, connectStarling, connectPaypal } from "./actions";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 60; // Sync/Connect here run rules + an AI reconcile pass
 
 export default async function BankingPage({ searchParams }: { searchParams: Promise<{ connected?: string; error?: string }> }) {
   const { connected, error } = await searchParams;

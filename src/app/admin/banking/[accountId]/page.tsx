@@ -2,7 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
 import { PageHeader, Card, Badge, EmptyState, LinkButton, money, fmtDate } from "@/components/admin/ui";
 import { PendingButton } from "@/components/admin/PendingButton";
-import { syncAccount, matchInvoice, expenseFromTxn, dismissTxn, unreconcileTxn, runAutoReconcile, runAiCategorise } from "../actions";
+import { syncAccount, matchInvoice, expenseFromTxn, dismissTxn, unreconcileTxn, runReconcile } from "../actions";
 import { aiEnabled } from "@/lib/ai-categorise";
 
 export const dynamic = "force-dynamic";
@@ -50,16 +50,10 @@ export default async function BankAccountPage({
         subtitle={account.iban || undefined}
         action={
           <div className="flex flex-wrap items-center gap-2">
-            <form action={runAutoReconcile}>
+            <form action={runReconcile}>
               <input type="hidden" name="account_id" value={accountId} />
-              <PendingButton variant="outline" pendingLabel="Reconciling…">Auto-reconcile</PendingButton>
+              <PendingButton pendingLabel={aiEnabled() ? "Reconciling + AI…" : "Reconciling…"}>Reconcile</PendingButton>
             </form>
-            {aiEnabled() && (
-              <form action={runAiCategorise}>
-                <input type="hidden" name="account_id" value={accountId} />
-                <PendingButton variant="outline" pendingLabel="Thinking…">AI categorise</PendingButton>
-              </form>
-            )}
             <LinkButton href="/admin/banking/rules" variant="outline">Rules</LinkButton>
             <form action={syncAccount.bind(null, accountId)}>
               <PendingButton pendingLabel="Syncing…">Sync now</PendingButton>

@@ -3,6 +3,8 @@ import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
 import { plaidEnabled, exchangePublicToken, getAccounts, getInstitutionName } from "@/lib/plaid";
 import { syncConnection } from "@/app/admin/banking/sync";
 
+export const maxDuration = 60; // initial sync runs rules + an AI reconcile pass
+
 // Exchanges a Plaid public_token (from Link) for an access_token, stores the
 // connection + accounts, and runs an initial transaction sync.
 export async function POST(req: NextRequest) {

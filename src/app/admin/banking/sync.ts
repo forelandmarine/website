@@ -2,7 +2,7 @@ import { getSupabaseServer } from "@/lib/supabase/server";
 import { syncTransactions, getAccounts } from "@/lib/plaid";
 import { getStarlingFeed, getStarlingBalance } from "@/lib/starling";
 import { getPaypalTransactions } from "@/lib/paypal";
-import { autoReconcileAccount } from "./reconcile";
+import { reconcileAccount } from "./reconcile";
 
 type SupabaseServer = Awaited<ReturnType<typeof getSupabaseServer>>;
 
@@ -25,7 +25,8 @@ export async function syncConnection(connectionId: string): Promise<void> {
 
   const { data: accounts } = await supabase.from("fm_bank_accounts").select("id").eq("connection_id", connectionId);
   for (const a of accounts ?? []) {
-    await autoReconcileAccount(a.id).catch((e) => console.error("Auto-reconcile failed:", e));
+    // Rules first, then a small AI pass on new transactions rules didn't catch.
+    await reconcileAccount(a.id, 40).catch((e) => console.error("Reconcile failed:", e));
   }
 }
 

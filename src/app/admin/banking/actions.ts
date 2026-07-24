@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
 import { syncConnection } from "./sync";
-import { autoReconcileAccount, aiCategoriseAccount } from "./reconcile";
+import { reconcileAccount } from "./reconcile";
 import { starlingEnabled, getStarlingAccounts, getStarlingBalance } from "@/lib/starling";
 import { paypalEnabled } from "@/lib/paypal";
 import { parseStatement } from "@/lib/statement-parse";
@@ -13,22 +13,13 @@ function canWrite(role?: string) {
   return role === "owner" || role === "bookkeeper";
 }
 
-// Run the rules engine + invoice auto-match over an account's unreconciled rows.
-export async function runAutoReconcile(formData: FormData): Promise<void> {
+// Reconcile: rules + invoice matching, then an AI second pass on anything no
+// rule caught (when a Claude key is configured).
+export async function runReconcile(formData: FormData): Promise<void> {
   const profile = await getCurrentProfile();
   if (!profile || !canWrite(profile.role)) redirect("/admin");
   const accountId = String(formData.get("account_id"));
-  await autoReconcileAccount(accountId).catch((e) => console.error("Auto-reconcile failed:", e));
-  revalidatePath(`/admin/banking/${accountId}`);
-  revalidatePath("/admin/banking");
-}
-
-// Categorise the remaining unreconciled money-out with Claude.
-export async function runAiCategorise(formData: FormData): Promise<void> {
-  const profile = await getCurrentProfile();
-  if (!profile || !canWrite(profile.role)) redirect("/admin");
-  const accountId = String(formData.get("account_id"));
-  await aiCategoriseAccount(accountId).catch((e) => console.error("AI categorise failed:", e));
+  await reconcileAccount(accountId, 120).catch((e) => console.error("Reconcile failed:", e));
   revalidatePath(`/admin/banking/${accountId}`);
   revalidatePath("/admin/banking");
 }
