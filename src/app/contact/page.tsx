@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HorizonLine, SectionLabel } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 import ContactPageForm from "@/components/ContactPageForm";
@@ -91,6 +92,23 @@ export default function ContactPage() {
                     <address className="text-white not-italic">7 Bell Yard, London<br />WC2A 2JR</address>
                   </div>
                 </div>
+              </div>
+
+              {/* Make a payment */}
+              <div className="border border-white/10 bg-bg2 p-6">
+                <h2 className="text-xl font-light text-white mb-2">Make a payment</h2>
+                <p className="text-sm text-muted leading-relaxed mb-5">
+                  Settle an invoice or an agreed fee securely by card. A receipt is emailed automatically.
+                </p>
+                <Link
+                  href="/pay"
+                  className="inline-flex items-center gap-2 border border-white/30 text-white text-sm font-light px-5 py-2.5 rounded hover:bg-white/10 transition-colors"
+                >
+                  Pay an invoice
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 12 12" fill="none">
+                    <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>
