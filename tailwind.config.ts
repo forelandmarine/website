@@ -16,6 +16,9 @@ const config: Config = {
         green: "#22C55E",
         muted: "#7BA8C8",
         label: "#5386B6",
+        // Admin ops backend (light UI, navy chrome)
+        navy: "#033269",
+        "navy-700": "#0A407D",
       },
       fontFamily: {
         sans: ["var(--font-nunito)", "Aptos", "system-ui", "sans-serif"],

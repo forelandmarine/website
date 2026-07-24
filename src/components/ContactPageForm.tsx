@@ -11,10 +11,10 @@ export default function ContactPageForm() {
     e.preventDefault();
     setStatus("loading");
     try {
-      const res = await fetch("https://formspree.io/f/mwvwevze", {
+      const res = await fetch("/api/enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, source: "contact-page" }),
       });
       if (res.ok) { setStatus("success"); setForm({ name: "", email: "", message: "" }); }
       else setStatus("error");

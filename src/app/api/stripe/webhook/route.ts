@@ -89,6 +89,12 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     return;
   }
 
+  // Invoice payments from the client-facing /i/[token] page.
+  if (session.metadata?.payment_type === "fm_invoice") {
+    await handleInvoicePayment(session);
+    return;
+  }
+
   const rowId = session.metadata?.subscription_row_id;
   if (!rowId) {
     console.warn("checkout.session.completed without subscription_row_id metadata");
@@ -170,6 +176,53 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   } catch (err) {
     console.error("Failed to send internal notification:", err);
   }
+}
+
+async function handleInvoicePayment(session: Stripe.Checkout.Session) {
+  const invoiceId = session.metadata?.invoice_id;
+  if (!invoiceId) return;
+
+  const amount = (session.amount_total ?? 0) / 100;
+  const currency = (session.currency ?? "gbp").toLowerCase();
+  const paymentIntent = typeof session.payment_intent === "string" ? session.payment_intent : null;
+
+  const { data: inv } = await supabase
+    .from("fm_invoices")
+    .select("id, client_id, total")
+    .eq("id", invoiceId)
+    .single();
+  if (!inv) return;
+
+  // Idempotency: skip if this checkout session was already recorded.
+  const { data: existing } = await supabase
+    .from("fm_payments")
+    .select("id")
+    .eq("stripe_session_id", session.id)
+    .maybeSingle();
+  if (existing) return;
+
+  await supabase.from("fm_payments").insert({
+    invoice_id: invoiceId,
+    client_id: inv.client_id,
+    type: "other",
+    method: "stripe",
+    currency,
+    amount,
+    status: "succeeded",
+    stripe_session_id: session.id,
+    stripe_payment_intent: paymentIntent,
+    paid_at: new Date().toISOString(),
+  });
+
+  // Roll up amount_paid + status.
+  const { data: pays } = await supabase
+    .from("fm_payments")
+    .select("amount")
+    .eq("invoice_id", invoiceId)
+    .eq("status", "succeeded");
+  const paid = (pays ?? []).reduce((s, p) => s + Number(p.amount), 0);
+  const status = paid >= Number(inv.total) ? "paid" : paid > 0 ? "part_paid" : "sent";
+  await supabase.from("fm_invoices").update({ amount_paid: paid, status }).eq("id", invoiceId);
 }
 
 async function handleGenericPayment(session: Stripe.Checkout.Session) {
