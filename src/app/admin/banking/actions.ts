@@ -4,11 +4,23 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
 import { syncConnection } from "./sync";
+import { autoReconcileAccount } from "./reconcile";
 import { starlingEnabled, getStarlingAccounts, getStarlingBalance } from "@/lib/starling";
+import { paypalEnabled } from "@/lib/paypal";
 import { parseStatement } from "@/lib/statement-parse";
 
 function canWrite(role?: string) {
   return role === "owner" || role === "bookkeeper";
+}
+
+// Run the rules engine + invoice auto-match over an account's unreconciled rows.
+export async function runAutoReconcile(formData: FormData): Promise<void> {
+  const profile = await getCurrentProfile();
+  if (!profile || !canWrite(profile.role)) redirect("/admin");
+  const accountId = String(formData.get("account_id"));
+  await autoReconcileAccount(accountId).catch((e) => console.error("Auto-reconcile failed:", e));
+  revalidatePath(`/admin/banking/${accountId}`);
+  revalidatePath("/admin/banking");
 }
 
 // Provision a Starling connection from the personal access token, then sync.
@@ -58,6 +70,36 @@ export async function connectStarling(): Promise<void> {
   }
 
   await syncConnection(connId).catch((e) => console.error("Starling initial sync failed:", e));
+  redirect("/admin/banking?connected=1");
+}
+
+// Provision a PayPal connection + account, then sync.
+export async function connectPaypal(): Promise<void> {
+  const profile = await getCurrentProfile();
+  if (!profile || !canWrite(profile.role)) redirect("/admin");
+  if (!paypalEnabled()) redirect("/admin/banking");
+  const supabase = await getSupabaseServer();
+
+  let connId: string;
+  const { data: existing } = await supabase.from("fm_bank_connections").select("id").eq("provider", "paypal").limit(1).maybeSingle();
+  if (existing) {
+    connId = existing.id;
+  } else {
+    const { data: conn } = await supabase
+      .from("fm_bank_connections")
+      .insert({ provider: "paypal", institution_name: "PayPal", status: "linked", linked_at: new Date().toISOString(), created_by: profile.id })
+      .select("id")
+      .single();
+    if (!conn) redirect("/admin/banking?error=paypal");
+    connId = conn.id;
+  }
+
+  await supabase.from("fm_bank_accounts").upsert(
+    { connection_id: connId, external_account_id: "paypal-main", name: "PayPal", currency: "GBP" },
+    { onConflict: "external_account_id", ignoreDuplicates: false },
+  );
+
+  await syncConnection(connId).catch((e) => console.error("PayPal initial sync failed:", e));
   redirect("/admin/banking?connected=1");
 }
 
@@ -218,6 +260,38 @@ export async function expenseFromTxn(formData: FormData): Promise<void> {
   revalidatePath(`/admin/banking/${txn.account_id}`);
 }
 
+export async function addRule(formData: FormData): Promise<void> {
+  const profile = await getCurrentProfile();
+  if (!profile || !canWrite(profile.role)) redirect("/admin");
+  const supabase = await getSupabaseServer();
+  const action = String(formData.get("action") || "expense");
+  await supabase.from("fm_bank_rules").insert({
+    match_text: String(formData.get("match_text") || "").trim(),
+    direction: String(formData.get("direction") || "any"),
+    action,
+    category: action === "expense" ? String(formData.get("category") || "").trim() || null : null,
+    priority: Number(formData.get("priority")) || 100,
+    created_by: profile.id,
+  });
+  revalidatePath("/admin/banking/rules");
+}
+
+export async function deleteRule(formData: FormData): Promise<void> {
+  const profile = await getCurrentProfile();
+  if (!profile || !canWrite(profile.role)) redirect("/admin");
+  const supabase = await getSupabaseServer();
+  await supabase.from("fm_bank_rules").delete().eq("id", String(formData.get("id")));
+  revalidatePath("/admin/banking/rules");
+}
+
+export async function toggleRule(formData: FormData): Promise<void> {
+  const profile = await getCurrentProfile();
+  if (!profile || !canWrite(profile.role)) redirect("/admin");
+  const supabase = await getSupabaseServer();
+  await supabase.from("fm_bank_rules").update({ enabled: formData.get("enabled") === "on" }).eq("id", String(formData.get("id")));
+  revalidatePath("/admin/banking/rules");
+}
+
 export async function dismissTxn(formData: FormData): Promise<void> {
   const profile = await getCurrentProfile();
   if (!profile || !canWrite(profile.role)) redirect("/admin");
@@ -232,11 +306,37 @@ export async function unreconcileTxn(formData: FormData): Promise<void> {
   if (!profile || !canWrite(profile.role)) redirect("/admin");
   const txnId = String(formData.get("txn_id"));
   const supabase = await getSupabaseServer();
+
+  // Read the current links so we can reverse them cleanly.
   const { data: txn } = await supabase
     .from("fm_bank_transactions")
-    .update({ reconciled: false, matched_invoice_id: null, matched_expense_id: null, matched_payment_id: null })
+    .select("account_id, matched_expense_id, matched_payment_id, matched_invoice_id")
     .eq("id", txnId)
-    .select("account_id")
     .single();
-  if (txn) revalidatePath(`/admin/banking/${txn.account_id}`);
+  if (!txn) return;
+
+  // Delete the expense this reconciliation created.
+  if (txn.matched_expense_id) {
+    await supabase.from("fm_expenses").delete().eq("id", txn.matched_expense_id);
+  }
+  // Delete the payment and roll the invoice back.
+  if (txn.matched_payment_id) {
+    await supabase.from("fm_payments").delete().eq("id", txn.matched_payment_id);
+    if (txn.matched_invoice_id) {
+      const { data: inv } = await supabase.from("fm_invoices").select("total, status").eq("id", txn.matched_invoice_id).single();
+      const { data: pays } = await supabase.from("fm_payments").select("amount").eq("invoice_id", txn.matched_invoice_id).eq("status", "succeeded");
+      const paid = (pays ?? []).reduce((s, p) => s + Number(p.amount), 0);
+      if (inv && inv.status !== "void") {
+        const status = paid <= 0 ? "sent" : paid < Number(inv.total) ? "part_paid" : "paid";
+        await supabase.from("fm_invoices").update({ amount_paid: paid, status }).eq("id", txn.matched_invoice_id);
+      }
+    }
+  }
+
+  await supabase
+    .from("fm_bank_transactions")
+    .update({ reconciled: false, auto_reconciled: false, matched_invoice_id: null, matched_expense_id: null, matched_payment_id: null })
+    .eq("id", txnId);
+
+  revalidatePath(`/admin/banking/${txn.account_id}`);
 }

@@ -5,7 +5,8 @@ import { PageHeader, Card, StatCard, Badge, EmptyState, LinkButton, money, fmtDa
 import { PendingButton } from "@/components/admin/PendingButton";
 import { plaidEnabled } from "@/lib/plaid";
 import { starlingEnabled } from "@/lib/starling";
-import { syncAccount, connectStarling } from "./actions";
+import { paypalEnabled } from "@/lib/paypal";
+import { syncAccount, connectStarling, connectPaypal } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -16,6 +17,7 @@ export default async function BankingPage({ searchParams }: { searchParams: Prom
 
   const starlingOn = starlingEnabled();
   const plaidOn = plaidEnabled();
+  const paypalOn = paypalEnabled();
 
   const supabase = await getSupabaseServer();
   const { data: accounts } = await supabase
@@ -45,8 +47,14 @@ export default async function BankingPage({ searchParams }: { searchParams: Prom
                 <PendingButton pendingLabel="Connecting…">Connect Starling</PendingButton>
               </form>
             )}
+            {paypalOn && (
+              <form action={connectPaypal}>
+                <PendingButton pendingLabel="Connecting…" variant="outline">Connect PayPal</PendingButton>
+              </form>
+            )}
             {plaidOn && <LinkButton href="/admin/banking/connect" variant="outline">Connect a bank</LinkButton>}
             <LinkButton href="/admin/banking/import" variant="outline">Import statement</LinkButton>
+            <LinkButton href="/admin/banking/rules" variant="outline">Rules</LinkButton>
           </div>
         }
       />

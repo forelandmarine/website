@@ -1,8 +1,8 @@
 import { notFound, redirect } from "next/navigation";
 import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
-import { PageHeader, Card, Badge, EmptyState, money, fmtDate } from "@/components/admin/ui";
+import { PageHeader, Card, Badge, EmptyState, LinkButton, money, fmtDate } from "@/components/admin/ui";
 import { PendingButton } from "@/components/admin/PendingButton";
-import { syncAccount, matchInvoice, expenseFromTxn, dismissTxn, unreconcileTxn } from "../actions";
+import { syncAccount, matchInvoice, expenseFromTxn, dismissTxn, unreconcileTxn, runAutoReconcile } from "../actions";
 
 export const dynamic = "force-dynamic";
 
@@ -44,9 +44,16 @@ export default async function BankAccountPage({
         title={account.name || "Account"}
         subtitle={account.iban || undefined}
         action={
-          <form action={syncAccount.bind(null, accountId)}>
-            <PendingButton pendingLabel="Syncing…">Sync now</PendingButton>
-          </form>
+          <div className="flex flex-wrap items-center gap-2">
+            <form action={runAutoReconcile}>
+              <input type="hidden" name="account_id" value={accountId} />
+              <PendingButton variant="outline" pendingLabel="Reconciling…">Auto-reconcile</PendingButton>
+            </form>
+            <LinkButton href="/admin/banking/rules" variant="outline">Rules</LinkButton>
+            <form action={syncAccount.bind(null, accountId)}>
+              <PendingButton pendingLabel="Syncing…">Sync now</PendingButton>
+            </form>
+          </div>
         }
       />
       <div className="space-y-8 p-6 lg:p-8">
@@ -130,7 +137,8 @@ export default async function BankAccountPage({
                       <td className="fm-td text-slate-500">{fmtDate(t.booking_date)}</td>
                       <td className="fm-td">{t.counterparty || t.description || "—"}</td>
                       <td className="fm-td">
-                        {t.matched_invoice_id ? <Badge tone="green">invoice</Badge> : t.matched_expense_id ? <Badge tone="navy">expense</Badge> : <Badge tone="slate">dismissed</Badge>}
+                        {t.matched_invoice_id ? <Badge tone="green">invoice</Badge> : t.matched_expense_id ? <Badge tone="navy">expense</Badge> : <Badge tone="slate">{t.direction === "in" ? "transfer" : "dismissed"}</Badge>}
+                        {t.auto_reconciled && <span className="ml-1.5 text-[0.65rem] uppercase tracking-wide text-slate-400">auto</span>}
                       </td>
                       <td className={`fm-td text-right ${Number(t.amount) >= 0 ? "text-emerald-600" : "text-slate-700"}`}>{money(t.amount, t.currency)}</td>
                       <td className="fm-td text-right">

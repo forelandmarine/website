@@ -1,12 +1,14 @@
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { syncTransactions, getAccounts } from "@/lib/plaid";
 import { getStarlingFeed, getStarlingBalance } from "@/lib/starling";
+import { getPaypalTransactions } from "@/lib/paypal";
+import { autoReconcileAccount } from "./reconcile";
 
 type SupabaseServer = Awaited<ReturnType<typeof getSupabaseServer>>;
 
-// Dispatches a sync by provider. Manual (imported) connections have nothing to
-// pull. Reconciliation state is preserved because upserts never write the
-// reconciled / matched_* columns.
+// Dispatches a sync by provider, then auto-reconciles the new transactions.
+// Manual (imported) connections have nothing to pull. Reconciliation state is
+// preserved because upserts never write the reconciled / matched_* columns.
 export async function syncConnection(connectionId: string): Promise<void> {
   const supabase = await getSupabaseServer();
   const { data: conn } = await supabase
@@ -18,7 +20,13 @@ export async function syncConnection(connectionId: string): Promise<void> {
 
   if (conn.provider === "plaid") await syncPlaid(supabase, conn.id, conn.access_token, conn.sync_cursor);
   else if (conn.provider === "starling") await syncStarling(supabase, conn.id);
-  // "manual": nothing to sync.
+  else if (conn.provider === "paypal") await syncPaypal(supabase, conn.id);
+  // "manual": nothing to pull, but still auto-reconcile any imported rows.
+
+  const { data: accounts } = await supabase.from("fm_bank_accounts").select("id").eq("connection_id", connectionId);
+  for (const a of accounts ?? []) {
+    await autoReconcileAccount(a.id).catch((e) => console.error("Auto-reconcile failed:", e));
+  }
 }
 
 async function syncPlaid(supabase: SupabaseServer, connectionId: string, accessToken: string | null, cursor: string | null) {
@@ -115,4 +123,34 @@ async function syncStarling(supabase: SupabaseServer, connectionId: string) {
       .update({ balance: bal?.amount ?? null, balance_at: bal ? nowISO : null, last_synced_at: nowISO })
       .eq("id", acct.id);
   }
+}
+
+async function syncPaypal(supabase: SupabaseServer, connectionId: string) {
+  const { data: account } = await supabase
+    .from("fm_bank_accounts")
+    .select("id, currency")
+    .eq("connection_id", connectionId)
+    .limit(1)
+    .single();
+  if (!account) return;
+
+  let txns;
+  try {
+    txns = await getPaypalTransactions();
+  } catch (e) {
+    console.error("PayPal fetch failed:", e);
+    return;
+  }
+  const rows = txns.map((t) => ({
+    account_id: account.id,
+    external_transaction_id: t.external_id,
+    booking_date: t.date,
+    amount: t.amount,
+    currency: t.currency || account.currency,
+    direction: t.amount >= 0 ? "in" : "out",
+    counterparty: t.counterparty,
+    description: t.description,
+  }));
+  if (rows.length) await supabase.from("fm_bank_transactions").upsert(rows, { onConflict: "account_id,external_transaction_id" });
+  await supabase.from("fm_bank_accounts").update({ last_synced_at: new Date().toISOString() }).eq("id", account.id);
 }
