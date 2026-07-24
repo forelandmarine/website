@@ -52,7 +52,8 @@ export async function aiCategoriseAccount(accountId: string, limit = 120): Promi
   for (let i = 0; i < list.length; i++) {
     const label = labels.get(i);
     const t = list[i];
-    if (!label || label === "skip") {
+    if (!label) {
+      // Missing only when a batch call failed; retried on the next run.
       result.skipped++;
       continue;
     }

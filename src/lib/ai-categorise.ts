@@ -29,11 +29,18 @@ function extractJson(text: string): unknown {
 
 async function callClaude(items: AiItem[]): Promise<AiResult[]> {
   const lines = items.map((it) => `${it.i}: ${it.text} (${it.amount})`).join("\n");
-  const prompt = `You are a UK bookkeeper categorising business bank/card transactions for a superyacht consultancy.
+  const prompt = `You are a UK bookkeeper categorising BUSINESS bank/card transactions for a superyacht consultancy. This is a company account, so treat every payment as a business expense and always assign a category.
 For each transaction assign exactly ONE label:
 - One of these expense categories: ${CATEGORIES.join(", ")}
-- "transfer" if it is money moving between the owner's own accounts, owner drawings/salary, a credit-card repayment, or a cash withdrawal (not a real expense)
-- "skip" if it is clearly personal or you cannot tell
+- "transfer" only if it is money between the owner's own accounts, drawings/salary, a credit-card repayment, or a cash withdrawal.
+
+Make your best guess from the merchant name, even for foreign or abbreviated names:
+- restaurant, bar, café, bakery, catering, food, pub, bistro → Subsistence
+- fuel/petrol (BP, Shell, Esso...), airline, rail, taxi/Uber, parking, ferry, car hire → Travel
+- hotel, resort, B&B → Accommodation
+- app, website, SaaS, hosting, AI/subscription → Software
+- chandlery/marine/hardware → Equipment
+If you genuinely cannot tell, use "Other". Never skip a transaction.
 
 Amounts are negative for money out, positive for money in. Reply with ONLY a JSON array of {"i": <number>, "category": "<label>"}, one per transaction, no prose.
 
@@ -58,7 +65,9 @@ ${lines}`;
   const data = await res.json();
   const text = data?.content?.[0]?.text ?? "[]";
   const parsed = extractJson(text) as { i: number; category: string }[];
-  const allowed = new Set([...CATEGORIES, "transfer", "skip"]);
+  // "skip" is intentionally not allowed: anything unrecognised falls back to
+  // "Other" so it still gets booked rather than left on the pile.
+  const allowed = new Set([...CATEGORIES, "transfer"]);
   return (Array.isArray(parsed) ? parsed : [])
     .filter((r) => typeof r?.i === "number" && typeof r?.category === "string")
     .map((r) => ({ i: r.i, category: allowed.has(r.category) ? r.category : "Other" }));
