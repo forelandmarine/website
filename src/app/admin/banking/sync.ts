@@ -1,35 +1,41 @@
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { syncTransactions, getAccounts } from "@/lib/plaid";
+import { getStarlingFeed, getStarlingBalance } from "@/lib/starling";
 
-// Pulls transactions + refreshes balances for one connection (Plaid Item).
-// Plaid amounts are positive for money OUT of the account and negative for money
-// IN, so we invert to our convention (+ = in, - = out). Only posted (non-pending)
-// transactions are stored. Reconciliation state is preserved across re-syncs
-// because the upsert never writes the reconciled / matched_* columns.
+type SupabaseServer = Awaited<ReturnType<typeof getSupabaseServer>>;
+
+// Dispatches a sync by provider. Manual (imported) connections have nothing to
+// pull. Reconciliation state is preserved because upserts never write the
+// reconciled / matched_* columns.
 export async function syncConnection(connectionId: string): Promise<void> {
   const supabase = await getSupabaseServer();
-
   const { data: conn } = await supabase
     .from("fm_bank_connections")
-    .select("id, access_token, sync_cursor")
+    .select("id, provider, access_token, sync_cursor")
     .eq("id", connectionId)
     .single();
-  if (!conn?.access_token) return;
+  if (!conn) return;
 
+  if (conn.provider === "plaid") await syncPlaid(supabase, conn.id, conn.access_token, conn.sync_cursor);
+  else if (conn.provider === "starling") await syncStarling(supabase, conn.id);
+  // "manual": nothing to sync.
+}
+
+async function syncPlaid(supabase: SupabaseServer, connectionId: string, accessToken: string | null, cursor: string | null) {
+  if (!accessToken) return;
   const { data: accounts } = await supabase
     .from("fm_bank_accounts")
     .select("id, external_account_id, currency")
     .eq("connection_id", connectionId);
   const byExternal = new Map((accounts ?? []).map((a) => [a.external_account_id, a]));
 
-  const { added, modified, removed, nextCursor } = await syncTransactions(conn.access_token, conn.sync_cursor);
-
+  const { added, modified, removed, nextCursor } = await syncTransactions(accessToken, cursor);
   const rows = [...added, ...modified]
     .filter((t) => !t.pending)
     .map((t) => {
       const acct = byExternal.get(t.account_id);
       if (!acct) return null;
-      const amount = -Number(t.amount); // invert Plaid sign
+      const amount = -Number(t.amount);
       return {
         account_id: acct.id,
         external_transaction_id: t.transaction_id,
@@ -44,33 +50,69 @@ export async function syncConnection(connectionId: string): Promise<void> {
     })
     .filter((r): r is NonNullable<typeof r> => r !== null);
 
-  if (rows.length) {
-    await supabase.from("fm_bank_transactions").upsert(rows, { onConflict: "account_id,external_transaction_id" });
-  }
+  if (rows.length) await supabase.from("fm_bank_transactions").upsert(rows, { onConflict: "account_id,external_transaction_id" });
 
-  // Remove deleted transactions that haven't been reconciled.
   const removedIds = removed.map((r) => r.transaction_id);
   if (removedIds.length) {
-    await supabase
-      .from("fm_bank_transactions")
-      .delete()
-      .in("external_transaction_id", removedIds)
-      .eq("reconciled", false);
+    await supabase.from("fm_bank_transactions").delete().in("external_transaction_id", removedIds).eq("reconciled", false);
   }
-
   await supabase.from("fm_bank_connections").update({ sync_cursor: nextCursor }).eq("id", connectionId);
 
-  // Refresh balances.
   try {
-    const { accounts: fresh } = await getAccounts(conn.access_token);
+    const { accounts: fresh } = await getAccounts(accessToken);
     const now = new Date().toISOString();
     for (const a of fresh) {
-      await supabase
-        .from("fm_bank_accounts")
-        .update({ balance: a.balances.current, balance_at: now, last_synced_at: now })
-        .eq("external_account_id", a.account_id);
+      await supabase.from("fm_bank_accounts").update({ balance: a.balances.current, balance_at: now, last_synced_at: now }).eq("external_account_id", a.account_id);
     }
   } catch (e) {
-    console.error("Balance refresh failed:", e);
+    console.error("Plaid balance refresh failed:", e);
+  }
+}
+
+async function syncStarling(supabase: SupabaseServer, connectionId: string) {
+  const { data: accounts } = await supabase
+    .from("fm_bank_accounts")
+    .select("id, external_account_id, external_category_id, currency")
+    .eq("connection_id", connectionId);
+  if (!accounts?.length) return;
+
+  const now = new Date();
+  const since = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
+  const minISO = since.toISOString();
+  const maxISO = now.toISOString();
+  const nowISO = now.toISOString();
+
+  for (const acct of accounts) {
+    if (!acct.external_category_id) continue;
+    let items;
+    try {
+      items = await getStarlingFeed(acct.external_account_id, acct.external_category_id, minISO, maxISO);
+    } catch (e) {
+      console.error("Starling feed failed:", e);
+      continue;
+    }
+    const rows = items
+      .filter((it) => it.status === "SETTLED")
+      .map((it) => {
+        const amount = (it.direction === "IN" ? 1 : -1) * (it.amount.minorUnits / 100);
+        return {
+          account_id: acct.id,
+          external_transaction_id: it.feedItemUid,
+          booking_date: it.transactionTime ? it.transactionTime.slice(0, 10) : null,
+          amount,
+          currency: it.amount.currency || acct.currency,
+          direction: amount >= 0 ? "in" : "out",
+          counterparty: it.counterPartyName || null,
+          description: it.reference || it.counterPartyName || null,
+          raw: it as unknown as Record<string, unknown>,
+        };
+      });
+    if (rows.length) await supabase.from("fm_bank_transactions").upsert(rows, { onConflict: "account_id,external_transaction_id" });
+
+    const bal = await getStarlingBalance(acct.external_account_id);
+    await supabase
+      .from("fm_bank_accounts")
+      .update({ balance: bal?.amount ?? null, balance_at: bal ? nowISO : null, last_synced_at: nowISO })
+      .eq("id", acct.id);
   }
 }

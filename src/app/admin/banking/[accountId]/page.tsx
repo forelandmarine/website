@@ -8,8 +8,15 @@ export const dynamic = "force-dynamic";
 
 const CATEGORIES = ["Travel", "Accommodation", "Subsistence", "Subcontractors", "Software", "Office", "Professional fees", "Insurance", "Marketing", "Equipment", "Bank charges", "Other"];
 
-export default async function BankAccountPage({ params }: { params: Promise<{ accountId: string }> }) {
+export default async function BankAccountPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ accountId: string }>;
+  searchParams: Promise<{ imported?: string }>;
+}) {
   const { accountId } = await params;
+  const { imported } = await searchParams;
   const profile = await getCurrentProfile();
   if (!profile || !["owner", "bookkeeper"].includes(profile.role)) redirect("/admin");
 
@@ -43,6 +50,11 @@ export default async function BankAccountPage({ params }: { params: Promise<{ ac
         }
       />
       <div className="space-y-8 p-6 lg:p-8">
+        {imported && (
+          <div className="rounded-md border border-emerald-300 bg-emerald-50 px-4 py-2.5 text-sm text-emerald-800">
+            Imported {imported} transaction{imported === "1" ? "" : "s"}. New ones are ready to reconcile below.
+          </div>
+        )}
         <div className="grid gap-4 sm:grid-cols-3">
           <Card className="p-5"><p className="text-xs uppercase tracking-wide text-slate-400">Balance</p><p className="mt-1 text-2xl font-semibold text-slate-900">{account.balance != null ? money(account.balance, account.currency) : "—"}</p></Card>
           <Card className="p-5"><p className="text-xs uppercase tracking-wide text-slate-400">To reconcile</p><p className="mt-1 text-2xl font-semibold text-slate-900">{unreconciled.length}</p></Card>

@@ -4,7 +4,8 @@ import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
 import { PageHeader, Card, StatCard, Badge, EmptyState, LinkButton, money, fmtDate, fmtDateTime } from "@/components/admin/ui";
 import { PendingButton } from "@/components/admin/PendingButton";
 import { plaidEnabled } from "@/lib/plaid";
-import { syncAccount } from "./actions";
+import { starlingEnabled } from "@/lib/starling";
+import { syncAccount, connectStarling } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -13,25 +14,8 @@ export default async function BankingPage({ searchParams }: { searchParams: Prom
   const profile = await getCurrentProfile();
   if (!profile || !["owner", "bookkeeper"].includes(profile.role)) redirect("/admin");
 
-  if (!plaidEnabled()) {
-    return (
-      <>
-        <PageHeader title="Banking" subtitle="Open Banking via Plaid" />
-        <div className="p-6 lg:p-8">
-          <Card className="max-w-2xl p-6">
-            <h2 className="text-lg font-semibold text-slate-900">Connect your bank</h2>
-            <p className="mt-2 text-sm text-slate-600">Bank feeds use Plaid. To switch it on:</p>
-            <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-sm text-slate-600">
-              <li>Create an account at <span className="font-medium">dashboard.plaid.com</span>.</li>
-              <li>Copy your <span className="font-medium">client_id</span> and a <span className="font-medium">Sandbox secret</span> (Team Settings → Keys).</li>
-              <li>Add <code className="rounded bg-slate-100 px-1">PLAID_CLIENT_ID</code>, <code className="rounded bg-slate-100 px-1">PLAID_SECRET</code> and <code className="rounded bg-slate-100 px-1">PLAID_ENV=sandbox</code> to the site environment.</li>
-              <li>Reload this page and connect your bank (sandbox login: user_good / pass_good).</li>
-            </ol>
-          </Card>
-        </div>
-      </>
-    );
-  }
+  const starlingOn = starlingEnabled();
+  const plaidOn = plaidEnabled();
 
   const supabase = await getSupabaseServer();
   const { data: accounts } = await supabase
@@ -54,7 +38,17 @@ export default async function BankingPage({ searchParams }: { searchParams: Prom
       <PageHeader
         title="Banking"
         subtitle="Balances and reconciliation"
-        action={<LinkButton href="/admin/banking/connect">Connect a bank</LinkButton>}
+        action={
+          <div className="flex flex-wrap items-center gap-2">
+            {starlingOn && (
+              <form action={connectStarling}>
+                <PendingButton pendingLabel="Connecting…">Connect Starling</PendingButton>
+              </form>
+            )}
+            {plaidOn && <LinkButton href="/admin/banking/connect" variant="outline">Connect a bank</LinkButton>}
+            <LinkButton href="/admin/banking/import" variant="outline">Import statement</LinkButton>
+          </div>
+        }
       />
       <div className="p-6 lg:p-8">
         {connected && (
@@ -64,7 +58,11 @@ export default async function BankingPage({ searchParams }: { searchParams: Prom
         )}
         {error && (
           <div className="mb-4 rounded-md border border-red-300 bg-red-50 px-4 py-2.5 text-sm text-red-700">
-            {error === "denied" ? "The bank connection was cancelled." : "Something went wrong finishing the connection. Try again."}
+            {error === "denied"
+              ? "The bank connection was cancelled."
+              : error === "starling"
+                ? "Could not reach Starling. Check STARLING_ACCESS_TOKEN and its scopes."
+                : "Something went wrong finishing the connection. Try again."}
           </div>
         )}
 
@@ -110,7 +108,14 @@ export default async function BankingPage({ searchParams }: { searchParams: Prom
             </div>
           </>
         ) : (
-          <EmptyState title="No bank connected yet" hint="Connect a bank to pull balances and transactions automatically." />
+          <EmptyState
+            title="No accounts yet"
+            hint={
+              starlingOn
+                ? "Connect Starling for an automatic feed, or import a CSV/OFX statement from any bank."
+                : "Import a CSV/OFX statement from your bank, or set STARLING_ACCESS_TOKEN for an automatic Starling feed."
+            }
+          />
         )}
       </div>
     </>
