@@ -3,105 +3,28 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
-import {
-  createRequisition,
-  getRequisition,
-  getAccountMeta,
-  getBalance,
-  getTransactions,
-  type GcTransaction,
-} from "@/lib/gocardless";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.forelandmarine.com";
+import { syncConnection } from "./sync";
 
 function canWrite(role?: string) {
   return role === "owner" || role === "bookkeeper";
 }
 
-// Kick off a bank connection: create a requisition and send the user to their
-// bank's consent screen. GoCardless redirects back to /admin/banking/callback.
-export async function startConnect(formData: FormData): Promise<void> {
-  const profile = await getCurrentProfile();
-  if (!profile || !canWrite(profile.role)) redirect("/admin");
-  const institutionId = String(formData.get("institution_id") || "");
-  const institutionName = String(formData.get("institution_name") || "");
-  if (!institutionId) redirect("/admin/banking/connect?error=1");
-
-  const supabase = await getSupabaseServer();
-  const { data: conn } = await supabase
-    .from("fm_bank_connections")
-    .insert({ institution_id: institutionId, institution_name: institutionName, created_by: profile.id })
-    .select("id")
-    .single();
-  if (!conn) redirect("/admin/banking/connect?error=1");
-
-  let link: string;
-  try {
-    const req = await createRequisition({
-      institutionId,
-      redirect: `${SITE_URL}/admin/banking/callback`,
-      reference: conn.id,
-    });
-    await supabase.from("fm_bank_connections").update({ requisition_id: req.id }).eq("id", conn.id);
-    link = req.link;
-  } catch {
-    await supabase.from("fm_bank_connections").update({ status: "error" }).eq("id", conn.id);
-    redirect("/admin/banking/connect?error=api");
-  }
-  redirect(link);
-}
-
-// Pull balances + transactions for one stored account.
+// Sync the Plaid Item that this account belongs to (pulls all its accounts'
+// transactions and refreshes balances).
 export async function syncAccount(accountIdOrForm: string | FormData): Promise<void> {
   const profile = await getCurrentProfile();
   if (!profile || !canWrite(profile.role)) redirect("/admin");
   const accountRowId =
     typeof accountIdOrForm === "string" ? accountIdOrForm : String(accountIdOrForm.get("account_id") || "");
   const supabase = await getSupabaseServer();
-  const { data: acct } = await supabase
-    .from("fm_bank_accounts")
-    .select("id, gc_account_id, currency")
-    .eq("id", accountRowId)
-    .single();
-  if (!acct) redirect("/admin/banking");
-
-  try {
-    const bal = await getBalance(acct.gc_account_id);
-    const { booked } = await getTransactions(acct.gc_account_id);
-
-    const rows = booked.map((t: GcTransaction) => {
-      const amount = Number(t.transactionAmount.amount);
-      const counterparty = amount >= 0 ? t.creditorName || t.debtorName : t.debtorName || t.creditorName;
-      return {
-        account_id: acct.id,
-        gc_transaction_id: t.transactionId || t.internalTransactionId || `${t.bookingDate}-${t.transactionAmount.amount}-${(t.remittanceInformationUnstructured || "").slice(0, 24)}`,
-        booking_date: t.bookingDate || null,
-        value_date: t.valueDate || null,
-        amount,
-        currency: t.transactionAmount.currency || acct.currency,
-        direction: amount >= 0 ? "in" : "out",
-        counterparty: counterparty || null,
-        description: t.remittanceInformationUnstructured || t.additionalInformation || null,
-        raw: t as unknown as Record<string, unknown>,
-      };
-    });
-
-    if (rows.length) {
-      // ignoreDuplicates preserves reconciliation state on re-sync.
-      await supabase.from("fm_bank_transactions").upsert(rows, { onConflict: "account_id,gc_transaction_id", ignoreDuplicates: true });
+  const { data: acct } = await supabase.from("fm_bank_accounts").select("connection_id").eq("id", accountRowId).single();
+  if (acct?.connection_id) {
+    try {
+      await syncConnection(acct.connection_id);
+    } catch (err) {
+      console.error("Bank sync failed:", err);
     }
-    await supabase
-      .from("fm_bank_accounts")
-      .update({
-        balance: bal?.amount ?? null,
-        balance_at: bal ? new Date().toISOString() : null,
-        last_synced_at: new Date().toISOString(),
-      })
-      .eq("id", acct.id);
-  } catch (err) {
-    console.error("Bank sync failed:", err);
   }
-
   revalidatePath("/admin/banking");
   revalidatePath(`/admin/banking/${accountRowId}`);
 }
@@ -134,7 +57,6 @@ export async function matchInvoice(formData: FormData): Promise<void> {
     .select("id")
     .single();
 
-  // Roll up the invoice.
   const { data: pays } = await supabase.from("fm_payments").select("amount").eq("invoice_id", inv.id).eq("status", "succeeded");
   const paid = (pays ?? []).reduce((s, p) => s + Number(p.amount), 0);
   const status = paid >= Number(inv.total) ? "paid" : paid > 0 ? "part_paid" : "sent";

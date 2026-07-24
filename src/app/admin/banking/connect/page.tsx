@@ -1,62 +1,40 @@
 import { redirect } from "next/navigation";
 import { getCurrentProfile } from "@/lib/supabase/server";
 import { PageHeader, Card } from "@/components/admin/ui";
-import { PendingButton } from "@/components/admin/PendingButton";
-import { gcEnabled, listInstitutions, type Institution } from "@/lib/gocardless";
-import { startConnect } from "../actions";
+import { PlaidConnect } from "@/components/admin/PlaidConnect";
+import { plaidEnabled, plaidEnv } from "@/lib/plaid";
 
 export const dynamic = "force-dynamic";
 
-export default async function ConnectBankPage({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
-  const { error } = await searchParams;
+export default async function ConnectBankPage() {
   const profile = await getCurrentProfile();
   if (!profile || !["owner", "bookkeeper"].includes(profile.role)) redirect("/admin");
-  if (!gcEnabled()) redirect("/admin/banking");
+  if (!plaidEnabled()) redirect("/admin/banking");
 
-  let institutions: Institution[] = [];
-  let loadError = false;
-  try {
-    institutions = await listInstitutions("gb");
-    institutions.sort((a, b) => a.name.localeCompare(b.name));
-  } catch {
-    loadError = true;
-  }
+  const sandbox = plaidEnv() !== "production";
 
   return (
     <>
-      <PageHeader title="Connect a bank" subtitle="Choose your bank to authorise a read-only feed" />
+      <PageHeader title="Connect a bank" subtitle="Authorise a read-only feed via Plaid" />
       <div className="p-6 lg:p-8">
-        {error && (
-          <div className="mb-4 rounded-md border border-red-300 bg-red-50 px-4 py-2.5 text-sm text-red-700">
-            {error === "api" ? "Could not reach GoCardless. Check the API keys and try again." : "Please choose a bank."}
-          </div>
-        )}
-        {loadError ? (
-          <Card className="max-w-xl p-6">
-            <p className="text-sm text-slate-600">
-              Could not load the bank list. Check that GC_SECRET_ID and GC_SECRET_KEY are set correctly.
-            </p>
-          </Card>
-        ) : (
-          <Card className="p-2">
-            <div className="max-h-[70vh] divide-y divide-slate-100 overflow-y-auto">
-              {institutions.map((inst) => (
-                <form key={inst.id} action={startConnect} className="flex items-center justify-between px-3 py-2.5">
-                  <input type="hidden" name="institution_id" value={inst.id} />
-                  <input type="hidden" name="institution_name" value={inst.name} />
-                  <span className="text-sm text-slate-700">{inst.name}</span>
-                  <PendingButton variant="outline" pendingLabel="Redirecting…" className="!px-3 !py-1.5 text-xs">
-                    Connect
-                  </PendingButton>
-                </form>
-              ))}
+        <Card className="max-w-xl p-6">
+          <p className="text-sm text-slate-600">
+            Click below to open Plaid and choose your bank. You approve a read-only connection at your bank,
+            and Plaid returns balances and transactions here. Foreland never sees your bank login.
+          </p>
+          {sandbox && (
+            <div className="mt-4 rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+              Sandbox mode. Pick any test bank and sign in with <span className="font-medium">user_good</span> /{" "}
+              <span className="font-medium">pass_good</span> to try the flow end to end.
             </div>
-          </Card>
-        )}
-        <p className="mt-4 text-xs text-slate-400">
-          You will be sent to your bank to approve a read-only connection. Consent lasts 90 days, after which
-          you reconnect here. Foreland never sees your bank login.
-        </p>
+          )}
+          <div className="mt-5">
+            <PlaidConnect />
+          </div>
+          <p className="mt-4 text-xs text-slate-400">
+            Consent is read-only. In production, bank consent lasts up to 90 days before a quick reconnect.
+          </p>
+        </Card>
       </div>
     </>
   );

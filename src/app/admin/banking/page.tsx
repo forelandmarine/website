@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { getCurrentProfile, getSupabaseServer } from "@/lib/supabase/server";
 import { PageHeader, Card, StatCard, Badge, EmptyState, LinkButton, money, fmtDate, fmtDateTime } from "@/components/admin/ui";
 import { PendingButton } from "@/components/admin/PendingButton";
-import { gcEnabled } from "@/lib/gocardless";
+import { plaidEnabled } from "@/lib/plaid";
 import { syncAccount } from "./actions";
 
 export const dynamic = "force-dynamic";
@@ -13,21 +13,19 @@ export default async function BankingPage({ searchParams }: { searchParams: Prom
   const profile = await getCurrentProfile();
   if (!profile || !["owner", "bookkeeper"].includes(profile.role)) redirect("/admin");
 
-  if (!gcEnabled()) {
+  if (!plaidEnabled()) {
     return (
       <>
-        <PageHeader title="Banking" subtitle="Open Banking via GoCardless" />
+        <PageHeader title="Banking" subtitle="Open Banking via Plaid" />
         <div className="p-6 lg:p-8">
           <Card className="max-w-2xl p-6">
             <h2 className="text-lg font-semibold text-slate-900">Connect your bank</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Bank feeds use GoCardless Bank Account Data (free). To switch it on:
-            </p>
+            <p className="mt-2 text-sm text-slate-600">Bank feeds use Plaid. To switch it on:</p>
             <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-sm text-slate-600">
-              <li>Create a free account at <span className="font-medium">bankaccountdata.gocardless.com</span>.</li>
-              <li>In User Secrets, generate a secret_id and secret_key.</li>
-              <li>Add <code className="rounded bg-slate-100 px-1">GC_SECRET_ID</code> and <code className="rounded bg-slate-100 px-1">GC_SECRET_KEY</code> to the site environment.</li>
-              <li>Reload this page and connect your bank.</li>
+              <li>Create an account at <span className="font-medium">dashboard.plaid.com</span>.</li>
+              <li>Copy your <span className="font-medium">client_id</span> and a <span className="font-medium">Sandbox secret</span> (Team Settings → Keys).</li>
+              <li>Add <code className="rounded bg-slate-100 px-1">PLAID_CLIENT_ID</code>, <code className="rounded bg-slate-100 px-1">PLAID_SECRET</code> and <code className="rounded bg-slate-100 px-1">PLAID_ENV=sandbox</code> to the site environment.</li>
+              <li>Reload this page and connect your bank (sandbox login: user_good / pass_good).</li>
             </ol>
           </Card>
         </div>
