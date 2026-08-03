@@ -30,6 +30,16 @@ const links = [
     ),
   },
   {
+    title: "SeaTime Tracker",
+    description: "Get it on Google Play",
+    href: "https://play.google.com/store/apps/details?id=com.forelandmarine.seatimetracker&utm_source=instagram&utm_medium=social&utm_campaign=launch",
+    icon: (
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3.6 1.84a1.5 1.5 0 0 0-.6 1.2v17.92a1.5 1.5 0 0 0 .6 1.2l.1.06L13.7 12.07v-.14L3.7 1.78l-.1.06zM17.03 15.4l-3.33-3.33v-.14l3.34-3.33.08.04 3.95 2.24c1.13.64 1.13 1.69 0 2.33l-3.95 2.24-.09.05zM16.94 15.35 13.6 12l-9.9 9.9a1.17 1.17 0 0 0 1.5.05l11.74-6.6M16.94 8.65 5.2 2.05a1.17 1.17 0 0 0-1.5.05L13.6 12l3.34-3.35z" />
+      </svg>
+    ),
+  },
+  {
     title: "Superyacht Running Cost Calculator",
     description: "How much does your yacht cost?",
     href: "https://www.forelandmarine.com/tools/running-cost-calculator",
