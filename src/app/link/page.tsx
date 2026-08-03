@@ -40,16 +40,13 @@ const links = [
     ),
   },
   {
-    title: "Superyacht Running Cost Calculator",
-    description: "How much does your yacht cost?",
-    href: "https://www.forelandmarine.com/tools/running-cost-calculator",
+    title: "The First Owner's Reference",
+    description: "A guide for first-time superyacht buyers",
+    href: "https://www.firstownersreference.com",
     icon: (
       <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="12" y1="1" x2="12" y2="23" />
-        <polyline points="17 5 12 1 7 5" />
-        <polyline points="7 19 12 23 17 19" />
-        <rect x="4" y="7" width="16" height="10" rx="1" />
-        <line x1="9" y1="12" x2="15" y2="12" />
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
       </svg>
     ),
   },
