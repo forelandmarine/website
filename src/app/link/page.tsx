@@ -20,7 +20,7 @@ const links = [
     ),
   },
   {
-    title: "AIS SeaTime Tracker",
+    title: "SeaTime Tracker",
     description: "Download on the App Store",
     href: "https://apps.apple.com/gb/app/ais-seatime-tracker/id6758010893",
     icon: (
