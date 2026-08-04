@@ -22,12 +22,11 @@ export function HorizonLine({ className = "" }: { className?: string }) {
   return <div aria-hidden="true" className={`w-full h-px bg-white/10 ${className}`} />;
 }
 
-export function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-      {children}
-    </span>
-  );
+// Section eyebrow labels intentionally disabled site-wide: the uppercase,
+// letter-spaced kicker above every heading read as a generated template.
+// Headings now stand on their own. Kept as a no-op so call sites are unaffected.
+export function SectionLabel({ children: _children }: { children: React.ReactNode }) {
+  return null;
 }
 
 export function ButtonPrimary({
@@ -60,14 +59,6 @@ export function ServiceCard({ title, description, href, ...rest }: { title: stri
           {title}
         </h3>
         <p className="text-sm text-muted leading-relaxed flex-1">{description}</p>
-        {href && (
-          <div className="mt-4 flex items-center gap-1.5 text-xs text-accent font-medium">
-            Learn more
-            <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-        )}
       </div>
     </div>
   );

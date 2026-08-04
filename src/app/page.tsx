@@ -87,7 +87,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14" data-animate="fade-up">
             <SectionLabel>Our Services</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl font-light text-white">Independent superyacht refit, new build<br />and yacht management consultancy.</h2>
+            <h2 className="text-3xl sm:text-4xl font-light text-white">Independent superyacht refit, new build and yacht management consultancy.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
             <ServiceCard
@@ -98,8 +98,8 @@ export default function HomePage() {
             />
             <ServiceCard
               data-animate="fade-up"
-              title="Race Winning Technical Consultancy"
-              description="Our industry leading Consultants provide top-tier technical guidance for your sailing yacht. We work with you to ensure optimal performance and reliability on the race course, helping you achieve winning results, every time."
+              title="Performance & Technical Consultancy"
+              description="Independent technical guidance for performance sailing yachts, from rig and sail systems to naval architecture and race preparation. Engineering support focused on reliability and speed on the water."
               href="/technical-consultancy"
             />
             <ServiceCard
@@ -193,7 +193,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4" data-animate="fade-up">
             <div>
               <SectionLabel>Insights</SectionLabel>
-              <h2 className="text-3xl sm:text-4xl font-light text-white">Industry knowledge,<br />openly shared.</h2>
+              <h2 className="text-3xl sm:text-4xl font-light text-white">Industry knowledge, openly shared.</h2>
             </div>
             <Link href="/insights" className="text-sm text-accent hover:text-white transition-colors self-start sm:self-end">
               All articles &rarr;
