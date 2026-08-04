@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { SectionLabel, ButtonPrimary } from "@/components/ui";
+import { ButtonPrimary } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Invoice requested | Foreland Marine Technical Support",
@@ -11,7 +11,6 @@ export default function InvoiceRequestedPage() {
   return (
     <section className="bg-bg0 py-20 sm:py-28 lg:py-36">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-        <SectionLabel>Invoice requested</SectionLabel>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6 leading-tight">
           We&rsquo;ll send the invoice shortly.
         </h1>

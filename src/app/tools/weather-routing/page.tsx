@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+import { Glow, HorizonLine, ButtonPrimary } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 const services = [
@@ -172,7 +172,6 @@ export default function WeatherRoutingPage() {
         <Glow className="top-20 right-0 opacity-15" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14" data-animate="fade-up">
-            <SectionLabel>Why Weather Routing</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Better decisions, faster passages, safer voyages
             </h2>
@@ -208,7 +207,6 @@ export default function WeatherRoutingPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14" data-animate="fade-up">
-            <SectionLabel>Services</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Tailored to the programme
             </h2>
@@ -244,7 +242,6 @@ export default function WeatherRoutingPage() {
         <Glow className="-bottom-40 -left-40 opacity-15" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14" data-animate="fade-up">
-            <SectionLabel>Methodology</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               The four pillars of accurate routing
             </h2>
@@ -276,7 +273,6 @@ export default function WeatherRoutingPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div data-animate="slide-right">
-              <SectionLabel>Who We Work With</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
                 From grand prix racing to global voyages
               </h2>
@@ -324,7 +320,6 @@ export default function WeatherRoutingPage() {
               </div>
             </div>
             <div className="lg:col-span-2" data-animate="fade-up">
-              <SectionLabel>Meet Steve Carver</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
                 Offshore sailor and trained meteorologist
               </h2>
@@ -351,7 +346,6 @@ export default function WeatherRoutingPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12" data-animate="fade-up">
-            <SectionLabel>FAQ</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Frequently asked questions
             </h2>
@@ -373,7 +367,6 @@ export default function WeatherRoutingPage() {
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg1 overflow-hidden">
         <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20" size={600} />
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
-          <SectionLabel>Get in Touch</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">
             Plan your next voyage
           </h2>

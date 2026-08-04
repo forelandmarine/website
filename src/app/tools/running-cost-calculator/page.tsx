@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+import { Glow, HorizonLine, ButtonPrimary } from "@/components/ui";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -510,7 +510,6 @@ export default function RunningCostCalculatorPage() {
           }}
         >
           <div className="text-center max-w-3xl mx-auto">
-            <SectionLabel>Running Cost Calculator</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6 leading-tight">
               What does it actually cost<br />to run a superyacht?
             </h1>
@@ -530,7 +529,6 @@ export default function RunningCostCalculatorPage() {
             {/* INPUTS */}
             <div className="bg-bg2/60 border border-white/[0.08] rounded-lg p-6 sm:p-8 space-y-8">
               <div>
-                <SectionLabel>Your Yacht</SectionLabel>
                 <h2 className="text-2xl sm:text-3xl font-light text-white">
                   Configure the basics.
                 </h2>
@@ -731,7 +729,6 @@ export default function RunningCostCalculatorPage() {
       {/* EDITORIAL SECTION */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <SectionLabel>Understanding the Numbers</SectionLabel>
           <h2 className="text-2xl sm:text-3xl font-light text-white mb-8">
             What actually drives the cost of running a superyacht?
           </h2>
@@ -797,7 +794,6 @@ export default function RunningCostCalculatorPage() {
       {/* FAQ SECTION - targets People Also Ask */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <SectionLabel>Frequently Asked Questions</SectionLabel>
           <h2 className="text-2xl sm:text-3xl font-light text-white mb-10">
             Common questions about superyacht running costs
           </h2>
@@ -822,7 +818,6 @@ export default function RunningCostCalculatorPage() {
       {/* SOURCES */}
       <section className="py-16 sm:py-20 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <SectionLabel>Sources</SectionLabel>
           <h2 className="text-2xl sm:text-3xl font-light text-white mb-6">
             Where do these numbers come from?
           </h2>

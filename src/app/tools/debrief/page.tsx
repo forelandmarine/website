@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+import { Glow, HorizonLine, ButtonPrimary } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 const debriefMetaDescription =
@@ -82,7 +82,6 @@ export default function DebriefPage() {
       >
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-5">
-            <SectionLabel>Tools</SectionLabel>
             <span className="text-[10px] font-semibold uppercase tracking-widest text-bg0 bg-accent/80 px-2 py-0.5 rounded">Alpha</span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
@@ -122,7 +121,6 @@ export default function DebriefPage() {
         <Glow className="top-20 right-0 opacity-15" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14">
-            <SectionLabel>The Concept</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Every moment of the race, connected
             </h2>
@@ -142,7 +140,6 @@ export default function DebriefPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14" data-animate="fade-up">
-            <SectionLabel>Data Sources</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Every sensor, every signal, one timeline
             </h2>
@@ -176,7 +173,6 @@ export default function DebriefPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div data-animate="slide-right">
-              <SectionLabel>AI Analysis</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
                 LLM-powered race review
               </h2>

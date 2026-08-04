@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui";
+import { HorizonLine, ButtonPrimary, Glow } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 const team = [
@@ -154,7 +154,6 @@ export default function AboutPage() {
         decorations={<Glow className="-top-40 -right-40 opacity-30" />}
       >
         <div className="max-w-3xl">
-          <SectionLabel>About</SectionLabel>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
             Built on blue water<br />experience
           </h1>
@@ -180,7 +179,6 @@ export default function AboutPage() {
         <Glow className="top-20 right-0 opacity-15" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14" data-animate="fade-up">
-            <SectionLabel>Meet the Team</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Leading by example
             </h2>
@@ -241,7 +239,6 @@ export default function AboutPage() {
         <Glow className="-bottom-60 -left-60 opacity-20" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14" data-animate="fade-up">
-            <SectionLabel>Expertise</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Specialist knowledge across the yacht lifecycle
             </h2>
@@ -278,7 +275,6 @@ export default function AboutPage() {
         <Glow className="top-20 right-0 opacity-15" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14" data-animate="fade-up">
-            <SectionLabel>Reference List</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Selected experience
             </h2>
@@ -357,7 +353,6 @@ export default function AboutPage() {
         <Glow className="-bottom-40 -left-40 opacity-20" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14" data-animate="fade-up">
-            <SectionLabel>Selected Projects</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Anonymised case studies
             </h2>
@@ -410,7 +405,6 @@ export default function AboutPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14" data-animate="fade-up">
-            <SectionLabel>Accreditations</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">
               Recognised industry credentials
             </h2>
@@ -497,7 +491,6 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
-          <SectionLabel>Get in Touch</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">
             Start a conversation
           </h2>

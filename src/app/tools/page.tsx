@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { SectionLabel } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 export default function ToolsPage() {
@@ -28,7 +27,6 @@ export default function ToolsPage() {
         gradientClassName="bg-gradient-to-b from-bg0/45 via-bg0/25 to-bg0"
       >
 <div className="text-center max-w-3xl mx-auto mb-16">
-            <SectionLabel>Digital Products</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
               Tools built for the marine industry.
             </h1>

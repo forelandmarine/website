@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HorizonLine, SectionLabel, ButtonPrimary, Glow } from "@/components/ui";
+import { HorizonLine, ButtonPrimary, Glow } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 const disciplines = [
@@ -174,7 +174,6 @@ export default function TechnicalConsultancyPage() {
         }
       >
         <div className="max-w-3xl">
-          <SectionLabel>Technical Consultancy</SectionLabel>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
             Engineering excellence,<br />on every ocean.
           </h1>
@@ -199,7 +198,6 @@ export default function TechnicalConsultancyPage() {
 
               {/* Content */}
               <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center" data-animate={d.imageRight ? "slide-right" : "slide-left"}>
-                <SectionLabel>{d.label}</SectionLabel>
                 <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">{d.heading}</h2>
                 <p className="text-muted leading-relaxed mb-8">{d.intro}</p>
                 <div className="space-y-4">
@@ -221,7 +219,6 @@ export default function TechnicalConsultancyPage() {
       {/* FAQ - hidden visually, kept for JSON-LD SEO */}
       <section className="sr-only">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <SectionLabel>FAQ</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <details className="group border border-white/10 bg-bg1">
@@ -277,7 +274,6 @@ export default function TechnicalConsultancyPage() {
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionLabel>Work With Us</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">Start a conversation.</h2>
           <p className="text-muted leading-relaxed text-base mb-8 max-w-xl mx-auto">
             Whether you need a single specialist or a full project team, we&apos;ll put the right expertise alongside you.

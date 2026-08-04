@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
+import { HorizonLine, ButtonPrimary, ServiceCard } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 const process = [
@@ -133,7 +133,6 @@ export default function NewBuildPage() {
       >
 <div className="flex items-start justify-between gap-8">
             <div className="max-w-3xl">
-              <SectionLabel>New Build</SectionLabel>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
                 Your owner&apos;s representative,<br />every step of the way
               </h1>
@@ -160,7 +159,6 @@ export default function NewBuildPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl" data-animate="fade-up">
-            <SectionLabel>Our Role</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Independent representation at every stage
             </h2>
@@ -195,7 +193,6 @@ export default function NewBuildPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div data-animate="slide-right">
-              <SectionLabel>The Team</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">
                 Depth of experience across every discipline
               </h2>
@@ -259,7 +256,6 @@ export default function NewBuildPage() {
       {/* PROCESS */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionLabel>How It Works</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-6">The stages of a new build</h2>
           <p className="text-muted leading-relaxed mb-14">
             Each project follows its own course, but the underlying framework remains consistent. We apply structured oversight at every phase, allowing the owner to focus on the decisions that shape the vessel.
@@ -292,7 +288,6 @@ export default function NewBuildPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12" data-animate="fade-up">
-            <SectionLabel>What We Cover</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">Scope of our involvement</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8" data-animate-stagger>
@@ -313,7 +308,6 @@ export default function NewBuildPage() {
       {/* FAQ - hidden visually, kept for JSON-LD SEO */}
       <section className="sr-only">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <SectionLabel>FAQ</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <details className="group border border-white/10 bg-bg1">
@@ -408,7 +402,6 @@ export default function NewBuildPage() {
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionLabel>Start Your Project</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">Engage at any stage</h2>
           <p className="text-muted leading-relaxed text-base mb-8 max-w-xl mx-auto">
             Whether the project is at concept stage or construction is already underway, our team can integrate at any point and contribute from the outset.

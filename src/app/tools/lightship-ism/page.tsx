@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { DotGrid, Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+import { DotGrid, Glow, HorizonLine, ButtonPrimary } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 function ScreenFrame({ src, alt, width = 1400, height = 900 }: { src: string; alt: string; width?: number; height?: number }) {
@@ -31,7 +31,6 @@ function FeatureSection({
     <section className={`py-20 ${bg} overflow-hidden`}>
       <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${reverse ? "lg:[direction:rtl]" : ""}`}>
         <div className={reverse ? "lg:[direction:ltr]" : ""} data-animate={reverse ? "slide-left" : "slide-right"}>
-          <SectionLabel>{label}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">{title}</h2>
           <p className="text-muted leading-relaxed">{description}</p>
         </div>
@@ -60,7 +59,6 @@ export default function LightshipISMPage() {
         }
       >
         <div className="max-w-3xl">
-          <SectionLabel>Fleet Management</SectionLabel>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
             Yacht Administration, but a bit clever.
           </h1>
@@ -176,7 +174,6 @@ export default function LightshipISMPage() {
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg1 overflow-hidden">
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12" data-animate="fade-up">
-            <SectionLabel>Desktop &amp; Mobile</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Works on every device</h2>
             <p className="text-muted text-lg max-w-xl mx-auto">
               Full access on desktop, tablet, or phone. Crew can file reports dockside or mid-ocean, wherever they are, the platform is with them.
@@ -221,7 +218,6 @@ export default function LightshipISMPage() {
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg1 overflow-hidden">
         <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="rgba(30,155,255,0.12)" size={600} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionLabel>Get Started</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Fancy a demo?</h2>
           <p className="text-muted text-lg mb-8 max-w-xl mx-auto">
             Send our team an email for a no-obligation walkthrough.

@@ -3,7 +3,6 @@
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { SectionLabel } from "@/components/ui";
 import { type Currency } from "@/lib/technical-support";
 
 const CURRENCY_SYMBOL: Record<Currency, string> = {
@@ -72,7 +71,6 @@ function PayInner() {
     <section className="bg-bg0 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10">
-          <SectionLabel>Make a payment</SectionLabel>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-4 leading-tight">
             Pay an invoice.
           </h1>

@@ -23,7 +23,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
+import { HorizonLine, ButtonPrimary, ServiceCard } from "@/components/ui";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import HomeHero from "@/components/HomeHero";
 import HomeContactForm from "@/components/HomeContactForm";
@@ -86,7 +86,6 @@ export default function HomePage() {
       <section id="services" className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14" data-animate="fade-up">
-            <SectionLabel>Our Services</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">Independent superyacht refit, new build and yacht management consultancy.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
@@ -124,7 +123,6 @@ export default function HomePage() {
             </div>
             <div className="px-8 py-20 lg:px-0 lg:py-24" data-animate="slide-left">
               <div className="max-w-lg">
-                <SectionLabel>About Us</SectionLabel>
                 <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">
                   Your guiding light through the storm.
                 </h2>
@@ -164,7 +162,6 @@ export default function HomePage() {
         />
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div data-animate="fade-up">
-            <SectionLabel>FAQ</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">
               Common questions
             </h2>
@@ -192,7 +189,6 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4" data-animate="fade-up">
             <div>
-              <SectionLabel>Insights</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white">Industry knowledge, openly shared.</h2>
             </div>
             <Link href="/insights" className="text-sm text-accent hover:text-white transition-colors self-start sm:self-end">
@@ -227,7 +223,6 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10" data-animate="fade-up">
-              <SectionLabel>Newsletter</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">The Foreland Quarter</h2>
               <p className="text-muted leading-relaxed">
                 A short letter from London, four times a year. The work of the quarter, what we are seeing in the industry, and what comes next. <Link href="/newsletters" className="text-accent hover:text-white transition-colors">Browse past issues</Link>.
@@ -251,7 +246,6 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12" data-animate="fade-up">
-              <SectionLabel>Reach Out Today</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Got a project coming up?</h2>
               <p className="text-muted leading-relaxed">
                 A large project, maintenance period or big race coming up? We&apos;d love to hear from you.

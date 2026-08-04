@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Glow, HorizonLine, SectionLabel } from "@/components/ui";
+import { Glow, HorizonLine } from "@/components/ui";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 export const metadata: Metadata = {
@@ -90,7 +90,6 @@ export default function NewslettersPage() {
         <Glow className="-top-40 left-1/2 -translate-x-1/2" color="rgba(30,155,255,0.15)" size={700} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <SectionLabel>Newsletter</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
               The Foreland Quarter
             </h1>
@@ -108,7 +107,6 @@ export default function NewslettersPage() {
       <section className="py-16 sm:py-20 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <SectionLabel>Subscribe</SectionLabel>
             <h2 className="text-2xl sm:text-3xl font-light text-white mb-3">Get the next issue by email</h2>
             <p className="text-muted leading-relaxed">
               One quarterly letter direct from the Directors. Nothing else.
@@ -126,7 +124,6 @@ export default function NewslettersPage() {
       <section className="py-16 sm:py-20 bg-bg1">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <SectionLabel>Archive</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">Previous issues</h2>
           </div>
           <div className="space-y-4">

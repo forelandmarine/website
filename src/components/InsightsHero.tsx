@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { Glow, HorizonLine, SectionLabel } from "@/components/ui";
+import { Glow, HorizonLine } from "@/components/ui";
 
 export default function InsightsHero() {
   const [scrollY, setScrollY] = useState(0);
@@ -42,7 +42,6 @@ export default function InsightsHero() {
         style={{ transform: `translateY(${scrollY * -0.15}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
       >
         <div className="max-w-3xl">
-          <SectionLabel>Insights</SectionLabel>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
             Industry knowledge,<br />openly shared
           </h1>

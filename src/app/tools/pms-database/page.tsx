@@ -1,4 +1,4 @@
-import { DotGrid, Glow, HorizonLine, SectionLabel } from "@/components/ui";
+import { DotGrid, Glow, HorizonLine } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 const platforms = [
@@ -136,7 +136,6 @@ export default function PMSDatabasePage() {
         }
       >
         <div className="max-w-3xl">
-          <SectionLabel>Tools</SectionLabel>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-6 leading-[1.05]">
             Planned Maintenance Systems, set up right.
           </h1>
@@ -150,7 +149,6 @@ export default function PMSDatabasePage() {
       <section className="py-20 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <SectionLabel>What We Do</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Platform-agnostic PMS expertise
             </h2>
@@ -187,7 +185,6 @@ export default function PMSDatabasePage() {
       <section className="py-20 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
-            <SectionLabel>Platforms</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               We work with the leading PMS platforms
             </h2>
@@ -230,7 +227,6 @@ export default function PMSDatabasePage() {
       <section className="py-20 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14">
-            <SectionLabel>Our Process</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               From consultation to handover
             </h2>
@@ -264,7 +260,6 @@ export default function PMSDatabasePage() {
       <section className="py-20 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
-            <SectionLabel>Why It Matters</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
               Proper PMS setup pays for itself
             </h2>
@@ -289,7 +284,6 @@ export default function PMSDatabasePage() {
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg1 overflow-hidden">
         <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="rgba(30,155,255,0.12)" size={600} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionLabel>Get Started</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">
             Ready to get your maintenance systems in order?
           </h2>

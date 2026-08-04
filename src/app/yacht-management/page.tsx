@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
+import { HorizonLine, ButtonPrimary, ServiceCard } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 const servicesTop = [
@@ -100,7 +100,6 @@ export default function YachtManagementPage() {
         imageClassName="object-cover opacity-60 saturate-[1.15] scale-110"
       >
 <div className="max-w-3xl">
-            <SectionLabel>Yacht Management</SectionLabel>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
               On the owner&apos;s side,<br />by the captain&apos;s side
             </h1>
@@ -114,7 +113,6 @@ export default function YachtManagementPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12" data-animate="fade-up">
-            <SectionLabel>What We Offer</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">Comprehensive management services</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8" data-animate-stagger>
@@ -136,7 +134,6 @@ export default function YachtManagementPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12" data-animate="fade-up">
-            <SectionLabel>Why Foreland</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">What sets us apart</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-stagger>
@@ -219,7 +216,6 @@ export default function YachtManagementPage() {
             </div>
           </div>
           <div className="px-8 py-16 lg:px-14 lg:py-20 flex flex-col justify-center" data-animate="slide-left">
-            <SectionLabel>Lightship ISM</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">Fleet compliance at a glance</h2>
             <p className="text-muted leading-relaxed mb-5">
               Lightship is our proprietary ISM and fleet reporting platform, built from the ground up by people who manage yachts. It gives owners and managers real-time visibility of compliance status across the fleet, consolidating audit trails, non-conformities, corrective actions, incident logs, and certification schedules in one place.
@@ -237,7 +233,6 @@ export default function YachtManagementPage() {
       {/* APPROACH */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
-          <SectionLabel>Our Approach</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">Independent advice, no conflicts</h2>
           <p className="text-muted leading-relaxed mb-5">
             Unlike many management companies, Foreland does not sell yachts, broker charter, or earn commissions from suppliers. That independence is fundamental to how we operate. Every recommendation we make is in the owner&apos;s interest.
@@ -258,7 +253,6 @@ export default function YachtManagementPage() {
           <div className="absolute inset-0 bg-bg0/80" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
-          <SectionLabel>Client Testimonial</SectionLabel>
           <blockquote className="mt-6">
             <svg aria-hidden="true" className="mx-auto mb-6 text-accent/50 w-10 h-10" fill="currentColor" viewBox="0 0 32 32">
               <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H7c0-1.7 1.3-3 3-3V8zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-7c0-1.7 1.3-3 3-3V8z" />
@@ -295,7 +289,6 @@ export default function YachtManagementPage() {
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionLabel>Work With Us</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">Start a conversation</h2>
           <p className="text-muted leading-relaxed text-base mb-8 max-w-xl mx-auto">
             Whether you need a single specialist or a full management team, we&apos;ll put the right expertise alongside you.

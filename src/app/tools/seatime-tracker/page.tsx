@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Glow, HorizonLine, SectionLabel, ButtonPrimary, ButtonOutline } from "@/components/ui";
+import { Glow, HorizonLine, ButtonPrimary, ButtonOutline } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 
 function PhoneMockup({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
@@ -37,7 +37,6 @@ export default function SeaTimeTrackerPage() {
       >
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
-              <SectionLabel>Automatic AIS Tracking</SectionLabel>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
                 Your sea time,<br />on autopilot.
               </h1>
@@ -87,7 +86,6 @@ export default function SeaTimeTrackerPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3" data-animate="slide-right">
-              <SectionLabel>Always On</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-4 leading-tight">
                 Detected. Before you dock.
               </h2>
@@ -128,7 +126,6 @@ export default function SeaTimeTrackerPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12" data-animate="fade-up">
-            <SectionLabel>Why SeaTime Tracker</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">Manual entry is the old way.</h2>
           </div>
           <div className="max-w-3xl space-y-3" data-animate-stagger>
@@ -178,7 +175,6 @@ export default function SeaTimeTrackerPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex items-center px-8 py-20 lg:px-16 lg:py-24" data-animate="slide-right">
             <div className="max-w-lg">
-              <SectionLabel>Digital Logbook</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
                 Every voyage, perfectly logged.
               </h2>
@@ -219,7 +215,6 @@ export default function SeaTimeTrackerPage() {
           </div>
           <div className="flex items-center px-8 py-20 lg:px-16 lg:py-24 lg:order-2" data-animate="slide-left">
             <div className="max-w-lg">
-              <SectionLabel>MCA Compliant</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
                 Report ready. Always.
               </h2>
@@ -257,7 +252,6 @@ export default function SeaTimeTrackerPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3" data-animate="slide-right">
-              <SectionLabel>One-tap Review</SectionLabel>
               <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">
                 Confirm. Or reject.
               </h2>
@@ -293,7 +287,6 @@ export default function SeaTimeTrackerPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-animate="slide-right">
-              <SectionLabel>Simple Pricing</SectionLabel>
               <h2 className="text-4xl sm:text-5xl font-light text-white mb-2 leading-tight">
                 £4.99<span className="text-2xl font-medium text-muted">/month</span>
               </h2>

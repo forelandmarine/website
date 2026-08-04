@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { HorizonLine, SectionLabel, Glow, ButtonPrimary } from "@/components/ui";
+import { HorizonLine, Glow, ButtonPrimary } from "@/components/ui";
 
 type View = "code-entry" | "investor-portal";
 
@@ -152,7 +152,6 @@ export default function ForelandGroupPage() {
           {/* CODE ENTRY */}
           {view === "code-entry" && (
             <div className="max-w-md mx-auto text-center">
-              <SectionLabel>Access Portal</SectionLabel>
               <h2 className="text-2xl sm:text-3xl font-light text-white mb-4">Enter your access code</h2>
               <p className="text-muted mb-8">Please enter the 4-character code provided to you.</p>
 
@@ -212,7 +211,6 @@ export default function ForelandGroupPage() {
           {view === "investor-portal" && (
             <div style={{ animation: "fade-in 0.6s ease-out both" }}>
               <div className="text-center mb-12">
-                <SectionLabel>Document Portal</SectionLabel>
                 <h2 className="text-2xl sm:text-3xl font-light text-white mb-4">
                   {investorName === "Guest" ? "Welcome Aboard" : `Welcome, ${investorName}`}
                 </h2>

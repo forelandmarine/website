@@ -3,7 +3,6 @@
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { SectionLabel } from "@/components/ui";
 import {
   TIER_NAMES,
   TIER_PRICES_MONTHLY,
@@ -176,7 +175,6 @@ function SignUpInner() {
     <section className="bg-bg0 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10">
-          <SectionLabel>Sign up</SectionLabel>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-4 leading-tight">
             Five minutes of paperwork.
           </h1>

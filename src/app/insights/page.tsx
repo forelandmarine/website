@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Glow, HorizonLine, SectionLabel, ButtonPrimary } from "@/components/ui";
+import { Glow, HorizonLine, ButtonPrimary } from "@/components/ui";
 import { posts } from "./posts";
 import PostGrid from "./PostGrid";
 import InsightsHero from "@/components/InsightsHero";
@@ -80,7 +80,6 @@ export default function InsightsPage() {
       <section className="py-20 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <SectionLabel>All Articles</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">
               Browse by topic
             </h2>
@@ -95,7 +94,6 @@ export default function InsightsPage() {
       <section className="relative py-16 sm:py-20 lg:py-24 bg-bg0 overflow-hidden">
         <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="rgba(30,155,255,0.1)" size={600} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionLabel>Get in touch</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">
             Want to discuss a project?
           </h2>

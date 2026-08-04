@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HorizonLine, SectionLabel, ButtonPrimary, ServiceCard } from "@/components/ui";
+import { HorizonLine, ButtonPrimary, ServiceCard } from "@/components/ui";
 import {
   TIER_NAMES,
   TIER_PRICES_MONTHLY,
@@ -201,7 +201,6 @@ export default function TechnicalSupportPage() {
       <section id="programmes" className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12" data-animate="fade-up">
-            <SectionLabel>Programmes</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">
               Three levels of cover
             </h2>
@@ -224,7 +223,6 @@ export default function TechnicalSupportPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12" data-animate="fade-up">
-            <SectionLabel>Included in every tier</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white">
               The same backbone, regardless of programme
             </h2>
@@ -265,7 +263,6 @@ export default function TechnicalSupportPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-bg1/40 lg:to-bg1/0" />
           </div>
           <div className="px-6 py-14 sm:px-10 sm:py-18 lg:px-14 lg:py-24 flex flex-col justify-center">
-            <SectionLabel>Charter Operations</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-6 leading-tight">
               Ready when the owner is.
             </h2>
@@ -299,7 +296,6 @@ export default function TechnicalSupportPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12" data-animate="fade-up">
-            <SectionLabel>Parts, anywhere</SectionLabel>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6 leading-tight">
               Yachts do not break in convenient places.
             </h2>
@@ -415,7 +411,6 @@ export default function TechnicalSupportPage() {
           <div className="absolute inset-0 bg-bg0/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionLabel>Sign up</SectionLabel>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">
             One phone number, day or night.
           </h2>

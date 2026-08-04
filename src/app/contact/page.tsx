@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HorizonLine, SectionLabel } from "@/components/ui";
+import { HorizonLine } from "@/components/ui";
 import ParallaxHero from "@/components/ParallaxHero";
 import ContactPageForm from "@/components/ContactPageForm";
 
@@ -47,7 +47,6 @@ export default function ContactPage() {
         imageClassName="object-cover object-[center_75%] opacity-50 saturate-[1.15] scale-110"
       >
         <div className="max-w-2xl">
-          <SectionLabel>Contact Us</SectionLabel>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-5 leading-tight">
             Get in Touch
           </h1>

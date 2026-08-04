@@ -22,13 +22,6 @@ export function HorizonLine({ className = "" }: { className?: string }) {
   return <div aria-hidden="true" className={`w-full h-px bg-white/10 ${className}`} />;
 }
 
-// Section eyebrow labels intentionally disabled site-wide: the uppercase,
-// letter-spaced kicker above every heading read as a generated template.
-// Headings now stand on their own. Kept as a no-op so call sites are unaffected.
-export function SectionLabel({ children: _children }: { children: React.ReactNode }) {
-  return null;
-}
-
 export function ButtonPrimary({
   href, children, className = "", onClick, type = "button",
 }: {
