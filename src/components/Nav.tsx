@@ -4,10 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useCallback, useEffect } from "react";
 
-const navLinks = [
+const consultancyLinks = [
+  { label: "Overview", href: "/technical-consultancy" },
+  { label: "Yacht Surveys", href: "/technical-consultancy/surveys" },
+];
+
+const navLinks: {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+}[] = [
   { label: "New Build", href: "/owners-representation" },
   { label: "Refit", href: "/refit" },
-  { label: "Technical Consultancy", href: "/technical-consultancy" },
+  { label: "Technical Consultancy", href: "/technical-consultancy", children: consultancyLinks },
   { label: "Technical Support", href: "/technical-support" },
   { label: "Yacht Management", href: "/yacht-management" },
 ];
@@ -30,8 +39,10 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
+  const [consultancyOpen, setConsultancyOpen] = useState(false);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const contactCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const consultancyCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const openTools = useCallback(() => {
     if (closeTimeout.current) { clearTimeout(closeTimeout.current); closeTimeout.current = null; }
@@ -49,6 +60,15 @@ export default function Nav() {
 
   const closeContact = useCallback(() => {
     contactCloseTimeout.current = setTimeout(() => setContactOpen(false), 200);
+  }, []);
+
+  const openConsultancy = useCallback(() => {
+    if (consultancyCloseTimeout.current) { clearTimeout(consultancyCloseTimeout.current); consultancyCloseTimeout.current = null; }
+    setConsultancyOpen(true);
+  }, []);
+
+  const closeConsultancy = useCallback(() => {
+    consultancyCloseTimeout.current = setTimeout(() => setConsultancyOpen(false), 200);
   }, []);
 
   useEffect(() => {
@@ -79,15 +99,49 @@ export default function Nav() {
 
           {/* Desktop nav (centre column — true geometric centre of the row) */}
           <nav className="hidden lg:flex items-center gap-0.5 whitespace-nowrap mx-[30px]">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-3 py-2 text-sm font-light text-[#C3D9E8] hover:text-white transition-colors rounded hover:bg-white/5"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.children ? (
+                <div
+                  key={link.href}
+                  className="relative"
+                  onMouseEnter={openConsultancy}
+                  onMouseLeave={closeConsultancy}
+                >
+                  <Link
+                    href={link.href}
+                    className="flex items-center gap-1 px-3 py-2 text-sm font-light text-[#C3D9E8] hover:text-white transition-colors rounded hover:bg-white/5"
+                  >
+                    {link.label}
+                    <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform ${consultancyOpen ? "rotate-180" : ""}`}>
+                      <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </Link>
+                  {consultancyOpen && (
+                    <div className="absolute top-full left-0 pt-2 w-48">
+                    <div className="border border-white/10 bg-bg1 shadow-xl shadow-black/40 py-1">
+                      {link.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className="block px-4 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white hover:bg-white/5 transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-3 py-2 text-sm font-light text-[#C3D9E8] hover:text-white transition-colors rounded hover:bg-white/5"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
 
             {/* Tools dropdown */}
             <div
@@ -207,14 +261,25 @@ export default function Nav() {
       <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 z-50 border-t border-white/8 bg-bg1 overflow-y-auto overscroll-contain">
         <div className="mx-auto max-w-7xl px-4 pt-3 pb-8 flex flex-col gap-1">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block px-3 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white rounded hover:bg-white/5 transition-colors"
-            >
-              {link.label}
-            </Link>
+            <div key={link.href}>
+              <Link
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="block px-3 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white rounded hover:bg-white/5 transition-colors"
+              >
+                {link.label}
+              </Link>
+              {link.children?.map((child) => (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-6 py-2.5 text-sm font-light text-[#C3D9E8] hover:text-white rounded hover:bg-white/5 transition-colors"
+                >
+                  {child.label}
+                </Link>
+              ))}
+            </div>
           ))}
           <div className="px-3 py-2 text-xs text-muted/50 tracking-widest">Tools</div>
           {toolLinks.map((link) => (
