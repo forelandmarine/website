@@ -7,6 +7,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 const consultancyLinks = [
   { label: "Overview", href: "/technical-consultancy" },
   { label: "Yacht Surveys", href: "/technical-consultancy/surveys" },
+  { label: "Technical Support", href: "/technical-support" },
 ];
 
 const navLinks: {
