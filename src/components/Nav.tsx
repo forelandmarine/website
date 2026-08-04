@@ -18,7 +18,6 @@ const navLinks: {
   { label: "New Build", href: "/owners-representation" },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy", children: consultancyLinks },
-  { label: "Technical Support", href: "/technical-support" },
   { label: "Yacht Management", href: "/yacht-management" },
 ];
 
