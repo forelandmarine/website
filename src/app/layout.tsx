@@ -84,6 +84,7 @@ export default function RootLayout({
                 sameAs: [
                   "https://instagram.com/forelandmarine",
                   "https://www.linkedin.com/company/foreland-marine-consultancy",
+                  "https://find-and-update.company-information.service.gov.uk/company/15785851",
                 ],
                 address: {
                   "@type": "PostalAddress",

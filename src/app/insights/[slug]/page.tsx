@@ -97,6 +97,10 @@ export default async function PostPage({ params }: Props) {
       "@type": "WebPage",
       "@id": `https://www.forelandmarine.com/insights/${post.slug}`,
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".article-summary", ".faq-answer"],
+    },
   };
 
   const faqJsonLd = post.faqs?.length
@@ -167,8 +171,8 @@ export default async function PostPage({ params }: Props) {
             {post.title}
           </h1>
 
-          {/* Description */}
-          <p className="text-lg text-muted leading-relaxed mb-8">
+          {/* Description / answer summary (marked speakable for answer engines) */}
+          <p className="article-summary text-lg text-muted leading-relaxed mb-8">
             {post.description}
           </p>
 
@@ -207,7 +211,7 @@ export default async function PostPage({ params }: Props) {
                     <h3 className="text-lg font-light text-white mb-3 leading-snug">
                       {faq.question}
                     </h3>
-                    <p className="text-muted leading-relaxed">{faq.answer}</p>
+                    <p className="faq-answer text-muted leading-relaxed">{faq.answer}</p>
                   </div>
                 ))}
               </div>
