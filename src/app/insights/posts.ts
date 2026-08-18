@@ -169,7 +169,7 @@ export const posts: Post[] = [
 
 <p>The risks are real, though. A pre-owned yacht is a complex piece of engineering that has been used, maintained (well or poorly), and potentially modified by previous owners. A thorough survey by an independent, qualified surveyor is absolutely essential. Do not skip it, do not cut corners on it, and do not use a surveyor recommended by the seller. The survey should cover the hull, machinery, electrical systems, rigging (for sailing yachts), safety equipment, and compliance status. Budget EUR 20,000 to 50,000 for a comprehensive survey of a yacht in the 30 to 50 metre range.</p>
 
-<p>Even with a clean survey, expect to spend money in the first year. Systems that are functional but aging will need attention. The yacht's interior and deck may not match your taste. Electronics and communication systems may be outdated. Go in with your eyes open and your budget prepared.</p>
+<p>Even with a clean survey, expect to spend money in the first year. Systems that are functional but ageing will need attention. The yacht's interior and deck may not match your taste. Electronics and communication systems may be outdated. Go in with your eyes open and your budget prepared.</p>
 
 <h3>Building New</h3>
 
@@ -239,7 +239,7 @@ export const posts: Post[] = [
 
 <h3>Not Budgeting for the First Refit</h3>
 
-<p>Almost every pre-owned yacht needs work in the first year of new ownership. Even yachts that survey well will have items that the new owner wants to address: updating electronics, refreshing soft furnishings, servicing systems that are functional but aging, or making modifications to suit the new owner's preferences. Budget for this from the start.</p>
+<p>Almost every pre-owned yacht needs work in the first year of new ownership. Even yachts that survey well will have items that the new owner wants to address: updating electronics, refreshing soft furnishings, servicing systems that are functional but ageing, or making modifications to suit the new owner's preferences. Budget for this from the start.</p>
 
 <h3>Choosing a Flag State Without Professional Advice</h3>
 
@@ -317,7 +317,7 @@ export const posts: Post[] = [
 
 <h2>Racing Calendar Management</h2>
 
-<p>The J Class racing calendar spans both sides of the Atlantic and dictates the operational rhythm of the entire year. Key events include the Superyacht Cup in Palma, the Bucket Regattas in both Saint-Barths and Newport, the Loro Piana Superyacht Regatta in Porto Cervo, and dedicated J Class regattas that are organised periodically in venues such as Falmouth, Newport, and Bermuda. When the America's Cup cycle includes J Class racing, as it has in recent editions, the calendar becomes even more intensive.</p>
+<p>The J Class racing calendar spans both sides of the Atlantic and dictates the operational rhythm of the entire year. Key events include the Superyacht Cup in Palma, the Bucket Regattas in both St Barths and Newport, the Loro Piana Superyacht Regatta in Porto Cervo, and dedicated J Class regattas that are organised periodically in venues such as Falmouth, Newport, and Bermuda. When the America's Cup cycle includes J Class racing, as it has in recent editions, the calendar becomes even more intensive.</p>
 
 <p>Managing this calendar requires long-range planning that begins months or even years in advance. Each regatta involves logistics coordination for the yacht and her crew, travel arrangements for the owner and guests, entry administration, and technical preparation. The yacht may need to be repositioned across the Atlantic between Caribbean winter events and Mediterranean summer racing, which involves a transatlantic passage with its own crew, provisioning, and weather routing requirements.</p>
 
@@ -1388,7 +1388,7 @@ export const posts: Post[] = [
       {
         question: "Why is the 10% rule often wrong?",
         answer:
-          "The rule treats running cost as a simple percentage of purchase price, which is a poor proxy for the actual cost drivers. A 30 metre yacht built in 2024 with a small crew and limited cruising programme can run materially below 10 percent. A 50 metre yacht built in 2008 with full crew and 8 month season can run materially above. The right approach is a bottom-up budget built from the yacht's actual specification, crew complement, and intended programme.",
+          "The rule treats running cost as a simple percentage of purchase price, which is a poor proxy for the actual cost drivers. A 30 metre yacht built in 2024 with a small crew and limited cruising programme can run materially below 10 percent. A 50 metre yacht built in 2008 with full crew and an 8-month season can run materially above. The right approach is a bottom-up budget built from the yacht's actual specification, crew complement, and intended programme.",
       },
       {
         question: "How can an independent yacht manager help control running costs?",
@@ -1978,7 +1978,7 @@ export const posts: Post[] = [
 
 <h3>SYBAss Accreditation</h3>
 
-<p>The Superyacht Builders Association (SYBAss) sets the professional standard for owner's representation in the superyacht industry. SYBAss accreditation is recognised by member shipyards worldwide as confirmation that a representative has the technical knowledge, professional conduct, and operational experience required to oversee <a href="/owners-representation">new build projects</a> effectively. Foreland Marine is a SYBAss accredited company.</p>
+<p>The Superyacht Builders Association (SYBAss) sets the professional standard for owner's representation in the superyacht industry. SYBAss accreditation is recognised by member shipyards worldwide as confirmation that a representative has the technical knowledge, professional conduct, and operational experience required to oversee <a href="/owners-representation">new build projects</a> effectively. Foreland Marine is a SYBAss-accredited company.</p>
 
 <h3>Yacht Owner's Representative Register (YORR)</h3>
 
@@ -2052,7 +2052,7 @@ export const posts: Post[] = [
 
 <p>Some management companies receive commissions, rebates, or volume-based incentives from suppliers, yards, and service providers. When a manager recommends a particular yard for a refit, or a particular supplier for parts, the owner should ask whether that recommendation is based on quality and value, or on a commercial relationship between the manager and the supplier. Preferred supplier arrangements are not inherently wrong, but they must be fully disclosed to the owner, and the owner must be confident that competitive alternatives have been genuinely evaluated.</p>
 
-<p>In the worst cases, these arrangements create an incentive to recommend work that may not be strictly necessary, to direct spending toward affiliated businesses, or to inflate scope in order to generate larger commissions. The owner, who relies on the manager's technical judgment, may have no way of knowing whether the advice is impartial.</p>
+<p>In the worst cases, these arrangements create an incentive to recommend work that may not be strictly necessary, to direct spending toward affiliated businesses, or to inflate scope in order to generate larger commissions. The owner, who relies on the manager's technical judgement, may have no way of knowing whether the advice is impartial.</p>
 
 <h2>The Structural Problem With Large Broker-Managers</h2>
 
@@ -3585,13 +3585,13 @@ export const posts: Post[] = [
 
 <p>They can, and they often do. But a representative recommended by the yard is by definition not fully independent. Treat any yard recommendation as a starting point for your own search, not the end of it.</p>
 
-<p>Foreland Marine is an SYBAss-accredited <a href="/owners-representation">independent superyacht consultancy</a> acting for owners only. We do not own a yacht management company, hold a brokerage licence, or have a commercial relationship with any shipyard.</p>`,
+<p>Foreland Marine is a SYBAss-accredited <a href="/owners-representation">independent superyacht consultancy</a> acting for owners only. We do not own a yacht management company, hold a brokerage licence, or have a commercial relationship with any shipyard.</p>`,
   },
   {
     slug: "yacht-new-build-contract-what-to-negotiate",
     title: "Yacht New Build Contract: What to Negotiate",
     description:
-      "The ten clauses in a superyacht new build contract that decide whether a project runs well or badly. What to negotiate before signing, by an SYBAss-accredited firm.",
+      "The ten clauses in a superyacht new build contract that decide whether a project runs well or badly. What to negotiate before signing, by a SYBAss-accredited firm.",
     date: "2026-05-11",
     category: "New Build",
     readTime: "12 min read",
@@ -3725,7 +3725,7 @@ export const posts: Post[] = [
 
 <h2>What SYBAss Is, in One Paragraph</h2>
 
-<p>SYBAss was founded in 2007 as the industry body of the largest superyacht builders. It represents around thirty yards, collectively responsible for the great majority of large superyacht deliveries each year. It sets industry standards on technical matters, on sustainability, on safety, and increasingly on professional qualifications for the people who work alongside its members on owners' behalves.</p>
+<p>SYBAss was founded in 2007 as the industry body of the largest superyacht builders. It represents around thirty yards, collectively responsible for the great majority of large superyacht deliveries each year. It sets industry standards on technical matters, on sustainability, on safety, and increasingly on professional qualifications for the people who work alongside its members on owners' behalf.</p>
 
 <h2>What SYBAss Accreditation of a Consultancy Covers</h2>
 
@@ -3761,7 +3761,7 @@ export const posts: Post[] = [
 
 <h2>Foreland Marine and SYBAss</h2>
 
-<p>Foreland Marine is an SYBAss-accredited consultancy. We act for owners only, on new build and refit projects between 24 and 60 metres. We do not own a yacht management company. We do not hold a brokerage licence. We do not have a commercial relationship with any shipyard. Our SYBAss accreditation is what allows us to work credibly alongside the major yards while keeping that independence intact. See our <a href="/owners-representation">owner's representation service</a> for how this works in practice.</p>
+<p>Foreland Marine is a SYBAss-accredited consultancy. We act for owners only, on new build and refit projects between 24 and 60 metres. We do not own a yacht management company. We do not hold a brokerage licence. We do not have a commercial relationship with any shipyard. Our SYBAss accreditation is what allows us to work credibly alongside the major yards while keeping that independence intact. See our <a href="/owners-representation">owner's representation service</a> for how this works in practice.</p>
 
 <h2>Verifying Any Firm's Claim</h2>
 

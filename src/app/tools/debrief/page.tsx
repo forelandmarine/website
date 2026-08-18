@@ -189,7 +189,7 @@ export default function DebriefPage() {
                 <div className="border-l-2 border-accent/40 pl-5">
                   <h3 className="text-sm font-semibold text-white mb-1">Crew Performance</h3>
                   <p className="text-sm text-muted leading-relaxed">
-                    Deck positioning data is overlaid with manoeuvre timing to assess crew choreography and identify bottlenecks. Who was where, when, and how did it affect execution speed.
+                    Deck positioning data is overlaid with manoeuvre timing to assess crew choreography and identify bottlenecks. Who was where, when, and how did it affect execution speed?
                   </p>
                 </div>
                 <div className="border-l-2 border-accent/40 pl-5">

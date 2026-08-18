@@ -291,7 +291,7 @@ function SignUpInner() {
               })}
             </div>
             <p className="text-xs text-muted/70 mt-3">
-              GBP rates are exact. EUR and USD shown at indicative cross-rates and locked at the moment of payment.
+              GBP rates are exact. EUR and USD are shown at indicative cross-rates and locked at the moment of payment.
             </p>
           </fieldset>
 

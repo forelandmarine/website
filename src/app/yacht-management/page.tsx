@@ -156,7 +156,7 @@ export default function YachtManagementPage() {
               <div className="p-8 pl-9">
                 <h3 className="text-base font-semibold text-white mb-3">Technical Depth</h3>
                 <p className="text-sm text-muted leading-relaxed mb-4">
-                  Our team includes unlimited Chief Engineers, Captains, and Naval Architects who understand vessels from the inside out. We do not outsource technical judgment to third-party consultants.
+                  Our team includes unlimited Chief Engineers, Captains, and Naval Architects who understand vessels from the inside out. We do not outsource technical judgement to third-party consultants.
                 </p>
                 <p className="text-sm text-muted leading-relaxed">
                   Whether it is evaluating a refit scope, reviewing a maintenance plan, or assessing a class survey finding, our people have the qualifications and sea time to make informed decisions at the technical level. That includes hands-on experience with carbon rigs, hydraulic deck systems, and performance sailing programmes.

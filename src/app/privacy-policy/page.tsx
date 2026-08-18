@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
                   "Professional information: vessel details, company name, role, and project requirements provided during consultancy enquiries.",
                   "Technical data: IP address, browser type, device type, operating system, pages visited, time spent on site, and referring URLs collected automatically when you use our website.",
                   "Communication data: records of correspondence with us by email, phone, or through our contact forms.",
-                  "App data: for SeaTime Tracker users: AIS position data, voyage records, vessel information, and account credentials necessary to provide the service.",
+                  "App data: for SeaTime Tracker users, AIS position data, voyage records, vessel information, and account credentials necessary to provide the service.",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="flex-shrink-0 mt-1.5 h-1.5 w-1.5 rounded-full bg-accent" />

@@ -270,7 +270,7 @@ export default function TechnicalSupportPage() {
               A standing technical team for the yacht. We are on call around the clock, with the captain&apos;s number saved and the engine room already audited. The onboard crew always has a peer to call. The owner gets decisions, not delays.
             </p>
             <p className="text-muted leading-relaxed mb-8">
-              Every vessel we support begins the season with a full audit of manuals, procedures, and spares. The yacht is prepared, the crew is confident. Through the season we are the technical line the engineers rely on, and the people the captain calls to source, freight, or sign for parts anywhere in the world.
+              Every vessel we support begins the season with a full audit of manuals, procedures, and spares. The yacht is prepared and the crew is confident. Through the season we are the technical line the engineers rely on, and the people the captain calls to source, freight, or sign for parts anywhere in the world.
             </p>
 
             <div className="border-t border-white/10 pt-8">

@@ -738,7 +738,7 @@ export default function RunningCostCalculatorPage() {
               Crew is almost always the single largest line item in your annual budget. A 40m motor
               yacht might carry a crew of seven or eight, each with salary, insurance, travel, and
               training costs. As the yacht grows, crew numbers increase and so do the qualifications
-              required. A captain on a 60m vessel commands a very different salary to one on a 24m
+              required. A captain on a 60m vessel commands a very different salary from one on a 24m
               sailing yacht.
             </p>
 

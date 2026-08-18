@@ -8,7 +8,7 @@ const team = [
     role: "Co-Founder",
     initials: "JM",
     photo: "/images/team-jack.jpg",
-    bio: <>A lifelong sailor with over 100,000 nautical miles in his logbook, Jack is a highly experienced racing yacht systems engineer and yachtsman. He has served as Chief Engineer on J&nbsp;-&nbsp;Class <i>Lionheart</i> and Chief Build Engineer on the landmark restoration of <i>Shamrock V</i>, as well a plethora of racing programs and large motor yacht projects. His career spans multiple successful racing campaigns with deep expertise in the hydraulic, mechanical and electrical systems that give high-performance yachts their competitive edge. He also campaigns his own yacht, the 1936 Teal class <i>Antoinette</i> in the Solent. A serial entrepreneur and keen motorcycle rider, he brings the same precision and drive to business as he does to engineering.</>,
+    bio: <>A lifelong sailor with over 100,000 nautical miles in his logbook, Jack is a highly experienced racing yacht systems engineer and yachtsman. He has served as Chief Engineer on J&nbsp;-&nbsp;Class <i>Lionheart</i> and Chief Build Engineer on the landmark restoration of <i>Shamrock V</i>, as well as a plethora of racing programmes and large motor yacht projects. His career spans multiple successful racing campaigns with deep expertise in the hydraulic, mechanical and electrical systems that give high-performance yachts their competitive edge. He also campaigns his own yacht, the 1936 Teal class <i>Antoinette</i>, in the Solent. A serial entrepreneur and keen motorcycle rider, he brings the same precision and drive to business as he does to engineering.</>,
     linkedin: "https://www.linkedin.com/in/jmacnally/",
   },
   {
@@ -40,7 +40,7 @@ const team = [
     role: "Senior Consultant",
     initials: "SF",
     photo: "/images/team-sam.jpg",
-    bio: <>A Senior Consultant with experience spanning since 2015, including over five years in command as Captain. His background covers private and charter operations, with strong expertise in commercial compliance and flag state management. Sam brings extensive experience from the superyacht racing circuit, offering a deep understanding of performance optimisation, sail systems and high-level deck operations. He also has hands-on technical expertise in refit management, specialising in deck-focused projects including gear installation, servicing and system upgrades. Sam provides practical, results-driven consultancy across operations, refits and performance programmes, with a focus on efficiency, safety, compliance and delivering a seamless owner and charter experience.</>,
+    bio: <>A Senior Consultant with experience dating back to 2015, including over five years in command as Captain. His background covers private and charter operations, with strong expertise in commercial compliance and flag state management. Sam brings extensive experience from the superyacht racing circuit, offering a deep understanding of performance optimisation, sail systems and high-level deck operations. He also has hands-on technical expertise in refit management, specialising in deck-focused projects including gear installation, servicing and system upgrades. Sam provides practical, results-driven consultancy across operations, refits and performance programmes, with a focus on efficiency, safety, compliance and delivering a seamless owner and charter experience.</>,
     linkedin: "#",
   },
   {
@@ -48,7 +48,7 @@ const team = [
     role: "Meteorologist & Weather Routing",
     initials: "SC",
     photo: "/images/team-steve.jpg",
-    bio: <>Steve has worked with multiple IMOCAs in the past (Ari Huusela Ocean Racing, Rosalba (ex Artemis), and short term work on a few others). He is both an experienced offshore sailor as well as a trained meteorologist, working with cruising and racing yachts in circuits such as the Superseries and Maxi Regattas. He does a lot of historical weather routing and climatology studies to aid skippers and navigators as well as forecasting and routing, bringing in educational aspects to build knowledge of practical yachting meteorology.</>,
+    bio: <>Steve has worked with multiple IMOCAs in the past (Ari Huusela Ocean Racing, Rosalba (ex Artemis), and short-term work on a few others). He is both an experienced offshore sailor and a trained meteorologist, working with cruising and racing yachts in circuits such as the Superseries and Maxi Regattas. He does a lot of historical weather routing and climatology studies to aid skippers and navigators as well as forecasting and routing, bringing in educational aspects to build knowledge of practical yachting meteorology.</>,
     linkedin: "https://www.linkedin.com/in/steve-carver-3779ba2b7/",
   },
 ];

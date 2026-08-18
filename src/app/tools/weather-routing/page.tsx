@@ -81,7 +81,7 @@ const methodology = [
 const faqs = [
   {
     q: "When should we engage a weather router?",
-    a: "For races, ideally one to two weeks before the start so we can familiarise ourselves with the boat, polars and crew. For ocean crossings, three to four weeks ahead allows time for departure window analysis. For deliveries, a few days notice is usually enough. The earlier we are involved, the better the outcome.",
+    a: "For races, ideally one to two weeks before the start so we can familiarise ourselves with the boat, polars and crew. For ocean crossings, three to four weeks ahead allows time for departure window analysis. For deliveries, a few days' notice is usually enough. The earlier we are involved, the better the outcome.",
   },
   {
     q: "Do you work with our existing navigator and team?",
@@ -325,7 +325,7 @@ export default function WeatherRoutingPage() {
               </h2>
               <p className="text-muted leading-relaxed mb-4">
                 Steve has worked with multiple IMOCAs in the past (Ari Huusela
-                Ocean Racing, Rosalba (ex Artemis), and short term work on a
+                Ocean Racing, Rosalba (ex Artemis), and short-term work on a
                 few others). He works with cruising and racing yachts in
                 circuits such as the Superseries and Maxi Regattas.
               </p>

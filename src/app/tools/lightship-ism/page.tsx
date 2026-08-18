@@ -176,7 +176,7 @@ export default function LightshipISMPage() {
           <div className="text-center mb-12" data-animate="fade-up">
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Works on every device</h2>
             <p className="text-muted text-lg max-w-xl mx-auto">
-              Full access on desktop, tablet, or phone. Crew can file reports dockside or mid-ocean, wherever they are, the platform is with them.
+              Full access on desktop, tablet, or phone. Crew can file reports dockside or mid-ocean. Wherever they are, the platform is with them.
             </p>
           </div>
           <div className="flex items-center justify-center gap-6" data-animate="scale-in">
