@@ -213,7 +213,7 @@ export default function DebriefPage() {
                   <span className="text-accent">00:14:32</span> Tack #3 (port to stbd)
                 </div>
                 <div className="text-muted/50 pl-4 border-l border-white/5">
-                  Duration: 8.0s &middot; Tack loss: 1.2 boatlengths<br />
+                  Duration: 8.0s, tack loss 1.2 boatlengths<br />
                   Polar recovery: 4.8s to target<br />
                   Helm call at 00:14:28, sheet release at 00:14:31<br />
                   3s delay between call and execution<br />
@@ -224,7 +224,7 @@ export default function DebriefPage() {
                   <span className="text-accent">00:22:15</span> Gybe #1 at WM2
                 </div>
                 <div className="text-muted/50 pl-4 border-l border-white/5">
-                  Duration: 5.5s &middot; Gybe loss: 0.8 boatlengths<br />
+                  Duration: 5.5s, gybe loss 0.8 boatlengths<br />
                   Clean execution, within target range<br />
                   Gained 12s on RIVAL 3 through mark<br />
                   <span className="text-accent/80">No action required</span>

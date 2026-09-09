@@ -50,7 +50,7 @@ export default function InsightsPage() {
                     {featuredPost.category}
                   </span>
                   <p className="text-xs text-muted/50 mb-3">
-                    {formatDate(featuredPost.date)} &middot; {featuredPost.readTime}
+                    {formatDate(featuredPost.date)}, {featuredPost.readTime}
                   </p>
                   <h2 className="text-2xl sm:text-3xl font-light text-white group-hover:text-accent transition-colors leading-snug">
                     {featuredPost.title}

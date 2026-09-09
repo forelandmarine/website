@@ -143,6 +143,30 @@ export default function TechnicalConsultancyPage() {
                 },
                 {
                   "@type": "Question",
+                  name: "Do you design rigs and keels, or manage the work?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We manage the work. Rig, keel and appendage design is done by naval architects and design consultancies, and there is a well-populated field of them. What sits between a completed design and a yacht that sails to it is a different discipline: commissioning a carbon rig against the spar maker's tuning matrix, taking a keel modification through class approval and structural submission, specifying appendage work precisely enough to tender and widely enough to price. The design authority stays with the designer; the judgement about whether what arrived matches what was specified sits with the owner's team, and it is not a judgement a yard or supplier can be asked to make about their own work.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What does yacht technical consultancy cost?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "A defined piece of work with a deliverable, such as a structural submission, a stability review, a rig commissioning plan or a systems specification for tender, is quoted on a fixed fee against a scope agreed in advance. Ongoing support across a season or a build runs on a day rate against an agreed envelope. A second opinion on somebody else's design, quote or failure is normally a short fixed-fee piece. The director rate is GBP 125 an hour, specialist day rates are quoted against the discipline, and weather routing runs at GBP 325 a day for twice-daily routing.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you take commission from equipment suppliers?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "No. We do not sell equipment and take no commission from any supplier, which means a specification from us is not a route to a particular product. We will also decline work where the honest answer is that the existing design is sound and the money is better spent elsewhere, which happens more often than owners expect on performance programmes.",
+                  },
+                },
+                {
+                  "@type": "Question",
                   name: "Can you assist with regulatory compliance and surveys?",
                   acceptedAnswer: {
                     "@type": "Answer",
@@ -216,6 +240,50 @@ export default function TechnicalConsultancyPage() {
 
       <HorizonLine />
 
+      <HorizonLine />
+
+      {/* OPERATOR SIDE */}
+      <section className="py-20 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
+            Where design ends and operation begins
+          </h2>
+          <div className="space-y-5 text-muted leading-relaxed" data-animate="fade-up">
+            <p>
+              There is a well-populated field of naval architects and design consultancies producing rig, keel and appendage work for performance yachts, and we are not one of them. Owen Clarke, Lateral, Brookes Bell and their peers do that work and do it well.
+            </p>
+            <p>
+              What sits between a completed design and a yacht that sails to it is a different discipline, and it is the one that tends to go unmanaged. A carbon rig arrives from the spar maker with a tuning matrix and an installation sequence; somebody has to commission it, load it in stages, and correlate the rig tensions against the designer&apos;s numbers before the first offshore passage. A keel modification needs class approval, a structural submission, a yard capable of the work and an inspection regime that catches a fault while the yacht is still in the shed. Appendage work needs to be specified precisely enough to tender, and tendered widely enough to price.
+            </p>
+            <p>
+              That is the work we do. The design authority stays with the designer; the engineering judgement about whether what arrived matches what was specified sits with the owner&apos;s team, and it is not a judgement the yard or the supplier can be asked to make about their own work.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* HOW IT IS ENGAGED */}
+      <section className="bg-bg1 py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
+            How technical work is scoped and priced
+          </h2>
+          <div className="space-y-5 text-muted leading-relaxed" data-animate="fade-up">
+            <p>
+              Most technical consultancy is engaged in one of three shapes. A defined piece of work with a deliverable, such as a structural submission, a stability review, a rig commissioning plan or a systems specification for tender, is quoted on a fixed fee against a scope agreed in advance. Ongoing support across a season or a build runs on a day rate against an agreed envelope. And a second opinion on somebody else&apos;s design, quote or failure is normally a short fixed-fee piece, because the owner needs an answer rather than a relationship.
+            </p>
+            <p>
+              The director rate is GBP 125 an hour and specialist day rates are quoted against the discipline. Weather routing runs at GBP 325 a day for twice-daily routing. We publish these because a firm that will not indicate a rate before a meeting is usually pricing the client rather than the work.
+            </p>
+            <p>
+              Two constraints are worth stating. We do not sell equipment and take no commission from any supplier, which means a specification from us is not a route to a particular product. And we will decline work where the honest answer is that the existing design is sound and the money is better spent elsewhere, which happens more often than owners expect on performance programmes.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ - hidden visually, kept for JSON-LD SEO */}
       <section className="sr-only">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -238,6 +306,27 @@ export default function TechnicalConsultancyPage() {
               <div className="px-6 pb-5 text-muted leading-relaxed">
                 Yes. Our team has extensive experience with both sailing and motor yachts, from high-performance racing programmes and grand prix campaigns to explorer vessels and large motor yacht systems integration.
               </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                Do you design rigs and keels, or manage the work?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">We manage the work. Rig, keel and appendage design is done by naval architects and design consultancies, and there is a well-populated field of them. What sits between a completed design and a yacht that sails to it is a different discipline: commissioning a carbon rig against the spar maker&apos;s tuning matrix, taking a keel modification through class approval and structural submission, specifying appendage work precisely enough to tender and widely enough to price. The design authority stays with the designer; the judgement about whether what arrived matches what was specified sits with the owner&apos;s team, and it is not a judgement a yard or supplier can be asked to make about their own work.</div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What does yacht technical consultancy cost?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">A defined piece of work with a deliverable, such as a structural submission, a stability review, a rig commissioning plan or a systems specification for tender, is quoted on a fixed fee against a scope agreed in advance. Ongoing support across a season or a build runs on a day rate against an agreed envelope. A second opinion on somebody else&apos;s design, quote or failure is normally a short fixed-fee piece. The director rate is GBP 125 an hour, specialist day rates are quoted against the discipline, and weather routing runs at GBP 325 a day for twice-daily routing.</div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                Do you take commission from equipment suppliers?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">No. We do not sell equipment and take no commission from any supplier, which means a specification from us is not a route to a particular product. We will also decline work where the honest answer is that the existing design is sound and the money is better spent elsewhere, which happens more often than owners expect on performance programmes.</div>
             </details>
             <details className="group border border-white/10 bg-bg1">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">

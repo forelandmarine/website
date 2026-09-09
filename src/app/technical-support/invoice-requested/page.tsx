@@ -23,7 +23,7 @@ export default function InvoiceRequestedPage() {
 
         <div className="mx-auto max-w-xl mb-10 border border-accent/30 bg-bg2 px-6 py-5 text-left">
           <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent mb-1.5">
-            Emergency line &middot; 24/7
+            Emergency line, 24/7
           </p>
           <p className="text-2xl font-light text-white leading-tight">
             <a href="tel:+447921528168" className="text-white hover:text-accent transition-colors">

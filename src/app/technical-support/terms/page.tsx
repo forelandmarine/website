@@ -20,7 +20,7 @@ export default function TechnicalSupportTermsPage() {
           <h1 className="text-4xl font-light text-white mb-3">
             Terms &amp; Conditions
           </h1>
-          <p className="text-muted text-sm mb-8">Version 1.0 &middot; In force from 18 May 2026</p>
+          <p className="text-muted text-sm mb-8">Version 1.0, in force from 18 May 2026</p>
           <HorizonLine />
         </div>
       </section>
@@ -154,7 +154,7 @@ export default function TechnicalSupportTermsPage() {
 
             <div className="border-t border-white/10 pt-8 mt-12">
               <p className="text-xs text-muted/70 leading-relaxed">
-                Foreland Marine Consultancy Ltd &middot; 7 Bell Yard, London WC2A 2JR &middot; <a className="text-accent hover:text-white transition-colors" href="mailto:info@forelandmarine.com">info@forelandmarine.com</a> &middot; +44 7921 528 168
+                Foreland Marine Consultancy Ltd&emsp;&emsp;7 Bell Yard, London WC2A 2JR&emsp;&emsp;<a className="text-accent hover:text-white transition-colors" href="mailto:info@forelandmarine.com">info@forelandmarine.com</a>&emsp;&emsp;+44 7921 528 168
               </p>
             </div>
 

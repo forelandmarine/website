@@ -73,6 +73,30 @@ export default function YachtManagementPage() {
                 },
                 {
                   "@type": "Question",
+                  name: "How much does yacht management cost?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Management fees typically account for 3 to 5 percent of a yacht's annual operating budget. The compliance cost sitting underneath the fee matters more: on a 40 metre yacht, ISM, MLC, flag administration, class society fees and the management company's compliance services together run EUR 80,000 to 200,000 a year. That figure does not appear in broker-quoted operating budgets, so an owner comparing a management proposal against a budget assembled during the sale is comparing two documents built on different assumptions.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Should I use the yacht manager my broker recommends?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Not without asking what the recommendation is worth to the person making it. Introductory retrocessions are a normal feature of the market: a share of contract value paid back to the introducing party by the supplier who wins the work. On a EUR 5 million annual management contract a 10 percent introductory retrocession is EUR 500,000 in the first year, and it appears on no invoice to the owner because the broker is not invoicing the owner. None of this is unlawful and most is disclosed if asked directly. The point is that a recommendation carrying a six-figure payment is a different object from an assessment.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Does a yacht under 500 gross tonnes need ISM?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Not as a legal requirement. The ISM Code binds yachts above 500 gross tonnes, and below that a safety management system is voluntary. A growing number of owners adopt a proportionate system anyway, for practical rather than regulatory reasons: insurers increasingly request risk management surveys assessing crew procedures, training and onboard management, and a documented system is what those surveys look for. Foreland runs voluntary systems on that basis for several vessels below the threshold.",
+                  },
+                },
+                {
+                  "@type": "Question",
                   name: "What size yachts do you manage?",
                   acceptedAnswer: {
                     "@type": "Answer",
@@ -230,6 +254,81 @@ export default function YachtManagementPage() {
 
       <HorizonLine />
 
+      <HorizonLine />
+
+      {/* WHAT MANAGEMENT COSTS */}
+      <section className="py-20 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
+            What management costs, and what sits underneath it
+          </h2>
+          <div className="space-y-5 text-muted leading-relaxed" data-animate="fade-up">
+            <p>
+              Management fees typically account for 3 to 5 percent of a yacht&apos;s annual operating budget. That is the visible number and it is the smaller half of the story. Underneath it sits the compliance cost itself: on a 40 metre yacht, ISM, MLC, flag administration, class society fees and the management company&apos;s compliance services together run EUR 80,000 to 200,000 a year.
+            </p>
+            <p>
+              That figure is worth holding because it does not appear in broker-quoted operating budgets. An owner comparing a management proposal against a budget assembled during the sale is comparing two documents built on different assumptions, and the gap is not usually in the owner&apos;s favour.
+            </p>
+            <p>
+              For context on where the rest of the budget goes, the working split on a privately operated yacht runs roughly: crew at 30 to 40 percent, maintenance and repair at 14 to 18, insurance at 10 to 14, berths and marina fees at 8 to 12, fuel at 8 to 12, management at 3 to 5, regulatory and class compliance at 2 to 3, and a contingency of 6 to 10. The remainder is provisioning, communications, owner travel and the lines that simply happen. Those ranges are set out with their sources in{" "}
+              <Link href="https://firstownersreference.com/01-reality-of-ownership" className="text-accent hover:text-white transition-colors underline underline-offset-2">chapter one of The First Owner&apos;s Reference</Link>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* THE REFERRAL PROBLEM */}
+      <section className="bg-bg1 py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
+            Why the broker should not choose your manager
+          </h2>
+          <div className="space-y-5 text-muted leading-relaxed" data-animate="fade-up">
+            <p>
+              The management company is the long-running operational partner, engaged for the length of the ownership rather than the length of the transaction. It is also, in most cases, introduced by the broker who sold the yacht.
+            </p>
+            <p>
+              The mechanism worth understanding is the introductory retrocession: a share of the contract value paid back to the introducing party by the supplier who won the work. On a EUR 5 million annual management contract, a 10 percent introductory retrocession is EUR 500,000 in the first year. On a EUR 4 million repaint, a 5 percent retrocession is EUR 200,000. These sums do not appear on any invoice to the owner, because the broker is not invoicing the owner. The owner pays the management company, the yard and the paint contractor, and the retrocession flows inside the supplier&apos;s books.
+            </p>
+            <p>
+              None of this is unlawful and most of it is disclosed if asked directly. The structural point is simply that a recommendation carrying a five or six figure payment attached to it is not the same object as an assessment, and an owner is entitled to know which one they are being given. Andrew Roch has documented the wider version of the same shift in Superyacht News: management companies migrating since the 1990s from administrative support into operational and financial control, drawing authority away from the captain while responsibility stayed with the master.
+            </p>
+            <p>
+              Foreland takes no introductory payment from any supplier and pays none. The management fee is our only revenue from the relationship. That is a narrower business than the multi-line houses run, and it is the reason a recommendation from us is worth reading.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* ISM AND MLC */}
+      <section className="py-20 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
+            ISM, MLC, and who actually does what
+          </h2>
+          <div className="space-y-5 text-muted leading-relaxed" data-animate="fade-up">
+            <p>
+              Yachts above 500 gross tonnes operate under the International Safety Management Code, which requires a documented safety management system and a regular audit cycle. Yachts in commercial operation also fall under the Maritime Labour Convention, which governs crew contracts, hours, working conditions and welfare. Both are binding and both are audited, and neither is satisfied by a folder that is opened the week before the inspector arrives.
+            </p>
+            <p>
+              Below 500 gross tonnes the position is voluntary, and a growing number of owners adopt a proportionate safety management system anyway. The reasoning is practical rather than regulatory: insurers increasingly request risk management surveys that assess crew procedures, training and onboard management, and a documented system is what those surveys are looking for. Foreland runs voluntary systems on this basis for several vessels below the threshold.
+            </p>
+            <p>
+              The division of labour is worth stating plainly, because it is often blurred in proposals. The captain runs the yacht. The management company runs the compliance, maintaining the system, filing the regulatory paperwork, running the audit cycle and supporting the captain on flag state interactions. The insurance broker runs the risk. The owner runs the team. A manager who is quietly taking operational decisions that belong to the master has moved outside that structure, whatever the contract says.
+            </p>
+            <p>
+              Our{" "}
+              <Link href="/tools/lightship-ism" className="text-accent hover:text-white transition-colors underline underline-offset-2">Lightship ISM platform</Link>{" "}
+              exists because the systems most yachts inherit are built for auditors rather than for crews, and a system the crew does not use is not a safety management system.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* APPROACH */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center" data-animate="fade-up">
@@ -266,6 +365,45 @@ export default function YachtManagementPage() {
       </section>
 
       <HorizonLine />
+
+      <HorizonLine />
+
+      {/* Common questions, on the page as well as in the schema */}
+      <section className="py-20 bg-bg1">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Common questions about yacht management</h2>
+          <div className="space-y-8">
+            <div className="border-l-2 border-accent/40 pl-6">
+              <h3 className="text-base font-semibold text-white mb-3">What is independent yacht management?</h3>
+              <p className="text-sm text-muted leading-relaxed">Independent yacht management means serving the owner&apos;s interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation is made solely in the owner&apos;s interest.</p>
+            </div>
+            <div className="border-l-2 border-accent/40 pl-6">
+              <h3 className="text-base font-semibold text-white mb-3">What does ISM compliance involve for yachts?</h3>
+              <p className="text-sm text-muted leading-relaxed">ISM (International Safety Management) compliance involves developing and maintaining a Safety Management System, crew training and certification, incident reporting procedures, regular internal audits, emergency drills, and a framework of continuous improvement. For vessels over 500 GT, ISM Code compliance is mandatory.</p>
+            </div>
+            <div className="border-l-2 border-accent/40 pl-6">
+              <h3 className="text-base font-semibold text-white mb-3">Do you handle crew recruitment and management?</h3>
+              <p className="text-sm text-muted leading-relaxed">Yes. We provide full crew management services including recruitment support, contract administration, payroll coordination, training and certification tracking, leave planning, and ongoing HR advisory, all managed per MLC and flag state requirements.</p>
+            </div>
+            <div className="border-l-2 border-accent/40 pl-6">
+              <h3 className="text-base font-semibold text-white mb-3">What size yachts do you manage?</h3>
+              <p className="text-sm text-muted leading-relaxed">We manage sailing and motor yachts over 24 metres, from private cruising vessels to large commercial yachts. Our experience spans vessels from 24 metres to over 60 metres across a range of vessel types and operational profiles.</p>
+            </div>
+            <div className="border-l-2 border-accent/40 pl-6">
+              <h3 className="text-base font-semibold text-white mb-3">How much does yacht management cost?</h3>
+              <p className="text-sm text-muted leading-relaxed">Management fees typically account for 3 to 5 percent of a yacht&apos;s annual operating budget. The compliance cost sitting underneath the fee matters more: on a 40 metre yacht, ISM, MLC, flag administration, class society fees and the management company&apos;s compliance services together run EUR 80,000 to 200,000 a year. That figure does not appear in broker-quoted operating budgets, so an owner comparing a management proposal against a budget assembled during the sale is comparing two documents built on different assumptions.</p>
+            </div>
+            <div className="border-l-2 border-accent/40 pl-6">
+              <h3 className="text-base font-semibold text-white mb-3">Should I use the yacht manager my broker recommends?</h3>
+              <p className="text-sm text-muted leading-relaxed">Not without asking what the recommendation is worth to the person making it. Introductory retrocessions are a normal feature of the market: a share of contract value paid back to the introducing party by the supplier who wins the work. On a EUR 5 million annual management contract a 10 percent introductory retrocession is EUR 500,000 in the first year, and it appears on no invoice to the owner because the broker is not invoicing the owner. None of this is unlawful and most is disclosed if asked directly. The point is that a recommendation carrying a six-figure payment is a different object from an assessment.</p>
+            </div>
+            <div className="border-l-2 border-accent/40 pl-6">
+              <h3 className="text-base font-semibold text-white mb-3">Does a yacht under 500 gross tonnes need ISM?</h3>
+              <p className="text-sm text-muted leading-relaxed">Not as a legal requirement. The ISM Code binds yachts above 500 gross tonnes, and below that a safety management system is voluntary. A growing number of owners adopt a proportionate system anyway, for practical rather than regulatory reasons: insurers increasingly request risk management surveys assessing crew procedures, training and onboard management, and a documented system is what those surveys look for. Foreland runs voluntary systems on that basis for several vessels below the threshold.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* RELATED SERVICES & FURTHER READING */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
