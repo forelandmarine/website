@@ -16,18 +16,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
 
+  const summary = post.metaDescription ?? post.description;
+
   return {
-    title: post.title,
-    description: post.description,
+    title: { absolute: post.title },
+    description: summary,
     keywords: post.keywords,
     alternates: {
       canonical: `https://www.forelandmarine.com/insights/${post.slug}`,
     },
     openGraph: {
       title: `${post.title} | Foreland Marine`,
-      description: post.description,
+      description: summary,
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.updated ?? post.date,
       authors: ["Foreland Marine Consultancy"],
       url: `https://www.forelandmarine.com/insights/${post.slug}`,
     },
@@ -50,6 +53,82 @@ const SERVICE_LINKS: Record<string, { href: string; label: string }> = {
   "Compliance": { href: "/yacht-management", label: "Yacht Management" },
 };
 
+/**
+ * Where an article overlaps a chapter of The First Owner's Reference, point at
+ * it. The publication is the deeper treatment and the two sites should read as
+ * one body of work rather than two competing ones.
+ */
+const REFERENCE_LINKS: Record<string, { href: string; label: string }> = {
+  "understanding-yacht-management-costs-10-percent-rule": {
+    href: "https://firstownersreference.com/01-reality-of-ownership",
+    label: "Chapter 01: Superyacht running costs and the 10 percent rule",
+  },
+  "how-to-buy-your-first-superyacht": {
+    href: "https://firstownersreference.com/04-acquisition-process",
+    label: "Chapter 04: The acquisition process",
+  },
+  "what-is-a-yacht-owners-representative": {
+    href: "https://firstownersreference.com/03-how-the-industry-works",
+    label: "Chapter 03: How the industry actually works",
+  },
+  "owners-representative-vs-project-manager-vs-broker": {
+    href: "https://firstownersreference.com/03-how-the-industry-works",
+    label: "Chapter 03: How the industry actually works",
+  },
+  "owner-representative-vs-yacht-manager": {
+    href: "https://firstownersreference.com/07-operations",
+    label: "Chapter 07: Operations",
+  },
+  "how-much-does-a-superyacht-refit-cost": {
+    href: "https://firstownersreference.com/06-refit",
+    label: "Chapter 06: When to refit and when to sell",
+  },
+  "refit-project-management-what-to-expect": {
+    href: "https://firstownersreference.com/06-refit",
+    label: "Chapter 06: When to refit and when to sell",
+  },
+  "choosing-shipyard-yacht-refit": {
+    href: "https://firstownersreference.com/06-refit",
+    label: "Chapter 06: When to refit and when to sell",
+  },
+  "yacht-new-build-contract-what-to-negotiate": {
+    href: "https://firstownersreference.com/05-new-build-versus-brokerage",
+    label: "Chapter 05: New build versus brokerage",
+  },
+  "the-role-of-an-owners-representative": {
+    href: "https://firstownersreference.com/05-new-build-versus-brokerage",
+    label: "Chapter 05: New build versus brokerage",
+  },
+  "owner-representation-during-yard-selection": {
+    href: "https://firstownersreference.com/05-new-build-versus-brokerage",
+    label: "Chapter 05: New build versus brokerage",
+  },
+  "superyacht-crew-salary-guide": {
+    href: "https://firstownersreference.com/tools/captain-and-crew-salary-2026",
+    label: "Captain and crew salary benchmarks, 2026",
+  },
+  "flag-state-registration-guide-for-yacht-owners": {
+    href: "https://firstownersreference.com/glossary",
+    label: "Flag state entries in the glossary",
+  },
+  "sailing-vs-motor-yacht-management-differences": {
+    href: "https://firstownersreference.com/08-motor-versus-sail",
+    label: "Chapter 08: Motor versus sail",
+  },
+  "choosing-yacht-management-company": {
+    href: "https://firstownersreference.com/07-operations",
+    label: "Chapter 07: Operations",
+  },
+  "why-independent-yacht-management-matters": {
+    href: "https://firstownersreference.com/03-how-the-industry-works",
+    label: "Chapter 03: How the industry actually works",
+  },
+  "ism-compliance-yachts-under-500gt": {
+    href: "https://firstownersreference.com/07-operations",
+    label: "Chapter 07: Operations",
+  },
+};
+
 export default async function PostPage({ params }: Props) {
   const { slug } = await params;
   const post = posts.find((p) => p.slug === slug);
@@ -64,6 +143,7 @@ export default async function PostPage({ params }: Props) {
       : [];
   const allRelated = [...relatedPosts, ...fallbackRelated];
   const serviceLink = SERVICE_LINKS[post.category];
+  const referenceLink = REFERENCE_LINKS[post.slug];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -71,7 +151,7 @@ export default async function PostPage({ params }: Props) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated ?? post.date,
     inLanguage: "en-GB",
     keywords: post.keywords?.join(", "),
     articleSection: post.category,
@@ -228,6 +308,25 @@ export default async function PostPage({ params }: Props) {
               >
                 {serviceLink.label} &rarr;
               </Link>
+            </div>
+          )}
+
+          {/* The First Owner's Reference */}
+          {referenceLink && (
+            <div className="mt-12 pt-8 border-t border-white/8">
+              <p className="text-xs text-muted/60 uppercase tracking-widest mb-3">
+                In The First Owner&apos;s Reference
+              </p>
+              <a
+                href={referenceLink.href}
+                className="text-base text-accent hover:text-white transition-colors"
+              >
+                {referenceLink.label} &rarr;
+              </a>
+              <p className="mt-2 text-sm text-muted/70">
+                The First Owner&apos;s Reference is our independent field manual
+                for first-time buyers. Longer, sourced, and free to read.
+              </p>
             </div>
           )}
 

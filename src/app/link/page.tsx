@@ -42,7 +42,7 @@ const links = [
   {
     title: "The First Owner's Reference",
     description: "A guide for first-time superyacht buyers",
-    href: "https://www.firstownersreference.com",
+    href: "https://firstownersreference.com",
     icon: (
       <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />

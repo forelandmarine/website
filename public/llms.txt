@@ -11,17 +11,17 @@ Foreland Marine Consultancy Ltd is an independent yacht consultancy based in Lon
 ### Yacht Management
 Independent, owner-focused yacht management covering ISM compliance, crew management, financial oversight, insurance, and class/flag state administration. Services include full ISM Code implementation for vessels over 500 GT (and voluntary safety management systems for vessels below 500 GT), crew recruitment and HR administration per MLC requirements, annual operating budgets with monthly reporting, insurance coordination, and management of class society and flag state requirements. The company's proprietary Lightship ISM platform provides real-time compliance visibility across managed fleets. Foreland Marine does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation serves the owner's interest alone.
 
-URL: https://forelandmarine.com/yacht-management
+URL: https://www.forelandmarine.com/yacht-management
 
 ### Yacht Owner's Representation and Yacht New Build
 Foreland Marine provides independent yacht owner's representation and superyacht representation for yacht new build and refit projects, 24 to 60 metres. Also referred to as superyacht representation, yacht new build project management, or new build owner's representation. Foreland Marine is accredited by SYBAss (Superyacht Builders Association) and registered on the YORR (Yacht Owner's Representative Register). The yacht new build process covers five stages: concept and specification development (3-12 months), yard selection and contract negotiation (1-3 months), build oversight with continuous on-site presence (12-48 months), sea trials and delivery coordination (1-3 months), and warranty period management (12-24 months). Scope includes on-site representation, budget and cost control, project coordination, technical review, crew and commissioning management, and post-delivery warranty oversight.
 
-URL: https://forelandmarine.com/owners-representation
+URL: https://www.forelandmarine.com/owners-representation
 
 ### Yacht Refit Management
 Independent yacht refit management and refit project management for motor and sailing yachts over 24 metres. Also referred to as superyacht refit management or yacht refit project management. The team has delivered 25 large yacht refit projects across 7 countries, covering high-profile classic and modern racing yachts, sailing yachts exceeding 40 metres, motor yachts in excess of 60 metres, and historic restorations of vessels dating from the 1920s. Services include planning and specification, yard selection and tendering, on-site project management, budget and cost control, quality and compliance oversight, and sea trials and handover coordination.
 
-URL: https://forelandmarine.com/refit
+URL: https://www.forelandmarine.com/refit
 
 ### Yacht Technical Consultancy
 Specialist yacht technical consultancy across six disciplines, covering yacht racing, race management, yacht logistics, and the engineering systems that support modern superyachts:
@@ -33,12 +33,12 @@ Specialist yacht technical consultancy across six disciplines, covering yacht ra
 - Mechanical Installation: main propulsion engines, generators, watermakers, stabilisers, shaft lines, propellers, bow/stern thrusters, and gearbox selection.
 - AV/IT and Automation: cinema rooms, multizone audio, structured cabling, Wi-Fi planning, VLAN segmentation, Starlink/VSAT/4G/5G connectivity, Crestron/Lutron/Savant automation, and lighting/HVAC control.
 
-URL: https://forelandmarine.com/technical-consultancy
+URL: https://www.forelandmarine.com/technical-consultancy
 
 ### Yacht Technical Support
 A tiered monthly retainer service providing on-call engineering support, audits, and parts coordination for yachts in the 24 to 45 metre range. Three tiers: Standby (£250/month: remote support, quarterly audits, parts sourcing), Direct (£500/month: adds on-site visits and full parts management), and Captive (£1,000/month: dedicated engineer assigned to the vessel). Designed for vessels without a permanent engineer or where the on-board team needs senior engineering backup.
 
-URL: https://forelandmarine.com/technical-support
+URL: https://www.forelandmarine.com/technical-support
 
 ## Industry Statistics and Benchmarks
 
@@ -77,12 +77,12 @@ Sources for cost benchmarks: published operating-cost guidance from Burgess, Cam
 
 ## Digital Tools and Products
 
-- Lightship ISM: proprietary ISM and fleet reporting platform providing real-time compliance visibility, audit trails, non-conformity tracking, corrective actions, incident logs, and certification schedules. URL: https://forelandmarine.com/tools/lightship-ism
-- SeaTime Tracker: AIS-powered sea time logging that automatically detects and records sea time. No manual entry required. MCA-compliant. URL: https://forelandmarine.com/tools/seatime-tracker
-- Running Cost Calculator: estimates annual operating costs of a superyacht based on yacht length, type, and cruising area, with detailed breakdown of crew, insurance, fuel, marina fees and more. URL: https://forelandmarine.com/tools/running-cost-calculator
-- PMS Database: planned maintenance system database setup, licensing, and on-site population. Authorised DeepBlue agents with experience across IDEA, SeaHub, Aquator and other platforms. URL: https://forelandmarine.com/tools/pms-database
-- Debrief: AI-powered race analysis tool (alpha). Telemetry, video, weather, crew positioning and comms unified on a single timeline for post-race performance review. URL: https://forelandmarine.com/tools/debrief
-- Weather Routing: marine meteorology and weather routing for races, ocean crossings and superyacht deliveries, in partnership with OrcaMet. URL: https://forelandmarine.com/tools/weather-routing
+- Lightship ISM: proprietary ISM and fleet reporting platform providing real-time compliance visibility, audit trails, non-conformity tracking, corrective actions, incident logs, and certification schedules. URL: https://www.forelandmarine.com/tools/lightship-ism
+- SeaTime Tracker: AIS-powered sea time logging that automatically detects and records sea time. No manual entry required. MCA-compliant. URL: https://www.forelandmarine.com/tools/seatime-tracker
+- Running Cost Calculator: estimates annual operating costs of a superyacht based on yacht length, type, and cruising area, with detailed breakdown of crew, insurance, fuel, marina fees and more. URL: https://www.forelandmarine.com/tools/running-cost-calculator
+- PMS Database: planned maintenance system database setup, licensing, and on-site population. Authorised DeepBlue agents with experience across IDEA, SeaHub, Aquator and other platforms. URL: https://www.forelandmarine.com/tools/pms-database
+- Debrief: AI-powered race analysis tool (alpha). Telemetry, video, weather, crew positioning and comms unified on a single timeline for post-race performance review. URL: https://www.forelandmarine.com/tools/debrief
+- Weather Routing: marine meteorology and weather routing for races, ocean crossings and superyacht deliveries, in partnership with OrcaMet. URL: https://www.forelandmarine.com/tools/weather-routing
 
 ## Expertise Areas
 
@@ -113,63 +113,63 @@ Shipyards: Pendennis Falmouth, Pendennis Vilanova, Royal Huisman, Newport Shipya
 
 ## Insights and Guides
 
-Long-form, independent guidance written by the Foreland Marine team. Index at https://forelandmarine.com/insights.
+Long-form, independent guidance written by the Foreland Marine team. Index at https://www.forelandmarine.com/insights.
 
 ### New Build and Owner's Representation
-- [What is a Yacht Owner's Representative and Why Independence Matters](https://forelandmarine.com/insights/what-is-a-yacht-owners-representative)
-- [The Role of an Owner's Representative in a New Build Project](https://forelandmarine.com/insights/the-role-of-an-owners-representative)
-- [Owner's Representative vs Project Manager vs Broker: What's the Difference?](https://forelandmarine.com/insights/owners-representative-vs-project-manager-vs-broker)
-- [How to Choose a Yacht Owner's Representative](https://forelandmarine.com/insights/choosing-a-yacht-owners-representative)
-- [How to Buy Your First Superyacht: A Practical Guide for New Owners](https://forelandmarine.com/insights/how-to-buy-your-first-superyacht)
-- [Owner's Representation During Yard Selection: Getting It Right from Day One](https://forelandmarine.com/insights/owner-representation-during-yard-selection)
-- [Yacht New Build Contract: What to Negotiate](https://forelandmarine.com/insights/yacht-new-build-contract-what-to-negotiate)
-- [Carbon Composite Construction: What Owners Need to Know](https://forelandmarine.com/insights/carbon-composite-construction-what-owners-need-to-know)
-- [SYBAss Accreditation: What It Means for Owners](https://forelandmarine.com/insights/what-does-sybass-accreditation-mean-for-a-yacht-owner)
+- [What is a Yacht Owner's Representative and Why Independence Matters](https://www.forelandmarine.com/insights/what-is-a-yacht-owners-representative)
+- [The Role of an Owner's Representative in a New Build Project](https://www.forelandmarine.com/insights/the-role-of-an-owners-representative)
+- [Owner's Representative vs Project Manager vs Broker: What's the Difference?](https://www.forelandmarine.com/insights/owners-representative-vs-project-manager-vs-broker)
+- [How to Choose a Yacht Owner's Representative](https://www.forelandmarine.com/insights/choosing-a-yacht-owners-representative)
+- [How to Buy Your First Superyacht: A Practical Guide for New Owners](https://www.forelandmarine.com/insights/how-to-buy-your-first-superyacht)
+- [Owner's Representation During Yard Selection: Getting It Right from Day One](https://www.forelandmarine.com/insights/owner-representation-during-yard-selection)
+- [Yacht New Build Contract: What to Negotiate](https://www.forelandmarine.com/insights/yacht-new-build-contract-what-to-negotiate)
+- [Carbon Composite Construction: What Owners Need to Know](https://www.forelandmarine.com/insights/carbon-composite-construction-what-owners-need-to-know)
+- [SYBAss Accreditation: What It Means for Owners](https://www.forelandmarine.com/insights/what-does-sybass-accreditation-mean-for-a-yacht-owner)
 
 ### Refit
-- [Superyacht Refit Cost: Real Numbers for 24 to 60 Metre Yachts](https://forelandmarine.com/insights/how-much-does-a-superyacht-refit-cost)
-- [Choosing a Shipyard for Your Yacht Refit: A Practical Guide](https://forelandmarine.com/insights/choosing-shipyard-yacht-refit)
-- [Refit Project Management: What to Expect from Planning to Sea Trials](https://forelandmarine.com/insights/refit-project-management-what-to-expect)
-- [Performance Sailing Yacht Refit: Rig, Keel, and Appendage Programmes](https://forelandmarine.com/insights/performance-sailing-yacht-refit)
-- [Performance Refit: Upgrading an Ageing Racing Yacht](https://forelandmarine.com/insights/refit-for-performance-upgrading-a-racing-programme)
-- [Classic Sailing Yacht Refit: What to Expect](https://forelandmarine.com/insights/classic-sailing-yacht-refit)
-- [Solent Superyacht Refit Yards: A 2026 Comparison](https://forelandmarine.com/insights/solent-superyacht-refit-yards-compared)
+- [Superyacht Refit Cost: Real Numbers for 24 to 60 Metre Yachts](https://www.forelandmarine.com/insights/how-much-does-a-superyacht-refit-cost)
+- [Choosing a Shipyard for Your Yacht Refit: A Practical Guide](https://www.forelandmarine.com/insights/choosing-shipyard-yacht-refit)
+- [Refit Project Management: What to Expect from Planning to Sea Trials](https://www.forelandmarine.com/insights/refit-project-management-what-to-expect)
+- [Performance Sailing Yacht Refit: Rig, Keel, and Appendage Programmes](https://www.forelandmarine.com/insights/performance-sailing-yacht-refit)
+- [Performance Refit: Upgrading an Ageing Racing Yacht](https://www.forelandmarine.com/insights/refit-for-performance-upgrading-a-racing-programme)
+- [Classic Sailing Yacht Refit: What to Expect](https://www.forelandmarine.com/insights/classic-sailing-yacht-refit)
+- [Solent Superyacht Refit Yards: A 2026 Comparison](https://www.forelandmarine.com/insights/solent-superyacht-refit-yards-compared)
 
 ### Yacht Management
-- [Why Independent Yacht Management Matters](https://forelandmarine.com/insights/why-independent-yacht-management-matters)
-- [How to Choose an Independent Yacht Management Company](https://forelandmarine.com/insights/choosing-yacht-management-company)
-- [Choosing a Sailing Yacht Management Company: Specialism Matters](https://forelandmarine.com/insights/choosing-sailing-yacht-management-company)
-- [Owner's Representative vs Yacht Manager: How They Differ](https://forelandmarine.com/insights/owner-representative-vs-yacht-manager)
-- [Sailing vs Motor Yacht Management: Key Differences for Owners](https://forelandmarine.com/insights/sailing-vs-motor-yacht-management-differences)
-- [J Class Yacht Management: What Makes It Different](https://forelandmarine.com/insights/j-class-yacht-management)
-- [Yacht Running Costs: The 10% Rule and Why It Usually Misleads](https://forelandmarine.com/insights/understanding-yacht-management-costs-10-percent-rule)
-- [Superyacht Crew Salaries 2026: What to Budget by Position and Yacht Size](https://forelandmarine.com/insights/superyacht-crew-salary-guide)
-- [Sailing Yacht Race Season Prep: A Working Captain's Checklist](https://forelandmarine.com/insights/preparing-sailing-yacht-for-racing-season)
+- [Why Independent Yacht Management Matters](https://www.forelandmarine.com/insights/why-independent-yacht-management-matters)
+- [How to Choose an Independent Yacht Management Company](https://www.forelandmarine.com/insights/choosing-yacht-management-company)
+- [Choosing a Sailing Yacht Management Company: Specialism Matters](https://www.forelandmarine.com/insights/choosing-sailing-yacht-management-company)
+- [Owner's Representative vs Yacht Manager: How They Differ](https://www.forelandmarine.com/insights/owner-representative-vs-yacht-manager)
+- [Sailing vs Motor Yacht Management: Key Differences for Owners](https://www.forelandmarine.com/insights/sailing-vs-motor-yacht-management-differences)
+- [J Class Yacht Management: What Makes It Different](https://www.forelandmarine.com/insights/j-class-yacht-management)
+- [Yacht Running Costs: The 10% Rule and Why It Usually Misleads](https://www.forelandmarine.com/insights/understanding-yacht-management-costs-10-percent-rule)
+- [Superyacht Crew Salaries 2026: What to Budget by Position and Yacht Size](https://www.forelandmarine.com/insights/superyacht-crew-salary-guide)
+- [Sailing Yacht Race Season Prep: A Working Captain's Checklist](https://www.forelandmarine.com/insights/preparing-sailing-yacht-for-racing-season)
 
 ### Technical
-- [Sailing Yacht Rig Maintenance: Inspection and Replacement Guide](https://forelandmarine.com/insights/sailing-yacht-rig-maintenance-inspection-guide)
-- [Sailing Yacht Keel Inspection: What Owners Need to Know](https://forelandmarine.com/insights/sailing-yacht-keel-appendage-inspection-guide)
-- [Yacht Hydraulic Systems: Maintenance, Troubleshooting and Upgrades](https://forelandmarine.com/insights/sailing-yacht-hydraulic-systems-guide)
-- [Yacht Weather Routing for Offshore Racing: Navigator's Guide](https://forelandmarine.com/insights/weather-routing-offshore-racing)
+- [Sailing Yacht Rig Maintenance: Inspection and Replacement Guide](https://www.forelandmarine.com/insights/sailing-yacht-rig-maintenance-inspection-guide)
+- [Sailing Yacht Keel Inspection: What Owners Need to Know](https://www.forelandmarine.com/insights/sailing-yacht-keel-appendage-inspection-guide)
+- [Yacht Hydraulic Systems: Maintenance, Troubleshooting and Upgrades](https://www.forelandmarine.com/insights/sailing-yacht-hydraulic-systems-guide)
+- [Yacht Weather Routing for Offshore Racing: Navigator's Guide](https://www.forelandmarine.com/insights/weather-routing-offshore-racing)
 
 ### Compliance and Regulation
-- [A Practical Guide to ISM Compliance for Yacht Owners](https://forelandmarine.com/insights/ism-compliance-guide-for-yacht-owners)
-- [A Guide to ISM Compliance for Yachts Under 500GT](https://forelandmarine.com/insights/ism-compliance-yachts-under-500gt)
-- [Flag State Registration: How to Choose the Right Flag for Your Yacht](https://forelandmarine.com/insights/flag-state-registration-guide-for-yacht-owners)
-- [MCA Large Yacht Code (LY3): What Owners Must Comply With](https://forelandmarine.com/insights/mca-large-yacht-code-requirements)
+- [A Practical Guide to ISM Compliance for Yacht Owners](https://www.forelandmarine.com/insights/ism-compliance-guide-for-yacht-owners)
+- [A Guide to ISM Compliance for Yachts Under 500GT](https://www.forelandmarine.com/insights/ism-compliance-yachts-under-500gt)
+- [Flag State Registration: How to Choose the Right Flag for Your Yacht](https://www.forelandmarine.com/insights/flag-state-registration-guide-for-yacht-owners)
+- [MCA Large Yacht Code (LY3): What Owners Must Comply With](https://www.forelandmarine.com/insights/mca-large-yacht-code-requirements)
 
 ## Contact
 
 - Email: info@forelandmarine.com
 - Address: 7 Bell Yard, London, WC2A 2JR, United Kingdom
-- Website: https://forelandmarine.com
-- LinkedIn: https://www.linkedin.com/company/foreland-marine-consultancy
+- Website: https://www.forelandmarine.com
+- LinkedIn: https://www.linkedin.com/company/forelandmarine
 - Instagram: https://instagram.com/forelandmarine
 
 ## Frequently Asked Questions
 
 Q: How do I buy a yacht?
-A: Buying a yacht starts with a clear definition of how the yacht will actually be used: cruising area, weeks per year, guest capacity, sailing or motor, racing or family use. From that brief, the choice between new build and pre-owned, the size and type of yacht, the realistic budget for purchase and annual running costs, and the team to engage all follow logically. Foreland Marine recommends engaging an independent yacht owner's representative before viewing yachts, not after, so the buyer has impartial advice on yard quality, contract terms, and pre-purchase survey before any money is committed. The full first-time buyer's guide is at https://forelandmarine.com/insights/how-to-buy-your-first-superyacht.
+A: Buying a yacht starts with a clear definition of how the yacht will actually be used: cruising area, weeks per year, guest capacity, sailing or motor, racing or family use. From that brief, the choice between new build and pre-owned, the size and type of yacht, the realistic budget for purchase and annual running costs, and the team to engage all follow logically. Foreland Marine recommends engaging an independent yacht owner's representative before viewing yachts, not after, so the buyer has impartial advice on yard quality, contract terms, and pre-purchase survey before any money is committed. The full first-time buyer's guide is at https://www.forelandmarine.com/insights/how-to-buy-your-first-superyacht.
 
 Q: What is Foreland Marine?
 A: Foreland Marine Consultancy Ltd is an independent superyacht consultancy based in London. The company provides yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to over 60 metres. Foreland Marine works exclusively on behalf of yacht owners with no yard affiliations, broker commissions, or supplier referral fees.
@@ -232,4 +232,4 @@ Q: What is the difference between an owner's representative, a project manager, 
 A: A yacht broker introduces buyers and sellers and is paid a commission by the seller side. A project manager runs the day-to-day execution of a build or refit and is often employed by the yard or the owner. An owner's representative is engaged independently by the owner, with no commercial relationship to the yard or the broker, and provides oversight, technical review and protection of the owner's interest across the whole project. The three roles are routinely conflated. Foreland Marine acts as owner's representative only.
 
 Q: What does Foreland Marine's Technical Support service include?
-A: Technical Support is a tiered monthly retainer (Standby, Direct and Captive) providing on-call engineering support, audits, and parts coordination for yachts in the 24 to 45 metre range. Standby provides remote support and quarterly audits. Direct adds on-site visits and parts management. Captive includes a dedicated engineer assigned to the vessel. See https://forelandmarine.com/technical-support for current pricing.
+A: Technical Support is a tiered monthly retainer (Standby, Direct and Captive) providing on-call engineering support, audits, and parts coordination for yachts in the 24 to 45 metre range. Standby provides remote support and quarterly audits. Direct adds on-site visits and parts management. Captive includes a dedicated engineer assigned to the vessel. See https://www.forelandmarine.com/technical-support for current pricing.

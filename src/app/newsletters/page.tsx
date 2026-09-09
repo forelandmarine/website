@@ -4,9 +4,9 @@ import { Glow, HorizonLine } from "@/components/ui";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 export const metadata: Metadata = {
-  title: "The Foreland Quarter — Newsletter",
+  title: { absolute: "The Foreland Quarter Newsletter | Foreland Marine" },
   description:
-    "The Foreland Quarter is the quarterly newsletter of Foreland Marine Consultancy. A short letter from London on yacht management, refit, new build and the wider superyacht industry.",
+    "The quarterly letter from Foreland Marine on yacht management, refit, new build and the wider superyacht industry.",
   alternates: { canonical: "https://www.forelandmarine.com/newsletters" },
 };
 

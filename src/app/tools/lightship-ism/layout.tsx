@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Lightship ISM - Yacht Administration & Compliance Platform",
+  title: { absolute: "Lightship ISM Compliance Platform | Foreland Marine" },
   description:
     "Lightship streamlines yacht administration with ISM compliance, incident reporting, project management, logbooks, and AIS sea service records in one clear interface.",
   alternates: {

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PMS Database Setup & Population Services",
+  title: { absolute: "PMS Database Setup for Yachts | Foreland Marine" },
   description:
-    "Expert planned maintenance system database setup, licensing, and on-site population. Authorised DeepBlue agents. We also work with IDEA, SeaHub, Aquator and other leading PMS platforms.",
+    "Planned maintenance system setup, licensing and on-site population. Authorised DeepBlue agents, also working with IDEA, SeaHub and Aquator.",
   alternates: {
     canonical: "https://www.forelandmarine.com/tools/pms-database",
   },
   keywords: ["yacht PMS database", "planned maintenance system yacht", "DeepBlue PMS", "yacht maintenance software", "PMS setup yacht", "superyacht maintenance system"],
   openGraph: {
-    title: "PMS Database Setup & Population Services",
+    title: "PMS Database Setup for Yachts",
     description:
-      "Expert planned maintenance system database setup, licensing, and on-site population. Authorised DeepBlue agents. We also work with IDEA, SeaHub, Aquator and other leading PMS platforms.",
+      "Planned maintenance system setup, licensing and on-site population. Authorised DeepBlue agents, also working with IDEA, SeaHub and Aquator.",
   },
 };
 

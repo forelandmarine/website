@@ -31,6 +31,7 @@ export default function InsightsHero() {
           src="/images/ocean-aerial.jpg"
           alt="Aerial view of ocean"
           fill
+          sizes="100vw"
           className="object-cover opacity-50 saturate-[1.15] scale-110"
           priority
         />

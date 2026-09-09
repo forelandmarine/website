@@ -4,6 +4,16 @@ import { NotConnected } from "@/components/admin/NotConnected";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { getCurrentProfile } from "@/lib/supabase/server";
 
+import type { Metadata } from "next";
+
+// The admin is behind auth, but the route still answered 200 to a crawler and
+// canonicalised to the homepage. Keep it out of the index explicitly.
+export const metadata: Metadata = {
+  title: "Admin",
+  robots: { index: false, follow: false },
+  alternates: { canonical: "https://www.forelandmarine.com/admin" },
+};
+
 export const dynamic = "force-dynamic";
 // Run admin functions next to Supabase (eu-west-1 / Ireland) so the several
 // sequential queries per page are local, not transatlantic.

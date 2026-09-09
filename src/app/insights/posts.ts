@@ -6,8 +6,19 @@ export type FAQ = {
 export type Post = {
   slug: string;
   title: string;
+  /** Standfirst shown on the page and used in Article schema. */
   description: string;
+  /**
+   * Meta and OG description. Only set where the standfirst runs past the
+   * ~160 characters a result listing will show; otherwise description is used.
+   */
+  metaDescription?: string;
   date: string;
+  /**
+   * Set only when the article has genuinely been revised, so dateModified
+   * stays a real signal instead of tracking datePublished on every post.
+   */
+  updated?: string;
   category: string;
   readTime: string;
   keywords: string[];
@@ -21,6 +32,8 @@ export const posts: Post[] = [
     title: "Owner's Representative vs Project Manager vs Broker: What's the Difference?",
     description:
       "The three roles get conflated in superyacht buying. They are not the same. A short, plain explanation of what each does, who pays them, and why the difference matters when you are spending serious money.",
+    metaDescription:
+      "Broker, project manager, owner's representative. What each one does, who pays them, and why conflating the three costs owners money.",
     date: "2026-05-06",
     category: "New Build",
     readTime: "8 min read",
@@ -272,6 +285,8 @@ export const posts: Post[] = [
     title: "J Class Yacht Management: What Makes It Different",
     description:
       "Managing a J Class yacht is unlike any other vessel in the superyacht fleet. From rig loads that rival America's Cup boats to heritage obligations and a racing calendar that spans the Atlantic, here is what owners and captains need to know.",
+    metaDescription:
+      "Rig loads near America's Cup levels, heritage obligations and a transatlantic racing calendar. What J Class management asks of an owner.",
     date: "2026-04-13",
     category: "Yacht Management",
     readTime: "12 min read",
@@ -1642,6 +1657,8 @@ export const posts: Post[] = [
     title: "Choosing a Shipyard for Your Yacht Refit: A Practical Guide",
     description:
       "How to evaluate refit shipyards, what to expect from the tendering process, common pitfalls to avoid, and the role of an owner's representative in yard selection and relationship management.",
+    metaDescription:
+      "How to evaluate refit yards, run a tender that holds, and avoid the pitfalls that turn a fixed price into a variation account.",
     date: "2026-04-07",
     category: "Refit",
     readTime: "11 min read",
@@ -1762,6 +1779,8 @@ export const posts: Post[] = [
     title: "A Guide to ISM Compliance for Yachts Under 500GT",
     description:
       "What the ISM Code requires, why yachts under 500GT increasingly need to comply, how to build a practical safety management system, and how to maintain compliance year-round.",
+    metaDescription:
+      "What the ISM Code asks of yachts under 500GT, how to build a safety management system that crews use, and how to keep it current.",
     date: "2026-04-05",
     category: "Compliance",
     readTime: "11 min read",
@@ -1883,6 +1902,8 @@ export const posts: Post[] = [
     title: "What is a Yacht Owner's Representative and Why Independence Matters",
     description:
       "A comprehensive guide to the role of a yacht owner's representative: what the role covers, why independence is non-negotiable, what it costs, when to appoint one, and the questions every owner should ask. Covers SYBAss and YORR accreditation.",
+    metaDescription:
+      "What the role covers, why independence is not negotiable, what it costs, when to appoint, and the questions to ask before you do.",
     date: "2026-05-06",
     category: "New Build",
     readTime: "16 min read",
@@ -2013,6 +2034,8 @@ export const posts: Post[] = [
     title: "Why Independent Yacht Management Matters",
     description:
       "Not all yacht management companies operate the same way. We explain what independent yacht management means, why conflicts of interest are common in the industry, and what owners should look for when choosing a management partner.",
+    metaDescription:
+      "Where conflicts of interest sit in yacht management, how to spot them in a proposal, and what independence should mean in practice.",
     date: "2026-04-04",
     category: "Yacht Management",
     readTime: "8 min read",
@@ -2093,6 +2116,8 @@ export const posts: Post[] = [
     title: "Carbon Composite Construction: What Owners Need to Know",
     description:
       "Carbon composite is the material of choice for performance sailing yachts, but the construction process demands rigorous engineering and oversight. We cover prepreg vs infusion, quality control, cost-weight tradeoffs, and why independent technical representation matters during a composite build.",
+    metaDescription:
+      "Prepreg against infusion, quality control, the cost and weight trade, and why a composite build needs owner-side technical oversight.",
     date: "2026-03-28",
     category: "New Build",
     readTime: "9 min read",
@@ -2351,6 +2376,8 @@ export const posts: Post[] = [
     title: "The Role of an Owner's Representative in a New Build Project",
     description:
       "What does an owner's representative actually do during a new build superyacht project? We break down the responsibilities, from contract negotiation and yard selection through to sea trials and delivery, and explain why independent representation protects your investment.",
+    metaDescription:
+      "From contract negotiation and yard selection through to sea trials and delivery: what an owner's representative does on a new build.",
     date: "2026-03-15",
     category: "New Build",
     readTime: "8 min read",
@@ -2423,6 +2450,8 @@ export const posts: Post[] = [
     title: "A Practical Guide to ISM Compliance for Yacht Owners",
     description:
       "ISM Code compliance is a legal requirement for commercially operated yachts over 500 GT, but the process can be opaque and overwhelming. This guide covers Document of Compliance, Safety Management Systems, designated persons ashore, and how to prepare for flag state audits.",
+    metaDescription:
+      "Document of Compliance, safety management systems, the designated person ashore, and how to prepare for a flag state audit.",
     date: "2026-02-28",
     category: "Compliance",
     readTime: "10 min read",
@@ -2521,6 +2550,8 @@ export const posts: Post[] = [
     title: "Refit Project Management: What to Expect from Planning to Sea Trials",
     description:
       "A well-managed refit protects your budget, your timeline and your vessel. We walk through the key phases of a superyacht refit: scope definition, yard tendering, contract negotiation, project oversight, quality assurance and sea trials.",
+    metaDescription:
+      "The phases of a superyacht refit: scope, tender, contract, site management, quality assurance and sea trials, and what each protects.",
     date: "2026-02-10",
     category: "Refit",
     readTime: "7 min read",
@@ -2607,7 +2638,10 @@ export const posts: Post[] = [
       "Flag State Registration: How to Choose the Right Flag for Your Yacht",
     description:
       "A practical guide to flag state registration for superyacht owners. Covers the major flag states, their regulatory requirements, tax implications, and how your choice of flag affects insurance, crew, and operations.",
+    metaDescription:
+      "Marshall Islands, Cayman, Malta or Isle of Man. How the major registries differ on code access, port state standing, cost and charter, and how to choose.",
     date: "2026-04-12",
+    updated: "2026-09-09",
     category: "Compliance",
     readTime: "11 min read",
     keywords: [
@@ -2619,6 +2653,28 @@ export const posts: Post[] = [
       "Marshall Islands yacht flag",
       "Malta yacht flag",
       "yacht flag state requirements",
+    ],
+    faqs: [
+      {
+        question: "Marshall Islands or Cayman Islands for a private yacht?",
+        answer:
+          "For a yacht in private use with no charter intention, the Marshall Islands is usually the more economical answer: administration is faster, fees are lower, and the ownership and financing structures are familiar to every major yacht lender. Cayman earns its premium where the yacht is commercially operated or over about 40 metres, because as a Red Ensign Group Category 1 registry it is technically backed by the UK Maritime and Coastguard Agency and carries the code access and port state standing that go with that. Both registries sit on the Paris MoU White List. The deciding question is almost always whether the yacht will charter, not what the registry costs.",
+      },
+      {
+        question: "What is a Red Ensign Group Category 1 registry?",
+        answer:
+          "Category 1 members of the Red Ensign Group may register a vessel of any tonnage and are technically supported by the UK Maritime and Coastguard Agency. The Cayman Islands, the Isle of Man, Gibraltar, Bermuda and the British Virgin Islands are among them. In practice the significance for a yacht owner is access to the MCA codes for large commercial yachts, and the way port state control reads the flag when the yacht arrives.",
+      },
+      {
+        question: "How much does it cost to register a superyacht?",
+        answer:
+          "Registration and annual tonnage fees are a small line against the cost of running the yacht, typically a few thousand pounds a year across the major registries and rarely enough to decide the question on their own. The costs that follow from the choice matter far more: survey and certification regime, crew certificate recognition, insurance rating, and the tax treatment that flows from the flag and the ownership structure together.",
+      },
+      {
+        question: "Can you change a yacht's flag after registration?",
+        answer:
+          "Yes, and it is done regularly, usually at a change of ownership, a major refit, or a restructuring of the owning entity. It is not a trivial exercise. Expect a fresh survey and certification cycle, possible crew certificate revalidation, mortgage discharge and re-registration if the yacht is financed, and a period of coordination between the outgoing and incoming registries. Planning the change around a yard period rather than a season is the difference between disruption and lost operating weeks.",
+      },
     ],
     content: `<p>Every yacht that goes to sea must be registered under the flag of a sovereign state. This is not a formality. Your choice of flag state affects the regulations your vessel must comply with, the qualifications your crew must hold, the taxes and fees you pay, the insurance terms available to you, and the reputation your yacht carries in every port it enters. For superyacht owners, flag state registration is one of the most consequential decisions in the ownership process, and it is one that deserves careful, independent analysis rather than a default choice driven by a broker or management company's convenience.</p>
 
@@ -2708,6 +2764,18 @@ export const posts: Post[] = [
 <p>It is possible to change your yacht's flag state, a process known as re-flagging or transfer of flag. This involves deletion from the current register, registration on the new register, and compliance with the new flag state's survey and certification requirements. The process typically takes two to four months if well-planned, though it can take longer if there are outstanding compliance issues with the current flag or if the vessel needs modifications to meet the new flag state's requirements.</p>
 
 <p>Common reasons for re-flagging include a change in the owner's personal circumstances, a desire for a different regulatory framework, tax restructuring, or dissatisfaction with the current flag state's administration. Re-flagging is a significant administrative exercise, but it is not uncommon and is straightforward when managed by experienced professionals.</p>
+
+<h2>Marshall Islands or Cayman Islands: A Direct Comparison</h2>
+
+<p>These two registries take the majority of large yacht tonnage between them, and the choice between them is the one owners ask about most often. They are not interchangeable, and the right answer depends far more on how the yacht will be used than on the registry fee.</p>
+
+<p>The <a href="https://www.cishipping.com" target="_blank" rel="noopener noreferrer">Cayman Islands Shipping Registry</a> is a Category 1 member of the <a href="https://www.redensigngroup.org" target="_blank" rel="noopener noreferrer">Red Ensign Group</a>, which means it is technically backed by the UK Maritime and Coastguard Agency and may register a vessel of any tonnage. That backing is what gives Cayman access to the MCA codes, and it is the practical reason so many commercially operated yachts over 24 metres sit there. Port state control officers in the Mediterranean and the UK know the flag well, and a Cayman certificate tends to be read as a statement about how the yacht is run rather than merely where it is registered.</p>
+
+<p>The <a href="https://www.register-iri.com" target="_blank" rel="noopener noreferrer">Marshall Islands registry</a>, administered from Virginia, is an open registry with a very large commercial fleet behind it. Its administration is faster, its fee structure is generally lower, and its ownership and financing structures are familiar to every major yacht lender. For a privately used yacht that is not going to charter, the practical differences from Cayman narrow considerably, and the Marshall Islands often wins on cost and speed of registration alone. Both registries sit on the Paris MoU White List.</p>
+
+<p>Where the two genuinely diverge is charter. If there is any prospect of commercial use, the code the flag gives you access to, and how the intended cruising grounds treat that code, matters more than anything else on the comparison. That question should be settled with the yacht's tax and legal advisers before the registry is chosen, not after, because changing flag once the yacht is in service is disruptive and rarely cheap.</p>
+
+<p>The mistake to avoid is treating this as a two-horse race by default. <a href="https://www.transport.gov.mt" target="_blank" rel="noopener noreferrer">Malta</a> and the <a href="https://www.iomshipregistry.com" target="_blank" rel="noopener noreferrer">Isle of Man</a> are both credible for a yacht that will spend its life in European waters, and for some ownership structures they are the better answer. The registry should follow the operating plan, not lead it.</p>
 
 <h2>Common Mistakes Owners Make</h2>
 
@@ -3163,6 +3231,8 @@ export const posts: Post[] = [
     title: "How to Choose an Independent Yacht Management Company",
     description:
       "Not all yacht management companies are equal. Learn what to look for when selecting an independent management partner, from technical capability and flag state expertise to transparency, reporting and alignment with your interests as an owner.",
+    metaDescription:
+      "What to test when selecting an independent management partner: technical capability, flag expertise, reporting and fee alignment.",
     date: "2026-01-22",
     category: "Yacht Management",
     readTime: "6 min read",
@@ -3380,6 +3450,8 @@ export const posts: Post[] = [
     title: "Classic Sailing Yacht Refit: What to Expect",
     description:
       "A complete guide to refitting a classic sailing superyacht. Specification, yard selection, the five phases, realistic budget ranges, and how to choose an independent project manager.",
+    metaDescription:
+      "Specification, yard selection, the five phases, realistic budget ranges, and how to choose an independent project manager.",
     date: "2026-05-11",
     category: "Refit",
     readTime: "11 min read",
@@ -3804,6 +3876,8 @@ export const posts: Post[] = [
     title: "Owner's Representative vs Yacht Manager: How They Differ",
     description:
       "The owner's representative and the yacht manager are different roles with different jobs. How to tell them apart, when you need each, and why you should not combine them.",
+    metaDescription:
+      "Two different roles with two different jobs. How to tell them apart, when you need each, and why combining them rarely works.",
     date: "2026-05-11",
     category: "Yacht Management",
     readTime: "10 min read",
@@ -3942,6 +4016,8 @@ export const posts: Post[] = [
     title: "Solent Superyacht Refit Yards: A 2026 Comparison",
     description:
       "An independent comparison of UK Solent and South Coast superyacht refit yards in 2026, with lift capacities, dock dimensions, specialist trades, and how to choose between them.",
+    metaDescription:
+      "Lift capacities, dock dimensions and specialist trades across the Solent and South Coast refit yards, and how to choose between them.",
     date: "2026-05-11",
     category: "Refit",
     readTime: "12 min read",

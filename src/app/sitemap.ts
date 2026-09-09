@@ -12,13 +12,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // The insights index genuinely changes when a new article is published,
   // so date it from the most recent post rather than the static constant.
   const latestPostDate = posts.reduce(
-    (latest, post) => (post.date > latest ? post.date : latest),
+    (latest, post) => {
+      const d = post.updated ?? post.date;
+      return d > latest ? d : latest;
+    },
     posts[0]?.date ?? "2026-08-04",
   );
 
   const insightEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/insights/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.updated ?? post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

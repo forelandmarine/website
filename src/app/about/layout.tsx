@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us - Independent Yacht Consultancy",
+  title: { absolute: "About Foreland Marine | Independent Yacht Consultancy" },
   description:
-    "Foreland Marine Consultancy. Independent yacht consultancy built on blue water experience. SYBAss accredited, specialising in performance sailing yachts from 24 to 60 metres.",
+    "An independent yacht consultancy founded by two former J Class senior engineers. SYBAss accredited, working on yachts from 24 to 60 metres.",
   openGraph: {
     title: "About Foreland Marine, Independent Yacht Consultancy",
     description:

@@ -821,9 +821,30 @@ export default function RunningCostCalculatorPage() {
           <h2 className="text-2xl sm:text-3xl font-light text-white mb-6">
             Where do these numbers come from?
           </h2>
-          <p className="text-muted leading-relaxed mb-8">
+          <p className="text-muted leading-relaxed mb-6">
             The cost model behind this calculator is based on published industry data, supplemented by
             Foreland Marine&apos;s direct experience managing yachts in the 24 to 60 metre range.
+          </p>
+          <p className="text-muted leading-relaxed mb-8">
+            It is built from the bottom up, line by line, against an estimated
+            market value for a yacht of that size and type. That is a different
+            basis from the percentage-of-purchase-price rule of thumb, and it
+            gives a different answer. A 50 metre motor yacht in this model runs
+            around EUR 2.3 million a year on a market value near EUR 26 million,
+            about 9 percent. The same yacht bought new at EUR 40 million or more
+            lands nearer 12 to 15 percent of what the owner actually paid, which
+            is the figure{" "}
+            <a
+              href="https://firstownersreference.com/01-reality-of-ownership"
+              className="text-accent hover:text-white transition-colors"
+            >
+              Chapter 01 of The First Owner&apos;s Reference
+            </a>{" "}
+            works from. Neither number is wrong. They are answering different
+            questions, and an owner comparing quotes should know which one is in
+            front of them. This calculator is a budgeting tool for a yacht you
+            already own or are about to operate; the publication&apos;s version
+            is an affordability check before you buy.
           </p>
           <ul className="space-y-4">
             {[

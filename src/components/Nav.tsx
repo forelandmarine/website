@@ -22,6 +22,7 @@ const navLinks: {
 ];
 
 const toolLinks = [
+  { label: "All tools", href: "/tools" },
   { label: "Lightship", href: "/tools/lightship-ism" },
   { label: "SeaTime Tracker App", href: "/tools/seatime-tracker" },
   { label: "Planned Maintenance", href: "/tools/pms-database" },
@@ -116,8 +117,11 @@ export default function Nav() {
                       <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </Link>
-                  {consultancyOpen && (
-                    <div className="absolute top-full left-0 pt-2 w-48">
+                  <div
+                    className={`absolute top-full left-0 pt-2 w-48 transition-opacity ${
+                      consultancyOpen ? "opacity-100" : "invisible opacity-0 pointer-events-none"
+                    }`}
+                  >
                     <div className="border border-white/10 bg-bg1 shadow-xl shadow-black/40 py-1">
                       {link.children.map((child) => (
                         <Link
@@ -129,8 +133,7 @@ export default function Nav() {
                         </Link>
                       ))}
                     </div>
-                    </div>
-                  )}
+                  </div>
                 </div>
               ) : (
                 <Link
@@ -155,8 +158,11 @@ export default function Nav() {
                   <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
-              {toolsOpen && (
-                <div className="absolute top-full left-0 pt-2 w-48">
+              <div
+                className={`absolute top-full left-0 pt-2 w-48 transition-opacity ${
+                  toolsOpen ? "opacity-100" : "invisible opacity-0 pointer-events-none"
+                }`}
+              >
                 <div className="border border-white/10 bg-bg1 shadow-xl shadow-black/40 py-1">
                   {toolLinks.map((link) => (
                     <Link
@@ -168,8 +174,7 @@ export default function Nav() {
                     </Link>
                   ))}
                 </div>
-                </div>
-              )}
+              </div>
             </div>
 
             <Link

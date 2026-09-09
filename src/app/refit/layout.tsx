@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Yacht Refit Project Management | Independent, Owner-Side",
+  title: { absolute: "Yacht Refit Project Management | Foreland Marine" },
   keywords: [
     "yacht refit project management",
     "superyacht refit project management",

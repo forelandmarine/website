@@ -8,7 +8,7 @@ export async function GET() {
 Website: https://www.forelandmarine.com
 Email: info@forelandmarine.com
 Address: 7 Bell Yard, London, WC2A 2JR, United Kingdom
-LinkedIn: https://www.linkedin.com/company/foreland-marine-consultancy
+LinkedIn: https://www.linkedin.com/company/forelandmarine
 Instagram: https://instagram.com/forelandmarine
 
 ---

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Foreland Marine | Yacht Management & Consultancy",
+  title: { absolute: "Contact Foreland Marine" },
   description:
     "Get in touch with Foreland Marine Consultancy. Based in London with consultants across all major yachting hubs worldwide.",
   openGraph: {

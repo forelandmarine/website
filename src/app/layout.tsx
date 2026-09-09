@@ -16,11 +16,11 @@ const nunitoSans = Nunito_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Independent Superyacht Refit & New Build Consultancy | Foreland Marine",
+    default: "Independent Superyacht Consultancy | Foreland Marine",
     template: "%s | Foreland Marine",
   },
   description:
-    "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. SYBAss-accredited, UK-based, acting for owners only.",
+    "Independent superyacht consultancy for refit, new build owner's representation and yacht management. SYBAss accredited, acting for owners only.",
   metadataBase: new URL("https://www.forelandmarine.com"),
   alternates: {
     canonical: "https://www.forelandmarine.com",
@@ -57,6 +57,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={nunitoSans.variable}>
       <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="https://www.forelandmarine.com/llms.txt"
+          title="llms.txt"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -83,9 +89,16 @@ export default function RootLayout({
                   "Independent yacht consultancy providing project management, owner's representation, technical consultancy and yacht management for sailing and motor yachts worldwide.",
                 sameAs: [
                   "https://instagram.com/forelandmarine",
-                  "https://www.linkedin.com/company/foreland-marine-consultancy",
+                  "https://www.linkedin.com/company/forelandmarine/",
                   "https://find-and-update.company-information.service.gov.uk/company/15785851",
                 ],
+                publishingPrinciples: "https://www.forelandmarine.com/about",
+                subOrganization: {
+                  "@type": "Organization",
+                  "@id": "https://firstownersreference.com#publisher",
+                  name: "The First Owner's Reference",
+                  url: "https://firstownersreference.com",
+                },
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "7 Bell Yard",
@@ -108,7 +121,10 @@ export default function RootLayout({
                   { "@type": "Organization", name: "Superyacht Builders Association", alternateName: "SYBAss", url: "https://www.sybass.org" },
                   { "@type": "Organization", name: "Superyacht Alliance", url: "https://superyachtalliance.org" },
                 ],
-                founder: { "@id": "https://www.forelandmarine.com/#jack-macnally" },
+                founder: [
+                  { "@id": "https://www.forelandmarine.com/#jack-macnally" },
+                  { "@id": "https://www.forelandmarine.com/#daniel-marks" },
+                ],
                 serviceType: [
                   "Yacht Management",
                   "New Build Owner's Representation",
@@ -143,12 +159,34 @@ export default function RootLayout({
                 url: "https://www.forelandmarine.com/about",
                 sameAs: [
                   "https://www.linkedin.com/in/jmacnally/",
+                  "https://firstownersreference.com#jack-macnally",
+                  "https://firstownersreference.com/contributors",
                 ],
                 knowsAbout: [
                   "Superyacht Management",
                   "Yacht Refit",
                   "New Build Owner's Representation",
                   "Performance Sailing Yacht Engineering",
+                  "J Class Yachts",
+                ],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "@id": "https://www.forelandmarine.com/#daniel-marks",
+                name: "Daniel Marks",
+                jobTitle: "Director",
+                worksFor: { "@id": "https://www.forelandmarine.com/#organization" },
+                url: "https://www.forelandmarine.com/about",
+                sameAs: [
+                  "https://www.linkedin.com/in/daniel-marks-0a0a4b6b/",
+                  "https://firstownersreference.com#daniel-marks",
+                  "https://firstownersreference.com/contributors",
+                ],
+                knowsAbout: [
+                  "Superyacht Management",
+                  "Yacht Refit",
+                  "New Build Owner's Representation",
                   "J Class Yachts",
                 ],
               },

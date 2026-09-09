@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Yacht Surveys | Sub and Over 24 Metres",
+  title: { absolute: "Yacht Surveys, Sub and Over 24 Metres | Foreland Marine" },
   keywords: [
     "yacht survey",
     "yacht surveyor",

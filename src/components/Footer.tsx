@@ -6,10 +6,12 @@ const services = [
   { label: "New Build", href: "/owners-representation" },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy" },
+  { label: "Yacht Surveys", href: "/technical-consultancy/surveys" },
   { label: "Technical Support", href: "/technical-support" },
 ];
 
 const tools = [
+  { label: "All tools", href: "/tools" },
   { label: "Lightship ISM", href: "/tools/lightship-ism" },
   { label: "SeaTime Tracker", href: "/tools/seatime-tracker" },
   { label: "Planned Maintenance", href: "/tools/pms-database" },
@@ -22,6 +24,7 @@ const company = [
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
   { label: "Newsletter", href: "/newsletters" },
+  { label: "The First Owner's Reference", href: "https://firstownersreference.com" },
   { label: "Contact", href: "/contact" },
 ];
 

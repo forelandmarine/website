@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Marine Weather Routing & Forecasting | OrcaMet Partnership",
+  title: { absolute: "Marine Weather Routing for Yachts | Foreland Marine" },
   description:
     "Professional weather routing for racing, ocean crossings, and deliveries. Bespoke forecasting and route optimisation in partnership with OrcaMet.",
   alternates: {
