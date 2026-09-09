@@ -2393,7 +2393,7 @@ export const posts: Post[] = [
   },
   {
     slug: "the-role-of-an-owners-representative",
-    title: "The Role of an Owner's Representative in a New Build Project",
+    title: "New Build Timeline: What the Owner's Rep Does at Each Stage",
     description:
       "What does an owner's representative actually do during a new build superyacht project? We break down the responsibilities, from contract negotiation and yard selection through to sea trials and delivery, and explain why independent representation protects your investment.",
     metaDescription:
@@ -2402,26 +2402,19 @@ export const posts: Post[] = [
     category: "New Build",
     readTime: "8 min read",
     keywords: [
-      "owner's representative",
-      "new build superyacht",
-      "yacht new build project management",
-      "superyacht owner's rep",
-      "new build oversight",
-      "yacht construction management",
+      "new build yacht timeline",
+      "owner's representative new build stages",
+      "yacht build oversight",
+      "design review yacht new build",
+      "construction oversight superyacht",
+      "sea trials and delivery yacht",
+      "yacht warranty period management",
     ],
     content: `<p>Commissioning a new build superyacht is one of the most significant investments a private individual or family office can make. Projects routinely span three to five years, involve dozens of subcontractors across multiple countries, and carry budgets measured in tens or hundreds of millions of euros. In this environment, having an experienced, independent owner's representative is not a luxury. It is a fundamental safeguard for your time, your money, and the quality of the finished vessel.</p>
 
-<h2>What Does an Owner's Representative Actually Do?</h2>
+<h2>Where this piece sits</h2>
 
-<p>An owner's representative acts as the owner's eyes, ears, and technical authority throughout the entire new build superyacht project. Their role is to represent the owner's interests at every stage: from the earliest concept discussions through to sea trials and delivery, ensuring that the yacht is built to specification, on time, and within budget.</p>
-
-<p>Unlike a yacht broker, who facilitates a transaction, or a yard's project manager, who serves the shipbuilder's interests, the owner's rep works exclusively for the owner. This independence is critical. It means their advice on contract terms, design decisions, material choices, and construction quality is never compromised by conflicting commercial relationships.</p>
-
-<h2>Why Independence Matters</h2>
-
-<p>The yacht construction management process is inherently adversarial in a commercial sense. The yard wants to maximise margin; the owner wants maximum quality and value. Without independent new build oversight, owners can find themselves relying entirely on information provided by the party on the other side of the table.</p>
-
-<p>An independent superyacht owner's rep provides objective reporting on build progress, flags quality issues before they become expensive problems, and ensures that change orders are properly documented and fairly priced. They bring no bias from brokerage commissions, charter interests, or yard affiliations.</p>
+<p>This is the stage-by-stage account of what the owner's representative does across a new build, from pre-contract through to the end of the warranty period. It assumes you already know what the role is. If you do not, or if the question is whether you need one at all, <a href="/insights/what-is-a-yacht-owners-representative">what a yacht owner's representative is, and why independence matters</a> covers the definition, the cost, the three roles that get conflated, and the five questions to ask any candidate. The <a href="/owners-representation">owner's representation</a> page sets out the contract terms that decide how a build behaves under pressure.</p>
 
 <h2>Key Phases of Involvement</h2>
 
@@ -2446,14 +2439,6 @@ export const posts: Post[] = [
 <h3>Delivery and Handover</h3>
 
 <p>At delivery, the owner's rep ensures all contractual obligations have been met, that documentation packages are complete (including classification certificates, flag state documentation, equipment manuals, and warranty information), and that the yacht is ready for operational service. They also advise on warranty management in the months following delivery.</p>
-
-<h2>Qualifications to Look For</h2>
-
-<p>When selecting an owner's representative for a yacht new build project management role, look for demonstrable experience in superyacht construction, not just operational yacht management. The representative should have a deep understanding of shipbuilding processes, classification society rules, flag state regulations, and marine engineering systems.</p>
-
-<p>Industry accreditations are a meaningful indicator of standards. <strong>SYBAss</strong> (Superyacht Builders Association) accreditation signifies that a company meets recognised professional standards in new build representation. The <strong>YORR</strong> (Yacht Owners Representative Register) is another benchmark that owners should consider when evaluating candidates.</p>
-
-<p>At Foreland Marine, the accreditation is held through YORP and the firm is registered on YORR, which is a narrower claim than SYBAss membership and a verifiable one of professional practice in new build oversight and yacht construction management. Our team brings direct experience from shipyard environments, classification societies, and yacht operations, giving us a rounded perspective that purely shore-side consultants often lack.</p>
 
 <h2>How It Protects Your Investment</h2>
 
