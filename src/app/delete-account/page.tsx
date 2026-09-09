@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { HorizonLine } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Account & Data Deletion — SeaTime Tracker",
+  title: "Account and data deletion, SeaTime Tracker",
   description:
     "How to permanently delete your SeaTime Tracker account and associated data, in the app or by email.",
   alternates: { canonical: "https://www.forelandmarine.com/delete-account" },
@@ -27,7 +27,7 @@ export default function DeleteAccountPage() {
           <div className="space-y-10">
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">Option 1 — In the app (fastest)</h2>
+              <h2 className="text-xl font-light text-white mb-4">Option 1, in the app (fastest)</h2>
               <ol className="space-y-2 text-muted list-none pl-0">
                 {[
                   <>Open <strong className="text-white">SeaTime Tracker</strong> and sign in.</>,
@@ -48,7 +48,7 @@ export default function DeleteAccountPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">Option 2 — By email (no app needed)</h2>
+              <h2 className="text-xl font-light text-white mb-4">Option 2, by email (no app needed)</h2>
               <p className="text-muted leading-relaxed">
                 If you can no longer access the app, email{" "}
                 <a href="mailto:dan@forelandmarine.com?subject=Delete%20my%20SeaTime%20Tracker%20account" className="text-accent hover:underline">
@@ -79,7 +79,7 @@ export default function DeleteAccountPage() {
                 ))}
               </ul>
               <p className="text-muted leading-relaxed mt-4">
-                This action is <strong className="text-white">irreversible</strong> — deleted data cannot be recovered.
+                This action is <strong className="text-white">irreversible</strong>: deleted data cannot be recovered.
               </p>
             </div>
 

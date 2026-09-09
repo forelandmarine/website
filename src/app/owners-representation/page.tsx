@@ -384,7 +384,7 @@ export default function NewBuildPage() {
       {/* RELATED SERVICES & FURTHER READING */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <p className="text-sm text-muted">
-          Related: <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link> · <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link> · <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link>
+          Related: <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link>, <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link>, <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link>
         </p>
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">

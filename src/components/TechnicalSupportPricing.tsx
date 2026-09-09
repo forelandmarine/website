@@ -82,8 +82,8 @@ export default function TechnicalSupportPricing({ tiers }: Props) {
               </div>
               <p className="text-sm text-muted/80 mb-1">
                 {isAnnual
-                  ? `€${annual.eur.toLocaleString()} · $${annual.usd.toLocaleString()}`
-                  : `€${monthly.eur.toLocaleString()} · $${monthly.usd.toLocaleString()}`}
+                  ? `€${annual.eur.toLocaleString()}, $${annual.usd.toLocaleString()}`
+                  : `€${monthly.eur.toLocaleString()}, $${monthly.usd.toLocaleString()}`}
               </p>
               {isAnnual && (
                 <p className="text-sm text-muted mb-4">

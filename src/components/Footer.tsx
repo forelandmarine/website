@@ -126,9 +126,9 @@ export default function Footer() {
                 7 Bell Yard, London<br />WC2A 2JR
               </li>
               <li className="text-sm font-light text-muted leading-relaxed">
-                London · Antibes · Palma<br />
-                Fort Lauderdale · Antigua<br />
-                Netherlands · Germany · Italy
+                London, Antibes, Palma<br />
+                Fort Lauderdale, Antigua<br />
+                Netherlands, Germany, Italy
               </li>
             </ul>
           </div>
@@ -144,7 +144,7 @@ export default function Footer() {
             <Image src="/logos/superyacht-uk-white.png" alt="Foreland Marine is a member of Superyacht UK" width={100} height={40} className="h-10 w-auto" />
           </a>
           <a href="https://www.sybass.org" target="_blank" rel="noopener noreferrer" title="SYBAss - Superyacht Builders Association, accrediting owner's representatives" className="hover:opacity-80 transition-opacity px-3 py-2">
-            <Image src="/logos/sybass-white.png" alt="SYBAss accredited owner's representative" width={120} height={40} className="h-10 w-auto" />
+            <Image src="/logos/sybass-white.png" alt="Superyacht Builders Association, accreditation held through the Yacht Owner&apos;s Representative Programme" width={120} height={40} className="h-10 w-auto" />
           </a>
           <a href="https://superyachtalliance.org/register/register-table/" target="_blank" rel="noopener noreferrer" title="YORR - Yacht Owner's Representative Register" className="hover:opacity-80 transition-opacity px-3 py-2">
             <Image src="/logos/yacht-owners-register-white.png" alt="Registered on the Yacht Owner's Representative Register (YORR)" width={170} height={68} className="h-12 w-auto" />

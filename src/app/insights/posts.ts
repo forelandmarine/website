@@ -2148,11 +2148,11 @@ export const posts: Post[] = [
     ],
     content: `<p>Carbon composite has become the defining material of modern performance sailing yacht construction. From 30-foot grand prix racers to 100-foot-plus superyacht tenders and high-performance cruiser-racers, carbon fibre delivers a combination of strength, stiffness, and low weight that no other material can match. But building in carbon composite is not simply a matter of substituting one material for another. It demands specialist engineering, meticulous process control, and a level of quality assurance that goes far beyond conventional GRP or aluminium construction.</p>
 
-<p>For owners commissioning a carbon fibre sailing yacht, understanding the fundamentals of composite yacht construction is essential &mdash; not because you need to become an engineer, but because informed owners make better decisions, ask sharper questions, and are far less likely to accept compromises that affect the longevity and safety of their vessel.</p>
+<p>For owners commissioning a carbon fibre sailing yacht, understanding the fundamentals of composite yacht construction is essential, not because you need to become an engineer, but because informed owners make better decisions, ask sharper questions, and are far less likely to accept compromises that affect the longevity and safety of their vessel.</p>
 
 <h2>Why Carbon Composite?</h2>
 
-<p>The advantage of carbon fibre is straightforward: it offers the highest specific stiffness and specific strength of any practical boatbuilding material. In plain terms, a carbon structure can be significantly lighter than an equivalent aluminium or steel structure while being stiffer and stronger. For a performance sailing yacht, this translates directly into lower displacement, higher righting moment for a given keel weight, and a hull that flexes less under load &mdash; all of which mean more speed, better handling, and greater safety margins in heavy weather.</p>
+<p>The advantage of carbon fibre is straightforward: it offers the highest specific stiffness and specific strength of any practical boatbuilding material. In plain terms, a carbon structure can be significantly lighter than an equivalent aluminium or steel structure while being stiffer and stronger. For a performance sailing yacht, this translates directly into lower displacement, higher righting moment for a given keel weight, and a hull that flexes less under load, all of which mean more speed, better handling, and greater safety margins in heavy weather.</p>
 
 <p>Carbon composite also offers the designer far more freedom to tailor structural properties. By varying fibre orientation, layup sequence, and core materials, the engineering team can place strength and stiffness precisely where they are needed and remove unnecessary material everywhere else. This level of optimisation is simply not possible with isotropic materials like metals.</p>
 
@@ -2164,27 +2164,27 @@ export const posts: Post[] = [
 
 <p>Prepreg is the gold standard for performance sailing yacht construction. The carbon fabric is pre-impregnated with a precisely controlled amount of epoxy resin at the factory, then stored refrigerated until use. During the build, prepreg plies are laid into the mould by hand, vacuum-bagged, and cured in an oven or autoclave at elevated temperature. The result is a laminate with excellent fibre-to-resin ratio, minimal voids, and highly consistent mechanical properties. The major yards building grand prix racing yachts and high-performance cruisers almost universally use prepreg for primary structure.</p>
 
-<p>The trade-off is cost and infrastructure. Prepreg requires climate-controlled storage, a skilled laminating team, and large ovens or autoclaves capable of reaching the specified cure temperature &mdash; typically 80 to 120 degrees Celsius. For large structures, this represents a significant capital investment.</p>
+<p>The trade-off is cost and infrastructure. Prepreg requires climate-controlled storage, a skilled laminating team, and large ovens or autoclaves capable of reaching the specified cure temperature: typically 80 to 120 degrees Celsius. For large structures, this represents a significant capital investment.</p>
 
 <h3>Resin Infusion</h3>
 
 <p>Vacuum resin infusion is a widely used alternative that offers good laminate quality at lower infrastructure cost. Dry carbon fabric is laid into the mould, sealed under a vacuum bag, and liquid resin is drawn through the laminate under vacuum pressure. When executed well, infusion produces laminates with good fibre volume fractions and low void content. It is commonly used for hulls, decks, and structural components on cruising yachts and mid-range performance boats.</p>
 
-<p>The principal risk with infusion is process variability. Resin flow must be carefully controlled to ensure complete wet-out without resin-rich or resin-starved areas. A poorly executed infusion can produce dry spots, voids, or excessive resin content &mdash; all of which degrade structural performance. The skill and experience of the laminating team is critical.</p>
+<p>The principal risk with infusion is process variability. Resin flow must be carefully controlled to ensure complete wet-out without resin-rich or resin-starved areas. A poorly executed infusion can produce dry spots, voids, or excessive resin content, all of which degrade structural performance. The skill and experience of the laminating team is critical.</p>
 
 <h3>Wet Layup</h3>
 
-<p>Wet layup &mdash; where resin is applied by hand to dry fabric &mdash; is the oldest and least controlled method. While it can produce serviceable laminates for non-structural components, it is generally unsuitable for primary structure on a performance sailing yacht. Fibre volume fractions are lower, void content is higher, and consistency between panels is harder to guarantee. Any yard proposing wet layup for structural carbon components on a performance yacht should be questioned closely.</p>
+<p>Wet layup, where resin is applied by hand to dry fabric, is the oldest and least controlled method. While it can produce serviceable laminates for non-structural components, it is generally unsuitable for primary structure on a performance sailing yacht. Fibre volume fractions are lower, void content is higher, and consistency between panels is harder to guarantee. Any yard proposing wet layup for structural carbon components on a performance yacht should be questioned closely.</p>
 
 <h2>Structural Engineering Decisions</h2>
 
 <p>The performance of a carbon composite yacht is determined as much by the structural engineering as by the raw material. Key decisions include fibre orientation (the angles at which carbon plies are stacked to resist anticipated loads), core material selection (honeycomb, foam, or no core), laminate schedule (the specific sequence and weight of plies at each location), and joint design (how panels are bonded together and how hardware is attached).</p>
 
-<p>These decisions must be driven by rigorous structural analysis &mdash; typically finite element analysis (FEA) validated against empirical load data and classification society rules. Owners should expect their design team to provide a detailed structural report and laminate schedule, and they should ensure that the yard follows this schedule precisely during construction. Deviations from the specified laminate &mdash; whether through material substitution, ply omissions, or altered layup sequences &mdash; can have serious consequences for structural integrity.</p>
+<p>These decisions must be driven by rigorous structural analysis: typically finite element analysis (FEA) validated against empirical load data and classification society rules. Owners should expect their design team to provide a detailed structural report and laminate schedule, and they should ensure that the yard follows this schedule precisely during construction. Deviations from the specified laminate, whether through material substitution, ply omissions, or altered layup sequences, can have serious consequences for structural integrity.</p>
 
 <h2>Quality Control During the Build</h2>
 
-<p>Quality assurance is where composite yacht construction either succeeds or fails. The finished laminate is largely invisible once the yacht is completed, which means defects introduced during construction can remain hidden for years &mdash; until a structural failure occurs under load.</p>
+<p>Quality assurance is where composite yacht construction either succeeds or fails. The finished laminate is largely invisible once the yacht is completed, which means defects introduced during construction can remain hidden for years, until a structural failure occurs under load.</p>
 
 <p>Effective quality control during a composite build includes several critical elements:</p>
 
@@ -2192,7 +2192,7 @@ export const posts: Post[] = [
 <li><strong>Incoming material inspection:</strong> verifying that carbon fabrics, resins, and core materials meet specification, are within their shelf life, and have been stored correctly.</li>
 <li><strong>Laminate schedule compliance:</strong> confirming that each ply is laid at the correct orientation, in the correct sequence, with the correct overlap dimensions.</li>
 <li><strong>Cure cycle monitoring:</strong> recording oven or autoclave temperature profiles to verify that the laminate has been cured within the resin manufacturer's specified parameters. Under-curing or over-curing can both degrade mechanical properties.</li>
-<li><strong>Non-destructive testing (NDT):</strong> using ultrasonic inspection, tap testing, or thermography to detect voids, delaminations, or disbonds in the cured laminate. NDT should be performed at key milestones &mdash; after hull cure, after bulkhead bonding, and after keel and rig attachment point installation.</li>
+<li><strong>Non-destructive testing (NDT):</strong> using ultrasonic inspection, tap testing, or thermography to detect voids, delaminations, or disbonds in the cured laminate. NDT should be performed at key milestones, after hull cure, after bulkhead bonding, and after keel and rig attachment point installation.</li>
 <li><strong>Witness points:</strong> defined stages in the build where an independent inspector signs off before work proceeds. These are particularly important for structural bonds that will be inaccessible once the next phase of construction begins.</li>
 </ul>
 
@@ -2206,11 +2206,11 @@ export const posts: Post[] = [
 
 <h2>Why Independent Oversight Matters</h2>
 
-<p>The technical complexity of composite yacht construction makes independent oversight particularly valuable. Unlike steel or aluminium construction, where welds can be visually inspected and material thickness can be easily measured, composite laminates require specialist knowledge and testing equipment to evaluate. An owner without independent representation is heavily reliant on the yard's own quality systems &mdash; and while many yards maintain excellent standards, the absence of external scrutiny creates an obvious risk.</p>
+<p>The technical complexity of composite yacht construction makes independent oversight particularly valuable. Unlike steel or aluminium construction, where welds can be visually inspected and material thickness can be easily measured, composite laminates require specialist knowledge and testing equipment to evaluate. An owner without independent representation is heavily reliant on the yard's own quality systems, and while many yards maintain excellent standards, the absence of external scrutiny creates an obvious risk.</p>
 
-<p>Foreland Marine provides technical oversight for composite yacht builds, bringing structural engineering expertise, process knowledge, and NDT capability to the owner's side of the table. We review laminate schedules against the structural analysis, attend witness points during layup and cure, commission independent NDT inspections, and verify that the finished structure meets the design intent. Our involvement does not replace the yard's own quality systems &mdash; it complements them, providing the owner with an independent assurance that their investment is being built to the highest standard.</p>
+<p>Foreland Marine provides technical oversight for composite yacht builds, bringing structural engineering expertise, process knowledge, and NDT capability to the owner's side of the table. We review laminate schedules against the structural analysis, attend witness points during layup and cure, commission independent NDT inspections, and verify that the finished structure meets the design intent. Our involvement does not replace the yard&rsquo;s own quality systems; it complements them, providing the owner with an independent assurance that their investment is being built to the highest standard.</p>
 
-<blockquote>Carbon composite construction rewards rigour and punishes shortcuts. The difference between a well-built carbon yacht and a poorly built one is invisible from the outside &mdash; but it determines everything about the vessel's safety, performance, and longevity.</blockquote>
+<blockquote>Carbon composite construction rewards rigour and punishes shortcuts. The difference between a well-built carbon yacht and a poorly built one is invisible from the outside, but it determines everything about the vessel's safety, performance, and longevity.</blockquote>
 
 <p>If you are considering a carbon fibre sailing yacht or are already in the early stages of a composite <a href="/owners-representation">new build project</a>, contact us to discuss how independent technical oversight can protect your investment from layup to launch.</p>`,
   },
@@ -2230,7 +2230,7 @@ export const posts: Post[] = [
       "yacht performance optimisation",
       "keel and appendage refit",
     ],
-    content: `<p>Every racing yacht has a competitive shelf life. Designs evolve, rating rules shift, and the fleet moves forward. A yacht that was at the front of the fleet five years ago may now find itself struggling to stay in contention &mdash; not because the boat is poorly sailed, but because the competition has invested in newer designs, better appendages, lighter systems, and more efficient rigs. The question facing many owners is whether to commission a new build or invest in a targeted performance refit that extends the competitive life of their existing yacht.</p>
+    content: `<p>Every racing yacht has a competitive shelf life. Designs evolve, rating rules shift, and the fleet moves forward. A yacht that was at the front of the fleet five years ago may now find itself struggling to stay in contention, not because the boat is poorly sailed, but because the competition has invested in newer designs, better appendages, lighter systems, and more efficient rigs. The question facing many owners is whether to commission a new build or invest in a targeted performance refit that extends the competitive life of their existing yacht.</p>
 
 <p>In many cases, a well-planned racing yacht refit delivers a better return on investment than starting from scratch. A new build takes two to three years and carries the risk and cost of an untested platform. A performance yacht upgrade on a proven hull can be completed in months, targets specific areas of weakness, and preserves the sailing characteristics that the owner and crew already know and trust.</p>
 
@@ -2246,17 +2246,17 @@ export const posts: Post[] = [
 
 <p>Appendage upgrades are often the single most effective modification in a sailing yacht refit. Modern computational fluid dynamics (CFD) tools allow designers to develop keel fins, bulbs, and rudder profiles that are significantly more efficient than those designed even five or ten years ago. A new keel fin with an optimised section and reduced wetted surface area can improve pointing ability and reduce drag across the entire wind range. Similarly, a new rudder with better balance and lower drag improves both helm feel and straight-line speed.</p>
 
-<p>Keel and appendage refit work must be coordinated carefully with the structural engineering of the hull. New appendages may impose different load paths, and the keel floor structure, keel bolts, and backup structure must be assessed and potentially reinforced. This is not a job for guesswork &mdash; it requires proper structural analysis and, in most cases, classification society approval.</p>
+<p>Keel and appendage refit work must be coordinated carefully with the structural engineering of the hull. New appendages may impose different load paths, and the keel floor structure, keel bolts, and backup structure must be assessed and potentially reinforced. This is not a job for guesswork, it requires proper structural analysis and, in most cases, classification society approval.</p>
 
 <h3>Rig and Sails</h3>
 
-<p>A new rig &mdash; or significant modifications to the existing rig &mdash; can deliver substantial performance gains. Carbon spars have become lighter and stiffer with each generation of manufacturing technology, and a new mast may allow a revised sail plan with a larger or more efficient roach, a higher aspect ratio, or improved bend characteristics for sail shape control. Standing rigging upgrades &mdash; from rod to PBO or carbon &mdash; reduce weight aloft and windage while increasing strength margins.</p>
+<p>A new rig, or significant modifications to the existing rig, can deliver substantial performance gains. Carbon spars have become lighter and stiffer with each generation of manufacturing technology, and a new mast may allow a revised sail plan with a larger or more efficient roach, a higher aspect ratio, or improved bend characteristics for sail shape control. Standing rigging upgrades: from rod to PBO or carbon, reduce weight aloft and windage while increasing strength margins.</p>
 
 <p>The sail programme should be developed in parallel with any rig modifications to ensure the new sails are optimised for the updated spar and rigging geometry. Working with the sailmaker early in the refit process ensures that the wardrobe is ready when the yacht relaunches, rather than arriving months later.</p>
 
 <h3>Systems Weight Reduction</h3>
 
-<p>Weight is the enemy of performance, and older racing yachts often accumulate unnecessary weight over the years &mdash; redundant wiring runs, oversized batteries, obsolete electronics, heavy domestic equipment, and general accretion of items that are no longer needed. A systematic weight audit can identify hundreds of kilograms of removable weight without compromising safety or functionality.</p>
+<p>Weight is the enemy of performance, and older racing yachts often accumulate unnecessary weight over the years, redundant wiring runs, oversized batteries, obsolete electronics, heavy domestic equipment, and general accretion of items that are no longer needed. A systematic weight audit can identify hundreds of kilograms of removable weight without compromising safety or functionality.</p>
 
 <p>More aggressive weight reduction involves replacing heavy components with lighter alternatives: lithium batteries for lead-acid, carbon deck hardware for stainless steel, lightweight galley and head equipment, and modern lightweight electronics. Every kilogram removed from above the waterline improves stability and performance.</p>
 
@@ -2272,23 +2272,23 @@ export const posts: Post[] = [
 
 <p>Racing refits are almost always driven by a specific event or season start date. The yacht must be in the water, tested, and race-ready by a non-negotiable deadline. This makes programme management critical.</p>
 
-<p>The refit timeline must work backwards from the launch target, allowing adequate time for commissioning, sea trials, crew training on any new systems, and a shakedown period before the first competitive event. Delays in any single work stream &mdash; appendage manufacture, rig delivery, sail production, yard labour &mdash; can cascade through the programme and jeopardise the entire season.</p>
+<p>The refit timeline must work backwards from the launch target, allowing adequate time for commissioning, sea trials, crew training on any new systems, and a shakedown period before the first competitive event. Delays in any single work stream, appendage manufacture, rig delivery, sail production, yard labour, can cascade through the programme and jeopardise the entire season.</p>
 
 <p>Effective racing programme refit management requires a single point of coordination who understands both the technical work and the competitive calendar. This person holds suppliers accountable to delivery dates, manages the yard programme, resolves conflicts between trades, and keeps the owner informed of progress and risks. At Foreland Marine, this is a core part of our <a href="/refit">refit management service</a>.</p>
 
 <h2>Budget Considerations</h2>
 
-<p>Performance refits can range from modest upgrades costing tens of thousands to comprehensive programmes running into seven figures for grand prix yachts. The key is to focus investment where the performance data shows the greatest potential gain. A disciplined approach &mdash; informed by VPP analysis and race data review &mdash; prevents spending money on modifications that look impressive but deliver marginal benefit on the racecourse.</p>
+<p>Performance refits can range from modest upgrades costing tens of thousands to comprehensive programmes running into seven figures for grand prix yachts. The key is to focus investment where the performance data shows the greatest potential gain. A disciplined approach, informed by VPP analysis and race data review, prevents spending money on modifications that look impressive but deliver marginal benefit on the racecourse.</p>
 
-<p>Owners should also factor in the cost implications of rating rule changes. Any modification that affects the yacht's rating under IRC, ORC, or other handicap systems must be assessed for its net benefit &mdash; the raw performance gain minus any rating penalty. This requires close coordination with the design team and the relevant rating authority throughout the refit planning process.</p>
+<p>Owners should also factor in the cost implications of rating rule changes. Any modification that affects the yacht's rating under IRC, ORC, or other handicap systems must be assessed for its net benefit, the raw performance gain minus any rating penalty. This requires close coordination with the design team and the relevant rating authority throughout the refit planning process.</p>
 
 <h2>Coordinating with the Design Team and Rating Authorities</h2>
 
-<p>A performance refit is a collaborative effort between the owner, the refit manager, the design team, and &mdash; where applicable &mdash; the class or rating authority. The design team provides the engineering and hydrodynamic expertise to specify the modifications. The rating authority (IRC, ORC, or class association) confirms how the changes will affect the yacht's rating or class compliance. The refit manager coordinates the physical work and ensures that the design intent is faithfully executed in the yard.</p>
+<p>A performance refit is a collaborative effort between the owner, the refit manager, the design team, and, where applicable, the class or rating authority. The design team provides the engineering and hydrodynamic expertise to specify the modifications. The rating authority (IRC, ORC, or class association) confirms how the changes will affect the yacht's rating or class compliance. The refit manager coordinates the physical work and ensures that the design intent is faithfully executed in the yard.</p>
 
 <p>Failure to engage the rating authority early in the process is a common and expensive mistake. Modifications that are assumed to be rating-neutral sometimes trigger unexpected penalties, and discovering this after the work is completed leaves the owner with limited options.</p>
 
-<blockquote>A racing refit is not about spending the most money &mdash; it is about spending it in the right places, at the right time, with the right people coordinating the programme.</blockquote>
+<blockquote>A racing refit is not about spending the most money. It is about spending it in the right places, at the right time, with the right people coordinating the programme.</blockquote>
 
 <p>If your racing programme is ready for a performance upgrade, talk to us about how a structured refit approach can extend your yacht's competitive life and deliver measurable gains on the racecourse. Our team combines technical refit expertise with a genuine understanding of the competitive sailing environment.</p>`,
   },
@@ -2314,13 +2314,13 @@ export const posts: Post[] = [
     ],
     content: `<p>Of all the decisions involved in commissioning a new build yacht, yard selection is the one that has the greatest impact on the outcome of the project. The right shipyard brings the capability, workforce, facilities, and management culture to deliver a yacht that meets the owner's expectations on quality, schedule, and budget. The wrong yard can result in years of delays, cost overruns measured in millions, quality deficiencies that compromise the vessel's safety and longevity, and a deeply frustrating experience for everyone involved.</p>
 
-<p>Despite the stakes, yard selection is often approached with less rigour than it deserves. Owners may be drawn to a yard by reputation, by a broker's recommendation, by geographic convenience, or by an attractively low price. None of these factors, taken in isolation, is a reliable indicator of whether a particular yard is the right fit for a specific project. This is where independent owner's representation adds critical value &mdash; bringing objectivity, technical knowledge, and industry experience to a decision that will shape every aspect of the build.</p>
+<p>Despite the stakes, yard selection is often approached with less rigour than it deserves. Owners may be drawn to a yard by reputation, by a broker's recommendation, by geographic convenience, or by an attractively low price. None of these factors, taken in isolation, is a reliable indicator of whether a particular yard is the right fit for a specific project. This is where independent owner's representation adds critical value, bringing objectivity, technical knowledge, and industry experience to a decision that will shape every aspect of the build.</p>
 
 <h2>Why Yard Selection Matters So Much</h2>
 
-<p>A new build yacht project typically spans two to five years, depending on size and complexity. During that time, the owner is locked into a relationship with the selected yard. Changing yards mid-project is technically possible but practically catastrophic &mdash; it means moving a partially built hull, re-engaging subcontractors, renegotiating contracts, and accepting delays that can stretch into years. The financial and emotional cost of getting it wrong is enormous.</p>
+<p>A new build yacht project typically spans two to five years, depending on size and complexity. During that time, the owner is locked into a relationship with the selected yard. Changing yards mid-project is technically possible but practically catastrophic; it means moving a partially built hull, re-engaging subcontractors, renegotiating contracts, and accepting delays that can stretch into years. The financial and emotional cost of getting it wrong is enormous.</p>
 
-<p>The yard's capabilities also set a ceiling on what the finished yacht can be. A yard that lacks experience with a particular construction material, propulsion system, or level of interior finish will struggle to deliver quality in those areas, regardless of what the contract says. Understanding a yard's genuine capabilities &mdash; as opposed to their marketing claims &mdash; is fundamental to making the right choice.</p>
+<p>The yard's capabilities also set a ceiling on what the finished yacht can be. A yard that lacks experience with a particular construction material, propulsion system, or level of interior finish will struggle to deliver quality in those areas, regardless of what the contract says. Understanding a yard's genuine capabilities, as opposed to their marketing claims, is fundamental to making the right choice.</p>
 
 <h2>What Criteria Actually Matter</h2>
 
@@ -2334,7 +2334,7 @@ export const posts: Post[] = [
 
 <p>A yard's current order book directly affects the resources available for your project. A yard with too many concurrent projects will spread its skilled workforce too thin, leading to slower progress, higher subcontractor dependency, and reduced management attention. Conversely, a yard with an empty order book may be pricing aggressively to win work, which raises questions about financial stability and workforce retention.</p>
 
-<p>The quality and stability of the workforce is at least as important as the facilities. Skilled shipbuilders &mdash; particularly welders, laminators, pipefitters, and electricians &mdash; take years to develop. A yard that relies heavily on temporary or agency labour for core trades may struggle to maintain consistent quality throughout a multi-year project.</p>
+<p>The quality and stability of the workforce is at least as important as the facilities. Skilled shipbuilders, particularly welders, laminators, pipefitters, and electricians, take years to develop. A yard that relies heavily on temporary or agency labour for core trades may struggle to maintain consistent quality throughout a multi-year project.</p>
 
 <h3>Facilities and Infrastructure</h3>
 
@@ -2344,7 +2344,7 @@ export const posts: Post[] = [
 
 <h3>Geographic Considerations</h3>
 
-<p>Geography affects the build in practical ways. Labour costs vary significantly between regions, as do material supply chains, subcontractor availability, and regulatory environments. A yard in northern Europe may offer a highly skilled workforce and rigorous quality culture but at a higher daily labour rate. A yard in a lower-cost region may offer attractive pricing but require more intensive oversight to maintain quality standards. Neither is inherently better &mdash; the right choice depends on the specific project and the owner's priorities.</p>
+<p>Geography affects the build in practical ways. Labour costs vary significantly between regions, as do material supply chains, subcontractor availability, and regulatory environments. A yard in northern Europe may offer a highly skilled workforce and rigorous quality culture but at a higher daily labour rate. A yard in a lower-cost region may offer attractive pricing but require more intensive oversight to maintain quality standards. Neither is inherently better, the right choice depends on the specific project and the owner's priorities.</p>
 
 <p>Geographic location also affects the owner's ability to visit the yard during construction. Regular site visits are important for maintaining engagement with the project and building a relationship with the yard team. A yard that is difficult or expensive to reach may result in less frequent visits and, consequently, less owner involvement in key decisions.</p>
 
@@ -2356,11 +2356,11 @@ export const posts: Post[] = [
 
 <h2>How an Owner's Rep Evaluates Yards</h2>
 
-<p>An independent owner's representative approaches yard selection systematically. The process typically begins with a long list of candidate yards identified based on the project brief &mdash; vessel type, size, construction material, intended use, and budget range. This long list is filtered through a preliminary assessment that considers track record, capability, capacity, and geographic suitability, producing a short list of three to five yards for detailed evaluation.</p>
+<p>An independent owner's representative approaches yard selection systematically. The process typically begins with a long list of candidate yards identified based on the project brief, vessel type, size, construction material, intended use, and budget range. This long list is filtered through a preliminary assessment that considers track record, capability, capacity, and geographic suitability, producing a short list of three to five yards for detailed evaluation.</p>
 
-<p>The detailed evaluation involves extended yard visits &mdash; not the polished tour that yards offer to prospective clients, but a thorough inspection of build halls, workshops, quality control processes, and vessels currently under construction. The owner's rep talks to project managers, foremen, and tradespeople on the shop floor. They review the yard's quality management system documentation, inspect ongoing work for build quality indicators, and assess the yard's project management tools and reporting capabilities.</p>
+<p>The detailed evaluation involves extended yard visits, not the polished tour that yards offer to prospective clients, but a thorough inspection of build halls, workshops, quality control processes, and vessels currently under construction. The owner's rep talks to project managers, foremen, and tradespeople on the shop floor. They review the yard's quality management system documentation, inspect ongoing work for build quality indicators, and assess the yard's project management tools and reporting capabilities.</p>
 
-<p>References are checked systematically. The owner's rep contacts previous clients, their project managers, and the classification society surveyors who oversaw recent builds. These conversations often reveal information that the yard's own references do not &mdash; particularly around schedule performance, change order management, and the yard's responsiveness to quality concerns.</p>
+<p>References are checked systematically. The owner's rep contacts previous clients, their project managers, and the classification society surveyors who oversaw recent builds. These conversations often reveal information that the yard's own references do not, particularly around schedule performance, change order management, and the yard's responsiveness to quality concerns.</p>
 
 <h2>Red Flags to Watch For</h2>
 
@@ -2385,9 +2385,9 @@ export const posts: Post[] = [
 
 <p>The consequences of poor yard selection typically manifest gradually. Early signs include missed milestones, quality issues that require rework, communication breakdowns between the yard and the owner's team, and change orders that seem to appear with increasing frequency. As the project progresses, these issues compound. The owner loses confidence, the relationship with the yard becomes adversarial, and the focus shifts from building an exceptional yacht to managing a troubled project.</p>
 
-<p>In the worst cases, owners are forced to terminate the contract and move the build to another yard &mdash; a process that adds years to the schedule and can double the cost. These outcomes are almost always traceable to shortcomings in the original yard selection process: insufficient due diligence, reliance on a broker's recommendation without independent verification, or selection based primarily on price rather than capability.</p>
+<p>In the worst cases, owners are forced to terminate the contract and move the build to another yard, a process that adds years to the schedule and can double the cost. These outcomes are almost always traceable to shortcomings in the original yard selection process: insufficient due diligence, reliance on a broker's recommendation without independent verification, or selection based primarily on price rather than capability.</p>
 
-<blockquote>The yard you choose will be your partner for the next three to five years. That decision deserves the same rigour and independent scrutiny that you would apply to any major investment &mdash; because that is exactly what it is.</blockquote>
+<blockquote>The yard you choose will be your partner for the next three to five years. That decision deserves the same rigour and independent scrutiny that you would apply to any major investment, because that is exactly what it is.</blockquote>
 
 <p>If you are in the early stages of planning a new build and want to ensure that yard selection is handled with the thoroughness it demands, <a href="/owners-representation">learn more about our new build services</a> or get in touch to discuss how independent owner's representation can protect your project from day one.</p>`,
   },
@@ -2409,11 +2409,11 @@ export const posts: Post[] = [
       "new build oversight",
       "yacht construction management",
     ],
-    content: `<p>Commissioning a new build superyacht is one of the most significant investments a private individual or family office can make. Projects routinely span three to five years, involve dozens of subcontractors across multiple countries, and carry budgets measured in tens or hundreds of millions of euros. In this environment, having an experienced, independent owner's representative is not a luxury &mdash; it is a fundamental safeguard for your time, your money, and the quality of the finished vessel.</p>
+    content: `<p>Commissioning a new build superyacht is one of the most significant investments a private individual or family office can make. Projects routinely span three to five years, involve dozens of subcontractors across multiple countries, and carry budgets measured in tens or hundreds of millions of euros. In this environment, having an experienced, independent owner's representative is not a luxury. It is a fundamental safeguard for your time, your money, and the quality of the finished vessel.</p>
 
 <h2>What Does an Owner's Representative Actually Do?</h2>
 
-<p>An owner's representative acts as the owner's eyes, ears, and technical authority throughout the entire new build superyacht project. Their role is to represent the owner's interests at every stage &mdash; from the earliest concept discussions through to sea trials and delivery &mdash; ensuring that the yacht is built to specification, on time, and within budget.</p>
+<p>An owner's representative acts as the owner's eyes, ears, and technical authority throughout the entire new build superyacht project. Their role is to represent the owner's interests at every stage: from the earliest concept discussions through to sea trials and delivery, ensuring that the yacht is built to specification, on time, and within budget.</p>
 
 <p>Unlike a yacht broker, who facilitates a transaction, or a yard's project manager, who serves the shipbuilder's interests, the owner's rep works exclusively for the owner. This independence is critical. It means their advice on contract terms, design decisions, material choices, and construction quality is never compromised by conflicting commercial relationships.</p>
 
@@ -2431,17 +2431,17 @@ export const posts: Post[] = [
 
 <h3>Design Review</h3>
 
-<p>Once a yard is selected, the design phase is where the foundations of the yacht are established. The owner's rep reviews general arrangement plans, structural drawings, mechanical and electrical schematics, and interior design specifications. They identify potential conflicts between systems, flag regulatory compliance issues early, and ensure the design aligns with the owner's operational requirements &mdash; whether that involves extended ocean passages, specific tender storage, or particular entertainment configurations.</p>
+<p>Once a yard is selected, the design phase is where the foundations of the yacht are established. The owner's rep reviews general arrangement plans, structural drawings, mechanical and electrical schematics, and interior design specifications. They identify potential conflicts between systems, flag regulatory compliance issues early, and ensure the design aligns with the owner's operational requirements, whether that involves extended ocean passages, specific tender storage, or particular entertainment configurations.</p>
 
 <h3>Construction Oversight</h3>
 
-<p>During the build itself, the owner's representative conducts regular site inspections &mdash; typically weekly or fortnightly depending on the project stage. They monitor hull construction, mechanical installations, piping runs, electrical systems, paintwork, and interior fit-out against the agreed specification and classification society standards. They maintain a structured deficiency tracking system and hold the yard accountable for rectification timelines.</p>
+<p>During the build itself, the owner's representative conducts regular site inspections: typically weekly or fortnightly depending on the project stage. They monitor hull construction, mechanical installations, piping runs, electrical systems, paintwork, and interior fit-out against the agreed specification and classification society standards. They maintain a structured deficiency tracking system and hold the yard accountable for rectification timelines.</p>
 
 <p>Budget control is a central responsibility during construction. Change orders are inevitable on any new build superyacht project, but a skilled owner's rep ensures each one is properly scoped, competitively priced, and formally approved before work proceeds. Without this discipline, costs can escalate dramatically.</p>
 
 <h3>Commissioning and Sea Trials</h3>
 
-<p>As the build nears completion, the commissioning phase tests every system on board &mdash; propulsion, generators, navigation electronics, safety equipment, HVAC, AV systems, and domestic services. The owner's representative oversees this process, attends sea trials, and compiles a comprehensive snagging list of items requiring rectification before delivery.</p>
+<p>As the build nears completion, the commissioning phase tests every system on board: propulsion, generators, navigation electronics, safety equipment, HVAC, AV systems, and domestic services. The owner's representative oversees this process, attends sea trials, and compiles a comprehensive snagging list of items requiring rectification before delivery.</p>
 
 <h3>Delivery and Handover</h3>
 
@@ -2449,15 +2449,15 @@ export const posts: Post[] = [
 
 <h2>Qualifications to Look For</h2>
 
-<p>When selecting an owner's representative for a yacht new build project management role, look for demonstrable experience in superyacht construction &mdash; not just operational yacht management. The representative should have a deep understanding of shipbuilding processes, classification society rules, flag state regulations, and marine engineering systems.</p>
+<p>When selecting an owner's representative for a yacht new build project management role, look for demonstrable experience in superyacht construction, not just operational yacht management. The representative should have a deep understanding of shipbuilding processes, classification society rules, flag state regulations, and marine engineering systems.</p>
 
 <p>Industry accreditations are a meaningful indicator of standards. <strong>SYBAss</strong> (Superyacht Builders Association) accreditation signifies that a company meets recognised professional standards in new build representation. The <strong>YORR</strong> (Yacht Owners Representative Register) is another benchmark that owners should consider when evaluating candidates.</p>
 
-<p>At Foreland Marine, we are proud to hold SYBAss accreditation, reflecting our commitment to the highest standards of professional practice in new build oversight and yacht construction management. Our team brings direct experience from shipyard environments, classification societies, and yacht operations &mdash; giving us a rounded perspective that purely shore-side consultants often lack.</p>
+<p>At Foreland Marine, we are proud to hold SYBAss accreditation, reflecting our commitment to the highest standards of professional practice in new build oversight and yacht construction management. Our team brings direct experience from shipyard environments, classification societies, and yacht operations, giving us a rounded perspective that purely shore-side consultants often lack.</p>
 
 <h2>How It Protects Your Investment</h2>
 
-<p>The cost of an owner's representative is typically a small fraction of the overall build budget &mdash; but the value they deliver is disproportionately large. By catching design conflicts early, preventing specification shortcuts during construction, controlling change order costs, and ensuring contractual protections are enforced, a skilled owner's rep routinely saves owners multiples of their fee.</p>
+<p>The cost of an owner's representative is typically a small fraction of the overall build budget, but the value they deliver is disproportionately large. By catching design conflicts early, preventing specification shortcuts during construction, controlling change order costs, and ensuring contractual protections are enforced, a skilled owner's rep routinely saves owners multiples of their fee.</p>
 
 <p>Perhaps more importantly, they give the owner confidence that someone with the right technical expertise is protecting their interests at every stage. A new build superyacht should be a source of enjoyment, not anxiety. Having the right representation in place from day one is the single most effective way to ensure that outcome.</p>
 
@@ -2484,7 +2484,7 @@ export const posts: Post[] = [
       "flag state audit yacht",
       "ISM Code superyacht",
     ],
-    content: `<p>The International Safety Management Code &mdash; universally known as the ISM Code &mdash; is one of the most important regulatory frameworks governing the operation of commercial vessels worldwide. For yacht owners operating commercially registered vessels over 500 GT, ISM compliance is not optional. It is a mandatory requirement enforced by flag state administrations, and failure to comply can result in detention of the vessel, withdrawal of trading certificates, and significant legal liability.</p>
+    content: `<p>The International Safety Management Code, universally known as the ISM Code, is one of the most important regulatory frameworks governing the operation of commercial vessels worldwide. For yacht owners operating commercially registered vessels over 500 GT, ISM compliance is not optional. It is a mandatory requirement enforced by flag state administrations, and failure to comply can result in detention of the vessel, withdrawal of trading certificates, and significant legal liability.</p>
 
 <p>Despite its importance, the ISM Code remains poorly understood by many yacht owners. This guide cuts through the complexity and provides a practical overview of what ISM compliance involves, what documentation you need, and how to prepare for audits.</p>
 
@@ -2504,7 +2504,7 @@ export const posts: Post[] = [
 <li>Safety and environmental protection policy</li>
 <li>Defined responsibilities and authority for shore-side and shipboard personnel</li>
 <li>Procedures for reporting accidents, near-misses, and non-conformities</li>
-<li>Emergency preparedness &mdash; including drills, contingency plans, and shore-side support</li>
+<li>Emergency preparedness, including drills, contingency plans, and shore-side support</li>
 <li>Maintenance of the vessel and its equipment in accordance with regulations and classification requirements</li>
 <li>Document and record control procedures</li>
 <li>Internal audit and management review processes</li>
@@ -2518,13 +2518,13 @@ export const posts: Post[] = [
 
 <p>The <strong>Safety Management Certificate (SMC)</strong> is issued to the individual vessel. It confirms that the vessel is being operated in accordance with the approved SMS. The SMC is issued following an on-board audit that verifies the SMS is properly implemented, that crew are familiar with their responsibilities, and that safety equipment and procedures are in order.</p>
 
-<p>Both the DOC and SMC are subject to periodic renewal &mdash; typically every five years &mdash; with intermediate verification audits at intervals not exceeding two and a half years. Maintaining valid certificates requires ongoing commitment to the SMS, not just a one-off compliance exercise.</p>
+<p>Both the DOC and SMC are subject to periodic renewal: typically every five years, with intermediate verification audits at intervals not exceeding two and a half years. Maintaining valid certificates requires ongoing commitment to the SMS, not just a one-off compliance exercise.</p>
 
 <h2>The Designated Person Ashore</h2>
 
 <p>One of the most important requirements of the ISM Code is the appointment of a <strong>Designated Person Ashore (DPA)</strong>. The DPA serves as the link between the vessel and the shore-side management company. Their role is to monitor the safety and pollution prevention aspects of the vessel's operation and to ensure that adequate resources and shore-side support are provided as needed.</p>
 
-<p>The DPA must have direct access to the highest level of management within the company &mdash; meaning they can escalate safety concerns without obstruction. In the yacht management context, the DPA is typically a senior technical manager within the management company who holds appropriate qualifications and experience.</p>
+<p>The DPA must have direct access to the highest level of management within the company, meaning they can escalate safety concerns without obstruction. In the yacht management context, the DPA is typically a senior technical manager within the management company who holds appropriate qualifications and experience.</p>
 
 <p>Choosing the right designated person ashore is critical. The DPA must genuinely understand yacht operations, be available to respond to emergencies at any time, and have the authority to act decisively when safety is at stake. This is not a role that should be treated as a paper exercise.</p>
 
@@ -2547,7 +2547,7 @@ export const posts: Post[] = [
 <p>In our experience managing ISM compliance for ISM Code superyacht operations across multiple flag states, the most common pitfalls include:</p>
 
 <ul>
-<li><strong>Treating the SMS as a shelf document.</strong> A beautifully formatted manual that nobody reads or follows will not survive an audit &mdash; and more importantly, it will not protect your crew or vessel in an emergency.</li>
+<li><strong>Treating the SMS as a shelf document.</strong> A beautifully formatted manual that nobody reads or follows will not survive an audit, and more importantly, it will not protect your crew or vessel in an emergency.</li>
 <li><strong>Inadequate drill records.</strong> Drills must be conducted, documented, and debriefed. Missing or incomplete records are one of the most frequent audit findings.</li>
 <li><strong>Poor non-conformity management.</strong> When issues are identified, they must be recorded, investigated for root cause, and closed out with verifiable corrective action. Simply fixing the immediate problem without addressing the underlying cause is insufficient.</li>
 <li><strong>DPA accessibility.</strong> Auditors will verify that the DPA is genuinely accessible and engaged. A DPA who cannot be contacted or who has no meaningful interaction with the vessel will raise red flags.</li>
@@ -2557,61 +2557,62 @@ export const posts: Post[] = [
 
 <p>Managing ISM compliance through paper-based systems and spreadsheets is increasingly impractical, particularly for vessels operating across multiple jurisdictions with rotating crew. Modern digital platforms can dramatically reduce the administrative burden while improving the quality and accessibility of compliance records.</p>
 
-<p><a href="/tools/lightship-ism">Lightship ISM</a> is a purpose-built digital platform designed to manage all aspects of Safety Management System yacht compliance. It provides structured workflows for drill management, incident reporting, non-conformity tracking, document control, risk assessments, and audit preparation &mdash; all accessible to both shore-side management and on-board crew via web and mobile interfaces.</p>
+<p><a href="/tools/lightship-ism">Lightship ISM</a> is a purpose-built digital platform designed to manage all aspects of Safety Management System yacht compliance. It provides structured workflows for drill management, incident reporting, non-conformity tracking, document control, risk assessments, and audit preparation, all accessible to both shore-side management and on-board crew via web and mobile interfaces.</p>
 
 <p>By centralising compliance data in a single platform, tools like Lightship ISM ensure that records are always current, that nothing falls through the cracks during crew rotations, and that audit preparation becomes a matter of reviewing existing data rather than scrambling to assemble documentation at the last minute.</p>
 
-<blockquote>ISM compliance is not a box-ticking exercise. It is a framework for genuinely safe operations. The companies and vessels that treat it as such consistently perform better in audits and &mdash; more importantly &mdash; in real emergencies.</blockquote>
+<blockquote>ISM compliance is not a box-ticking exercise. It is a framework for genuinely safe operations. The companies and vessels that treat it as such consistently perform better in audits and, more importantly, in real emergencies.</blockquote>
 
 <p>Whether you are establishing ISM compliance for the first time or looking to improve an existing system, the investment in getting it right pays dividends in operational safety, regulatory standing, and peace of mind. If you need guidance on ISM Code yacht compliance, Document of Compliance applications, or flag state audit preparation, we are here to help.</p>`,
   },
   {
     slug: "refit-project-management-what-to-expect",
-    title: "Refit Project Management: What to Expect from Planning to Sea Trials",
-    metaTitle: "Refit Project Management: What to Expect",
+    title: "The Six Phases of a Yacht Refit, From Survey to Handover",
+    metaTitle: "The Six Phases of a Yacht Refit",
     description:
-      "A well-managed refit protects your budget, your timeline and your vessel. We walk through the key phases of a superyacht refit: scope definition, yard tendering, contract negotiation, project oversight, quality assurance and sea trials.",
+      "A mid-size yard period brings together thirty to eighty contractors over six to twelve months. The six phases, in order, and what each one is protecting against.",
     metaDescription:
-      "The phases of a superyacht refit: scope, tender, contract, site management, quality assurance and sea trials, and what each protects.",
+      "Scope, tender, contract, mobilisation, quality control and sea trials. What happens in each phase of a refit, and what each one protects.",
     date: "2026-02-10",
     category: "Refit",
     readTime: "7 min read",
     keywords: [
-      "yacht refit project management",
-      "superyacht refit",
-      "refit planning",
       "yacht refit process",
-      "refit yard selection",
-      "refit budget management",
+      "phases of a yacht refit",
+      "superyacht refit process",
+      "refit scope definition",
+      "yacht refit tender",
+      "refit sea trials handover",
+      "what happens during a yacht refit",
     ],
-    content: `<p>Every superyacht will require a significant refit at some point in its life &mdash; whether driven by regulatory survey cycles, equipment renewal, a change of ownership, or the owner's desire to update the vessel's interior, systems, or performance. A superyacht refit is a complex undertaking that involves coordinating dozens of trades, managing substantial budgets, and navigating tight timelines. Without professional yacht refit project management, costs overrun, schedules slip, and quality suffers.</p>
+    content: `<p>Every superyacht will require a significant refit at some point in its life, whether driven by regulatory survey cycles, equipment renewal, a change of ownership, or the owner's desire to update the vessel's interior, systems, or performance. A superyacht refit is a complex undertaking that involves coordinating dozens of trades, managing substantial budgets, and navigating tight timelines. Without professional yacht refit project management, costs overrun, schedules slip, and quality suffers.</p>
 
 <p>This guide walks through the key phases of the yacht refit process, from initial refit planning through to sea trials and delivery, and explains what you should expect from a professional refit project manager at each stage.</p>
 
-<h2>Why Professional Refit Management Matters</h2>
+<h2>Why the sequence matters</h2>
 
-<p>A superyacht refit brings together naval architects, marine engineers, electricians, painters, joiners, upholsterers, electronics specialists, and numerous other trades &mdash; often simultaneously. Each has their own schedule, their own standards, and their own commercial interests. Without a single point of coordination working exclusively for the owner, these competing priorities inevitably lead to delays, rework, and cost escalation.</p>
+<p>A superyacht refit brings together naval architects, marine engineers, electricians, painters, joiners, upholsterers, electronics specialists, and numerous other trades, often simultaneously. Each has their own schedule, their own standards, and their own commercial interests. Without a single point of coordination working exclusively for the owner, these competing priorities inevitably lead to delays, rework, and cost escalation.</p>
 
-<p>A professional refit project manager provides that coordination. They define the scope, manage the tendering process, negotiate contracts, oversee daily progress, enforce quality standards, and control the budget &mdash; all while keeping the owner informed through structured reporting. Their independence from the yard is essential: they must be free to challenge workmanship, reject substandard materials, and hold contractors accountable without any conflicting commercial relationship.</p>
+<p>A professional refit project manager provides that coordination. They define the scope, manage the tendering process, negotiate contracts, oversee daily progress, enforce quality standards, and control the budget, all while keeping the owner informed through structured reporting. Their independence from the yard is essential: they must be free to challenge workmanship, reject substandard materials, and hold contractors accountable without any conflicting commercial relationship.</p>
 
 <h2>Phase 1: Scope Definition</h2>
 
 <p>Every successful refit begins with a thorough scope definition. This involves a detailed condition survey of the vessel, a review of outstanding classification and flag state requirements, discussions with the captain and crew about operational issues, and alignment with the owner on priorities, budget parameters, and desired outcomes.</p>
 
-<p>The scope document becomes the foundation for everything that follows. It must be detailed enough to enable accurate tendering, but flexible enough to accommodate findings that only emerge once the vessel is opened up in the yard. Experienced refit planning accounts for contingencies &mdash; typically 10 to 15 percent of the base budget &mdash; to cover unforeseen work without derailing the project.</p>
+<p>The scope document becomes the foundation for everything that follows. It must be detailed enough to enable accurate tendering, but flexible enough to accommodate findings that only emerge once the vessel is opened up in the yard. Experienced refit planning accounts for contingencies: typically 10 to 15 percent of the base budget, to cover unforeseen work without derailing the project.</p>
 
 <h3>Common Scope Areas</h3>
 
 <ul>
 <li>Hull treatment, fairing, and antifouling</li>
-<li>Running gear overhaul &mdash; propellers, shafts, bearings, rudders</li>
+<li>Running gear overhaul, propellers, shafts, bearings, rudders</li>
 <li>Main engine and generator overhauls or replacements</li>
 <li>Electrical system upgrades and rewiring</li>
 <li>Navigation and communication electronics renewal</li>
-<li>Interior refurbishment &mdash; soft furnishings, joinery, galley equipment</li>
+<li>Interior refurbishment, soft furnishings, joinery, galley equipment</li>
 <li>HVAC system servicing or replacement</li>
 <li>Safety equipment servicing and certification</li>
-<li>Paint and cosmetic work &mdash; superstructure, boot top, topsides</li>
+<li>Paint and cosmetic work, superstructure, boot top, topsides</li>
 <li>AV and IT system upgrades</li>
 </ul>
 
@@ -2619,7 +2620,7 @@ export const posts: Post[] = [
 
 <p>Refit yard selection is one of the most consequential decisions in the project. The right yard brings the facilities, skilled labour, and project management infrastructure to deliver the work efficiently. The wrong yard can mean months of delays and substantial additional cost.</p>
 
-<p>A professional refit manager will identify candidate yards based on the scope of work, vessel size, geographic considerations, and available capacity. They prepare a detailed tender package and issue it to shortlisted yards, then analyse the responses on a like-for-like basis &mdash; comparing not just headline prices but payment terms, subcontractor arrangements, warranty provisions, and scheduling commitments.</p>
+<p>A professional refit manager will identify candidate yards based on the scope of work, vessel size, geographic considerations, and available capacity. They prepare a detailed tender package and issue it to shortlisted yards, then analyse the responses on a like-for-like basis, comparing not just headline prices but payment terms, subcontractor arrangements, warranty provisions, and scheduling commitments.</p>
 
 <p>Independence is critical at this stage. A refit manager who is affiliated with, or receives commissions from, a particular yard cannot provide objective yard selection advice. The owner needs to know that the recommendation is based purely on capability, value, and suitability for the project.</p>
 
@@ -2631,7 +2632,7 @@ export const posts: Post[] = [
 
 <h2>Phase 4: Mobilisation and Daily Project Oversight</h2>
 
-<p>Once the vessel enters the yard, the refit manager's role intensifies. They attend the vessel regularly &mdash; daily during critical phases &mdash; to monitor progress against the programme, coordinate between trades, resolve technical issues, and maintain quality standards. They hold regular progress meetings with yard management and produce structured reports for the owner covering schedule status, budget tracking, risk items, and photographic documentation.</p>
+<p>Once the vessel enters the yard, the refit manager's role intensifies. They attend the vessel regularly, daily during critical phases, to monitor progress against the programme, coordinate between trades, resolve technical issues, and maintain quality standards. They hold regular progress meetings with yard management and produce structured reports for the owner covering schedule status, budget tracking, risk items, and photographic documentation.</p>
 
 <p>Refit budget management is an ongoing discipline, not a one-off exercise. Every additional work item, every change to specification, and every variation from the original scope must be documented, priced, approved, and tracked. A good refit manager maintains a live budget tracker that gives the owner complete visibility of committed costs, pending variations, and remaining contingency at all times.</p>
 
@@ -2641,17 +2642,15 @@ export const posts: Post[] = [
 
 <h2>Phase 6: Sea Trials and Handover</h2>
 
-<p>Before delivery, the vessel undergoes sea trials to verify that all mechanical, electrical, and navigation systems are performing correctly. The refit manager attends sea trials, documents any deficiencies, and ensures the yard completes all outstanding work before the vessel leaves. They also verify that documentation &mdash; including updated classification certificates, equipment manuals, warranty documents, and as-built drawings &mdash; is complete and handed over to the owner or management company.</p>
+<p>Before delivery, the vessel undergoes sea trials to verify that all mechanical, electrical, and navigation systems are performing correctly. The refit manager attends sea trials, documents any deficiencies, and ensures the yard completes all outstanding work before the vessel leaves. They also verify that documentation, including updated classification certificates, equipment manuals, warranty documents, and as-built drawings, is complete and handed over to the owner or management company.</p>
 
-<h2>Foreland Marine's Refit Track Record</h2>
+<h2>Where this sits alongside the service</h2>
 
-<p>At Foreland Marine, we have managed over 25 refit projects across 7 countries, ranging from targeted maintenance periods to full multi-year rebuild programmes. Our experience spans yards in France, Italy, Spain, the Netherlands, Turkey, the UK, and further afield. We bring this breadth of experience to every project, ensuring that yard selection, contract terms, and project oversight reflect genuine knowledge of each facility's capabilities and working practices.</p>
+<p>The phases above describe how a refit runs. They do not describe who runs it, which is a separate question and the one that determines the outcome. A yard's own project staff will manage the same six phases competently and in the yard's commercial interest, because that is who employs them.</p>
 
-<p>Our approach to yacht refit project management is straightforward: define the scope rigorously, select the right yard objectively, negotiate fair contracts, manage daily progress with discipline, control the budget transparently, and deliver the vessel on time and to specification. We work solely for the owner and have no commercial relationships with yards, brokers, or suppliers that could compromise our independence.</p>
+<p>Foreland has delivered twenty-five large yacht refit projects across seven countries, at yards in France, Italy, Spain, the Netherlands, Turkey and the UK. Our interests are directly aligned with the owner's by structure: no broker commissions, no referral fees. The <a href="/refit">yacht refit project management</a> page sets out the scope of the appointment, what independent management costs against total refit value, why refit budgets carry a 30 to 50 percent overrun band, and the difference between a full-service yard and a service yard.</p>
 
-<blockquote>The difference between a well-managed refit and a poorly managed one is not just financial &mdash; it is measured in months of lost cruising time, compromised safety systems, and the owner's confidence in their vessel.</blockquote>
-
-<p>If you are planning a superyacht refit and want to understand how professional refit project management can protect your investment, <a href="/refit">learn more about our refit management services</a> or get in touch to discuss your project.</p>`,
+`,
   },
   {
     slug: "flag-state-registration-guide-for-yacht-owners",
@@ -3280,10 +3279,10 @@ export const posts: Post[] = [
 <p>Consider the following scenarios:</p>
 
 <ul>
-<li>A yacht management company that also operates a charter fleet has an incentive to push for maximum charter days &mdash; even when the vessel would benefit from a maintenance period.</li>
+<li>A yacht management company that also operates a charter fleet has an incentive to push for maximum charter days, even when the vessel would benefit from a maintenance period.</li>
 <li>A manager affiliated with a brokerage may discourage an owner from pursuing a refit that increases the vessel's value, because their brokerage colleagues are hoping to list the yacht for sale.</li>
 <li>A company with yard ownership or preferred yard relationships may steer refit work to their own facilities rather than the yard best suited to the project.</li>
-<li>A manager that earns commissions from suppliers, insurance brokers, or service providers has a financial incentive to recommend those partners &mdash; regardless of whether they offer the best value or service.</li>
+<li>A manager that earns commissions from suppliers, insurance brokers, or service providers has a financial incentive to recommend those partners, regardless of whether they offer the best value or service.</li>
 </ul>
 
 <p>An <strong>independent yacht management</strong> company has none of these conflicts. Their revenue comes solely from management fees, which means their advice is always aligned with the owner's interests. When they recommend a yard, a supplier, or a crew member, the owner can trust that the recommendation is based on merit, not hidden commercial arrangements.</p>
@@ -3294,7 +3293,7 @@ export const posts: Post[] = [
 
 <p>Superyacht management is fundamentally a technical discipline. Your management company must have deep expertise in marine engineering, electrical systems, naval architecture, and vessel maintenance. They should be able to oversee planned maintenance programmes, manage classification society surveys, coordinate warranty claims, and provide technical guidance on equipment renewal and system upgrades.</p>
 
-<p>Ask about the technical backgrounds of the team members who will be responsible for your vessel. Look for qualifications and experience in marine engineering, naval architecture, or related disciplines &mdash; not just commercial or administrative backgrounds.</p>
+<p>Ask about the technical backgrounds of the team members who will be responsible for your vessel. Look for qualifications and experience in marine engineering, naval architecture, or related disciplines, not just commercial or administrative backgrounds.</p>
 
 <h3>Flag State Expertise</h3>
 
@@ -3308,7 +3307,7 @@ export const posts: Post[] = [
 
 <h3>Financial Transparency</h3>
 
-<p>Yacht operations management involves significant financial flows &mdash; crew payroll, maintenance expenditure, insurance premiums, berth fees, fuel, provisions, and more. Your management company must provide complete transparency over all financial transactions, with regular reporting, auditable accounts, and clear separation between the owner's funds and the company's operating funds.</p>
+<p>Yacht operations management involves significant financial flows, crew payroll, maintenance expenditure, insurance premiums, berth fees, fuel, provisions, and more. Your management company must provide complete transparency over all financial transactions, with regular reporting, auditable accounts, and clear separation between the owner's funds and the company's operating funds.</p>
 
 <p>Be wary of management agreements that allow the manager to earn undisclosed commissions, mark-ups on third-party services, or rebates from suppliers. These arrangements are surprisingly common in the industry, and they directly undermine the trust that should define the owner-manager relationship.</p>
 
@@ -3399,13 +3398,13 @@ export const posts: Post[] = [
 
 <h2>What Is the Large Yacht Code?</h2>
 
-<p>The Large Yacht Code was first introduced in 1997 to address the unique position of large yachts &mdash; vessels that are built and operated differently from merchant ships but which carry passengers and crew in a commercial context and therefore require appropriate safety regulation. The current edition, LY3, was published in 2015 and has been subject to a series of amendments and Marine Guidance Notes (MGNs) that continue to evolve the regulatory landscape.</p>
+<p>The Large Yacht Code was first introduced in 1997 to address the unique position of large yachts, vessels that are built and operated differently from merchant ships but which carry passengers and crew in a commercial context and therefore require appropriate safety regulation. The current edition, LY3, was published in 2015 and has been subject to a series of amendments and Marine Guidance Notes (MGNs) that continue to evolve the regulatory landscape.</p>
 
-<p>LY3 requirements apply to commercially operated yachts of 24 metres and above that are registered under the Red Ensign Group &mdash; which includes the UK, Cayman Islands, British Virgin Islands, Gibraltar, Isle of Man, Jersey, Guernsey, and Bermuda, among others. The code is administered by the MCA and enforced through a system of surveys, inspections, and certification carried out by the MCA directly or by authorised classification societies acting as Recognised Organisations.</p>
+<p>LY3 requirements apply to commercially operated yachts of 24 metres and above that are registered under the Red Ensign Group, which includes the UK, Cayman Islands, British Virgin Islands, Gibraltar, Isle of Man, Jersey, Guernsey, and Bermuda, among others. The code is administered by the MCA and enforced through a system of surveys, inspections, and certification carried out by the MCA directly or by authorised classification societies acting as Recognised Organisations.</p>
 
 <h2>Who Does It Apply To?</h2>
 
-<p>The commercial yacht code applies to any yacht of 24 metres or above that is engaged in trade &mdash; which in the yacht context typically means charter operations or any arrangement where the vessel generates commercial revenue. Privately used yachts that do not engage in any form of trade are generally not required to comply with LY3, though many owners choose to build and maintain their vessels to code standards regardless, as it provides a recognised benchmark for safety and can enhance resale value.</p>
+<p>The commercial yacht code applies to any yacht of 24 metres or above that is engaged in trade, which in the yacht context typically means charter operations or any arrangement where the vessel generates commercial revenue. Privately used yachts that do not engage in any form of trade are generally not required to comply with LY3, though many owners choose to build and maintain their vessels to code standards regardless, as it provides a recognised benchmark for safety and can enhance resale value.</p>
 
 <p>It is worth noting that the definition of "in trade" can be nuanced. Owners who believe their vessel operates purely privately should seek specific advice to confirm their regulatory position, particularly if the yacht is occasionally made available for charter through a third party.</p>
 
@@ -3413,7 +3412,7 @@ export const posts: Post[] = [
 
 <h3>Construction and Stability</h3>
 
-<p>LY3 sets detailed requirements for hull construction, structural fire protection, and stability. Vessels must be built under the survey of a recognised classification society, and stability information &mdash; including intact and damage stability calculations &mdash; must be approved and available on board. For existing vessels, compliance with the construction standards applicable at the time of build is generally accepted, but any significant modifications or conversions may trigger reassessment against current standards.</p>
+<p>LY3 sets detailed requirements for hull construction, structural fire protection, and stability. Vessels must be built under the survey of a recognised classification society, and stability information, including intact and damage stability calculations, must be approved and available on board. For existing vessels, compliance with the construction standards applicable at the time of build is generally accepted, but any significant modifications or conversions may trigger reassessment against current standards.</p>
 
 <h3>Fire Safety</h3>
 
@@ -3431,7 +3430,7 @@ export const posts: Post[] = [
 
 <p>One of the most important aspects of large yacht code compliance is crew certification and manning. LY3 specifies minimum manning levels based on vessel size and operational profile, and all crew must hold valid certificates of competency appropriate to their rank and the vessel's tonnage. For LY3 superyacht operations, this typically means officers holding qualifications issued under the STCW Convention, supplemented by yacht-specific endorsements where applicable.</p>
 
-<p>Manning requirements extend beyond deck and engineering officers to include ratings, safety-trained crew, and &mdash; for vessels carrying more than 12 passengers &mdash; additional personnel to meet passenger vessel standards. Captains and chief engineers must hold certificates appropriate to the vessel's tonnage, and all crew must complete basic safety training, including STCW fire prevention, personal survival, and first aid courses.</p>
+<p>Manning requirements extend beyond deck and engineering officers to include ratings, safety-trained crew, and, for vessels carrying more than 12 passengers, additional personnel to meet passenger vessel standards. Captains and chief engineers must hold certificates appropriate to the vessel's tonnage, and all crew must complete basic safety training, including STCW fire prevention, personal survival, and first aid courses.</p>
 
 <h3>Medical Stores</h3>
 
@@ -3459,7 +3458,7 @@ export const posts: Post[] = [
 
 <ul>
 <li><strong>Maintain a survey status matrix.</strong> Track the expiry dates of all certificates, survey windows, and outstanding conditions of class in a single document. Review it monthly.</li>
-<li><strong>Keep crew certification current.</strong> Monitor certificate expiry dates and plan renewal training well in advance. Do not allow certificates to lapse &mdash; this can render the vessel's manning certificate invalid.</li>
+<li><strong>Keep crew certification current.</strong> Monitor certificate expiry dates and plan renewal training well in advance. Do not allow certificates to lapse; this can render the vessel's manning certificate invalid.</li>
 <li><strong>Stay current with MGNs and amendments.</strong> Subscribe to MCA publications and review new Marine Guidance Notes as they are issued. Your management company or flag state advisor should alert you to relevant changes.</li>
 <li><strong>Conduct regular internal audits.</strong> Do not wait for external surveys to identify deficiencies. Regular self-inspection against LY3 requirements will identify issues when they are easy and inexpensive to resolve.</li>
 <li><strong>Invest in crew training.</strong> Well-trained crew are the first line of defence in any emergency. Ensure drills are conducted regularly, debriefed properly, and documented thoroughly.</li>

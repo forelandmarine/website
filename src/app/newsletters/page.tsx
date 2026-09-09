@@ -25,7 +25,7 @@ const issues: Issue[] = [
     date: "May 2026",
     href: "/newsletters/may-2026",
     summary:
-      "Our first letter to clients and friends. The work this quarter — Palma, a transatlantic season, ISM compliance, a new build in Poland — and what comes next.",
+      "Our first letter to clients and friends. The work this quarter in Palma, a transatlantic season, ISM compliance, a new build in Poland, and what comes next.",
   },
 ];
 
@@ -43,7 +43,7 @@ function IssueRow({ issue }: { issue: Issue }) {
         </div>
         <div>
           <h3 className="text-xl sm:text-2xl font-light text-white group-hover:text-accent transition-colors mb-3 leading-snug">
-            The Foreland Quarter — {issue.title}
+            The Foreland Quarter, {issue.title}
           </h3>
           <p className="text-sm text-muted leading-relaxed mb-5">{issue.summary}</p>
           <div className="flex items-center gap-2 text-sm text-accent font-medium group-hover:gap-3 transition-all">

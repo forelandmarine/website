@@ -413,7 +413,7 @@ function SignUpInner() {
                     Your subscription
                   </p>
                   <p className="text-lg text-white">
-                    {TIER_NAMES[tier]} · {priceDisplay}
+                    {TIER_NAMES[tier]}, {priceDisplay}
                   </p>
                   <p className="text-xs text-muted/70 mt-1">
                     {billingCycle === "annual"

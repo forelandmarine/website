@@ -394,7 +394,7 @@ export default function TechnicalSupportPage() {
       {/* RELATED */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <p className="text-sm text-muted">
-          Related: <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link> · <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link> · <Link href="/tools/pms-database" className="text-accent hover:text-white transition-colors">PMS Database</Link>
+          Related: <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link>, <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link>, <Link href="/tools/pms-database" className="text-accent hover:text-white transition-colors">PMS Database</Link>
         </p>
       </div>
 
