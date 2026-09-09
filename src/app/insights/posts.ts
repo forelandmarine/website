@@ -6,6 +6,12 @@ export type FAQ = {
 export type Post = {
   slug: string;
   title: string;
+  /**
+   * Result-listing title. Only set where the headline runs past the ~60
+   * characters a listing shows; otherwise title is used. The H1 always uses
+   * title.
+   */
+  metaTitle?: string;
   /** Standfirst shown on the page and used in Article schema. */
   description: string;
   /**
@@ -30,6 +36,7 @@ export const posts: Post[] = [
   {
     slug: "owners-representative-vs-project-manager-vs-broker",
     title: "Owner's Representative vs Project Manager vs Broker: What's the Difference?",
+    metaTitle: "Owner's Rep vs Project Manager vs Broker",
     description:
       "The three roles get conflated in superyacht buying. They are not the same. A short, plain explanation of what each does, who pays them, and why the difference matters when you are spending serious money.",
     metaDescription:
@@ -114,8 +121,11 @@ export const posts: Post[] = [
     slug: "how-to-buy-your-first-superyacht",
     title:
       "How to Buy Your First Superyacht: A Practical Guide for New Owners",
+    metaTitle: "How to Buy Your First Superyacht",
     description:
       "Everything first-time buyers need to know about purchasing a superyacht, from setting a realistic budget and choosing between new build and pre-owned, to selecting the right team and avoiding common mistakes.",
+    metaDescription:
+      "Setting a realistic budget, choosing between new build and pre-owned, building the right team, and the mistakes that cost first-time buyers.",
     date: "2026-04-11",
     category: "New Build",
     readTime: "14 min read",
@@ -388,8 +398,11 @@ export const posts: Post[] = [
     slug: "performance-sailing-yacht-refit",
     title:
       "Performance Sailing Yacht Refit: Rig, Keel, and Appendage Programmes",
+    metaTitle: "Performance Sailing Yacht Refit: Rig, Keel, Appendages",
     description:
       "A guide to refit programmes for performance sailing yachts, covering rig replacement, keel and appendage upgrades, structural modifications, and how to manage a project that balances competitive performance with cruising comfort.",
+    metaDescription:
+      "Rig replacement, keel and appendage upgrades and structural work, and how to run a refit that balances rating against real-world use.",
     date: "2026-04-13",
     category: "Refit",
     readTime: "13 min read",
@@ -656,6 +669,7 @@ export const posts: Post[] = [
     slug: "sailing-yacht-rig-maintenance-inspection-guide",
     title:
       "Sailing Yacht Rig Maintenance: Inspection and Replacement Guide",
+    metaTitle: "Sailing Yacht Rig Maintenance and Inspection",
     description:
       "Standing rigging life is 10 to 12 years on rod, less on Dyneema. A guide to inspection cycles, mast surveys and full carbon rig replacement programmes.",
     date: "2026-04-20",
@@ -1088,6 +1102,7 @@ export const posts: Post[] = [
     slug: "sailing-yacht-hydraulic-systems-guide",
     title:
       "Yacht Hydraulic Systems: Maintenance, Troubleshooting and Upgrades",
+    metaTitle: "Yacht Hydraulic Systems: Maintenance and Upgrades",
     description:
       "Deck hydraulics, keel rams, furling drives, winch systems and PLC control. How to maintain, troubleshoot and upgrade hydraulic systems on a sailing yacht.",
     date: "2026-04-17",
@@ -1261,6 +1276,7 @@ export const posts: Post[] = [
     slug: "choosing-sailing-yacht-management-company",
     title:
       "Choosing a Sailing Yacht Management Company: Specialism Matters",
+    metaTitle: "Choosing a Sailing Yacht Management Company",
     description:
       "Most yacht managers do not understand sailing yachts. The rig, sails and racing systems demand a manager with genuine sailing engineering experience.",
     date: "2026-04-16",
@@ -1900,6 +1916,7 @@ export const posts: Post[] = [
   {
     slug: "what-is-a-yacht-owners-representative",
     title: "What is a Yacht Owner's Representative and Why Independence Matters",
+    metaTitle: "What is a Yacht Owner's Representative?",
     description:
       "A comprehensive guide to the role of a yacht owner's representative: what the role covers, why independence is non-negotiable, what it costs, when to appoint one, and the questions every owner should ask. Covers SYBAss and YORR accreditation.",
     metaDescription:
@@ -2279,8 +2296,11 @@ export const posts: Post[] = [
     slug: "owner-representation-during-yard-selection",
     title:
       "Owner's Representation During Yard Selection: Getting It Right from Day One",
+    metaTitle: "Owner's Representation in Yard Selection",
     description:
       "Yard selection is the single most consequential decision in a new build project. We explain what criteria matter, how an owner's representative evaluates yards independently, red flags to watch for, and how the wrong choice can derail a project before it begins.",
+    metaDescription:
+      "How an owner's representative evaluates shipyards independently, the criteria that matter, and the red flags worth walking away from.",
     date: "2026-03-18",
     category: "New Build",
     readTime: "8 min read",
@@ -2548,6 +2568,7 @@ export const posts: Post[] = [
   {
     slug: "refit-project-management-what-to-expect",
     title: "Refit Project Management: What to Expect from Planning to Sea Trials",
+    metaTitle: "Refit Project Management: What to Expect",
     description:
       "A well-managed refit protects your budget, your timeline and your vessel. We walk through the key phases of a superyacht refit: scope definition, yard tendering, contract negotiation, project oversight, quality assurance and sea trials.",
     metaDescription:
@@ -2636,6 +2657,7 @@ export const posts: Post[] = [
     slug: "flag-state-registration-guide-for-yacht-owners",
     title:
       "Flag State Registration: How to Choose the Right Flag for Your Yacht",
+    metaTitle: "Flag State Registration: Choosing the Right Flag",
     description:
       "A practical guide to flag state registration for superyacht owners. Covers the major flag states, their regulatory requirements, tax implications, and how your choice of flag affects insurance, crew, and operations.",
     metaDescription:
@@ -3000,8 +3022,11 @@ export const posts: Post[] = [
     slug: "superyacht-crew-salary-guide",
     title:
       "Superyacht Crew Salaries 2026: What to Budget by Position and Yacht Size",
+    metaTitle: "Superyacht Crew Salaries 2026 by Position and Size",
     description:
       "A comprehensive guide to superyacht crew salaries in 2026, covering captains, officers, engineers, deckhands, stewardesses, and chefs. Salary ranges by yacht size, experience level, and what else to budget beyond base pay.",
+    metaDescription:
+      "Captains, officers, engineers, deckhands, stewardesses and chefs. Salary ranges by yacht size and experience, and what else to budget.",
     date: "2026-04-11",
     category: "Yacht Management",
     readTime: "10 min read",

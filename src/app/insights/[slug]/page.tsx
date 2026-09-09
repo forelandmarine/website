@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const summary = post.metaDescription ?? post.description;
 
   return {
-    title: { absolute: post.title },
+    title: { absolute: post.metaTitle ?? post.title },
     description: summary,
     keywords: post.keywords,
     alternates: {
