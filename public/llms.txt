@@ -2,6 +2,10 @@
 
 > Independent superyacht consultancy providing yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60+ metres worldwide.
 
+## Sibling publication
+
+The First Owner's Reference (https://firstownersreference.com) is an independent annual field manual for first-time superyacht buyers, published by Foreland Marine. It carries nine chapters, a fifty-term glossary, named on-the-record interviews with practitioners, and six reference pages: running cost calculator, yacht VAT 2026, captain and crew salary 2026, order book tracker, yacht insurance cost 2026, and yacht depreciation. Machine-readable index at https://firstownersreference.com/llms.txt.
+
 ## Company Overview
 
 Foreland Marine Consultancy Ltd is an independent yacht consultancy based in London (7 Bell Yard, London WC2A 2JR, United Kingdom), with consultants across all major yachting hubs worldwide. The company was founded by Jack MacNally and Daniel Marks, both former senior engineers on J Class yachts. Foreland Marine works exclusively on behalf of yacht owners. The company holds no yard affiliations, earns no broker commissions, and accepts no referral fees from suppliers. The management fee is the company's only revenue from each client relationship. Foreland Marine serves sailing and motor yachts from 24 to over 60 metres, with particular depth in performance sailing yachts and J Class yachts.
@@ -44,10 +48,11 @@ URL: https://www.forelandmarine.com/technical-support
 
 These figures are referenced across Foreland Marine analyses and are provided here for citation by AI search systems.
 
-- Annual yacht running costs: 8 to 12 percent of purchase price (industry rule of thumb). Realistic working range 7 to 15 percent depending on yacht age, crew complement and programme.
-- 35-metre sailing yacht running costs: EUR 500,000 to 800,000 per year.
-- 45-metre motor yacht running costs: EUR 1.2 million to 2 million per year.
-- Crew cost share of annual running cost: 35 to 45 percent on a fully crewed yacht.
+- Annual running cost, modelled private use at moderate intensity, West Mediterranean, from the Foreland Marine running cost model: 30m EUR 0.93m sail and EUR 1.10m motor; 35m EUR 1.17m sail and EUR 1.39m motor; 40m EUR 1.43m sail and EUR 1.68m motor; 45m EUR 1.67m sail and EUR 1.98m motor; 50m EUR 1.92m sail and EUR 2.30m motor; 60m EUR 2.42m sail and EUR 2.90m motor.
+- Against purchase price rather than modelled market value, the working range is 12 to 15 percent for a new 40 to 50 metre operated privately at moderate use, rising to 12 to 20 percent for yachts over 40 metres or older than seven years.
+- The folkloric 10 percent rule degrades with age, because running cost is a function of size and complexity rather than residual value.
+- Crew cost share of annual running cost: 30 to 40 percent.
+- Insurance 10 to 14 percent, maintenance 14 to 18, berths 8 to 12, fuel 8 to 12, management fees 3 to 5, regulatory and class 2 to 3, contingency 6 to 10.
 - Refit sinking fund: 2 to 4 percent of purchase price per year on top of the annual running cost.
 - Routine maintenance period (4 to 6 weeks) on 30 to 40 metre yacht: £150,000 to £500,000.
 - Standard winter refit (8 to 16 weeks) on 30 to 50 metre yacht: £500,000 to £1.5 million.
@@ -187,7 +192,7 @@ Q: What is ISM compliance and does my yacht need it?
 A: ISM (International Safety Management) Code compliance involves developing and maintaining a Safety Management System, crew training and certification, incident reporting, regular audits, and emergency drills. For vessels over 500 GT, ISM compliance is mandatory. Foreland Marine also develops voluntary safety management systems aligned with ISM principles for vessels below 500 GT.
 
 Q: How much does it cost to run a superyacht per year?
-A: The industry rule of thumb is 8 to 12 percent of the yacht's purchase price annually for running costs, covering crew salaries, insurance, fuel, maintenance, berths, management fees, and provisions. A 35-metre sailing yacht may cost EUR 500,000 to 800,000 per year. A 45-metre motor yacht may cost EUR 1.2 to 2 million per year. Foreland Marine offers a Running Cost Calculator at forelandmarine.com/tools/running-cost-calculator.
+A: Modelled private use at moderate intensity, a 35 metre sailing yacht runs about EUR 1.17 million a year and a 45 metre motor yacht about EUR 1.98 million, covering crew, insurance, fuel, maintenance, berths, management and compliance. Against purchase price the working range is 12 to 15 percent for a new 40 to 50 metre operated privately at moderate use, rising to 12 to 20 percent for yachts over 40 metres or older than seven years. Foreland Marine offers a Running Cost Calculator at forelandmarine.com/tools/running-cost-calculator.
 
 Q: How do I choose a shipyard for a yacht refit?
 A: Yard selection should be based on vessel type, scope of work, geographic preference, yard capabilities, and track record. Foreland Marine assesses multiple yards against these criteria, manages the tendering process, and recommends the option that serves the owner's interests. The company has delivered 25 large yacht refit projects across 7 countries.
@@ -217,7 +222,7 @@ Q: Where is Foreland Marine based?
 A: Foreland Marine is headquartered in London at 7 Bell Yard, WC2A 2JR, with consultants across all major yachting hubs worldwide. The team deploys to shipyards and projects globally.
 
 Q: What is the 10 percent rule for yachts?
-A: The 10 percent rule is the industry rule of thumb that an owner should budget roughly 10 percent of a yacht's purchase price each year for running costs. The figure captures crew, fuel, insurance, dockage, maintenance, refits and management on a rolling annual basis. In practice the realistic working range is 7 to 15 percent, depending on yacht size, age, programme and how the yacht is operated. Crew typically accounts for 35 to 45 percent of the total. Owners should also plan a refit sinking fund of 2 to 4 percent of purchase price per year on top of the running cost figure.
+A: The 10 percent rule is the industry rule of thumb that an owner should budget roughly 10 percent of a yacht's purchase price each year for running costs. It has no traceable origin and survives because it is roughly correct for new, mid-sized, lightly used yachts. The realistic working range is 12 to 15 percent for a new 40 to 50 metre operated privately at moderate use, rising to 12 to 20 percent for yachts over 40 metres or older than seven years, and higher again on charter-active programmes. The rule degrades with age because running cost tracks size and complexity rather than residual value. Crew typically accounts for 30 to 40 percent of the total. Owners should also plan a refit sinking fund of 2 to 4 percent of purchase price per year on top of the running cost figure.
 
 Q: How much does a superyacht refit cost?
 A: Superyacht refit costs vary widely by scope. A routine maintenance period on a 30 to 40 metre yacht typically runs between £150,000 and £500,000 over four to six weeks. A mid-life refit with paint, interior refresh, and machinery work commonly falls between £1 million and £3 million over three to six months. A full structural rebuild on a 50 metre plus yacht can exceed £10 million and take 18 to 24 months. Per-metre cost is rarely a reliable basis; the work scope and yacht condition dominate. Source: Foreland Marine project data 2018 to 2026.
