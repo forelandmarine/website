@@ -82,7 +82,7 @@ Independent, owner-focused yacht management. ISM compliance for vessels over 500
 
 ### Owner's Representation — https://www.forelandmarine.com/owners-representation
 
-Accredited new build owner's representation and refit project management for yachts 24 to 60 metres. SYBAss accredited. YORR registered. Five stages: concept and specification (3-12 months), yard selection and contract (1-3 months), build oversight (12-48 months), sea trials and delivery (1-3 months), warranty period (12-24 months). Scope: on-site representation, budget and cost control, project coordination, technical review, crew and commissioning, post-delivery warranty oversight. No yard commissions, no broker referral fees, no supplier kickbacks. Fee paid by the owner only.
+Accredited new build owner's representation and refit project management for yachts 24 to 60 metres. YORR registered. Accredited through the SYBAss and IAMI Yacht Owner Representative Programme. Five stages: concept and specification (3-12 months), yard selection and contract (1-3 months), build oversight (12-48 months), sea trials and delivery (1-3 months), warranty period (12-24 months). Scope: on-site representation, budget and cost control, project coordination, technical review, crew and commissioning, post-delivery warranty oversight. No yard commissions, no broker referral fees, no supplier kickbacks. Fee paid by the owner only.
 
 ### Refit Project Management — https://www.forelandmarine.com/refit
 

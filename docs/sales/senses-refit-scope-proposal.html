@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>Foreland Marine</title>
+<style>
+  :root {
+    --paper: #ffffff;
+    --ink: #222222;
+    --muted: #555555;
+    --light: #888888;
+    --navy: #14315f;
+    --navy-soft: #f0f3f8;
+    --brass: #94703a;
+    --brass-soft: #f5efe4;
+    --rule: #d0d0d0;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 11pt; }
+  body {
+    margin: 0;
+    background: #e8e8e8;
+    color: var(--ink);
+    font-family: "Aptos", "Aptos Display", "Calibri", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @page { size: A4 portrait; margin: 0; }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10mm auto;
+    background: var(--paper);
+    padding: 14mm 22mm 22mm 22mm;
+    box-shadow: 0 1mm 3mm rgba(0,0,0,0.10);
+    position: relative;
+    page-break-after: always;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* Left letterhead stripe (v2.1), on every page */
+  .stripe { position: absolute; left: 0; top: 0; bottom: 0; width: 6.5mm; background: #033269; }
+
+  .letterhead { text-align: right; margin: 0 0 4mm 0; }
+  .letterhead img { width: 53mm; height: auto; display: inline-block; }
+  .letterhead-large img { width: 103mm; }
+
+  /* Print-break controls */
+  h1, h2, h3 { page-break-after: avoid; break-after: avoid; }
+  table, .accent-box, ul.tight, ol.tight { page-break-inside: avoid; break-inside: avoid; }
+  tr { page-break-inside: avoid; break-inside: avoid; }
+
+  /* Footer + page number */
+  .footer {
+    position: absolute;
+    bottom: 10mm;
+    left: 22mm;
+    right: 22mm;
+    text-align: center;
+    font-size: 8pt;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  .footer .tag { font-style: italic; }
+  .page-number {
+    position: absolute;
+    bottom: 10mm;
+    right: 22mm;
+    font-size: 8pt;
+    color: var(--light);
+    letter-spacing: 0.05em;
+  }
+  .doc-tag {
+    position: absolute;
+    bottom: 10mm;
+    left: 22mm;
+    font-size: 8pt;
+    color: var(--light);
+    letter-spacing: 0.05em;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 20pt;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 0 0 5mm 0;
+    line-height: 1.15;
+    letter-spacing: -0.005em;
+  }
+  h1.cover { font-size: 34pt; margin-top: 30mm; }
+
+  .subtitle {
+    font-size: 12pt;
+    color: var(--muted);
+    font-style: italic;
+    margin: 0 0 8mm 0;
+  }
+  .subtitle.cover {
+    font-size: 15pt;
+    margin-bottom: 4mm;
+  }
+  .subtitle.cover::after {
+    content: "";
+    display: block;
+    width: 40mm;
+    height: 2pt;
+    background: var(--navy);
+    margin-top: 12mm;
+  }
+
+  /* h2: sentence case, navy, navy underline rule */
+  h2 {
+    font-size: 12pt;
+    color: var(--navy);
+    margin: 8mm 0 4mm 0;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  h3 {
+    font-size: 11pt;
+    color: var(--navy);
+    margin: 5mm 0 2mm 0;
+    font-weight: 600;
+  }
+
+  /* Body text: left-aligned, no hyphens, +1mm para spacing for v2 */
+  p {
+    margin: 0 0 5mm 0;
+    text-align: left;
+    hyphens: none;
+    font-size: 10.5pt;
+  }
+  p.lead { font-size: 12pt; color: var(--navy); font-weight: 500; margin-bottom: 6mm; }
+
+  /* Lists */
+  ul.tight {
+    margin: 2mm 0 5mm 0;
+    padding-left: 4mm;
+    font-size: 10pt;
+  }
+  ul.tight li { margin-bottom: 2.5mm; list-style: none; padding-left: 4mm; position: relative; line-height: 1.5; }
+  ul.tight li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2.5mm;
+    width: 1.5mm;
+    height: 1.5mm;
+    background: var(--brass);
+  }
+
+  ol.tight {
+    margin: 2mm 0 5mm 0;
+    padding-left: 6mm;
+    font-size: 10pt;
+  }
+  ol.tight li { margin-bottom: 3mm; line-height: 1.5; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    margin: 4mm 0 6mm 0;
+  }
+  table th {
+    background: var(--navy);
+    color: white;
+    padding: 2.5mm 3mm;
+    text-align: left;
+    font-weight: 500;
+    font-size: 9pt;
+  }
+  table td {
+    padding: 2.5mm 3mm;
+    border-bottom: 0.3pt solid var(--rule);
+    vertical-align: top;
+  }
+  table tr:nth-child(even) td { background: #fafafa; }
+
+  table.kv {
+    font-size: 10pt;
+  }
+  table.kv th, table.kv td {
+    background: transparent;
+    color: var(--ink);
+    padding: 2mm 3mm 2mm 0;
+    border-bottom: 0.4pt solid var(--rule);
+    text-align: left;
+  }
+  table.kv th {
+    background: transparent;
+    color: var(--muted);
+    font-weight: 500;
+    width: 50mm;
+    font-size: 9pt;
+  }
+  table.kv tr:nth-child(even) td { background: transparent; }
+
+  /* Section divider for when two sections share a page */
+  hr.section-break {
+    border: 0;
+    border-top: 0.4pt solid var(--navy);
+    margin: 9mm auto 6mm auto;
+    width: 30mm;
+  }
+
+  /* Accent box (Section 4 callout) */
+  .accent-box {
+    background: var(--navy-soft);
+    padding: 5mm 6mm;
+    margin: 5mm 0;
+    border-left: 3pt solid var(--navy);
+    font-size: 10pt;
+    position: relative;
+  }
+  .accent-box .lead {
+    font-size: 11pt;
+    color: var(--navy);
+    font-weight: 600;
+    margin-bottom: 2.5mm;
+  }
+  .accent-box .chip {
+    position: absolute;
+    top: -4pt;
+    left: 8mm;
+    background: var(--navy);
+    color: white;
+    font-size: 7.5pt;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1mm 3mm;
+    font-weight: 500;
+  }
+
+  /* Cover meta block — with vertical navy rail */
+  .doc-meta {
+    color: var(--ink);
+    font-size: 10pt;
+    margin-top: 20mm;
+    border-left: 3pt solid var(--navy);
+    padding-left: 6mm;
+  }
+  .doc-meta .meta-section { margin-bottom: 5mm; }
+  .doc-meta .meta-section:last-child { margin-bottom: 0; }
+  .doc-meta .meta-label {
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 9.5pt;
+    margin: 0 0 1.5mm 0;
+    letter-spacing: 0.02em;
+  }
+  .doc-meta p {
+    font-size: 10pt;
+    margin: 0 0 1mm 0;
+    text-align: left;
+    line-height: 1.45;
+  }
+
+  /* Confidentiality callout on cover — bordered box */
+  .confidentiality-box {
+    border: 0.4pt solid var(--rule);
+    border-left: 3pt solid var(--navy);
+    background: var(--navy-soft);
+    padding: 4mm 5mm;
+    margin-top: 8mm;
+  }
+  .confidentiality-box .meta-label {
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 9.5pt;
+    margin: 0 0 1.5mm 0;
+    letter-spacing: 0.02em;
+  }
+  .confidentiality-box p {
+    font-size: 9.5pt;
+    margin: 0;
+    text-align: left;
+    line-height: 1.45;
+  }
+
+  /* Section number — plain navy text leading the h1, no chip background */
+  .section-chip {
+    display: inline-block;
+    color: var(--navy);
+    font-size: 11pt;
+    letter-spacing: 0.05em;
+    margin-right: 4mm;
+    vertical-align: 2.5pt;
+    font-weight: 500;
+    opacity: 0.6;
+  }
+
+  /* Rate list, borderless */
+  .rates { margin: 3mm 0 5mm 0; }
+  .rates .row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 92mm;
+    padding: 1.4mm 0;
+    font-size: 10.5pt;
+  }
+  .rates .row .lbl { color: var(--ink); }
+  .rates .row .val { color: var(--navy); font-weight: 600; }
+
+  @media print {
+    html, body { background: white !important; }
+    .page { margin: 0 !important; box-shadow: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- To produce a PDF: open in a browser, press Cmd+P (Mac) or Ctrl+P (Windows),
+     destination "Save as PDF", margins "Default", untick "Headers and footers". -->
+
+<!-- ====================== PAGE 1 ====================== -->
+<div class="page">
+  <div class="stripe"></div>
+  <div class="letterhead"><img src="letterhead-logo-trim.png" alt="Foreland Marine"></div>
+
+  <h1>The 30-year refit</h1>
+  <div class="subtitle">M/Y Senses</div>
+
+  <p style="color:var(--muted); font-size:9.5pt; margin-top:-4mm;">Prepared for Captain Sebastian Cremades, M/Y Senses. From Jack MacNally, Foreland Marine. July 2026.</p>
+
+  <p>Following our exchange in July, and having given Senses some thought, I have set out below how we would take on her 30-year refit and what it would cost.</p>
+
+  <p>Senses is a renowned yacht, and a refit at this stage of her life is as much about preserving her character as it is about her construction and systems. Bringing a project manager in early, before the scope is written and the yard is chosen, is in our experience the single decision that most shapes how a project of this kind turns out. It is how we prefer to work, and it is why we have divided the engagement into two stages.</p>
+
+  <p>The first stage is the planning. Working alongside you, the Owner and the management team, we would establish a proper condition baseline against her 30-year survey and class requirements, develop and prioritise the scope of works, and build a realistic budget and programme, all before anything goes near a yard. We would then run the yard evaluation and take her to tender. You would come out of this stage holding an independent, fully costed plan, and free to place the work wherever it sits best.</p>
+
+  <p>The second stage is the refit itself. Once the yard is chosen and the work is placed, we would put a dedicated project manager on board through to sea trials and handover, on site day to day and reporting to you each week. Northern Europe suits this project well, and we hold long-standing relationships with yards in the Netherlands and Germany that are equal to a refit of this scale.</p>
+
+  <p>Throughout, we work owner-side only. We take no broker commissions and no supplier referral fees, so there is never a question about where our interest lies. It sits with the Owner, from the first meeting to the last.</p>
+
+  <div class="doc-tag">M/Y Senses, refit proposal</div>
+  <div class="footer">
+    <div class="tag">Smooth sailing, every time.</div>
+    <div>www.forelandmarine.com &nbsp;&nbsp;&nbsp; 7 Bell Yard, London WC2A 2JR &nbsp;&nbsp;&nbsp; Co. No. 15785851</div>
+  </div>
+  <div class="page-number">1 / 2</div>
+</div>
+
+<!-- ====================== PAGE 2 ====================== -->
+<div class="page">
+  <div class="stripe"></div>
+  <div class="letterhead"><img src="letterhead-logo-trim.png" alt="Foreland Marine"></div>
+
+  <h2>Fees</h2>
+
+  <p>The planning stage is a fixed fee of £25,000 plus VAT. That covers the condition survey and baseline, the scope development, the budget and programme, and the yard evaluation through to tender, together with our attendance where the work requires it. It is invoiced half on instruction and half on delivery of the plan.</p>
+
+  <p>The refit stage is billed on a straightforward rate card, so you pay only for the work the project actually needs:</p>
+
+  <div class="rates">
+    <div class="row"><span class="lbl">Site attendance</span><span class="val">£550 per day</span></div>
+    <div class="row"><span class="lbl">Consultancy</span><span class="val">£125 per hour</span></div>
+    <div class="row"><span class="lbl">Administration</span><span class="val">£40 per hour</span></div>
+  </div>
+
+  <p>Travel, accommodation and any project expenses are charged at cost and agreed with you in advance. During the active yard period we would expect to be on site around twelve to fifteen days a month, which with the associated reporting and coordination puts the running cost somewhere between £9,000 and £12,000 a month. That is an indicative figure only. The precise programme, and with it the true monthly cost, is one of the things the planning stage exists to establish.</p>
+
+  <h2>Terms</h2>
+
+  <p>All figures are in pounds sterling and exclusive of VAT, which is charged in addition at the prevailing rate. Refit-stage time is invoiced monthly in arrears against a simple record of the days and hours worked, with expenses itemised alongside. This proposal holds for ninety days. Since the refit is not due until October 2029, we would set the timing of the planning stage to suit you and the Owner, ideally beginning twelve to eighteen months ahead of the yard period.</p>
+
+  <p>There is no urgency in deciding. Whenever your travels allow, I would welcome a call with you and the management team to talk it through.</p>
+
+  <p style="margin-top:9mm; margin-bottom:0">With best regards,</p>
+  <p style="margin-top:4mm; margin-bottom:0"><strong>Jack MacNally</strong><br>Foreland Marine</p>
+
+  <div class="doc-tag">M/Y Senses, refit proposal</div>
+  <div class="footer">
+    <div class="tag">Smooth sailing, every time.</div>
+    <div>www.forelandmarine.com &nbsp;&nbsp;&nbsp; 7 Bell Yard, London WC2A 2JR &nbsp;&nbsp;&nbsp; Co. No. 15785851</div>
+  </div>
+  <div class="page-number">2 / 2</div>
+</div>
+
+</body>
+</html>

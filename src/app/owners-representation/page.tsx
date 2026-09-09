@@ -72,7 +72,7 @@ export default function NewBuildPage() {
               },
               areaServed: "Worldwide",
               description:
-                "Independent yacht owner's representation and superyacht representation for yacht new build and refit, 24 to 60 metres. SYBAss accredited, YORR registered. No yard commissions, no broker referral fees, no supplier kickbacks. Fee paid by the owner only.",
+                "Independent yacht owner's representation for new build and refit, 24 to 60 metres. YORR registered, accredited through the SYBAss and IAMI Yacht Owner Representative Programme. Our interests are directly aligned with the owner's by structure: no broker commissions, no referral fees.",
             },
             {
               "@context": "https://schema.org",
@@ -99,7 +99,31 @@ export default function NewBuildPage() {
                   name: "What qualifications should an Owner's Representative have?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Look for accreditation by SYBAss (Superyacht Builders Association), registration on the Yacht Owner's Representative Register, and a relevant background in engineering, naval architecture, or yacht operations. Foreland's team holds all of these credentials alongside extensive practical shipyard experience.",
+                    text: "Look for registration on the Yacht Owner's Representative Register, accreditation through the SYBAss and IAMI Yacht Owner Representative Programme, and a senior operational background in yacht engineering or command. The register is public and searchable by firm and by named principal, so the claim can be verified rather than taken on trust. Foreland is YORR registered and holds its accreditation through YORP.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What are the most important terms in a yacht new build contract?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Eight decide how the contract behaves under pressure: stage payment loading, where 50 to 70 percent paid before delivery is the shipbuilding norm and aggressive front-loading suggests a yard short of cash; refund guarantee credit quality, where tier-one bank pay-on-demand guarantees beat surety wrappers; the liquidated damages cap, industry-typical at 1 percent of contract value per week of delay capped at 5 to 10 percent; the force majeure burden, where English law requires but-for causation and yards draft looser; the change order procedure, which needs pre-agreed unit rates and third-party quote rights; warranty length, standard twelve months and negotiable to twenty-four; cancellation thresholds; and title position during construction.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What happens to my stage payments if the shipyard becomes insolvent?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "They become creditor positions in someone else's insolvency, and refund guarantees protect that exposure less reliably in practice than the contract suggests. Nobiskrug filed in December 2024 and Lürssen acquired the assets in early 2025, moving suspended in-build projects for completion. The Italian Sea Group's April 2026 restructuring went further: the Court of Florence confirmed protective measures preventing shipowners from terminating in-build contracts during the restructuring window. The protections are set before signature through yard financial due diligence at heads of terms, refund guarantee credit assessment, and an agreed position on what to do if mid-build distress produces an accelerated payment proposal.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How is a delivery snag list actually judged?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "By consequence rather than by count. Three hundred cosmetic snags are survivable; fifteen critical commissioning issues will cost the first season. Jack Inglis of ULTIMAR has documented a semi-custom build where the owner appointed a family-office CFO with no maritime experience as representative, and the delivery snag list ran past 1,200 items against the family office's reported figure of around 100. The yacht was sold after one season. Reading the difference between quantity and consequence is the qualification.",
                   },
                 },
                 {
@@ -141,7 +165,7 @@ export default function NewBuildPage() {
               </p>
             </div>
             <div className="hidden lg:flex flex-col items-center gap-6 flex-shrink-0 mt-[50px] relative z-20">
-              <Image src="/logos/sybass-white.png" alt="SYBAss accredited" width={240} height={73} />
+              <Image src="/logos/sybass-white.png" alt="Superyacht Builders Association, accreditation held through the Yacht Owner&apos;s Representative Programme" width={240} height={73} />
               <a
                 href="https://superyachtalliance.org/register/register-table/"
                 target="_blank"
@@ -206,7 +230,7 @@ export default function NewBuildPage() {
                 This breadth means every project is covered by people who have done the work themselves. When a question arises on the yard floor, on a sea trial, or during a contractual review, the answer comes from someone who has seen the issue before.
               </p>
               <p className="text-muted/80 leading-relaxed text-sm">
-                The team is SYBAss accredited and registered on the{" "}
+                The team is accredited through YORP and registered on the{" "}
                 <a
                   href="https://superyachtalliance.org/register/register-table/"
                   target="_blank"
@@ -305,7 +329,85 @@ export default function NewBuildPage() {
 
       <HorizonLine />
 
-      {/* FAQ - hidden visually, kept for JSON-LD SEO */}
+      <HorizonLine />
+
+      {/* THE CONTRACT */}
+      <section className="py-20 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
+            The contract is where the money is made or lost
+          </h2>
+          <div className="space-y-5 text-muted leading-relaxed" data-animate="fade-up">
+            <p>
+              A new build contract governs USD 30 to 200 million of capital across two to five years and structures every variation, every dispute and every interpretation question in the period during which the yard holds the cards. It is the most consequential document a yacht buyer signs, and page count tells you almost nothing about whether it controls risk.
+            </p>
+            <p>
+              Standard shipbuilding forms exist. The SAJ form published by the Shipbuilders&apos; Association of Japan is the most used globally and is generally thought to favour the yard in unamended form. The European yards that matter, Lürssen, Feadship, Oceanco, Royal Huisman, Heesen, Sanlorenzo and Benetti among them, do not contract on any of the standard forms. They contract on heavily customised in-house templates drafted by their own counsel, with English law and London arbitration grafted on.
+            </p>
+            <p>
+              Eight points decide how that document behaves under pressure. Stage payment loading, where 50 to 70 percent of contract value paid before delivery is the shipbuilding norm per Watson Farley &amp; Williams, and aggressive front-loading suggests a yard short of cash to start. Refund guarantee credit quality, where tier-one bank pay-on-demand guarantees are materially better than surety wrappers, and Chinese-bank guarantees commonly expire within a month of cancellation, forcing immediate arbitration. Liquidated damages, industry-typical at 1 percent of contract value per week of delay capped at 5 to 10 percent of the contract sum, after which the yard owes nothing further. Force majeure, where English law requires the yard to prove but-for causation and yards routinely draft looser clauses that weak representation accepts.
+            </p>
+            <p>
+              Then the change order procedure, which without pre-agreed unit rates and third-party quote rights leaves the owner exposed to paying for emergent work at rates well above the original contract. Warranty length, standard at twelve months and negotiable to twenty-four, which inexperienced representatives routinely fail to negotiate. Cancellation thresholds, replicated from the SAJ standard but with negotiable numbers. And title position during construction, which determines what the owner actually holds if the yard fails.
+            </p>
+            <p>
+              A single afternoon of competent legal review at heads of terms saves more than the owner&apos;s representative fee for the entire project. It is consistently not done. Kevin Laverty of Hill Robinson, writing in BOAT International, has pointed to a 33-page contract for a 77 metre yacht against the multi-volume documentation typical of oil and gas projects of comparable value.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* YARD RISK */}
+      <section className="bg-bg1 py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
+            Yard financial condition, and why it is our problem before it is yours
+          </h2>
+          <div className="space-y-5 text-muted leading-relaxed" data-animate="fade-up">
+            <p>
+              The buyer pays stage payments forward. When a yard&apos;s financial condition deteriorates, those payments become creditor positions in somebody else&apos;s insolvency, and refund guarantees protect the exposure less reliably in practice than the contract suggests.
+            </p>
+            <p>
+              This is not theoretical. Nobiskrug, builder of Sailing Yacht A, filed for insolvency in December 2024 under Tennor Group; Lürssen acquired the assets in early 2025 and suspended in-build projects moved for completion. The Italian Sea Group&apos;s April 2026 restructuring went further into procedural territory: on 20 April the Court of Florence confirmed protective measures retroactive to the 16 March filing, which prevented shipowners from terminating in-build contracts during the restructuring window. From the buyer&apos;s side that is a court-mandated commitment to a counterparty whose financial condition had changed since signature.
+            </p>
+            <p>
+              Three workstreams handle this in advance rather than in the middle of it. Yard financial due diligence at heads of terms, covering recent published accounts, parent structure, order-book composition and litigation history. Refund guarantee credit quality assessed with the same weight as any other contract term. And a position agreed with counsel, before signature, on what to do if mid-build distress produces an equity injection or accelerated payment proposal, so that the decision is reached deliberately rather than under pressure.
+            </p>
+            <p>
+              A related pattern is a yard quoting below what the build can credibly be done for. Build cost is direct cost plus overhead, and the overhead is what produces a quality boat rather than money the yard wastes on itself. Margins on top-tier construction are not large. A buyer who has done proper diligence on one yard already has a sense of what those margins look like, and an offer materially below them is information rather than a bargain.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* GOVERNANCE */}
+      <section className="py-20 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
+            Who holds the role, and why it cannot be a favour
+          </h2>
+          <div className="space-y-5 text-muted leading-relaxed" data-animate="fade-up">
+            <p>
+              The published case record concentrates new build risk in governance on the buyer&apos;s side more than anywhere else. Jack Inglis of ULTIMAR, writing in Superyacht Investor in October 2025, described a semi-custom build where the owner deputised a family-office CFO with no maritime expertise as owner&apos;s representative. The delivery snag list ran past 1,200 items against the family office&apos;s reported figure of around 100. The yacht was sold after a single season.
+            </p>
+            <p>
+              His point about snag lists is worth holding onto, because the number is the wrong measure. Three hundred cosmetic snags are survivable; fifteen critical commissioning issues will cost the first season. The question is consequence, not quantity, and reading the difference requires somebody who has commissioned yachts before.
+            </p>
+            <p>
+              The structural fix is a role with a defined standard behind it. SYBAss launched the Yacht Owner Representative Programme in June 2023 with founding member Benetti: four courses totalling 200 hours, of which Unit 40 is the mandatory course for experienced practitioners. The Yacht Owner&apos;s Representative Register followed at The Superyacht Forum in November 2024, administered by the Superyacht Alliance for Professional Standards, with a CV audit built to eliminate inflated claims and a code of conduct behind it. References are called, and projects have been reclassified where the reference described a different role than the application did.
+            </p>
+            <p>
+              Foreland is registered on YORR and holds its accreditation through YORP. The register is public and searchable by firm and by named principal, which means the claim on this page can be checked rather than taken on trust. Lürssen hosted Unit 40 at its Hamburg yard in April 2026, which is the clearest available signal that the standard is endorsed on the yard side of the table as well as the owner&apos;s.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ, rendered as details accordions so the answers are on the page */}
       <section className="sr-only">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-10">Frequently Asked Questions</h2>
@@ -334,8 +436,29 @@ export default function NewBuildPage() {
                 <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
               </summary>
               <div className="px-6 pb-5 text-muted leading-relaxed">
-                Look for accreditation by SYBAss (Superyacht Builders Association), registration on the Yacht Owner&apos;s Representative Register, and a relevant background in engineering, naval architecture, or yacht operations. Foreland&apos;s team holds all of these credentials alongside extensive practical shipyard experience.
+                Look for registration on the Yacht Owner&apos;s Representative Register, accreditation through the SYBAss and IAMI Yacht Owner Representative Programme, and a senior operational background in yacht engineering or command. The register is public and searchable by firm and by named principal, so the claim can be verified rather than taken on trust. Foreland is YORR registered and holds its accreditation through YORP.
               </div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What are the most important terms in a yacht new build contract?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">Eight decide how the contract behaves under pressure: stage payment loading, where 50 to 70 percent paid before delivery is the shipbuilding norm and aggressive front-loading suggests a yard short of cash; refund guarantee credit quality, where tier-one bank pay-on-demand guarantees beat surety wrappers; the liquidated damages cap, industry-typical at 1 percent of contract value per week of delay capped at 5 to 10 percent; the force majeure burden, where English law requires but-for causation and yards draft looser; the change order procedure, which needs pre-agreed unit rates and third-party quote rights; warranty length, standard twelve months and negotiable to twenty-four; cancellation thresholds; and title position during construction.</div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                What happens to my stage payments if the shipyard becomes insolvent?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">They become creditor positions in someone else&apos;s insolvency, and refund guarantees protect that exposure less reliably in practice than the contract suggests. Nobiskrug filed in December 2024 and Lürssen acquired the assets in early 2025, moving suspended in-build projects for completion. The Italian Sea Group&apos;s April 2026 restructuring went further: the Court of Florence confirmed protective measures preventing shipowners from terminating in-build contracts during the restructuring window. The protections are set before signature through yard financial due diligence at heads of terms, refund guarantee credit assessment, and an agreed position on what to do if mid-build distress produces an accelerated payment proposal.</div>
+            </details>
+            <details className="group border border-white/10 bg-bg1">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
+                How is a delivery snag list actually judged?
+                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+              </summary>
+              <div className="px-6 pb-5 text-muted leading-relaxed">By consequence rather than by count. Three hundred cosmetic snags are survivable; fifteen critical commissioning issues will cost the first season. Jack Inglis of ULTIMAR has documented a semi-custom build where the owner appointed a family-office CFO with no maritime experience as representative, and the delivery snag list ran past 1,200 items against the family office&apos;s reported figure of around 100. The yacht was sold after one season. Reading the difference between quantity and consequence is the qualification.</div>
             </details>
             <details className="group border border-white/10 bg-bg1">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white font-medium select-none">
@@ -357,7 +480,7 @@ export default function NewBuildPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="border border-white/8 bg-bg1 p-8 sm:p-10 flex flex-col md:flex-row items-center gap-8">
             <div className="flex items-center gap-8 flex-shrink-0">
-              <Image src="/logos/sybass-white.png" alt="SYBAss accredited" width={140} height={42} />
+              <Image src="/logos/sybass-white.png" alt="Superyacht Builders Association, accreditation held through the Yacht Owner&apos;s Representative Programme" width={140} height={42} />
               <Image src="/logos/yacht-owners-register-white.png" alt="Yacht Owner's Representative Register" width={140} height={56} />
             </div>
             <div className="flex-1 text-center md:text-left">

@@ -113,7 +113,7 @@ export const posts: Post[] = [
 
 <h2>Where Foreland Fits</h2>
 
-<p>Foreland Marine is structurally one of the three roles, not all three. We are independent owner's representatives. We do not broker yacht sales, we do not earn commission from yards, suppliers, or designers, and we do not run management contracts that depend on a particular yacht being delivered. The fee for our representation is paid by the owner, scoped at the start of the engagement, and unchanged whether the build comes in on or over budget. The team is SYBAss accredited and YORR registered.</p>
+<p>Foreland Marine is structurally one of the three roles, not all three. We are independent owner's representatives. We do not broker yacht sales, we do not earn commission from yards, suppliers, or designers, and we do not run management contracts that depend on a particular yacht being delivered. The fee for our representation is paid by the owner, scoped at the start of the engagement, and unchanged whether the build comes in on or over budget. The team is YORR registered and accredited through YORP.</p>
 
 <p>If you are at the early stage of a new build or refit and want a confidential first conversation about how the role would fit your project, <a href="/owners-representation">see our owner's representation service</a> or <a href="/contact">get in touch</a>. There is no fee for the initial conversation and no obligation.</p>`,
   },
@@ -1932,7 +1932,7 @@ export const posts: Post[] = [
       "yacht new build representation",
       "superyacht owner's representative",
       "owner's rep",
-      "SYBAss accredited",
+      "YORR registered",
       "YORR registered",
       "yacht owner representative",
     ],
@@ -2016,7 +2016,7 @@ export const posts: Post[] = [
 
 <h3>SYBAss Accreditation</h3>
 
-<p>The Superyacht Builders Association (SYBAss) sets the professional standard for owner's representation in the superyacht industry. SYBAss accreditation is recognised by member shipyards worldwide as confirmation that a representative has the technical knowledge, professional conduct, and operational experience required to oversee <a href="/owners-representation">new build projects</a> effectively. Foreland Marine is a SYBAss-accredited company.</p>
+<p>The Superyacht Builders Association (SYBAss) sets the professional standard for owner's representation in the superyacht industry. SYBAss accreditation is recognised by member shipyards worldwide as confirmation that a representative has the technical knowledge, professional conduct, and operational experience required to oversee <a href="/owners-representation">new build projects</a> effectively. Foreland Marine is registered on YORR and holds its accreditation through the YORP programme rather than as a SYBAss member firm.</p>
 
 <h3>Yacht Owner's Representative Register (YORR)</h3>
 
@@ -2040,7 +2040,7 @@ export const posts: Post[] = [
 
 <p>The right yacht owner's representative brings a combination of technical competence, project management discipline, and genuine structural independence. They should have direct experience with the type of vessel you are building, a track record of holding yards accountable, and no commercial relationships that could compromise their advice. They should be willing to put the answer to all five of the questions above in writing.</p>
 
-<p>At Foreland Marine, our <a href="/about">team</a> includes Captains, unlimited Chief Engineers, surveyors, and naval architects who bring hands-on technical experience to every project. We are SYBAss accredited and YORR registered, and our sole interest is delivering a successful outcome for the owner. We focus on sailing and motor yachts from 24 to 60 metres, with particular depth in performance sailing yachts, J Class, and carbon composite construction.</p>
+<p>At Foreland Marine, our <a href="/about">team</a> includes Captains, unlimited Chief Engineers, surveyors, and naval architects who bring hands-on technical experience to every project. We are YORR registered and accredited through YORP, and our sole interest is delivering a successful outcome for the owner. We focus on sailing and motor yachts from 24 to 60 metres, with particular depth in performance sailing yachts, J Class, and carbon composite construction.</p>
 
 <blockquote>The cheapest insurance an owner can buy at the start of a new build or major refit is a structurally independent set of eyes that gets paid the same regardless of what the owner decides. That is the entire purpose of yacht owner's representation. Anything else is a service in name only.</blockquote>
 
@@ -2453,7 +2453,7 @@ export const posts: Post[] = [
 
 <p>Industry accreditations are a meaningful indicator of standards. <strong>SYBAss</strong> (Superyacht Builders Association) accreditation signifies that a company meets recognised professional standards in new build representation. The <strong>YORR</strong> (Yacht Owners Representative Register) is another benchmark that owners should consider when evaluating candidates.</p>
 
-<p>At Foreland Marine, we are proud to hold SYBAss accreditation, reflecting our commitment to the highest standards of professional practice in new build oversight and yacht construction management. Our team brings direct experience from shipyard environments, classification societies, and yacht operations, giving us a rounded perspective that purely shore-side consultants often lack.</p>
+<p>At Foreland Marine, the accreditation is held through YORP and the firm is registered on YORR, which is a narrower claim than SYBAss membership and a verifiable one of professional practice in new build oversight and yacht construction management. Our team brings direct experience from shipyard environments, classification societies, and yacht operations, giving us a rounded perspective that purely shore-side consultants often lack.</p>
 
 <h2>How It Protects Your Investment</h2>
 
@@ -3591,7 +3591,7 @@ export const posts: Post[] = [
       "superyacht owner's representative",
       "new build owner's rep",
       "yacht owner representation",
-      "SYBAss accredited",
+      "YORR registered",
     ],
     content: `<p>A yacht owner's representative is the one person on a superyacht project whose only job is to protect the owner's interests. They sit between the owner and every other party: the shipyard, the naval architect, the interior designer, the broker, the surveyor, the management company, the captain. They do not work for any of them. They work for the owner alone.</p>
 
@@ -3681,13 +3681,13 @@ export const posts: Post[] = [
 
 <p>They can, and they often do. But a representative recommended by the yard is by definition not fully independent. Treat any yard recommendation as a starting point for your own search, not the end of it.</p>
 
-<p>Foreland Marine is a SYBAss-accredited <a href="/owners-representation">independent superyacht consultancy</a> acting for owners only. We do not own a yacht management company, hold a brokerage licence, or have a commercial relationship with any shipyard.</p>`,
+<p>Foreland Marine is a YORR-registered <a href="/owners-representation">independent superyacht consultancy</a> acting for owners only. We do not own a yacht management company, hold a brokerage licence, or have a commercial relationship with any shipyard.</p>`,
   },
   {
     slug: "yacht-new-build-contract-what-to-negotiate",
     title: "Yacht New Build Contract: What to Negotiate",
     description:
-      "The ten clauses in a superyacht new build contract that decide whether a project runs well or badly. What to negotiate before signing, by a SYBAss-accredited firm.",
+      "The ten clauses in a superyacht new build contract that decide whether a project runs well or badly. What to negotiate before signing, by a YORR-registered firm.",
     date: "2026-05-11",
     category: "New Build",
     readTime: "12 min read",
@@ -3857,7 +3857,7 @@ export const posts: Post[] = [
 
 <h2>Foreland Marine and SYBAss</h2>
 
-<p>Foreland Marine is a SYBAss-accredited consultancy. We act for owners only, on new build and refit projects between 24 and 60 metres. We do not own a yacht management company. We do not hold a brokerage licence. We do not have a commercial relationship with any shipyard. Our SYBAss accreditation is what allows us to work credibly alongside the major yards while keeping that independence intact. See our <a href="/owners-representation">owner's representation service</a> for how this works in practice.</p>
+<p>Foreland Marine holds its accreditation through YORP and is registered on YORR, which is not the same as being a SYBAss member firm. We act for owners only, on new build and refit projects between 24 and 60 metres. We do not own a yacht management company. We do not hold a brokerage licence. We do not have a commercial relationship with any shipyard. Our SYBAss accreditation is what allows us to work credibly alongside the major yards while keeping that independence intact. See our <a href="/owners-representation">owner's representation service</a> for how this works in practice.</p>
 
 <h2>Verifying Any Firm's Claim</h2>
 

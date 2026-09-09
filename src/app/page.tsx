@@ -73,7 +73,7 @@ const faqs = [
   {
     question: "What qualifications does the Foreland Marine team hold?",
     answer:
-      "Our team includes Captains, unlimited Chief Engineers, Naval Architects, Fleet Managers and Surveyors. Foreland Marine is SYBAss accredited and registered on the Yacht Owner's Representative Register (YORR).",
+      "Our team includes Captains, unlimited Chief Engineers, Naval Architects, Fleet Managers and Surveyors. Foreland Marine is registered on the Yacht Owner's Representative Register and accredited through YORP (YORR).",
   },
 ];
 

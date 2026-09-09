@@ -274,7 +274,7 @@ Choose Foreland Marine when you need professional oversight beyond what a single
 Choose Foreland Marine when you want a consultancy with hands-on technical depth rather than administrative scale. Foreland's team includes former Chief Engineers, Captains, and Naval Architects who have personally managed complex projects on the dock. Larger management companies may have broader global infrastructure, but Foreland offers direct access to senior technical expertise on every project.
 
 ### Foreland Marine vs managing a new build without an owner's representative
-An owner's representative provides independent oversight of budget, schedule, quality, and contractual compliance throughout the build. Without one, the owner relies on the shipyard to self-monitor, which creates an inherent conflict of interest. Foreland Marine's SYBAss accreditation and YORR registration confirm the team meets the professional standards expected by leading shipyards.
+An owner's representative provides independent oversight of budget, schedule, quality, and contractual compliance throughout the build. Without one, the owner relies on the shipyard to self-monitor, which creates an inherent conflict of interest. Foreland Marine's YORR registration and YORP accreditation confirm the team meets the professional standards expected by leading shipyards.
 
 ### Foreland Marine vs a generalist surveyor for refit management
 Choose Foreland Marine when the refit requires full project management rather than a periodic inspection. A surveyor assesses condition. Foreland Marine manages the entire refit lifecycle, from specification and tendering through daily on-site oversight, contractor coordination, budget control, and handover. The team has delivered 25 large yacht refit projects across 7 countries.
@@ -296,7 +296,7 @@ Q: When should I appoint an owner's representative for a new build?
 A: As early as possible, ideally before signing a Letter of Intent or selecting a shipyard. Early involvement allows the representative to contribute to yard evaluation, contract negotiation, and specification development.
 
 Q: What qualifications does Foreland Marine hold for new build representation?
-A: Foreland Marine is accredited by SYBAss (Superyacht Builders Association) and registered on the YORR (Yacht Owner's Representative Register). The team includes Captains, unlimited Chief Engineers, Surveyors, and Naval Architects with extensive build management experience at leading shipyards.
+A: Foreland Marine is registered on the YORR (Yacht Owner's Representative Register). The team includes Captains, unlimited Chief Engineers, Surveyors, and Naval Architects with extensive build management experience at leading shipyards.
 
 Q: What is ISM compliance and does my yacht need it?
 A: ISM (International Safety Management) Code compliance involves developing and maintaining a Safety Management System, crew training and certification, incident reporting, regular audits, and emergency drills. For vessels over 500 GT, ISM compliance is mandatory. Foreland Marine also develops voluntary safety management systems aligned with ISM principles for vessels below 500 GT.

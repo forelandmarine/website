@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Foreland Marine",
   },
   description:
-    "Independent superyacht consultancy for refit, new build owner's representation and yacht management. SYBAss accredited, acting for owners only.",
+    "Independent superyacht consultancy for refit, new build owner's representation and yacht management. YORR registered, acting for owners only.",
   metadataBase: new URL("https://www.forelandmarine.com"),
   alternates: {
     canonical: "https://www.forelandmarine.com",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Foreland Marine Consultancy",
     title: "Independent Superyacht Refit & New Build Consultancy",
     description:
-      "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. SYBAss-accredited, UK-based, acting for owners only.",
+      "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. YORR registered, UK-based, acting for owners only.",
     images: [
       {
         url: "/images/og-default.png",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Independent Superyacht Refit & New Build Consultancy",
     description:
-      "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. SYBAss-accredited, UK-based.",
+      "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. YORR registered, UK-based.",
   },
 };
 

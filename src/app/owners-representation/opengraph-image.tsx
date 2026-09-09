@@ -9,7 +9,7 @@ export default async function OgImage() {
     eyebrow: "Owner's Representation",
     title: "Independent yacht owner's representation",
     subtitle:
-      "New build and refit, 24 to 60 metres. SYBAss accredited, YORR registered. No yard commissions, no broker referral fees.",
+      "New build and refit, 24 to 60 metres. YORR registered, accredited through YORP. No yard commissions, no broker referral fees.",
     url: "forelandmarine.com/owners-representation",
     footnote: "SYBAss, YORR, British Marine",
   });
