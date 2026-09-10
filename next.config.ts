@@ -84,6 +84,23 @@ const nextConfig: NextConfig = {
         destination: '/insights/choosing-a-yacht-owners-representative',
         permanent: true,
       },
+      // These three still draw impressions in Search Console and were falling
+      // through to the hub, which loses the relevance the old URL had earned.
+      {
+        source: '/blog/understanding-yorp--your-essential-guide-to-yacht-owner-s-representation',
+        destination: '/insights/what-does-sybass-accreditation-mean-for-a-yacht-owner',
+        permanent: true,
+      },
+      {
+        source: '/blog/expert-insights--the-key-benefits-of-hiring-a-yacht-technical-consultancy',
+        destination: '/technical-consultancy',
+        permanent: true,
+      },
+      {
+        source: '/blog',
+        destination: '/insights',
+        permanent: true,
+      },
       // Catch-all: any unmatched /blog/ URL goes to /insights
       {
         source: '/blog/:path*',
