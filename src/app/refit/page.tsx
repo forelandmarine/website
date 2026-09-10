@@ -153,7 +153,7 @@ export default function RefitPage() {
             Yacht refit project<br />management, owner-side
           </h1>
           <p className="text-lg text-muted leading-relaxed max-w-2xl">
-            Independent refit project management for motor and sailing yachts over 24 metres, from the condition survey through to sea trials and handover. We are appointed by the owner and paid by the owner. Our interests are directly aligned with the owner&apos;s by structure: no broker commissions, no referral fees.
+            Independent refit project management and yacht build management for motor and sailing yachts over 24 metres, from the condition survey through to sea trials and handover. We are appointed by the owner and paid by the owner. Our interests are directly aligned with the owner&apos;s by structure: no broker commissions, no referral fees.
           </p>
         </div>
       </ParallaxHero>
