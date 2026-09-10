@@ -4,7 +4,7 @@ Source HTML and Apple Mail builds for Foreland Marine signatures.
 
 `henry-ebdell.html` follows the same structure as Jack's signature: the lighthouse
 panel on the left with a hairline divider, then name and title in navy (#033269),
-the contact block, the Instagram icon, and the confidentiality note under a grey
+the contact block, the Instagram and LinkedIn icons, and the confidentiality note under a grey
 rule. All icons are the shared files already hosted at
 `https://www.forelandmarine.com/sig/`, so nothing new needs deploying.
 
@@ -25,8 +25,3 @@ generated `.mailsignature` file in
 `~/Library/Mail/V10/MailData/Signatures/` with `henry-ebdell.mailsignature`,
 keeping the two header lines at the top of the file. Run `chflags uchg` on the
 file so Mail cannot rewrite it, then relaunch Mail.
-
-## Outstanding
-
-Add Henry's LinkedIn URL and a LinkedIn icon alongside the Instagram one, as
-Jack's and Dan's signatures carry.
