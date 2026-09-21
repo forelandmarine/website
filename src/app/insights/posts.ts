@@ -41,7 +41,10 @@ export type Post = {
     periodical: string;
     /** Issue designation as the publication prints it. */
     issue: string;
+    /** Cover date, ISO. Feeds datePublished on the citation node. */
+    published?: string;
     pages?: string;
+    /** The digital edition, or the publication's library where there is none. */
     url?: string;
   };
 };
@@ -54,8 +57,9 @@ export const posts: Post[] = [
       title: "The unsecured owner",
       periodical: "The Superyacht Report",
       issue: "Issue 230, Owners Focus",
+      published: "2026-09-17",
       pages: "6-13",
-      url: "https://www.superyachtnews.com/reports/thesuperyachtreport",
+      url: "https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230",
     },
     metaTitle: "Shipyard Insolvency: What Happens to the Owner",
     description:
@@ -184,7 +188,7 @@ export const posts: Post[] = [
 
 <h2>Where this was published</h2>
 
-<p>A longer version of this analysis, including the tonnage measurement question and the full interview material, was published as <i>The unsecured owner</i> in <a href="/insights/press">The Superyacht Report, Issue 230, Owners Focus</a>, written by Jack MacNally for Foreland Marine.</p>
+<p>A longer version of this analysis, including the tonnage measurement question and the full interview material, was published as <i>The unsecured owner</i> in The Superyacht Report, Issue 230, Owners Focus, September 2026, written by Jack MacNally for Foreland Marine. The issue is free to read in the <a href="https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230">digital edition</a>, and the article runs from page 6. Foreland Marine's other <a href="/insights/press">published work</a> is indexed here.</p>
 
 <p>Foreland Marine acts for owners only. If you are contracting for a new build and want the security position reviewed before signature, our <a href="/owners-representation">new build owner's representation</a> service covers yard due diligence, contract review and milestone verification. <a href="/contact">Get in touch</a>.</p>
 

@@ -175,9 +175,10 @@ export default function RootLayout({
                     headline: "The unsecured owner",
                     about: "Shipyard insolvency and the security position of yacht buyers",
                     pagination: "6-13",
+                    datePublished: "2026-09-17",
                     inLanguage: "en-GB",
                     author: { "@id": "https://www.forelandmarine.com/#jack-macnally" },
-                    url: "https://www.forelandmarine.com/insights/press",
+                    url: "https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230",
                     isPartOf: {
                       "@type": "PublicationIssue",
                       issueNumber: "Issue 230, Owners Focus",

@@ -29,13 +29,14 @@ const placements = [
     periodical: "The Superyacht Report",
     issue: "Issue 230, Owners Focus",
     pages: "6-13",
-    year: "2026",
+    published: "2026-09-17",
+    publishedLabel: "September 2026",
     author: "Jack MacNally",
     standfirst:
       "Shipyard failure is not a rare event in yacht building, and most build contracts leave the owner badly placed should the worst happen. The proceedings running through the Court of Florence show the machinery in motion.",
     summary:
       "An account of how stage payments, refund guarantees and title to a hull under construction actually behave when a builder files for protection. The piece works through the 2026 Italian Sea Group proceedings, sets out Foreland Marine's review of some 25 yard failures since 2000, and names the measures a buyer can take before signature. It closes on a second inefficiency of the same kind: the 500gt line, and the design and refit distortion it creates.",
-    externalUrl: "https://www.superyachtnews.com/reports/thesuperyachtreport",
+    externalUrl: "https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230",
     companionSlug: "shipyard-insolvency-what-happens-to-the-owner",
     companionLabel: "Shipyard insolvency: what happens to the owner",
   },
@@ -68,6 +69,7 @@ export default function PressPage() {
         abstract: p.standfirst,
         inLanguage: "en-GB",
         pagination: p.pages,
+        datePublished: p.published,
         url: p.externalUrl,
         author: { "@id": "https://www.forelandmarine.com/#jack-macnally" },
         publisher: {
@@ -138,7 +140,7 @@ export default function PressPage() {
                 className="border border-white/8 rounded bg-bg0/40 p-8 sm:p-10"
               >
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-accent mb-5">
-                  {p.periodical}, {p.issue}
+                  {p.periodical}, {p.issue}, {p.publishedLabel}
                 </p>
                 <h2 className="text-2xl sm:text-3xl font-light text-white mb-4 leading-snug">
                   {p.articleTitle}
@@ -156,12 +158,12 @@ export default function PressPage() {
                     <dd className="text-xs text-muted">{p.periodical}</dd>
                   </div>
                   <div>
-                    <dt className="text-[10px] uppercase tracking-widest text-muted/60 mb-1">Issue</dt>
-                    <dd className="text-xs text-muted">{p.issue}</dd>
+                    <dt className="text-[10px] uppercase tracking-widest text-muted/60 mb-1">Published</dt>
+                    <dd className="text-xs text-muted">{p.publishedLabel}</dd>
                   </div>
                   <div>
                     <dt className="text-[10px] uppercase tracking-widest text-muted/60 mb-1">Pages</dt>
-                    <dd className="text-xs text-muted">{p.pages}</dd>
+                    <dd className="text-xs text-muted">{p.pages.replace("-", " to ")}</dd>
                   </div>
                 </dl>
 
@@ -178,7 +180,7 @@ export default function PressPage() {
                     rel="noopener"
                     className="text-sm text-muted hover:text-white transition-colors"
                   >
-                    The Superyacht Report library &rarr;
+                    Read the issue, free, from page {p.pages.split("-")[0]} &rarr;
                   </a>
                 </div>
               </article>

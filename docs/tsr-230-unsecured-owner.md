@@ -1,6 +1,8 @@
 # The unsecured owner, TSR 230: site and distribution plan
 
-Jack MacNally's article "The unsecured owner" was published in The Superyacht Report, Issue 230 (Owners Focus), pages 6 to 13. It is Foreland's first tier-1 trade press byline and closes item 9 on the SEO worklist.
+Jack MacNally's article "The unsecured owner" was published in The Superyacht Report, Issue 230 (Owners Focus), 17 September 2026, pages 6 to 13. It is Foreland's first tier-1 trade press byline and closes item 9 on the SEO worklist.
+
+The issue is free to read in full: https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230
 
 The article covers shipyard insolvency and the buyer's security position: stage payment structures, the practical limits of refund guarantees in yachting, title to a hull under construction, the 2026 Italian Sea Group proceedings in the Court of Florence, Foreland's review of some 25 yard failures since 2000, and the 500gt threshold as a design and refit distortion.
 
@@ -11,7 +13,7 @@ The print article is not reproduced. The Superyacht Group holds the published ve
 | Change | Location |
 |---|---|
 | Companion article, 2,900 words, six FAQs, failure table | `/insights/shipyard-insolvency-what-happens-to-the-owner` |
-| Press and published work index | `/insights/press` |
+| Press and published work index, linking the free Issuu edition | `/insights/press` |
 | Citation panel and `citation` node in Article schema | `src/app/insights/[slug]/page.tsx`, driven by `originalPublication` on the post |
 | `subjectOf` on Jack's Person schema, naming the Periodical and PublicationIssue | `src/app/layout.tsx` |
 | Featured article slot and byline line in the insights teaser | Homepage |
@@ -24,10 +26,10 @@ The `originalPublication` field on `Post` is reusable. Any future placement sets
 
 ## Outstanding
 
-- Confirm the cover date of Issue 230 and add it to the press page entry and the llms files. Currently stated as 2026 without a month.
-- When The Superyacht Group publishes the digital edition, replace the library URL on `/insights/press` and in `originalPublication.url` with the direct issue link. A deep link to the article itself is better again.
-- Ask The Superyacht Group whether they will link the byline to forelandmarine.com in the digital edition. This is the backlink that carries the most weight and it is usually granted on request.
+- Ask The Superyacht Group whether they will link the byline to forelandmarine.com. This is the backlink that carries the most weight and it is usually granted on request.
 - Add the placement to Jack's LinkedIn profile under Publications, which feeds the Person entity through `sameAs`.
+
+Closed: the cover date is confirmed as 17 September 2026, and the Issuu edition is now the linked source across the site, the schema and the llms files.
 
 ## Distribution
 
@@ -45,7 +47,9 @@ Post from Jack, not the company page, with the company page reposting the same d
 >
 > What is missing below roughly 500gt is the habit of using them, and any professional function that owns the security position between signature and delivery. Lawyers are released once the contract is signed. Brokers are paid at signature. Responsibility for the file sits with no one.
 >
-> "The unsecured owner" is in The Superyacht Report, Issue 230. I have written up the new build part of it here: forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
+> "The unsecured owner" is in The Superyacht Report, Issue 230, from page 6, and the issue is free to read: https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230
+>
+> I have written up the new build part of it here: forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
 
 ### LinkedIn, week three
 
@@ -55,7 +59,7 @@ Post from Jack, not the company page, with the company page reposting the same d
 >
 > A vesting clause in an English law contract is not the same thing as registered title. It leaves you proving ownership to a foreign trustee with a document the trustee is not bound to recognise.
 >
-> More on this in The Superyacht Report, Issue 230, and in the write-up here: forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
+> More on this in The Superyacht Report, Issue 230, from page 6, and in the write-up here: forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
 
 ### LinkedIn, week five
 

@@ -187,6 +187,9 @@ export default async function PostPage({ params }: Props) {
             "@type": "Article",
             headline: post.originalPublication.title,
             author: { "@id": "https://www.forelandmarine.com/#jack-macnally" },
+            ...(post.originalPublication.published
+              ? { datePublished: post.originalPublication.published }
+              : {}),
             ...(post.originalPublication.pages ? { pagination: post.originalPublication.pages } : {}),
             ...(post.originalPublication.url ? { url: post.originalPublication.url } : {}),
             isPartOf: {
@@ -302,18 +305,27 @@ export default async function PostPage({ params }: Props) {
               <p className="text-sm text-muted leading-relaxed">
                 A longer version of this analysis appeared as{" "}
                 <i>{post.originalPublication.title}</i> in{" "}
-                {post.originalPublication.url ? (
-                  <a
-                    href={post.originalPublication.url}
-                    className="text-accent underline underline-offset-2 hover:text-white transition-colors"
-                  >
-                    {post.originalPublication.periodical}
-                  </a>
-                ) : (
-                  post.originalPublication.periodical
+                {post.originalPublication.periodical},{" "}
+                {post.originalPublication.issue}
+                {post.originalPublication.published
+                  ? `, ${formatDate(post.originalPublication.published)}`
+                  : ""}
+                {post.originalPublication.pages
+                  ? `, pages ${post.originalPublication.pages.replace("-", " to ")}`
+                  : ""}
+                .
+                {post.originalPublication.url && (
+                  <>
+                    {" "}
+                    <a
+                      href={post.originalPublication.url}
+                      className="text-accent underline underline-offset-2 hover:text-white transition-colors"
+                    >
+                      Read the issue
+                    </a>
+                    .
+                  </>
                 )}
-                , {post.originalPublication.issue}
-                {post.originalPublication.pages ? `, pages ${post.originalPublication.pages}` : ""}.
               </p>
             </div>
           )}
