@@ -57,65 +57,52 @@ Third, correspondent standing. A named UK contact for overseas agents and manage
 
 ## Visual identity
 
-The category is navy, a stock photograph of Tower Bridge and a hero image. So,
-on inspection, is every site this studio has built: Foreland, Nimara, The First
-Owner's Reference and Faro itself all open with a full bleed photograph and type
-over it. A fifth would read as a house template.
+Watermans is a Foreland Group company and looks like one. The first attempt
+treated it as a standalone brand with its own chart-document language, which
+was wrong on every count: not premium enough for the market, wrong colours,
+flat imagery, and no visible relationship to the parent.
 
-Watermans is a printed port document instead.
+### The group system, carried directly
 
-### Mark
+Palette, from the Foreland Marine brand kit: Deep Navy #040D1A, Navy #081630,
+Dark Blue #0C1E42, Ocean Blue #5386B6 as the accent, Muted Blue #7BA8C8 for
+body copy, white reserved for headings. Dark throughout, never a light page.
 
-Code flag H, white and scarlet, meaning I have a pilot on board. Not a call for
-help but the state of being looked after, which is what the agency sells. It
-also happens to be the only code flag in the watermen's own colour.
+Typography: Nunito Sans, with Light 300 for headings as the signature weight,
+400 for body and 600 for labels and buttons.
 
-### Palette
+Behaviours carried across: the radial glow, the white/10 horizon line, the
+accent bar on cards, solid accent primary buttons with white/30 ghost
+outlines, and section labels in accent caps at widest tracking.
 
-Admiralty chart convention. Buff paper #f4efe4, ink #15181b, hairline rules
-#cbc2ad, chart water #dbe7ed, and one scarlet #b0202a taken from the coat rowed
-for in Doggett's Coat and Badge every year since 1715.
+A captain who has seen forelandmarine.com should recognise this site as the
+same firm before reading a word of it.
 
-Scarlet is reserved for deadlines and advisory marks and appears nowhere else.
-That is the working rule of the whole design: a captain scanning the arrival
-sequence sees only the times that bind. Colour carries meaning or it is not used.
+### What makes it Watermans rather than Foreland
 
-Dark mode is a night chart, close to what an ECDIS shows after dark. Near black
-ground, dimmed scarlet, the river as a dark band with hairline banks.
+The mark. Code flag H, I have a pilot on board, drawn as line art at the
+weight of the Foreland lighthouse so the two marks sit together in a group
+lockup. Not a call for help but the state of being looked after, which is what
+the agency sells.
 
-### Typography
+The lockup mirrors the parent exactly: mark, then WATERMANS in letterspaced
+caps, with YACHT AGENCY beneath in the position Foreland uses for MARINE
+CONSULTANCY.
 
-Libre Caslon Display for the masthead, Libre Caslon Text for reading, Archivo
-Narrow for anything that behaves like an instrument reading: charges, notice
-periods, lengths, chart labels.
+### Cinematic, not documentary
 
-Caslon is the English printing face and has set official London documents since
-the 1720s, which is the right provenance for a company named after a livery of
-1514. None of the other sites in the group use it.
+Full bleed night hero with parallax and a left scrim so the headline sits on a
+dark field. Alternating split panels down the page where the photograph carries
+the weight and the copy sits beside it. The arrival sequence as accent barred
+tiles rather than a ruled table.
 
-### Layout
+### Photography
 
-A gazette masthead with a double rule and the navigation spread across the
-measure. Ruled tables with no boxes, no fills, no shadows and no rounded
-corners. Notes set in the margin on wide screens, tied to the text by a
-hairline. Text set to a 38rem measure, as a printed page would set it.
-
-Deliberately absent, because they are the tells: letterspaced eyebrow labels
-above every heading, numbered step markers in corners, three card feature rows,
-centred hero with two buttons, gradients and glows.
-
-### Imagery
-
-None. No photography anywhere, at launch or later, unless it is a real
-photograph of a real job.
-
-The signature element is a hand drawn schematic of the tidal Thames from Putney
-to Sea Reach, carrying the two real loops, south around the Isle of Dogs and
-north around the Greenwich peninsula, with the moorings, the pilot station and
-the limit of the Port of London marked in chart convention. It is more use to a
-captain than any photograph and it is the thing that will identify the site at
-thumbnail size on the Faro portfolio page, where it will sit among three dark
-photographic cards as the one buff page with a river drawn across it.
+Placeholder at present, drawn from the Foreland Marine library, and none of it
+is London. Before launch this needs real Thames material: a yacht lying on a
+central tier, Tower Bridge raised, and a yacht alongside at St Katharine Docks.
+Commission it or licence it, but do not launch on Mediterranean stock for a
+London agency.
 
 ## Voice
 
