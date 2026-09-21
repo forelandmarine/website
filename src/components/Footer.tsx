@@ -23,6 +23,7 @@ const tools = [
 const company = [
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
+  { label: "Press", href: "/insights/press" },
   { label: "Newsletter", href: "/newsletters" },
   { label: "The First Owner's Reference", href: "https://firstownersreference.com" },
   { label: "Contact", href: "/contact" },

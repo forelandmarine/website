@@ -169,6 +169,30 @@ export default function RootLayout({
                   "Performance Sailing Yacht Engineering",
                   "J Class Yachts",
                 ],
+                subjectOf: [
+                  {
+                    "@type": "Article",
+                    headline: "The unsecured owner",
+                    about: "Shipyard insolvency and the security position of yacht buyers",
+                    pagination: "6-13",
+                    inLanguage: "en-GB",
+                    author: { "@id": "https://www.forelandmarine.com/#jack-macnally" },
+                    url: "https://www.forelandmarine.com/insights/press",
+                    isPartOf: {
+                      "@type": "PublicationIssue",
+                      issueNumber: "Issue 230, Owners Focus",
+                      isPartOf: {
+                        "@type": "Periodical",
+                        name: "The Superyacht Report",
+                        publisher: {
+                          "@type": "Organization",
+                          name: "The Superyacht Group",
+                          url: "https://www.superyachtnews.com",
+                        },
+                      },
+                    },
+                  },
+                ],
               },
               {
                 "@context": "https://schema.org",

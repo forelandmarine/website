@@ -79,10 +79,16 @@ export default function InsightsPage() {
       {/* FILTERED POST GRID */}
       <section className="py-20 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 className="text-3xl sm:text-4xl font-light text-white">
               Browse by topic
             </h2>
+            <Link
+              href="/insights/press"
+              className="text-sm text-accent hover:text-white transition-colors self-start sm:self-end"
+            >
+              Press and published work &rarr;
+            </Link>
           </div>
           <PostGrid posts={remainingPosts} />
         </div>

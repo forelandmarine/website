@@ -30,9 +30,198 @@ export type Post = {
   keywords: string[];
   content: string;
   faqs?: FAQ[];
+  /**
+   * Set where the piece first appeared in the trade press. Drives the citation
+   * panel on the article and the citation node in Article schema, so the print
+   * byline is machine-readable rather than buried in the body copy.
+   */
+  originalPublication?: {
+    /** Article title as printed, which is not always the web headline. */
+    title: string;
+    periodical: string;
+    /** Issue designation as the publication prints it. */
+    issue: string;
+    pages?: string;
+    url?: string;
+  };
 };
 
 export const posts: Post[] = [
+  {
+    slug: "shipyard-insolvency-what-happens-to-the-owner",
+    title: "Shipyard Insolvency: What Happens to the Owner",
+    originalPublication: {
+      title: "The unsecured owner",
+      periodical: "The Superyacht Report",
+      issue: "Issue 230, Owners Focus",
+      pages: "6-13",
+      url: "https://www.superyachtnews.com/reports/thesuperyachtreport",
+    },
+    metaTitle: "Shipyard Insolvency: What Happens to the Owner",
+    description:
+      "When a yard fails, the buyer who paid for the hull is usually an unsecured creditor. What the Court of Florence proceedings show, what a refund guarantee is actually worth, and the measures that close the gap.",
+    metaDescription:
+      "When a shipyard fails, the buyer who financed the hull usually ranks as an unsecured creditor. Refund guarantees, title, and the measures that close the gap.",
+    date: "2026-09-21",
+    category: "New Build",
+    readTime: "14 min read",
+    keywords: [
+      "shipyard insolvency",
+      "what happens if a shipyard goes bust",
+      "yacht refund guarantee",
+      "title to a yacht under construction",
+      "yacht stage payments protection",
+      "superyacht build contract insolvency",
+      "The Italian Sea Group owners",
+      "yacht builder bankruptcy",
+      "registro navi in costruzione",
+    ],
+    content: `<p>A buyer who has paid 60 or 70 per cent of a build price and whose yard then files for protection usually holds two things: a contract and a record of payments. In most insolvency regimes that makes them an unsecured creditor, ranking behind the banks and, in some cases, behind the suppliers who worked on their own hull.</p>
+
+<p>This article sets out how that position arises, what the two instruments that genuinely improve it are worth in practice, and the measures an owner can take before signature. It draws on Foreland Marine's review of yard failures since 2000 and on the proceedings running through the Court of Florence in 2026.</p>
+
+<h2>The short answer</h2>
+
+<p>Custom yacht building is financed by its customers. Stage payments are not held in trust; they fund the yard's working capital. Two instruments protect the buyer: a refund guarantee from a bank, and perfected title to the hull registered in the country where it is being built. Below roughly 500gt and EUR 30 million, neither is commonly in place. Where they are absent, the buyer's contractual rights are also weaker than they appear, because modern restructuring law suspends termination and guarantee calls once a yard is inside a procedure.</p>
+
+<h2>What the Florence proceedings showed</h2>
+
+<p>On 10 June 2026 five owners won the right to walk away from their contracts with The Italian Sea Group. By 6 July they had lost it again.</p>
+
+<p>TISG, the builder behind Admiral, Tecnomar, Picchiotti and, since 2022, Perini Navi, entered <i>composizione negoziata</i>, Italy's negotiated procedure for companies in crisis that can still be saved, on 16 March 2026. On 20 April the court confirmed protective measures for four months. Creditors were held off and contracts frozen while the yard negotiated. Five owners appealed, arguing that the part-built yachts they were paying for should not be caught in the freeze, and on 10 June the court agreed. The vessels, it held, were neither assets of the entrepreneur nor assets instrumental to the conduct of the business, and the five could exercise their termination rights.</p>
+
+<p>On 1 July, with owner discussions at a standstill, the board abandoned the negotiated procedure and filed for <i>concordato in bianco</i>, a reservation filing that gives the company 60 days, extendable, to produce a restructuring plan. The Court of Florence opened the procedure on a going concern basis and appointed three judicial commissioners. On 6 July it confirmed new protective measures and granted something stronger: owners may not terminate their contracts even for the yard's own breaches, may not call the refund guarantees they hold, and the banks that issued those guarantees may not pay out on guarantees already called.</p>
+
+<p>The proceeding may still end with hulls delivered. <i>Concordato</i> in continuity exists to keep companies trading, and the order book is the main thing any rescuer would be buying. What the sequence has already shown is how the machinery treats the people paying for the boats. Rights recovered on 10 June were suspended again three weeks later.</p>
+
+<h2>The buyer finances the build</h2>
+
+<p>A typical schedule in the 30 to 60 metre range takes 10 to 20 per cent at signature and the balance in instalments pegged to milestones: keel laying, hull completion, superstructure joining, launch, with a final payment at delivery. Commercial shipbuilding lawyers put the pre-delivery proportion at 40 per cent or more. In custom yacht work it is routinely well over half and on some projects as much as 90 per cent.</p>
+
+<p>That money is not ring-fenced. It funds the steel, the subcontractors and the yard's general working capital, and in a stretched yard it can end up funding other projects entirely.</p>
+
+<p>The certificates that release those instalments are thinner documents than most buyers imagine. On yard-standard contracts the milestone is often self-certified. The yard states that the hull is structurally complete, an invoice follows, and nothing in the contract requires an independent surveyor to have looked. On a EUR 12 million build paying in five stages over 30 months, the owner's exposure just before launch is in the region of EUR 9 million. A lender advancing that much against a half-built asset would hold security over the asset, covenants and audited accounts.</p>
+
+<h2>Refund guarantees, and where they fail</h2>
+
+<p>A refund guarantee is a bank's promise to return pre-delivery instalments if the yard defaults. In commercial shipbuilding they are standard and no shipowner's board would release stage payments without one. The description does not travel to yachting. Most yards do not have the credit lines to arrange them, and the selection runs the wrong way: the yards strong enough to provide guarantees are the ones that rarely fail.</p>
+
+<p>Where a guarantee does exist, it needs maintenance that, in our experience, it rarely gets. Three failure modes recur:</p>
+
+<ul>
+<li><strong>Expiry against the wrong date.</strong> Expiry is commonly set against the contractual delivery date. Multi-year builds run late, so cover can lapse in exactly the period when the risk peaks.</li>
+<li><strong>Variations without guarantor consent.</strong> A material variation agreed without the guarantor's consent can void the instrument, and a three-year custom build generates change orders by the hundred.</li>
+<li><strong>No re-papering.</strong> The guarantee is rarely reissued as the specification moves, and the defect tends to surface only when the instrument is called.</li>
+</ul>
+
+<p>The TISG order of 6 July adds a fourth consideration. A guarantee that is valid and in date can still be frozen by a court, both as to calling it and as to the issuing bank paying out.</p>
+
+<h2>Who owns a hull under construction</h2>
+
+<p>Ownership of a hull under construction is decided by the law of the country where it is being built, no matter which jurisdiction the parties chose for the contract. This is the single most misunderstood point in yacht new build.</p>
+
+<p>In Italy the yard owns the yacht during construction unless the parties agree otherwise in writing, and that agreement protects the buyer in an insolvency only once it is transcribed in the <i>registro navi in costruzione</i>, the register of vessels under construction held at the local Harbour Master's office. Germany keeps a shipbuilding register for the same purpose. Registration costs a rounding error on the contract price.</p>
+
+<p>A vesting clause in an English law contract, on its own, leaves the buyer proving ownership to an Italian trustee with a document the trustee is not bound to recognise. A buyer in that position ranks as an unsecured creditor of the estate.</p>
+
+<h2>Twenty-six years of practice</h2>
+
+<p>Foreland Marine's review of yard failures since 2000, compiled from trade press and court records, counts some 25 events across the custom and semi-custom fleet. They arrive in three clusters: the post-2008 wave that took Royal Denship, Baglietto and Cantieri di Pisa; the mid-2010s failures of Christensen, ISA, Moonen, Mondomarine and Oyster; and the run from 2020 that includes Tansu, Perini Navi, Nobiskrug twice and now TISG.</p>
+
+<div class="table-scroll">
+<table>
+<thead>
+<tr><th>Yard</th><th>Year</th><th>Proceeding</th><th>Buyer outcome</th></tr>
+</thead>
+<tbody>
+<tr><td>Baglietto (IT)</td><td>2010</td><td>Bankruptcy</td><td>In-build work stopped; assets sold through insolvency; brand revived under new ownership in 2012</td></tr>
+<tr><td>Christensen (US)</td><td>2015</td><td>Receivership</td><td>Supplier liens attached to the named hulls and ranked ahead of buyers</td></tr>
+<tr><td>Moonen (NL)</td><td>2015 and 2019</td><td>Suspension of payments, then bankruptcy</td><td>In-build hull resumed under rescuers after roughly a year of delay</td></tr>
+<tr><td>Mondomarine (IT)</td><td>2017</td><td>Liquidation, fraud investigation</td><td>Customers among the complainants; deposits ranked behind an estate under criminal investigation</td></tr>
+<tr><td>Oyster Marine (UK)</td><td>2018</td><td>Administration</td><td>All 26 in-build customers made whole after a whole-company rescue</td></tr>
+<tr><td>Tansu (TR)</td><td>2020</td><td>Bankruptcy on a client petition</td><td>EUR 5.52 million prepaid, never delivered; assets found moved in bad faith</td></tr>
+<tr><td>Perini Navi (IT)</td><td>2021</td><td>Bankruptcy</td><td>Largest in-build exposure, EUR 54 to 56 million, ranked as an unsecured claim</td></tr>
+<tr><td>Nobiskrug (DE)</td><td>2021</td><td>Insolvency</td><td>77 metre project completed after the owner re-signed under new ownership</td></tr>
+<tr><td>Nobiskrug and FSG (DE)</td><td>2024</td><td>Insolvency</td><td>Pipeline stalled; yards passed to L&uuml;rssen and R&ouml;nner Group</td></tr>
+<tr><td>The Italian Sea Group (IT)</td><td>2026</td><td>Concordato con riserva (live)</td><td>Terminations and guarantee calls frozen; ruling awaited after the 22 July hearing</td></tr>
+</tbody>
+</table>
+</div>
+
+<p><em>Compiled by Foreland Marine from trade press and court records, July 2026. The full review counts some 25 failure events across the custom and semi-custom fleet since 2000.</em></p>
+
+<p>Outcomes turned less on the merits than on structure, and sometimes on luck. Oyster's 26 in-build customers were made whole in 2018, but only because Richard Hadida bought the whole company six weeks into administration and the order book was the value he was buying. At Christensen in 2015, suppliers' liens attached to the named hulls and ranked ahead of the buyers. At Tansu, a client who had prepaid EUR 5.52 million for a 44 metre never received a boat.</p>
+
+<p>Recovery percentages are not available and it is worth saying so plainly. Trade press reports filings and rescues; it almost never reports the creditor waterfall. What is visible in the record is the split. Buyers holding enforceable guarantees or registered title generally kept their boat or their money. Buyers holding neither queued with the other creditors.</p>
+
+<h2>The warning signs arrive a year early</h2>
+
+<p>Yards do not fail suddenly. Prices are cut to win deposits, because new deposits are the cheapest funding available to a yard in trouble. Senior technical staff leave. Suppliers start ringing the owner's representative to ask, carefully, whether the last instalment has been paid, because it has not reached them. We have watched this sequence more than once and it is recognisable a year or more before any court is involved.</p>
+
+<p>The contract is no help during that year. Termination clauses are triggered by formal events: the opening of proceedings, or the appointment of an administrator. Yards file late, when the cash is gone, which is also when the least is left to recover. Even after the filing, the clause is weaker than it looks. Article 94-bis of Italy's <i>Codice della crisi</i> makes termination of essential contracts for the filing itself ineffective, protective measures suspend the rights that survive, and German courts have held insolvency-triggered termination clauses invalid where they undermine the administrator's statutory election.</p>
+
+<p>The information is often public. TISG, under a CONSOB order, publishes its financial position monthly. Anyone advising an owner there could have read the deterioration in the filings while the instalments went out. Financial stability is rarely a priority when an owner selects a yard, and in our experience it is not revisited after signature at all.</p>
+
+<h2>What an owner can do</h2>
+
+<p>Every protection discussed here exists and is in daily use somewhere. Commercial shipowners take refund guarantees as standard. The Italian and German registers are open. An independent milestone survey costs less per instalment than the owner will spend on crew uniforms. What does not exist below roughly 500gt and EUR 30 million is the habit of using them, or any professional function that owns the security position between signature and delivery.</p>
+
+<p>Lawyers are engaged to negotiate the contract and released once it is signed. Brokers are remunerated at signature. Surveyors attend milestones only where someone has thought to instruct them. Responsibility for the file, in the banking sense of the word, sits with no one.</p>
+
+<p>A buyer contracting today can close most of the gap with five measures that are modest against the exposure:</p>
+
+<ul>
+<li><strong>Financial due diligence on the yard before signature</strong>, with an unusually keen price treated as grounds for more scrutiny rather than less, and the check repeated annually through the build.</li>
+<li><strong>Title or security perfected and registered</strong> in the form the build jurisdiction recognises, not only vested by a clause in the contract.</li>
+<li><strong>Any refund guarantee matched to the instalment schedule</strong>, its expiry diarised against the long-stop date rather than the contractual delivery date, and the guarantor's written consent obtained for material variations.</li>
+<li><strong>No instalment released without independent verification</strong> of the milestone behind it.</li>
+<li><strong>A named party responsible for the security file</strong> for the life of the build, holding the guarantee diary, the register entries and the yard monitoring in one place.</li>
+</ul>
+
+<p>The industry's contribution would be larger and slower: a standard new build contract form with minimum security provisions, of the kind MYBA's memorandum gave the brokerage market decades ago. There is no industry standard new build contract today. MYBA's form covers the sale of existing yachts, ICOMIA's covers refit, and new build terms are negotiated deal by deal, usually from the yard's own draft. None of it requires new legislation.</p>
+
+<p>Twice before, in 2009 and 2017, the market absorbed a cluster of failures without changing how it contracts. Whether it does so a third time is, for once, a decision buyers can make individually. Every measure above is available to any owner, on any build, from the next contract signed.</p>
+
+<h2>Where this was published</h2>
+
+<p>A longer version of this analysis, including the tonnage measurement question and the full interview material, was published as <i>The unsecured owner</i> in <a href="/insights/press">The Superyacht Report, Issue 230, Owners Focus</a>, written by Jack MacNally for Foreland Marine.</p>
+
+<p>Foreland Marine acts for owners only. If you are contracting for a new build and want the security position reviewed before signature, our <a href="/owners-representation">new build owner's representation</a> service covers yard due diligence, contract review and milestone verification. <a href="/contact">Get in touch</a>.</p>
+
+<p><em>This article is a project manager's view of a legal subject and is not legal advice. Insolvency outcomes turn on the law of the build jurisdiction and on the facts of each proceeding.</em></p>`,
+    faqs: [
+      {
+        question: "What happens to my yacht if the shipyard goes bankrupt?",
+        answer:
+          "It depends on whether you hold registered title to the hull and an enforceable refund guarantee. If you hold neither, you generally rank as an unsecured creditor of the estate, behind the banks and in some jurisdictions behind suppliers holding liens over your own hull. If title was perfected in the register the build country recognises, the hull is yours to move. Outcomes in the record since 2000 turned far more on that structure than on the merits of the contract.",
+      },
+      {
+        question: "Is a refund guarantee standard in yacht building?",
+        answer:
+          "No. In commercial shipbuilding a refund guarantee is standard and boards will not release stage payments without one. In yachting most yards do not hold the credit lines to arrange them. The selection also runs the wrong way, because the yards strong enough to provide a guarantee are the ones least likely to fail. Where a guarantee does exist it needs maintaining: expiry dates set against the original delivery date, and material variations agreed without the guarantor's consent, are the two most common ways cover is lost.",
+      },
+      {
+        question: "Who owns a yacht while it is under construction?",
+        answer:
+          "The law of the country where the yacht is being built decides, regardless of which law governs the contract. In Italy the yard owns the yacht during construction unless the parties agree otherwise in writing, and that agreement only protects the buyer in an insolvency once it is transcribed in the registro navi in costruzione. Germany keeps a shipbuilding register for the same purpose. A vesting clause in an English law contract, on its own, is not the same thing as registered title.",
+      },
+      {
+        question: "Can I terminate the build contract if the yard becomes insolvent?",
+        answer:
+          "Often not, or not immediately. Termination clauses are triggered by formal events, so they do not help during the year in which the yard is visibly deteriorating. Once a procedure opens, restructuring law can override them. Article 94-bis of Italy's Codice della crisi makes termination of essential contracts for the filing itself ineffective, and a court granting protective measures can suspend the rights that survive. In the TISG proceedings in July 2026 the court went further and barred owners from calling their refund guarantees.",
+      },
+      {
+        question: "How much of a yacht's build price is paid before delivery?",
+        answer:
+          "In custom yacht work, routinely well over half and on some projects as much as 90 per cent. A typical 30 to 60 metre schedule takes 10 to 20 per cent at signature and the balance against milestones such as keel laying, hull completion, superstructure joining and launch. The money is not held in trust; it funds the yard's working capital. On a EUR 12 million build paying in five stages over 30 months, exposure just before launch is in the region of EUR 9 million.",
+      },
+      {
+        question: "What are the warning signs that a shipyard is in trouble?",
+        answer:
+          "Prices cut to win new deposits, because new deposits are the cheapest funding available to a yard under pressure. Senior technical staff leaving. Suppliers calling the owner's representative to ask whether the last instalment has been paid, because it has not reached them. Slipping milestone dates with no corresponding change in yard activity. Where the yard is listed, the filings usually show the deterioration well before any court is involved.",
+      },
+    ],
+  },
   {
     slug: "owners-representative-vs-project-manager-vs-broker",
     title: "Owner's Representative vs Project Manager vs Broker: What's the Difference?",

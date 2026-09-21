@@ -30,6 +30,12 @@ import HomeContactForm from "@/components/HomeContactForm";
 
 const featuredInsights = [
   {
+    slug: "shipyard-insolvency-what-happens-to-the-owner",
+    category: "New Build",
+    title: "Shipyard Insolvency: What Happens to the Owner",
+    description: "When a yard fails, the buyer who financed the hull is usually an unsecured creditor. What a refund guarantee is worth, and the measures that close the gap.",
+  },
+  {
     slug: "how-to-buy-your-first-superyacht",
     category: "New Build",
     title: "How to Buy Your First Superyacht",
@@ -40,12 +46,6 @@ const featuredInsights = [
     category: "Yacht Management",
     title: "J Class Yacht Management",
     description: "What managing a J Class involves: rig, sails, race logistics and the operational rhythms unique to these vessels.",
-  },
-  {
-    slug: "what-is-a-yacht-owners-representative",
-    category: "New Build",
-    title: "What is a Yacht Owner's Representative?",
-    description: "The role of an independent owner's representative during a new build, and why early appointment matters.",
   },
 ];
 
@@ -190,6 +190,14 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4" data-animate="fade-up">
             <div>
               <h2 className="text-3xl sm:text-4xl font-light text-white">Industry knowledge, openly shared.</h2>
+              <p className="mt-3 text-sm text-muted">
+                Our analysis of shipyard insolvency and owner security was published as{" "}
+                <i>The unsecured owner</i> in{" "}
+                <Link href="/insights/press" className="text-accent hover:text-white transition-colors">
+                  The Superyacht Report, Issue 230
+                </Link>
+                .
+              </p>
             </div>
             <Link href="/insights" className="text-sm text-accent hover:text-white transition-colors self-start sm:self-end">
               All articles &rarr;

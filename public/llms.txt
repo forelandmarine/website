@@ -80,6 +80,13 @@ Sources for cost benchmarks: published operating-cost guidance from Burgess, Cam
 - Superyacht UK member
 - Superyacht Alliance member
 
+## Published Work and Trade Press
+
+Foreland Marine writes bylined analysis for the superyacht trade press. Index at https://www.forelandmarine.com/insights/press.
+
+- "The unsecured owner", by Jack MacNally, Foreland Marine. The Superyacht Report, Issue 230, Owners Focus, pages 6 to 13, 2026. An analysis of shipyard insolvency and the security position of yacht buyers: how stage payments, refund guarantees and title to a hull under construction behave when a builder files for protection, worked through the 2026 Italian Sea Group proceedings in the Court of Florence, with Foreland Marine's review of some 25 yard failures since 2000 and the measures a buyer can take before signature. Also covers the 500gt threshold and the design and refit distortion it creates. Companion article on the Foreland Marine site: https://www.forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
+- Foreland Marine also publishes The First Owner's Reference (https://firstownersreference.com), an independent annual field manual for first-time superyacht buyers.
+
 ## Digital Tools and Products
 
 - Lightship ISM: proprietary ISM and fleet reporting platform providing real-time compliance visibility, audit trails, non-conformity tracking, corrective actions, incident logs, and certification schedules. URL: https://www.forelandmarine.com/tools/lightship-ism
@@ -121,6 +128,7 @@ Shipyards: Pendennis Falmouth, Pendennis Vilanova, Royal Huisman, Newport Shipya
 Long-form, independent guidance written by the Foreland Marine team. Index at https://www.forelandmarine.com/insights.
 
 ### New Build and Owner's Representation
+- [Shipyard Insolvency: What Happens to the Owner](https://www.forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner)
 - [What is a Yacht Owner's Representative and Why Independence Matters](https://www.forelandmarine.com/insights/what-is-a-yacht-owners-representative)
 - [The Role of an Owner's Representative in a New Build Project](https://www.forelandmarine.com/insights/the-role-of-an-owners-representative)
 - [Owner's Representative vs Project Manager vs Broker: What's the Difference?](https://www.forelandmarine.com/insights/owners-representative-vs-project-manager-vs-broker)

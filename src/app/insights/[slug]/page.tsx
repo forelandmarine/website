@@ -181,6 +181,30 @@ export default async function PostPage({ params }: Props) {
       "@type": "SpeakableSpecification",
       cssSelector: [".article-summary", ".faq-answer"],
     },
+    ...(post.originalPublication
+      ? {
+          citation: {
+            "@type": "Article",
+            headline: post.originalPublication.title,
+            author: { "@id": "https://www.forelandmarine.com/#jack-macnally" },
+            ...(post.originalPublication.pages ? { pagination: post.originalPublication.pages } : {}),
+            ...(post.originalPublication.url ? { url: post.originalPublication.url } : {}),
+            isPartOf: {
+              "@type": "PublicationIssue",
+              issueNumber: post.originalPublication.issue,
+              isPartOf: {
+                "@type": "Periodical",
+                name: post.originalPublication.periodical,
+                publisher: {
+                  "@type": "Organization",
+                  name: "The Superyacht Group",
+                  url: "https://www.superyachtnews.com",
+                },
+              },
+            },
+          },
+        }
+      : {}),
   };
 
   const faqJsonLd = post.faqs?.length
@@ -269,6 +293,31 @@ export default async function PostPage({ params }: Props) {
             </div>
           </div>
 
+          {/* First publication, where the piece ran in print before the web */}
+          {post.originalPublication && (
+            <div className="mb-12 -mt-4 border-l-2 border-accent/60 pl-5 py-1">
+              <p className="text-xs text-muted/60 uppercase tracking-widest mb-2">
+                First published in print
+              </p>
+              <p className="text-sm text-muted leading-relaxed">
+                A longer version of this analysis appeared as{" "}
+                <i>{post.originalPublication.title}</i> in{" "}
+                {post.originalPublication.url ? (
+                  <a
+                    href={post.originalPublication.url}
+                    className="text-accent underline underline-offset-2 hover:text-white transition-colors"
+                  >
+                    {post.originalPublication.periodical}
+                  </a>
+                ) : (
+                  post.originalPublication.periodical
+                )}
+                , {post.originalPublication.issue}
+                {post.originalPublication.pages ? `, pages ${post.originalPublication.pages}` : ""}.
+              </p>
+            </div>
+          )}
+
           {/* Article content */}
           <div
             className="prose prose-invert prose-lg max-w-none
@@ -277,7 +326,11 @@ export default async function PostPage({ params }: Props) {
               [&>h3]:text-white [&>h3]:text-xl [&>h3]:font-light [&>h3]:mt-8 [&>h3]:mb-3
               [&>ul]:text-muted [&>ul]:mb-6 [&>ul]:list-disc [&>ul]:pl-6 [&>ul>li]:mb-2
               [&_a]:text-accent [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-white
-              [&>blockquote]:border-l-2 [&>blockquote]:border-accent [&>blockquote]:pl-6 [&>blockquote]:italic [&>blockquote]:text-muted/80"
+              [&>blockquote]:border-l-2 [&>blockquote]:border-accent [&>blockquote]:pl-6 [&>blockquote]:italic [&>blockquote]:text-muted/80
+              [&_.table-scroll]:overflow-x-auto [&_.table-scroll]:mb-8
+              [&_table]:w-full [&_table]:min-w-[36rem] [&_table]:text-sm [&_table]:border-collapse
+              [&_th]:text-left [&_th]:text-white [&_th]:font-semibold [&_th]:align-top [&_th]:py-3 [&_th]:pr-5 [&_th]:border-b [&_th]:border-white/20
+              [&_td]:text-muted [&_td]:align-top [&_td]:py-3 [&_td]:pr-5 [&_td]:border-b [&_td]:border-white/8"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 

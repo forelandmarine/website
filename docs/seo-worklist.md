@@ -47,7 +47,7 @@ Status as of 2026-05-04. Items below need human action or domain content that ca
 
 8. **Google Business Profile** for the London office at 7 Bell Yard. Separate listings for Antibes, Palma, Fort Lauderdale, Antigua only if there is verifiable physical presence.
 
-9. **Backlink campaign.** Bylined article pitches to:
+9. **Backlink campaign.** First placement secured: "The unsecured owner", The Superyacht Report, Issue 230 (Owners Focus), pages 6 to 13, September 2026. Site work and distribution plan in `docs/tsr-230-unsecured-owner.md`. Outstanding on this placement: confirm the cover date, swap the library URL for the digital edition link when it goes live, and ask The Superyacht Group to link the byline to forelandmarine.com. Continue pitching:
    - Boat International
    - SuperyachtNews
    - Yachting World

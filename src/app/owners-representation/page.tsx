@@ -513,6 +513,7 @@ export default function NewBuildPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
         <p className="text-xs text-muted/60 uppercase tracking-widest mb-3">Further Reading</p>
         <div className="flex flex-col gap-2">
+          <Link href="/insights/shipyard-insolvency-what-happens-to-the-owner" className="text-sm text-accent hover:text-white transition-colors">Shipyard Insolvency: What Happens to the Owner</Link>
           <Link href="/insights/the-role-of-an-owners-representative" className="text-sm text-accent hover:text-white transition-colors">The Role of an Owner&apos;s Representative in a New Build Project</Link>
           <Link href="/insights/owner-representation-during-yard-selection" className="text-sm text-accent hover:text-white transition-colors">Owner&apos;s Representation During Yard Selection: Getting It Right from Day One</Link>
         </div>
