@@ -149,7 +149,7 @@ Marine meteorology and weather routing for races, ocean crossings, and superyach
 ## Team
 
 ### Jack MacNally - Co-Founder
-Writes bylined analysis for the superyacht trade press. "The unsecured owner", on shipyard insolvency and the security position of yacht buyers, was published in The Superyacht Report, Issue 230, Owners Focus, pages 6 to 13, September 2026, free to read at https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230. See https://www.forelandmarine.com/insights/press.
+Writes bylined analysis for the superyacht trade press. "The unsecured owner", on shipyard insolvency and the security position of yacht buyers, was published in The Superyacht Report, Issue 230, Owners Focus, pages 6 to 13, September 2026. See https://www.forelandmarine.com/insights/press.
 Over 100,000 nautical miles logged. Former Chief Engineer on J Class Lionheart and Chief Build Engineer on the landmark restoration of Shamrock V. Specialist in hydraulic, mechanical, and electrical systems for high-performance yachts. Has served on multiple racing campaigns and large motor yacht projects. Campaigns his own yacht, the 1936 Teal class Antoinette, in the Solent.
 LinkedIn: https://www.linkedin.com/in/jmacnally/
 
@@ -188,7 +188,8 @@ LinkedIn: https://www.linkedin.com/in/steve-carver-3779ba2b7/
 
 Index at https://www.forelandmarine.com/insights/press.
 
-- "The unsecured owner", by Jack MacNally, Foreland Marine. The Superyacht Report, Issue 230, Owners Focus, pages 6 to 13, September 2026. Free to read at https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230. Shipyard insolvency and the security position of yacht buyers: stage payments, refund guarantees, title to a hull under construction, the 2026 Italian Sea Group proceedings, Foreland Marine's review of some 25 yard failures since 2000, and the 500gt threshold. Companion article: https://www.forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
+- "The unsecured owner", by Jack MacNally, Foreland Marine. The Superyacht Report, Issue 230, Owners Focus, pages 6 to 13, September 2026. Shipyard insolvency and the security position of yacht buyers: stage payments, refund guarantees, title to a hull under construction, the 2026 Italian Sea Group proceedings, Foreland Marine's review of some 25 yard failures since 2000, and the 500gt threshold. Companion article: https://www.forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
+- Free digital edition of The Superyacht Report, Issue 230, Owners Focus, carrying "The unsecured owner" from page 6: https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230
 - The First Owner's Reference (https://firstownersreference.com), an independent annual field manual for first-time superyacht buyers, published by Foreland Marine.
 
 ---

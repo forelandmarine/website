@@ -158,7 +158,8 @@ Six disciplines: yacht racing performance (CFD analysis, rigging, deck hardware,
 
 Foreland Marine writes bylined analysis for the superyacht trade press. Index at https://www.forelandmarine.com/insights/press.
 
-- "The unsecured owner", by Jack MacNally, Foreland Marine. The Superyacht Report, Issue 230, Owners Focus, pages 6 to 13, September 2026. Free to read at https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230. Shipyard insolvency and the security position of yacht buyers. Covers stage payment structures, the practical limits of refund guarantees in yachting, title to a hull under construction and the registers that perfect it, the 2026 Italian Sea Group proceedings in the Court of Florence, Foreland Marine's review of some 25 yard failures since 2000, and the 500gt threshold as a design and refit distortion. Companion article, full text below: https://www.forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
+- "The unsecured owner", by Jack MacNally, Foreland Marine. The Superyacht Report, Issue 230, Owners Focus, pages 6 to 13, September 2026. Shipyard insolvency and the security position of yacht buyers. Covers stage payment structures, the practical limits of refund guarantees in yachting, title to a hull under construction and the registers that perfect it, the 2026 Italian Sea Group proceedings in the Court of Florence, Foreland Marine's review of some 25 yard failures since 2000, and the 500gt threshold as a design and refit distortion. Companion article, full text below: https://www.forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
+- Free digital edition of The Superyacht Report, Issue 230, Owners Focus, carrying "The unsecured owner" from page 6: https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230
 
 ---
 
