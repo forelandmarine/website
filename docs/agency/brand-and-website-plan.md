@@ -1,6 +1,7 @@
-# Foreland Agency: brand and website plan
+# Watermans: brand and website plan
 
-Prepared 21 September 2026. Companion to uk-agency-assessment.md.
+Prepared 21 September 2026, name and design settled the same day.
+Companion to uk-agency-assessment.md.
 
 ## Decisions taken
 
@@ -12,15 +13,33 @@ Fees: published figures, with a written at-cost pass-through commitment and no s
 
 ## Name
 
-Foreland Agency.
+Watermans.
 
-Both exact-match domains were unregistered when checked on 21 September 2026: forelandagency.com and forelandagency.co.uk. Register both, and forward the .co.uk to the .com.
+The Company of Watermen and Lightermen has licensed the men who move vessels on
+the Thames since 1514. Watermen took ships in and out, carried people and goods
+between the shore and vessels lying in the Pool, and knew the tide better than
+the owners did. It is the same job with more paperwork, and the word is still
+the working river's own.
 
-The reasoning. The chosen architecture wants the parent connection visible, so a name that hides it works against the decision. Foreland Agency reads correctly in the two places it will actually appear: a directory line that says United Kingdom, Foreland Agency, London, and a sentence from an overseas agent that says Foreland are our UK correspondent. Agency is the industry's own word for the service and needs no explanation to a captain.
+Domains: watermansagency.com and watermansagency.co.uk, both unregistered when
+checked on 21 September 2026, plus watermans.london. Bare watermans.co.uk and
+watermansmarine.com are gone, which is why the agency suffix carries the name.
 
-The alternative considered was North Foreland, after the light marking the turn out of the Channel into the Thames approach, as a sister to the South Foreland light behind the parent name. It is the better story and the geography is exactly right. It was set aside because northforeland.com and northforeland.co.uk are both registered, and because a separate name quietly undoes the endorsement the architecture is meant to carry. Keep it on file as the rename option if the agency ever needs to stand fully apart.
+Two cautions. Never imply we hold a waterman's licence, because we do not. And
+check the Company's own position before using any of its heraldry.
 
-Actions before committing: a basic trademark check on Foreland Agency in class 39, and a companies register check before deciding whether this trades through Foreland Marine Consultancy Ltd or its own company. Own company is preferable for the disbursement liability, but only if the cost is justified after the pilot.
+Names considered and set aside, with the reasoning, in case this is revisited:
+Botolph Wharf, a legal quay of 1559 named for the patron saint of travellers.
+Cherry Garden, where the PLA kept lookouts who telephoned Tower Bridge to have
+it opened for an approaching ship. Wool Quay, where customs duty was paid from
+1203 and Chaucer was Comptroller from 1374. Long Room, the room in the Custom
+House where ships' business was transacted. Landward, Yantlet and Foreland
+Agency from the earlier round.
+
+Clipper was raised and rejected. On the Thames it means Thames Clippers, half of
+London Cruise and Yacht, which holds the PLA contract for the three central
+moorings we book every berth through. In the Solent it means Clipper Ventures at
+Gosport. The word is occupied twice over in exactly our two cruising grounds.
 
 ## Positioning
 
@@ -38,51 +57,65 @@ Third, correspondent standing. A named UK contact for overseas agents and manage
 
 ## Visual identity
 
+The category is navy, a stock photograph of Tower Bridge and a hero image. So,
+on inspection, is every site this studio has built: Foreland, Nimara, The First
+Owner's Reference and Faro itself all open with a full bleed photograph and type
+over it. A fifth would read as a house template.
+
+Watermans is a printed port document instead.
+
 ### Mark
 
-The International Code of Signals flag G, six vertical stripes alternating yellow and blue, meaning I require a pilot. That is precisely what a captain is saying when they telephone an agent, it is instantly legible to anyone who has stood a watch, and no competitor is anywhere near it.
-
-The parent mark is a lighthouse. The sister mark is a signal flag. Both are aids to navigation, which gives the family a logic without repeating a lighthouse.
-
-Secondary device for arrival and confirmation states, and for the site's contact and success pages: flag H, white and red vertical halves, meaning I have a pilot on board.
-
-Lockup: the flag at left, wordmark set to its right, with the endorsement line beneath the wordmark at roughly a third of its size.
-
-Endorsement line: part of Foreland Marine. Set in the same typeface, never in the parent's own logotype.
+Code flag H, white and scarlet, meaning I have a pilot on board. Not a call for
+help but the state of being looked after, which is what the agency sells. It
+also happens to be the only code flag in the watermen's own colour.
 
 ### Palette
 
-Deliberately light. Every competitor is dark navy with a night-time river photograph, so a paper ground is the fastest way to look like a different kind of firm.
+Admiralty chart convention. Buff paper #f4efe4, ink #15181b, hairline rules
+#cbc2ad, chart water #dbe7ed, and one scarlet #b0202a taken from the coat rowed
+for in Doggett's Coat and Badge every year since 1715.
 
-| Role | Hex | Use |
-|---|---|---|
-| Paper | #F6F4EF | Page ground |
-| Ink | #101418 | Body text, tables, rules |
-| Navy | #081630 | Headings, footer, inherited from the parent |
-| Signal Blue | #1F4E8C | Links, active states, from flag G |
-| Signal Yellow | #F5B921 | The single accent. Callouts, the mark, current-status markers |
-| Slate | #5C6672 | Secondary text, captions, table headers |
-| Rule | #DED9CF | Hairlines and table borders |
+Scarlet is reserved for deadlines and advisory marks and appears nowhere else.
+That is the working rule of the whole design: a captain scanning the arrival
+sequence sees only the times that bind. Colour carries meaning or it is not used.
 
-Yellow is the only warm colour in the system and must stay rare. Used on more than one element per screen it stops signalling anything.
-
-Dark mode: a straight inversion to Navy ground with Paper text, same accents.
+Dark mode is a night chart, close to what an ECDIS shows after dark. Near black
+ground, dimmed scarlet, the river as a dark band with hairline banks.
 
 ### Typography
 
-IBM Plex Sans for everything structural, IBM Plex Mono for numbers that behave like instrument readings: tariffs, tide times, LOA and air draught figures, reference numbers, telephone numbers, positions.
+Libre Caslon Display for the masthead, Libre Caslon Text for reading, Archivo
+Narrow for anything that behaves like an instrument reading: charges, notice
+periods, lengths, chart labels.
 
-Both are on Google Fonts, both have proper tabular figures, and the pairing reads as engineering rather than hospitality, which is the intended distance from the category. The parent's Nunito Sans is deliberately not carried across. Family resemblance comes from the navy and the endorsement line, not the typeface.
+Caslon is the English printing face and has set official London documents since
+the 1720s, which is the right provenance for a company named after a livery of
+1514. None of the other sites in the group use it.
 
-If Plex reads too technical in build, Inter is the fallback for the sans, but keep a mono for figures.
+### Layout
+
+A gazette masthead with a double rule and the navigation spread across the
+measure. Ruled tables with no boxes, no fills, no shadows and no rounded
+corners. Notes set in the margin on wide screens, tied to the text by a
+hairline. Text set to a 38rem measure, as a printed page would set it.
+
+Deliberately absent, because they are the tells: letterspaced eyebrow labels
+above every heading, numbered step markers in corners, three card feature rows,
+centred hero with two buttons, gradients and glows.
 
 ### Imagery
 
-No stock photography. None. It is the single clearest tell in this category and there is no supply of real photographs yet.
+None. No photography anywhere, at launch or later, unless it is a real
+photograph of a real job.
 
-Launch with drawn work instead: the arrival chain as a diagram, a Thames sector diagram showing where pilotage begins and where Sector D starts, an air draught and tide window chart for Tower Bridge, a berth comparison table by maximum LOA. These are more useful to a captain than any photograph and they are the proof of competence the site is actually selling.
-
-Add photographs only as real jobs produce them, unedited, credited to the call.
+The signature element is a hand drawn schematic of the tidal Thames from Putney
+to Sea Reach, carrying the two real loops, south around the Isle of Dogs and
+north around the Greenwich peninsula, with the moorings, the pilot station and
+the limit of the Port of London marked in chart convention. It is more use to a
+captain than any photograph and it is the thing that will identify the site at
+thumbnail size on the Faro portfolio page, where it will sit among three dark
+photographic cards as the one buff page with a river drawn across it.
 
 ## Voice
 
@@ -175,7 +208,7 @@ On forelandmarine.com, add exactly one link, from the technical support page and
 
 ## Sequence
 
-October 2026: register both domains, ask ITIC to extend B038, confirm VAT treatment, sign off the tariff, obtain the 24 hour number.
+October 2026: register watermansagency.com and .co.uk, ask ITIC to extend B038, confirm VAT treatment, sign off the tariff, obtain the 24 hour number.
 
 November 2026: identity and site build.
 
