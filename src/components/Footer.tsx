@@ -26,6 +26,7 @@ const company = [
   { label: "Press", href: "/insights/press" },
   { label: "Newsletter", href: "/newsletters" },
   { label: "The First Owner's Reference", href: "https://firstownersreference.com" },
+  { label: "Watermans, UK yacht agents", href: "https://www.watermansagency.com" },
   { label: "Contact", href: "/contact" },
 ];
 
