@@ -20,13 +20,17 @@ const tools = [
   { label: "Running Cost Calculator", href: "/tools/running-cost-calculator" },
 ];
 
+const group = [
+  { label: "Foreland Marine Consultancy", href: null },
+  { label: "Watermans, UK yacht agents", href: "https://www.watermansagency.com" },
+  { label: "The First Owner's Reference", href: "https://firstownersreference.com" },
+];
+
 const company = [
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
   { label: "Press", href: "/insights/press" },
   { label: "Newsletter", href: "/newsletters" },
-  { label: "The First Owner's Reference", href: "https://firstownersreference.com" },
-  { label: "Watermans, UK yacht agents", href: "https://www.watermansagency.com" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -34,7 +38,7 @@ export default function Footer() {
   return (
     <footer className="bg-bg0 border-t border-white/8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-4">
@@ -71,6 +75,21 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
+            <ul className="mt-6 space-y-3">
+              <li>
+                <a href="mailto:info@forelandmarine.com" className="text-sm font-light text-muted hover:text-white transition-colors">
+                  info@forelandmarine.com
+                </a>
+              </li>
+              <li className="text-sm font-light text-muted">
+                7 Bell Yard, London<br />WC2A 2JR
+              </li>
+              <li className="text-sm font-light text-muted leading-relaxed">
+                London, Antibes, Palma<br />
+                Fort Lauderdale, Antigua<br />
+                Netherlands, Germany, Italy
+              </li>
+            </ul>
           </div>
 
           {/* Services */}
@@ -114,31 +133,32 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+        </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">Contact</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="mailto:info@forelandmarine.com" className="text-sm font-light text-muted hover:text-white transition-colors">
-                  info@forelandmarine.com
-                </a>
-              </li>
-              <li className="text-sm font-light text-muted">
-                7 Bell Yard, London<br />WC2A 2JR
-              </li>
-              <li className="text-sm font-light text-muted leading-relaxed">
-                London, Antibes, Palma<br />
-                Fort Lauderdale, Antigua<br />
-                Netherlands, Germany, Italy
-              </li>
-            </ul>
+        {/* The group: the same three sites, in the same order, on every group site */}
+        <div className="mt-10 pt-8 border-t border-white/8 flex flex-col gap-4 md:flex-row md:items-center md:gap-10">
+          <div className="flex items-center gap-3">
+            <Image src="/logos/foreland-icon-white.svg" alt="" width={24} height={24} className="h-6 w-6 shrink-0" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-muted">Part of the Foreland Group</span>
           </div>
+          <ul className="flex flex-wrap gap-x-8 gap-y-2">
+            {group.map((g) => (
+              <li key={g.label} className="text-sm font-light">
+                {g.href ? (
+                  <a href={g.href} rel="noopener" className="text-muted hover:text-white transition-colors">
+                    {g.label}
+                  </a>
+                ) : (
+                  <span className="text-white">{g.label}</span>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Memberships */}
-        <div className="mt-10 pt-8 border-t border-white/8 flex flex-wrap items-center gap-6">
-          <span className="text-xs font-light text-muted uppercase tracking-widest">Proud member of</span>
+        <div className="mt-8 pt-8 border-t border-white/8 flex flex-wrap items-center gap-6">
+          <span className="text-sm font-light text-muted">Foreland Marine Consultancy Ltd is a member of</span>
           <a href="https://www.britishmarine.co.uk" target="_blank" rel="noopener noreferrer" title="British Marine - trade association for the UK marine industry" className="hover:opacity-80 transition-opacity px-3 py-2">
             <Image src="/logos/british-marine-white.svg" alt="Foreland Marine is a proud member of British Marine" width={100} height={40} className="h-10 w-auto" />
           </a>
@@ -156,27 +176,31 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="mt-6 pt-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm font-light text-muted/70">
-            © {new Date().getFullYear()} Foreland Marine Consultancy Ltd. All rights reserved.
+        {/* Legal */}
+        <div className="mt-8 pt-6 border-t border-white/8 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+          <p className="max-w-2xl text-xs font-light leading-relaxed text-muted/70">
+            Foreland Marine Consultancy Ltd, registered in England, number 15785851, registered office 7 Bell Yard,
+            London WC2A 2JR.
           </p>
-          <Link href="/privacy-policy" className="text-sm font-light text-muted/70 hover:text-muted transition-colors">
-            Privacy Policy
-          </Link>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-light text-muted/70">
+            <Link href="/privacy-policy" className="hover:text-muted transition-colors">
+              Privacy Policy
+            </Link>
+            <span>© {new Date().getFullYear()} Foreland Marine Consultancy Ltd</span>
+            <span>
+              Designed and built by{" "}
+              <a
+                href="https://faro.is"
+                target="_blank"
+                rel="noopener"
+                className="underline underline-offset-2 decoration-muted/30 hover:text-muted hover:decoration-muted/70 transition-colors"
+              >
+                Faro Creative
+              </a>
+              , the founder-led design studio
+            </span>
+          </div>
         </div>
-
-        <p className="mt-6 text-center text-xs font-light text-muted/60">
-          Designed and built by{" "}
-          <a
-            href="https://faro.is"
-            target="_blank"
-            rel="noopener"
-            className="underline underline-offset-2 decoration-muted/30 hover:text-muted hover:decoration-muted/70 transition-colors"
-          >
-            Faro Creative
-          </a>
-          , the founder-led design studio.
-        </p>
       </div>
     </footer>
   );
