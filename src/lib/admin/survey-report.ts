@@ -209,7 +209,11 @@ export function buildReportModel(input: {
   };
 
   const particulars = (survey.particulars ?? []).filter(([, v]) => v && v.trim()) as [string, string][];
-  const unsectioned = rest.filter((p) => !sectionOf(p) || !sectionOrder.includes(sectionOf(p)!));
+  // Photos filed under "Vessel description" (e.g. a general arrangement drawing)
+  // sit with the description rather than with a checklist section.
+  const DESCRIPTION = "Vessel description";
+  const descPhotos = style === "condition" ? rest.filter((p) => !p.item_id && p.section === DESCRIPTION) : [];
+  const unsectioned = rest.filter((p) => !descPhotos.includes(p) && (!sectionOf(p) || !sectionOrder.includes(sectionOf(p)!)));
 
   // Opening sections
   if (style === "site_visit") {
@@ -223,7 +227,9 @@ export function buildReportModel(input: {
     if (particulars.length) push("Vessel particulars", [{ kind: "particulars", rows: particulars }]);
   } else {
     push("Introduction", paras(fill(survey.intro ?? "")));
-    push("Vessel description", paras(survey.description));
+    const desc = paras(survey.description);
+    if (descPhotos.length) desc.push({ kind: "figures", figures: descPhotos.map((p) => fig(p)) });
+    push("Vessel description", desc);
   }
 
   // One report section per checklist section

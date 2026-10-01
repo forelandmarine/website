@@ -223,7 +223,22 @@ export function SurveyReportEditor({
           locked={locked}
         />
         {style === "condition" && (
-          <TextBlock label="Vessel description" initial={survey.description} save={field("description")} draft={{ kind: "description", surveyId }} rows={6} locked={locked} />
+          <>
+            <TextBlock label="Vessel description" initial={survey.description} save={field("description")} draft={{ kind: "description", surveyId }} rows={6} locked={locked} />
+            <div>
+              <span className="fm-label">Description photos</span>
+              <p className="mb-2 text-xs text-slate-500">For a general arrangement drawing or profile view.</p>
+              <SurveyPhotos
+                surveyId={surveyId}
+                section="Vessel description"
+                photos={photos.filter((p) => !p.item_id && p.section === "Vessel description")}
+                onChange={(next) => onPhotosChange([...photos.filter((p) => p.item_id || p.section !== "Vessel description"), ...next])}
+                coverId={coverId}
+                onCoverChange={onCoverChange}
+                locked={locked}
+              />
+            </div>
+          </>
         )}
         {style !== "site_visit" && <ParticularsEditor surveyId={surveyId} initial={survey.particulars} locked={locked} />}
       </div>
