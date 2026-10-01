@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // The survey Word export reads the letterhead template from disk at runtime.
+  outputFileTracingIncludes: {
+    "/admin/surveys/[id]/docx": ["./src/lib/admin/docx-template/**"],
+  },
   async redirects() {
     return [
       {

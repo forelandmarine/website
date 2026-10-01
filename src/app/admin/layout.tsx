@@ -28,7 +28,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   if (!profile) redirect("/login");
 
   return (
-    <div className="fm-admin fixed inset-0 z-[60] flex overflow-hidden bg-slate-50 text-slate-900">
+    <div className="fm-admin fixed inset-0 z-[60] flex flex-col overflow-hidden bg-slate-50 text-slate-900 lg:flex-row">
       <Sidebar role={profile.role} name={profile.full_name || profile.email || "User"} />
       <div className="flex flex-1 flex-col overflow-y-auto">{children}</div>
     </div>
