@@ -13,6 +13,7 @@ const nav: { href: string; label: string; roles: Role[] }[] = [
   { href: "/admin/clients", label: "Clients", roles: ["owner", "staff", "bookkeeper"] },
   { href: "/admin/quotes", label: "Proposals", roles: ["owner", "staff"] },
   { href: "/admin/jobs", label: "Engagements", roles: ["owner", "staff"] },
+  { href: "/admin/surveys", label: "Surveys", roles: ["owner", "staff"] },
   { href: "/admin/calendar", label: "Calendar", roles: ["owner", "staff"] },
   { href: "/admin/invoices", label: "Invoices", roles: ["owner", "bookkeeper"] },
   { href: "/admin/payments", label: "Payments", roles: ["owner", "bookkeeper"] },
@@ -51,7 +52,7 @@ export function Sidebar({ role, name }: { role: Role; name: string }) {
   return (
     <>
       {/* Mobile top bar */}
-      <div className="sticky top-0 z-30 flex items-center justify-between bg-navy px-4 py-3 lg:hidden">
+      <div className="sticky top-0 z-30 flex items-center justify-between bg-navy px-4 py-3 lg:hidden print:hidden">
         <Wordmark />
         <button onClick={() => setOpen(true)} className="text-sm uppercase tracking-widest text-white" aria-label="Open menu">
           Menu
@@ -61,7 +62,7 @@ export function Sidebar({ role, name }: { role: Role; name: string }) {
       {open && <div className="fixed inset-0 z-30 bg-black/40 lg:hidden" onClick={() => setOpen(false)} />}
 
       <aside
-        className={`${open ? "flex" : "hidden"} fixed inset-y-0 left-0 z-40 w-64 flex-col bg-navy text-white lg:flex lg:static lg:z-auto lg:w-60 lg:shrink-0`}
+        className={`${open ? "flex" : "hidden"} fixed inset-y-0 left-0 z-40 w-64 flex-col bg-navy text-white lg:flex lg:static lg:z-auto lg:w-60 lg:shrink-0 print:!hidden`}
       >
         <div className="flex items-center justify-between px-5 py-5">
           <Wordmark />
