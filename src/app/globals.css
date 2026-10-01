@@ -178,4 +178,5 @@ textarea::placeholder {
   .fm-doc-overlay { position: static !important; overflow: visible !important; z-index: auto !important; }
   /* Admin pages (e.g. survey reports) print without the sidebar or the overlay's scroll box. */
   .fm-admin, .fm-admin > div { position: static !important; overflow: visible !important; display: block !important; background: #fff !important; }
+  .fm-admin .print\:hidden { display: none !important; }
 }
