@@ -68,6 +68,8 @@ const CSS = `
   .svr-logo { margin-bottom:4mm; }
   .svr h1 { margin-top:24mm; }
   .svr .svr-sig { break-inside:avoid; }
+  /* Keep the signature with the paragraph above it. */
+  .svr p:has(+ .svr-sig) { break-after:avoid; }
 }
 `;
 
