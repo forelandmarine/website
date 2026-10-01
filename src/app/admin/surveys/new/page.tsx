@@ -5,6 +5,7 @@ import { PendingButton } from "@/components/admin/PendingButton";
 import { getBuilderData } from "@/lib/admin/data";
 import { getTemplate, TEMPLATES, type SurveyTemplate } from "@/lib/admin/survey-templates";
 import { createSurvey } from "../actions";
+import { NewClientFields, SaveVesselToggle } from "@/components/admin/NewClientFields";
 
 export const dynamic = "force-dynamic";
 
@@ -91,6 +92,8 @@ export default async function NewSurveyPage({ searchParams }: { searchParams: Pr
                   <Field key={f.key} label={f.label} name={`meta_${f.key}`} type={f.type === "date" ? "date" : "text"} />
                 ))}
             </FormGrid>
+            <NewClientFields />
+            <SaveVesselToggle />
             {template.fields
               .filter((f) => f.type === "textarea")
               .map((f) => (

@@ -53,6 +53,39 @@ function headerFields(fd: FormData) {
   };
 }
 
+// A survey can introduce a client and vessel not yet on file: a filled-in
+// "New client" panel creates the client, and "Save vessel to file" creates the
+// vessel record under that client.
+async function resolveClientAndVessel(fd: FormData, header: ReturnType<typeof headerFields>, profileId: string) {
+  const supabase = await getSupabaseServer();
+  const newName = s(fd, "new_client_name");
+  if (newName) {
+    const { data } = await supabase
+      .from("fm_clients")
+      .insert({
+        name: newName,
+        type: s(fd, "new_client_type") || "owner",
+        company: s(fd, "new_client_company"),
+        email: s(fd, "new_client_email"),
+        phone: s(fd, "new_client_phone"),
+        country: s(fd, "new_client_country"),
+        created_by: profileId,
+      })
+      .select("id")
+      .single();
+    if (data) header.client_id = data.id;
+    revalidatePath("/admin/clients");
+  }
+  if (!header.vessel_id && header.vessel_name && fd.get("save_vessel") === "on") {
+    const { data } = await supabase
+      .from("fm_vessels")
+      .insert({ client_id: header.client_id, name: header.vessel_name, type: header.vessel_type === "motor" ? "motor" : "sail" })
+      .select("id")
+      .single();
+    if (data) header.vessel_id = data.id;
+  }
+}
+
 type VesselRec = { name: string; type: string | null; builder: string | null; year_built: number | null; length_m: number | null; gross_tonnage: number | null; flag: string | null; imo: string | null };
 
 function particularsFor(vesselName: string | null, v: VesselRec | null): [string, string][] {
@@ -75,6 +108,7 @@ export async function createSurvey(formData: FormData) {
   const supabase = await getSupabaseServer();
 
   const header = headerFields(formData);
+  await resolveClientAndVessel(formData, header, profile.id);
   let vessel: VesselRec | null = null;
   if (header.vessel_id) {
     const { data } = await supabase.from("fm_vessels").select("name, type, builder, year_built, length_m, gross_tonnage, flag, imo").eq("id", header.vessel_id).single();
@@ -182,13 +216,15 @@ export async function createFollowUp(formData: FormData) {
 }
 
 export async function updateSurveyHeader(formData: FormData) {
-  await requireProfile();
+  const profile = await requireProfile();
   const id = String(formData.get("id"));
   const supabase = await getSupabaseServer();
   const { data: sv } = await supabase.from("fm_surveys").select("template_key").eq("id", id).single();
+  const header = headerFields(formData);
+  await resolveClientAndVessel(formData, header, profile.id);
   await supabase
     .from("fm_surveys")
-    .update({ ...headerFields(formData), meta: metaFrom(formData, sv?.template_key ?? ""), updated_at: new Date().toISOString() })
+    .update({ ...header, meta: metaFrom(formData, sv?.template_key ?? ""), updated_at: new Date().toISOString() })
     .eq("id", id);
   touch(id);
 }

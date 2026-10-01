@@ -6,6 +6,7 @@ import { PageHeader, Card, Badge, fmtDate, fmtDateTime } from "@/components/admi
 import { Field, SelectField, TextArea } from "@/components/admin/form";
 import { PendingButton } from "@/components/admin/PendingButton";
 import { CopyField } from "@/components/admin/CopyField";
+import { NewClientFields, SaveVesselToggle } from "@/components/admin/NewClientFields";
 import { SurveyWorkspace } from "@/components/admin/SurveyWorkspace";
 import type { ChecklistItem } from "@/components/admin/SurveyChecklist";
 import { getTemplate, outcomeLabel } from "@/lib/admin/survey-templates";
@@ -83,7 +84,9 @@ export default async function SurveyDetail({ params }: { params: Promise<{ id: s
           <input type="hidden" name="id" value={id} />
           <SelectField label="Client" name="client_id" defaultValue={survey.client_id ?? ""} options={[{ value: "", label: "None" }, ...clients.map((c) => ({ value: c.id, label: c.name }))]} />
           <SelectField label="Vessel on file" name="vessel_id" defaultValue={survey.vessel_id ?? ""} options={[{ value: "", label: "None" }, ...vessels.map((v) => ({ value: v.id, label: v.name }))]} />
+          <NewClientFields />
           <Field label="Vessel name" name="vessel_name" defaultValue={survey.vessel_name} />
+          {!survey.vessel_id && <SaveVesselToggle checked={false} />}
           <SelectField
             label="Vessel type"
             name="vessel_type"
