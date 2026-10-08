@@ -24,6 +24,7 @@ type CruisingArea =
 type UseType = "private" | "charter";
 type SeasonType = "single" | "dual";
 type UsageIntensity = "light" | "moderate" | "heavy";
+type AgeBand = "new" | "established" | "older";
 
 interface SubItem {
   label: string;
@@ -74,7 +75,24 @@ function fmt(n: number, currency: Currency = "EUR"): string {
 
 /* ------------------------------------------------------------------ */
 /*  Cost model                                                         */
+/*  Calibrated against the Christie Yachts annual budget table for     */
+/*  motor yachts of 30 to 100 metres (tonnage, crew, season).          */
+/*  Crew numbers and pay are set at each size point; other lines scale */
+/*  on a size curve that rises faster than length above 55 metres.     */
 /* ------------------------------------------------------------------ */
+
+const sizePoints = [24, 30, 37, 45, 50, 55, 60, 70, 80, 90, 100];
+
+function bySize(length: number, values: number[]) {
+  if (length <= sizePoints[0]) return values[0];
+  for (let i = 1; i < sizePoints.length; i++) {
+    if (length <= sizePoints[i]) {
+      const f = (length - sizePoints[i - 1]) / (sizePoints[i] - sizePoints[i - 1]);
+      return lerp(values[i - 1], values[i], f);
+    }
+  }
+  return values[values.length - 1];
+}
 
 function calculateCosts(
   length: number,
@@ -83,32 +101,48 @@ function calculateCosts(
   usage: UsageIntensity,
   useType: UseType,
   season: SeasonType,
+  age: AgeBand,
 ): CostBreakdown {
-  const t = (length - 24) / (60 - 24); // 0..1
+  // Size curve: 0 at 24 m, 1 at 60 m, extended to 100 m
+  const t = bySize(length, [0, 0.1, 0.25, 0.45, 0.6, 0.85, 1.1, 1.65, 1.85, 2.1, 2.45]);
+  const tc = Math.min(t, 1); // per-head items that stop growing past 60 m
   const isCharter = useType === "charter";
   const isDual = season === "dual";
   const isSail = yachtType === "sailing";
   const charterAdj = (base: number, mult: number) => base * (isCharter ? mult : 1.0);
+  const ageMaint = age === "new" ? 0.8 : age === "older" ? 1.35 : 1.0;
+  const ageValue = age === "new" ? 1.0 : age === "older" ? 0.55 : 0.75;
+  const ageRate = age === "new" ? 0.9 : age === "older" ? 1.3 : 1.0;
 
   // --- Crew ---
-  const crewCount = isSail
-    ? Math.round(lerp(4, 12, t))
-    : Math.round(lerp(5, 14, t));
-  const salaries = isSail ? lerp(220_000, 520_000, t) : lerp(260_000, 620_000, t);
-  const socialCharges = salaries * 0.18;
-  const crewInsurance = crewCount * lerp(1_800, 2_500, t);
-  const travelBase = crewCount * lerp(2_500, 4_000, t);
+  const crewCount = Math.round(
+    bySize(
+      length,
+      isSail
+        ? [4, 4, 5, 7, 8, 9, 10, 13, 16, 19, 22]
+        : [4, 5, 7, 10, 11, 13, 14, 19, 23, 28, 33],
+    ),
+  );
+  const payPerHead = bySize(length, [52_000, 56_000, 60_000, 64_000, 67_000, 71_000, 76_000, 82_000, 82_000, 80_000, 80_000]);
+  const salaries = crewCount * payPerHead;
+  const rotation = isDual ? salaries * 0.15 : 0; // rotational cover across two seasons
+  const socialCharges = (salaries + rotation) * 0.18;
+  const crewInsurance = crewCount * lerp(1_800, 2_500, tc);
+  const travelBase = crewCount * lerp(2_500, 4_000, tc);
   const travel = isDual ? travelBase * 1.6 : travelBase; // more flights between seasons
-  const training = crewCount * lerp(1_500, 3_000, t);
-  const uniforms = crewCount * lerp(400, 800, t);
-  const provisions = crewCount * lerp(5_000, 8_000, t);
+  const training = crewCount * lerp(1_500, 3_000, tc);
+  const uniforms = crewCount * lerp(400, 800, tc);
+  const provisions = crewCount * lerp(5_000, 8_000, tc);
   const usageMult = usage === "heavy" ? 1.15 : usage === "moderate" ? 1.05 : 1.0;
-  const crewSub = [salaries, socialCharges, crewInsurance, travel, training, uniforms, provisions];
+  const crewSub = [salaries, rotation, socialCharges, crewInsurance, travel, training, uniforms, provisions];
   const crewRaw = crewSub.reduce((a, b) => a + b, 0) * usageMult;
   const crew = charterAdj(crewRaw, 1.25);
 
   // --- Insurance ---
-  const valueMotor = lerp(3_000_000, 35_000_000, t);
+  const gt = bySize(length, [100, 200, 300, 400, 500, 750, 900, 1_700, 2_300, 3_000, 3_750]);
+  const valueMotor =
+    bySize(length, [4_000_000, 9_000_000, 16_000_000, 26_000_000, 34_000_000, 45_000_000, 58_000_000, 90_000_000, 125_000_000, 170_000_000, 220_000_000]) *
+    ageValue;
   const value = isSail ? valueMotor * 0.85 : valueMotor;
   const areaInsuranceMult: Record<CruisingArea, number> = {
     west_med: 1.0, east_med: 1.05, caribbean: 1.15, us_east_coast: 1.1,
@@ -116,24 +150,26 @@ function calculateCosts(
     south_pacific: 1.15, global: 1.25,
   };
   const areaMult = areaInsuranceMult[area];
-  const hullRate = isSail ? 0.008 : 0.01;
-  const hull = value * hullRate * areaMult * (isDual ? 1.15 : 1.0); // wider cruising range
-  const pandi = value * (isSail ? 0.003 : 0.004) * areaMult * (isDual ? 1.1 : 1.0);
-  const crewMedical = crewCount * lerp(1_200, 2_000, t);
-  const warRisk = area === "arabian_gulf" || area === "global" ? value * 0.001 : 0;
+  const hullRate = isSail ? 0.005 : 0.006;
+  const hull = value * hullRate * ageRate * areaMult * (isDual ? 1.15 : 1.0); // wider cruising range
+  const pandi = (4_000 + gt * 14) * areaMult * (isDual ? 1.1 : 1.0); // P&I priced on tonnage, not value
+  const crewMedical = crewCount * 1_800;
+  const warRisk = area === "arabian_gulf" || area === "global" ? value * 0.0005 : 0;
   const insuranceRaw = hull + pandi + crewMedical + warRisk;
   const insurance = charterAdj(insuranceRaw, 1.4);
 
   // --- Maintenance ---
-  const engineService = isSail ? lerp(25_000, 80_000, t) : lerp(50_000, 200_000, t);
-  const hullAntifoul = lerp(20_000, 90_000, t);
-  const rig = isSail ? lerp(30_000, 120_000, t) : 0;
-  const sailInventory = isSail ? lerp(15_000, 80_000, t) : 0;
-  const deckHardware = lerp(10_000, 50_000, t);
-  const electronics = lerp(8_000, 35_000, t);
-  const interiorUpkeep = lerp(10_000, 45_000, t);
-  const classReserve = lerp(20_000, 80_000, t);
-  const maintRaw = engineService + hullAntifoul + rig + sailInventory + deckHardware + electronics + interiorUpkeep + classReserve;
+  const engineService = isSail ? lerp(20_000, 80_000, t) : lerp(35_000, 200_000, t);
+  const hullAntifoul = lerp(15_000, 90_000, t);
+  const rig = isSail ? lerp(25_000, 120_000, t) : 0;
+  const sailInventory = isSail ? lerp(12_000, 80_000, t) : 0;
+  const deckHardware = lerp(8_000, 50_000, t);
+  const electronics = lerp(6_000, 35_000, t);
+  const interiorUpkeep = lerp(8_000, 45_000, t);
+  const classReserve = lerp(15_000, 80_000, t);
+  const renewalReserve = age === "older" ? lerp(40_000, 300_000, t) : 0; // repaint, equipment renewal
+  const maintItems = [engineService, hullAntifoul, rig, sailInventory, deckHardware, electronics, interiorUpkeep, classReserve];
+  const maintRaw = maintItems.reduce((a, b) => a + b, 0) * ageMaint + renewalReserve;
   const maintenance = charterAdj(maintRaw, 1.2);
 
   // --- Berths ---
@@ -142,20 +178,20 @@ function calculateCosts(
     southeast_asia: 0.5, northern_europe: 0.6, arabian_gulf: 0.75,
     south_pacific: 0.55, global: 0.85,
   };
-  const homeBerth = lerp(60_000, 280_000, t) * berthMultiplier[area];
+  const homeBerth = lerp(45_000, 280_000, t) * berthMultiplier[area];
   const secondBerth = isDual ? lerp(30_000, 150_000, t) * 0.7 : 0; // winter season berth
-  const transitBerths = lerp(15_000, 60_000, t) * berthMultiplier[area] * (isDual ? 1.4 : 1.0);
+  const transitBerths = lerp(12_000, 60_000, t) * berthMultiplier[area] * (isDual ? 1.4 : 1.0);
   const launchHaulout = lerp(5_000, 20_000, t);
   const berths = homeBerth + secondBerth + transitBerths + launchHaulout;
 
   // --- Fuel & consumables ---
-  const fuelOnly = isSail ? lerp(15_000, 60_000, t) : lerp(50_000, 280_000, t);
+  const fuelOnly = isSail ? lerp(12_000, 60_000, t) : lerp(40_000, 280_000, t);
   const deliveryFuel = isDual
     ? (isSail ? lerp(8_000, 25_000, t) : lerp(20_000, 80_000, t))
     : 0; // transatlantic or long-distance passage fuel
   const lubricants = (fuelOnly + deliveryFuel) * 0.06;
   const waterTreatment = lerp(2_000, 8_000, t);
-  const stores = lerp(8_000, 30_000, t);
+  const stores = lerp(6_000, 30_000, t);
   const fuelUsageMult = usage === "heavy" ? 1.5 : usage === "moderate" ? 1.0 : 0.7;
   const fuelRaw = (fuelOnly + deliveryFuel + lubricants + waterTreatment + stores) * fuelUsageMult;
   const fuel = charterAdj(fuelRaw, 1.3);
@@ -169,51 +205,55 @@ function calculateCosts(
   // --- Regulatory ---
   const flagState = lerp(3_000, 12_000, t);
   const classSurvey = lerp(5_000, 18_000, t);
-  const radioLicensing = lerp(500, 2_000, t);
+  const radioLicensing = lerp(500, 2_000, tc);
   const ismCompliance = isCharter ? lerp(4_000, 15_000, t) : lerp(2_000, 8_000, t);
   const yachtCode = isCharter ? lerp(3_000, 10_000, t) : 0;
   const regulatory = flagState + classSurvey + radioLicensing + ismCompliance + yachtCode;
 
-  // --- Delivery / shipping (dual season only) ---
-  // Yacht either sails herself (delivery crew + fuel, already in fuel) or ships on a transport vessel
+  // --- Delivery (dual season only) ---
   const deliveryCrew = isDual ? lerp(8_000, 25_000, t) : 0; // delivery skipper + crew costs
   const agentFees = isDual ? lerp(3_000, 10_000, t) : 0; // port agents at each end
-
-  // Add delivery costs to crew total
   const crewWithDelivery = crew + deliveryCrew + agentFees;
 
   // --- Detail maps ---
   const charterScale = (items: SubItem[], mult: number): SubItem[] => {
     if (!isCharter) return items;
     const raw = items.reduce((a, b) => a + b.amount, 0);
-    const scaled = raw * mult;
-    const diff = scaled - raw;
-    return [...items, { label: "Charter uplift", amount: diff }];
+    return [...items, { label: "Charter uplift", amount: raw * mult - raw }];
   };
 
   const usageScale = (items: SubItem[], mult: number): SubItem[] => {
     if (mult === 1.0) return items;
     const raw = items.reduce((a, b) => a + b.amount, 0);
-    const scaled = raw * mult;
-    const diff = scaled - raw;
     const usageLabel = usage === "heavy" ? "Heavy use adjustment" : "Moderate use adjustment";
-    return [...items, { label: usageLabel, amount: diff }];
+    return [...items, { label: usageLabel, amount: raw * mult - raw }];
+  };
+
+  const ageScale = (items: SubItem[]): SubItem[] => {
+    if (ageMaint === 1.0) return items;
+    const raw = items.reduce((a, b) => a + b.amount, 0);
+    const ageLabel = age === "new" ? "Warranty period saving" : "Age adjustment";
+    return [...items, { label: ageLabel, amount: raw * ageMaint - raw }];
   };
 
   const detail: Record<string, SubItem[]> = {
     crew: charterScale(usageScale([
-      { label: "Salaries", amount: salaries },
+      { label: `Salaries (${crewCount} crew)`, amount: salaries },
+      ...(isDual ? [{ label: "Rotational crew cover", amount: rotation }] : []),
       { label: "Social charges & tax", amount: socialCharges },
       { label: "Crew insurance", amount: crewInsurance },
       { label: "Travel & repatriation", amount: travel },
       { label: "Training & certs", amount: training },
       { label: "Uniforms", amount: uniforms },
       { label: "Provisions", amount: provisions },
-      ...(isDual ? [
-        { label: "Delivery crew", amount: deliveryCrew },
-        { label: "Port agent fees", amount: agentFees },
-      ] : []),
-    ], usageMult), 1.25),
+    ], usageMult), 1.25).concat(
+      isDual
+        ? [
+            { label: "Delivery crew", amount: deliveryCrew },
+            { label: "Port agent fees", amount: agentFees },
+          ]
+        : [],
+    ),
     insurance: charterScale([
       { label: "Hull & machinery", amount: hull },
       { label: "P&I cover", amount: pandi },
@@ -221,14 +261,19 @@ function calculateCosts(
       ...(warRisk > 0 ? [{ label: "War risk", amount: warRisk }] : []),
     ], 1.4),
     maintenance: charterScale([
-      { label: "Engine & generator service", amount: engineService },
-      { label: "Hull, antifoul & paint", amount: hullAntifoul },
-      ...(isSail ? [{ label: "Rig inspection & maintenance", amount: rig }] : []),
-      ...(isSail ? [{ label: "Sail inventory", amount: sailInventory }] : []),
-      { label: "Deck hardware", amount: deckHardware },
-      { label: "Electronics & nav", amount: electronics },
-      { label: "Interior upkeep", amount: interiorUpkeep },
-      { label: "Class survey reserve", amount: classReserve },
+      ...ageScale([
+        { label: "Engine & generator service", amount: engineService },
+        { label: "Hull, antifoul & paint", amount: hullAntifoul },
+        ...(isSail ? [{ label: "Rig inspection & maintenance", amount: rig }] : []),
+        ...(isSail ? [{ label: "Sail inventory", amount: sailInventory }] : []),
+        { label: "Deck hardware", amount: deckHardware },
+        { label: "Electronics & nav", amount: electronics },
+        { label: "Interior upkeep", amount: interiorUpkeep },
+        { label: "Class survey reserve", amount: classReserve },
+      ]),
+      ...(renewalReserve > 0
+        ? [{ label: "Repaint & equipment renewal reserve", amount: renewalReserve }]
+        : []),
     ], 1.2),
     berths: [
       { label: "Annual home berth", amount: homeBerth },
@@ -382,6 +427,7 @@ export default function RunningCostCalculatorPage() {
   const [useType, setUseType] = useState<UseType>("private");
   const [season, setSeason] = useState<SeasonType>("single");
   const [usage, setUsage] = useState<UsageIntensity>("moderate");
+  const [age, setAge] = useState<AgeBand>("established");
   const [currency, setCurrency] = useState<Currency>("EUR");
 
   useEffect(() => {
@@ -397,7 +443,7 @@ export default function RunningCostCalculatorPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const costs = calculateCosts(length, yachtType, area, usage, useType, season);
+  const costs = calculateCosts(length, yachtType, area, usage, useType, season, age);
 
   const breakdown = [
     { label: "Crew", amount: costs.crew, key: "crew" },
@@ -417,7 +463,7 @@ export default function RunningCostCalculatorPage() {
   const faqData = [
     {
       question: "How much does it cost to run a superyacht per year?",
-      answer: "Annual running costs for a superyacht typically range from EUR 400,000 for a 24-metre sailing yacht with light use, to over EUR 2 million for a 60-metre motor yacht operating year-round. The main cost categories are crew (30-40% of the total), insurance, maintenance, marina berths, fuel, management fees, and regulatory compliance. As a rough guide, expect to spend 8-12% of the yacht's purchase price each year, though the actual figure depends heavily on vessel type, size, cruising area, and how intensively the yacht is used."
+      answer: "Annual running costs for a superyacht typically range from about EUR 600,000 for a 24-metre sailing yacht with light use, to EUR 4 to 4.6 million for a 60-metre motor yacht running two seasons a year, and EUR 9 to 11 million at 100 metres. The main cost categories are crew (40 to 50 percent of the total), insurance, maintenance, marina berths, fuel, management fees, and regulatory compliance. As a rough guide, expect to spend 8-12% of the yacht's purchase price each year, though the actual figure depends heavily on vessel type, size, cruising area, and how intensively the yacht is used."
     },
     {
       question: "What is the 10% rule for yachts?",
@@ -425,11 +471,11 @@ export default function RunningCostCalculatorPage() {
     },
     {
       question: "What are the biggest costs of owning a superyacht?",
-      answer: "Crew costs are almost always the largest single expense, typically 30-40% of the annual budget. For a 40-metre motor yacht, crew costs alone can reach EUR 500,000-900,000 per year. After crew, the next largest costs are maintenance and repair (including class surveys and periodic refits), insurance (hull, P&I, and crew medical), and marina berths. Fuel costs vary dramatically between sailing and motor yachts. Management fees, regulatory compliance, and a contingency reserve of 8-10% should also be budgeted."
+      answer: "Crew costs are almost always the largest single expense, typically 40 to 50 percent of the annual budget. For a 40-metre motor yacht, crew costs alone run to EUR 700,000 to 900,000 per year. After crew, the next largest costs are maintenance and repair (including class surveys and periodic refits), insurance (hull, P&I, and crew medical), and marina berths. Fuel costs vary dramatically between sailing and motor yachts. Management fees, regulatory compliance, and a contingency reserve of 8-10% should also be budgeted."
     },
     {
       question: "How much does a superyacht crew cost?",
-      answer: "Crew costs depend on yacht size and the number of crew required. A 30-metre yacht with 5-7 crew might spend EUR 300,000-450,000 per year on total crew costs. A 50-metre yacht with 12-16 crew could spend EUR 900,000-1,400,000. These figures include salaries, social charges, insurance, travel, training, uniforms, and provisions. Captain salaries alone range from EUR 84,000 on a 24-metre yacht to over EUR 180,000 on a 60-metre vessel."
+      answer: "Crew costs depend on yacht size and the number of crew required. A 30-metre yacht with 5-7 crew might spend EUR 300,000-450,000 per year on total crew costs. A 50-metre yacht with 11 to 13 crew could spend EUR 1.1 to 1.4 million, more on a dual-season programme with rotational crew. These figures include salaries, social charges, insurance, travel, training, uniforms, and provisions. Captain salaries alone range from EUR 84,000 on a 24-metre yacht to over EUR 180,000 on a 60-metre vessel."
     },
     {
       question: "Is it cheaper to run a sailing yacht or a motor yacht?",
@@ -437,7 +483,7 @@ export default function RunningCostCalculatorPage() {
     },
     {
       question: "How much does superyacht insurance cost?",
-      answer: "Insurance costs depend on the yacht's value, type, age, cruising area, and claims history. Hull and machinery insurance typically costs 0.8-1.5% of the yacht's insured value per year. P&I (Protection and Indemnity) cover adds another 0.3-0.4%. For a yacht valued at EUR 10 million, total annual insurance premiums might be EUR 120,000-190,000. Charter yachts require commercial insurance, which can be 30-40% more expensive than private cover. Cruising in higher-risk areas (Caribbean during hurricane season, extended global cruising) attracts higher premiums."
+      answer: "Insurance costs depend on the yacht's value, type, age, cruising area, and claims history. Hull and machinery cover typically costs 0.5 to 1 percent of the yacht's insured value per year, at the upper end for older yachts and wider cruising grounds. P&I (Protection and Indemnity) cover is priced on tonnage, crew numbers and trading area rather than on value. For a yacht valued at EUR 10 million, total annual premiums might be EUR 60,000 to 110,000. Charter yachts require commercial insurance, which can be 30-40% more expensive than private cover. Cruising in higher-risk areas (Caribbean during hurricane season, extended global cruising) attracts higher premiums."
     },
   ];
 
@@ -545,13 +591,13 @@ export default function RunningCostCalculatorPage() {
                 <input
                   type="range"
                   min={24}
-                  max={60}
+                  max={100}
                   step={1}
                   value={length}
                   onChange={handleSlider}
                   className="w-full cursor-pointer"
                   style={{
-                    background: `linear-gradient(to right, rgba(255,255,255,0.4) ${((length - 24) / 36) * 100}%, rgba(255,255,255,0.1) ${((length - 24) / 36) * 100}%)`,
+                    background: `linear-gradient(to right, rgba(255,255,255,0.4) ${((length - 24) / 76) * 100}%, rgba(255,255,255,0.1) ${((length - 24) / 76) * 100}%)`,
                     height: "4px",
                     borderRadius: "2px",
                     WebkitAppearance: "none",
@@ -560,7 +606,7 @@ export default function RunningCostCalculatorPage() {
                 />
                 <div className="flex justify-between text-xs text-muted/50">
                   <span>24m</span>
-                  <span>60m</span>
+                  <span>100m</span>
                 </div>
               </div>
 
@@ -660,6 +706,23 @@ export default function RunningCostCalculatorPage() {
                   onChange={setUsage}
                 />
               </div>
+
+              {/* Age */}
+              <div className="space-y-2.5">
+                <label className="text-sm text-muted block">Age</label>
+                <ToggleGroup
+                  options={[
+                    { value: "new" as AgeBand, label: "Under 5 yrs" },
+                    { value: "established" as AgeBand, label: "5 to 15 yrs" },
+                    { value: "older" as AgeBand, label: "Over 15 yrs" },
+                  ]}
+                  value={age}
+                  onChange={setAge}
+                />
+                <p className="text-xs text-muted/70 leading-relaxed pt-1">
+                  Running costs do not fall with market value. Older yachts carry repaints, equipment renewal and major class surveys, so the budget rises as the yacht ages.
+                </p>
+              </div>
             </div>
 
             {/* RESULTS */}
@@ -683,7 +746,8 @@ export default function RunningCostCalculatorPage() {
                     {useType === "charter" ? "charter" : "private"},{" "}
                     {season === "dual" ? "dual season" : "single season"},{" "}
                     {areaLabels[area]},{" "}
-                    {usage} use
+                    {usage} use,{" "}
+                    {age === "new" ? "under 5 years old" : age === "older" ? "over 15 years old" : "5 to 15 years old"}
                   </p>
                 </div>
               </div>
@@ -808,7 +872,7 @@ export default function RunningCostCalculatorPage() {
           </div>
 
           <p className="text-xs text-muted/40 mt-10">
-            Last updated: April 2026. Figures based on current market data and Foreland Marine operational experience.
+            Last updated: October 2026. Figures based on current market data and Foreland Marine operational experience.
           </p>
         </div>
       </section>
@@ -823,7 +887,9 @@ export default function RunningCostCalculatorPage() {
           </h2>
           <p className="text-muted leading-relaxed mb-6">
             The cost model behind this calculator is based on published industry data, supplemented by
-            Foreland Marine&apos;s direct experience managing yachts in the 24 to 60 metre range.
+            Foreland Marine&apos;s direct experience managing yachts in the 24 to 60 metre range. Crew
+            numbers and total budgets from 30 to 100 metres are calibrated against the annual budget
+            table published by Christie Yachts.
           </p>
           <p className="text-muted leading-relaxed mb-8">
             It is built from the bottom up, line by line, against an estimated
@@ -862,6 +928,11 @@ export default function RunningCostCalculatorPage() {
                 title: "Dockwalk / OnboardOnline Crew Salary Survey",
                 detail: "Captain, officer, and crew salary ranges by vessel size and type.",
                 href: "https://www.onboardonline.com/resources/crew-salary-survey",
+              },
+              {
+                title: "Christie Yachts, What it really costs to run a superyacht",
+                detail: "Indicative annual budgets for motor yachts of 30 to 100 metres by tonnage, crew and season, and the effect of age on running costs.",
+                href: "https://christieyachts.com/insights/what-it-really-costs-to-run-a-superyacht/",
               },
               {
                 title: "Pantaenius Yacht Insurance",

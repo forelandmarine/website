@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "How Much Does It Cost to Run a Superyacht? | Calculator" },
   description:
-    "A 40 metre private yacht at moderate use runs about EUR 1.4 to 1.7 million a year, a 50 metre about EUR 1.9 to 2.3 million. Model your own.",
+    "A 40 metre private yacht at moderate use runs about EUR 1.5 to 1.8 million a year, a 50 metre about EUR 2.3 to 2.7 million. Model your own.",
   keywords: [
     "superyacht running costs",
     "how much does it cost to run a superyacht",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How Much Does It Cost to Run a Superyacht?",
     description:
-      "A 40 metre private yacht at moderate use runs about EUR 1.4 to 1.7 million a year, a 50 metre about EUR 1.9 to 2.3 million. Model your own.",
+      "A 40 metre private yacht at moderate use runs about EUR 1.5 to 1.8 million a year, a 50 metre about EUR 2.3 to 2.7 million. Model your own.",
   },
 };
 
