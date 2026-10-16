@@ -20,6 +20,14 @@ type Issue = {
 
 const issues: Issue[] = [
   {
+    slug: "october-2026",
+    title: "In print",
+    date: "October 2026",
+    href: "/newsletters/october-2026",
+    summary:
+      "Our article in The Superyacht Report on the buyer's position when a shipyard becomes insolvent, a Polish new build out of the mould, SeaTime Tracker for workboat crews, Watermans, Tipner West, and The First Owner's Reference going to print.",
+  },
+  {
     slug: "may-2026",
     title: "Two years in",
     date: "May 2026",

@@ -143,6 +143,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${baseUrl}/newsletters/october-2026`,
+      lastModified: new Date("2026-10-16"),
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
       url: `${baseUrl}/newsletters/may-2026`,
       lastModified: new Date("2026-05-27"),
       changeFrequency: "yearly",
