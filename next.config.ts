@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // SeaTime Tracker 2.1 and earlier link to /terms
+      {
+        source: '/terms',
+        destination: '/tools/seatime-tracker/terms',
+        permanent: true,
+      },
       {
         source: '/new-build',
         destination: '/owners-representation',
