@@ -6,6 +6,18 @@ const ANON = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
 
 // Refreshes the Supabase session cookie and guards the /admin area.
 export async function middleware(request: NextRequest) {
+  // Before 9 Sep 2026 every article's og:image pointed at another post's id.
+  // Crawlers still request those URLs, so send them to the article's own image.
+  const og = request.nextUrl.pathname.match(
+    /^\/insights\/([^/]+)\/opengraph-image\/([^/]+)$/,
+  );
+  if (og) {
+    if (og[1] === og[2]) return NextResponse.next();
+    const url = request.nextUrl.clone();
+    url.pathname = `/insights/${og[1]}/opengraph-image/${og[1]}`;
+    return NextResponse.redirect(url, 301);
+  }
+
   const response = NextResponse.next({ request });
 
   // If Supabase isn't configured, let the app render its setup notice.
@@ -49,5 +61,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/login"],
+  matcher: ["/admin/:path*", "/login", "/insights/:slug/opengraph-image/:id"],
 };
