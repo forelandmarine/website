@@ -247,7 +247,7 @@ export const posts: Post[] = [
       "Gwenhyfar II",
       "Spirit C72",
     ],
-    content: `<p>Spirit Yachts brought two boats to St Katharine Docks on Saturday 3 October, a few hundred metres downstream of Tower Bridge, and laid the drawing portfolio out on a table under the awning: general arrangements for the C57, the C72 and the RD53. We went to see <em>Selkie</em>, one of the first of the new P50 motor yachts.</p>
+    content: `<p>Spirit Yachts brought two boats to St Katharine Docks on Saturday 3 October for the UK launch of the P50, and looked after its guests generously in Thomas Telford's dock of 1828, a few hundred metres downstream of Tower Bridge. We went to see <em>Selkie</em>, one of the first of the new P50 motor yachts.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-alongside.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-alongside.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-alongside.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-alongside.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Spirit P50 Coupé Selkie alongside the pontoon at St Katharine Docks, with the Spirit C72 Gwenhyfar II beyond" loading="lazy" /><figcaption><em>Selkie</em> alongside at St Katharine Docks, with <em>Gwenhyfar II</em> beyond.</figcaption></figure>
 
