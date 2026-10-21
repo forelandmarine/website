@@ -231,12 +231,12 @@ export const posts: Post[] = [
     title: "The Spirit P50 and Gwenhyfar II at St Katharine Docks",
     metaTitle: "The Spirit P50 at St Katharine Docks",
     description:
-      "Spirit Yachts' open day at St Katharine Docks on 3 October 2026: Selkie, a 15 metre wood-epoxy P50 Coupé on twin Volvo Penta IPS, alongside the 2023 C72 Gwenhyfar II, and the decisions the P50 leaves to its owner at specification.",
+      "Spirit Yachts brought the new P50 motor yacht Selkie and the C72 Gwenhyfar II to St Katharine Docks on 3 October 2026. Notes from a visit, with the published specifications.",
     metaDescription:
-      "Selkie, a 15 metre wood-epoxy Spirit P50 Coupé, and the C72 Gwenhyfar II at St Katharine Docks, with the decisions an owner settles at specification.",
+      "Spirit Yachts' P50 motor yacht Selkie and the C72 Gwenhyfar II at St Katharine Docks on 3 October 2026: notes from a visit, with the specifications.",
     date: "2026-10-21",
     category: "New Build",
-    readTime: "6 min read",
+    readTime: "4 min read",
     keywords: [
       "Spirit P50",
       "Spirit P50 Coupé",
@@ -247,39 +247,29 @@ export const posts: Post[] = [
       "Gwenhyfar II",
       "Spirit C72",
     ],
-    content: `<p>Spirit Yachts brought two of its yachts to St Katharine Docks, beside Tower Bridge, for an open day on Saturday 3 October 2026. One was <em>Selkie</em>, among the first of the new P50 motor yachts; the other was <em>Gwenhyfar II</em>, a C72 launched in 2023. Under an awning on the pontoon, the yard had laid out its general arrangement drawings for the C57, the C72 and the RD53. The pairing was instructive, since it placed the yard's first 15 metre motor yacht alongside the sailing yachts whose construction it shares.</p>
+    content: `<p>Spirit Yachts brought two boats to St Katharine Docks on Saturday 3 October, a few hundred metres downstream of Tower Bridge, and laid the drawing portfolio out on a table under the awning: general arrangements for the C57, the C72 and the RD53. We went to see <em>Selkie</em>, one of the first of the new P50 motor yachts.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-alongside.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-alongside.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-alongside.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-alongside.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Spirit P50 Coupé Selkie alongside the pontoon at St Katharine Docks, with the Spirit C72 Gwenhyfar II beyond" loading="lazy" /><figcaption><em>Selkie</em> alongside at St Katharine Docks, with <em>Gwenhyfar II</em> beyond.</figcaption></figure>
 
-<h2>A motor yacht in wood-epoxy</h2>
+<h2>Selkie</h2>
 
-<p>The P50 was announced in June 2025 in two versions, both drawn by the yard's lead designer, Tom Smith (<a href="https://marinebusiness.news/news/leisure-marine/spirit-yachts-unveils-new-p50-motor-yacht/" target="_blank" rel="noopener noreferrer">Marine Business</a>). The Sport is an open boat for warm water; the Coupé, which <em>Selkie</em> is, encloses its deck saloon for northern European use. Spirit's published figures for the Coupé give a length of 15.24 metres, a beam of 4.20 metres, a draught of 1.02 metres including the drives, and a displacement of 15 tonnes (<a href="https://spirityachts.com/yacht/spirit-p50-coupe/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). Power is twin Volvo Penta D6 IPS600 engines of 440 hp each, under joystick control, for 30 knots maximum and 22 knots in the cruise. She carries 2,000 litres of fuel and 400 of water.</p>
+<p>The P50 was drawn in-house by Tom Smith and announced in June 2025 in two versions: an open Sport for warm water, and a Coupé with an enclosed deck saloon for northern Europe (<a href="https://marinebusiness.news/news/leisure-marine/spirit-yachts-unveils-new-p50-motor-yacht/" target="_blank" rel="noopener noreferrer">Marine Business</a>). <em>Selkie</em> is a Coupé. On Spirit's published figures she is 15.24 metres overall, with 4.20 metres of beam, a draught of 1.02 metres including the drives, and a displacement of 15 tonnes. Twin Volvo Penta D6 IPS600s of 440 hp each give 30 knots flat out and 22 in the cruise (<a href="https://spirityachts.com/yacht/spirit-p50-coupe/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>).</p>
 
-<p>The yacht is certified to RCD Category B, the design category for winds up to force 8 and significant wave heights up to four metres. Her hull is built by the same cold-moulded method the yard uses for its sailing yachts: laminated timber frames, strip planking and diagonal veneers, sealed under an epoxy sheath. Spirit has built motor yachts this way before, the P40 and the P70 among them, but the P50 applies the method to a hull driven at 30 knots by 880 hp.</p>
+<p>The hull is built the same way as every Spirit since 1993: cold-moulded timber frames, strip planking and double-diagonal veneers under an epoxy sheath. Spirit has built planing boats this way before, the P40 and P70 among them, and the P50 is certified to RCD Category B, the offshore category for winds up to force 8 and seas up to four metres.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-stern.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-stern.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-stern.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-stern.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Stern quarter of the Spirit P50 Selkie with varnished transom and teak swim platform" loading="lazy" /><figcaption>The stern: varnished transom, teak aft deck and swim platform.</figcaption></figure>
 
-<h2>On deck</h2>
-
-<p><em>Selkie</em>'s hull is painted dark blue with a gold cove line. Almost everything above it is timber. The transom and coamings are varnished mahogany, the aft deck and swim platform are teak, and the foredeck is laid in varnished panels around flush hatches, with sunpads forward. On the aft deck, a U-shaped settee surrounds a varnished table that folds out from a narrow bar.</p>
+<p>Above the dark blue hull and its gold cove line, nearly everything is timber. The transom, coamings and foredeck are varnished mahogany; the aft deck and swim platform are teak. All that brightwork comes with a maintenance bill, and Spirit's own guidance is a touch-up most years and a full revarnish about every fifth. A motor yacht spending her summers in the Mediterranean will sit at the short end of that, which is worth pricing at specification rather than discovering in year two.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-foredeck.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-foredeck.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-foredeck.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-foredeck.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Varnished foredeck of the Spirit P50 with sunpads and flush hatch" loading="lazy" /><figcaption>The varnished foredeck.</figcaption></figure>
 
-<p>Exterior brightwork on this scale sets much of the yacht's maintenance programme. Spirit's guidance for its yachts is a varnish touch-up most years and a full revarnish about every five years, depending on use; a motor yacht kept in the Mediterranean sun will need the shorter interval. This is not an argument against the varnish, which is a large part of the reason to commission a Spirit. It is an argument for costing it. The extent of varnish is best settled at specification, and its upkeep budgeted before the contract is signed rather than after the first season. Foreland's guide to <a href="/insights/refitting-a-spirit-yacht">refitting a Spirit</a> sets out the cycle in full.</p>
-
-<h2>Saloon and helm</h2>
-
-<p>The deck saloon opens from the aft deck through sliding glass doors and is glazed on all sides. Overhead, an opening roof light is divided by varnished timber spokes radiating from a central boss, so that the saloon takes daylight from above as well as from the sides.</p>
+<p>The saloon roof light was the detail we photographed most, varnished spokes radiating from a central boss over the helm and settee. The helm itself is two screens, the IPS joystick and a mahogany wheel with the Spirit mark in the boss, which is all an owner needs to bring 15 tonnes alongside without crew.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-saloon-sunroof.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-saloon-sunroof.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-saloon-sunroof.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-saloon-sunroof.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Roof light over the Spirit P50 deck saloon with radiating varnished timber spokes" loading="lazy" /><figcaption>The saloon roof light.</figcaption></figure>
 
-<p>The helm is to starboard: two multifunction displays under a dark brow, the Volvo Penta controls, joystick and VHF set into a varnished mahogany console, and a timber-rimmed wheel bearing the Spirit mark. With IPS drives, a joystick and a metre of draught, a 15 tonne yacht can be berthed by her owner without crew. Many yachts of this size are run that way.</p>
-
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-helm.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-helm.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-helm.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-helm.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Helm of the Spirit P50 with twin displays, joystick and varnished wheel" loading="lazy" /><figcaption>The helm, with twin displays and joystick.</figcaption></figure>
 
-<h2>Accommodation</h2>
-
-<p>Below deck the joinery is high-gloss mahogany, with lighter timber on the hull sides and slatted panels behind the berths. The door furniture is knurled and polished, and a marquetry panel in grey and white lines the guest corridor. The owner's cabin is forward, with a double berth beneath a deck hatch and reading lamps on curved timber shelves either side. A twin guest cabin and a day heads complete the published layout.</p>
+<p>Below, the joinery is high-gloss mahogany against paler timber, with the owner's cabin forward under a deck hatch, a twin guest cabin and a separate day heads.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-owners-cabin.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-owners-cabin.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-owners-cabin.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-owners-cabin.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Owner's cabin of the Spirit P50 with double berth under a deck hatch" loading="lazy" /><figcaption>The owner's cabin forward.</figcaption></figure>
 
@@ -287,31 +277,25 @@ export const posts: Post[] = [
 
 <h2>The engine room</h2>
 
-<p><em>Selkie</em>'s engine room is finished in white, with a non-slip walkway between the two D6s, overhead grab poles, and the pumps, filters, battery charger and generator mounted on the bulkheads at working height. Engines, filters and seacocks can all be reached without first removing anything else.</p>
+<p>Unsurprisingly, this is where we spent longest. It is finished in white, with a non-slip walkway between the two D6s and grab poles overhead, and the pumps, filters, charger and generator are mounted on the bulkheads at working height. Anyone who has changed a fuel filter lying on their side behind an engine will appreciate the arrangement.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-engine-room.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-engine-room.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-engine-room.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-engine-room.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="3024" height="4032" alt="Engine room of the Spirit P50 with walkway between twin Volvo Penta D6 engines" loading="lazy" /><figcaption>The engine room, with a walkway between the twin D6s.</figcaption></figure>
 
-<p>On a yacht of 15 metres, access of that kind separates a routine service completed in an afternoon from one that takes two days with panels and joinery removed, and it keeps maintenance work away from a varnished interior. Engine room layout is a specification item on any new build. It is far easier to settle on the drawings than to improve once the joinery is in.</p>
-
 <h2>Gwenhyfar II</h2>
 
-<p>Across the dock lay <em>Gwenhyfar II</em>, a C72 launched in 2023 and based in Guernsey. She is 22.2 metres overall and draws 3.1 metres. Her spars are carbon, with a Bartels below-deck headsail furler (<a href="https://spirityachts.com/brokerage/spirit-72-gwenhyfar-ii/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). In 2024 she won Class 1 and the overall title at the Spirit Yachts Regatta off Guernsey (<a href="https://www.yacht.de/en/regatta/races/spirit-regatta-modern-classics-from-spirit-yachts-compete-off-guernsey/" target="_blank" rel="noopener noreferrer">Yacht</a>).</p>
+<p>Across the dock lay <em>Gwenhyfar II</em>, a C72 launched in 2023 and based in Guernsey, which won Class 1 and the overall title at the 2024 Spirit Yachts Regatta off the island (<a href="https://www.yacht.de/en/regatta/races/spirit-regatta-modern-classics-from-spirit-yachts-compete-off-guernsey/" target="_blank" rel="noopener noreferrer">Yacht</a>). She is 22.2 metres overall, draws 3.1 metres and carries carbon spars, with a Bartels furler below deck to keep the foredeck clear.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-alongside.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-alongside.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-alongside.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-alongside.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="3024" height="4032" alt="Spirit C72 Gwenhyfar II alongside at St Katharine Docks with varnished deckhouse" loading="lazy" /><figcaption><em>Gwenhyfar II</em> alongside.</figcaption></figure>
 
-<p>Her cockpit is arranged for a small crew, with a single wheel, electric winches within reach of the helm, and teak decks running forward to the mast. Below, the construction is in plain view: the laminated frames are left exposed and varnished against pale timber planking, deck beams carry a white deckhead, and the galley and saloon are finished in high-gloss mahogany. <em>Selkie</em> uses the same timbers as finish, where <em>Gwenhyfar II</em> leaves them on show as structure.</p>
+<p>Down below she shows the construction that <em>Selkie</em> keeps behind her joinery. The laminated frames are left bare and varnished against pale planking, and the deck beams run across under a white deckhead.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-cockpit.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-cockpit.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-cockpit.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-cockpit.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Cockpit of the Spirit C72 Gwenhyfar II with wheel, winches and teak deck" loading="lazy" /><figcaption>The cockpit of <em>Gwenhyfar II</em>.</figcaption></figure>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-saloon.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-saloon.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-saloon.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-saloon.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Saloon and galley of the Spirit C72 Gwenhyfar II with exposed laminated frames and deck beams" loading="lazy" /><figcaption>Exposed frames and deck beams in the saloon of <em>Gwenhyfar II</em>.</figcaption></figure>
 
-<p><em>Gwenhyfar II</em> is offered through Spirit's brokerage at GBP 3,300,000, VAT not paid, as her owner begins a new project with the yard.</p>
+<p>She is for sale through Spirit's brokerage at GBP 3,300,000, VAT not paid, because her owner is starting a new project with the yard (<a href="https://spirityachts.com/brokerage/spirit-72-gwenhyfar-ii/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). Spirit itself is now majority-owned by a group of its own owners.</p>
 
-<h2>Before the contract</h2>
-
-<p>For an owner commissioning a P50, most of the consequential decisions fall before the build begins. The extent of exterior varnish, the engine room layout and the electronics are all settled at specification, as is the choice between Coupé and Sport, which follows from where the yacht will be kept and in what climate. Spirit has reported that the first of each version was sold before launch (<a href="https://marinebusiness.news/news/leisure-marine/spirit-yachts-unveils-new-p50-motor-yacht/" target="_blank" rel="noopener noreferrer">Marine Business</a>).</p>
-
-<p>Foreland Marine represents owners on new builds and refits from 12 metres. Its guides to <a href="/insights/building-a-spirit-yacht-owners-representation">building a Spirit yacht</a> and <a href="/insights/buying-a-pre-owned-spirit-yacht">buying a pre-owned Spirit</a> describe how that work applies to a wood-epoxy yacht. Foreland is grateful to the Spirit team for the visit.</p>`,
+<p>We act for owners on new builds and refits from 12 metres, and there is more on the subject in our guides to <a href="/insights/building-a-spirit-yacht-owners-representation">building a Spirit yacht</a> and <a href="/insights/buying-a-pre-owned-spirit-yacht">buying a pre-owned Spirit</a>. Our thanks to the Spirit team for having us aboard.</p>`,
     faqs: [
       {
         question: "How long is the Spirit P50?",
