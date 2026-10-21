@@ -47,7 +47,7 @@ export default function HomeHero() {
             Smooth sailing.<br />Every time.
           </h1>
           <p className="text-lg text-muted leading-relaxed mb-10">
-            Independent superyacht consultancy. Owner&apos;s representation and refit project management for sailing and motor yachts from 12 to 60 metres, and yacht management from 24 metres, worldwide.
+            Independent superyacht consultancy. Project management, owner&apos;s representation and yacht management for sailing and motor yachts from 24 to 60 metres, worldwide.
           </p>
           <div className="hidden sm:flex flex-col sm:flex-row gap-4">
             <ButtonPrimary href="#services">Our Services</ButtonPrimary>
