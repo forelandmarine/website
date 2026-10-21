@@ -259,7 +259,7 @@ export const posts: Post[] = [
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-stern.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-stern.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-stern.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-selkie-stern.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Stern quarter of the Spirit P50 Selkie with varnished transom and teak swim platform" loading="lazy" /><figcaption>The stern: varnished transom, teak aft deck and swim platform.</figcaption></figure>
 
-<p>Above the dark blue hull and its gold cove line, nearly everything is timber. The transom, coamings and foredeck are varnished mahogany; the aft deck and swim platform are teak. All that brightwork comes with a maintenance bill, and Spirit's own guidance is a touch-up most years and a full revarnish about every fifth. A motor yacht spending her summers in the Mediterranean will sit at the short end of that, which is worth pricing at specification rather than discovering in year two.</p>
+<p>Above the dark blue hull and its gold cove line, nearly everything is timber. The transom, coamings and foredeck are varnished mahogany; the aft deck and swim platform are teak. All that brightwork comes with a maintenance bill, and Spirit's own guidance is a touch-up most years and a full revarnish about every fifth. A motor yacht spending her summers in the Mediterranean will sit at the short end of that.</p>
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-foredeck.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-foredeck.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-foredeck.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fp50-foredeck.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Varnished foredeck of the Spirit P50 with sunpads and flush hatch" loading="lazy" /><figcaption>The varnished foredeck.</figcaption></figure>
 
@@ -293,9 +293,9 @@ export const posts: Post[] = [
 
 <figure><img src="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-saloon.jpg&w=1920&q=80" srcset="/_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-saloon.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-saloon.jpg&w=1200&q=80 1200w, /_next/image?url=%2Fimages%2Finsights%2Fspirit-p50%2Fgwenhyfar-ii-saloon.jpg&w=1920&q=80 1920w" sizes="(max-width: 768px) 100vw, 768px" width="4284" height="5712" alt="Saloon and galley of the Spirit C72 Gwenhyfar II with exposed laminated frames and deck beams" loading="lazy" /><figcaption>Exposed frames and deck beams in the saloon of <em>Gwenhyfar II</em>.</figcaption></figure>
 
-<p>She is for sale through Spirit's brokerage at GBP 3,300,000, VAT not paid, because her owner is starting a new project with the yard (<a href="https://spirityachts.com/brokerage/spirit-72-gwenhyfar-ii/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). Spirit itself is now majority-owned by a group of its own owners.</p>
+<p>She is for sale through Spirit's brokerage at GBP 3,300,000, VAT not paid, because her owner is starting a new project with the yard (<a href="https://spirityachts.com/brokerage/spirit-72-gwenhyfar-ii/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>).</p>
 
-<p>There is more on the subject in our guides to <a href="/insights/building-a-spirit-yacht-owners-representation">building a Spirit yacht</a> and <a href="/insights/buying-a-pre-owned-spirit-yacht">buying a pre-owned Spirit</a>. Our thanks to the Spirit team for having us aboard.</p>`,
+<p>We have written separately on <a href="/insights/building-a-spirit-yacht-owners-representation">building a Spirit</a>, <a href="/insights/buying-a-pre-owned-spirit-yacht">buying one</a> and <a href="/insights/refitting-a-spirit-yacht">refitting one</a>. Our thanks to the Spirit team for having us aboard.</p>`,
     faqs: [
       {
         question: "How long is the Spirit P50?",
@@ -324,12 +324,12 @@ export const posts: Post[] = [
     title: "Building a Spirit Yacht: The Owner's Side of a Cold-Moulded New Build",
     metaTitle: "Building a Spirit Yacht: Owner's Representation",
     description:
-      "How a Spirit Yachts new build runs, from laminated ring frames to sea trials, and what an owner's representative checks at each stage of a cold-moulded build.",
+      "What an owner commissioning a Spirit should settle before the contract, and what to inspect at each stage of a cold-moulded build.",
     metaDescription:
-      "How a Spirit Yachts new build runs, and what an owner's representative checks at each stage of a cold-moulded build.",
+      "What to settle before signing for a Spirit Yachts new build, and what to inspect at each stage of a cold-moulded hull.",
     date: "2026-10-21",
     category: "New Build",
-    readTime: "10 min read",
+    readTime: "4 min read",
     keywords: [
       "Spirit Yachts new build",
       "building a Spirit yacht",
@@ -338,63 +338,33 @@ export const posts: Post[] = [
       "wood epoxy yacht build",
       "Spirit Yachts Ipswich",
     ],
-    content: `<p><strong>Spirit Yachts</strong> builds wood-epoxy sailing and motor yachts at its yard on the Ipswich waterfront in Suffolk. Founded in 1993 by Sean McMillan and Mick Newman, the yard had hull number 80 in build by 2023, and its range now runs from the R30 daysailer to the 33.8 metre sloop <em>Geist</em>, launched in 2020 (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder, 2023</a>). Spirit states on its own site that it is used to working alongside owners' representatives, skippers and external designers.</p>
+    content: `<p>Aboard <em>Gwenhyfar II</em> at St Katharine Docks this October, the most instructive thing in the saloon was the deckhead. Spirit had left the laminated frames bare and varnished against the pale planking, so the structure of a cold-moulded hull was on show, and every layer of it had been inspected once, before the next layer covered it. For an owner commissioning a Spirit, the work on the owner's side falls mostly into two places. There are a handful of decisions before the contract, which set the cost of the yacht for as long as it is owned, and a run of inspections during the build, each of which has one chance.</p>
 
-<p>This guide is for owners commissioning a Spirit, or considering one. It sets out how a Spirit is built, what an owner's representative checks at each stage, and how the engagement scales with the size of the yacht. It is independent and informational. Foreland Marine has no commercial relationship with Spirit Yachts.</p>
+<p>Spirit Yachts was founded in Ipswich in 1993 by Sean McMillan and Mick Newman, had hull number 80 in build by 2023, and now builds everything from the R30 daysailer to the 33.8 metre sloop <em>Geist</em> (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a>, 2023). The yard says on its own site that it is used to working alongside owners' representatives, skippers and outside designers. It has published two prices, as of June 2025: £350,000 ex VAT and eight months for the R30, and £4.5 million ex VAT and 28 months for the C72 (<a href="https://spirityachts.com/for-your-information/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). Everything between those two is priced to the specification.</p>
 
-<h2>How a Spirit Is Built</h2>
+<h2>Before the contract</h2>
 
-<p>Every Spirit hull is cold-moulded, and no moulds are used. Wooden ring frames are laminated over full-size computer-generated patterns and set upside down on a strongback. The centreline structure is laminated as one continuous piece, beam shelves go in, and the frames are faired to take the first layer of planking (<a href="https://spirityachts.com/the-yachts/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>).</p>
+<p>The deck comes first. Spirit's standard deck timber has changed twice over the years, from teak to an epoxy-treated softwood and latterly to quarter-sawn Douglas fir, after the yard tested panels for wear (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a>). The specification should name the species, thickness, fixing and finish rather than simply "laid deck", since each carries a different maintenance programme and a different life.</p>
 
-<p>The planking is Douglas fir strip, stiffened with double-diagonal sipo veneers epoxy-bonded at 45 degrees. The whole hull is then covered with an epoxy glass sheath. Spirit describes the sheath as non-structural; its job is to stabilise the timber so the paint finish stays fair. On the 30 footers the yard has replaced the glass with flax cloth, with plans to extend it to larger boats (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a>).</p>
+<p>Propulsion is the second decision. Nearly half of Spirit's recent new builds have gone electric, following the 44E in 2020. We would want battery capacity, charging arrangements, range under power and the reserve for domestic load written into the specification as numbers, with a diesel or hybrid installation costed alongside. Range under power decides where the yacht can be taken, which is not something to discover on the first passage.</p>
 
-<p>Larger models carry carbon inner frames at the central frames to take mast, chainplate and keel loads. The largest Spirits are built on stainless steel space frames (<a href="https://www.yachtingworld.com/yachts-and-gear/spirit-yachts-starts-construction-on-spirit-111-one-of-the-largest-single-masted-wooden-yachts-ever-107349" target="_blank" rel="noopener noreferrer">Yachting World</a>). Once the hull is complete it is rolled 180 degrees, and interior fit-out and systems installation begin. Deck planking, coachroof and deck equipment follow, then paint, then launch for sea trials and commissioning.</p>
+<p>Then the varnish, which is the part owners love and the part they pay for every year. Spirit's guidance is a touch-up most years and a full revarnish roughly every fifth; a yacht kept in the Mediterranean will sit at the short end of that. It is easier to settle how much brightwork the yacht carries with that programme in front of you than after launch.</p>
 
-<h2>Time and Price on the Published Record</h2>
+<p>The contract terms we would ask for are the same on any build, and none of them costs a well-run yard anything. Stage payments go against physical milestones rather than dates, title to the hull and materials vests in the owner as they are paid for, and the work in progress is insured in joint names. On a cold-moulded hull the milestones choose themselves; frames set, hull planked, veneers and sheath complete, hull rolled, deck on, launch. The reasons, and the yard record behind them, are in our piece on <a href="/insights/shipyard-insolvency-what-happens-to-the-owner">what happens to an owner when a yard fails</a>, written alongside our article for The Superyacht Report in September.</p>
 
-<p>Spirit does not publish fixed prices, because every yacht is built to an individual specification. It has published two reference points. As of June 2025, the R30 daysailer was priced at £350,000 ex VAT with an eight-month build, and the C72 at £4.5 million ex VAT with a 28-month build (<a href="https://spirityachts.com/for-your-information/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). Price moves with model, size, finish, propulsion and the degree of custom work.</p>
+<h2>During the build</h2>
 
-<p>Those two figures frame the decision for most owners. A Spirit is a contract of several hundred thousand to several million pounds, built over one to two and a half years by a yard with a small, long-serving team, and the representation should be shaped to the project.</p>
+<p>Spirit uses no moulds. Ring frames are laminated over full-size patterns and set upside down on a strongback, and the centreline is laminated in one piece. The hull is then planked in Douglas fir strip, skinned with two layers of sipo veneer at 45 degrees and sheathed in epoxy and glass, or flax on the 30-footers (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a>). The larger yachts carry carbon frames amidships to take mast, chainplate and keel loads, and <em>Geist</em> was built around a stainless steel space frame. Only then is the hull rolled over for fit-out.</p>
 
-<h2>Before the Contract</h2>
+<p>Each of those layers hides the one beneath it, so the inspections follow the laminating schedule rather than the calendar. Frames and centreline are checked before planking, planking before the first veneer, and each veneer for glue coverage and voids before the next goes on. Epoxy depends on temperature, humidity and timber moisture, and the yard records all three in the shed; we ask to see the log.</p>
 
-<p>The specification is where an owner's representative earns most of the fee on a Spirit, because the decisions that shape the yacht's cost of ownership are taken before the first frame is laminated.</p>
+<p>After that, two things get most of our attention. The structural interfaces, meaning floors, keel attachment, chainplates and any carbon frames, are inspected before the joinery closes them in. And every penetration through hull and deck, where a through-hull or a cable run exposes end grain, should be sealed with epoxy before the fitting goes in. On a wood-epoxy yacht an unsealed penetration is the usual way water gets into the structure; checking it during the build takes minutes, and finding it at a survey ten years on takes a winter.</p>
 
-<p>Deck material is the first. The yard has moved its standard deck timber over the years, from teak to an epoxy-treated softwood and then to quarter-sawn Douglas fir, and has tested panels for durability (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a>). The specification should name the species, thickness, fixing method and finish, and the owner should understand the maintenance each option carries.</p>
+<h2>Handover and the first season</h2>
 
-<p>Propulsion is the second. Nearly half of Spirit's new builds now have electric engines, and the 44E launched in 2020 as the first all-electric Spirit. Battery capacity, charging arrangements, range under power and the reserve for domestic load are owner decisions that need setting out in figures, not adjectives. A diesel or hybrid installation should be costed alongside for comparison.</p>
+<p>At handover, ask for the coating and varnish systems in writing, with products and coat counts. It is the first thing a refit yard asks for when the brightwork is next done, and it is often missing from the pack. Spirit offers aftercare to its owners worldwide. The inspection we would most want is at the end of the first season, once the timber has been through a full cycle of wetting, drying and temperature change, and in good time before the warranty runs out.</p>
 
-<p>Finish is the third. Varnished brightwork is part of what a Spirit is, and the amount of it sets the annual maintenance. Spirit's own guidance is a varnish touch-up most years and a full revarnish about every five years, depending on use. An owner who will keep the yacht in the Mediterranean or the Caribbean should take that into the specification rather than discover it in the second season.</p>
-
-<p>The contract follows. On a build of this size from any yard, the protections that matter are stage payments tied to physical milestones rather than calendar dates, title to the hull and allocated materials vesting in the owner as they are paid for, and insurance of the work in progress in joint names. Our guides to <a href="/insights/yacht-new-build-contract-what-to-negotiate">new build contract terms</a> and to <a href="/insights/shipyard-insolvency-what-happens-to-the-owner">what happens to an owner in a yard insolvency</a> cover these in detail. Natural milestones on a cold-moulded build are frames set, hull planked, veneers and sheath complete, hull rolled, deck on, and launch.</p>
-
-<h2>During the Build</h2>
-
-<p>The principle on a cold-moulded hull is to inspect each layer before the next one covers it. Once a veneer is bonded over the planking, the planking cannot be seen again.</p>
-
-<p>The frames and centreline structure are checked for fairness and bonding before planking starts. The planking is checked before the first diagonal veneer goes on. Each veneer layer is checked for glue coverage, orientation and voids, and the sheath is checked before fairing. The yard keeps records of temperature, humidity and timber moisture in the lamination shed, and the representative should see them, since epoxy bonding depends on all three.</p>
-
-<p>The structural interfaces need particular attention: the floors, the keel attachment, the chainplates and, on the larger models, the carbon frames or space frame that carry rig and keel loads into the timber hull. These are inspected before the interior joinery closes them in.</p>
-
-<p>The same applies to every penetration through the hull and deck. Through-hulls, deck fittings and cable runs expose end grain, and the timber at each one has to be sealed with epoxy before the fitting goes in. On a wood-epoxy yacht, an unsealed penetration is the most likely route for water into the structure, and it is far cheaper to confirm during the build than to find at a survey ten years later.</p>
-
-<p>Systems are checked before the linings go up: wiring routes, battery installation and ventilation on electric yachts, plumbing, and access to everything that will need servicing.</p>
-
-<h2>Launch, Trials and Handover</h2>
-
-<p>Sea trials test the yacht under sail and power against the specification: speed under power, range on battery where fitted, sail handling, and the behaviour of every system under load. The representative compiles the snag list, agrees each item's priority with the yard, and confirms the closing of each one before acceptance.</p>
-
-<p>The handover pack should include the conformity documentation required under the recreational craft regulations (UKCA in Great Britain, CE in the EU), the owner's manual, Spirit's maintenance manual, as-built drawings, and a record of the coating and varnish systems used. That last item is often overlooked, and it is the first thing a refit yard asks for when the brightwork is next done.</p>
-
-<h2>Warranty and the First Season</h2>
-
-<p>Spirit offers aftercare to its owners worldwide, remotely for minor queries and on location where a significant problem needs it. The representative's job in the first season is to keep a defect log, raise items with the yard in good time before the warranty period ends, and arrange a structured inspection at the end of the first season, when the timber has been through its first full cycle of wetting, drying and temperature change.</p>
-
-<h2>Shaping the Engagement</h2>
-
-<p>The engagement follows the build. At its core it is a specification and contract review, inspections at each construction milestone, attendance at sea trials, and an end-of-season inspection. A longer or more complex build adds regular site visits and written monthly reports on progress, variations and cost to complete, up to the full scope of our <a href="/owners-representation">owner's representation</a> service.</p>
-
-<p>If you are commissioning a Spirit and would like an independent view on the specification, the contract or the build, we would be glad to <a href="/contact">discuss it</a>.</p>`,
+<p>We have no commercial relationship with Spirit Yachts. If you are commissioning a Spirit and would like an owner's-side view of the specification, the contract or the build, our <a href="/owners-representation">owner's representation</a> page sets out how we work, and we would be glad to <a href="/contact">discuss it</a>.</p>`,
     faqs: [
       {
         question: "How long does it take to build a Spirit yacht?",
@@ -428,12 +398,12 @@ export const posts: Post[] = [
     title: "Buying a Pre-Owned Spirit Yacht: Models, Survey and What to Check",
     metaTitle: "Buying a Pre-Owned Spirit Yacht: Models and Survey",
     description:
-      "The Spirit Yachts range since 1993, how few of each model exist, and what a pre-purchase survey of a cold-moulded wood-epoxy yacht should cover before an offer becomes a contract.",
+      "Around 80 Spirits have been built since 1993, so few come to market. The range, the survey of a cold-moulded hull, and the yard's own records.",
     metaDescription:
-      "The Spirit Yachts range since 1993, and what a pre-purchase survey of a cold-moulded wood-epoxy yacht should cover before you buy.",
+      "Few used Spirits come to market. The range, what a survey of a cold-moulded hull should cover, and the yard's records.",
     date: "2026-10-21",
     category: "New Build",
-    readTime: "9 min read",
+    readTime: "3 min read",
     keywords: [
       "Spirit yachts for sale",
       "used Spirit yacht",
@@ -443,61 +413,44 @@ export const posts: Post[] = [
       "wood epoxy yacht survey",
       "cold-moulded yacht survey",
     ],
-    content: `<p><strong>A pre-owned Spirit</strong> is a scarce thing. Spirit Yachts had built around 80 hulls by 2023, spread across sailing and motor models from 10 to 34 metres, so most models exist in single or low double figures and only a handful are on the market at any one time (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder, 2023</a>).</p>
+    content: `<p><em>Gwenhyfar II</em>, the C72 we went aboard at St Katharine Docks in October, is for sale through Spirit's brokerage at £3.3 million, VAT not paid, because her owner is building a new Spirit (<a href="https://spirityachts.com/brokerage/spirit-72-gwenhyfar-ii/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). She is one of three 72s built in the two years to 2023. That is roughly the position for anyone looking for a used Spirit. Around 80 hulls have been built since 1993, spread across a dozen sailing and motor models, most of them in single figures, with only a few on the market at once (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a>, 2023).</p>
 
-<p>This guide is for buyers looking at a Spirit on the brokerage market. It sets out the range, the points particular to surveying a cold-moulded wood-epoxy yacht, and what to settle before an offer becomes a contract. It is independent and informational. Foreland Marine has no commercial relationship with Spirit Yachts or with any broker listing its yachts.</p>
+<p>Scarcity changes how the purchase works. With so few comparable sales, the asking price says less than it would on a production yacht, and the survey ends up carrying most of the negotiation.</p>
 
-<h2>The Range Since 1993</h2>
+<h2>The range</h2>
 
 <div class="table-scroll"><table>
 <thead><tr><th>Model</th><th>Length</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td>Spirit 37</td><td>11.5 m</td><td>The first Spirit, 1993. Ten built, plus two 33 ft versions for European lakes</td></tr>
-<tr><td>Spirit 46</td><td>14.2 m</td><td>Introduced 1996. About a dozen built</td></tr>
-<tr><td>Spirit 52</td><td>15.9 m</td><td>First launched 2007 as <em>Flight of Ufford</em>. The yard's most popular model</td></tr>
-<tr><td>Spirit 54</td><td>16.7 m</td><td><em>Soufrière</em>, built for the 2006 film <em>Casino Royale</em></td></tr>
-<tr><td>Spirit 70 and 72</td><td>21.3 to 22 m</td><td>First 70 built 2003. Three 72s built in two years before 2023</td></tr>
+<tr><td>Spirit 37</td><td>11.5 m</td><td>The first Spirit, 1993. Ten built</td></tr>
+<tr><td>Spirit 46</td><td>14.2 m</td><td>From 1996. About a dozen built</td></tr>
+<tr><td>Spirit 52</td><td>15.9 m</td><td>From 2007. The yard's most popular model</td></tr>
+<tr><td>Spirit 70 and 72</td><td>21.3 to 22 m</td><td>First 70 in 2003; three 72s in the two years to 2023</td></tr>
 <tr><td>Spirit 44E</td><td>13.4 m</td><td>2020. The first all-electric Spirit</td></tr>
-<tr><td>Spirit 111</td><td>33.8 m</td><td><em>Geist</em>, launched 2020. Built on a stainless steel space frame</td></tr>
-<tr><td>Power: P35, P40, P70</td><td>10.7 to 21.3 m</td><td>Motor yachts on the same construction</td></tr>
+<tr><td>Spirit 111</td><td>33.8 m</td><td><em>Geist</em>, 2020. Built on a stainless steel space frame</td></tr>
+<tr><td>P35, P40, P50, P70</td><td>10.7 to 21.3 m</td><td>Motor yachts on the same construction</td></tr>
 </tbody>
 </table></div>
 
-<p>Source: <a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a>, 2023, and Spirit Yachts. Many Spirits were built to individual specification within a model, so two yachts of the same model can differ materially in layout, deck, rig and propulsion.</p>
+<p>Source: <a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a> and Spirit Yachts. Many were built to an individual specification within the model, so two yachts of the same name can differ in deck, rig, layout and propulsion.</p>
 
-<p>Used Spirits are sold through Spirit's own brokerage and through general brokers in the UK, Europe, the United States and Australasia. Asking prices span a wide range, from the low hundreds of thousands for an early 46 to several million for a recent 72. With so few comparable sales, the asking price is a weaker guide than usual, and the survey carries more of the weight in the negotiation.</p>
+<h2>The survey</h2>
 
-<h2>Why a Wood-Epoxy Survey Is Different</h2>
+<p>A Spirit hull is timber planking and diagonal veneers bonded in epoxy under a sealed sheath. While the sheath is intact the hull is stiff and stable, and Spirit compares its care to GRP rather than to a traditional wooden boat. The risk is water getting past the sheath at a breach or an unsealed fitting and travelling along the grain where nobody can see it.</p>
 
-<p>A Spirit hull is timber planking and diagonal veneers bonded with epoxy and sealed under a glass or flax sheath. When it is sound, the structure is stiff, light and stable, and Spirit compares its care to a GRP yacht rather than a traditional wooden one. The risk is water reaching the timber through a breach in the sheath or an unsealed penetration, where it can travel along the grain unseen.</p>
+<p>That puts the choice of surveyor first. We would ask any candidate how many cold-moulded hulls they have surveyed, and expect a number. Moisture readings taken through paint and sheath only mean something when compared across the hull, alongside percussion and a close look, and a surveyor who knows GRP well will not necessarily read them that way.</p>
 
-<p>A surveyor who knows GRP well will not necessarily know what to look for on a cold-moulded hull. Moisture meter readings taken through paint and sheath are indicative rather than absolute, so comparative readings across the hull, read alongside percussion testing and close visual inspection, tell more than any single number. The buyer should ask the surveyor directly how many cold-moulded yachts they have surveyed.</p>
+<p>Below the waterline the survey should cover the keel attachment and floors, the rudder tube and bearings, and every through-hull. Groundings matter most, so the history should be established and any repair seen. Spirit rebuilt a 52 after she struck a rock in the Baltic, which shows that damage of that kind is repairable; what a buyer needs to know is who did the work and how. On deck, establish which deck timber the yacht has, since the yard's standard has changed, and check the seal at every fitting, the hull-to-deck joint, the chainplates, and the stem and transom, where end grain is closest to the surface. Grey or dark staining under varnish means water has reached the timber: cosmetic if caught early, structural if left. On an electric Spirit, the battery's age, state of health and remaining warranty belong in the survey too, because replacement is a large bill.</p>
 
-<h2>What the Survey Should Cover</h2>
+<h2>Records</h2>
 
-<p>The hull below the waterline comes first, with particular attention to the keel attachment and the floors that carry it, the rudder tube and bearings, and every through-hull. A grounding is the event most likely to have damaged the structure, and its repair history should be established. Spirit repaired a 52 that struck a rock in the Baltic, which shows that serious damage is repairable; the question for a buyer is how well, and by whom.</p>
+<p>The yard holds the best history of any Spirit. Ask the seller for the build number and permission to see the yard's file, along with the maintenance log, any repair reports and the coating specification. Spirit extends its aftercare to brokerage owners, so the builder remains available after the sale.</p>
 
-<p>On deck, the surveyor should identify the deck material, since the yard's standard has changed over the years, and check its condition, its fastenings and the seal at every fitting. The hull-to-deck joint, the chainplates and the stem and transom, where end grain is closest to the surface, all need close inspection.</p>
+<h2>From offer to completion</h2>
 
-<p>The brightwork is a good indicator of how the yacht has been kept. Varnish that has broken down and let water reach the timber shows as grey or dark staining. That is cosmetic if caught early and structural if left for years.</p>
+<p>Under a standard brokerage contract the sale is subject to survey and sea trial, with a deposit held by the broker, and the findings become either a price adjustment or a list for the seller to put right before completion. On a yacht this scarce, a short priced list carries more weight than a long unprioritised one. Most buyers plan some work for the first winter, which our notes on <a href="/insights/refitting-a-spirit-yacht">refitting a Spirit</a> cover.</p>
 
-<p>The rig, standing rigging and sails should be dated, and on a carbon mast an inspection by a spar specialist is worth commissioning. On an electric or hybrid Spirit, the battery's age, state of health and remaining warranty belong in the survey, since replacement is a significant cost. On a conventional yacht, an engine survey with oil analysis is normal practice.</p>
-
-<p>The sea trial should test the yacht under sail and power, with every system run under load.</p>
-
-<h2>Records and History</h2>
-
-<p>The yard is the best single source of history on a Spirit. Ask the seller for the build number and the yard's records, along with the maintenance log, any repair reports and the coating specification. Spirit extends its aftercare to yachts bought on the brokerage market, so a buyer can expect continuity with the builder after purchase.</p>
-
-<p>Tax and registration status should be checked before the offer. Since January 2021, UK VAT-paid status no longer carries EU VAT status, and the reverse is also true. A yacht's VAT position, its current flag and its conformity documentation under the recreational craft regulations all affect where it can be kept and what it is worth.</p>
-
-<h2>From Offer to Ownership</h2>
-
-<p>A standard brokerage contract makes the sale subject to survey and sea trial, with a deposit held by the broker. The survey findings then become the basis for a price adjustment or for the seller to rectify specific items before completion. On a scarce yacht, a buyer is better served by a precise, priced list of findings than by a long, unprioritised one.</p>
-
-<p>Most buyers of a pre-owned Spirit plan some work in the first winter. Our guide to <a href="/insights/refitting-a-spirit-yacht">refitting a Spirit</a> covers the usual programme. An owner's representative can manage the survey, read the findings into a priced work list, and carry that list into the negotiation and the first refit. For the wider buying process, see <a href="/insights/how-to-buy-your-first-superyacht">how to buy your first yacht</a>.</p>
-
-<p>If you are looking at a pre-owned Spirit and would like an independent survey or a second view on one already done, we would be glad to <a href="/contact">discuss it</a>.</p>`,
+<p>We have no commercial relationship with Spirit Yachts or with any broker listing its yachts. If you are looking at a Spirit and would like a second view, on a survey still to be commissioned or one already done, we would be glad to <a href="/contact">discuss it</a>.</p>`,
     faqs: [
       {
         question: "How many Spirit yachts have been built?",
@@ -524,12 +477,12 @@ export const posts: Post[] = [
     title: "Refitting a Spirit Yacht: Brightwork, Decks, Repower and Rig",
     metaTitle: "Refitting a Spirit Yacht: Brightwork, Decks and Rig",
     description:
-      "The refit cycle of a Spirit and other cold-moulded wood-epoxy yachts: revarnishing, paint, deck renewal, repowering to electric or hybrid, rig renewal and structural repair, and how to plan and manage the work.",
+      "The varnish cycle, deck, repowering, structural repair and the choice of yard for a Spirit or another cold-moulded yacht.",
     metaDescription:
-      "The refit cycle of a Spirit and other cold-moulded yachts: revarnish, paint, deck, repower, rig and repair, and how to plan and manage the work.",
+      "Planning a refit on a Spirit or another cold-moulded yacht: varnish cycle, deck, repower, structural repair and choice of yard.",
     date: "2026-10-21",
     category: "Refit",
-    readTime: "9 min read",
+    readTime: "3 min read",
     keywords: [
       "Spirit yacht refit",
       "Spirit Yachts refit",
@@ -538,47 +491,31 @@ export const posts: Post[] = [
       "yacht revarnish",
       "electric yacht repower",
     ],
-    content: `<p><strong>A Spirit refit</strong> follows a different rhythm from a GRP yacht of the same size. The sealed wood-epoxy hull asks for little structurally when it is well kept, but the varnished brightwork that makes a Spirit what it is runs on a cycle of its own, and the deck, rig and propulsion each reach the end of their lives at different times.</p>
+    content: `<p>Spirit's guidance on varnish is a touch-up most years and a full revarnish about every fifth (<a href="https://spirityachts.com/for-your-information/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>), and in the Mediterranean it tends to come round sooner. That cycle sets the rhythm of a Spirit refit. The deck, the rig and the engine each run to their own, much longer timetable, and planning a refit is largely a matter of deciding which of them to take together.</p>
 
-<p>This guide is for owners of Spirits and other cold-moulded wood-epoxy yachts planning a refit. It covers the work that comes round on each cycle, the choice of yard, and how the project should be specified and run. It is independent and informational. Foreland Marine has no commercial relationship with Spirit Yachts or with any yard named here.</p>
+<h2>Brightwork and deck</h2>
 
-<h2>The Refit Cycle</h2>
+<p>A full revarnish is a winter's work: stripping back, cutting out and repairing any timber the water has reached, and building the coats back up in a heated shed. Nobody knows how much of that repair there is until the varnish is off, which is the reason to survey before the yard prices the job.</p>
 
-<p>Brightwork sets the shortest cycle. Spirit's own guidance is a varnish touch-up most years and a full revarnish about every five years, depending on use (<a href="https://spirityachts.com/for-your-information/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). A yacht in the Mediterranean or the Caribbean will sit at the shorter end of that range. A full revarnish is a winter's work: stripping back, repairing any area where water has reached the timber, and rebuilding the coats under controlled conditions.</p>
+<p>Spirit has used teak, an epoxy-treated softwood and now quarter-sawn Douglas fir as its standard deck timber (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a>). When a deck reaches the end of its life, the choice is whether to renew like for like or change, and it turns on how much sun the yacht sees and how much maintenance the owner is content to carry.</p>
 
-<p>Hull paint follows a longer cycle. The sheath under the paint stabilises the timber, so a sound hull holds its finish well, and a repaint is usually driven by cosmetic wear or by damage rather than by the structure.</p>
+<h2>Repowering</h2>
 
-<p>The deck is a larger decision. Spirit has used teak, an epoxy-treated softwood and, more recently, Douglas fir as its standard deck timber (<a href="https://www.proboat.com/2023/09/esprit-of-spirit-yachts/" target="_blank" rel="noopener noreferrer">Professional BoatBuilder</a>). A deck approaching the end of its life raises the question of whether to renew like for like or change material, and the answer turns on how the yacht is used and kept.</p>
+<p>A new engine is the usual reason for a major refit on an older Spirit. The choice now includes hybrid and full electric, and nearly half of Spirit's own recent new builds are electric. Conversion is a bigger job than the motor swap suggests. Batteries are heavy and their position changes trim and stability, the compartments need ventilation and fire protection, and the charging has to suit how the yacht is used, since range under power changes where she can go. We would have a naval architect check weight and stability at the start, before anything is ordered.</p>
 
-<p>The rig and sails run to their own timetable. Many insurers expect standing rigging to be inspected closely or renewed at around ten years, and a carbon mast benefits from inspection by a spar specialist at the same interval. Running rigging and sails follow use.</p>
+<h2>Structure</h2>
 
-<h2>Repowering, Including Electric</h2>
+<p>Cold-moulded hulls repair well. Damaged veneers are cut back, new ones scarfed in at the same orientation, and the sheath and paint rebuilt over them; Spirit repaired a 52 at Ipswich after she struck a rock in the Baltic. The less visible risk is water that has got in through a fitting or a breach in the sheath. It is found by comparative moisture readings, percussion and opening up suspect areas, and repaired by drying out and replacing the timber. In both cases the quality depends almost entirely on the people doing it.</p>
 
-<p>Propulsion is the most frequent reason for a major refit on a Spirit of fifteen years or more. The choice is now between a like-for-like diesel replacement, a hybrid installation, and full electric. Spirit itself has moved a large share of its new builds to electric propulsion, and the 44E launched in 2020 as the first all-electric Spirit.</p>
+<h2>Choosing a yard</h2>
 
-<p>Converting an existing yacht is a larger job than the motor swap suggests. Battery weight and position affect trim and stability, battery compartments need ventilation and fire protection, charging needs shore power and often solar or regeneration, and the yacht's range under power changes the way it can be used. A naval architect's weight and stability check belongs at the start of the project, not at the end of it.</p>
+<p>Spirit refits its own yachts at Ipswich, where the drawings and build records are kept, and for structural work or a full revarnish that continuity counts for a great deal. For a yacht based far from Suffolk, or for work that is mostly systems and rig, a yard nearer her cruising ground can make more sense. It should be able to show recent wood-epoxy work and hold temperature and humidity in its shed. Our guide to <a href="/insights/choosing-shipyard-yacht-refit">choosing a refit yard</a> covers the tender itself.</p>
 
-<h2>Structural Repair</h2>
+<h2>Timing and the record</h2>
 
-<p>Cold-moulded hulls are repairable. Damaged veneers are cut back, new veneers are scarfed in and bonded to the same orientation, and the sheath and paint are rebuilt over them. Spirit repaired a 52 that struck a rock in the Baltic at its own yard. The quality of a structural repair depends almost entirely on the skill of the people doing it, which makes the choice of yard more important than for a cosmetic refit.</p>
+<p>For a Spirit kept in the UK the natural window is the winter lay-up, with the survey done and the specification agreed by late summer so the yard can plan its shed. Keep the record as the work goes: coating systems, timber species and source for any repair, and photographs of structure before it is closed up. The next refit yard will ask for all of it, and so will a buyer's surveyor.</p>
 
-<p>The less visible risk is water that has entered the structure through a fitting or a breach in the sheath. It is found by survey before the refit is specified, by comparative moisture readings, percussion testing and opening up suspect areas, and it is repaired by drying out and replacing the affected timber.</p>
-
-<h2>Choosing a Yard</h2>
-
-<p>Spirit refits and restores its own yachts and other wooden vessels at the Ipswich yard, where the team that built the yacht holds its drawings and records. For many owners, particularly on structural work or a full revarnish, that continuity is the deciding factor.</p>
-
-<p>Where the yacht is based far from Suffolk, or the work is mainly systems and rig, a yard closer to the yacht's cruising ground may be the better choice, provided it has proven cold-moulded experience. The tender should ask each yard for recent wood-epoxy work and for the conditions it can hold in its shed, since epoxy work and varnish both depend on temperature and humidity. Our guide to <a href="/insights/choosing-shipyard-yacht-refit">choosing a refit yard</a> sets out the wider process.</p>
-
-<h2>Planning and Running the Work</h2>
-
-<p>The sequence is the same as any refit. A survey before the specification identifies what needs doing. A written specification turns the survey into a scope the yard can price. A contract sets the price model, the payment stages and how variations will be agreed. For a Spirit in the UK, the natural window is the winter lay-up, with the specification agreed by late summer so the yard can plan its shed space.</p>
-
-<p>An owner's representative is usually engaged for the survey, the specification and contract, and a series of site visits through the work. On a structural refit, the engagement runs through the whole project with regular reporting. Our <a href="/refit">refit project management</a> service sets out how this works.</p>
-
-<p>The record of the refit matters as much as the work. The coatings and varnish systems used, the timber species and source for any repair, and photographs of structure before it was closed up all belong in the yacht's file. They support the next refit, and they support the yacht's value when it is sold.</p>
-
-<p>If you are planning a refit on a Spirit or another cold-moulded yacht and would like an independent view on the survey, the specification or the choice of yard, we would be glad to <a href="/contact">discuss it</a>.</p>`,
+<p>We have no commercial relationship with Spirit Yachts or any yard named here. If you are planning a refit on a Spirit or another cold-moulded yacht, our <a href="/refit">refit project management</a> page explains how we work, and we would be glad to <a href="/contact">discuss it</a>.</p>`,
     faqs: [
       {
         question: "How often does a Spirit need revarnishing?",
