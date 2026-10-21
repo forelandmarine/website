@@ -324,9 +324,9 @@ export const posts: Post[] = [
     title: "Building a Spirit Yacht: The Owner's Side of a Cold-Moulded New Build",
     metaTitle: "Building a Spirit Yacht: Owner's Representation",
     description:
-      "How a Spirit Yachts new build runs, from laminated ring frames to sea trials, what an owner's representative checks at each stage of a cold-moulded build, and how the role scales from a 13 metre daysailer to a 34 metre sloop.",
+      "How a Spirit Yachts new build runs, from laminated ring frames to sea trials, and what an owner's representative checks at each stage of a cold-moulded build.",
     metaDescription:
-      "How a Spirit Yachts new build runs, what an owner's representative checks at each stage of a cold-moulded build, and how the role scales with size.",
+      "How a Spirit Yachts new build runs, and what an owner's representative checks at each stage of a cold-moulded build.",
     date: "2026-10-21",
     category: "New Build",
     readTime: "10 min read",
@@ -354,7 +354,7 @@ export const posts: Post[] = [
 
 <p>Spirit does not publish fixed prices, because every yacht is built to an individual specification. It has published two reference points. As of June 2025, the R30 daysailer was priced at £350,000 ex VAT with an eight-month build, and the C72 at £4.5 million ex VAT with a 28-month build (<a href="https://spirityachts.com/for-your-information/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). Price moves with model, size, finish, propulsion and the degree of custom work.</p>
 
-<p>Those two figures frame the decision for most owners. A Spirit between 13 and 25 metres is a contract of several hundred thousand to several million pounds, built over one to two and a half years by a yard with a small, long-serving team. That is a different undertaking from a 50 metre build in a Northern European yard, and the representation should be sized to match.</p>
+<p>Those two figures frame the decision for most owners. A Spirit is a contract of several hundred thousand to several million pounds, built over one to two and a half years by a yard with a small, long-serving team, and the representation should be shaped to the project.</p>
 
 <h2>Before the Contract</h2>
 
@@ -390,11 +390,9 @@ export const posts: Post[] = [
 
 <p>Spirit offers aftercare to its owners worldwide, remotely for minor queries and on location where a significant problem needs it. The representative's job in the first season is to keep a defect log, raise items with the yard in good time before the warranty period ends, and arrange a structured inspection at the end of the first season, when the timber has been through its first full cycle of wetting, drying and temperature change.</p>
 
-<h2>How the Engagement Scales</h2>
+<h2>Shaping the Engagement</h2>
 
-<p>On a 13 to 16 metre Spirit, a full-time representative is not justified. The usual shape is a specification and contract review, inspections at each construction milestone, attendance at sea trials, and an end-of-season inspection, charged on a day-rate basis.</p>
-
-<p>On a 20 to 25 metre yacht, the same work is supplemented by regular site visits and written monthly reports on progress, variations and cost to complete. On a yacht above 30 metres, the engagement approaches what our <a href="/owners-representation">owner's representation</a> service provides on any superyacht build, with a fixed fee for the full project.</p>
+<p>The engagement follows the build. At its core it is a specification and contract review, inspections at each construction milestone, attendance at sea trials, and an end-of-season inspection. A longer or more complex build adds regular site visits and written monthly reports on progress, variations and cost to complete, up to the full scope of our <a href="/owners-representation">owner's representation</a> service.</p>
 
 <p>If you are commissioning a Spirit and would like an independent view on the specification, the contract or the build, we would be glad to <a href="/contact">discuss it</a>.</p>`,
     faqs: [
@@ -574,9 +572,9 @@ export const posts: Post[] = [
 
 <h2>Planning and Running the Work</h2>
 
-<p>The sequence is the same as any refit, scaled to the yacht. A survey before the specification identifies what needs doing. A written specification turns the survey into a scope the yard can price. A contract sets the price model, the payment stages and how variations will be agreed. For a Spirit in the UK, the natural window is the winter lay-up, with the specification agreed by late summer so the yard can plan its shed space.</p>
+<p>The sequence is the same as any refit. A survey before the specification identifies what needs doing. A written specification turns the survey into a scope the yard can price. A contract sets the price model, the payment stages and how variations will be agreed. For a Spirit in the UK, the natural window is the winter lay-up, with the specification agreed by late summer so the yard can plan its shed space.</p>
 
-<p>On a yacht of 13 to 20 metres, an owner's representative is usually engaged for the survey, the specification and contract, and a series of site visits through the work, on a day-rate basis. On a larger yacht or a structural refit, the engagement runs through the whole project with regular reporting. Our <a href="/refit">refit project management</a> service sets out how this works on yachts of every size.</p>
+<p>An owner's representative is usually engaged for the survey, the specification and contract, and a series of site visits through the work. On a structural refit, the engagement runs through the whole project with regular reporting. Our <a href="/refit">refit project management</a> service sets out how this works.</p>
 
 <p>The record of the refit matters as much as the work. The coatings and varnish systems used, the timber species and source for any repair, and photographs of structure before it was closed up all belong in the yacht's file. They support the next refit, and they support the yacht's value when it is sold.</p>
 
