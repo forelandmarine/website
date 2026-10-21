@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "What size yachts do you work with?",
     answer:
-      "We specialise in sailing and motor yachts from 24 to 60 metres, with particular depth in performance sailing yachts. Our team has extensive experience with J Class yachts, maxi racers, fast carbon composite yachts and large motor yachts.",
+      "We work on sailing and motor yachts up to 60 metres: owner's representation and refit from 12 metres, yacht management from 24, with particular depth in performance sailing yachts. Our team has extensive experience with J Class yachts, maxi racers, fast carbon composite yachts and large motor yachts.",
   },
   {
     question: "What qualifications does the Foreland Marine team hold?",
@@ -92,7 +92,7 @@ export default function HomePage() {
             <ServiceCard
               data-animate="fade-up"
               title="Refit Project Management"
-              description="We manage every aspect of your yacht refit from beginning to end, from planning and design to project management and crew services. Our team ensures timely delivery, quality workmanship, and effective budgeting for sailing and motor yachts over 24 metres."
+              description="We manage every aspect of your yacht refit from beginning to end, from planning and design to project management and crew services. Our team ensures timely delivery, quality workmanship, and effective budgeting for sailing and motor yachts from 12 metres."
               href="/refit"
             />
             <ServiceCard

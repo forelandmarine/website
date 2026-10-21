@@ -8,7 +8,7 @@ export default async function OgImage() {
   return renderOgCard({
     eyebrow: "Refit",
     title: "Owner-side refit project management",
-    subtitle: "Specification, tendering, yard selection and on-site management for yachts 24 to 60 metres. Independent of the yard.",
+    subtitle: "Specification, tendering, yard selection and on-site management for yachts 12 to 60 metres. Independent of the yard.",
     url: "forelandmarine.com/refit",
     footnote: "Specification, Tender, Site, Handover",
   });

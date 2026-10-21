@@ -1,51 +1,47 @@
-# Search target: Oyster and Spirit owners
+# Search target: Spirit and Oyster owners
 
-Written 21 October 2026. Extends `search-strategy-2026-09.md`; the constraints recorded there still apply (no new top-level service URLs, no J Class pages, articles under /insights support the four service pages).
+Written 21 October 2026, revised the same day after Jack's direction. Extends `search-strategy-2026-09.md`; the constraints recorded there still apply (no new top-level service URLs, no J Class pages, articles under /insights support the service pages).
 
 ## The target
 
-Foreland should appear when an owner or buyer of an Oyster or a Spirit searches for help with the boat: overseeing a new build at the builder, buying a pre-owned example, planning a mid-life refit, or managing the warranty period. These are low-volume, high-intent queries. Success is measured in enquiries from that owner group, not in traffic.
+Foreland should be on the first page of every search a Spirit or Oyster owner, or prospective owner, makes about building, buying or refitting one. Foreland provides owner's representation on new builds and refits for those owners. Spirit comes first; Oyster follows once the Spirit set is indexed.
 
-The queries Foreland should hold, in order of commercial value:
+Owner's representation and refit project management are now stated as 12 to 60 metres across the site (changed 21 October 2026: `/owners-representation`, `/refit`, homepage, hero, OG images, llms files). Yacht management and technical support stay at 24 metres and above.
 
-| Family | Example queries | Who ranks now |
+## Spirit query map
+
+| Query family | Example queries | Page that should hold it |
 |---|---|---|
-| New build oversight | owner's representative Oyster new build, Spirit Yachts build surveyor, Oyster 565 build monitoring | Nobody holds these. Spirit's own site says it is used to working with owners' representatives, but no representative appears. |
-| Pre-purchase | buying a used Oyster, Oyster 56 survey, what to check on a pre-owned Spirit | Generic brokerage and listing checklists; nothing model-specific from a technical source. |
-| Mid-life refit | Oyster refit cost, Oyster 62 teak deck replacement, repowering an Oyster, wood-epoxy yacht refit | Oyster's own refit guide, then Ocean Independence and Northrop & Johnson general pages. |
-| Warranty | new build warranty claim yacht, Oyster warranty period | Builder pages only. |
-| Builder history | Oyster Yachts administration 2018, what happened to Oyster buyers | Trade press; Foreland's insolvency article already covers it. |
+| New build | Spirit Yachts new build, building a Spirit yacht, Spirit Yachts owner's representative, cold-moulded yacht new build | `/insights/building-a-spirit-yacht-owners-representation` |
+| Buying | Spirit yachts for sale, used Spirit yacht, Spirit 46, Spirit 52, Spirit 72, wood epoxy yacht survey | `/insights/buying-a-pre-owned-spirit-yacht` |
+| Refit | Spirit yacht refit, wood epoxy yacht refit, cold-moulded yacht refit, yacht revarnish, electric yacht repower | `/insights/refitting-a-spirit-yacht` |
+| Brand | Spirit Yachts, Spirit Yachts Ipswich | All three, through internal links and off-site citation |
 
-Queries to leave alone: "Oyster 495 for sale", "Spirit yachts for sale" and similar listing searches. They belong to the builders' brokerage arms and the listing sites, and the intent is not Foreland's. Search Console already shows stray impressions for these (positions 3 to 7, no clicks), which is worth checking against the Pages report to see which URL is catching them.
+The listing queries ("Spirit yachts for sale", model names) are now in scope. Page one for those is listing sites and brokers; the buyer's guide competes as the one informational result a buyer will want before making an offer. The bare brand query is the hardest: page one there is Spirit's own site and the trade press, and Foreland gets onto it only with links from that press.
 
-## The position to take
+All three articles published 21 October 2026. Each links to `/owners-representation` or `/refit`, and both service pages link back down to them. Each article says Foreland has no commercial relationship with Spirit Yachts, following the precedent of the Solent yards article.
 
-Both builders run their own project management and after-sales. Oyster Palma assigns one of its own project managers to each refit; Spirit designs and builds in-house and supports owners after handover. Foreland's role is the owner-side counterpart who works alongside the builder's team, not an alternative to it. Every page in this programme should read that way. The copy describes how an owner's representative and a builder's project manager divide the work, and never suggests the builder's own arrangements fall short. That keeps Foreland welcome at both yards, which is worth more than any ranking, since builders are a referral route in their own right.
+## The position the copy takes
 
-A one-line statement that Foreland is independent of both builders and has no commercial arrangement with either goes on each page, stated flatly.
+Spirit designs and builds in-house, refits its own yachts at Ipswich, and offers aftercare to new and brokerage owners. It states that it works alongside owners' representatives. The articles describe Foreland as the owner's counterpart to the yard's team and never suggest the yard's arrangements fall short. The same applies to Oyster, which runs its own refit project managers at Palma and service centres in the UK, Barcelona, Antigua and Newport.
 
-## Pages
+Every fact about Spirit in the articles comes from Spirit's own site, Professional BoatBuilder (September 2023) or Yachting World. No Spirit project experience is claimed.
 
-All under /insights, each linking up to `/owners-representation` or `/refit` as the destination for the service term. Five articles.
+## Oyster, next
 
-1. Owner's representation on an Oyster new build. What the representative does at each stage of a series-production build: specification freeze, stage inspections, the option list, commissioning, handover snag list, the first-season warranty. Targets the new-build family for Oyster.
-2. Owner's representation on a Spirit custom build. Same structure for a one-off cold-moulded build, where the decisions are about construction detail and joinery rather than an option list. Targets the new-build family for Spirit and the wider wood-epoxy custom query.
-3. Buying a pre-owned Oyster: what a survey should cover. Organised by model generation, with the points a buyer should have checked: deck and hull-deck joint, keel attachment and floors, rudder bearings, tankage, hydraulics, standing rigging age, electrical systems. Each point needs a surveyor's input and a source; nothing generic.
-4. Refitting a mid-life Oyster. The four typical jobs (teak deck, repower, rig, systems), cost bands per job, sequencing, and how to choose between the builder's own service centres and an independent yard. Both options described neutrally.
-5. Surveying and maintaining a cold-moulded yacht. Moisture, glue lines, varnish programme, fastenings, epoxy sheathing. Serves Spirit owners and the classic wood-epoxy fleet, and pairs with the existing `classic-sailing-yacht-refit` article.
+Three articles on the same pattern, written after the Spirit set has been indexed for four weeks:
 
-On-page work to the existing estate: the insolvency article gets an FAQ entry on the 2018 Oyster administration and what in-build buyers received, since it is already the page Google associates with the brand. `/owners-representation` and `/refit` each gain one sentence on series-production and custom sailing yacht builds, linking down to articles 1, 2 and 4.
+1. Building an Oyster: owner's representation on a series-production build (specification freeze, option list, stage inspections, commissioning, warranty).
+2. Buying a pre-owned Oyster: models by generation and what the survey should cover.
+3. Refitting a mid-life Oyster: teak deck, repower, rig, systems, and the choice between Oyster's service centres and an independent yard.
+
+The insolvency article gains an FAQ on the 2018 Oyster administration, since Google already associates it with the brand.
 
 ## Off-site
 
-Oyster owners cluster around the Oyster World Rally, Oyster regattas and the ARC. Spirit owners cluster around the classic regatta circuit, and since the owners now hold a majority of Spirit Yachts, they are an unusually connected group. A talk or written briefing for an owners' event on build oversight or pre-purchase survey earns more trust than any page, and gives the articles their first links. Yachting World and Classic Boat are the natural bylined placements for articles 3 and 5.
+Spirit owners now hold a majority of Spirit Yachts and cluster around the classic regatta circuit, which makes them an unusually connected group. A briefing for an owners' event, or a bylined piece in Classic Boat or Yachting World on cold-moulded survey or refit, is the most direct route to links from the pages that already rank for the brand. Oyster owners cluster around the Oyster World Rally, the Oyster regattas and the ARC.
 
-## Decisions needed before building
+## Open points
 
-1. Size range. Most Oyster models (495 to 675) and most Spirits are 15 to 22 metres. The site states 24 to 60 metres on `/owners-representation` and `/refit`. The Kraken K50 and K58 work shows Foreland already takes on boats this size, but the published range says otherwise. Either the stated range widens on these two pages (for example "sailing yachts from 15 metres, motor yachts from 24"), or the programme is limited to the large models (Oyster 885 and above, Spirit 111 and the larger custom builds), which cuts the audience to a few dozen boats.
-2. Experience. The articles can only claim Oyster or Spirit project experience Foreland actually has. If there is none, the articles stand on the Kraken series-production work and the cold-moulded expertise, described without naming clients, and the builder names appear only as the subject, never as a credential.
-3. Technical input. Articles 3 and 5 need a surveyor who knows these boats. They should not be written from desk research.
-
-## Sequence
-
-First, pull a Search Console export covering 9 September to now to confirm the metadata experiment result and see which page catches the Oyster impressions. Then articles 1 and 3 (highest intent, empty SERPs), the insolvency FAQ and the two service-page sentences. Articles 2, 4 and 5 follow in the next quarter, with the off-site approach timed to the spring regatta calendar.
+1. Surveyor review. The buyer's guide and refit article were written from published sources. A surveyor with cold-moulded experience should read both before they are promoted off-site.
+2. Measurement. Pull Search Console in four weeks (around 18 November) for the Spirit query families, and check which page catches the existing "oyster" impressions before the Oyster set is written.

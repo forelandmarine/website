@@ -38,7 +38,7 @@ export default function RefitPage() {
               },
               areaServed: "Worldwide",
               description:
-                "Independent, owner-side yacht refit project management for motor and sailing yachts over 24 metres. Twenty-five large yacht refit projects across seven countries, from racing programmes to motor yacht rebuilds. YORR registered.",
+                "Independent, owner-side yacht refit project management for motor and sailing yachts from 12 metres. Twenty-five large yacht refit projects across seven countries, from racing programmes to motor yacht rebuilds. YORR registered.",
             },
             {
               "@context": "https://schema.org",
@@ -153,7 +153,7 @@ export default function RefitPage() {
             Yacht refit project<br />management, owner-side
           </h1>
           <p className="text-lg text-muted leading-relaxed max-w-2xl">
-            Independent refit project management and yacht build management for motor and sailing yachts over 24 metres, from the condition survey through to sea trials and handover. We are appointed by the owner and paid by the owner. Our interests are directly aligned with the owner&apos;s by structure: no broker commissions, no referral fees.
+            Independent refit project management and yacht build management for motor and sailing yachts from 12 metres, from the condition survey through to sea trials and handover. We are appointed by the owner and paid by the owner. Our interests are directly aligned with the owner&apos;s by structure: no broker commissions, no referral fees.
           </p>
         </div>
       </ParallaxHero>
@@ -169,6 +169,9 @@ export default function RefitPage() {
               </p>
               <p className="text-muted leading-relaxed">
                 This breadth of experience means our team has encountered the specific challenges associated with each vessel type, from managing complex coatings schemes on pre-war hulls to commissioning carbon rigs on contemporary racing yachts, and overseeing in-depth mechanical and interior refits on large motor yachts.
+              </p>
+              <p className="text-muted leading-relaxed mt-5">
+                The same approach applies to smaller yachts, scaled to the work. For owners of cold-moulded and wood-epoxy yachts, our guide to <Link href="/insights/refitting-a-spirit-yacht" className="text-accent hover:text-white transition-colors underline underline-offset-2">refitting a Spirit yacht</Link> covers brightwork, decks, repowering and rig.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8" data-animate-stagger>

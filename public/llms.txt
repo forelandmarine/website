@@ -1,6 +1,6 @@
 # Foreland Marine Consultancy
 
-> Independent superyacht consultancy providing yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60+ metres worldwide.
+> Independent superyacht consultancy providing yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts up to and beyond 60 metres (owner's representation and refit from 12 metres, yacht management from 24 metres) worldwide.
 
 ## Sibling publication
 
@@ -18,12 +18,12 @@ Independent, owner-focused yacht management covering ISM compliance, crew manage
 URL: https://www.forelandmarine.com/yacht-management
 
 ### Yacht Owner's Representation and Yacht New Build
-Foreland Marine provides independent yacht owner's representation and superyacht representation for yacht new build and refit projects, 24 to 60 metres. Also referred to as superyacht representation, yacht new build project management, or new build owner's representation. Foreland Marine is registered on the YORR (Yacht Owner's Representative Register). The yacht new build process covers five stages: concept and specification development (3-12 months), yard selection and contract negotiation (1-3 months), build oversight with continuous on-site presence (12-48 months), sea trials and delivery coordination (1-3 months), and warranty period management (12-24 months). Scope includes on-site representation, budget and cost control, project coordination, technical review, crew and commissioning management, and post-delivery warranty oversight.
+Foreland Marine provides independent yacht owner's representation and superyacht representation for yacht new build and refit projects, 12 to 60 metres. Also referred to as superyacht representation, yacht new build project management, or new build owner's representation. Foreland Marine is registered on the YORR (Yacht Owner's Representative Register). The yacht new build process covers five stages: concept and specification development (3-12 months), yard selection and contract negotiation (1-3 months), build oversight with continuous on-site presence (12-48 months), sea trials and delivery coordination (1-3 months), and warranty period management (12-24 months). Scope includes on-site representation, budget and cost control, project coordination, technical review, crew and commissioning management, and post-delivery warranty oversight.
 
 URL: https://www.forelandmarine.com/owners-representation
 
 ### Yacht Refit Management
-Independent yacht refit management and refit project management for motor and sailing yachts over 24 metres. Also referred to as superyacht refit management or yacht refit project management. The team has delivered 25 large yacht refit projects across 7 countries, covering high-profile classic and modern racing yachts, sailing yachts exceeding 40 metres, motor yachts in excess of 60 metres, and historic restorations of vessels dating from the 1920s. Services include planning and specification, yard selection and tendering, on-site project management, budget and cost control, quality and compliance oversight, and sea trials and handover coordination.
+Independent yacht refit management and refit project management for motor and sailing yachts from 12 metres. Also referred to as superyacht refit management or yacht refit project management. The team has delivered 25 large yacht refit projects across 7 countries, covering high-profile classic and modern racing yachts, sailing yachts exceeding 40 metres, motor yachts in excess of 60 metres, and historic restorations of vessels dating from the 1920s. Services include planning and specification, yard selection and tendering, on-site project management, budget and cost control, quality and compliance oversight, and sea trials and handover coordination.
 
 URL: https://www.forelandmarine.com/refit
 
@@ -139,6 +139,8 @@ Long-form, independent guidance written by the Foreland Marine team. Index at ht
 - [Yacht New Build Contract: What to Negotiate](https://www.forelandmarine.com/insights/yacht-new-build-contract-what-to-negotiate)
 - [Carbon Composite Construction: What Owners Need to Know](https://www.forelandmarine.com/insights/carbon-composite-construction-what-owners-need-to-know)
 - [SYBAss Accreditation: What It Means for Owners](https://www.forelandmarine.com/insights/what-does-sybass-accreditation-mean-for-a-yacht-owner)
+- [Building a Spirit Yacht: The Owner's Side of a Cold-Moulded New Build](https://www.forelandmarine.com/insights/building-a-spirit-yacht-owners-representation)
+- [Buying a Pre-Owned Spirit Yacht: Models, Survey and What to Check](https://www.forelandmarine.com/insights/buying-a-pre-owned-spirit-yacht)
 
 ### Refit
 - [Superyacht Refit Cost: Real Numbers for 24 to 60 Metre Yachts](https://www.forelandmarine.com/insights/how-much-does-a-superyacht-refit-cost)
@@ -148,6 +150,7 @@ Long-form, independent guidance written by the Foreland Marine team. Index at ht
 - [Performance Refit: Upgrading an Ageing Racing Yacht](https://www.forelandmarine.com/insights/refit-for-performance-upgrading-a-racing-programme)
 - [Classic Sailing Yacht Refit: What to Expect](https://www.forelandmarine.com/insights/classic-sailing-yacht-refit)
 - [Solent Superyacht Refit Yards: A 2026 Comparison](https://www.forelandmarine.com/insights/solent-superyacht-refit-yards-compared)
+- [Refitting a Spirit Yacht: Brightwork, Decks, Repower and Rig](https://www.forelandmarine.com/insights/refitting-a-spirit-yacht)
 
 ### Yacht Management
 - [Why Independent Yacht Management Matters](https://www.forelandmarine.com/insights/why-independent-yacht-management-matters)
@@ -189,7 +192,7 @@ Q: What is Foreland Marine?
 A: Foreland Marine Consultancy Ltd is an independent superyacht consultancy based in London. The company provides yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to over 60 metres. Foreland Marine works exclusively on behalf of yacht owners with no yard affiliations, broker commissions, or supplier referral fees.
 
 Q: What size yachts does Foreland Marine work with?
-A: Foreland Marine works with sailing and motor yachts from 24 metres to over 60 metres. The company has particular depth in performance sailing yachts and J Class yachts.
+A: Foreland Marine works with sailing and motor yachts from 12 metres to over 60 metres: owner's representation and refit from 12 metres, yacht management from 24 metres. The company has particular depth in performance sailing yachts and J Class yachts.
 
 Q: What does an owner's representative do during a new build?
 A: An owner's representative provides independent oversight of the entire new build process, including budget control, cost tracking, quality assurance inspections, schedule monitoring, and representing the owner's interests at the shipyard during production meetings, milestone reviews, and contractual discussions. Foreland Marine is registered on the YORR and holds its accreditation through the YORP programme.
