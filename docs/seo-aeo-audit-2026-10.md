@@ -1,6 +1,6 @@
 # SEO and AEO audit, 21 October 2026
 
-Follows the September audit (`seo-aeo-audit-2026-09.md`). Live crawl of all 60 sitemap URLs by curl, Vercel logs for the last seven days, and spot checks of AI-style answers for the core queries.
+Follows the September audit (`seo-aeo-audit-2026-09.md`). Live crawl of all 60 sitemap URLs by curl, Vercel logs for the last seven days, Vercel Web Analytics for 90 days, and spot checks of AI-style answers for the core queries.
 
 ## Summary
 
@@ -11,10 +11,71 @@ Nothing is blocking. All 60 sitemap URLs return 200 with a self-referencing www 
 - One runtime error group: "Failed to find Server Action", 21 events from a single client, all `POST /` at 04:58 UTC on 16 October and occasionally since 4 September. These are bot POSTs probing for Next.js server actions. No visitor impact. No action needed.
 - 4xx in the last 24 hours: five requests. Four are the Spirit articles returning 404 at 10:19 and 10:20 BST, while the deploys of c98a00d and f5b0901 were still building. They now return 200. The fifth is `/insights/sailing-yacht-hydrau`, a truncated link pasted somewhere. No 5xx.
 - All page requests sampled are static cache HITs. TTFB is 0.06 to 0.20 s on the homepage and the three main service pages, and brotli HTML is 15 to 23 KB.
-- The logs cannot answer two questions:
-  - Web Analytics and Observability are not enabled on the project, so there are no pageview, referrer or path counts.
-  - Request logs carry no user agent, so AI crawler traffic (GPTBot, ClaudeBot, PerplexityBot) cannot be counted.
-  - The 9 October metadata experiment can only be read from a Search Console export.
+- Request logs carry no user agent, so AI crawler traffic (GPTBot, ClaudeBot, PerplexityBot) cannot be counted. Visits referred by AI tools are counted below.
+
+## Vercel Web Analytics, 22 July to 21 October
+
+Web Analytics is on, but the Vercel MCP connector returns "Web Analytics not found" for this project. Query it through `vercel api /v1/query/web-analytics/visits/aggregate` instead.
+
+**Totals.** 4,310 visitors and 6,238 pageviews over 90 days. About 1,600 of those visitors come from Singapore (958) and China (651) at about one pageview each, which is bot traffic. Real human traffic is about 200 to 300 visitors a week. Desktop accounts for 66%.
+
+**Two one-off spikes.** Google referrals jumped to 675 visitors in the week of 22 June and 2,158 in the week of 13 July. The 13 July spike was 1,732 visitors landing on `/insights` and 435 on `refit-project-management-what-to-expect`, mostly from the US. Traffic went back to normal within a week, and the cause is not visible in this data. A spike landing on the listing page looks more like a Discover or sitelink event than ordinary search. Leave both weeks out of any trend.
+
+**The 9 September metadata fix, read from Google referrals.** The two windows are the same length, 43 days each.
+
+| Measure | 28 Jul to 8 Sep | 9 Sep to 21 Oct | Change |
+|---|---|---|---|
+| Google-referred visitors | 302 | 396 | +31% |
+| Weekly average (whole weeks) | 49 | 65 | +32% |
+| Google to `/owners-representation` | 4 | 13 | x3 |
+| Google to `/contact` | 2 | 4 | |
+| Google to crew salary guide | 35 | 75 | x2 |
+| Google to refit cost article | 62 | 50 | -19% |
+| Bing-referred visitors | 45 | 47 | flat |
+
+This is consistent with the fix improving click-through, and the gain reaches the commercial pages. Search Console impressions are still needed to separate higher CTR from higher visibility.
+
+**AI referrals.**
+
+| Source | Visitors, 90 days | Pre-fix window | Post-fix window |
+|---|---|---|---|
+| chatgpt.com | 48 | 28 | 19 |
+| perplexity.ai | 3 | 0 | 3 |
+| gemini.google.com | 3 | 0 | 3 |
+| claude.ai | 2 | 2 | 0 |
+| copilot.microsoft.com | 1 | 1 | 0 |
+
+AI tools send about 1% of real visitors, and ChatGPT referrals fell after September. Since June, AI visitors have landed on:
+
+- the homepage, 18
+- the refit cost article, 14
+- `/owners-representation`, 11
+- the 10 percent rule article, 7
+- the owner's rep articles, 9
+
+So when ChatGPT cites Foreland, it is for the owner's rep service and refit cost.
+
+**Other referrers.**
+
+- LinkedIn rose from 7 to 53 visitors, almost all to the shipyard insolvency article (the TSR piece).
+- Instagram sent 39 visitors over 90 days.
+- `nauticaldirectory.com` and `yachtinginternationalradio.com` each sent one visitor.
+
+**Top pages over 90 days.**
+
+| Page | Visitors |
+|---|---|
+| Homepage | 999 |
+| Crew salary guide | 430 |
+| `/insights` | 382 |
+| Refit cost article | 261 |
+| 10 percent rule article | 217 |
+| SeaTime Tracker | 201 |
+| `/owners-representation` | 175 |
+| `/contact` | 141 |
+| Large Yacht Code article | 141 |
+
+`/refit` had 108 visitors and `/yacht-management` 102.
 
 ## Important
 
@@ -85,4 +146,4 @@ What this shows:
 4. Derive sitemap lastmod for static pages from git or a per-page constant. (Small)
 5. Tidy items 6 to 10. (Small)
 6. Entity work: LinkedIn merge (Jack only), `sameAs` additions, Wikidata. (Medium, mostly off-site)
-7. Pull a Search Console export for 9 September to 21 October to read the metadata experiment before building any new pages. Enable Vercel Web Analytics if path and referrer data are wanted here.
+7. Pull a Search Console export for 9 September to 21 October to confirm the CTR gain shown in Web Analytics before building any new pages.
