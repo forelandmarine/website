@@ -16,11 +16,11 @@ const nunitoSans = Nunito_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Independent Superyacht Consultancy | Foreland Marine",
+    default: "Foreland Marine | Independent Superyacht Consultancy",
     template: "%s | Foreland Marine",
   },
   description:
-    "Independent superyacht consultancy for refit, new build owner's representation and yacht management. YORR registered, acting for owners only.",
+    "Foreland Marine is an independent superyacht consultancy for refit, new build owner's representation and yacht management, acting for owners only.",
   metadataBase: new URL("https://www.forelandmarine.com"),
   alternates: {
     canonical: "https://www.forelandmarine.com",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    siteName: "Foreland Marine Consultancy",
-    title: "Independent Superyacht Refit & New Build Consultancy",
+    siteName: "Foreland Marine",
+    title: "Foreland Marine | Independent Superyacht Refit & New Build Consultancy",
     description:
       "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. YORR registered, UK-based, acting for owners only.",
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Independent Superyacht Refit & New Build Consultancy",
+    title: "Foreland Marine | Independent Superyacht Refit & New Build Consultancy",
     description:
       "Independent superyacht consultancy for refit project management, new build owner's representation and yacht management. YORR registered, UK-based.",
   },
