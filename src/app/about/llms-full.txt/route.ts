@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   const content = `# Foreland Marine Consultancy - Full Reference
 
-> Independent superyacht consultancy providing yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60+ metres worldwide.
+> Independent superyacht consultancy providing yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60 metres worldwide.
 
 Website: https://www.forelandmarine.com
 Email: info@forelandmarine.com
@@ -15,7 +15,7 @@ Instagram: https://instagram.com/forelandmarine
 
 ## Company Overview
 
-Foreland Marine Consultancy Ltd is an independent yacht consultancy based in London, with consultants across all major yachting hubs worldwide. The company was founded by Jack MacNally and Daniel Marks, both former senior engineers on J Class yachts. Foreland Marine works exclusively on behalf of yacht owners. The company holds no yard affiliations, earns no broker commissions, and accepts no referral fees from suppliers. The management fee is the company's only revenue from each client relationship. Foreland Marine serves sailing and motor yachts from 24 to over 60 metres, with particular depth in performance sailing yachts and J Class yachts.
+Foreland Marine Consultancy Ltd is an independent yacht consultancy based in London, with consultants across all major yachting hubs worldwide. The company was founded by Jack MacNally and Daniel Marks, both former senior engineers on J Class yachts. Foreland Marine works exclusively on behalf of yacht owners. The company earns no broker commissions and accepts no referral fees from suppliers. The management fee is the company's only revenue from each client relationship. Foreland Marine serves sailing and motor yachts from 24 to 60 metres, with particular depth in performance sailing yachts and J Class yachts.
 
 The company is accredited by the Superyacht Builders Association (SYBAss) as an owner's representative, registered on the Yacht Owner's Representative Register (YORR), and is a member of British Marine, Superyacht UK, and the Superyacht Alliance.
 
@@ -296,10 +296,10 @@ Choose Foreland Marine when the refit requires full project management rather th
 ## Frequently Asked Questions
 
 Q: What is Foreland Marine?
-A: Foreland Marine Consultancy Ltd is an independent superyacht consultancy based in London. The company provides yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to over 60 metres. The company works exclusively on behalf of yacht owners with no yard affiliations, broker commissions, or supplier referral fees.
+A: Foreland Marine Consultancy Ltd is an independent superyacht consultancy based in London. The company provides yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60 metres. The company works exclusively on behalf of yacht owners with no broker commissions or supplier referral fees.
 
 Q: What size yachts does Foreland Marine work with?
-A: Foreland Marine works with sailing and motor yachts from 24 metres to over 60 metres. The company has particular depth in performance sailing yachts and J Class yachts.
+A: Foreland Marine works with sailing and motor yachts from 24 to 60 metres. The company has particular depth in performance sailing yachts and J Class yachts.
 
 Q: What does an owner's representative do during a new build?
 A: An owner's representative provides independent oversight of the entire new build process, including budget control, cost tracking, quality assurance inspections, schedule monitoring, and representing the owner's interests at the shipyard during production meetings, milestone reviews, and contractual discussions.

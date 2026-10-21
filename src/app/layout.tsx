@@ -80,7 +80,16 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "ProfessionalService",
                 "@id": "https://www.forelandmarine.com/#organization",
-                name: "Foreland Marine Consultancy Ltd",
+                name: "Foreland Marine",
+                legalName: "Foreland Marine Consultancy Ltd",
+                alternateName: ["Foreland Marine Consultancy", "Foreland Marine Consultancy Ltd"],
+                disambiguatingDescription:
+                  "London superyacht consultancy, company number 15785851. Not connected with Foreland Shipping Ltd.",
+                identifier: {
+                  "@type": "PropertyValue",
+                  propertyID: "Companies House company number",
+                  value: "15785851",
+                },
                 url: "https://www.forelandmarine.com",
                 logo: "https://www.forelandmarine.com/logos/foreland-marine-white.svg",
                 image: "https://www.forelandmarine.com/images/og-default.png",

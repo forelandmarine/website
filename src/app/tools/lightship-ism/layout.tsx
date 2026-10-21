@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Lightship ISM Compliance Platform | Foreland Marine" },
   description:
-    "Lightship streamlines yacht administration with ISM compliance, incident reporting, project management, logbooks, and AIS sea service records in one clear interface.",
+    "Lightship streamlines yacht administration: ISM compliance, incident reporting, project management, logbooks and AIS sea service records in one interface.",
   alternates: {
     canonical: "https://www.forelandmarine.com/tools/lightship-ism",
   },
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lightship ISM - Yacht Administration & Compliance Platform",
     description:
-      "Lightship streamlines yacht administration with ISM compliance, incident reporting, project management, logbooks, and AIS sea service records in one clear interface.",
+      "Lightship streamlines yacht administration: ISM compliance, incident reporting, project management, logbooks and AIS sea service records in one interface.",
   },
 };
 

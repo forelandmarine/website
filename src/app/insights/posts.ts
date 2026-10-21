@@ -515,7 +515,7 @@ export const posts: Post[] = [
 
 <p>For a Spirit kept in the UK the natural window is the winter lay-up, with the survey done and the specification agreed by late summer so the yard can plan its shed. Keep the record as the work goes: coating systems, timber species and source for any repair, and photographs of structure before it is closed up. The next refit yard will ask for all of it, and so will a buyer's surveyor.</p>
 
-<p>We have no commercial relationship with Spirit Yachts or any yard named here. If you are planning a refit on a Spirit or another cold-moulded yacht, our <a href="/refit">refit project management</a> page explains how we work, and we would be glad to <a href="/contact">discuss it</a>.</p>`,
+<p>We have no commercial relationship with Spirit Yachts or any yard named here. If you are planning a refit on a Spirit or another cold-moulded yacht, our <a href="/refit">refit project management</a> page explains how we work, and we would be glad to <a href="/contact">discuss it</a>. For owners still at the buying stage, our guide to <a href="/insights/buying-a-pre-owned-spirit-yacht">buying a pre-owned Spirit yacht</a> covers the survey and the questions to ask.</p>`,
     faqs: [
       {
         question: "How often does a Spirit need revarnishing?",
@@ -1052,7 +1052,7 @@ export const posts: Post[] = [
     title:
       "Sailing vs Motor Yacht Management: Key Differences for Owners",
     description:
-      "Crew, maintenance cycles, insurance and running costs differ materially between sailing and motor superyachts. What actually changes and what owners should plan for.",
+      "Crew, maintenance cycles, insurance and running costs differ between sailing and motor superyachts. What actually changes and what owners should plan for.",
     date: "2026-04-12",
     category: "Yacht Management",
     readTime: "10 min read",
@@ -4073,7 +4073,7 @@ export const posts: Post[] = [
     slug: "choosing-a-yacht-owners-representative",
     title: "How to Choose a Yacht Owner's Representative",
     description:
-      "A SYBAss-accredited guide to choosing an independent yacht owner's representative for a superyacht new build or refit. What the role does, what to ask, what to pay.",
+      "A SYBAss-accredited guide to choosing an independent yacht owner's representative for a new build or refit. What the role does, what to ask, what to pay.",
     date: "2026-05-11",
     category: "New Build",
     readTime: "10 min read",
@@ -4178,7 +4178,7 @@ export const posts: Post[] = [
     slug: "yacht-new-build-contract-what-to-negotiate",
     title: "Yacht New Build Contract: What to Negotiate",
     description:
-      "The ten clauses in a superyacht new build contract that decide whether a project runs well or badly. What to negotiate before signing, by a YORR-registered firm.",
+      "The ten clauses in a new build contract that decide whether a project runs well or badly. What to negotiate before signing, by a YORR-registered firm.",
     date: "2026-05-11",
     category: "New Build",
     readTime: "12 min read",
@@ -4295,7 +4295,7 @@ export const posts: Post[] = [
     slug: "what-does-sybass-accreditation-mean-for-a-yacht-owner",
     title: "SYBAss Accreditation: What It Means for Owners",
     description:
-      "SYBAss accreditation is the strongest external mark of competence in superyacht owner's representation. What it covers, who has it, and why it matters to owners.",
+      "SYBAss accreditation is the strongest external mark of competence in owner's representation. What it covers, who has it, and why it matters to owners.",
     date: "2026-05-11",
     category: "New Build",
     readTime: "9 min read",

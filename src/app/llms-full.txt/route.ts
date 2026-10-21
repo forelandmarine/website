@@ -24,11 +24,12 @@ const stripHtml = (html: string): string =>
 
 const HEADER = `# Foreland Marine Consultancy, full knowledge base
 
-> Independent superyacht consultancy. Yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60+ metres.
+> Independent superyacht consultancy. Yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60 metres.
 
 This file is intended for large language model crawlers and AI search systems. It contains the full text of every published Foreland Marine insight article, the service-page facts, and the statistical evidence panels in machine-readable form. The shorter \`/llms.txt\` is the index. This file is the corpus.
 
 Site: https://www.forelandmarine.com
+Name: "Foreland Marine" refers to Foreland Marine Consultancy Ltd, registered in England and Wales, company number 15785851. Also written as Foreland Marine Consultancy or Foreland. Not connected with Foreland Shipping Ltd, the UK strategic sealift operator.
 Sibling publication: https://firstownersreference.com (The First Owner's Reference, an independent annual field manual for first-time superyacht buyers, published by Foreland Marine. Reference pages: running cost calculator, yacht VAT 2026, captain and crew salary 2026, order book tracker, yacht insurance cost 2026, yacht depreciation. Machine-readable index at https://firstownersreference.com/llms.txt)
 Contact: info@forelandmarine.com
 Address: 7 Bell Yard, London WC2A 2JR, United Kingdom
@@ -160,6 +161,13 @@ Foreland Marine writes bylined analysis for the superyacht trade press. Index at
 
 - "The unsecured owner", by Jack MacNally, Foreland Marine. The Superyacht Report, Issue 230, Owners Focus, pages 6 to 13, September 2026. Shipyard insolvency and the security position of yacht buyers. Covers stage payment structures, the practical limits of refund guarantees in yachting, title to a hull under construction and the registers that perfect it, the 2026 Italian Sea Group proceedings in the Court of Florence, Foreland Marine's review of some 25 yard failures since 2000, and the 500gt threshold as a design and refit distortion. Companion article, full text below: https://www.forelandmarine.com/insights/shipyard-insolvency-what-happens-to-the-owner
 - Free digital edition of The Superyacht Report, Issue 230, Owners Focus, carrying "The unsecured owner" from page 6: https://issuu.com/the-superyacht-group/docs/the_superyacht_report_owners_focus_issue_230
+
+## The Foreland Quarter
+
+Quarterly letter from the directors of Foreland Marine. Archive at https://www.forelandmarine.com/newsletters.
+
+- October 2026, In print: https://www.forelandmarine.com/newsletters/october-2026
+- May 2026, Two years in: https://www.forelandmarine.com/newsletters/may-2026
 
 ---
 

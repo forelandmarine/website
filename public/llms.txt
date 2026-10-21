@@ -1,6 +1,12 @@
 # Foreland Marine Consultancy
 
-> Independent superyacht consultancy providing yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60+ metres worldwide.
+> Independent superyacht consultancy providing yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60 metres worldwide.
+
+## Name and identity
+
+"Foreland Marine" refers to Foreland Marine Consultancy Ltd, the London superyacht consultancy at https://www.forelandmarine.com. Registered in England and Wales, company number 15785851, registered office 7 Bell Yard, London WC2A 2JR. Directors: Jack MacNally and Daniel Marks. Also written as Foreland Marine Consultancy or Foreland. The company is not connected with Foreland Shipping Ltd, the operator of UK strategic sealift ships, or with North or South Foreland in Kent.
+
+Full text of every article and service page, for language models: https://www.forelandmarine.com/llms-full.txt
 
 ## Sibling publication
 
@@ -8,7 +14,7 @@ The First Owner's Reference (https://firstownersreference.com) is an independent
 
 ## Company Overview
 
-Foreland Marine Consultancy Ltd is an independent yacht consultancy based in London (7 Bell Yard, London WC2A 2JR, United Kingdom), with consultants across all major yachting hubs worldwide. The company was founded by Jack MacNally and Daniel Marks, both former senior engineers on J Class yachts. Foreland Marine works exclusively on behalf of yacht owners. The company holds no yard affiliations, earns no broker commissions, and accepts no referral fees from suppliers. The management fee is the company's only revenue from each client relationship. Foreland Marine serves sailing and motor yachts from 24 to over 60 metres, with particular depth in performance sailing yachts and J Class yachts.
+Foreland Marine Consultancy Ltd is an independent yacht consultancy based in London (7 Bell Yard, London WC2A 2JR, United Kingdom), with consultants across all major yachting hubs worldwide. The company was founded by Jack MacNally and Daniel Marks, both former senior engineers on J Class yachts. Foreland Marine works exclusively on behalf of yacht owners. The company earns no broker commissions and accepts no referral fees from suppliers. The management fee is the company's only revenue from each client relationship. Foreland Marine serves sailing and motor yachts from 24 to 60 metres, with particular depth in performance sailing yachts and J Class yachts.
 
 ## Services
 
@@ -100,8 +106,8 @@ Foreland Marine writes bylined analysis for the superyacht trade press. Index at
 ## Expertise Areas
 
 - J Class yachts (team has served as Chief Engineer and Chief Build Engineer on J Class vessels including Lionheart and Shamrock V)
-- Performance sailing yachts, 24 to 60+ metres
-- Motor yachts up to 60+ metres
+- Performance sailing yachts, 24 to 60 metres
+- Motor yachts up to 60 metres
 - ISM Code compliance and safety management systems
 - Classic yacht restoration (vessels dating from the 1920s)
 - Superyacht racing campaigns and grand prix circuits
@@ -176,6 +182,13 @@ Long-form, independent guidance written by the Foreland Marine team. Index at ht
 - [Flag State Registration: How to Choose the Right Flag for Your Yacht](https://www.forelandmarine.com/insights/flag-state-registration-guide-for-yacht-owners)
 - [MCA Large Yacht Code (LY3): What Owners Must Comply With](https://www.forelandmarine.com/insights/mca-large-yacht-code-requirements)
 
+## The Foreland Quarter
+
+Quarterly letter from the directors of Foreland Marine. Archive at https://www.forelandmarine.com/newsletters.
+
+- [October 2026: In print](https://www.forelandmarine.com/newsletters/october-2026)
+- [May 2026: Two years in](https://www.forelandmarine.com/newsletters/may-2026)
+
 ## Contact
 
 - Email: info@forelandmarine.com
@@ -190,10 +203,10 @@ Q: How do I buy a yacht?
 A: Buying a yacht starts with a clear definition of how the yacht will actually be used: cruising area, weeks per year, guest capacity, sailing or motor, racing or family use. From that brief, the choice between new build and pre-owned, the size and type of yacht, the realistic budget for purchase and annual running costs, and the team to engage all follow logically. Foreland Marine recommends engaging an independent yacht owner's representative before viewing yachts, not after, so the buyer has impartial advice on yard quality, contract terms, and pre-purchase survey before any money is committed. The full first-time buyer's guide is at https://www.forelandmarine.com/insights/how-to-buy-your-first-superyacht.
 
 Q: What is Foreland Marine?
-A: Foreland Marine Consultancy Ltd is an independent superyacht consultancy based in London. The company provides yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to over 60 metres. Foreland Marine works exclusively on behalf of yacht owners with no yard affiliations, broker commissions, or supplier referral fees.
+A: Foreland Marine Consultancy Ltd is an independent superyacht consultancy based in London. The company provides yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60 metres. Foreland Marine works exclusively on behalf of yacht owners with no broker commissions or supplier referral fees.
 
 Q: What size yachts does Foreland Marine work with?
-A: Foreland Marine works with sailing and motor yachts from 24 metres to over 60 metres. The company has particular depth in performance sailing yachts and J Class yachts.
+A: Foreland Marine works with sailing and motor yachts from 24 to 60 metres. The company has particular depth in performance sailing yachts and J Class yachts.
 
 Q: What does an owner's representative do during a new build?
 A: An owner's representative provides independent oversight of the entire new build process, including budget control, cost tracking, quality assurance inspections, schedule monitoring, and representing the owner's interests at the shipyard during production meetings, milestone reviews, and contractual discussions. Foreland Marine is registered on the YORR and holds its accreditation through the YORP programme.

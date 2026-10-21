@@ -152,6 +152,12 @@ export default async function PostPage({ params }: Props) {
     description: post.description,
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
+    image: {
+      "@type": "ImageObject",
+      url: `https://www.forelandmarine.com/insights/${post.slug}/opengraph-image/${post.slug}`,
+      width: 1200,
+      height: 630,
+    },
     inLanguage: "en-GB",
     keywords: post.keywords?.join(", "),
     articleSection: post.category,

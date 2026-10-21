@@ -519,6 +519,7 @@ export default function NewBuildPage() {
           <Link href="/insights/shipyard-insolvency-what-happens-to-the-owner" className="text-sm text-accent hover:text-white transition-colors">Shipyard Insolvency: What Happens to the Owner</Link>
           <Link href="/insights/the-role-of-an-owners-representative" className="text-sm text-accent hover:text-white transition-colors">The Role of an Owner&apos;s Representative in a New Build Project</Link>
           <Link href="/insights/owner-representation-during-yard-selection" className="text-sm text-accent hover:text-white transition-colors">Owner&apos;s Representation During Yard Selection: Getting It Right from Day One</Link>
+          <Link href="/insights/owners-representative-vs-project-manager-vs-broker" className="text-sm text-accent hover:text-white transition-colors">Owner&apos;s Representative vs Project Manager vs Broker: What&apos;s the Difference?</Link>
         </div>
       </div>
 
