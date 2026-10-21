@@ -295,7 +295,7 @@ export const posts: Post[] = [
 
 <p>She is for sale through Spirit's brokerage at GBP 3,300,000, VAT not paid, because her owner is starting a new project with the yard (<a href="https://spirityachts.com/brokerage/spirit-72-gwenhyfar-ii/" target="_blank" rel="noopener noreferrer">Spirit Yachts</a>). Spirit itself is now majority-owned by a group of its own owners.</p>
 
-<p>We act for owners on new builds and refits from 12 metres, and there is more on the subject in our guides to <a href="/insights/building-a-spirit-yacht-owners-representation">building a Spirit yacht</a> and <a href="/insights/buying-a-pre-owned-spirit-yacht">buying a pre-owned Spirit</a>. Our thanks to the Spirit team for having us aboard.</p>`,
+<p>There is more on the subject in our guides to <a href="/insights/building-a-spirit-yacht-owners-representation">building a Spirit yacht</a> and <a href="/insights/buying-a-pre-owned-spirit-yacht">buying a pre-owned Spirit</a>. Our thanks to the Spirit team for having us aboard.</p>`,
     faqs: [
       {
         question: "How long is the Spirit P50?",

@@ -6,7 +6,7 @@ Written 21 October 2026, revised the same day after Jack's direction. Extends `s
 
 Foreland should be on the first page of every search a Spirit or Oyster owner, or prospective owner, makes about building, buying or refitting one. Foreland provides owner's representation on new builds and refits for those owners. Spirit comes first; Oyster follows once the Spirit set is indexed.
 
-Owner's representation and refit project management are now stated as 12 to 60 metres across the site (changed 21 October 2026: `/owners-representation`, `/refit`, homepage, hero, OG images, llms files). Yacht management and technical support stay at 24 metres and above.
+Owner's representation and refit were briefly stated as 12 to 60 metres on 21 October 2026 and reverted the same day at Jack's direction. The site states 24 to 60 metres for all services.
 
 ## Spirit query map
 

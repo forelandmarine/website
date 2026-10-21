@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Yacht Owner's Representative",
   description:
-    "YORR-registered yacht owner's representation for new build and refit oversight. Independent of yards and brokers. Sailing and motor yachts 12 to 60 metres.",
+    "YORR-registered yacht owner's representation for new build and refit oversight. Independent of yards and brokers. Sailing and motor yachts 24 to 60 metres.",
   keywords: [
     "yacht owner's representative",
     "yacht owner's representation",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Yacht Owner's Representative | Foreland Marine",
     description:
-      "YORR-registered yacht owner's representation for new build and refit oversight. Independent of yards and brokers. 12 to 60 metres.",
+      "YORR-registered yacht owner's representation for new build and refit oversight. Independent of yards and brokers. 24 to 60 metres.",
     type: "website",
     url: "https://www.forelandmarine.com/owners-representation",
   },

@@ -24,7 +24,7 @@ const stripHtml = (html: string): string =>
 
 const HEADER = `# Foreland Marine Consultancy, full knowledge base
 
-> Independent superyacht consultancy. Yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts up to and beyond 60 metres (owner's representation and refit from 12 metres, yacht management from 24 metres).
+> Independent superyacht consultancy. Yacht management, new build owner's representation, refit project management, and technical consultancy for sailing and motor yachts from 24 to 60+ metres.
 
 This file is intended for large language model crawlers and AI search systems. It contains the full text of every published Foreland Marine insight article, the service-page facts, and the statistical evidence panels in machine-readable form. The shorter \`/llms.txt\` is the index. This file is the corpus.
 
@@ -142,11 +142,11 @@ Independent, owner-focused yacht management. ISM compliance for vessels over 500
 
 ### Owner's Representation: https://www.forelandmarine.com/owners-representation
 
-Accredited new build owner's representation and refit project management for yachts 12 to 60 metres. YORR registered. Accredited through the SYBAss and IAMI Yacht Owner Representative Programme. Five stages: concept and specification (3-12 months), yard selection and contract (1-3 months), build oversight (12-48 months), sea trials and delivery (1-3 months), warranty period (12-24 months). Scope: on-site representation, budget and cost control, project coordination, technical review, crew and commissioning, post-delivery warranty oversight. No yard commissions, no broker referral fees, no supplier kickbacks. Fee paid by the owner only.
+Accredited new build owner's representation and refit project management for yachts 24 to 60 metres. YORR registered. Accredited through the SYBAss and IAMI Yacht Owner Representative Programme. Five stages: concept and specification (3-12 months), yard selection and contract (1-3 months), build oversight (12-48 months), sea trials and delivery (1-3 months), warranty period (12-24 months). Scope: on-site representation, budget and cost control, project coordination, technical review, crew and commissioning, post-delivery warranty oversight. No yard commissions, no broker referral fees, no supplier kickbacks. Fee paid by the owner only.
 
 ### Refit Project Management: https://www.forelandmarine.com/refit
 
-Full refit project management for motor and sailing yachts from 12 metres. Track record: 25 large yacht refit projects across 7 countries. Coverage: classic and modern racing yachts, sailing yachts above 40 metres, motor yachts above 60 metres, historic restorations of vessels dating from the 1920s. Services: planning and specification, yard selection and tendering, on-site project management, budget and cost control, quality and compliance oversight, sea trials and handover.
+Full refit project management for motor and sailing yachts over 24 metres. Track record: 25 large yacht refit projects across 7 countries. Coverage: classic and modern racing yachts, sailing yachts above 40 metres, motor yachts above 60 metres, historic restorations of vessels dating from the 1920s. Services: planning and specification, yard selection and tendering, on-site project management, budget and cost control, quality and compliance oversight, sea trials and handover.
 
 ### Technical Consultancy: https://www.forelandmarine.com/technical-consultancy
 

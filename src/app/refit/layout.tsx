@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     "independent yacht refit",
   ],
   description:
-    "Yacht refit project management for sailing and motor yachts 12 to 60 metres. 25 projects across 7 countries, delivered on time and on budget. Owner-side only.",
+    "Yacht refit project management for sailing and motor yachts 24 to 60 metres. 25 projects across 7 countries, delivered on time and on budget. Owner-side only.",
   openGraph: {
     title: "Yacht Refit Project Management | Foreland Marine",
     description:
-      "Yacht refit project management for sailing and motor yachts 12 to 60 metres. 25 projects across 7 countries. Owner-side only, no yard commissions.",
+      "Yacht refit project management for sailing and motor yachts 24 to 60 metres. 25 projects across 7 countries. Owner-side only, no yard commissions.",
     type: "website",
     url: "https://www.forelandmarine.com/refit",
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Yacht Refit Project Management | Foreland Marine",
     description:
-      "Independent yacht refit project management for sailing and motor yachts 12 to 60 metres. Owner-side only.",
+      "Independent yacht refit project management for sailing and motor yachts 24 to 60 metres. Owner-side only.",
   },
   alternates: {
     canonical: "https://www.forelandmarine.com/refit",

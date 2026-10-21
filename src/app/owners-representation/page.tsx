@@ -72,7 +72,7 @@ export default function NewBuildPage() {
               },
               areaServed: "Worldwide",
               description:
-                "Independent yacht owner's representation for new build and refit, 12 to 60 metres. YORR registered, accredited through the SYBAss and IAMI Yacht Owner Representative Programme. Our interests are directly aligned with the owner's by structure: no broker commissions, no referral fees.",
+                "Independent yacht owner's representation for new build and refit, 24 to 60 metres. YORR registered, accredited through the SYBAss and IAMI Yacht Owner Representative Programme. Our interests are directly aligned with the owner's by structure: no broker commissions, no referral fees.",
             },
             {
               "@context": "https://schema.org",
@@ -161,7 +161,7 @@ export default function NewBuildPage() {
                 Your owner&apos;s representative,<br />every step of the way
               </h1>
               <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
-                Independent owner&apos;s representation, yacht build management and new build project management for sailing and motor yachts from 12 to 60 metres. Our consultancy bench draws on unlimited Chief Engineers, Master Mariner captains, naval architects, surveyors, members from commercial shipping, and America&apos;s Cup and SailGP sailors, with particular depth in performance sailing yachts and carbon composite construction.
+                Independent owner&apos;s representation, yacht build management and new build project management for sailing and motor yachts from 24 to 60 metres. Our consultancy bench draws on unlimited Chief Engineers, Master Mariner captains, naval architects, surveyors, members from commercial shipping, and America&apos;s Cup and SailGP sailors, with particular depth in performance sailing yachts and carbon composite construction.
               </p>
             </div>
             <div className="hidden lg:flex flex-col items-center gap-6 flex-shrink-0 mt-[50px] relative z-20">
@@ -205,7 +205,7 @@ export default function NewBuildPage() {
             </div>
           </div>
           <p className="mt-10 max-w-3xl text-muted leading-relaxed" data-animate="fade-up">
-            We represent owners on new builds and refits from 12 metres, with the engagement sized to the yacht. Our guides to <Link href="/insights/building-a-spirit-yacht-owners-representation" className="text-accent hover:text-white transition-colors underline underline-offset-2">building a Spirit yacht</Link> and <Link href="/insights/buying-a-pre-owned-spirit-yacht" className="text-accent hover:text-white transition-colors underline underline-offset-2">buying a pre-owned Spirit</Link> show how that works on a cold-moulded yacht.
+            Our guides to <Link href="/insights/building-a-spirit-yacht-owners-representation" className="text-accent hover:text-white transition-colors underline underline-offset-2">building a Spirit yacht</Link> and <Link href="/insights/buying-a-pre-owned-spirit-yacht" className="text-accent hover:text-white transition-colors underline underline-offset-2">buying a pre-owned Spirit</Link> show how owner&apos;s representation works on a cold-moulded yacht.
           </p>
           <div className="mt-10">
             <ButtonPrimary href="/contact">Discuss your project</ButtonPrimary>

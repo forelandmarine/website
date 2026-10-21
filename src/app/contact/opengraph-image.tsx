@@ -8,7 +8,7 @@ export default async function OgImage() {
   return renderOgCard({
     eyebrow: "Contact",
     title: "Start a conversation",
-    subtitle: "Refit, new build, management and technical consultancy for sailing and motor yachts up to 60 metres.",
+    subtitle: "Refit, new build, management and technical consultancy for sailing and motor yachts, 24 to 60 metres.",
     url: "forelandmarine.com/contact",
     footnote: "London, Antibes, Palma",
   });
