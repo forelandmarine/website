@@ -147,3 +147,30 @@ What this shows:
 5. Tidy items 6 to 10. (Small)
 6. Entity work: LinkedIn merge (Jack only), `sameAs` additions, Wikidata. (Medium, mostly off-site)
 7. Pull a Search Console export for 9 September to 21 October to confirm the CTR gain shown in Web Analytics before building any new pages.
+
+## Fixed 21 October (865b7a9, 9104b94)
+
+- October newsletter: h1, h2 section heads, `<main>`, twitter:card, a plain apostrophe in the JSON-LD, and footer links to the archive, insights and service pages. The May issue now links to October, and its middots are gone.
+- Article JSON-LD carries `image` (the 1200x630 OG card) on all articles.
+- `llms.txt`, `/llms-full.txt` and `/about/llms-full.txt` say 24 to 60 metres and no longer say "no yard affiliations". `llms.txt` has a "Name and identity" section and points to `llms-full.txt`. Both main files list the newsletters.
+- Sitemap lastmod is set per static page from its last real revision. Update the `revised` map in `src/app/sitemap.ts` when a page changes.
+- Six descriptions trimmed under 160. `/insights/press` has an OG card.
+- Internal links: "Refitting a Spirit yacht" links to the pre-owned guide, and `/owners-representation` links to the owner's rep vs project manager vs broker article.
+- Brand query "Foreland Marine":
+  - Homepage title is now "Foreland Marine | Independent Superyacht Consultancy". It was "Independent Superyacht Consultancy | Foreland Marine", and the og:title had no brand at all. The og:title was the title the AI search index stored for the homepage.
+  - og:site_name is "Foreland Marine".
+  - The Organization schema has name "Foreland Marine", legalName, alternateName, a Companies House identifier, and a disambiguatingDescription separating the company from Foreland Shipping.
+- IndexNow is set up: the key file is in `public/`, and `node scripts/indexnow.mjs` submits the whole sitemap. It was first run 21 October, 60 URLs, 202 Accepted. Run it after significant deploys.
+
+### Brand search baseline, 21 October
+
+The search index used by AI assistants for web lookups returned no forelandmarine.com result for "Foreland Marine", "Foreland Marine Consultancy" (exact) or `site:forelandmarine.com`. Only the bare query "forelandmarine.com" found the homepage. Recheck all four in two to three weeks.
+
+### Remaining, needs Jack
+
+1. Bing Webmaster Tools: confirm the site is verified, submit the sitemap and check URL coverage. Bing feeds ChatGPT search, Copilot and DuckDuckGo.
+2. Google Search Console: request indexing of the homepage so the new title is picked up, and check the "foreland marine" query in Performance.
+3. Google Business Profile for 7 Bell Yard, if not already live. It is the strongest single signal for a brand query on Google.
+4. Merge or close the second LinkedIn company page (/company/foreland-marine-consulting-ltd).
+5. Wikidata item for Foreland Marine Consultancy Ltd. It needs a Wikidata account and cites Companies House. Once it exists, add its URL to `sameAs`.
+6. Homepage H1 is "Smooth sailing. Every time." and does not name the company. A visible line naming Foreland Marine near the top of the homepage would help the brand query. This is a copy decision.
