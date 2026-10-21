@@ -69,7 +69,7 @@ What this shows:
 - **Entity recognition is the largest AEO gap.** A search engine does not connect the name "Foreland Marine" to this company.
   - Fixes in order:
     1. merge the second LinkedIn company page
-    2. add Companies House (15785851) and the YORR register entry to `sameAs` in the Organization schema
+    2. add the YORR register entry and the podcast and press appearances to the Organization schema (`sameAs` already has Instagram, LinkedIn and Companies House)
     3. create a Wikidata item for Foreland Marine Consultancy Ltd
     4. use "Foreland Marine Consultancy" in full in press and podcast bylines
   - The podcast citation shows that third-party mentions are getting through, but they are not being attributed to the domain.
