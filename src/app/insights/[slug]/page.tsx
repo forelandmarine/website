@@ -342,7 +342,9 @@ export default async function PostPage({ params }: Props) {
               [&_.table-scroll]:overflow-x-auto [&_.table-scroll]:mb-8
               [&_table]:w-full [&_table]:min-w-[36rem] [&_table]:text-sm [&_table]:border-collapse
               [&_th]:text-left [&_th]:text-white [&_th]:font-semibold [&_th]:align-top [&_th]:py-3 [&_th]:pr-5 [&_th]:border-b [&_th]:border-white/20
-              [&_td]:text-muted [&_td]:align-top [&_td]:py-3 [&_td]:pr-5 [&_td]:border-b [&_td]:border-white/8"
+              [&_td]:text-muted [&_td]:align-top [&_td]:py-3 [&_td]:pr-5 [&_td]:border-b [&_td]:border-white/8
+              [&>figure]:my-10 [&_figure_img]:w-full [&_figure_img]:h-auto [&_figure_img]:rounded-sm
+              [&_figcaption]:text-sm [&_figcaption]:text-muted/80 [&_figcaption]:mt-3"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
