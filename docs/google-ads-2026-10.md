@@ -95,3 +95,31 @@ Account 182-541-7041, campaign Performance Max-1 (ID 24378359946), asset group A
 - Search themes: 14, the refit, owner's representation and management phrases above.
 - Assets: 6 headlines, 3 long headlines, 5 descriptions. Jack's own lines kept, including "Your team of experts - Smooth sailing, every time".
 - Call recording turned off; Google's call terms not accepted.
+
+## Service asset groups, 22 October 2026
+
+Budget held at £50 a day until two or three weeks of conversion data exist; then raise in steps of about 20%. End date moved to 30 November 2026.
+
+### Refit (final URL /refit)
+Headlines: Superyacht Refit Management; Yacht Refit Project Manager; Independent Refit Management; Refits for Yachts 24 to 60m; Foreland Marine Consultancy
+Long headlines: Independent refit project management for sailing and motor yachts from 24 to 60 metres; Your refit, run to programme and budget by a team working for the owner alone
+Descriptions: Independent refit management, 24 to 60 metres.; Your refit, on time and on budget. Independent project management for yachts 24 to 60m.; Run by captains and chief engineers who have run refits and new builds themselves.; Fewer surprises at the yard. Independent refit and new build oversight from London.
+Search themes: superyacht refit management; yacht refit management; yacht refit project management; yacht refit project manager; superyacht refit consultant; sailing yacht refit
+
+### Owner's representation (final URL /owners-representation)
+Headlines: New Build Owner Representative; Yacht Owner's Representation; Superyacht Build Supervision; Independent Owner's Rep; Foreland Marine Consultancy
+Long headlines: Independent owner's representation for new builds, from yard selection to warranty; Foreland Marine: on the owner's side of every new build, from contract to delivery
+Descriptions: On the owner's side, from contract to delivery.; Someone on your side of the table, from the first drawing to the day she is delivered.; Independent eyes on your new build, on site at the yard from keel to delivery.; Planning a new build? Speak to an independent owner's representative.
+Search themes: yacht owner's representative; superyacht owner's representative; owner's representation yacht; yacht new build project management; new build owner's rep; superyacht build supervision
+
+### Yacht management (final URL /yacht-management)
+Headlines: Independent Yacht Management; Superyacht Management; Sailing Yacht Management; ISM and Crew Management; Foreland Marine Consultancy
+Long headlines: Independent yacht management for sailing and motor yachts from 24 to 60 metres; ISM compliance, crew, budgets and insurance, managed by a team working for the owner
+Descriptions: ISM, crew, budgets and compliance, for the owner.; Yacht management covering ISM compliance, crew, budgets, insurance, class and flag.; Your yacht, your budget, your interests. We work for the owner and nobody else.
+Search themes: yacht management company; superyacht management; independent yacht management; sailing yacht management; ism yacht management
+
+### Audience signal (all groups)
+Website visitors; custom segment "Yacht refit and build" (search terms: yacht refit, superyacht refit, yacht owner's representative, yacht new build, yacht management company, Lürssen, Feadship, Royal Huisman, Pendennis, Palma refit, La Ciotat shipyard); interests: boating and sailing, luxury travel.
+
+### Sitelinks (campaign)
+Refit /refit; Owner's representation /owners-representation; Yacht management /yacht-management; About us /about; Insights /insights; Contact /contact
