@@ -130,3 +130,7 @@ Refit /refit; Owner's representation /owners-representation; Yacht management /y
 - Asset Group 1 stays on the homepage as the general group. Its 14 service themes moved to the service groups; it now carries superyacht consultancy, yacht consultancy london, independent yacht consultant, superyacht consultant.
 - Audience signal on all four groups: Yachts (in-market) and Boating & Sailing Enthusiasts (affinity). Custom segments are no longer offered in this signal panel; search themes do that job.
 - Not done: website visitors segment. It must be created in Audience manager and needs tag data first; revisit early November.
+
+### Images, 22 October 2026
+Crops in docs/google-ads-images/, made with Jack's go-ahead. The J Class spinnaker photo is approved (public domain, Jack 22 Oct). All four asset groups carry 20 images: the original 6, portrait crops of the carpenter and IMG_0263 bow wave, 11 crops of the new set (classic yacht with ensign, crew in cockpit, crew on deck, three F69 renders), and the schooner portrait (IMG_5945).
+Held back, not uploaded: render-3 square (boat cut off), deck-crew and quay-mast crops (IMG_3665/3666), schooner square. Two pasted photos (mast stepping with Marine Results vests, Pattoo) were not used: third-party branding and a named owner's yacht.
