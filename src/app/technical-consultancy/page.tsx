@@ -238,12 +238,8 @@ export default function TechnicalConsultancyPage() {
         </div>
       ))}
 
-      <HorizonLine />
-
-      <HorizonLine />
-
-      {/* OPERATOR SIDE */}
-      <section className="py-20 bg-bg0">
+      {/* OPERATOR SIDE (read by search engines, hidden on screen) */}
+      <section className="sr-only">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
             Where design ends and operation begins
@@ -262,10 +258,8 @@ export default function TechnicalConsultancyPage() {
         </div>
       </section>
 
-      <HorizonLine />
-
-      {/* HOW IT IS ENGAGED */}
-      <section className="bg-bg1 py-20">
+      {/* HOW IT IS ENGAGED (read by search engines, hidden on screen) */}
+      <section className="sr-only">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
             How technical work is scoped and priced
