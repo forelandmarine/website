@@ -82,3 +82,16 @@ Tier 2, add once tier 1 converts: Italy, Germany, Switzerland, Florida (Fort Lau
 Leave out: Singapore, China, India, Hong Kong, Russia.
 
 Settings: location option "Presence: people in or regularly in your locations", not "presence or interest". Language English. Schedule the Mediterranean campaigns heavier from October to April, the refit season.
+
+## Account set-up, 22 October 2026
+
+Account 182-541-7041, campaign Performance Max-1 (ID 24378359946), asset group Asset Group 1. Runs 22 October to 6 November 2026 at £50 a day.
+
+- Google tag AW-18530780689 in src/app/layout.tsx.
+- Conversion "Enquiry form sent" (label R0drCI_f4qUdEJGMlYRF), primary, fired from src/lib/ads.ts when the homepage or /contact form posts successfully. The earlier page-load conversion on /contact is now secondary. Enhanced conversions left off.
+- Locations: Jack's 16 (Amsterdam, Annapolis, Chigwell, Geneva, Greater London, Hertfordshire, Hong Kong, Miami, Monaco, Newport County RI, Palma, San Francisco, SF Bay Area, Surrey, Switzerland, Zurich), set to Presence only.
+- Asset optimisation off: text customisation, final URL expansion, image and video enhancement. Final URL https://www.forelandmarine.com/.
+- Account-level negative keywords: 31, from the list above, plus "foreland marine" and [forelandmarine] in place of a brand exclusion (Google's brand library has no Foreland Marine entry). "charter" narrowed to "yacht charter" so charter-yacht management searches still match.
+- Search themes: 14, the refit, owner's representation and management phrases above.
+- Assets: 6 headlines, 3 long headlines, 5 descriptions. Jack's own lines kept, including "Your team of experts - Smooth sailing, every time".
+- Call recording turned off; Google's call terms not accepted.
