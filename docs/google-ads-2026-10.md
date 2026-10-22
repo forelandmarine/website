@@ -123,3 +123,10 @@ Website visitors; custom segment "Yacht refit and build" (search terms: yacht re
 
 ### Sitelinks (campaign)
 Refit /refit; Owner's representation /owners-representation; Yacht management /yacht-management; About us /about; Insights /insights; Contact /contact
+
+### As built, 22 October 2026
+- End date 30 November 2026. Six campaign sitelinks live.
+- Refit, Owner's representation and Yacht management asset groups built as copies of Asset Group 1 (same images and logo) with the copy above. Each also has a sixth headline (Refit Management, London; New Build Oversight, London; Yacht Management, London) and a fifth description; the management group's fifth is "Independent management for sailing and motor yachts, run from London."
+- Asset Group 1 stays on the homepage as the general group. Its 14 service themes moved to the service groups; it now carries superyacht consultancy, yacht consultancy london, independent yacht consultant, superyacht consultant.
+- Audience signal on all four groups: Yachts (in-market) and Boating & Sailing Enthusiasts (affinity). Custom segments are no longer offered in this signal panel; search themes do that job.
+- Not done: website visitors segment. It must be created in Audience manager and needs tag data first; revisit early November.
