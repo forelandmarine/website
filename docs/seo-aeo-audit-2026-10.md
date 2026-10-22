@@ -129,7 +129,7 @@ What this shows:
 
 - **Entity recognition is the largest AEO gap.** A search engine does not connect the name "Foreland Marine" to this company.
   - Fixes in order:
-    1. merge the second LinkedIn company page
+    1. LinkedIn: none needed, the old company URL redirects to /company/forelandmarine
     2. add the YORR register entry and the podcast and press appearances to the Organization schema (`sameAs` already has Instagram, LinkedIn and Companies House)
     3. create a Wikidata item for Foreland Marine Consultancy Ltd
     4. use "Foreland Marine Consultancy" in full in press and podcast bylines
@@ -145,7 +145,7 @@ What this shows:
 3. Update the llms files: 24 to 60, add the newsletters, remove "no yard affiliations", and reference `llms-full.txt` from `llms.txt`. (Small)
 4. Derive sitemap lastmod for static pages from git or a per-page constant. (Small)
 5. Tidy items 6 to 10. (Small)
-6. Entity work: LinkedIn merge (Jack only), `sameAs` additions, Wikidata. (Medium, mostly off-site)
+6. Entity work: `sameAs` additions, Wikidata. (Medium, mostly off-site)
 7. Pull a Search Console export for 9 September to 21 October to confirm the CTR gain shown in Web Analytics before building any new pages.
 
 ## Fixed 21 October (865b7a9, 9104b94)
@@ -171,6 +171,6 @@ The search index used by AI assistants for web lookups returned no forelandmarin
 1. Bing Webmaster Tools: confirm the site is verified, submit the sitemap and check URL coverage. Bing feeds ChatGPT search, Copilot and DuckDuckGo.
 2. Google Search Console: request indexing of the homepage so the new title is picked up, and check the "foreland marine" query in Performance.
 3. Google Business Profile for 7 Bell Yard, if not already live. It is the strongest single signal for a brand query on Google.
-4. Merge or close the second LinkedIn company page (/company/foreland-marine-consulting-ltd).
+4. LinkedIn: no action. /company/foreland-marine-consulting-ltd is an old URL that redirects to /company/forelandmarine (checked 22 October), so there is only one page.
 5. Wikidata item for Foreland Marine Consultancy Ltd. It needs a Wikidata account and cites Companies House. Once it exists, add its URL to `sameAs`.
 6. Homepage H1 is "Smooth sailing. Every time." and does not name the company. A visible line naming Foreland Marine near the top of the homepage would help the brand query. This is a copy decision.
