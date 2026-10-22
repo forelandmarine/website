@@ -134,3 +134,13 @@ Refit /refit; Owner's representation /owners-representation; Yacht management /y
 ### Images, 22 October 2026
 Crops in docs/google-ads-images/, made with Jack's go-ahead. The J Class spinnaker photo is approved (public domain, Jack 22 Oct). All four asset groups carry 20 images: the original 6, portrait crops of the carpenter and IMG_0263 bow wave, 11 crops of the new set (classic yacht with ensign, crew in cockpit, crew on deck, three F69 renders), and the schooner portrait (IMG_5945).
 Held back, not uploaded: render-3 square (boat cut off), deck-crew and quay-mast crops (IMG_3665/3666), schooner square. Two pasted photos (mast stepping with Marine Results vests, Pattoo) were not used: third-party branding and a named owner's yacht.
+
+### F69 renders limited, 22 October 2026
+On Jack's instruction the F69 renders are limited. Refit, Owner's representation and Yacht management carry no renders; their five render slots now hold the schooner square and the deck-crew and quay-mast crops (portrait and square). Asset Group 1 keeps only render 2 (landscape and square); renders 1 and 3 replaced by the schooner square, deck-crew portrait and quay-mast portrait and square. All four groups at 20 images.
+
+### Headlines added, 22 October 2026
+Five more per group, all four groups now at 11 (ad strength Good):
+- Refit: Refit Planning and Tendering; On-Site Refit Supervision; Refit Budget and Programme; Sailing Yacht Refits; Owner's Side of the Refit
+- Owner's representation: Yard Selection and Contracts; On Site at the Yard; From Keel to Delivery; New Builds 24 to 60 Metres; YORR Registered Owner's Rep
+- Yacht management: ISM Code Implementation; Crew, Budgets and Insurance; Class and Flag Administration; Management for 24 to 60m; Monthly Budget Reporting
+- Asset Group 1: Independent Superyacht Advice; Superyacht Consultancy London; Captains and Chief Engineers; Yachts 24 to 60 Metres; Acting for Owners Only
