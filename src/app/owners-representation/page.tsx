@@ -331,77 +331,94 @@ export default function NewBuildPage() {
 
       <HorizonLine />
 
-      {/* CONTRACT, YARD RISK AND GOVERNANCE, collapsed so the page stays short */}
+      {/* THE CONTRACT */}
       <section className="py-20 bg-bg0">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
-            Contract, yard and governance
-          </h2>
-          <div className="space-y-4" data-animate="fade-up">
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white text-lg font-light select-none">
+          <details className="group" data-animate="fade-up">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 select-none [&::-webkit-details-marker]:hidden">
+              <h2 className="text-3xl sm:text-4xl font-light text-white leading-tight">
                 The contract is where the money is made or lost
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-6 space-y-5 text-muted leading-relaxed">
-                <p>
-                  A new build contract governs USD 30 to 200 million of capital across two to five years and structures every variation, every dispute and every interpretation question in the period during which the yard holds the cards. It is the most consequential document a yacht buyer signs, and page count tells you almost nothing about whether it controls risk.
-                </p>
-                <p>
-                  Standard shipbuilding forms exist. The SAJ form published by the Shipbuilders&apos; Association of Japan is the most used globally and is generally thought to favour the yard in unamended form. The European yards that matter, Lürssen, Feadship, Oceanco, Royal Huisman, Heesen, Sanlorenzo and Benetti among them, do not contract on any of the standard forms. They contract on heavily customised in-house templates drafted by their own counsel, with English law and London arbitration grafted on.
-                </p>
-                <p>
-                  Eight points decide how that document behaves under pressure. Stage payment loading, where 50 to 70 percent of contract value paid before delivery is the shipbuilding norm per Watson Farley &amp; Williams, and aggressive front-loading suggests a yard short of cash to start. Refund guarantee credit quality, where tier-one bank pay-on-demand guarantees are materially better than surety wrappers, and Chinese-bank guarantees commonly expire within a month of cancellation, forcing immediate arbitration. Liquidated damages, industry-typical at 1 percent of contract value per week of delay capped at 5 to 10 percent of the contract sum, after which the yard owes nothing further. Force majeure, where English law requires the yard to prove but-for causation and yards routinely draft looser clauses that weak representation accepts.
-                </p>
-                <p>
-                  Then the change order procedure, which without pre-agreed unit rates and third-party quote rights leaves the owner exposed to paying for emergent work at rates well above the original contract. Warranty length, standard at twelve months and negotiable to twenty-four, which inexperienced representatives routinely fail to negotiate. Cancellation thresholds, replicated from the SAJ standard but with negotiable numbers. And title position during construction, which determines what the owner actually holds if the yard fails.
-                </p>
-                <p>
-                  A single afternoon of competent legal review at heads of terms saves more than the owner&apos;s representative fee for the entire project. It is consistently not done. Kevin Laverty of Hill Robinson, writing in BOAT International, has pointed to a 33-page contract for a 77 metre yacht against the multi-volume documentation typical of oil and gas projects of comparable value.
-                </p>
-              </div>
-            </details>
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white text-lg font-light select-none">
+              </h2>
+              <span className="mt-2 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div className="mt-8 space-y-5 text-muted leading-relaxed">
+              <p>
+                A new build contract governs USD 30 to 200 million of capital across two to five years and structures every variation, every dispute and every interpretation question in the period during which the yard holds the cards. It is the most consequential document a yacht buyer signs, and page count tells you almost nothing about whether it controls risk.
+              </p>
+              <p>
+                Standard shipbuilding forms exist. The SAJ form published by the Shipbuilders&apos; Association of Japan is the most used globally and is generally thought to favour the yard in unamended form. The European yards that matter, Lürssen, Feadship, Oceanco, Royal Huisman, Heesen, Sanlorenzo and Benetti among them, do not contract on any of the standard forms. They contract on heavily customised in-house templates drafted by their own counsel, with English law and London arbitration grafted on.
+              </p>
+              <p>
+                Eight points decide how that document behaves under pressure. Stage payment loading, where 50 to 70 percent of contract value paid before delivery is the shipbuilding norm per Watson Farley &amp; Williams, and aggressive front-loading suggests a yard short of cash to start. Refund guarantee credit quality, where tier-one bank pay-on-demand guarantees are materially better than surety wrappers, and Chinese-bank guarantees commonly expire within a month of cancellation, forcing immediate arbitration. Liquidated damages, industry-typical at 1 percent of contract value per week of delay capped at 5 to 10 percent of the contract sum, after which the yard owes nothing further. Force majeure, where English law requires the yard to prove but-for causation and yards routinely draft looser clauses that weak representation accepts.
+              </p>
+              <p>
+                Then the change order procedure, which without pre-agreed unit rates and third-party quote rights leaves the owner exposed to paying for emergent work at rates well above the original contract. Warranty length, standard at twelve months and negotiable to twenty-four, which inexperienced representatives routinely fail to negotiate. Cancellation thresholds, replicated from the SAJ standard but with negotiable numbers. And title position during construction, which determines what the owner actually holds if the yard fails.
+              </p>
+              <p>
+                A single afternoon of competent legal review at heads of terms saves more than the owner&apos;s representative fee for the entire project. It is consistently not done. Kevin Laverty of Hill Robinson, writing in BOAT International, has pointed to a 33-page contract for a 77 metre yacht against the multi-volume documentation typical of oil and gas projects of comparable value.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* YARD RISK */}
+      <section className="bg-bg1 py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <details className="group" data-animate="fade-up">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 select-none [&::-webkit-details-marker]:hidden">
+              <h2 className="text-3xl sm:text-4xl font-light text-white leading-tight">
                 Yard financial condition, and why it is our problem before it is yours
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-6 space-y-5 text-muted leading-relaxed">
-                <p>
-                  The buyer pays stage payments forward. When a yard&apos;s financial condition deteriorates, those payments become creditor positions in somebody else&apos;s insolvency, and refund guarantees protect the exposure less reliably in practice than the contract suggests.
-                </p>
-                <p>
-                  This is not theoretical. Nobiskrug, builder of Sailing Yacht A, filed for insolvency in December 2024 under Tennor Group; Lürssen acquired the assets in early 2025 and suspended in-build projects moved for completion. The Italian Sea Group&apos;s April 2026 restructuring went further into procedural territory: on 20 April the Court of Florence confirmed protective measures retroactive to the 16 March filing, which prevented shipowners from terminating in-build contracts during the restructuring window. From the buyer&apos;s side that is a court-mandated commitment to a counterparty whose financial condition had changed since signature.
-                </p>
-                <p>
-                  Three workstreams handle this in advance rather than in the middle of it. Yard financial due diligence at heads of terms, covering recent published accounts, parent structure, order-book composition and litigation history. Refund guarantee credit quality assessed with the same weight as any other contract term. And a position agreed with counsel, before signature, on what to do if mid-build distress produces an equity injection or accelerated payment proposal, so that the decision is reached deliberately rather than under pressure.
-                </p>
-                <p>
-                  A related pattern is a yard quoting below what the build can credibly be done for. Build cost is direct cost plus overhead, and the overhead is what produces a quality boat rather than money the yard wastes on itself. Margins on top-tier construction are not large. A buyer who has done proper diligence on one yard already has a sense of what those margins look like, and an offer materially below them is information rather than a bargain.
-                </p>
-              </div>
-            </details>
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white text-lg font-light select-none">
+              </h2>
+              <span className="mt-2 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div className="mt-8 space-y-5 text-muted leading-relaxed">
+              <p>
+                The buyer pays stage payments forward. When a yard&apos;s financial condition deteriorates, those payments become creditor positions in somebody else&apos;s insolvency, and refund guarantees protect the exposure less reliably in practice than the contract suggests.
+              </p>
+              <p>
+                This is not theoretical. Nobiskrug, builder of Sailing Yacht A, filed for insolvency in December 2024 under Tennor Group; Lürssen acquired the assets in early 2025 and suspended in-build projects moved for completion. The Italian Sea Group&apos;s April 2026 restructuring went further into procedural territory: on 20 April the Court of Florence confirmed protective measures retroactive to the 16 March filing, which prevented shipowners from terminating in-build contracts during the restructuring window. From the buyer&apos;s side that is a court-mandated commitment to a counterparty whose financial condition had changed since signature.
+              </p>
+              <p>
+                Three workstreams handle this in advance rather than in the middle of it. Yard financial due diligence at heads of terms, covering recent published accounts, parent structure, order-book composition and litigation history. Refund guarantee credit quality assessed with the same weight as any other contract term. And a position agreed with counsel, before signature, on what to do if mid-build distress produces an equity injection or accelerated payment proposal, so that the decision is reached deliberately rather than under pressure.
+              </p>
+              <p>
+                A related pattern is a yard quoting below what the build can credibly be done for. Build cost is direct cost plus overhead, and the overhead is what produces a quality boat rather than money the yard wastes on itself. Margins on top-tier construction are not large. A buyer who has done proper diligence on one yard already has a sense of what those margins look like, and an offer materially below them is information rather than a bargain.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* GOVERNANCE */}
+      <section className="py-20 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <details className="group" data-animate="fade-up">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 select-none [&::-webkit-details-marker]:hidden">
+              <h2 className="text-3xl sm:text-4xl font-light text-white leading-tight">
                 Who holds the role, and why it cannot be a favour
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-6 space-y-5 text-muted leading-relaxed">
-                <p>
-                  The published case record concentrates new build risk in governance on the buyer&apos;s side more than anywhere else. Jack Inglis of ULTIMAR, writing in Superyacht Investor in October 2025, described a semi-custom build where the owner deputised a family-office CFO with no maritime expertise as owner&apos;s representative. The delivery snag list ran past 1,200 items against the family office&apos;s reported figure of around 100. The yacht was sold after a single season.
-                </p>
-                <p>
-                  His point about snag lists is worth holding onto, because the number is the wrong measure. Three hundred cosmetic snags are survivable; fifteen critical commissioning issues will cost the first season. The question is consequence, not quantity, and reading the difference requires somebody who has commissioned yachts before.
-                </p>
-                <p>
-                  The structural fix is a role with a defined standard behind it. The title varies, yacht build manager, new build project manager, owner&apos;s technical representative, and the label matters less than whether the person holding it has commissioned a yacht before. SYBAss launched the Yacht Owner Representative Programme in June 2023 with founding member Benetti: four courses totalling 200 hours, of which Unit 40 is the mandatory course for experienced practitioners. The Yacht Owner&apos;s Representative Register followed at The Superyacht Forum in November 2024, administered by the Superyacht Alliance for Professional Standards, with a CV audit built to eliminate inflated claims and a code of conduct behind it. References are called, and projects have been reclassified where the reference described a different role than the application did.
-                </p>
-                <p>
-                  Foreland is registered on YORR and holds its accreditation through YORP. The register is public and searchable by firm and by named principal, which means the claim on this page can be checked rather than taken on trust. Lürssen hosted Unit 40 at its Hamburg yard in April 2026, which is the clearest available signal that the standard is endorsed on the yard side of the table as well as the owner&apos;s.
-                </p>
-              </div>
-            </details>
-          </div>
+              </h2>
+              <span className="mt-2 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div className="mt-8 space-y-5 text-muted leading-relaxed">
+              <p>
+                The published case record concentrates new build risk in governance on the buyer&apos;s side more than anywhere else. Jack Inglis of ULTIMAR, writing in Superyacht Investor in October 2025, described a semi-custom build where the owner deputised a family-office CFO with no maritime expertise as owner&apos;s representative. The delivery snag list ran past 1,200 items against the family office&apos;s reported figure of around 100. The yacht was sold after a single season.
+              </p>
+              <p>
+                His point about snag lists is worth holding onto, because the number is the wrong measure. Three hundred cosmetic snags are survivable; fifteen critical commissioning issues will cost the first season. The question is consequence, not quantity, and reading the difference requires somebody who has commissioned yachts before.
+              </p>
+              <p>
+                The structural fix is a role with a defined standard behind it. The title varies, yacht build manager, new build project manager, owner&apos;s technical representative, and the label matters less than whether the person holding it has commissioned a yacht before. SYBAss launched the Yacht Owner Representative Programme in June 2023 with founding member Benetti: four courses totalling 200 hours, of which Unit 40 is the mandatory course for experienced practitioners. The Yacht Owner&apos;s Representative Register followed at The Superyacht Forum in November 2024, administered by the Superyacht Alliance for Professional Standards, with a CV audit built to eliminate inflated claims and a code of conduct behind it. References are called, and projects have been reclassified where the reference described a different role than the application did.
+              </p>
+              <p>
+                Foreland is registered on YORR and holds its accreditation through YORP. The register is public and searchable by firm and by named principal, which means the claim on this page can be checked rather than taken on trust. Lürssen hosted Unit 40 at its Hamburg yard in April 2026, which is the clearest available signal that the standard is endorsed on the yard side of the table as well as the owner&apos;s.
+              </p>
+            </div>
+          </details>
         </div>
       </section>
 

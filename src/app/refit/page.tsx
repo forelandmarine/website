@@ -198,76 +198,93 @@ export default function RefitPage() {
 
       <HorizonLine />
 
-      {/* COST, OVERRUNS AND YARD MODELS, collapsed so the page stays short */}
+      {/* WHAT A REFIT COSTS */}
       <section className="py-20 bg-bg0">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
-            Cost, overruns and yard choice
-          </h2>
-          <div className="space-y-4" data-animate="fade-up">
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white text-lg font-light select-none">
+          <details className="group" data-animate="fade-up">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 select-none [&::-webkit-details-marker]:hidden">
+              <h2 className="text-3xl sm:text-4xl font-light text-white leading-tight">
                 What a refit actually costs
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-6 space-y-5 text-muted leading-relaxed">
-                <p>
-                  A yacht&apos;s life divides into refit cycles. Every five years a class survey forces structural and systems work; every ten the cosmetic and major-systems condition demands a substantive overhaul. The global refit market ran to USD 2.9 billion in 2025 against roughly 6,000 active vessels, on Future Market Insights figures, and capacity has expanded more slowly than the fleet. Lead times at the reference yards are tightening accordingly.
-                </p>
-                <p>
-                  A five-year survey or major refit typically runs 5 to 15 percent of insured hull value. Expressed per metre, and drawn from the practitioner ranges published in{" "}
-                  <Link href="https://firstownersreference.com/06-refit" className="text-accent hover:text-white transition-colors underline underline-offset-2">chapter six of The First Owner&apos;s Reference</Link>,
-                  annual maintenance sits at EUR 2,000 to 8,000 per metre, a mid-life refit at EUR 10,000 to 30,000 per metre, and a major structural refit at EUR 40,000 to 100,000 and above. A 50 metre yacht taking major structural work therefore lands between EUR 2 million and EUR 5 million, with USD 5 million to 10 million typical where the scope extends to lengthening, re-engining, or wholesale systems renewal.
-                </p>
-                <p>
-                  Two further lines move the total more than owners expect. Berth fees during the yard period run EUR 400 to 800 a day for a 40 metre hull in the Mediterranean and EUR 600 to 1,200 in northern Europe. Skilled labour runs EUR 45 to 75 an hour in the Mediterranean, with specialist trades at EUR 80 to 120, and northern European rates sit 20 to 40 percent above that. None of the reference yards publishes a rate card, so these are working ranges that practitioners would recognise rather than quoted prices.
-                </p>
-                <p>
-                  The prior question is whether to refit at all. For a yacht of twelve to fifteen years facing major work, the alternative is sale and reacquisition, and the arithmetic turns on strategic fit rather than sentiment. Where projected refit cost exceeds about 30 percent of pre-refit market value and the yacht is not irreplaceable for the intended use, sale is usually the better decision. Below that threshold, refit normally is. The owner who commits on the wrong side of it takes on a project whose total cost runs above the finished yacht&apos;s market value.
-                </p>
-              </div>
-            </details>
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white text-lg font-light select-none">
+              </h2>
+              <span className="mt-2 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div className="mt-8 space-y-5 text-muted leading-relaxed">
+              <p>
+                A yacht&apos;s life divides into refit cycles. Every five years a class survey forces structural and systems work; every ten the cosmetic and major-systems condition demands a substantive overhaul. The global refit market ran to USD 2.9 billion in 2025 against roughly 6,000 active vessels, on Future Market Insights figures, and capacity has expanded more slowly than the fleet. Lead times at the reference yards are tightening accordingly.
+              </p>
+              <p>
+                A five-year survey or major refit typically runs 5 to 15 percent of insured hull value. Expressed per metre, and drawn from the practitioner ranges published in{" "}
+                <Link href="https://firstownersreference.com/06-refit" className="text-accent hover:text-white transition-colors underline underline-offset-2">chapter six of The First Owner&apos;s Reference</Link>,
+                annual maintenance sits at EUR 2,000 to 8,000 per metre, a mid-life refit at EUR 10,000 to 30,000 per metre, and a major structural refit at EUR 40,000 to 100,000 and above. A 50 metre yacht taking major structural work therefore lands between EUR 2 million and EUR 5 million, with USD 5 million to 10 million typical where the scope extends to lengthening, re-engining, or wholesale systems renewal.
+              </p>
+              <p>
+                Two further lines move the total more than owners expect. Berth fees during the yard period run EUR 400 to 800 a day for a 40 metre hull in the Mediterranean and EUR 600 to 1,200 in northern Europe. Skilled labour runs EUR 45 to 75 an hour in the Mediterranean, with specialist trades at EUR 80 to 120, and northern European rates sit 20 to 40 percent above that. None of the reference yards publishes a rate card, so these are working ranges that practitioners would recognise rather than quoted prices.
+              </p>
+              <p>
+                The prior question is whether to refit at all. For a yacht of twelve to fifteen years facing major work, the alternative is sale and reacquisition, and the arithmetic turns on strategic fit rather than sentiment. Where projected refit cost exceeds about 30 percent of pre-refit market value and the yacht is not irreplaceable for the intended use, sale is usually the better decision. Below that threshold, refit normally is. The owner who commits on the wrong side of it takes on a project whose total cost runs above the finished yacht&apos;s market value.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* THE OVERRUN PATTERN */}
+      <section className="bg-bg1 py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <details className="group" data-animate="fade-up">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 select-none [&::-webkit-details-marker]:hidden">
+              <h2 className="text-3xl sm:text-4xl font-light text-white leading-tight">
                 Where refits run over, and what changes it
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-6 space-y-5 text-muted leading-relaxed">
-                <p>
-                  Refit projects routinely finish 30 to 50 percent above the originally quoted scope. That is the industry pattern rather than the exception, and Dockwalk has documented a sixfold overrun on the refit of a 1967 Camper &amp; Nicholsons hull, from USD 1 million to USD 6 million.
-                </p>
-                <p>
-                  It is worth being precise about what that number is. A yard quote built on visual inspection cannot anticipate what appears when the deck comes up and the tanks are opened. Most of the 30 to 50 percent is genuine work that the initial scope could not have known about, priced against a specification written on imperfect information. Treating it as a failure of project management misreads it, and owners who go in expecting the quoted figure to hold are the ones who end up renegotiating from a weak position halfway through.
-                </p>
-                <p>
-                  What owner-side representation changes is the distribution, not the existence, of that variance. A well-managed refit at a competent yard, with experienced representation on the owner&apos;s side of the table, typically lands within 10 to 20 percent of the original quote. A poorly managed one lands at the extremes. The variance between a refit that holds its budget and one that runs hot is mostly explained by the quality of the representation, and most of that work happens before the yacht arrives, in the specification and the tender.
-                </p>
-                <p>
-                  The corollary matters for anyone comparing quotes. A yard quoting against a thin specification will quote low and recover the difference in variations, where the owner has no competitive tension and no time. A yard quoting against a detailed specification will quote higher and hold closer to it. The second number looks worse and is usually cheaper.
-                </p>
-              </div>
-            </details>
-            <details className="group border border-white/10 bg-bg1">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-white text-lg font-light select-none">
+              </h2>
+              <span className="mt-2 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div className="mt-8 space-y-5 text-muted leading-relaxed">
+              <p>
+                Refit projects routinely finish 30 to 50 percent above the originally quoted scope. That is the industry pattern rather than the exception, and Dockwalk has documented a sixfold overrun on the refit of a 1967 Camper &amp; Nicholsons hull, from USD 1 million to USD 6 million.
+              </p>
+              <p>
+                It is worth being precise about what that number is. A yard quote built on visual inspection cannot anticipate what appears when the deck comes up and the tanks are opened. Most of the 30 to 50 percent is genuine work that the initial scope could not have known about, priced against a specification written on imperfect information. Treating it as a failure of project management misreads it, and owners who go in expecting the quoted figure to hold are the ones who end up renegotiating from a weak position halfway through.
+              </p>
+              <p>
+                What owner-side representation changes is the distribution, not the existence, of that variance. A well-managed refit at a competent yard, with experienced representation on the owner&apos;s side of the table, typically lands within 10 to 20 percent of the original quote. A poorly managed one lands at the extremes. The variance between a refit that holds its budget and one that runs hot is mostly explained by the quality of the representation, and most of that work happens before the yacht arrives, in the specification and the tender.
+              </p>
+              <p>
+                The corollary matters for anyone comparing quotes. A yard quoting against a thin specification will quote low and recover the difference in variations, where the owner has no competitive tension and no time. A yard quoting against a detailed specification will quote higher and hold closer to it. The second number looks worse and is usually cheaper.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <HorizonLine />
+
+      {/* YARD MODELS */}
+      <section className="py-20 bg-bg0">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <details className="group" data-animate="fade-up">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 select-none [&::-webkit-details-marker]:hidden">
+              <h2 className="text-3xl sm:text-4xl font-light text-white leading-tight">
                 Two yard models, and which one suits the project
-                <span className="ml-4 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-xl leading-none">+</span>
-              </summary>
-              <div className="px-6 pb-6 space-y-5 text-muted leading-relaxed">
-                <p>
-                  Refit yards operate on one of two models, and the choice shapes cost, risk, and how much management the project needs. Owners are rarely walked through the distinction before they are asked to sign.
-                </p>
-                <p>
-                  Full-service yards take the project as a single contract, manage the trades in-house, and deliver against agreed milestones. They carry the integration risk and they price for carrying it. MB92 in Barcelona and La Ciotat, Pendennis in Falmouth, Lusben in Viareggio and Livorno, Astilleros de Mallorca, Amico &amp; Co in Genoa and Rybovich in West Palm Beach all work this way. For an owner without technical representation, or on a project where a single point of contractual responsibility is worth paying for, this is usually the right structure.
-                </p>
-                <p>
-                  Service yards, sometimes called marina yards, provide the facility, the haul-out, and the infrastructure, while the owner contracts paint, mechanical, electrical, and joinery directly with resident specialists. STP Palma is the best-known example and the largest facility of its kind in the western Mediterranean. Lauderdale Marine Center runs the same model at scale on the US east coast. The rates are lower because the integration risk has moved to the owner, which is an advantage where there is competent representation to carry it and a liability where there is not.
-                </p>
-                <p>
-                  We manage projects under both models and have no interest in which is chosen, because we are not paid by either. The assessment we run is against capability for the specific scope, realistic availability in the window required, and the commercial terms actually on offer, and it is normal for that to point at a yard the owner had not considered.
-                </p>
-              </div>
-            </details>
-          </div>
+              </h2>
+              <span className="mt-2 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div className="mt-8 space-y-5 text-muted leading-relaxed">
+              <p>
+                Refit yards operate on one of two models, and the choice shapes cost, risk, and how much management the project needs. Owners are rarely walked through the distinction before they are asked to sign.
+              </p>
+              <p>
+                Full-service yards take the project as a single contract, manage the trades in-house, and deliver against agreed milestones. They carry the integration risk and they price for carrying it. MB92 in Barcelona and La Ciotat, Pendennis in Falmouth, Lusben in Viareggio and Livorno, Astilleros de Mallorca, Amico &amp; Co in Genoa and Rybovich in West Palm Beach all work this way. For an owner without technical representation, or on a project where a single point of contractual responsibility is worth paying for, this is usually the right structure.
+              </p>
+              <p>
+                Service yards, sometimes called marina yards, provide the facility, the haul-out, and the infrastructure, while the owner contracts paint, mechanical, electrical, and joinery directly with resident specialists. STP Palma is the best-known example and the largest facility of its kind in the western Mediterranean. Lauderdale Marine Center runs the same model at scale on the US east coast. The rates are lower because the integration risk has moved to the owner, which is an advantage where there is competent representation to carry it and a liability where there is not.
+              </p>
+              <p>
+                We manage projects under both models and have no interest in which is chosen, because we are not paid by either. The assessment we run is against capability for the specific scope, realistic availability in the window required, and the commercial terms actually on offer, and it is normal for that to point at a yard the owner had not considered.
+              </p>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -318,20 +335,25 @@ export default function RefitPage() {
       {/* THE FEE */}
       <section className="py-20 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight" data-animate="fade-up">
-            What the fee is, and what it buys
-          </h2>
-          <div className="space-y-5 text-muted leading-relaxed" data-animate="fade-up">
-            <p>
-              Independent project management on a 30 to 50 metre refit runs 3 to 8 percent of total refit value, varying with scope, the complexity of the yacht, and the yard&apos;s location. On a GBP 2 million refit that is GBP 60,000 to GBP 160,000. Where a refit is already under way and the owner wants a second pair of eyes rather than full management, individual stages can be taken on their own, and on a fixed-fee basis where the scope allows.
-            </p>
-            <p>
-              The case for the fee is straightforward enough to test. Competitive tendering, supplier negotiation, and disciplined change-order control routinely take 10 to 20 percent off a gross refit budget, and the tightening of the 30 to 50 percent overrun band toward 10 to 20 percent is worth considerably more than that again on a project of any size. An owner is entitled to ask any prospective representative to show how those savings were achieved on a named past project, and to be sceptical of a firm that cannot.
-            </p>
-            <p>
-              The one thing the fee does not buy is a shortcut. Most of the value is created in the eight to twelve weeks before the yacht reaches the yard, in the condition survey, the specification, and the tender. A representative engaged after the contract is signed is managing a position someone else negotiated.
-            </p>
-          </div>
+          <details className="group" data-animate="fade-up">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 select-none [&::-webkit-details-marker]:hidden">
+              <h2 className="text-3xl sm:text-4xl font-light text-white leading-tight">
+                What the fee is, and what it buys
+              </h2>
+              <span className="mt-2 flex-shrink-0 text-muted transition-transform group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div className="mt-8 space-y-5 text-muted leading-relaxed">
+              <p>
+                Independent project management on a 30 to 50 metre refit runs 3 to 8 percent of total refit value, varying with scope, the complexity of the yacht, and the yard&apos;s location. On a GBP 2 million refit that is GBP 60,000 to GBP 160,000. Where a refit is already under way and the owner wants a second pair of eyes rather than full management, individual stages can be taken on their own, and on a fixed-fee basis where the scope allows.
+              </p>
+              <p>
+                The case for the fee is straightforward enough to test. Competitive tendering, supplier negotiation, and disciplined change-order control routinely take 10 to 20 percent off a gross refit budget, and the tightening of the 30 to 50 percent overrun band toward 10 to 20 percent is worth considerably more than that again on a project of any size. An owner is entitled to ask any prospective representative to show how those savings were achieved on a named past project, and to be sceptical of a firm that cannot.
+              </p>
+              <p>
+                The one thing the fee does not buy is a shortcut. Most of the value is created in the eight to twelve weeks before the yacht reaches the yard, in the condition survey, the specification, and the tender. A representative engaged after the contract is signed is managing a position someone else negotiated.
+              </p>
+            </div>
+          </details>
         </div>
       </section>
 
