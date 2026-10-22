@@ -168,7 +168,7 @@ The search index used by AI assistants for web lookups returned no forelandmarin
 
 ### Remaining, needs Jack
 
-1. Bing Webmaster Tools: confirm the site is verified, submit the sitemap and check URL coverage. Bing feeds ChatGPT search, Copilot and DuckDuckGo.
+1. Bing Webmaster Tools: DONE 22 October. Sitemap submitted by Jack (TFOR sitemap also submitted). Check URL coverage in a week. Bing feeds ChatGPT search, Copilot and DuckDuckGo.
 2. Google Search Console: request indexing of the homepage so the new title is picked up, and check the "foreland marine" query in Performance.
 3. Google Business Profile for 7 Bell Yard, if not already live. It is the strongest single signal for a brand query on Google.
 4. LinkedIn: no action. /company/foreland-marine-consulting-ltd is an old URL that redirects to /company/forelandmarine (checked 22 October), so there is only one page.
