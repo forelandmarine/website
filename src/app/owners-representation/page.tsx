@@ -204,9 +204,6 @@ export default function NewBuildPage() {
               </p>
             </div>
           </div>
-          <p className="mt-10 max-w-3xl text-muted leading-relaxed" data-animate="fade-up">
-            Our guides to <Link href="/insights/building-a-spirit-yacht-owners-representation" className="text-accent hover:text-white transition-colors underline underline-offset-2">building a Spirit yacht</Link> and <Link href="/insights/buying-a-pre-owned-spirit-yacht" className="text-accent hover:text-white transition-colors underline underline-offset-2">buying a pre-owned Spirit</Link> show how owner&apos;s representation works on a cold-moulded yacht.
-          </p>
           <div className="mt-10">
             <ButtonPrimary href="/contact">Discuss your project</ButtonPrimary>
           </div>
