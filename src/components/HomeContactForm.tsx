@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEnquiry } from "@/lib/ads";
 import { ButtonPrimary } from "@/components/ui";
 
 export default function HomeContactForm() {
@@ -16,7 +17,7 @@ export default function HomeContactForm() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(form),
       });
-      if (res.ok) { setStatus("success"); setForm({ name: "", email: "", message: "" }); }
+      if (res.ok) { trackEnquiry(); setStatus("success"); setForm({ name: "", email: "", message: "" }); }
       else setStatus("error");
     } catch { setStatus("error"); }
   }
