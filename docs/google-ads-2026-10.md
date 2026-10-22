@@ -70,3 +70,15 @@ No search volume data was pulled; check each group in Keyword Planner before set
 - boat, dinghy, narrowboat, rib, jet ski
 - insurance, finance, mortgage
 - marine engineering apprenticeship, yacht design course
+
+## Locations
+
+Site visitors by country, 24 July to 22 October 2026 (Vercel Web Analytics): US 944, GB 393, NL 103, IT 98, ES 86, DE 81, FR 72, AU 63, CA 50. Singapore (947) and China (645) are almost entirely bots and are excluded.
+
+Tier 1, start here: United Kingdom (weighted to London and the South Coast), Monaco, France (Côte d'Azur), Spain (Balearics and Barcelona), Netherlands. These are where owners, captains and the yards for 24 to 60 m work sit.
+
+Tier 2, add once tier 1 converts: Italy, Germany, Switzerland, Florida (Fort Lauderdale, Palm Beach, Miami), New England (Newport RI), California (Bay Area, see docs/sales).
+
+Leave out: Singapore, China, India, Hong Kong, Russia.
+
+Settings: location option "Presence: people in or regularly in your locations", not "presence or interest". Language English. Schedule the Mediterranean campaigns heavier from October to April, the refit season.
