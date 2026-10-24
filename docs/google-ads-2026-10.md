@@ -89,7 +89,7 @@ Account 182-541-7041, campaign Performance Max-1 (ID 24378359946), asset group A
 
 - Google tag AW-18530780689 in src/app/layout.tsx.
 - Conversion "Enquiry form sent" (label R0drCI_f4qUdEJGMlYRF), primary, fired from src/lib/ads.ts when the homepage or /contact form posts successfully. The earlier page-load conversion on /contact is now secondary. Enhanced conversions left off.
-- Locations: Jack's 16 (Amsterdam, Annapolis, Chigwell, Geneva, Greater London, Hertfordshire, Hong Kong, Miami, Monaco, Newport County RI, Palma, San Francisco, SF Bay Area, Surrey, Switzerland, Zurich), set to Presence only.
+- Locations: Jack's 16 (Amsterdam, Annapolis, Chigwell, Geneva, Greater London, Hertfordshire, Hong Kong, Miami, Monaco, Newport County RI, Palma, San Francisco, SF Bay Area, Surrey, Switzerland, Zurich), set to Presence only. Hong Kong removed 24 October 2026; 15 remain.
 - Asset optimisation off: text customisation, final URL expansion, image and video enhancement. Final URL https://www.forelandmarine.com/.
 - Account-level negative keywords: 31, from the list above, plus "foreland marine" and [forelandmarine] in place of a brand exclusion (Google's brand library has no Foreland Marine entry). "charter" narrowed to "yacht charter" so charter-yacht management searches still match.
 - Search themes: 14, the refit, owner's representation and management phrases above.
@@ -144,3 +144,13 @@ Five more per group, all four groups now at 11 (ad strength Good):
 - Owner's representation: Yard Selection and Contracts; On Site at the Yard; From Keel to Delivery; New Builds 24 to 60 Metres; YORR Registered Owner's Rep
 - Yacht management: ISM Code Implementation; Crew, Budgets and Insurance; Class and Flag Administration; Management for 24 to 60m; Monthly Budget Reporting
 - Asset Group 1: Independent Superyacht Advice; Superyacht Consultancy London; Captains and Chief Engineers; Yachts 24 to 60 Metres; Acting for Owners Only
+
+## First review, 24 October 2026
+
+Google Ads, 22 to 24 October: 1,892 impressions, 102 clicks, £13.90, average CPC £0.14. Hong Kong took 1,775 impressions (94%) and nearly all of the 100 clicks on 24 October. The other 15 locations had 117 impressions between them.
+
+Vercel Web Analytics, same period: 119 Hong Kong visitors, 170 pageviews (1.4 a visitor), 89% mobile. Referrers were googleads.g.doubleclick.net, youtube.com, in-app webviews with no referrer, and H5 game and utility sites. This is display and app inventory, not prospects. No Hong Kong visit produced an enquiry.
+
+Enquiries in fm_enquiries since launch: two, 22 and 24 October, both from the contact page. The table records the page only, with no click ID, so they cannot be attributed to the campaign.
+
+Action: Jack removed Hong Kong from the locations on 24 October. Budget unchanged at £50 a day.
