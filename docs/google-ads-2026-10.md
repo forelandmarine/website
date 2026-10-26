@@ -154,3 +154,29 @@ Vercel Web Analytics, same period: 119 Hong Kong visitors, 170 pageviews (1.4 a 
 Enquiries in fm_enquiries since launch: two, 22 and 24 October, both from the contact page. The table records the page only, with no click ID, so they cannot be attributed to the campaign.
 
 Action: Jack removed Hong Kong from the locations on 24 October. Budget unchanged at £50 a day.
+
+## Second review, 26 October 2026
+
+Google Ads, 22 to 25 October: 20,395 impressions, 2,014 interactions, £129.87, one conversion (24 October). Channel split by cost: Display Network £103.33 (80%), YouTube £18.89 (15%), Discover £7.64 (6%), Search £0.00 (4 impressions, no clicks). The placement report lists 1,261 placements, led by mobile apps (X, Quran Majeed, Vita Mahjong, Muslim Pro, MADFUT) and sites such as taboolanews.com, gpt-appstore.com, poki.com and apkzp.com.
+
+Vercel Web Analytics: visitors rose from about 45 a day to 644 on 24 October and 386 on 25 October. After Hong Kong was removed the spend moved to Spain (Palma) and the UK with the same pattern: 80 to 90% mobile, referrers googlesyndication, doubleclick, YouTube and Taboola or none (in-app), about 1.3 to 1.7 pages a visit. A burst of about 260 UK mobile visitors arrived between 21:00 and 01:00 UTC on 25 October. Visits referred by google.com stayed at 5 to 15 a day. The single conversion is most likely the "Ahmed" contact-form entry at 19:16 on 24 October, which carried no message.
+
+Actions, 26 October 2026:
+- Account-level placement exclusions (Content suitability): all 140 app categories (Apple App Store 84, Google Play 56) and 21 websites: taboolanews.com, gpt-appstore.com, gpts-apps.com, poki.com, apkzp.com, askapk.com, superbaby.tv, videosfortoddlers.com, fflivegame.com, pipajam.com, apexnews.com, kmb.hk, econozi.com, ulockpic.com, zazuke.com, comfortweather.com, lsmagazineimg.com, rowclaw.online, comn-kaik.ai, paul-kaik.ai, funspark.click. These apply to Performance Max.
+- Performance Max-1 budget cut from £50 to £20 a day (Jack's choice: split the £50, Search £30, PMax £20).
+- Search campaign not yet published. Google asks for re-authentication (CAMPAIGN_BUDGET_INCREASE_BEYOND_THRESHOLD) and rejects that sign-in from the automated browser, so it must be published from Jack's own browser.
+
+### Search campaign spec (to publish)
+Name: Search - Services. Objective Leads, goal Submit lead forms. Budget £30 a day. Bidding Maximise clicks, maximum CPC £4.00 (move to Maximise conversions once there are 15 or more real conversions). Networks: Google Search only; search partners and Display Network off. Locations: the same 15 as PMax (Amsterdam, Annapolis, Chigwell, Geneva canton, Greater London, Hertfordshire, Miami, Monaco, Newport County RI, Palma, San Francisco, San Francisco Bay Area, Surrey, Switzerland, Zurich), Presence only. Language English. No EU political ads. AI Max off, text customisation off, final URL expansion off. Sitelinks: the six PMax sitelinks.
+
+Ad group Refit, final URL /refit, display path refit/superyacht.
+Keywords: "superyacht refit management", [superyacht refit management], "yacht refit management", [yacht refit management], "yacht refit project management", "yacht refit project manager", "superyacht refit consultant", "yacht refit consultant", "sailing yacht refit management", "superyacht refit project manager".
+Headlines: the eleven Refit headlines above. Descriptions: the four Refit descriptions above.
+
+Ad group Owner's representation, final URL /owners-representation, display path owners-rep/new-build.
+Keywords: "yacht owner's representative", "superyacht owner's representative", "owner's representative yacht", "yacht new build project management", "new build owner's rep", "superyacht build supervision", "yacht build supervision".
+Headlines and descriptions: the Owner's representation lines above.
+
+Ad group Yacht management, final URL /yacht-management, display path management/ism.
+Keywords: "yacht management company", "superyacht management", "independent yacht management", "sailing yacht management", "ism yacht management", "superyacht management company".
+Headlines and descriptions: the Yacht management lines above.
