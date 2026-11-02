@@ -14,7 +14,7 @@ export default function SeatimeTermsPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">AIS SeaTime Tracker</p>
           <h1 className="text-4xl font-light text-white mb-3">Terms of Use</h1>
-          <p className="text-muted text-sm mb-8">Last updated: 9 April 2026</p>
+          <p className="text-muted text-sm mb-8">Last updated: 2 November 2026</p>
           <HorizonLine />
         </div>
       </section>
@@ -39,10 +39,11 @@ export default function SeatimeTermsPage() {
               <p className="text-muted leading-relaxed">
                 Subject to your compliance with these Terms, Foreland Marine
                 grants you a limited, non-exclusive, non-transferable,
-                revocable licence to download and use the App on any
-                Apple-branded products that you own or control, and as
-                permitted by the Apple Media Services Terms and Conditions.
-                This licence does not allow you to use the App on any device
+                revocable licence to download and use the App on any device
+                that you own or control, as permitted by the terms of the app
+                store you obtained it from (the Apple Media Services Terms and
+                Conditions for the Apple App Store, or the Google Play Terms of
+                Service for Google Play). This licence does not allow you to use the App on any device
                 that you do not own or control.
               </p>
             </div>
@@ -77,27 +78,88 @@ export default function SeatimeTermsPage() {
                 You are responsible for maintaining the confidentiality of your
                 account credentials and for all activity that occurs under your
                 account. You must notify us immediately of any unauthorised use
-                of your account.
+                of your account. You can delete your account at any time from
+                your profile in the App.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">4. Sea Time Records</h2>
-              <p className="text-muted leading-relaxed">
+              <h2 className="text-xl font-light text-white mb-4">4. Subscriptions and Purchases</h2>
+              <p className="text-muted leading-relaxed mb-3">
+                Some features of the App need a paid &ldquo;Pro&rdquo; subscription. We
+                may also offer one-off purchases, such as AIS history import.
+                Prices are shown in the App before you buy.
+              </p>
+              <ul className="space-y-2 text-muted list-none pl-0">
+                {[
+                  "Payment: all payments are taken by the app store you use (Apple App Store or Google Play) and are charged to your store account. We never see your card details.",
+                  "Auto-renewal: subscriptions renew automatically at the end of each period (monthly or yearly) unless you cancel at least 24 hours before the period ends. You can manage or cancel your subscription in your Apple or Google account settings. Deleting the App or your account does not cancel a subscription.",
+                  "Free trials: where we offer a free trial, you will be charged when the trial ends unless you cancel before then. If you cancel during a trial, you keep access until the trial ends.",
+                  "AIS history import: a history import requests past AIS positions for the vessel and dates you choose and turns them into sea time entries for you to review. Historic AIS data can be incomplete, and some vessels or periods may have little or no coverage. The entries it creates are subject to section 5 like any other entry.",
+                  "Refunds: refunds are handled by Apple or Google under their own refund policies. We cannot issue refunds for purchases made through an app store.",
+                  "Price changes: we may change prices. Any change to a subscription price will be notified to you by the app store in line with its rules before it applies.",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 mt-1.5 h-1.5 w-1.5 rounded-full bg-accent" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-light text-white mb-4">5. Sea Time Records</h2>
+              <p className="text-muted leading-relaxed mb-3">
                 The App provides tools to log and present sea time records for
                 personal and professional use. You are solely responsible for
-                the accuracy of any sea time records you create, edit or
-                submit. The App is provided as an aid to record keeping and
-                does not constitute an official log or substitute for any
-                statutory record required by flag states, classification
-                societies, the MCA or any other regulatory body. Foreland
-                Marine accepts no liability for the use of sea time records in
+                the accuracy of any sea time records you create, edit, import
+                or submit, and for reviewing entries the App suggests before
+                you confirm them.
+              </p>
+              <p className="text-muted leading-relaxed mb-3">
+                The way the App counts sea time depends on the settings you
+                choose for your account and vessels, such as the vessel&apos;s
+                sector, length, engine power, whether it is a workboat, whether
+                it runs a two-watch system, and whether you are the sole
+                watchkeeper. You are responsible for making sure these settings
+                are correct.
+              </p>
+              <p className="text-muted leading-relaxed">
+                The App is provided as an aid to record keeping and does not
+                constitute an official log or substitute for any statutory
+                record required by flag states, classification societies, the
+                MCA, USCG, AMSA, Maritime New Zealand, SAMSA or any other
+                regulatory body. Only the relevant authority can decide whether
+                your sea time counts towards a certificate. Foreland Marine
+                accepts no liability for the use of sea time records in
                 regulatory or certification contexts.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">5. AIS and Position Data</h2>
+              <h2 className="text-xl font-light text-white mb-4">6. Pathways, Courses and Training Providers</h2>
+              <p className="text-muted leading-relaxed mb-3">
+                The App shows certificate pathways, sea time requirements, oral
+                exam checklists and course requirements for several
+                authorities, and a pathway assistant that suggests next steps.
+                This information is based on our reading of published rules and
+                is provided as a guide only. Rules change, and authorities may
+                apply them differently to your case. Always check your own
+                requirements with the relevant authority before you apply for a
+                certificate or book an exam.
+              </p>
+              <p className="text-muted leading-relaxed">
+                Find a course lists training providers, approvals and course
+                dates gathered from public sources and from the providers&apos; own
+                websites. We do not run, endorse or guarantee any provider or
+                course, and listings, approvals and dates may be out of date or
+                incomplete. Check details directly with the provider before you
+                book. Any booking is between you and the provider.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-light text-white mb-4">7. AIS and Position Data</h2>
               <p className="text-muted leading-relaxed">
                 Vessel position data displayed in the App is sourced from
                 third-party AIS feeds and public broadcasting infrastructure.
@@ -110,7 +172,7 @@ export default function SeatimeTermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">6. Intellectual Property</h2>
+              <h2 className="text-xl font-light text-white mb-4">8. Intellectual Property</h2>
               <p className="text-muted leading-relaxed">
                 The App, including all content, features, branding, code,
                 designs and trademarks, is owned by Foreland Marine or its
@@ -124,7 +186,7 @@ export default function SeatimeTermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">7. Privacy</h2>
+              <h2 className="text-xl font-light text-white mb-4">9. Privacy</h2>
               <p className="text-muted leading-relaxed">
                 Your use of the App is subject to our{" "}
                 <a href="/tools/seatime-tracker/privacy" className="text-accent hover:text-white transition-colors">Privacy Policy</a>,
@@ -134,7 +196,7 @@ export default function SeatimeTermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">8. Disclaimers</h2>
+              <h2 className="text-xl font-light text-white mb-4">10. Disclaimers</h2>
               <p className="text-muted leading-relaxed">
                 THE APP IS PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS,
                 WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. TO THE
@@ -143,12 +205,13 @@ export default function SeatimeTermsPage() {
                 FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, RELIABILITY AND
                 NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE
                 UNINTERRUPTED, ERROR-FREE OR FREE OF HARMFUL COMPONENTS, OR
-                THAT VESSEL POSITION OR AIS DATA WILL BE ACCURATE OR COMPLETE.
+                THAT VESSEL POSITION, AIS DATA, PATHWAY INFORMATION OR TRAINING
+                PROVIDER LISTINGS WILL BE ACCURATE OR COMPLETE.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">9. Limitation of Liability</h2>
+              <h2 className="text-xl font-light text-white mb-4">11. Limitation of Liability</h2>
               <p className="text-muted leading-relaxed">
                 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, FORELAND
                 MARINE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL,
@@ -161,10 +224,16 @@ export default function SeatimeTermsPage() {
                 FOR THE APP IN THE TWELVE MONTHS PRECEDING THE CLAIM, OR (B)
                 FIFTY POUNDS STERLING (GBP 50).
               </p>
+              <p className="text-muted leading-relaxed mt-3">
+                Nothing in these Terms limits or excludes our liability for
+                death or personal injury caused by our negligence, for fraud, or
+                for anything else that cannot be limited or excluded by law, and
+                nothing affects your statutory rights as a consumer.
+              </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">10. Indemnification</h2>
+              <h2 className="text-xl font-light text-white mb-4">12. Indemnification</h2>
               <p className="text-muted leading-relaxed">
                 You agree to indemnify and hold harmless Foreland Marine, its
                 officers, directors, employees and agents from and against any
@@ -175,7 +244,7 @@ export default function SeatimeTermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">11. Termination</h2>
+              <h2 className="text-xl font-light text-white mb-4">13. Termination</h2>
               <p className="text-muted leading-relaxed">
                 These Terms remain in effect until terminated by you or by us.
                 You may terminate by deleting your account and removing the
@@ -187,7 +256,7 @@ export default function SeatimeTermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">12. Apple Specific Terms</h2>
+              <h2 className="text-xl font-light text-white mb-4">14. Apple Specific Terms</h2>
               <p className="text-muted leading-relaxed mb-3">If you obtained the App from the Apple App Store, the following additional terms apply:</p>
               <ul className="space-y-2 text-muted list-none pl-0">
                 {[
@@ -209,7 +278,18 @@ export default function SeatimeTermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">13. Governing Law</h2>
+              <h2 className="text-xl font-light text-white mb-4">15. Google Play Specific Terms</h2>
+              <p className="text-muted leading-relaxed">
+                If you obtained the App from Google Play, your use of the App is
+                also subject to the Google Play Terms of Service. These Terms
+                are between you and Foreland Marine, not Google. Google is not
+                responsible for the App or its content, and Foreland Marine is
+                responsible for any support and any claims relating to the App.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-light text-white mb-4">16. Governing Law</h2>
               <p className="text-muted leading-relaxed">
                 These Terms are governed by the laws of England and Wales.
                 Any dispute arising from or relating to these Terms or the
@@ -221,7 +301,7 @@ export default function SeatimeTermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">14. Changes to These Terms</h2>
+              <h2 className="text-xl font-light text-white mb-4">17. Changes to These Terms</h2>
               <p className="text-muted leading-relaxed">
                 We may update these Terms from time to time. The &ldquo;Last
                 updated&rdquo; date at the top of this page indicates when these
@@ -231,7 +311,7 @@ export default function SeatimeTermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-light text-white mb-4">15. Contact</h2>
+              <h2 className="text-xl font-light text-white mb-4">18. Contact</h2>
               <p className="text-muted leading-relaxed">
                 If you have any questions about these Terms, please contact us at{" "}
                 <a href="mailto:info@forelandmarine.com" className="text-accent hover:text-white transition-colors">info@forelandmarine.com</a>{" "}

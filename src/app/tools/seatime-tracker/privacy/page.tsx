@@ -14,7 +14,7 @@ export default function SeatimePrivacyPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">AIS SeaTime Tracker</p>
           <h1 className="text-4xl font-light text-white mb-3">Privacy Policy</h1>
-          <p className="text-muted text-sm mb-8">Last updated: 9 July 2026</p>
+          <p className="text-muted text-sm mb-8">Last updated: 2 November 2026</p>
           <HorizonLine />
         </div>
       </section>
@@ -48,12 +48,16 @@ export default function SeatimePrivacyPage() {
               <p className="text-muted leading-relaxed mb-3">When you use the App, we may collect the following categories of information:</p>
               <ul className="space-y-2 text-muted list-none pl-0">
                 {[
-                  "Account information: name, email address and password used to create and manage your account.",
-                  "Vessel information: vessel name, MMSI number, IMO number, vessel type, length and other voluntarily provided vessel details.",
+                  "Account information: name, email address and password used to create and manage your account, or the details Apple shares if you sign in with Apple (you can choose to hide your email, in which case Apple gives us a private relay address).",
+                  "Profile and career details: the department and sector you work in, the certificate you are working towards and the authority that issues it (for example the MCA, USCG, AMSA, MNZ or SAMSA). If you want them on your sea time reports, you can also add your address, phone number, date of birth, nationality, discharge book number, PYA membership number and a signature. All of these are optional.",
+                  "Vessel information: vessel name, MMSI number, IMO number, flag, vessel type, length, engine power, sector and how the vessel is operated (for example a two-watch system or a sole watchkeeper).",
                   "Voyage and position data: AIS-derived position records, dates, times, ports of call and voyage history associated with the vessels you track.",
-                  "Sea time records: logged sea time entries, watch records, and any annotations you choose to add.",
+                  "Sea time records: logged sea time entries, watch records, shift times, on and off board dates, certificates and any annotations you choose to add.",
                   "Profile photo: an optional photo you choose to add to your account, selected from your device camera or photo library.",
-                  "Purchase information: transaction identifiers and subscription status for the optional Pro subscription, processed by the app stores and RevenueCat.",
+                  "Purchase information: transaction identifiers and subscription status for the optional Pro subscription and one-off purchases such as AIS history import, processed by the app stores and RevenueCat.",
+                  "Notification tokens: if you allow notifications, a push token for your device so we can send reminders, for example about entries waiting for review or a shift that is still clocked in.",
+                  "Email preferences: whether you have opted in to news and offers, and when.",
+                  "Anonymous sign-up events: a few first-run steps (for example opening the App, reaching the account screen, creating an account and adding a vessel) with a random install code, the platform and the App version. These contain no name, email, user ID or IP address and cannot be linked to you.",
                   "Device and usage data: device type, operating system version, App version, crash logs, diagnostic data and aggregated usage statistics.",
                   "Communications: any correspondence you send to us, including support requests and feedback.",
                 ].map((item, i) => (
@@ -74,7 +78,11 @@ export default function SeatimePrivacyPage() {
                   "To create and manage your user account and authenticate access.",
                   "To retrieve, store and display vessel position data and voyage history.",
                   "To compile and present sea time records for your professional use.",
+                  "To find a vessel's MMSI from its name and length when you use Find my vessel, and to fetch past AIS positions when you buy a history import.",
+                  "To show the right sea time rules, certificate pathways and training courses for your authority and target certificate.",
+                  "To send account emails (such as a welcome email and password resets), reminders by push notification, and, only if you opt in, news and offers. Every marketing email has an unsubscribe link, and you can change your choice in Settings at any time.",
                   "To communicate with you regarding updates, security notices and support requests.",
+                  "To understand, using anonymous events, where new users get stuck during sign-up.",
                   "To improve the App, diagnose technical issues and develop new features.",
                   "To comply with legal obligations and enforce our Terms of Use.",
                 ].map((item, i) => (
@@ -95,11 +103,14 @@ export default function SeatimePrivacyPage() {
                 not from your phone&apos;s GPS.
               </p>
               <p className="text-muted leading-relaxed mt-3">
-                With your permission, the App also accesses your device
-                location to record vessel positions and to calculate qualifying
-                sea time. Location is accessed only while you are using the App
-                (&ldquo;when in use&rdquo;); the App does not track your location in the
-                background.
+                With your permission, the App also uses your phone&apos;s
+                location, but only while the App is open. We use it to check
+                whether you are near your vessel so we can remind you to clock
+                in or out of a shift, to record your position when you log sea
+                time manually, and to show how far training providers are from
+                you in Find a course. Your sea time is calculated from your
+                vessel&apos;s AIS position, not from your phone. The App does not
+                track your location in the background.
               </p>
             </div>
 
@@ -108,9 +119,12 @@ export default function SeatimePrivacyPage() {
               <p className="text-muted leading-relaxed">
                 If you choose to add a profile photo to your SeaTime Tracker
                 account, the App will ask permission to access your device
-                camera and/or photo library. Any photo you select is uploaded
-                to your account and used solely to personalise your profile. We
-                do not access your camera or photos for any other purpose.
+                camera and/or photo library. The photo you select is resized on
+                your phone and uploaded to private storage linked to your
+                account. It is used solely to personalise your profile. When you
+                replace a photo, the old one is deleted, and your photo is
+                deleted when you delete your account. We do not access your
+                camera or photos for any other purpose.
               </p>
             </div>
 
@@ -157,10 +171,13 @@ export default function SeatimePrivacyPage() {
               <p className="text-muted leading-relaxed mb-3">We do not sell your personal information. We may share information with the following categories of recipients:</p>
               <ul className="space-y-2 text-muted list-none pl-0">
                 {[
-                  "Service providers: hosting, database, authentication, analytics and crash reporting providers acting under contract on our behalf.",
+                  "Hosting and storage: Supabase (database, held in Ireland) and Railway Corporation (application hosting and profile photo storage in the Netherlands).",
+                  "AIS data providers: Datalastic and MyShipTracking receive vessel names, MMSI numbers and date ranges to supply vessel positions. They do not receive your name or email.",
+                  "Email and notifications: Resend sends account and marketing emails; Expo, Apple and Google deliver push notifications.",
                   "App stores: limited diagnostic, crash and purchase data may be shared via the Apple App Store, TestFlight and Google Play in accordance with Apple's and Google's policies.",
                   "RevenueCat, Inc.: purchase and subscription entitlement data, as described in section 6.",
                   "Sentry (Functional Software, Inc.): crash and diagnostic data, as described in section 7.",
+                  "We do not share your sea time records with any maritime authority or employer. If you export a report from the App and send it to someone, that is your choice.",
                   "Legal authorities: where disclosure is required to comply with a legal obligation, court order or government request.",
                   "Successors: in connection with any merger, acquisition or sale of assets, subject to standard confidentiality protections.",
                 ].map((item, i) => (
@@ -179,7 +196,10 @@ export default function SeatimePrivacyPage() {
                 account remains active. If you delete your account, we will
                 delete or anonymise your personal data within 30 days, except
                 where retention is required by law or for legitimate business
-                purposes such as fraud prevention.
+                purposes such as fraud prevention. Records of purchases are kept
+                by Apple, Google and RevenueCat under their own policies.
+                Anonymous sign-up events cannot be linked to you and are not
+                affected.
               </p>
             </div>
 
@@ -226,9 +246,11 @@ export default function SeatimePrivacyPage() {
                 You may delete your account at any time from within the App
                 settings, or by emailing{" "}
                 <a href="mailto:info@forelandmarine.com" className="text-accent hover:text-white transition-colors">info@forelandmarine.com</a>{" "}
-                with your account details. Deletion will remove your personal
-                information and associated voyage records from our active
-                systems within 30 days.
+                with your account details. Deleting your account in the App
+                removes your account, profile details, vessels, sea time
+                entries, AIS checks linked to your vessels, notifications,
+                sessions and profile photo straight away. A request by email is
+                completed within 30 days.
               </p>
             </div>
 
@@ -248,9 +270,13 @@ export default function SeatimePrivacyPage() {
               <p className="text-muted leading-relaxed">
                 Your information may be processed and stored in countries
                 outside your country of residence, including the United Kingdom
-                and the European Union. Where data is transferred outside the
-                UK or EEA, we rely on appropriate safeguards such as Standard
-                Contractual Clauses to protect your data.
+                and the European Union. Your account data is held in a database
+                in Ireland and profile photos are stored in the Netherlands.
+                Some of our service providers (including RevenueCat, Sentry,
+                Resend, Expo and Railway) are based in the USA. Where data is
+                transferred outside the UK or EEA, we rely on appropriate
+                safeguards such as Standard Contractual Clauses or the UK
+                International Data Transfer Agreement to protect your data.
               </p>
             </div>
 
