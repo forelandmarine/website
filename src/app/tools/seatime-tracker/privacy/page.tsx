@@ -14,7 +14,7 @@ export default function SeatimePrivacyPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">AIS SeaTime Tracker</p>
           <h1 className="text-4xl font-light text-white mb-3">Privacy Policy</h1>
-          <p className="text-muted text-sm mb-8">Last updated: 2 November 2026</p>
+          <p className="text-muted text-sm mb-8">Last updated: 5 November 2026</p>
           <HorizonLine />
         </div>
       </section>
@@ -48,10 +48,11 @@ export default function SeatimePrivacyPage() {
               <p className="text-muted leading-relaxed mb-3">When you use the App, we may collect the following categories of information:</p>
               <ul className="space-y-2 text-muted list-none pl-0">
                 {[
-                  "Account information: name, email address and password used to create and manage your account, or the details Apple shares if you sign in with Apple (you can choose to hide your email, in which case Apple gives us a private relay address).",
+                  "Account information: name, email address and password used to create and manage your account, or the details Apple shares if you sign in with Apple (you can choose to hide your email, in which case Apple gives us a private relay address), or the name and email address Google shares if you sign in with Google on Android.",
                   "Profile and career details: the department and sector you work in, the certificate you are working towards and the authority that issues it (for example the MCA, USCG, AMSA, MNZ or SAMSA). If you want them on your sea time reports, you can also add your address, phone number, date of birth, nationality, discharge book number, PYA membership number and a signature. All of these are optional.",
                   "Vessel information: vessel name, MMSI number, IMO number, flag, vessel type, length, engine power, sector and how the vessel is operated (for example a two-watch system or a sole watchkeeper).",
                   "Voyage and position data: AIS-derived position records, dates, times, ports of call and voyage history associated with the vessels you track.",
+                  "Signatures from others: if you ask a master or company to sign an entry or countersign a testimonial, on your phone or through a one-time link, the name, position, certificate number, company contact details and remarks they enter, and their signature.",
                   "Sea time records: logged sea time entries, watch records, shift times, on and off board dates, certificates and any annotations you choose to add.",
                   "Profile photo: an optional photo you choose to add to your account, selected from your device camera or photo library.",
                   "Purchase information: transaction identifiers and subscription status for the optional Pro subscription and one-off purchases such as AIS history import, processed by the app stores and RevenueCat.",

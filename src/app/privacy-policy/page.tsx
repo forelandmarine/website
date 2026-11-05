@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <section className="relative py-20 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-light text-white mb-3">Privacy Policy</h1>
-          <p className="text-muted text-sm mb-8">Last updated: 2 November 2026</p>
+          <p className="text-muted text-sm mb-8">Last updated: 5 November 2026</p>
           <HorizonLine />
         </div>
       </section>
@@ -51,10 +51,10 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p className="text-muted leading-relaxed mt-6 mb-3">For users of the SeaTime Tracker mobile application, the following also applies:</p>
               <p className="text-muted leading-relaxed mb-3">
-                <strong className="text-white">Account.</strong> To create an account we collect your name and email address and a password, or you can sign in with Apple. If you sign in with Apple you can choose to hide your email address, in which case Apple gives us a private relay address. You can also tell us the department and sector you work in, the certificate you are working towards and the authority that issues it (for example the MCA, USCG, AMSA, MNZ or SAMSA). We use this to show the right sea time rules and pathways. If you want them on your sea time reports, you can also add your address, phone number, date of birth, nationality, discharge book number, PYA membership number and a signature. All of these are optional.
+                <strong className="text-white">Account.</strong> To create an account we collect your name and email address and a password, or you can sign in with Apple or, on Android, with Google. If you sign in with Apple you can choose to hide your email address, in which case Apple gives us a private relay address. If you sign in with Google, Google shares your name and email address with us and nothing else. You can also tell us the department and sector you work in, the certificate you are working towards and the authority that issues it (for example the MCA, USCG, AMSA, MNZ or SAMSA). We use this to show the right sea time rules and pathways. If you want them on your sea time reports, you can also add your address, phone number, date of birth, nationality, discharge book number, PYA membership number and a signature. All of these are optional.
               </p>
               <p className="text-muted leading-relaxed mb-3">
-                <strong className="text-white">Vessels and sea time.</strong> You tell us which vessels you serve on, such as their name, MMSI, IMO number, flag, type, length, engine power and how the vessel is operated (for example whether it runs a two-watch system or a sole watchkeeper). We use public AIS data for those vessels to work out when they are underway and to build your sea time record. Your sea time entries, notes, shift times, certificates and the dates you are on or off board are stored with your account.
+                <strong className="text-white">Vessels and sea time.</strong> You tell us which vessels you serve on, such as their name, MMSI, IMO number, flag, type, length, engine power and how the vessel is operated (for example whether it runs a two-watch system or a sole watchkeeper). We use public AIS data for those vessels to work out when they are underway and to build your sea time record. Your sea time entries, notes, shift times, certificates and the dates you are on or off board are stored with your account. If you ask someone to sign an entry or countersign a testimonial, on your phone or through a one-time link, we store what they enter (their name, position, certificate number, company contact details and remarks) and their signature with your record, and show it on your reports.
               </p>
               <p className="text-muted leading-relaxed mb-3">
                 <strong className="text-white">Find my vessel.</strong> When you add a vessel by name and length, we send the vessel name and length (not your name or email) to our AIS data provider to find the matching MMSI. You confirm the match before it is saved.
