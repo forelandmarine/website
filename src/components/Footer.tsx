@@ -4,6 +4,7 @@ import Image from "next/image";
 const services = [
   { label: "Yacht Management", href: "/yacht-management" },
   { label: "New Build", href: "/owners-representation" },
+  { label: "The Owner's Team", href: "/owners-representation/owners-team" },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy" },
   { label: "Yacht Surveys", href: "/technical-consultancy/surveys" },

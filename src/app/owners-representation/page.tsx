@@ -270,6 +270,10 @@ export default function NewBuildPage() {
                   <p className="text-sm text-muted leading-relaxed">Project managers with delivery experience across leading European and US shipyards including Royal Huisman, Pendennis, Newport Shipyard, Lyman Morse, Rockport Marine and Hinckley Yachts, with particular depth in J Class and carbon composite programmes.</p>
                 </div>
               </div>
+              <p className="mt-6 text-sm text-muted leading-relaxed">
+                How these disciplines sit alongside the owner&apos;s lawyers, family office and future crew is set out in{" "}
+                <Link href="/owners-representation/owners-team" className="text-accent hover:text-white transition-colors">the owner&apos;s team on a new build</Link>.
+              </p>
             </div>
           </div>
         </div>
@@ -499,7 +503,7 @@ export default function NewBuildPage() {
       {/* RELATED SERVICES & FURTHER READING */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <p className="text-sm text-muted">
-          Related: <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link>, <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link>, <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link>
+          Related: <Link href="/owners-representation/owners-team" className="text-accent hover:text-white transition-colors">The Owner&apos;s Team</Link>, <Link href="/refit" className="text-accent hover:text-white transition-colors">Refit Project Management</Link>, <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link>, <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link>
         </p>
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">

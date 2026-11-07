@@ -10,7 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const revised: Record<string, string> = {
     "": "2026-10-21",
     "/about": "2026-09-21",
-    "/owners-representation": "2026-10-21",
+    "/owners-representation": "2026-11-07",
+    "/owners-representation/owners-team": "2026-11-07",
     "/refit": "2026-10-21",
     "/technical-consultancy": "2026-09-09",
     "/technical-consultancy/surveys": "2026-09-09",
@@ -64,6 +65,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated("/owners-representation"),
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/owners-representation/owners-team`,
+      lastModified: lastUpdated("/owners-representation/owners-team"),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/refit`,

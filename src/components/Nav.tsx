@@ -4,6 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useCallback, useEffect } from "react";
 
+const newBuildLinks = [
+  { label: "Overview", href: "/owners-representation" },
+  { label: "The Owner's Team", href: "/owners-representation/owners-team" },
+];
+
 const consultancyLinks = [
   { label: "Overview", href: "/technical-consultancy" },
   { label: "Yacht Surveys", href: "/technical-consultancy/surveys" },
@@ -15,7 +20,7 @@ const navLinks: {
   href: string;
   children?: { label: string; href: string }[];
 }[] = [
-  { label: "New Build", href: "/owners-representation" },
+  { label: "New Build", href: "/owners-representation", children: newBuildLinks },
   { label: "Refit", href: "/refit" },
   { label: "Technical Consultancy", href: "/technical-consultancy", children: consultancyLinks },
   { label: "Yacht Management", href: "/yacht-management" },
@@ -40,10 +45,10 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
-  const [consultancyOpen, setConsultancyOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const contactCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const consultancyCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const menuCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const openTools = useCallback(() => {
     if (closeTimeout.current) { clearTimeout(closeTimeout.current); closeTimeout.current = null; }
@@ -63,13 +68,13 @@ export default function Nav() {
     contactCloseTimeout.current = setTimeout(() => setContactOpen(false), 200);
   }, []);
 
-  const openConsultancy = useCallback(() => {
-    if (consultancyCloseTimeout.current) { clearTimeout(consultancyCloseTimeout.current); consultancyCloseTimeout.current = null; }
-    setConsultancyOpen(true);
+  const openSubmenu = useCallback((href: string) => {
+    if (menuCloseTimeout.current) { clearTimeout(menuCloseTimeout.current); menuCloseTimeout.current = null; }
+    setOpenMenu(href);
   }, []);
 
-  const closeConsultancy = useCallback(() => {
-    consultancyCloseTimeout.current = setTimeout(() => setConsultancyOpen(false), 200);
+  const closeSubmenu = useCallback(() => {
+    menuCloseTimeout.current = setTimeout(() => setOpenMenu(null), 200);
   }, []);
 
   useEffect(() => {
@@ -105,21 +110,21 @@ export default function Nav() {
                 <div
                   key={link.href}
                   className="relative"
-                  onMouseEnter={openConsultancy}
-                  onMouseLeave={closeConsultancy}
+                  onMouseEnter={() => openSubmenu(link.href)}
+                  onMouseLeave={closeSubmenu}
                 >
                   <Link
                     href={link.href}
                     className="flex items-center gap-1 px-3 py-2 text-sm font-light text-[#C3D9E8] hover:text-white transition-colors rounded hover:bg-white/5"
                   >
                     {link.label}
-                    <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform ${consultancyOpen ? "rotate-180" : ""}`}>
+                    <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform ${openMenu === link.href ? "rotate-180" : ""}`}>
                       <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </Link>
                   <div
                     className={`absolute top-full left-0 pt-2 w-48 transition-opacity ${
-                      consultancyOpen ? "opacity-100" : "invisible opacity-0 pointer-events-none"
+                      openMenu === link.href ? "opacity-100" : "invisible opacity-0 pointer-events-none"
                     }`}
                   >
                     <div className="border border-white/10 bg-bg1 shadow-xl shadow-black/40 py-1">
