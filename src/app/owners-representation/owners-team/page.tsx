@@ -54,7 +54,7 @@ function DiagramBox({ x, y, w, h, title, lines, dashed }: { x: number; y: number
 
 function TeamDiagram() {
   return (
-    <svg viewBox="0 40 760 690" role="img" aria-label="The owner's team: specialists report through one representative, who alone instructs the yard" fontSize="13" className="w-full h-auto">
+    <svg viewBox="0 0 920 500" role="img" aria-label="The owner instructs the owner's representative, who alone instructs the shipyard; the family office and legal and tax advisers advise the owner; specialists, designers and future operators report to the representative" fontSize="13" className="w-full h-auto">
       <defs>
         <marker id="team-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M0 0L10 5L0 10z" fill={edge} />
@@ -63,92 +63,86 @@ function TeamDiagram() {
           <path d="M0 0L10 5L0 10z" fill={accent} />
         </marker>
       </defs>
-      <g fill="none" stroke={edge} strokeWidth="1.25">
-        <path d="M380 104V148" markerEnd="url(#team-arrow)" />
-        <path d="M134 148V126H626V148" markerEnd="url(#team-arrow)" />
-        <path d="M134 126V148" markerEnd="url(#team-arrow)" />
-        <path d="M380 236V264" />
-        <path d="M186 292V264H574V292" markerEnd="url(#team-arrow)" />
-        <path d="M186 264V292" markerEnd="url(#team-arrow)" />
-        <path d="M574 264H750V520H738" markerEnd="url(#team-arrow)" />
+
+      <text x="20" y="22" fontSize="11.5" fill={quiet}>Owner&apos;s team</text>
+      <path d="M20 382H900" stroke={edge} strokeWidth="1" strokeDasharray="3 5" />
+      <text x="20" y="404" fontSize="11.5" fill={quiet}>Outside the owner&apos;s team</text>
+
+      <g fill="none" stroke={edge} strokeWidth="1.25" strokeDasharray="4 4">
+        <path d="M330 60H150V110" />
+        <path d="M590 60H770V110" />
       </g>
-      <path d="M380 264V652H412" fill="none" stroke={accent} strokeWidth="2" strokeDasharray="6 4" markerEnd="url(#yard-arrow)" />
 
-      <rect x="250" y="48" width="260" height="56" fill="none" stroke={edge} strokeWidth="1.25" />
-      <text x="380" y="72" textAnchor="middle" fontWeight="600" fill={ink}>Owner</text>
-      <text x="380" y="88" textAnchor="middle" fontSize="11.5" fill={quiet}>Sets brief, budget and authority</text>
+      <g fill="none" stroke={accent} strokeWidth="2">
+        <path d="M460 90V228" markerEnd="url(#yard-arrow)" />
+        <path d="M460 320V418" markerEnd="url(#yard-arrow)" />
+      </g>
 
-      <DiagramBox x={24} y={148} w={220} h={88} title="Family office" lines={["Financial controller. Holds", "funds, releases certified", "stage payments."]} />
+      <g fill="none" stroke={edge} strokeWidth="1.25">
+        <path d="M280 275H328" markerEnd="url(#team-arrow)" />
+        <path d="M640 234H615V316H640" />
+        <path d="M615 275H592" markerEnd="url(#team-arrow)" />
+      </g>
 
-      <rect x="270" y="148" width="220" height="88" fill={accent} fillOpacity="0.15" stroke={accent} strokeWidth="2" />
-      <text x="282" y="172" fontWeight="600" fill={ink}>Owner&apos;s representative</text>
-      <text x="282" y="188" fontSize="11.5" fill={ink}>Leads the team. Runs the</text>
-      <text x="282" y="204" fontSize="11.5" fill={ink}>programme. Certifies</text>
-      <text x="282" y="220" fontSize="11.5" fill={ink}>milestones and changes.</text>
+      <DiagramBox x={330} y={30} w={260} h={60} title="Owner" lines={["Sets brief, budget and authority"]} />
 
-      <DiagramBox x={516} y={148} w={220} h={88} title="Legal and tax advisers" lines={["Shipbuilding lawyer. Tax,", "structuring and insurance", "advisers."]} />
+      <DiagramBox x={20} y={110} w={260} h={70} title="Family office" lines={["Holds funds, releases certified payments"]} />
+      <DiagramBox x={640} y={110} w={260} h={70} title="Legal and tax advisers" lines={["Contract, structuring and insurance"]} />
 
-      <rect x="24" y="292" width="324" height="424" fill="rgba(83,134,182,0.06)" stroke={edge} strokeWidth="1.25" />
-      <text x="40" y="314" fontWeight="600" fill={ink}>Technical specialists</text>
-      <DiagramBox x={40} y={324} w={292} h={56} title="Mechanical and systems" lines={["Propulsion, power, HVAC, commissioning"]} />
-      <DiagramBox x={40} y={388} w={292} h={56} title="Paint and coatings" lines={["Paint specification, hold-point inspection"]} />
-      <DiagramBox x={40} y={452} w={292} h={56} title="Noise and vibration" lines={["Contract limits, modelling, measurement"]} />
-      <DiagramBox x={40} y={516} w={292} h={56} title="Interior" lines={["Design intent, mock-ups, joinery"]} />
-      <DiagramBox x={40} y={580} w={292} h={56} title="Naval architect" lines={["Structure, stability, weight control"]} />
-      <DiagramBox x={40} y={644} w={292} h={56} title="Class and flag compliance" lines={["Plan approval, surveys, certification"]} />
+      <rect x="330" y="230" width="260" height="90" fill={accent} fillOpacity="0.15" stroke={accent} strokeWidth="2" />
+      <text x="342" y="256" fontWeight="600" fill={ink}>Owner&apos;s representative</text>
+      <text x="342" y="274" fontSize="11.5" fill={ink}>Leads the team, runs the programme,</text>
+      <text x="342" y="290" fontSize="11.5" fill={ink}>certifies milestones and changes,</text>
+      <text x="342" y="306" fontSize="11.5" fill={ink}>reports to the owner.</text>
 
-      <rect x="412" y="292" width="324" height="168" fill="rgba(83,134,182,0.06)" stroke={edge} strokeWidth="1.25" />
-      <text x="428" y="314" fontWeight="600" fill={ink}>Future operators</text>
-      <DiagramBox x={428} y={324} w={292} h={56} title="Captain and chief engineer" lines={["Operational input, trials, acceptance"]} />
-      <DiagramBox x={428} y={388} w={292} h={56} title="Yacht manager" lines={["Safety management, crew, budgets, handover"]} />
+      <DiagramBox x={20} y={200} w={260} h={150} title="Technical specialists" lines={["Mechanical and systems", "Paint and coatings", "Noise and vibration", "Interior", "Independent naval architect", "Class and flag compliance"]} />
+      <DiagramBox x={640} y={200} w={260} h={68} title={"Owner's designers"} lines={["Exterior and interior designers,", "naval architect of record"]} />
+      <DiagramBox x={640} y={282} w={260} h={68} title="Future operators" lines={["Captain and chief engineer,", "yacht manager"]} />
 
-      <DiagramBox x={412} y={484} w={324} h={72} title="Owner's designers" lines={["Exterior and interior designers, naval", "architect of record. Contracted by the owner."]} />
-
-      <text x="412" y="604" fontSize="11.5" fontWeight="600" fill={ink}>Sole channel of instruction</text>
-      <DiagramBox x={412} y={616} w={324} h={72} dashed title="Shipyard" lines={["Outside the owner's team. Takes instructions", "through the representative only."]} />
+      <DiagramBox x={20} y={420} w={260} h={60} dashed title="Classification society" lines={["Checks against its rules"]} />
+      <rect x="330" y="420" width="260" height="60" fill="none" stroke={accent} strokeWidth="1.5" strokeDasharray="4 4" />
+      <text x="342" y="444" fontWeight="600" fill={ink}>Shipyard</text>
+      <text x="342" y="460" fontSize="11.5" fill={quiet}>Receives instructions from the representative</text>
+      <DiagramBox x={640} y={420} w={260} h={60} dashed title="Flag state" lines={["Statutory compliance"]} />
     </svg>
   );
 }
 
 function TeamDiagramMobile() {
   const node = "border border-white/20 px-4 py-3";
+  const arrow = <div className="text-center text-accent leading-none" aria-hidden="true">&darr;</div>;
   return (
-    <div className="space-y-3 text-sm">
+    <div className="space-y-2 text-sm">
+      <p className="text-xs text-muted">Owner&apos;s team</p>
       <div className={node}>
         <p className="font-semibold text-white">Owner</p>
-        <p className="text-muted text-xs mt-1">Sets brief, budget and authority</p>
+        <p className="text-muted text-xs mt-1">Sets brief, budget and authority.</p>
       </div>
-      <div className="ml-4 space-y-3 border-l border-white/20 pl-4">
-        <div className={node}>
-          <p className="font-semibold text-white">Family office</p>
-          <p className="text-muted text-xs mt-1">Financial controller. Holds funds, releases certified stage payments.</p>
+      <div className="grid grid-cols-2 gap-2 pl-4 border-l border-dashed border-white/30 ml-4">
+        <div className="border border-dashed border-white/20 px-3 py-2">
+          <p className="font-semibold text-white text-xs">Family office</p>
+          <p className="text-muted text-xs mt-1">Advises the owner; holds funds.</p>
         </div>
-        <div className={node}>
-          <p className="font-semibold text-white">Legal and tax advisers</p>
-          <p className="text-muted text-xs mt-1">Shipbuilding lawyer. Tax, structuring and insurance advisers.</p>
+        <div className="border border-dashed border-white/20 px-3 py-2">
+          <p className="font-semibold text-white text-xs">Legal and tax advisers</p>
+          <p className="text-muted text-xs mt-1">Advise the owner.</p>
         </div>
-        <div className="border-2 border-accent bg-accent/15 px-4 py-3">
-          <p className="font-semibold text-white">Owner&apos;s representative</p>
-          <p className="text-white/90 text-xs mt-1">Leads the team. Runs the programme. Certifies milestones and changes.</p>
-        </div>
-        <div className="ml-4 space-y-3 border-l border-white/20 pl-4">
-          <div className={node}>
-            <p className="font-semibold text-white">Technical specialists</p>
-            <p className="text-muted text-xs mt-1">Mechanical and systems, paint and coatings, noise and vibration, interior, naval architect, class and flag compliance.</p>
-          </div>
-          <div className={node}>
-            <p className="font-semibold text-white">Future operators</p>
-            <p className="text-muted text-xs mt-1">Captain and chief engineer, yacht manager.</p>
-          </div>
-          <div className={node}>
-            <p className="font-semibold text-white">Owner&apos;s designers</p>
-            <p className="text-muted text-xs mt-1">Exterior and interior designers, naval architect of record. Contracted by the owner.</p>
-          </div>
-          <div className="border border-dashed border-accent px-4 py-3">
-            <p className="font-semibold text-white">Shipyard</p>
-            <p className="text-muted text-xs mt-1">Outside the owner&apos;s team. Takes instructions through the representative only.</p>
-          </div>
-        </div>
+      </div>
+      <p className="text-center text-accent leading-none" aria-hidden="true">&darr;</p>
+      <div className="border-2 border-accent bg-accent/15 px-4 py-3">
+        <p className="font-semibold text-white">Owner&apos;s representative</p>
+        <p className="text-white/90 text-xs mt-1">Holds the owner&apos;s authority. Leads the team, runs the programme, certifies milestones and reports to the owner.</p>
+        <p className="text-white/90 text-xs mt-2">Reporting to the representative: technical specialists, the owner&apos;s designers, the captain and chief engineer, and the yacht manager.</p>
+      </div>
+      {arrow}
+      <p className="pt-2 text-xs text-muted">Outside the owner&apos;s team</p>
+      <div className="border border-dashed border-accent px-4 py-3">
+        <p className="font-semibold text-white">Shipyard</p>
+        <p className="text-muted text-xs mt-1">Receives instructions from the representative.</p>
+      </div>
+      <div className="border border-dashed border-white/20 px-4 py-3">
+        <p className="font-semibold text-white">Classification society and flag state</p>
+        <p className="text-muted text-xs mt-1">Check the yacht against their rules and statutory requirements.</p>
       </div>
     </div>
   );
@@ -229,7 +223,7 @@ export default function OwnersTeamPage() {
               <TeamDiagramMobile />
             </div>
             <figcaption className="mt-8 max-w-3xl text-muted leading-relaxed">
-              The family office and the lawyers report to the owner directly. The technical specialists, the owner&apos;s designers, the captain and chief engineer, and the yacht manager report through the owner&apos;s representative, who alone issues instructions to the yard.
+              Authority runs from the owner to the owner&apos;s representative, who is the sole channel of instruction to the shipyard. The family office and the legal and tax advisers advise the owner directly. The technical specialists, the owner&apos;s designers and the future operators report to the representative.
             </figcaption>
           </figure>
         </div>
