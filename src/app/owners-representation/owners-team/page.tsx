@@ -28,8 +28,12 @@ const scale = [
 ];
 
 const faqs = [
-  { q: "Who should I appoint first?", a: "The owner's representative, ideally before a Letter of Intent or yard selection, followed by a shipbuilding lawyer before any heads of terms are signed." },
-  { q: "To whom do the specialist consultants owe their duty?", a: "To the owner. They report through us so that the yard hears one voice and the owner receives one report, but they are contracted by the owning company wherever possible and their duty runs to the owner. We take no commission or referral fee from anyone we introduce." },
+  { q: "Who is on the owner's team for a superyacht new build?", a: "The owner's team is led by the owner's representative and includes the owner's family office, a shipbuilding lawyer, tax, structuring and insurance advisers, technical specialists (mechanical and systems, paint and coatings, noise and vibration, interior, an independent naval architect, and class and flag compliance), the owner's designers, and the future captain, chief engineer and yacht manager. The shipyard, classification society and flag state sit outside the owner's team." },
+  { q: "What does an owner's representative do on a yacht new build?", a: "The owner's representative holds the owner's authority on the project. They run the programme and reporting, review the specification, certify milestones and change orders, co-ordinate the specialists and designers, and are the sole channel of instruction to the shipyard." },
+  { q: "What is the difference between an owner's representative and a project manager on a new build?", a: "The owner's representative acts for the owner and holds their authority; the project manager runs the day-to-day work on site. On a smaller or series-built yacht one person usually fills both roles. On a larger yacht a resident project manager and site team report to the representative." },
+  { q: "When should the owner's team be appointed?", a: "Before the yard is selected. The owner's representative should be appointed first, ideally before a Letter of Intent, followed by a shipbuilding lawyer before any heads of terms are signed, since the contract and specification determine most of the owner's position for the rest of the build. Specialists are then engaged at particular stages, and the captain, chief engineer and yacht manager during the build." },
+  { q: "Who gives instructions to the shipyard during a new build?", a: "Only the owner's representative. Instructions from the owner, the family office or a consultant on site pass through the representative, since an informal request may otherwise be treated as a change order. The representative's authority is set out in a letter of authority or power of attorney." },
+  { q: "To whom do the specialist consultants owe their duty?", a: "To the owner. They report through the representative so that the yard hears one voice and the owner receives one report, but they are contracted by the owning company wherever possible and their duty runs to the owner. We take no commission or referral fee from anyone we introduce." },
   { q: "Can my family office or captain act as owner's representative?", a: "A family office should control the money and a captain brings operational judgement the build needs, but neither is the same as having managed a build. The representative should be someone who has delivered a yacht from a yard before." },
   { q: "Does Foreland supply the whole team?", a: "Our bench covers engineering, command, naval architecture, survey, coatings and performance sailing. Legal, tax and other specialist advisers are appointed independently, and we can assist with their selection." },
   { q: "Can a team be put in place once the build has started?", a: "Yes, although some of the owner's leverage will already have been settled in the contract and specification. We can review the position at any stage and set out what can still be improved." },
@@ -159,13 +163,30 @@ export default function OwnersTeamPage() {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "@id": "https://www.forelandmarine.com/owners-representation/owners-team#webpage",
-              name: "The Owner's Team on a Yacht New Build",
+              name: "Superyacht New Build Owner's Team",
+              headline: "New Build - Owner's Team",
               description:
-                "The owner's team for a superyacht new build: owner's representative, lawyers, technical specialists, family office and crew, with reporting lines and appointment by stage.",
+                "The owner's team for a superyacht new build, 24 to 60 metres: owner's representative, shipbuilding lawyer, family office, technical specialists and crew, and when each is appointed.",
               url: "https://www.forelandmarine.com/owners-representation/owners-team",
+              inLanguage: "en-GB",
+              dateModified: "2026-11-07",
               isPartOf: { "@type": "WebSite", url: "https://www.forelandmarine.com" },
               about: { "@id": "https://www.forelandmarine.com/owners-representation#service" },
-              publisher: { "@type": "Organization", name: "Foreland Marine Consultancy Ltd" },
+              publisher: { "@type": "Organization", name: "Foreland Marine Consultancy Ltd", url: "https://www.forelandmarine.com" },
+              keywords: "superyacht new build team, owner's team, owner's representative, new build yacht consultant, new build yacht management, shipbuilding lawyer, new build project management",
+              mainEntity: {
+                "@type": "ItemList",
+                name: "The owner's team on a superyacht new build",
+                itemListElement: [
+                  ["Owner's representative", "Holds the owner's authority, leads the team, runs the programme, certifies milestones and change orders, and is the sole channel of instruction to the shipyard."],
+                  ["Family office", "Advises the owner, holds the funds and releases stage payments once certified by the representative."],
+                  ["Shipbuilding lawyer", "Negotiates the build contract and refund guarantees and settles the standing of the specification within the contract."],
+                  ["Tax, structuring and insurance advisers", "Settle the ownership company, flag and VAT position before signature; the insurance broker reviews builder's risk cover."],
+                  ["Technical specialists", "Mechanical and systems, paint and coatings, noise and vibration, interior, independent naval architect, and class and flag compliance, engaged at particular stages and reporting to the representative."],
+                  ["Owner's designers", "Exterior and interior designers and the naval architect of record, contracted by the owning company and co-ordinated by the representative."],
+                  ["Captain, chief engineer and yacht manager", "Appointed during the build to review the specification and prepare the yacht for operation."],
+                ].map(([name, description], i) => ({ "@type": "ListItem", position: i + 1, name, description })),
+              },
             },
             {
               "@context": "https://schema.org",
@@ -201,7 +222,7 @@ export default function OwnersTeamPage() {
             New Build - Owner&apos;s Team
           </h1>
           <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
-            A shipyard comes to a new build contract with its own project managers, naval architects and lawyers. We assemble and lead the owner&apos;s equivalent, ideally before the yard is selected, since the contract and specification determine most of the owner&apos;s position for the remainder of the build.
+            A shipyard comes to a superyacht new build contract with its own project managers, naval architects and lawyers. We assemble and lead the owner&apos;s equivalent, ideally before the yard is selected, since the contract and specification determine most of the owner&apos;s position for the remainder of the build.
           </p>
         </div>
       </ParallaxHero>
@@ -344,7 +365,7 @@ export default function OwnersTeamPage() {
       {/* RELATED */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <p className="text-sm text-muted">
-          Related: <Link href="/owners-representation" className="text-accent hover:text-white transition-colors">New Build Owner&apos;s Representation</Link>, <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link>, <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link>, <Link href="/insights/how-to-buy-your-first-superyacht" className="text-accent hover:text-white transition-colors">How to Buy Your First Superyacht</Link>
+          Related: <Link href="/owners-representation" className="text-accent hover:text-white transition-colors">New Build Owner&apos;s Representation</Link>, <Link href="/technical-consultancy" className="text-accent hover:text-white transition-colors">Technical Consultancy</Link>, <Link href="/yacht-management" className="text-accent hover:text-white transition-colors">Yacht Management</Link>, <Link href="/insights/the-role-of-an-owners-representative" className="text-accent hover:text-white transition-colors">What the Owner&apos;s Rep Does at Each Stage</Link>, <Link href="/insights/owners-representative-vs-project-manager-vs-broker" className="text-accent hover:text-white transition-colors">Owner&apos;s Representative vs Project Manager vs Broker</Link>, <Link href="/insights/how-to-buy-your-first-superyacht" className="text-accent hover:text-white transition-colors">How to Buy Your First Superyacht</Link>
         </p>
       </div>
 

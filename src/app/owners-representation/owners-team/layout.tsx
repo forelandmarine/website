@@ -1,32 +1,35 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "The Owner's Team on a Yacht New Build | Foreland Marine" },
+  title: { absolute: "Superyacht New Build Owner's Team | Foreland Marine" },
   description:
-    "The owner's team for a superyacht new build: owner's representative, lawyers, technical specialists, family office and crew, with reporting lines and appointment by stage.",
+    "The owner's team for a superyacht new build, 24 to 60 metres: owner's representative, shipbuilding lawyer, family office, technical specialists and crew, and when each is appointed.",
   keywords: [
-    "owner's team yacht new build",
     "superyacht new build team",
     "yacht new build owner's team",
-    "owner's representative",
-    "shipbuilding lawyer",
-    "paint and coatings inspector",
-    "noise and vibration consultant",
-    "yacht interior consultant",
+    "new build yacht consultant",
+    "new build yacht management",
+    "superyacht new build services",
+    "new build superyacht project management",
+    "new build yacht crew management",
+    "owner's representative new build",
+    "owner's representative vs project manager",
+    "shipbuilding lawyer superyacht",
+    "yacht paint inspector new build",
+    "noise and vibration consultant yacht",
+    "class and flag compliance new build",
     "family office yacht new build",
-    "new build captain and chief engineer",
-    "yacht new build reporting lines",
   ],
   openGraph: {
-    title: "The Owner's Team on a Yacht New Build | Foreland Marine",
+    title: "Superyacht New Build Owner's Team | Foreland Marine",
     description:
-      "The owner's team for a superyacht new build: owner's representative, lawyers, technical specialists, family office and crew, with reporting lines and appointment by stage.",
+      "The owner's team for a superyacht new build, 24 to 60 metres: owner's representative, shipbuilding lawyer, family office, technical specialists and crew, and when each is appointed.",
     type: "website",
     url: "https://www.forelandmarine.com/owners-representation/owners-team",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Owner's Team on a Yacht New Build | Foreland Marine",
+    title: "Superyacht New Build Owner's Team | Foreland Marine",
     description:
       "The owner's team for a superyacht new build, its reporting lines and the stage at which each member is appointed.",
   },

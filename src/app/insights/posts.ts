@@ -621,6 +621,8 @@ export const posts: Post[] = [
 
 <p>Foreland Marine is structurally one of the three roles, not all three. We are independent owner's representatives. We do not broker yacht sales, we do not earn commission from yards, suppliers, or designers, and we do not run management contracts that depend on a particular yacht being delivered. The fee for our representation is paid by the owner, scoped at the start of the engagement, and unchanged whether the build comes in on or over budget. The team is YORR registered and accredited through YORP.</p>
 
+<p>How the representative, the project manager and the owner's other advisers fit together on a build is set out in <a href="/owners-representation/owners-team">the owner's team on a new build</a>.</p>
+
 <p>If you are at the early stage of a new build or refit and want a confidential first conversation about how the role would fit your project, <a href="/owners-representation">see our owner's representation service</a> or <a href="/contact">get in touch</a>. There is no fee for the initial conversation and no obligation.</p>`,
   },
   {
@@ -2954,7 +2956,7 @@ export const posts: Post[] = [
 
 <blockquote>A new build project is a partnership between owner, yard, and designer. The owner's representative ensures that partnership remains balanced and that quality is never compromised by commercial pressure.</blockquote>
 
-<p>If you are considering a new build project or are already in the early stages, speak to us about how independent representation can protect your investment from the outset. Learn more about our <a href="/owners-representation">new build services</a>, which span contract negotiation, yard selection, design review, build oversight, budget control, quality assurance, commissioning, and handover. For a practical guide to the questions to ask before appointing a representative, see <a href="/insights/choosing-a-yacht-owners-representative">how to choose a yacht owner's representative</a>.</p>`,
+<p>If you are considering a new build project or are already in the early stages, speak to us about how independent representation can protect your investment from the outset. The <a href="/owners-representation/owners-team">owner's team on a new build</a> sets out who else sits alongside the representative and when each is appointed. Learn more about our <a href="/owners-representation">new build services</a>, which span contract negotiation, yard selection, design review, build oversight, budget control, quality assurance, commissioning, and handover. For a practical guide to the questions to ask before appointing a representative, see <a href="/insights/choosing-a-yacht-owners-representative">how to choose a yacht owner's representative</a>.</p>`,
   },
   {
     slug: "ism-compliance-guide-for-yacht-owners",
