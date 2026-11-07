@@ -15,14 +15,16 @@ const timeline: [string, string, string, string, string, string][] = [
   ["Noise and vibration", "Targets", "Contract limits", "Modelling, mounts", "Measurement", ""],
   ["Interior", "Brief with designer", "Scope allocation", "Mock-ups, samples", "Snagging", "Defects"],
   ["Naval architect", "Concept review", "Specification review", "Weight tracking", "Stability, trials", ""],
+  ["Class and flag compliance", "Class notation, flag", "Specification review", "Plan approval, surveys", "Certification", "Annual surveys"],
+  ["Owner's designers", "Concept, general arrangement", "Specification drawings", "Design development, approvals", "Final inspection", ""],
   ["Captain and chief engineer", "Operational input", "Specification review", "On site", "Trials and acceptance", "Defect log"],
   ["Yacht manager", "", "", "Operational set-up", "Assumes management", "Manages the yacht"],
 ];
 
 const scale = [
-  { project: "24 to 35 metres, semi-custom", structure: "Representative with regular yard attendance. Lawyer and adviser input at contract. Paint and systems specialists engaged at set points." },
+  { project: "24 to 35 metres, semi-custom", structure: "Representative also acting as the owner's project manager, with regular yard attendance. Lawyer and adviser input at contract. Paint and systems specialists engaged at set points." },
   { project: "35 to 50 metres, custom", structure: "Resident representative. Captain or chief engineer on site during the build. Planned specialist visits across all technical disciplines." },
-  { project: "50 to 60 metres and above", structure: "Resident site team with discipline leads. Specialists retained through the build. Dedicated cost control, working with the family office." },
+  { project: "50 to 60 metres and above", structure: "Representative supported by a resident project manager and site team with discipline leads. Specialists retained through the build. Dedicated cost control, working with the family office." },
 ];
 
 const faqs = [
@@ -52,7 +54,7 @@ function DiagramBox({ x, y, w, h, title, lines, dashed }: { x: number; y: number
 
 function TeamDiagram() {
   return (
-    <svg viewBox="0 40 760 620" role="img" aria-label="The owner's team: specialists report through one representative, who alone instructs the yard" fontSize="13" className="w-full h-auto">
+    <svg viewBox="0 40 760 690" role="img" aria-label="The owner's team: specialists report through one representative, who alone instructs the yard" fontSize="13" className="w-full h-auto">
       <defs>
         <marker id="team-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M0 0L10 5L0 10z" fill={edge} />
@@ -68,8 +70,9 @@ function TeamDiagram() {
         <path d="M380 236V264" />
         <path d="M186 292V264H574V292" markerEnd="url(#team-arrow)" />
         <path d="M186 264V292" markerEnd="url(#team-arrow)" />
+        <path d="M574 264H750V520H738" markerEnd="url(#team-arrow)" />
       </g>
-      <path d="M380 264V596H412" fill="none" stroke={accent} strokeWidth="2" strokeDasharray="6 4" markerEnd="url(#yard-arrow)" />
+      <path d="M380 264V652H412" fill="none" stroke={accent} strokeWidth="2" strokeDasharray="6 4" markerEnd="url(#yard-arrow)" />
 
       <rect x="250" y="48" width="260" height="56" fill="none" stroke={edge} strokeWidth="1.25" />
       <text x="380" y="72" textAnchor="middle" fontWeight="600" fill={ink}>Owner</text>
@@ -85,21 +88,24 @@ function TeamDiagram() {
 
       <DiagramBox x={516} y={148} w={220} h={88} title="Legal and tax advisers" lines={["Shipbuilding lawyer. Tax,", "structuring and insurance", "advisers."]} />
 
-      <rect x="24" y="292" width="324" height="360" fill="rgba(83,134,182,0.06)" stroke={edge} strokeWidth="1.25" />
+      <rect x="24" y="292" width="324" height="424" fill="rgba(83,134,182,0.06)" stroke={edge} strokeWidth="1.25" />
       <text x="40" y="314" fontWeight="600" fill={ink}>Technical specialists</text>
       <DiagramBox x={40} y={324} w={292} h={56} title="Mechanical and systems" lines={["Propulsion, power, HVAC, commissioning"]} />
       <DiagramBox x={40} y={388} w={292} h={56} title="Paint and coatings" lines={["Paint specification, hold-point inspection"]} />
       <DiagramBox x={40} y={452} w={292} h={56} title="Noise and vibration" lines={["Contract limits, modelling, measurement"]} />
       <DiagramBox x={40} y={516} w={292} h={56} title="Interior" lines={["Design intent, mock-ups, joinery"]} />
       <DiagramBox x={40} y={580} w={292} h={56} title="Naval architect" lines={["Structure, stability, weight control"]} />
+      <DiagramBox x={40} y={644} w={292} h={56} title="Class and flag compliance" lines={["Plan approval, surveys, certification"]} />
 
       <rect x="412" y="292" width="324" height="168" fill="rgba(83,134,182,0.06)" stroke={edge} strokeWidth="1.25" />
       <text x="428" y="314" fontWeight="600" fill={ink}>Future operators</text>
       <DiagramBox x={428} y={324} w={292} h={56} title="Captain and chief engineer" lines={["Operational input, trials, acceptance"]} />
       <DiagramBox x={428} y={388} w={292} h={56} title="Yacht manager" lines={["Safety management, crew, budgets, handover"]} />
 
-      <text x="412" y="548" fontSize="11.5" fontWeight="600" fill={ink}>Sole channel of instruction</text>
-      <DiagramBox x={412} y={560} w={324} h={72} dashed title="Shipyard" lines={["Outside the owner's team. Takes instructions", "through the representative only."]} />
+      <DiagramBox x={412} y={484} w={324} h={72} title="Owner's designers" lines={["Exterior and interior designers, naval", "architect of record. Contracted by the owner."]} />
+
+      <text x="412" y="604" fontSize="11.5" fontWeight="600" fill={ink}>Sole channel of instruction</text>
+      <DiagramBox x={412} y={616} w={324} h={72} dashed title="Shipyard" lines={["Outside the owner's team. Takes instructions", "through the representative only."]} />
     </svg>
   );
 }
@@ -128,11 +134,15 @@ function TeamDiagramMobile() {
         <div className="ml-4 space-y-3 border-l border-white/20 pl-4">
           <div className={node}>
             <p className="font-semibold text-white">Technical specialists</p>
-            <p className="text-muted text-xs mt-1">Mechanical and systems, paint and coatings, noise and vibration, interior, naval architect.</p>
+            <p className="text-muted text-xs mt-1">Mechanical and systems, paint and coatings, noise and vibration, interior, naval architect, class and flag compliance.</p>
           </div>
           <div className={node}>
             <p className="font-semibold text-white">Future operators</p>
             <p className="text-muted text-xs mt-1">Captain and chief engineer, yacht manager.</p>
+          </div>
+          <div className={node}>
+            <p className="font-semibold text-white">Owner&apos;s designers</p>
+            <p className="text-muted text-xs mt-1">Exterior and interior designers, naval architect of record. Contracted by the owner.</p>
           </div>
           <div className="border border-dashed border-accent px-4 py-3">
             <p className="font-semibold text-white">Shipyard</p>
@@ -216,7 +226,7 @@ export default function OwnersTeamPage() {
               <TeamDiagramMobile />
             </div>
             <figcaption className="mt-8 max-w-3xl text-muted leading-relaxed">
-              The family office and the lawyers report to the owner directly. The technical specialists, the captain and chief engineer, and the yacht manager report through the owner&apos;s representative, who alone issues instructions to the yard.
+              The family office and the lawyers report to the owner directly. The technical specialists, the owner&apos;s designers, the captain and chief engineer, and the yacht manager report through the owner&apos;s representative, who alone issues instructions to the yard.
             </figcaption>
           </figure>
         </div>
@@ -235,10 +245,13 @@ export default function OwnersTeamPage() {
             A shipbuilding lawyer negotiates the contract and the refund guarantees, and settles how the specification is incorporated into the contract; a corporate lawyer or family solicitor is not usually suited to the work. Tax and structuring advisers settle the ownership company, flag and VAT position before signature, since an intention to charter, for example, can change the specification. An insurance broker reviews the yard&apos;s builder&apos;s risk cover and arranges the owner&apos;s cover from delivery.
           </p>
           <p className="text-muted leading-relaxed mb-5">
-            The owner&apos;s representative runs the programme and the reporting, reviews the specification, checks milestone claims and change orders, and is the single channel to the yard. On a larger yacht this is a resident site team rather than a visiting inspector. Technical specialists are engaged for defined scopes of work and report through the representative: a mechanical and systems consultant for propulsion, power, HVAC and the factory acceptance tests; a paint inspector at the agreed hold points; and an independent naval architect on structure, stability and the weight budget.
+            The owner&apos;s representative runs the programme and the reporting, reviews the specification, checks milestone claims and change orders, and is the single channel to the yard. On a smaller or series-built yacht the representative usually also acts as the owner&apos;s project manager; on a larger yacht the two roles are separated, with a resident project manager and site team reporting to the representative. Technical specialists are engaged for defined scopes of work and report through the representative: a mechanical and systems consultant for propulsion, power, HVAC and the factory acceptance tests; a paint inspector at the agreed hold points; an independent naval architect on structure, stability and the weight budget; and a class and flag specialist for plan approval, surveys and the statutory certificates.
           </p>
           <p className="text-muted leading-relaxed mb-5">
             Noise and vibration limits are written into the contract and modelled early in design, because they are only measured at sea trials, when structural changes are rarely practical. An interior consultant acts between the designer and the joiners on mock-ups, samples and owner&apos;s supply items. Sailing yachts add rig, sail plan and deck hardware specialists.
+          </p>
+          <p className="text-muted leading-relaxed mb-5">
+            On a custom build the exterior and interior designers, and often the naval architect of record, are usually contracted by the owning company. They are then members of the owner&apos;s team, and the representative co-ordinates their drawings and approvals with the yard. Where the yard engages the designer instead, the owner should establish before signature what the designer is obliged to do for the owner.
           </p>
           <p className="text-muted leading-relaxed">
             The captain and chief engineer should be appointed during the build, so that those who will operate the yacht can review the specification and are familiar with her systems before handover. The yacht manager is appointed later in the build to establish the safety management system, crew contracts, the planned maintenance system and the flag and class documentation, so that no certificate or contract lapses at delivery.
@@ -289,10 +302,10 @@ export default function OwnersTeamPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight">Working arrangements</h2>
           <p className="text-muted leading-relaxed mb-5">
-            Several parties close to the project have obligations of their own. The yard works to its contract; the classification society checks the yacht against its rules, not against the owner&apos;s specification; the flag state is concerned with statutory compliance; a broker is usually paid on commission; and a designer engaged by the yard answers to the yard. Each is valuable to the project, though none of them acts for the owner.
+            Several parties close to the project have obligations of their own. The yard works to its contract; the classification society checks the yacht against its rules, not against the owner&apos;s specification; the flag state is concerned with statutory compliance; and a broker is usually paid on commission. Each is valuable to the project, though none of them acts for the owner.
           </p>
           <p className="text-muted leading-relaxed">
-            We would normally establish the team on the following terms. All instructions to the yard pass through the representative, since an informal request from the owner or from a consultant on site may otherwise be treated as a change order. The owner&apos;s limits of authority are written down at the start. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner, with the representative managing their scope and budget. The owner receives a single regular report on programme, cost, quality and the decisions needed, with the specialists&apos; findings included rather than forwarded separately.
+            We would normally establish the team on the following terms. All instructions to the yard pass through the representative, since an informal request from the owner or from a consultant on site may otherwise be treated as a change order. The representative&apos;s authority is set out at the start in a letter of authority or power of attorney, stating what may be approved without reference to the owner and when the authority expires, since approvals of variations and milestones can bind the owner. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner, with the representative managing their scope and budget. The owner receives a single regular report on programme, cost, quality and the decisions needed, with the specialists&apos; findings included rather than forwarded separately.
           </p>
         </div>
       </section>
