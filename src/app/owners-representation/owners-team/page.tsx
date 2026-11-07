@@ -29,7 +29,7 @@ const scale = [
 
 const faqs = [
   { q: "Who should I appoint first?", a: "The owner's representative, ideally before a Letter of Intent or yard selection, followed by a shipbuilding lawyer before any heads of terms are signed." },
-  { q: "To whom do the specialist consultants owe their duty?", a: "To the owner. They report through us so that the yard hears one voice and the owner receives one report, but they are contracted by the owning company wherever possible and their duty runs to the owner. Our interests are directly aligned with the owner's by structure: no broker commissions, no referral fees." },
+  { q: "To whom do the specialist consultants owe their duty?", a: "To the owner. They report through us so that the yard hears one voice and the owner receives one report, but they are contracted by the owning company wherever possible and their duty runs to the owner. We take no commission or referral fee from anyone we introduce." },
   { q: "Can my family office or captain act as owner's representative?", a: "A family office should control the money and a captain brings operational judgement the build needs, but neither is the same as having managed a build. The representative should be someone who has delivered a yacht from a yard before." },
   { q: "Does Foreland supply the whole team?", a: "Our bench covers engineering, command, naval architecture, survey, coatings and performance sailing. Legal, tax and other specialist advisers are appointed independently, and we can assist with their selection." },
   { q: "Can a team be put in place once the build has started?", a: "Yes, although some of the owner's leverage will already have been settled in the contract and specification. We can review the position at any stage and set out what can still be improved." },
@@ -207,7 +207,7 @@ export default function OwnersTeamPage() {
             New Build - Owner&apos;s Team
           </h1>
           <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
-            A shipyard comes to a new build contract with its own project managers, naval architects and lawyers. The owner&apos;s equivalent has to be assembled, usually before the yard is selected, since the contract and specification determine most of the owner&apos;s position for the remainder of the build. This page describes the composition of that team, the reporting line of each member and the stage at which each is appointed.
+            A shipyard comes to a new build contract with its own project managers, naval architects and lawyers. We assemble and lead the owner&apos;s equivalent, ideally before the yard is selected, since the contract and specification determine most of the owner&apos;s position for the remainder of the build.
           </p>
         </div>
       </ParallaxHero>
@@ -215,9 +215,12 @@ export default function OwnersTeamPage() {
       {/* STRUCTURE */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-white mb-10 leading-tight" data-animate="fade-up">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight" data-animate="fade-up">
             Structure and reporting lines
           </h2>
+          <p className="max-w-3xl text-muted leading-relaxed mb-12">
+            As owner&apos;s representative we sit at the centre of the team, so the owner deals with one point of contact and receives one report. Our consultancy bench provides the engineering, naval architecture, survey and coatings expertise most builds require. The owner&apos;s lawyers, family office and captain keep their direct line to the owner, and we work alongside them.
+          </p>
           <figure>
             <div className="hidden md:block">
               <TeamDiagram />
@@ -242,13 +245,13 @@ export default function OwnersTeamPage() {
             <div>
               <h3 className="text-xl font-light text-white mb-3">Before yard selection</h3>
               <p className="text-muted leading-relaxed">
-                The owner&apos;s representative, the shipbuilding lawyer and the tax and structuring advisers are appointed before the yard is selected. The contract, the refund guarantees and the standing of the specification are settled at that stage, and the ownership company, flag and VAT position can alter the specification itself. The insurance broker reviews the yard&apos;s builder&apos;s risk cover at the same time. On a custom build the exterior and interior designers, and often the naval architect of record, are contracted by the owning company. Where the yard engages them instead, the owner should establish before signature what they are obliged to do for the owner.
+                We are usually appointed first, and help the owner select a shipbuilding lawyer and tax and structuring advisers suited to the project before the yard is chosen. The contract, the refund guarantees and the standing of the specification are settled at that stage, and the ownership company, flag and VAT position can alter the specification itself. The insurance broker reviews the yard&apos;s builder&apos;s risk cover at the same time. On a custom build the exterior and interior designers, and often the naval architect of record, are contracted by the owning company. Where the yard engages them instead, the owner should establish before signature what they are obliged to do for the owner.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-light text-white mb-3">During the build</h3>
               <p className="text-muted leading-relaxed">
-                Technical specialists are engaged at particular stages rather than for the duration of the build. The paint inspector attends the agreed hold points, the mechanical and systems consultant the factory acceptance tests and commissioning, and the class and flag specialist the plan approval and surveys. Noise and vibration is the exception: the limits are written into the contract and modelled early in design, but only measured at sea trials. On a smaller or series-built yacht the representative usually also acts as the owner&apos;s project manager; on a larger yacht a resident project manager and site team report to the representative.
+                Technical specialists are engaged at particular stages rather than for the duration of the build. The paint inspector attends the agreed hold points, the mechanical and systems consultant the factory acceptance tests and commissioning, and the class and flag specialist the plan approval and surveys. Noise and vibration is the exception: the limits are written into the contract and modelled early in design, but only measured at sea trials. On a smaller or series-built yacht we usually act as the owner&apos;s project manager as well; on a larger yacht we place a resident project manager and site team at the yard.
               </p>
             </div>
             <div>
@@ -268,7 +271,7 @@ export default function OwnersTeamPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight">Working arrangements</h2>
           <p className="text-muted leading-relaxed mb-5">
-            We would normally establish the team on the following terms. The representative&apos;s authority is set out at the start in a letter of authority or power of attorney, stating what may be approved without reference to the owner and when it expires. Approvals of variations and milestones given by the representative can bind the owner. All instructions to the yard pass through the representative, as an informal request from the owner or a consultant on site may otherwise be treated as a change order. The representative certifies milestones and the family office releases the funds, so that no one both approves and pays. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner. The owner receives a single regular report on programme, cost, quality and the decisions needed.
+            We would normally establish the team on the following terms. The representative&apos;s authority is set out at the start in a letter of authority or power of attorney, stating what may be approved without reference to the owner and when it expires. Approvals of variations and milestones given by the representative can bind the owner. All instructions to the yard pass through the representative, as an informal request from the owner or a consultant on site may otherwise be treated as a change order. The representative certifies milestones and the family office releases the funds, so that no one both approves and pays. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner. The owner receives a single regular report on programme, cost, quality and the decisions needed. Our interests are directly aligned with the owner&apos;s by structure: no broker commissions, no referral fees.
           </p>
           <p className="text-muted leading-relaxed">
             The classification society checks the yacht against its rules rather than the owner&apos;s specification, and the yard, the flag state and the broker each have obligations of their own; none of them acts for the owner.
@@ -284,7 +287,7 @@ export default function OwnersTeamPage() {
           <div className="max-w-3xl mb-10">
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">Team composition by size of yacht</h2>
             <p className="text-muted leading-relaxed">
-              The roles are the same at each size of yacht; what varies is the number held full time.
+              We scale the team to the yacht. The roles are the same at each size; what varies is the number held full time.
             </p>
           </div>
           <table className="w-full text-sm border-collapse">
@@ -360,7 +363,7 @@ export default function OwnersTeamPage() {
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">Discuss your project</h2>
           <p className="text-muted leading-relaxed text-base mb-8 max-w-xl mx-auto">
-            We should be glad to set out the team a project needs, whether it is at concept stage or already in build.
+            We should be glad to set out the team your project needs and how we would resource it, whether it is at concept stage or already in build.
           </p>
           <ButtonPrimary href="/contact">Get in touch</ButtonPrimary>
         </div>
