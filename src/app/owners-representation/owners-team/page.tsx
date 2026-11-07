@@ -234,63 +234,29 @@ export default function OwnersTeamPage() {
 
       <HorizonLine />
 
-      {/* WHO DOES WHAT */}
+      {/* APPOINTMENT AND RESPONSIBILITIES */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight">Roles and responsibilities</h2>
-          <p className="text-muted leading-relaxed mb-5">
-            The owner sets the brief, the budget and how much the representative may approve without referring back. The family office holds the funds; it pays stage instalments once the representative has certified them, keeps the refund guarantees and insurance certificates in date, and tracks the costs outside the yard contract, such as owner&apos;s supply items and crew. Certification and payment stay with different people, a control set out more fully on our <Link href="/owners-representation" className="text-accent hover:text-white transition-colors">owner&apos;s representation</Link> page.
-          </p>
-          <p className="text-muted leading-relaxed mb-5">
-            A shipbuilding lawyer negotiates the contract and the refund guarantees, and settles how the specification is incorporated into the contract; a corporate lawyer or family solicitor is not usually suited to the work. Tax and structuring advisers settle the ownership company, flag and VAT position before signature, since an intention to charter, for example, can change the specification. An insurance broker reviews the yard&apos;s builder&apos;s risk cover and arranges the owner&apos;s cover from delivery.
-          </p>
-          <p className="text-muted leading-relaxed mb-5">
-            The owner&apos;s representative runs the programme and the reporting, reviews the specification, checks milestone claims and change orders, and is the single channel to the yard. On a smaller or series-built yacht the representative usually also acts as the owner&apos;s project manager; on a larger yacht the two roles are separated, with a resident project manager and site team reporting to the representative. Technical specialists are engaged for defined scopes of work and report through the representative: a mechanical and systems consultant for propulsion, power, HVAC and the factory acceptance tests; a paint inspector at the agreed hold points; an independent naval architect on structure, stability and the weight budget; and a class and flag specialist for plan approval, surveys and the statutory certificates.
-          </p>
-          <p className="text-muted leading-relaxed mb-5">
-            Noise and vibration limits are written into the contract and modelled early in design, because they are only measured at sea trials, when structural changes are rarely practical. An interior consultant acts between the designer and the joiners on mock-ups, samples and owner&apos;s supply items. Sailing yachts add rig, sail plan and deck hardware specialists.
-          </p>
-          <p className="text-muted leading-relaxed mb-5">
-            On a custom build the exterior and interior designers, and often the naval architect of record, are usually contracted by the owning company. They are then members of the owner&apos;s team, and the representative co-ordinates their drawings and approvals with the yard. Where the yard engages the designer instead, the owner should establish before signature what the designer is obliged to do for the owner.
-          </p>
-          <p className="text-muted leading-relaxed">
-            The captain and chief engineer should be appointed during the build, so that those who will operate the yacht can review the specification and are familiar with her systems before handover. The yacht manager is appointed later in the build to establish the safety management system, crew contracts, the planned maintenance system and the flag and class documentation, so that no certificate or contract lapses at delivery.
-          </p>
-        </div>
-      </section>
-
-      <HorizonLine />
-
-      {/* WHO JOINS WHEN */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-10">
-            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">Appointment by project stage</h2>
-            <p className="text-muted leading-relaxed">
-              Most specialists are engaged for short periods at particular stages rather than for the duration of the build.
-            </p>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[820px] text-sm border-collapse">
-              <thead>
-                <tr className="border-b border-accent/40">
-                  <th scope="col" className="text-left font-semibold text-white py-3 pr-4 align-bottom">Role</th>
-                  {stages.map((s) => (
-                    <th key={s} scope="col" className="text-left font-semibold text-white py-3 px-4 align-bottom">{s}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {timeline.map(([role, ...cells]) => (
-                  <tr key={role} className="border-b border-white/8">
-                    <th scope="row" className="text-left font-normal text-white py-3 pr-4 align-top">{role}</th>
-                    {cells.map((c, i) => (
-                      <td key={i} className="text-muted py-3 px-4 align-top">{c}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-10 leading-tight">Appointment and responsibilities</h2>
+          <div className="space-y-10">
+            <div>
+              <h3 className="text-xl font-light text-white mb-3">Before yard selection</h3>
+              <p className="text-muted leading-relaxed">
+                The owner&apos;s representative, the shipbuilding lawyer and the tax and structuring advisers are appointed before the yard is selected. The contract, the refund guarantees and the standing of the specification are settled at that stage, and the ownership company, flag and VAT position can alter the specification itself. The insurance broker reviews the yard&apos;s builder&apos;s risk cover at the same time. On a custom build the exterior and interior designers, and often the naval architect of record, are contracted by the owning company. Where the yard engages them instead, the owner should establish before signature what they are obliged to do for the owner.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-light text-white mb-3">During the build</h3>
+              <p className="text-muted leading-relaxed">
+                Technical specialists are engaged at particular stages rather than for the duration of the build. The paint inspector attends the agreed hold points, the mechanical and systems consultant the factory acceptance tests and commissioning, and the class and flag specialist the plan approval and surveys. Noise and vibration is the exception: the limits are written into the contract and modelled early in design, but only measured at sea trials. On a smaller or series-built yacht the representative usually also acts as the owner&apos;s project manager; on a larger yacht a resident project manager and site team report to the representative.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-light text-white mb-3">Before delivery</h3>
+              <p className="text-muted leading-relaxed">
+                The captain and chief engineer should be appointed during the build, so that those who will operate the yacht can review the specification and are familiar with her systems before handover. The yacht manager follows to establish the safety management system, crew contracts, planned maintenance and the flag and class documentation, so that no certificate or contract lapses at delivery.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -298,14 +264,14 @@ export default function OwnersTeamPage() {
       <HorizonLine />
 
       {/* WORKING ARRANGEMENTS */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight">Working arrangements</h2>
           <p className="text-muted leading-relaxed mb-5">
-            Several parties close to the project have obligations of their own. The yard works to its contract; the classification society checks the yacht against its rules, not against the owner&apos;s specification; the flag state is concerned with statutory compliance; and a broker is usually paid on commission. Each is valuable to the project, though none of them acts for the owner.
+            We would normally establish the team on the following terms. The representative&apos;s authority is set out at the start in a letter of authority or power of attorney, stating what may be approved without reference to the owner and when it expires. Approvals of variations and milestones given by the representative can bind the owner. All instructions to the yard pass through the representative, as an informal request from the owner or a consultant on site may otherwise be treated as a change order. The representative certifies milestones and the family office releases the funds, so that no one both approves and pays. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner. The owner receives a single regular report on programme, cost, quality and the decisions needed.
           </p>
           <p className="text-muted leading-relaxed">
-            We would normally establish the team on the following terms. All instructions to the yard pass through the representative, since an informal request from the owner or from a consultant on site may otherwise be treated as a change order. The representative&apos;s authority is set out at the start in a letter of authority or power of attorney, stating what may be approved without reference to the owner and when the authority expires, since approvals of variations and milestones can bind the owner. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner, with the representative managing their scope and budget. The owner receives a single regular report on programme, cost, quality and the decisions needed, with the specialists&apos; findings included rather than forwarded separately.
+            The classification society checks the yacht against its rules rather than the owner&apos;s specification, and the yard, the flag state and the broker each have obligations of their own; none of them acts for the owner.
           </p>
         </div>
       </section>
@@ -313,7 +279,7 @@ export default function OwnersTeamPage() {
       <HorizonLine />
 
       {/* SCALE */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
+      <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-10">
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">Team composition by size of yacht</h2>
@@ -338,6 +304,31 @@ export default function OwnersTeamPage() {
             </tbody>
           </table>
         </div>
+      </section>
+
+      {/* APPOINTMENT BY STAGE (read by search engines, hidden on screen) */}
+      <section className="sr-only">
+        <h2>Appointment by project stage</h2>
+        <table className="w-full min-w-[820px] text-sm border-collapse">
+              <thead>
+                <tr className="border-b border-accent/40">
+                  <th scope="col" className="text-left font-semibold text-white py-3 pr-4 align-bottom">Role</th>
+                  {stages.map((s) => (
+                    <th key={s} scope="col" className="text-left font-semibold text-white py-3 px-4 align-bottom">{s}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {timeline.map(([role, ...cells]) => (
+                  <tr key={role} className="border-b border-white/8">
+                    <th scope="row" className="text-left font-normal text-white py-3 pr-4 align-top">{role}</th>
+                    {cells.map((c, i) => (
+                      <td key={i} className="text-muted py-3 px-4 align-top">{c}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
       </section>
 
       {/* FAQ (read by search engines, hidden on screen) */}
