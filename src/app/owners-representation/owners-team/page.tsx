@@ -204,7 +204,7 @@ export default function OwnersTeamPage() {
       >
         <div className="max-w-3xl">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-            The owner&apos;s team for a yacht new build
+            New Build - Owner&apos;s Team
           </h1>
           <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
             A shipyard comes to a new build contract with its own project managers, naval architects and lawyers. The owner&apos;s equivalent has to be assembled, usually before the yard is selected, since the contract and specification determine most of the owner&apos;s position for the remainder of the build. This page describes the composition of that team, the reporting line of each member and the stage at which each is appointed.
