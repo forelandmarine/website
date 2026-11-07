@@ -7,9 +7,9 @@ export const contentType = OG_CONTENT_TYPE;
 export default async function OgImage() {
   return renderOgCard({
     eyebrow: "New Build",
-    title: "The team on your side of the table",
+    title: "The owner's team for a yacht new build",
     subtitle:
-      "Who sits on the owner's team for a new build, who each person answers to, and when they join. Sailing and motor yachts, 24 to 60 metres.",
+      "The composition of the owner's team for a new build, the reporting line of each member and the stage at which each is appointed. Sailing and motor yachts, 24 to 60 metres.",
     url: "forelandmarine.com/owners-representation/owners-team",
     footnote: "SYBAss, YORR, British Marine",
   });

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "The Owner's Team on a Yacht New Build | Foreland Marine" },
   description:
-    "Who sits on the owner's team for a superyacht new build: owner's representative, lawyers, technical specialists, family office and crew, and how they work.",
+    "The owner's team for a superyacht new build: owner's representative, lawyers, technical specialists, family office and crew, with reporting lines and appointment by stage.",
   keywords: [
     "owner's team yacht new build",
     "superyacht new build team",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Owner's Team on a Yacht New Build | Foreland Marine",
     description:
-      "Who sits on the owner's team for a superyacht new build: owner's representative, lawyers, technical specialists, family office and crew, and how they work.",
+      "The owner's team for a superyacht new build: owner's representative, lawyers, technical specialists, family office and crew, with reporting lines and appointment by stage.",
     type: "website",
     url: "https://www.forelandmarine.com/owners-representation/owners-team",
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Owner's Team on a Yacht New Build | Foreland Marine",
     description:
-      "Who sits on the owner's team for a superyacht new build, who each person answers to, and when they join.",
+      "The owner's team for a superyacht new build, its reporting lines and the stage at which each member is appointed.",
   },
   alternates: {
     canonical: "https://www.forelandmarine.com/owners-representation/owners-team",

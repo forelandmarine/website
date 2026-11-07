@@ -6,30 +6,30 @@ import ParallaxHero from "@/components/ParallaxHero";
 const stages = ["Concept and specification", "Yard selection and contract", "Build", "Sea trials and delivery", "Warranty"];
 
 const timeline: [string, string, string, string, string, string][] = [
-  ["Owner's representative", "Leads brief", "Leads evaluation", "Leads on site", "Leads acceptance", "Manages claims"],
-  ["Family office", "Sets budget", "Yard due diligence", "Releases payments", "Final payment", "Tracks retentions"],
-  ["Shipbuilding lawyer", "Early advice", "Leads contract", "On call", "Delivery documents", "Disputes"],
-  ["Tax, structuring, insurance", "Structure, flag, VAT", "Reviews terms", "On call", "Registration, cover", ""],
+  ["Owner's representative", "Leads the brief", "Leads evaluation", "Leads on site", "Leads acceptance", "Manages claims"],
+  ["Family office", "Sets the budget", "Yard due diligence", "Releases payments", "Final payment", "Tracks retentions"],
+  ["Shipbuilding lawyer", "Early advice", "Leads contract", "As required", "Delivery documents", "Disputes"],
+  ["Tax, structuring, insurance", "Structure, flag, VAT", "Reviews terms", "As required", "Registration, cover", ""],
   ["Mechanical and systems", "Technical brief", "Specification review", "Design review, factory tests", "Commissioning", "Defects"],
   ["Paint and coatings", "", "Paint specification", "Hold-point inspection", "Final inspection", "Claims"],
   ["Noise and vibration", "Targets", "Contract limits", "Modelling, mounts", "Measurement", ""],
-  ["Interior", "Brief with designer", "Scope split", "Mock-ups, samples", "Snagging", "Defects"],
+  ["Interior", "Brief with designer", "Scope allocation", "Mock-ups, samples", "Snagging", "Defects"],
   ["Naval architect", "Concept review", "Specification review", "Weight tracking", "Stability, trials", ""],
-  ["Captain and chief engineer", "Operational input", "Specification review", "On site", "Trials, takeover", "Defect log"],
-  ["Yacht manager", "", "", "Operational set-up", "Takes over", "Runs the yacht"],
+  ["Captain and chief engineer", "Operational input", "Specification review", "On site", "Trials and acceptance", "Defect log"],
+  ["Yacht manager", "", "", "Operational set-up", "Assumes management", "Manages the yacht"],
 ];
 
 const scale = [
-  { project: "24 to 35 metres, semi-custom", structure: "Representative with regular yard attendance. Lawyer and adviser input at contract. Specialists called in for paint and systems at set points." },
+  { project: "24 to 35 metres, semi-custom", structure: "Representative with regular yard attendance. Lawyer and adviser input at contract. Paint and systems specialists engaged at set points." },
   { project: "35 to 50 metres, custom", structure: "Resident representative. Captain or chief engineer on site during the build. Planned specialist visits across all technical disciplines." },
   { project: "50 to 60 metres and above", structure: "Resident site team with discipline leads. Specialists retained through the build. Dedicated cost control, working with the family office." },
 ];
 
 const faqs = [
   { q: "Who should I appoint first?", a: "The owner's representative, ideally before a Letter of Intent or yard selection, followed by a shipbuilding lawyer before any heads of terms are signed." },
-  { q: "Do the consultants work for you or for me?", a: "For the owner. They report through us so that the yard hears one voice and the owner receives one report, but they are contracted by the owning company wherever possible and their duty runs to the owner. Our interests are directly aligned with the owner's by structure: no broker commissions, no referral fees." },
+  { q: "To whom do the specialist consultants owe their duty?", a: "To the owner. They report through us so that the yard hears one voice and the owner receives one report, but they are contracted by the owning company wherever possible and their duty runs to the owner. Our interests are directly aligned with the owner's by structure: no broker commissions, no referral fees." },
   { q: "Can my family office or captain act as owner's representative?", a: "A family office should control the money and a captain brings operational judgement the build needs, but neither is the same as having managed a build. The representative should be someone who has delivered a yacht from a yard before." },
-  { q: "Does Foreland supply the whole team?", a: "Our bench covers engineering, command, naval architecture, survey, coatings and performance sailing. Legal, tax and other specialist advisers are appointed independently, and we can help find them." },
+  { q: "Does Foreland supply the whole team?", a: "Our bench covers engineering, command, naval architecture, survey, coatings and performance sailing. Legal, tax and other specialist advisers are appointed independently, and we can assist with their selection." },
   { q: "Can a team be put in place once the build has started?", a: "Yes, although some of the owner's leverage will already have been settled in the contract and specification. We can review the position at any stage and set out what can still be improved." },
 ];
 
@@ -83,7 +83,7 @@ function TeamDiagram() {
       <text x="282" y="204" fontSize="11.5" fill={ink}>programme. Certifies</text>
       <text x="282" y="220" fontSize="11.5" fill={ink}>milestones and changes.</text>
 
-      <DiagramBox x={516} y={148} w={220} h={88} title="Lawyer and advisers" lines={["Shipbuilding lawyer. Tax,", "structuring and insurance", "advisers."]} />
+      <DiagramBox x={516} y={148} w={220} h={88} title="Legal and tax advisers" lines={["Shipbuilding lawyer. Tax,", "structuring and insurance", "advisers."]} />
 
       <rect x="24" y="292" width="324" height="360" fill="rgba(83,134,182,0.06)" stroke={edge} strokeWidth="1.25" />
       <text x="40" y="314" fontWeight="600" fill={ink}>Technical specialists</text>
@@ -95,10 +95,10 @@ function TeamDiagram() {
 
       <rect x="412" y="292" width="324" height="168" fill="rgba(83,134,182,0.06)" stroke={edge} strokeWidth="1.25" />
       <text x="428" y="314" fontWeight="600" fill={ink}>Future operators</text>
-      <DiagramBox x={428} y={324} w={292} h={56} title="Captain and chief engineer" lines={["Operational input, trials, takeover"]} />
+      <DiagramBox x={428} y={324} w={292} h={56} title="Captain and chief engineer" lines={["Operational input, trials, acceptance"]} />
       <DiagramBox x={428} y={388} w={292} h={56} title="Yacht manager" lines={["Safety management, crew, budgets, handover"]} />
 
-      <text x="412" y="548" fontSize="11.5" fontWeight="600" fill={ink}>One voice to the yard</text>
+      <text x="412" y="548" fontSize="11.5" fontWeight="600" fill={ink}>Sole channel of instruction</text>
       <DiagramBox x={412} y={560} w={324} h={72} dashed title="Shipyard" lines={["Outside the owner's team. Takes instructions", "through the representative only."]} />
     </svg>
   );
@@ -118,7 +118,7 @@ function TeamDiagramMobile() {
           <p className="text-muted text-xs mt-1">Financial controller. Holds funds, releases certified stage payments.</p>
         </div>
         <div className={node}>
-          <p className="font-semibold text-white">Lawyer and advisers</p>
+          <p className="font-semibold text-white">Legal and tax advisers</p>
           <p className="text-muted text-xs mt-1">Shipbuilding lawyer. Tax, structuring and insurance advisers.</p>
         </div>
         <div className="border-2 border-accent bg-accent/15 px-4 py-3">
@@ -157,7 +157,7 @@ export default function OwnersTeamPage() {
               "@id": "https://www.forelandmarine.com/owners-representation/owners-team#webpage",
               name: "The Owner's Team on a Yacht New Build",
               description:
-                "Who sits on the owner's team for a superyacht new build: owner's representative, lawyers, technical specialists, family office and crew, and how they work.",
+                "The owner's team for a superyacht new build: owner's representative, lawyers, technical specialists, family office and crew, with reporting lines and appointment by stage.",
               url: "https://www.forelandmarine.com/owners-representation/owners-team",
               isPartOf: { "@type": "WebSite", url: "https://www.forelandmarine.com" },
               about: { "@id": "https://www.forelandmarine.com/owners-representation#service" },
@@ -194,10 +194,10 @@ export default function OwnersTeamPage() {
       >
         <div className="max-w-3xl">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-            The owner&apos;s team on a new build
+            The owner&apos;s team for a yacht new build
           </h1>
           <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
-            A shipyard comes to a new build contract with its own project managers, naval architects and lawyers. The owner&apos;s equivalent has to be assembled, usually before the yard is chosen, since the contract and specification settle most of what can be argued about later. This page sets out who is on that team, who each person reports to, and when they are needed.
+            A shipyard comes to a new build contract with its own project managers, naval architects and lawyers. The owner&apos;s equivalent has to be assembled, usually before the yard is selected, since the contract and specification determine most of the owner&apos;s position for the remainder of the build. This page describes the composition of that team, the reporting line of each member and the stage at which each is appointed.
           </p>
         </div>
       </ParallaxHero>
@@ -206,7 +206,7 @@ export default function OwnersTeamPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-10 leading-tight" data-animate="fade-up">
-            How the team is structured
+            Structure and reporting lines
           </h2>
           <figure>
             <div className="hidden md:block">
@@ -216,7 +216,7 @@ export default function OwnersTeamPage() {
               <TeamDiagramMobile />
             </div>
             <figcaption className="mt-8 max-w-3xl text-muted leading-relaxed">
-              The family office and the lawyers report to the owner directly. The technical specialists, the captain and chief engineer, and the yacht manager report through the owner&apos;s representative, who is the only person to give instructions to the yard.
+              The family office and the lawyers report to the owner directly. The technical specialists, the captain and chief engineer, and the yacht manager report through the owner&apos;s representative, who alone issues instructions to the yard.
             </figcaption>
           </figure>
         </div>
@@ -227,21 +227,21 @@ export default function OwnersTeamPage() {
       {/* WHO DOES WHAT */}
       <section className="py-16 sm:py-20 lg:py-24 bg-bg0">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight">Who does what</h2>
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight">Roles and responsibilities</h2>
           <p className="text-muted leading-relaxed mb-5">
-            The owner sets the brief, the budget and how much the representative may approve without referring back. The family office holds the money; it pays stage instalments once the representative has certified them, keeps the refund guarantees and insurance certificates in date, and tracks the costs outside the yard contract, such as owner&apos;s supply items and crew. Certification and payment stay with different people, a control set out more fully on our <Link href="/owners-representation" className="text-accent hover:text-white transition-colors">owner&apos;s representation</Link> page.
+            The owner sets the brief, the budget and how much the representative may approve without referring back. The family office holds the funds; it pays stage instalments once the representative has certified them, keeps the refund guarantees and insurance certificates in date, and tracks the costs outside the yard contract, such as owner&apos;s supply items and crew. Certification and payment stay with different people, a control set out more fully on our <Link href="/owners-representation" className="text-accent hover:text-white transition-colors">owner&apos;s representation</Link> page.
           </p>
           <p className="text-muted leading-relaxed mb-5">
             A shipbuilding lawyer negotiates the contract and the refund guarantees, and settles how the specification is incorporated into the contract; a corporate lawyer or family solicitor is not usually suited to the work. Tax and structuring advisers settle the ownership company, flag and VAT position before signature, since an intention to charter, for example, can change the specification. An insurance broker reviews the yard&apos;s builder&apos;s risk cover and arranges the owner&apos;s cover from delivery.
           </p>
           <p className="text-muted leading-relaxed mb-5">
-            The owner&apos;s representative runs the programme and the reporting, reviews the specification, checks milestone claims and change orders, and is the single channel to the yard. On a larger yacht this is a resident site team rather than a visiting inspector. Technical specialists are brought in for defined pieces of work and report through the representative: a mechanical and systems consultant for propulsion, power, HVAC and the factory acceptance tests; a paint inspector at the agreed hold points; and an independent naval architect on structure, stability and the weight budget.
+            The owner&apos;s representative runs the programme and the reporting, reviews the specification, checks milestone claims and change orders, and is the single channel to the yard. On a larger yacht this is a resident site team rather than a visiting inspector. Technical specialists are engaged for defined scopes of work and report through the representative: a mechanical and systems consultant for propulsion, power, HVAC and the factory acceptance tests; a paint inspector at the agreed hold points; and an independent naval architect on structure, stability and the weight budget.
           </p>
           <p className="text-muted leading-relaxed mb-5">
-            Noise and vibration limits are written into the contract and modelled early in design, because they are only measured at sea trials, when structural changes are rarely practical. An interior consultant works between the designer and the joiners on mock-ups, samples and owner&apos;s supply items. Sailing yachts add rig, sail plan and deck hardware specialists.
+            Noise and vibration limits are written into the contract and modelled early in design, because they are only measured at sea trials, when structural changes are rarely practical. An interior consultant acts between the designer and the joiners on mock-ups, samples and owner&apos;s supply items. Sailing yachts add rig, sail plan and deck hardware specialists.
           </p>
           <p className="text-muted leading-relaxed">
-            The captain and chief engineer are best appointed during the build, so that the people who will run the yacht review the specification and know her systems by handover. The yacht manager follows to set up safety management, crew contracts, the maintenance system and the flag and class paperwork, so that nothing lapses on the day she changes hands.
+            The captain and chief engineer should be appointed during the build, so that those who will operate the yacht can review the specification and are familiar with her systems before handover. The yacht manager is appointed later in the build to establish the safety management system, crew contracts, the planned maintenance system and the flag and class documentation, so that no certificate or contract lapses at delivery.
           </p>
         </div>
       </section>
@@ -252,9 +252,9 @@ export default function OwnersTeamPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-10">
-            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">Who joins when</h2>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">Appointment by project stage</h2>
             <p className="text-muted leading-relaxed">
-              Most specialists are needed at particular stages for a few weeks at a time, not for the whole build.
+              Most specialists are engaged for short periods at particular stages rather than for the duration of the build.
             </p>
           </div>
           <div className="overflow-x-auto">
@@ -289,10 +289,10 @@ export default function OwnersTeamPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight">Working arrangements</h2>
           <p className="text-muted leading-relaxed mb-5">
-            Several parties close to the project have obligations of their own. The yard works to its contract; the classification society checks the yacht against its rules, not against the owner&apos;s specification; the flag state is concerned with compliance; a broker is usually paid on commission; and a designer engaged by the yard answers to the yard. Each is valuable to the project, though none of them acts for the owner.
+            Several parties close to the project have obligations of their own. The yard works to its contract; the classification society checks the yacht against its rules, not against the owner&apos;s specification; the flag state is concerned with statutory compliance; a broker is usually paid on commission; and a designer engaged by the yard answers to the yard. Each is valuable to the project, though none of them acts for the owner.
           </p>
           <p className="text-muted leading-relaxed">
-            We would normally set the team up on a few simple terms. All instructions to the yard go through the representative, since a remark from the owner or a consultant on the yard floor can become a change order. The owner&apos;s limits of authority are written down at the start. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner, with the representative managing their scope and budget. The owner receives one regular report on programme, cost, quality and the decisions needed, with the specialists&apos; findings included rather than forwarded separately.
+            We would normally establish the team on the following terms. All instructions to the yard pass through the representative, since an informal request from the owner or from a consultant on site may otherwise be treated as a change order. The owner&apos;s limits of authority are written down at the start. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner, with the representative managing their scope and budget. The owner receives a single regular report on programme, cost, quality and the decisions needed, with the specialists&apos; findings included rather than forwarded separately.
           </p>
         </div>
       </section>
@@ -303,9 +303,9 @@ export default function OwnersTeamPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-bg1">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-10">
-            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">By size of yacht</h2>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">Team composition by size of yacht</h2>
             <p className="text-muted leading-relaxed">
-              The roles are the same at each size; what changes is how many of them are full time.
+              The roles are the same at each size of yacht; what varies is the number held full time.
             </p>
           </div>
           <table className="w-full text-sm border-collapse">
@@ -356,7 +356,7 @@ export default function OwnersTeamPage() {
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-5">Discuss your project</h2>
           <p className="text-muted leading-relaxed text-base mb-8 max-w-xl mx-auto">
-            We should be glad to set out the team a project needs, whether it is at first sketch or already in build.
+            We should be glad to set out the team a project needs, whether it is at concept stage or already in build.
           </p>
           <ButtonPrimary href="/contact">Get in touch</ButtonPrimary>
         </div>
