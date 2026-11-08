@@ -31,12 +31,12 @@ const faqs = [
   { q: "Who is on the owner's team for a superyacht new build?", a: "The owner's team is led by the owner's representative and includes the owner's family office, a shipbuilding lawyer, tax, structuring and insurance advisers, technical specialists (mechanical and systems, paint and coatings, noise and vibration, interior, an independent naval architect, and class and flag compliance), the owner's designers, and the future captain, chief engineer and yacht manager. The shipyard, classification society and flag state sit outside the owner's team." },
   { q: "What does an owner's representative do on a yacht new build?", a: "The owner's representative holds the owner's authority on the project. They run the programme and reporting, review the specification, certify milestones and change orders, co-ordinate the specialists and designers, and are the sole channel of instruction to the shipyard." },
   { q: "What is the difference between an owner's representative and a project manager on a new build?", a: "The owner's representative acts for the owner and holds their authority; the project manager runs the day-to-day work on site. On a smaller or series-built yacht one person usually fills both roles. On a larger yacht a resident project manager and site team report to the representative." },
-  { q: "When should the owner's team be appointed?", a: "Before the yard is selected. The owner's representative should be appointed first, ideally before a Letter of Intent, followed by a shipbuilding lawyer before any heads of terms are signed, since the contract and specification determine most of the owner's position for the rest of the build. Specialists are then engaged at particular stages, and the captain, chief engineer and yacht manager during the build." },
+  { q: "When should the owner's team be appointed?", a: "Before the yard is selected. The owner's representative should be appointed first, ideally before a Letter of Intent, followed by a shipbuilding lawyer before any heads of terms are signed, since the contract and specification set what the yard must deliver and what rights the owner has if it does not. Specialists are then engaged at particular stages, and the captain, chief engineer and yacht manager during the build." },
   { q: "Who gives instructions to the shipyard during a new build?", a: "Only the owner's representative. Instructions from the owner, the family office or a consultant on site pass through the representative, since an informal request may otherwise be treated as a change order. The representative's authority is set out in a letter of authority or power of attorney." },
   { q: "To whom do the specialist consultants owe their duty?", a: "To the owner. They report through the representative so that the yard hears one voice and the owner receives one report, but they are contracted by the owning company wherever possible and their duty runs to the owner. We take no commission or referral fee from anyone we introduce." },
-  { q: "Can my family office or captain act as owner's representative?", a: "A family office should control the money and a captain brings operational judgement the build needs, but neither is the same as having managed a build. The representative should be someone who has delivered a yacht from a yard before." },
+  { q: "Can my family office or captain act as owner's representative?", a: "A family office should control the money and a captain brings operational judgement the build needs, but neither role provides experience of managing a build. The representative should be someone who has delivered a yacht from a yard before." },
   { q: "Does Foreland supply the whole team?", a: "Our bench covers engineering, command, naval architecture, survey, coatings and performance sailing. Legal, tax and other specialist advisers are appointed independently, and we can assist with their selection." },
-  { q: "Can a team be put in place once the build has started?", a: "Yes, although some of the owner's leverage will already have been settled in the contract and specification. We can review the position at any stage and set out what can still be improved." },
+  { q: "Can a team be put in place once the build has started?", a: "Yes, although the contract and specification will already have been signed, which limits the owner's leverage. We can review the position at any stage and set out what can still be improved." },
 ];
 
 const ink = "#FFFFFF";
@@ -169,7 +169,7 @@ export default function OwnersTeamPage() {
                 "The owner's team for a superyacht new build, 24 to 60 metres: owner's representative, shipbuilding lawyer, family office, technical specialists and crew, and when each is appointed.",
               url: "https://www.forelandmarine.com/owners-representation/owners-team",
               inLanguage: "en-GB",
-              dateModified: "2026-11-07",
+              dateModified: "2026-11-08",
               isPartOf: { "@type": "WebSite", url: "https://www.forelandmarine.com" },
               about: { "@id": "https://www.forelandmarine.com/owners-representation#service" },
               publisher: { "@type": "Organization", name: "Foreland Marine Consultancy Ltd", url: "https://www.forelandmarine.com" },
@@ -180,7 +180,7 @@ export default function OwnersTeamPage() {
                 itemListElement: [
                   ["Owner's representative", "Holds the owner's authority, leads the team, runs the programme, certifies milestones and change orders, and is the sole channel of instruction to the shipyard."],
                   ["Family office", "Advises the owner, holds the funds and releases stage payments once certified by the representative."],
-                  ["Shipbuilding lawyer", "Negotiates the build contract and refund guarantees and settles the standing of the specification within the contract."],
+                  ["Shipbuilding lawyer", "Negotiates the build contract and refund guarantees, and settles which document prevails if the contract and specification conflict."],
                   ["Tax, structuring and insurance advisers", "Settle the ownership company, flag and VAT position before signature; the insurance broker reviews builder's risk cover."],
                   ["Technical specialists", "Mechanical and systems, paint and coatings, noise and vibration, interior, independent naval architect, and class and flag compliance, engaged at particular stages and reporting to the representative."],
                   ["Owner's designers", "Exterior and interior designers and the naval architect of record, contracted by the owning company and co-ordinated by the representative."],
@@ -222,7 +222,7 @@ export default function OwnersTeamPage() {
             New Build - Owner&apos;s Team
           </h1>
           <p className="text-lg text-[#8FBAD4] leading-relaxed max-w-2xl">
-            A shipyard comes to a superyacht new build contract with its own project managers, naval architects and lawyers. We assemble and lead the owner&apos;s equivalent, ideally before the yard is selected, since the contract and specification determine most of the owner&apos;s position for the remainder of the build.
+            A shipyard provides the contract for a superyacht new build, drafted by its own lawyers, and has its own naval architects and project managers on the project from the outset. We assemble and lead the equivalent team for the owner, ideally before a yard is selected, because the contract and specification set what the yard must deliver and what rights the owner has if it does not.
           </p>
         </div>
       </ParallaxHero>
@@ -260,13 +260,13 @@ export default function OwnersTeamPage() {
             <div>
               <h3 className="text-xl font-light text-white mb-3">Before yard selection</h3>
               <p className="text-muted leading-relaxed">
-                We are usually appointed first, and help the owner select a shipbuilding lawyer and tax and structuring advisers suited to the project before the yard is chosen. The contract, the refund guarantees and the standing of the specification are settled at that stage, and the ownership company, flag and VAT position can alter the specification itself. The insurance broker reviews the yard&apos;s builder&apos;s risk cover at the same time. On a custom build the exterior and interior designers, and often the naval architect of record, are contracted by the owning company. Where the yard engages them instead, the owner should establish before signature what they are obliged to do for the owner.
+                We are usually appointed first, and help the owner select a shipbuilding lawyer and tax and structuring advisers suited to the project before the yard is chosen. The contract and refund guarantees are negotiated at that stage, along with which document prevails if the contract and specification conflict, and the ownership company, flag and VAT position can alter the specification itself. The insurance broker reviews the builder&apos;s risk cover held by the yard at the same time. On a custom build the exterior and interior designers, and often the naval architect of record, are contracted by the owning company. Where the yard engages them instead, their obligations to the owner should be established before signature.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-light text-white mb-3">During the build</h3>
               <p className="text-muted leading-relaxed">
-                Technical specialists are engaged at particular stages rather than for the duration of the build. The paint inspector attends the agreed hold points, the mechanical and systems consultant the factory acceptance tests and commissioning, and the class and flag specialist the plan approval and surveys. Noise and vibration is the exception: the limits are written into the contract and modelled early in design, but only measured at sea trials. On a smaller or series-built yacht we usually act as the owner&apos;s project manager as well; on a larger yacht we place a resident project manager and site team at the yard.
+                Technical specialists are engaged at particular stages rather than for the duration of the build. The paint inspector attends the agreed hold points, the mechanical and systems consultant attends factory acceptance tests and commissioning, and the class and flag specialist covers plan approval and surveys. Noise and vibration is the exception: the limits are written into the contract and the levels modelled early in design, but they can only be measured at sea trials. On a smaller or series-built yacht we usually act as the owner&apos;s project manager as well; on a larger yacht we place a resident project manager and site team at the yard.
               </p>
             </div>
             <div>
@@ -286,7 +286,7 @@ export default function OwnersTeamPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-8 leading-tight">Working arrangements</h2>
           <p className="text-muted leading-relaxed mb-5">
-            We would normally establish the team on the following terms. The representative&apos;s authority is set out at the start in a letter of authority or power of attorney, stating what may be approved without reference to the owner and when it expires. Approvals of variations and milestones given by the representative can bind the owner. All instructions to the yard pass through the representative, as an informal request from the owner or a consultant on site may otherwise be treated as a change order. The representative certifies milestones and the family office releases the funds, so that no one both approves and pays. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner. The owner receives a single regular report on programme, cost, quality and the decisions needed. Our interests are directly aligned with the owner&apos;s by structure: no broker commissions, no referral fees.
+            We would normally establish the team on the following terms. The representative&apos;s authority is set out at the start in a letter of authority or power of attorney, stating what may be approved without reference to the owner and when it expires. Approvals of variations and milestones given by the representative can bind the owner. All instructions to the yard pass through the representative, as an informal request from the owner or a consultant on site may otherwise be treated as a change order. The representative certifies milestones and the family office releases the funds, so that no one both approves and pays. Specialists are contracted by the owning company wherever possible, so that their duty runs to the owner. The owner receives a single regular report on programme, cost, quality and the decisions needed. We take no broker commissions or referral fees.
           </p>
           <p className="text-muted leading-relaxed">
             The classification society checks the yacht against its rules rather than the owner&apos;s specification, and the yard, the flag state and the broker each have obligations of their own; none of them acts for the owner.
@@ -302,7 +302,7 @@ export default function OwnersTeamPage() {
           <div className="max-w-3xl mb-10">
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-5 leading-tight">Team composition by size of yacht</h2>
             <p className="text-muted leading-relaxed">
-              We scale the team to the yacht. The roles are the same at each size; what varies is the number held full time.
+              We scale the team to the yacht. The roles are the same at each size; the number of full-time posts varies.
             </p>
           </div>
           <table className="w-full text-sm border-collapse">
