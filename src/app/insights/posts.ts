@@ -267,7 +267,7 @@ export const posts: Post[] = [
 
 <h2>Running the winter from abroad</h2>
 
-<p>We work at STP in the same way as at any other yard: a written specification and tender before the yacht arrives, a weekly report against budget and programme while she is out of the water, and someone from our team on site for the stages that cannot be judged from photographs. On a sailing yacht those are the haul-out, the keel and rudder inspection once the hull is clean, the rig coming out and going back in, and the sea trial. Between those, colleagues in Palma can attend at short notice.</p>
+<p>We work at STP in the same way as at any other yard: a written specification and tender before the yacht arrives, a weekly report against budget and programme while she is out of the water, and someone from our team on site for the stages that cannot be judged from photographs. On a sailing yacht those are the haul-out, the keel and rudder inspection once the hull is clean, the rig coming out and going back in, and the sea trial.</p>
 
 <p>We have no commercial relationship with STP, Astilleros de Mallorca or any contractor named here. If you are planning a winter in Palma, our <a href="/refit">refit project management</a> page explains how we work, and we would be glad to <a href="/contact">discuss it</a>.</p>`,
     faqs: [
