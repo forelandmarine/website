@@ -3904,7 +3904,7 @@ export const posts: Post[] = [
 
 <p>Ultimately, the relationship between an owner and their yacht management company should be built on trust, transparency, and aligned interests. An independent management company earns its fee by protecting the owner's asset, maintaining compliance, supporting the crew, and ensuring the vessel is always ready for sea. There are no hidden agendas, no competing priorities, and no compromised advice.</p>
 
-<p>At Foreland Marine, independent yacht management is the foundation of everything we do. We have no brokerage arm, no charter fleet, no yard affiliations, and no supplier commissions. Our only client is the owner, and our only objective is the safe, efficient, and cost-effective operation of their vessel.</p>
+<p>At Foreland Marine, independent yacht management is the foundation of everything we do. We have no brokerage arm, no charter fleet and no supplier commissions. Our only client is the owner, and our only objective is the safe, efficient, and cost-effective operation of their vessel.</p>
 
 <p>If you are evaluating yacht management options and want to understand how an independent approach can benefit you, <a href="/yacht-management">explore our yacht management services</a> or contact us for a confidential discussion.</p>`,
   },

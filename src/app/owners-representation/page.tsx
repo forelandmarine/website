@@ -200,7 +200,7 @@ export default function NewBuildPage() {
             </div>
             <div className="border-l-2 border-accent/40 pl-6" data-animate="fade-up">
               <p className="text-muted leading-relaxed">
-                Foreland is entirely independent. We hold no yard affiliations, receive no commissions from shipyards or suppliers, and accept no referral fees. Every recommendation we make serves one interest alone: the owner.
+                Foreland is entirely independent and is paid only by the owner. We receive no commissions from shipyards or suppliers and accept no referral fees. Every recommendation we make serves one interest alone: the owner.
               </p>
             </div>
           </div>
