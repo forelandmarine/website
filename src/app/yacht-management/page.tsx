@@ -52,7 +52,7 @@ export default function YachtManagementPage() {
                   name: "What is independent yacht management?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Independent yacht management means serving the owner's interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation is made solely in the owner's interest.",
+                    text: "Independent yacht management means serving the owner's interests without conflicts from brokerage or charter. Foreland does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation is made solely in the owner's interest.",
                   },
                 },
                 {
@@ -375,7 +375,7 @@ export default function YachtManagementPage() {
           <div className="space-y-8">
             <div className="border-l-2 border-accent/40 pl-6">
               <h3 className="text-base font-semibold text-white mb-3">What is independent yacht management?</h3>
-              <p className="text-sm text-muted leading-relaxed">Independent yacht management means serving the owner&apos;s interests without conflicts from brokerage, charter, or yard affiliations. Foreland does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation is made solely in the owner&apos;s interest.</p>
+              <p className="text-sm text-muted leading-relaxed">Independent yacht management means serving the owner&apos;s interests without conflicts from brokerage or charter. Foreland does not sell yachts, broker charter, or earn commissions from suppliers. Every recommendation is made solely in the owner&apos;s interest.</p>
             </div>
             <div className="border-l-2 border-accent/40 pl-6">
               <h3 className="text-base font-semibold text-white mb-3">What does ISM compliance involve for yachts?</h3>

@@ -8,7 +8,7 @@ export default async function OgImage() {
   return renderOgCard({
     eyebrow: "About",
     title: "Independent, and structured to stay that way",
-    subtitle: "Founded by two former J Class senior engineers. No yard affiliations, no broker commissions, no supplier referral fees.",
+    subtitle: "Founded by two former J Class senior engineers. No broker commissions, no supplier referral fees.",
     url: "forelandmarine.com/about",
     footnote: "SYBAss, YORR, British Marine",
   });
