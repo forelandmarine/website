@@ -227,6 +227,73 @@ export const posts: Post[] = [
     ],
   },
   {
+    slug: "sailing-yacht-refit-palma",
+    title: "Refitting a Sailing Yacht in Palma",
+    metaTitle: "Sailing Yacht Refit in Palma de Mallorca",
+    description:
+      "How STP works, when to book, the sail and rigging trades, VAT and customs, and how a winter refit in Palma is run from another country.",
+    metaDescription:
+      "Planning a sailing yacht refit in Palma: how STP works, when to book, sails and rigging, VAT and customs, and running the winter from abroad.",
+    date: "2026-11-11",
+    category: "Refit",
+    readTime: "4 min read",
+    keywords: [
+      "sailing yacht refit Palma",
+      "Palma de Mallorca yacht refit",
+      "STP Palma refit",
+      "superyacht refit Palma",
+      "refit project management Palma",
+      "sailing superyacht winter refit",
+    ],
+    content: `<p>STP's 1,000-tonne travel lift arrived in Palma in 2018 on 23 lorries from Italy. It lifts sailing yachts up to 67 metres with a beam of up to 12 metres, and STP says many sailing yachts can be lifted without removing stays or backstays (<a href="https://www.stp-palma.com/en/news/245/con-la-incorporacion-del-nuevo-travelift-de-1000-tn-stp-shipyard-palma-se-consolida-como-referente-mundial-en-la-reparacion-de-yates" target="_blank" rel="noopener noreferrer">STP Shipyard Palma</a>; <a href="https://lujorca.com/palma-refit-yard-travelift/" target="_blank" rel="noopener noreferrer">Lujorca</a>). A good number of sailing yachts between 24 and 60 metres spend the winter there, between the end of the charter season and the boat show at the end of April. Most of those refits are arranged from abroad, by a captain finishing a season elsewhere or an owner's office in London or New York, and the decisions that shape the winter are made before the yacht arrives.</p>
+
+<h2>How STP works</h2>
+
+<p>STP is an open yard. It runs the lifts, the hard standing and the services, and every other job is done by independent contractors whom the owner or captain chooses and contracts directly. STP takes no surcharge on their work (<a href="https://www.superyachtnews.com/business/using-stp-the-right-way" target="_blank" rel="noopener noreferrer">SuperyachtNews</a>). In 2018 STP put the figure at around 500 companies and more than 3,000 people on site, with over 140 yachts under repair at a time.</p>
+
+<p>The rates reflect that model, and so does the workload. Someone has to write the specification, invite the quotes, compare them on the same basis and coordinate painters, riggers, engineers and joiners who answer to the yacht rather than to a yard project manager. A captain and engineer who have done a Palma winter before can carry a good part of it. On a yacht arriving for the first time, or with a structural or rig scope, we would want that role settled before any contract is signed. Astilleros de Mallorca, also in Palma, works the other way and takes the project under a single contract; our <a href="/refit">refit page</a> sets out how to choose between the two.</p>
+
+<h2>Booking</h2>
+
+<p>Waiting lists at STP usually appear at least six months before the winter high season, and some owners pay a deposit early to hold a place for the whole winter. For a refit starting in November, that means booking in spring, at about the time the yacht leaves for her summer programme. A mast-out refit needs more than the haul-out: a crane for unstepping, somewhere covered to lay the spar, and a rigger booked for the same weeks. We would agree the rig scope with the rigger during the summer, so that rod rigging, hardware and any other long-lead items are on order before the mast comes out.</p>
+
+<h2>Sails and rigging</h2>
+
+<p>North Sails has a dockside office at STP and a loft at Son Morro, with 6,518 square metres of loft space, 42 staff and storage for 2,000 sails (<a href="https://www.northsails.com/blogs/north-sails-blog/north-sails-palma-the-leading-superyacht-service-center-in-the-world" target="_blank" rel="noopener noreferrer">North Sails</a>). Doyle has a loft of about 2,500 square metres at Marratxi, just north of the city (<a href="https://www.doylesails.com/bigger-better-brighter-doyle-sails-open-new-palma-loft/" target="_blank" rel="noopener noreferrer">Doyle Sails</a>), and several rigging firms work from STP itself. Sails can go to the loft for inspection, repair and storage at the start of the winter without leaving the island, and the rig can be unstepped, serviced and restepped by people who do the same work on the yachts either side. Our <a href="/insights/sailing-yacht-rig-maintenance-inspection-guide">rig inspection guide</a> covers what the inspection should include, and the <a href="/insights/sailing-yacht-keel-appendage-inspection-guide">keel and appendage guide</a> covers the work below the waterline.</p>
+
+<h2>VAT and customs</h2>
+
+<p>For a yacht flagged outside the EU, the customs position needs settling before she arrives. Temporary admission allows repair and maintenance but not structural refit, which needs the inward processing regime, held in Spain by the yard or a customs agent. Article 24 of the Spanish VAT law exempts goods and services supplied to a yacht under that regime, and it applies to private owners as well as companies. Temporary admission runs for 18 months, and time under inward processing does not count towards it. For an EU or VAT-paid yacht, Spanish VAT at 21 per cent applies to the work. A Spanish customs agent should confirm all of this against the yacht's own position before the first invoice is raised.</p>
+
+<h2>Running the winter from abroad</h2>
+
+<p>We work at STP in the same way as at any other yard: a written specification and tender before the yacht arrives, a weekly report against budget and programme while she is out of the water, and someone from our team on site for the stages that cannot be judged from photographs. On a sailing yacht those are the haul-out, the keel and rudder inspection once the hull is clean, the rig coming out and going back in, and the sea trial. Between those, colleagues in Palma can attend at short notice.</p>
+
+<p>We have no commercial relationship with STP, Astilleros de Mallorca or any contractor named here. If you are planning a winter in Palma, our <a href="/refit">refit project management</a> page explains how we work, and we would be glad to <a href="/contact">discuss it</a>.</p>`,
+    faqs: [
+      {
+        question: "Can STP lift a sailing yacht with the mast stepped?",
+        answer:
+          "STP's 1,000-tonne travel lift takes sailing yachts up to 67 metres and 12 metres of beam, and STP says many sailing yachts can be lifted without removing stays or backstays. The yard should confirm it against the yacht's own rig and lifting points.",
+      },
+      {
+        question: "How far ahead should a Palma winter refit be booked?",
+        answer:
+          "Waiting lists at STP usually appear at least six months before the winter season, so a November start is normally booked in the spring. A mast-out refit also needs the rigger and crane booked for the same weeks.",
+      },
+      {
+        question: "Does STP manage the refit?",
+        answer:
+          "No. STP runs the lifts, hard standing and services. The work is done by independent contractors chosen and contracted by the owner or captain, so the specification, tendering and coordination fall to the yacht or to a project manager acting for her.",
+      },
+      {
+        question: "Does a non-EU yacht pay Spanish VAT on a Palma refit?",
+        answer:
+          "Under the inward processing regime, Article 24 of the Spanish VAT law exempts goods and services supplied to the yacht, for private and corporate owners alike. Temporary admission covers repair and maintenance only. A Spanish customs agent should confirm the position before work starts.",
+      },
+    ],
+  },
+  {
     slug: "spirit-p50-st-katharine-docks",
     title: "The Spirit P50 and Gwenhyfar II at St Katharine Docks",
     metaTitle: "The Spirit P50 at St Katharine Docks",
