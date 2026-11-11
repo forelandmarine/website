@@ -63,7 +63,7 @@ const faqs = [
   {
     question: "Are you independent from shipyards and brokers?",
     answer:
-      "Yes. Foreland Marine is entirely independent. We hold no yard affiliations, receive no broker commissions and accept no referral fees from suppliers. Every recommendation we make serves one interest alone: the owner.",
+      "Yes. Foreland Marine is entirely independent and is paid only by the owner. We receive no broker commissions and accept no referral fees from suppliers. Every recommendation we make serves one interest alone: the owner.",
   },
   {
     question: "What size yachts do you work with?",
