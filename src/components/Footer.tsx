@@ -156,7 +156,7 @@ export default function Footer() {
             <Image src="/logos/superyacht-alliance-white.png" alt="Foreland Marine is a member of the Superyacht Alliance" width={192} height={71} className="h-12 w-auto" />
           </a>
           <a href="https://www.iims.org.uk" target="_blank" rel="noopener noreferrer" title="IIMS - International Institute of Marine Surveying" className="hover:opacity-80 transition-opacity px-3 py-2">
-            <Image src="/logos/iims-white.png" alt="International Institute of Marine Surveying (IIMS)" width={300} height={300} className="h-14 w-auto" />
+            <Image src="/logos/iims-white.svg" alt="International Institute of Marine Surveying (IIMS)" width={311} height={311} className="h-14 w-auto" />
           </a>
         </div>
 
