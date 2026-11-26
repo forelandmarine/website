@@ -155,6 +155,9 @@ export default function Footer() {
           <a href="https://superyachtalliance.org" target="_blank" rel="noopener noreferrer" title="Superyacht Alliance - global network of superyacht industry professionals" className="hover:opacity-80 transition-opacity px-3 py-2">
             <Image src="/logos/superyacht-alliance-white.png" alt="Foreland Marine is a member of the Superyacht Alliance" width={192} height={71} className="h-12 w-auto" />
           </a>
+          <a href="https://www.iims.org.uk" target="_blank" rel="noopener noreferrer" title="IIMS - International Institute of Marine Surveying" className="hover:opacity-80 transition-opacity px-3 py-2">
+            <Image src="/logos/iims-white.png" alt="International Institute of Marine Surveying (IIMS)" width={300} height={300} className="h-12 w-auto" />
+          </a>
         </div>
 
         <div className="mt-6 pt-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
